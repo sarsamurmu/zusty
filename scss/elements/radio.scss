@@ -1,0 +1,106 @@
+.zust-radio:not(:checked),
+.zust-radio:checked {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.zust-radio:not(:checked) + span,
+.zust-radio:checked + span {
+  background-color: $transparent;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1rem;
+  transition: $primary-transition ease;
+  user-select: none;
+  max-height: 20px;
+}
+
+.zust-radio:not(:checked):disabled + span,
+.zust-radio:checked:disabled + span {
+  cursor: default;
+}
+
+.zust-radio + span::before,
+.zust-radio + span::after {
+  content: '';
+  position: absolute;
+  margin: 0;
+  border-radius: 100%;
+  transition: $secondary-transition;
+}
+
+.zust-radio:disabled + span::after,
+.zust-radio[disabled] + span::after {
+  border-color: var(--radio-button-disabled-border-color);
+}
+
+.zust-radio + span::after {
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--radio-button-border-color);
+  $size: 15px;
+  width: $size;
+  height: $size;
+}
+
+.zust-radio + span::before {
+  background-color: $orange;
+  $size: 0px;
+  width: $size;
+  height: $size;
+  $pos: 0px;
+  top: $pos;
+  left: $pos;
+  margin-left: 10px;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.zust-radio:checked + span::before {
+  $size: 19px;
+  width: $size;
+  height: $size;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 1;
+}
+
+.zust-radio:checked + span::after {
+  $margin: 3px;
+  margin-left: $margin;
+  margin-top: $margin;
+  $size: 13px;
+  width: $size;
+  height: $size;
+  border-color: $transparent;
+  border-width: 0;
+  background-color: hsla(0, 0, 100, 0.2);
+}
+
+.zust-radio.zust-error + span::before {
+  background-color: var(--error-color);
+}
+
+.zust-radio.zust-success + span::before {
+  background-color: var(--success-color);
+}
+
+.zust-radio.zust-warning + span::before {
+  background-color: var(--warning-color);
+}
+
+.zust-radio.zust-link + span::before {
+  background-color: var(--link-color);
+}
+
+.zust-radio.zust-rect + span::before,
+.zust-radio.zust-rect + span::after {
+  border-radius: 30%;
+}

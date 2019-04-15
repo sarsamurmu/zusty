@@ -1,0 +1,124 @@
+$progress-bar-corner-radius: 6px;
+$progress-bar-transition: 1s;
+
+progress.zust-progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  margin: 5px;
+  width: 100%;
+  height: 16px;
+  border-radius: $progress-bar-corner-radius;
+  color: $orange;
+  background-color: var(--progress-bar-color);
+
+  &.zust-line {
+    height: 3px;
+  }
+
+  &.zust-thin {
+    height: 5px;
+  }
+
+  &.zust-small {
+    height: 10px;
+  }
+
+  &.zust-large {
+    height: 22px;
+  }
+
+  &.zust-xlarge {
+    height: 28px;
+  }
+}
+
+progress.zust-progress::-webkit-progress-bar {
+    background-color: var(--progress-bar-bg-color);
+    -webkit-transition: $primary-transition;
+    transition: $primary-transition;
+}
+
+progress.zust-progress::-moz-progress-bar {
+    background-color: var(--primary-color);
+    border-radius: $progress-bar-corner-radius;
+    -moz-transition: $primary-transition;
+    transition: $primary-transition;
+}
+
+progress[value].zust-progress {
+
+  &::-webkit-progress-value {
+    background-color: var(--primary-color);
+    border-radius: $progress-bar-corner-radius;
+    -webkit-transition: $primary-transition;
+    transition: $primary-transition;
+  }
+
+  &::-moz-progress-value {
+    background-color: var(--primary-color);
+    border-radius: $progress-bar-corner-radius;
+    -moz-transition: $primary-transition;
+    transition: $primary-transition;
+  }
+
+  &::-ms-fill {
+    background-color: var(--primary-color);
+    transition: $progress-bar-transition;
+    border-radius: $progress-bar-corner-radius;
+    border: none;
+    @include transition($primary-transition);
+  }
+
+  &.zust-success::-webkit-progress-value {
+    background-color: var(--success-color);
+  }
+
+  &.zust-success::-moz-progress-value {
+    background-color: var(--success-color);
+  }
+
+  &.zust-success::-moz-progress-bar {
+    background-color: var(--success-color);
+  }
+
+  &.zust-warning::-webkit-progress-value {
+    background-color: var(--warning-color);
+  }
+
+  &.zust-warning::-moz-progress-value {
+    background-color: var(--warning-color);
+  }
+
+  &.zust-warning::-moz-progress-bar {
+    background-color: var(--warning-color);
+  }
+
+  &.zust-error::-webkit-progress-value {
+    background-color: var(--error-color);
+  }
+
+  &.zust-error::-moz-progress-value {
+    background-color: var(--error-color);
+  }
+
+  &.zust-error::-moz-progress-bar {
+    background-color: var(--error-color);
+  }
+
+  &.zust-link::-webkit-progress-value {
+    background-color: var(--link-color);
+  }
+
+  &.zust-link::-moz-progress-value {
+   background-color: var(--link-color);
+ }
+
+  &.zust-link::-moz-progress-bar {
+   background-color: var(--link-color);
+ }
+}

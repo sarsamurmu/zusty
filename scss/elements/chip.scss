@@ -1,0 +1,39 @@
+div.zust-chip {
+  position: absolute;
+  background-color: var(--chip-bg-color);
+  display: inline-block;
+  height: 20px;
+  padding: 10px 20px;
+  border-radius: 10000px;
+  line-height: 22px;
+  font-size: 14px;
+  transition: $primary-transition;
+  cursor: default;
+
+  > img {
+    float:left;
+    $size: 40px;
+    height: $size;
+    width: $size;
+    margin-left: -20px;
+    margin-top: -10px;
+    border-radius: 2000px;
+    margin-right: 10px;
+  }
+
+  &.zust-large {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+
+    & > img {
+      $size: 50px;
+      height: $size;
+      width: $size;
+      margin-left: -20px;
+      margin-top: -10px;
+      border-radius: 2000px;
+      margin-right: 10px;
+    }
+  }
+}

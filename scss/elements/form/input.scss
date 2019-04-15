@@ -1,0 +1,139 @@
+.zust-text-input-container {
+  margin: 0;
+  display: flex;
+  position: relative;
+
+  .zust-icon {
+    position: absolute;
+    float: left;
+    margin-top: 0.9em;
+    margin-left: 1em;
+  }
+
+  [type="text"].zust-input {
+    padding-left: 35px;
+  }
+}
+
+[type="text"].zust-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  transition: $primary-transition;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+  border-radius: 8px;
+  border-color: $transparent;
+  color: var(--input-text-color);
+  font-size: $medium-text;
+  margin: 4px;
+  $padding1: 7px;
+  $padding2: 20px;
+  padding-top: 9px;
+  padding-bottom: $padding1;
+  padding-left: $padding2;
+  padding-right: $padding2;
+  background-color: var(--input-bg-color);
+
+  &:hover, &.zust-hovered {
+    background-color: var(--input-hovered-bg-color);
+  }
+
+  &:focus, &.zust-focused {
+    background-color: var(--body-color-primary);
+    box-shadow: 0 0 0 2px var(--input-border-color);
+  }
+
+  &.zust-small {
+    font-size: $small-text;
+    $padding1: 4px;
+    $padding2: 14px;
+    padding-top: $padding1 + 2px;
+    padding-bottom: $padding1;
+    padding-left: $padding2;
+    padding-right: $padding2;
+  }
+
+  &.zust-large {
+    font-size: $large-text;
+    $padding1: 12px;
+    $padding2: 24px;
+    padding-top: $padding1 + 2px;
+    padding-bottom: $padding1;
+    padding-left: $padding2;
+    padding-right: $padding2;
+  }
+
+  &.zust-xlarge {
+    font-size: $xlarge-text;
+    $padding1: 16px;
+    $padding2: 28px;
+    padding-top: $padding1 + 2px;
+    padding-bottom: $padding1;
+    padding-left: $padding2;
+    padding-right: $padding2;
+  }
+
+  &.zust-transparent {
+    background-color: var(--input-stransparent-bg-color);
+
+    &:hover, &.zust-hovered {
+      background-color: var(--input-stransparent-hovered-bg-color);
+    }
+
+    &:focus, &.zust-focused {
+      background-color: var(--body-color-primary);
+    }
+  }
+
+  &.zust-primary {
+    border-color: var(--primary-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--primary-color);
+    }
+  }
+
+  &.zust-success {
+    border-color: var(--success-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--success-color-l);
+    }
+  }
+
+  &.zust-warning {
+    border-color: var(--warning-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--warning-color-l);
+    }
+  }
+
+  &.zust-error {
+    border-color: var(--error-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--error-color-l);
+    }
+  }
+
+  &.zust-link {
+    border-color: var(--link-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--link-color-l);
+    }
+  }
+}
+
+input, input:hover, input:active, input:focus {
+  outline: none;
+}
