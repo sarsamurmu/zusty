@@ -1,0 +1,248 @@
+.zust-button, a.zust-button, .zust-button[type="submit"], .zust-button[type="reset"] {
+  @extend %no-select;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $medium-text;
+  background-color: var(--button-bg-color);
+  border-style: solid;
+  border-color: var(--button-border-color);
+  border-radius: $button-corner-radius;
+  padding: 8px 12px;
+  padding-top: 10px;
+  color: var(--button-text-color);
+  border-width: 2px;
+  margin: 5px;
+  cursor: pointer;
+  transition: $primary-transition;
+  text-align: center;
+
+  .zust-icon {
+    margin-right: 0.3em;
+    margin-top: -0.05em;
+  }
+
+  &:hover, &.zust-hovered {
+    border-color: var(--button-hover-border-color);
+  }
+
+  &:focus, &.zust-focused {
+    box-shadow: 0 0 0 3px var(--button-focus-border-color);
+    border-color: var(--button-focus-border-color);
+  }
+
+  &.disabled, &[disabled], &.disbled:hover, &[disbled]:hover, &.disbled:focus, &[disbled]:focus {
+    cursor: default !important;
+    background-color: var(--button-disabled-bg-color) !important;
+    color: var(--button-disabled-text-color) !important;
+    border-style: none;
+    box-shadow: 0 0 0 0px var(--button-disabled-bg-color) !important;
+  }
+
+  &.zust-transparent {
+    background-color: $transparent;
+    border-width: 0;
+
+    &:hover, &.zust-hovered {
+      background-color: rgba(144, 144, 144, 0.1) !important;
+      box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1);
+    }
+  }
+
+  &.zust-primary {
+    background-color: var(--primary-color);
+    border-width: 0;
+    color: $white;
+  }
+
+  &.zust-warning {
+    border-width: 0 !important;
+    background-color: var(--warning-color) !important;
+    color: $white;
+
+    &:hover, &.zust-hovered {
+      background-color: var(--warning-color-l) !important;
+    }
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 3px var(--warning-color-el) !important;
+    }
+  }
+
+  &.zust-success {
+    border-width: 0 !important;
+    background-color: var(--success-color) !important;
+    color: $white;
+
+    &:hover, &.zust-hovered {
+      background-color: var(--success-color-l) !important;
+    }
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 3px var(--success-color-el) !important;
+    }
+  }
+
+  &.zust-error {
+    border-width: 0 !important;
+    background-color: var(--error-color) !important;
+    color: $white;
+
+    &:hover, &.zust-hovered {
+      background-color: var(--error-color-l) !important;
+    }
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 3px var(--error-color-el) !important;
+    }
+  }
+
+  &.zust-link {
+    border-width: 0 !important;
+    background-color: var(--link-color) !important;
+    color: $white;
+
+    &:hover, &.zust-hovered {
+      background-color: var(--link-color-l) !important;
+    }
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 3px var(--link-color-el) !important;
+    }
+  }
+
+  &.zust-full-width, &.zust-fullwidth {
+    @extend %full-width;
+  }
+
+  &.zust-xlarge {
+    font-size: $xlarge-text !important;
+    padding: 18px 27px !important;
+  }
+
+  &.zust-large {
+    font-size: $large-text !important;
+    padding: 14px 21px !important;
+  }
+
+  &.zust-default {
+    font-size: $medium-text !important;
+    padding: 8px 12px !important;
+  }
+
+  &.zust-small {
+    font-size: $small-text !important;
+    padding: 4px 12px !important;
+  }
+
+  &.zust-outlined {
+    background-color: $transparent !important;
+    border-width: 2px !important;
+  }
+
+  &.zust-outlined.zust-warning {
+    border-color: var(--warning-color) !important;
+    background-color: $transparent !important;
+    color: var(--warning-color);
+
+    &:hover, &.zust-hovered {
+      border-color: var(--warning-color-l) !important;
+      background-color: $transparent !important;
+    }
+  }
+
+  &.zust-outlined.zust-success {
+    border-color: var(--success-color) !important;
+    background-color: $transparent !important;
+    color: var(--success-color);
+
+    &:hover, &.zust-hovered {
+      border-color: var(--success-color-l) !important;
+      background-color: $transparent !important;
+    }
+  }
+
+  &.zust-outlined.zust-error {
+    border-color: var(--error-color) !important;
+    background-color: $transparent !important;
+    color: var(--error-color);
+
+    &:hover, &.zust-hovered {
+      border-color: var(--error-color-l) !important;
+      background-color: $transparent !important;
+    }
+  }
+
+  &.zust-outlined.zust-link {
+    border-color: var(--link-color) !important;
+    background-color: $transparent !important;
+    color: var(--link-color);
+
+    &:hover, &.zust-hovered {
+      border-color: var(--link-color-l) !important;
+      background-color: $transparent !important;
+    }
+  }
+}
+
+.zust-button-container  {
+  button.zust-button,
+  a.zust-button,
+  .zust-button[type="submit"],
+  .zust-button[type="reset"] {
+    @extend %no-select;
+    display: inline-block;
+    font-size: $medium-text;
+    background-color: var(--button-bg-color);
+    border-style: solid;
+    border-color: var(--button-border-color);
+    border-radius: $button-corner-radius;
+    padding: 8px 12px;
+    border-width: 2px;
+    margin: 5px;
+    cursor: pointer;
+    transition: $primary-transition;
+    text-align: center;
+
+    &:hover, &.zust-hovered {
+      border-color: var(--button-hover-border-color);
+    }
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 3px var(--button-focus-border-color);
+      border-color: var(--button-focus-border-color);
+    }
+  }
+
+  &.zust-xlarge button.zust-button,
+  &.zust-xlarge a.zust-button,
+  &.zust-xlarge .zust-button[type="submit"],
+  &.zust-xlarge .zust-button[type="reset"] {
+    font-size: $xlarge-text;
+    padding: 18px 27px;
+  }
+
+  &.zust-large button.zust-button,
+  &.zust-large a.zust-button,
+  &.zust-large .zust-button[type="submit"],
+  &.zust-large .zust-button[type="reset"]  {
+    font-size: $large-text;
+    padding: 14px 21px;
+  }
+
+  &.zust-small button.zust-button,
+  &.zust-small a.zust-button,
+  &.zust-small .zust-button[type="submit"],
+  &.zust-small .zust-button[type="reset"] {
+    font-size: $small-text;
+    padding: 4px 12px;
+  }
+
+  &.zust-fullwidth button, &.zust-full-width button {
+    @extend %full-width;
+  }
+}
+
+button, button:hover, button:focus, button:active, [type="submit"], [type="reset"] {
+  outline: none;
+}

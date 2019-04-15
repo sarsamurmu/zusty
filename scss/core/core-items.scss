@@ -1,0 +1,33 @@
+@import "core-items/_a.scss";
+
+body {
+  background-color: var(--body-color-primary);
+  @include transition($primary-transition);
+  color: var(--text-color-secondary);
+  padding: 20px;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  border-style: solid;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: var(--divider-color);
+  border-width: 2px;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  unicode-bidi: unset;
+  transition: $secondary-transition;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color-primary);
+  transition: $primary-transition;
+}

@@ -1,0 +1,60 @@
+// Screen Sizes
+
+@mixin mobile {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin zust-tablet {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin transition ($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin transform ($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+@mixin animation ($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin animation-name ($value) {
+  -webkit-animation-name: $value;
+  -moz-animation-name: $value;
+  -o-animation-name: $value;
+  animation-name: $value;
+}
+
+@mixin animation-duration ($value) {
+  -webkit-animation-duration: $value;
+  -moz-animation-duration: $value;
+  -o-animation-duration: $value;
+  animation-duration: $value;
+}

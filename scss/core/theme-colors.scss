@@ -1,0 +1,126 @@
+:root, [zust-theme="default"] {
+
+  // Primary Colors
+  --primary-color-d: hsl(0, 69%, 67%);
+  --primary-color: hsl(36, 100%, 50%);
+  --primary-color-l: hsl(36, 100%, 57%);
+  --primary-color-el: hsl(36, 100%, 57%, 0.3);
+  --success-color: hsl(88, 50%, 53%);
+  --success-color-l: hsl(88, 50%, 60%);
+  --success-color-el: hsla(88, 50%, 53%, 0.3);
+  --warning-color: hsl(45, 100%, 51%);
+  --warning-color-l: hsl(45, 100%, 58%);
+  --warning-color-el: hsla(45, 100%, 51%, 0.3);
+  --error-color-d: hsl(0, 69%, 67%);
+  --error-color: hsl(4, 90%, 58%);
+  --error-color-l: hsl(1, 83%, 63%);
+  --error-color-el: hsla(4, 90%, 58%, 0.3);
+  --link-color-d: hsl(210, 100%, 40%);
+  --link-color: hsl(210, 100%, 50%);
+  --link-color-l: hsl(210, 100%, 60%);
+  --link-color-el: hsla(210, 100%, 50%, 0.3);
+
+  // General Items
+  --body-color-primary: hsl(0, 0%, 100%);
+  --text-color-primary: hsl(0, 0%, 25%);
+  --text-color-secondary: hsl(0, 0%, 35%);
+  --text-color-tertiary: hsl(0, 0%, 45%);
+  --divider-color: hsl(0, 0%, 82%);
+
+  // Badge
+  --badge-text-color: hsl(0, 0%, 35%);
+
+  // Button
+  --button-bg-color: hsl(0, 0%, 100%);
+  --button-border-color: hsl(0, 0%, 90%);
+  --button-hover-border-color: hsl(0, 0%, 84%);
+  --button-text-color: hsl(0, 0%, 40%);
+  --button-focus-border-color: hsla(291, 64%, 42%, 0.14);
+  --button-disabled-bg-color: hsl(0, 0%, 88%);
+  --button-disabled-text-color: hsl(0, 0%, 62%);
+
+  // Cards
+  --card-bg-color: hsl(0, 0%, 100%);
+  --card-border-color: hsl(0, 0%, 88%);
+
+  // Chip
+  --chip-bg-color: hsl(0, 0%, 97%);
+
+  // Dropdown
+  --dropdown-bg-color: hsl(0, 0%, 100%);
+  --dropdown-border-color: hsl(0, 0%, 88%);
+  --dropdown-text-color: hsl(0, 0%, 26%);
+  --dropdown-option-hover-color: hsl(0, 0%, 93%);
+  --dropdown-active-item-color: hsl(14, 100%, 57%);
+
+  // Input
+  --input-bg-color: hsl(0, 0%, 97%);
+  --input-stransparent-bg-color: hsla(0, 0%, 0%, 0.04);
+  --input-stransparent-hovered-bg-color: hsla(0, 0%, 0%, 0.1);
+  --input-hovered-bg-color: hsl(0, 0%, 93%);
+  --input-text-color: hsl(0, 0%, 35%);
+  --input-border-color: hsl(187, 100%, 70%);
+
+  // Progress Bar
+  --progress-bar-bg-color: hsl(0, 0%, 93%);
+
+  // Radio Buttons
+  --radio-button-border-color: hsl(0, 0%, 46%);
+  --radio-button-selected-border-color: hsl(0, 0%, 100%);
+  --radio-button-disabled-border-color: hsl(0, 0%, 88%);
+
+}
+
+@supports (--css: variables) {
+  [zust-theme="dark"] {
+
+    // General Items
+    --body-color-primary: hsl(0, 0%, 13%);
+    --text-color-primary: hsl(0, 0%, 95%);
+    --text-color-secondary: hsl(0, 0%, 85%);
+    --text-color-tertiary: hsl(0, 0%, 75%);
+    --divider-color: hsl(0, 0%, 42%);
+
+    // Badge
+    --badge-text-color: hsl(0, 0%, 95%);
+
+    // Button
+    --button-bg-color: hsl(0, 0%, 15%);
+    --button-border-color: hsl(0, 0%, 28%);
+    --button-hover-border-color: hsl(0, 0%, 35%);
+    --button-text-color: hsl(0, 0%, 85%);
+    --button-focus-border-color: hsla(291, 47%, 51%, 0.45);
+    --button-disabled-bg-color: hsla(291, 47%, 51%, 0.45);
+    --button-disabled-text-color: hsl(0, 1%, 65%);
+
+    // Cards
+    --card-bg-color: hsl(0, 0%, 17%);
+    --card-border-color: hsl(0, 0%, 42%);
+
+    // Chip
+    --chip-bg-color: hsl(0, 0%, 17%);
+
+    // Dropdown
+    --dropdown-bg-color: hsl(0, 0%, 17%);
+    --dropdown-border-color: hsl(0, 0%, 42%);
+    --dropdown-text-color: hsl(0, 0%, 88%);
+    --dropdown-option-hover-color: hsl(0, 0%, 28%);
+    --dropdown-active-item-color: hsl(14, 100%, 57%);
+
+    // Input
+    --input-bg-color: hsl(0, 0%, 10%);
+    --input-stransparent-bg-color: hsla(0, 0%, 0%, 0.23);
+    --input-stransparent-hovered-bg-color: hsla(0, 0%, 0%, 0.4);
+    --input-hovered-bg-color: hsl(0, 0%, 7%);
+    --input-text-color: hsl(0, 0%, 85%);
+    --input-border-color: hsl(187, 100%, 42%);
+
+    // Progress Bar
+    --progress-bar-bg-color: hsl(0, 0%, 18%);
+
+    // Radio Buttons
+    --radio-button-border-color: hsl(0, 0%, 96%);
+    --radio-button-selected-border-color: hsl(0, 0%, 13%);
+    --radio-button-disabled-border-color: hsl(0, 0%, 40%);
+  }
+}
