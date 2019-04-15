@@ -1,0 +1,88 @@
+$badge-corner-radius: 6px;
+$badge-corner-radius-x: 20px;
+$padding-first: 10px;
+$padding-second: 5px;
+$badge-only-part-color: var(--primary-color);
+$badge-only-part-text-color: white;
+$badge-first-part-color: rgba(144, 144, 144, 0.1);
+$badge-first-part-text-color: var(--badge-text-color);
+$badge-last-part-color: $orange;
+$badge-last-part-text-color: white;
+$badge-text-size: 13px;
+
+span.zust-badge {
+  @extend %no-select;
+  font-size: $badge-text-size;
+  display: inline-block;
+  border-radius: $badge-corner-radius;
+  $padding: 4px;
+  $extra: 4px;
+  padding-left: $padding + $extra;
+  padding-right: $padding + $extra;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  background-color: $badge-only-part-color;
+  color: $badge-only-part-text-color;
+  transition: $secondary-transition;
+}
+
+div.zust-badge {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 8px;
+  white-space: nowrap;
+
+  span {
+    @extend %no-select;
+    padding: 4px;
+    margin: 0px;
+    font-size: $badge-text-size;
+  }
+
+  span:only-of-type {
+    @extend %no-select;
+    border-radius: $badge-corner-radius;
+    $padding: 4px;
+    $extra: 4px;
+    padding-left: $padding + $extra;
+    padding-right: $padding + $extra;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    background-color: $badge-only-part-color;
+    color: $badge-only-part-text-color;
+    transition: $secondary-transition;
+  }
+
+  span:first-child:not(:only-of-type) {
+    border-top-left-radius: $badge-corner-radius;
+    border-bottom-left-radius: $badge-corner-radius;
+    padding-left: $padding-first;
+    padding-right: $padding-second;
+    background-color: $badge-first-part-color;
+    color: $badge-first-part-text-color;
+    transition: $secondary-transition;
+  }
+
+  span:last-child:not(:only-of-type) {
+    border-top-right-radius: $badge-corner-radius;
+    border-bottom-right-radius: $badge-corner-radius;
+    padding-right: $padding-first;
+    padding-left: $padding-second;
+    background-color: $badge-last-part-color;
+    color: $badge-last-part-text-color;
+  }
+
+  &.zust-rounded {
+    span:first-child:not(:only-of-type) {
+      border-top-left-radius: $corner-radius-full;
+      border-bottom-left-radius: $corner-radius-full;
+    }
+
+    span:last-child:not(:only-of-type) {
+      border-top-right-radius: $corner-radius-full;
+      border-bottom-right-radius: $corner-radius-full;
+    }
+  }
+}
