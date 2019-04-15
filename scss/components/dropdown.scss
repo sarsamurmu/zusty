@@ -1,0 +1,189 @@
+$dropdown-animation-duration: 0.3s;
+$dropdown-margin: 0.8em;
+
+%dropdown-base {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--dropdown-border-color);
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 12px;
+  background-color: var(--dropdown-bg-color);
+  position: absolute;
+  z-index: $dropdown-z-index;
+  transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
+  padding: 10px;
+  font-size: 13px;
+  height: fit-content;
+}
+
+
+// Default - Down Side
+.zust-dropdown:not(.zust-upside) {
+  .zust-items {
+     @extend %dropdown-base;
+     top: 100%;
+     left: 0;
+     margin-top: $dropdown-margin;
+     margin-bottom: $dropdown-margin;
+     margin-left: 0;
+     margin-right: 0;
+     width: 150px;
+     transform: translateY(-10px);
+   }
+}
+
+.zust-dropdown:focus > .zust-items,
+.zust-dropdown:focus-within > .zust-items,
+.zust-dropdown.zust-hover:hover > .zust-items, {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+// Up Side
+.zust-dropdown.zust-upside {
+  .zust-items {
+     @extend %dropdown-base;
+     left: 0;
+     bottom: 100%;
+     width: 150px;
+     margin-top: $dropdown-margin;
+     margin-bottom: $dropdown-margin;
+     margin-left: 0;
+     margin-right: 0;
+     transform: translateY(-10px);
+   }
+}
+
+.zust-dropdown.zust-upside:focus > .zust-items,
+.zust-dropdown.zust-upside:focus-within > .zust-items,
+.zust-dropdown.zust-upside.zust-hover:hover > .zust-items {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+// Left Side
+.zust-dropdown.zust-leftside {
+  .zust-items {
+     @extend %dropdown-base;
+     left: 100%;
+     top: 0;
+     width: 150px;
+     margin-left: $dropdown-margin;
+     margin-right: $dropdown-margin;
+     margin-top: 0;
+     margin-bottom: 0;
+     transform: translateX(10px);
+   }
+}
+
+.zust-dropdown.zust-leftside:focus > .zust-items,
+.zust-dropdown.zust-leftside:focus-within > .zust-items,
+.zust-dropdown.zust-leftside.zust-hover:hover > .zust-items {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+// Active State
+.zust-dropdown.zust-active > .zust-items {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+// Sizes
+.zust-dropdown.zust-narrow > .zust-items {
+  width: 50px !important;
+}
+
+.zust-dropdown.zust-small > .zust-items {
+  width: 100px !important;
+}
+
+.zust-dropdown.zust-large > .zust-items {
+  width: 200px !important;
+}
+
+// Alignments
+.zust-dropdown.zust-left > .zust-items {
+  text-align: left;
+}
+
+.zust-dropdown.zust-right > .zust-items {
+  text-align: right;
+}
+
+// Option's Text Alignment
+.zust-dropdown.zust-option-left > .zust-items > a,
+.zust-dropdown.zust-option-left > .zust-items > .zust-option {
+  text-align: left !important;
+}
+
+.zust-dropdown.zust-option-right > .zust-items > a,
+.zust-dropdown.zust-option-right > .zust-items > .zust-option {
+  text-align: right !important;
+}
+
+// Active Links
+.zust-dropdown > .zust-items > a[active],
+.zust-dropdown > .zust-items > .zust-option.active,
+.zust-dropdown > .zust-items > .zust-option[active] {
+  color: white;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #FF5722;
+}
+
+.zust-dropdown > .zust-items > a,
+.zust-dropdown > .zust-items > zust-option {
+  @extend %no-select;
+  display: block;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  color: var(--dropdown-text-color);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: 0.5s !important;
+  text-align: center;
+}
+
+.zust-dropdown > .zust-items > p {
+  $margin: 2px;
+  margin-top: $margin;
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+.zust-dropdown > .zust-dropdown-button {
+  @extend %no-select;
+  display: block;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s !important;
+  @extend %full-width;
+  border: none;
+  background-color: $blue;
+  text-align: center;
+  color: white;
+}
+
+.zust-dropdown > .zust-items > a:not([active], .active):hover,
+.zust-dropdown > .zust-items > .zust-option:not([active], .active):hover, {
+  background-color: var(--dropdown-option-hover-color);
+}
