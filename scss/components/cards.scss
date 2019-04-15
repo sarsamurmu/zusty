@@ -1,0 +1,78 @@
+.zust-card-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &.zust-rtl {
+    justify-content: flex-end;
+  }
+
+  &.zust-middle {
+    justify-content: center;
+    width: auto;
+    position: static;
+    @include transform(translateX(0));
+  }
+}
+
+// General Card
+
+[class*="zust-card"]:not(.zust-card-container) {
+  position: relative;
+  background-color: var(--card-bg-color);
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--card-border-color);
+  display: inline-block;
+  max-width: 200px;
+  min-width: 180px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 98%;
+  transition: $primary-transition;
+  cursor: default;
+  margin: 10px;
+
+  > .zust-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+
+    > .zust-button {
+      float: right;
+    }
+  }
+
+  &[class*="-with-button"] {
+    padding-bottom: 45px;
+  }
+
+  &.zust-floating {
+    box-shadow: 0 0 20px 0px hsla(0, 0%, 0%, 0.2);
+    border-style: none;
+  }
+
+  &.zust-landscape {
+    max-width: 350px;
+    min-width: 260px;
+  }
+}
+
+// Conatct Card
+.zust-card.zust-contact {
+  padding-top: 30px;
+  > img {
+    $size: 80px;
+    height: $size;
+    width: $size;
+  }
+
+  > .zust-buttons {
+    position: static;
+
+    > .zust-button {
+      float: none;
+    }
+  }
+}
