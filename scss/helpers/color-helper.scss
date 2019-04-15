@@ -1,0 +1,453 @@
+.zust-bg-red {
+  background-color: $red !important;
+  color: $white;
+}
+
+.zust-bg-pink {
+  background-color: $pink !important;
+  color: $white;
+}
+
+.zust-bg-purple {
+  background-color: $purple !important;
+  color: $white;
+}
+
+.zust-bg-deep-purple {
+  background-color: $deep-purple !important;
+  color: $white;
+}
+
+.zust-bg-indigo {
+  background-color: $indigo !important;
+  color: $white;
+}
+
+.zust-bg-blue {
+  background-color: $blue !important;
+  color: $white;
+}
+
+.zust-bg-light-blue {
+  background-color: $light-blue !important;
+  color: $white;
+}
+
+.zust-bg-cyan {
+  background-color: $cyan !important;
+  color: $white;
+}
+
+.zust-bg-teal {
+  background-color: $teal !important;
+  color: $white;
+}
+
+.zust-bg-green {
+  background-color: $green !important;
+  color: $white;
+}
+
+.zust-bg-light-green {
+  background-color: $light-green !important;
+  color: black;
+}
+
+.zust-bg-lime {
+  background-color: $lime !important;
+  color: black;
+}
+
+.zust-bg-yellow {
+  background-color: $yellow !important;
+  color: black;
+}
+
+.zust-bg-amber {
+  background-color: $amber !important;
+  color: black;
+}
+
+.zust-bg-orange {
+  background-color: $orange !important;
+  color: black;
+}
+
+.zust-bg-deep-orange {
+  background-color: $deep-orange !important;
+  color: $white;
+}
+
+.zust-bg-brown {
+  background-color: $brown !important;
+  color: $white;
+}
+
+.zust-bg-grey {
+  background-color: $grey !important;
+  color: $white;
+}
+
+.zust-bg-light-grey {
+  background-color: $light-grey !important;
+  color: $white;
+}
+
+.zust-bg-blue-grey {
+  background-color: $blue-grey !important;
+  color: $white;
+}
+
+.zust-bg-light {
+  background-color: rgba(144, 144, 144, 0.1) !important;
+  color: var(--text-color-primary);
+}
+
+// Brands
+.zust-bg-facebook {
+  background-color: $facebook !important;
+  color: $white;
+}
+
+.zust-bg-facebook-messenger {
+  background-color: $facebook-messenger !important;
+  color: $white;
+}
+
+.zust-bg-youtube {
+  background-color: $youtube !important;
+  color: $white;
+}
+
+.zust-bg-twitter {
+  background-color: $twitter !important;
+  color: $white;
+}
+
+.zust-bg-linkedin {
+  background-color: $linkedin !important;
+  color: $white;
+}
+
+[zust-theme="dark"] {
+  .zust-dark-bg-red {
+    background-color: $red !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-pink {
+    background-color: $pink !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-purple {
+    background-color: $purple !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-deep-purple {
+    background-color: $deep-purple !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-indigo {
+    background-color: $indigo !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-blue {
+    background-color: $blue !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-light-blue {
+    background-color: $light-blue !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-cyan {
+    background-color: $cyan !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-teal {
+    background-color: $teal !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-green {
+    background-color: $green !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-light-green {
+    background-color: $light-green !important;
+    color: black;
+  }
+
+  .zust-dark-bg-lime {
+    background-color: $lime !important;
+    color: black;
+  }
+
+  .zust-dark-bg-yellow {
+    background-color: $yellow !important;
+    color: black;
+  }
+
+  .zust-dark-bg-amber {
+    background-color: $amber !important;
+    color: black;
+  }
+
+  .zust-dark-bg-orange {
+    background-color: $orange !important;
+    color: black;
+  }
+
+  .zust-dark-bg-deep-orange {
+    background-color: $deep-orange !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-brown {
+    background-color: $brown !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-grey {
+    background-color: $grey !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-light-grey {
+    background-color: $light-grey !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-blue-grey {
+    background-color: $blue-grey !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-light {
+    background-color: rgba(144, 144, 144, 0.1) !important;
+    color: var(--text-color-primary);
+  }
+}
+
+
+// Text Colors
+
+.zust-text-red {
+  color: $red !important;
+}
+
+.zust-text-pink {
+  color: $pink !important;
+}
+
+.zust-text-purple {
+  color: $purple !important;
+}
+
+.zust-text-deep-purple {
+  color: $deep-purple !important;
+}
+
+.zust-text-indigo {
+  color: $indigo !important;
+}
+
+.zust-text-blue {
+  color: $blue !important;
+}
+
+.zust-text-light-blue {
+  color: $light-blue !important;
+}
+
+.zust-text-cyan {
+  color: $cyan !important;
+}
+
+.zust-text-teal {
+  color: $teal !important;
+}
+
+.zust-text-green {
+  color: $green !important;
+}
+
+.zust-text-light-green {
+  color: $light-green !important;
+}
+
+.zust-text-lime {
+  color: $lime !important;
+}
+
+.zust-text-yellow {
+  color: $yellow !important;
+}
+
+.zust-text-amber {
+  color: $amber !important;
+}
+
+.zust-text-orange {
+  color: $orange !important;
+}
+
+.zust-text-deep-orange {
+  color: $deep-orange !important;
+}
+
+.zust-text-brown {
+  color: $brown !important;
+}
+
+.zust-text-grey {
+  color: $grey !important;
+}
+
+.zust-text-blue-grey {
+  color: $blue-grey !important;
+}
+
+.zust-text-black {
+  color: black !important;
+}
+
+.zust-text-white {
+  color: $white !important;
+}
+
+.zust-text-adaptive {
+  color: $white !important;
+}
+
+.zust-text-primary {
+  color: var(--text-color-primary) !important;
+}
+
+.zust-text-secondary {
+  color: var(--text-color-secondary) !important;
+}
+
+.zust-text-tertiary {
+  color: var(--text-color-tertiary) !important;
+}
+
+// Brands
+.zust-text-facebook {
+  color: $facebook !important;
+}
+
+.zust-text-facebook-messenger {
+  color: $facebook-messenger !important;
+}
+
+.zust-text-linkedin {
+  color: $linkedin !important;
+}
+
+.zust-text-twitter {
+  color: $twitter !important;
+}
+
+.zust-text-youtube {
+  color: $youtube !important;
+}
+
+// Text on Dark Mode
+
+[zust-theme="dark"] {
+  .zust-dark-text-red {
+    color: $red !important;
+  }
+
+  .zust-dark-text-pink {
+    color: $pink !important;
+  }
+
+  .zust-dark-text-purple {
+    color: $purple !important;
+  }
+
+  .zust-dark-text-deep-purple {
+    color: $deep-purple !important;
+  }
+
+  .zust-dark-text-indigo {
+    color: $indigo !important;
+  }
+
+  .zust-dark-text-blue {
+    color: $blue !important;
+  }
+
+  .zust-dark-text-light-blue {
+    color: $light-blue !important;
+  }
+
+  .zust-dark-text-cyan {
+    color: $cyan !important;
+  }
+
+  .zust-dark-text-teal {
+    color: $teal !important;
+  }
+
+  .zust-dark-text-green {
+    color: $green !important;
+  }
+
+  .zust-dark-text-light-green {
+    color: $light-green !important;
+  }
+
+  .zust-dark-text-lime {
+    color: $lime !important;
+  }
+
+  .zust-dark-text-yellow {
+    color: $yellow !important;
+  }
+
+  .zust-dark-text-amber {
+    color: $amber !important;
+  }
+
+  .zust-dark-text-orange {
+    color: $orange !important;
+  }
+
+  .zust-dark-text-deep-orange {
+    color: $deep-orange !important;
+  }
+
+  .zust-dark-text-brown {
+    color: $brown !important;
+  }
+
+  .zust-dark-text-grey {
+    color: $grey !important;
+  }
+
+  .zust-dark-text-blue-grey {
+    color: $blue-grey !important;
+  }
+
+  .zust-dark-text-black {
+    color: black !important;
+  }
+
+  .zust-dark-text-white {
+    color: $white !important;
+  }
+
+  .zust-text-adaptive {
+    color: #484848 !important;
+  }
+}
