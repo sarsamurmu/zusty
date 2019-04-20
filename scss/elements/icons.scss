@@ -1,9 +1,58 @@
 .zust-icon {
-  height: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 1em;
   width: 1em;
   margin: 1px;
+  transition: $primary-transition;
+
+  svg {
+    height:  1em;
+    width: 1em;
+  }
+
+  &.zust-small {
+    $size: 0.8em !important;
+    height: $size;
+    width: $size;
+
+    svg {
+      height:  $size;
+      width: $size;
+    }
+  }
+
+  &.zust-normal, &.zust-default {
+    $size: 1em !important;
+    height: $size;
+    width: $size;
+
+    svg {
+      height:  $size;
+      width: $size;
+    }
+  }
+
+  &.zust-large {
+    $size: 1.4em !important;
+    height: $size;
+    width: $size;
+
+    svg {
+      height:  $size;
+      width: $size;
+    }
+  }
+
+  &.zust-xlarge {
+    $size: 1.8em !important;
+    height: $size;
+    width: $size;
+
+    svg {
+      height:  $size;
+      width: $size;
+    }
+  }
 }
