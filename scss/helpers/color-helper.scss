@@ -103,6 +103,32 @@
   color: var(--text-color-primary);
 }
 
+// Status
+.zust-bg-primary {
+  background-color: var(--primary-color) !important;
+  color: $white;
+}
+
+.zust-bg-warning {
+  background-color: var(--warning-color) !important;
+  color: $white;
+}
+
+.zust-bg-error {
+  background-color: var(--error-color) !important;
+  color: $white;
+}
+
+.zust-bg-success {
+  background-color: var(--success-color) !important;
+  color: $white;
+}
+
+.zust-bg-link {
+  background-color: var(--link-color) !important;
+  color: $white;
+}
+
 // Brands
 .zust-bg-facebook {
   background-color: $facebook !important;
@@ -128,6 +154,9 @@
   background-color: $linkedin !important;
   color: $white;
 }
+
+
+// Backgrounds on Dark Theme
 
 [zust-theme="dark"] {
   .zust-dark-bg-red {
@@ -234,6 +263,58 @@
     background-color: rgba(144, 144, 144, 0.1) !important;
     color: var(--text-color-primary);
   }
+
+  // Status
+  .zust-dark-bg-primary {
+    background-color: var(--primary-color) !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-warning {
+    background-color: var(--warning-color) !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-error {
+    background-color: var(--error-color) !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-success {
+    background-color: var(--success-color) !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-link {
+    background-color: var(--link-color) !important;
+    color: $white;
+  }
+
+  // Brands
+  .zust-dark-bg-facebook {
+    background-color: $facebook !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-facebook-messenger {
+    background-color: $facebook-messenger !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-youtube {
+    background-color: $youtube !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-twitter {
+    background-color: $twitter !important;
+    color: $white;
+  }
+
+  .zust-dark-bg-linkedin {
+    background-color: $linkedin !important;
+    color: $white;
+  }
 }
 
 
@@ -337,6 +418,23 @@
 
 .zust-text-tertiary {
   color: var(--text-color-tertiary) !important;
+}
+
+// Status
+.zust-text-error {
+  color: var(--error-color) !important;
+}
+
+.zust-text-warning {
+  color: var(--warning-color) !important;
+}
+
+.zust-text-success {
+  color: var(--success-color) !important;
+}
+
+.zust-text-link {
+  color: var(--link-color) !important;
 }
 
 // Brands
@@ -449,5 +547,43 @@
 
   .zust-text-adaptive {
     color: #484848 !important;
+  }
+
+  // Status
+  .zust-dark-text-error {
+    color: var(--error-color) !important;
+  }
+
+  .zust-dark-text-warning {
+    color: var(--warning-color) !important;
+  }
+
+  .zust-dark-text-success {
+    color: var(--success-color) !important;
+  }
+
+  .zust-dark-text-link {
+    color: var(--link-color) !important;
+  }
+
+  // Brands
+  .zust-dark-text-facebook {
+    color: $facebook !important;
+  }
+
+  .zust-dark-text-facebook-messenger {
+    color: $facebook-messenger !important;
+  }
+
+  .zust-dark-text-linkedin {
+    color: $linkedin !important;
+  }
+
+  .zust-dark-text-twitter {
+    color: $twitter !important;
+  }
+
+  .zust-dark-text-youtube {
+    color: $youtube !important;
   }
 }
