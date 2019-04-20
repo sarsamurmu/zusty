@@ -1,20 +1,3 @@
-.zust-text-input-container {
-  margin: 0;
-  display: flex;
-  position: relative;
-
-  .zust-icon {
-    position: absolute;
-    float: left;
-    margin-top: 0.9em;
-    margin-left: 1em;
-  }
-
-  [type="text"].zust-input {
-    padding-left: 35px;
-  }
-}
-
 [type="text"].zust-input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -37,6 +20,50 @@
   padding-right: $padding2;
   background-color: var(--input-bg-color);
 
+  ~ .zust-icon {
+    $size: 16px !important;
+    height: $size;
+    width: $size;
+
+    svg {
+      height:  $size;
+      width: $size;
+    }
+
+    &.zust-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-left: 16px;
+    }
+
+    &.zust-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-left: 0;
+      margin-top: 15px;
+      margin-right: 16px;
+    }
+  }
+
+  $expadding: 35px;
+
+  &.zust-with-icon-left {
+    padding-left: $expadding;
+  }
+
+  &.zust-with-icon-right {
+    padding-right: $expadding;
+  }
+
+  &.zust-with-icon-both {
+    padding-right: $expadding;
+    padding-left: $expadding;
+  }
+
   &:hover, &.zust-hovered {
     background-color: var(--input-hovered-bg-color);
   }
@@ -54,6 +81,50 @@
     padding-bottom: $padding1;
     padding-left: $padding2;
     padding-right: $padding2;
+
+    ~ .zust-icon {
+      $size: 12px !important;
+      height: $size;
+      width: $size;
+
+      svg {
+        height:  $size;
+        width: $size;
+      }
+
+      &.zust-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        margin-top: 12px;
+        margin-left: 12px;
+      }
+
+      &.zust-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-left: 0;
+        margin-top: 12px;
+        margin-right: 12px;
+      }
+    }
+
+    $expadding: 25px;
+
+    &.zust-with-icon-left {
+      padding-left: $expadding;
+    }
+
+    &.zust-with-icon-right {
+      padding-right: $expadding;
+    }
+
+    &.zust-with-icon-both {
+      padding-right: $expadding;
+      padding-left: $expadding;
+    }
   }
 
   &.zust-large {
@@ -64,6 +135,50 @@
     padding-bottom: $padding1;
     padding-left: $padding2;
     padding-right: $padding2;
+
+    ~ .zust-icon {
+      $size: 20px !important;
+      height: $size;
+      width: $size;
+
+      svg {
+        height:  $size;
+        width: $size;
+      }
+
+      &.zust-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        margin-top: 18px;
+        margin-left: 20px;
+      }
+
+      &.zust-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-left: 0;
+        margin-top: 18px;
+        margin-right: 20px;
+      }
+    }
+
+    $expadding: 45px;
+
+    &.zust-with-icon-left {
+      padding-left: $expadding;
+    }
+
+    &.zust-with-icon-right {
+      padding-right: $expadding;
+    }
+
+    &.zust-with-icon-both {
+      padding-right: $expadding;
+      padding-left: $expadding;
+    }
   }
 
   &.zust-xlarge {
@@ -74,6 +189,50 @@
     padding-bottom: $padding1;
     padding-left: $padding2;
     padding-right: $padding2;
+
+    ~ .zust-icon {
+      $size: 25px !important;
+      height: $size;
+      width: $size;
+
+      svg {
+        height:  $size;
+        width: $size;
+      }
+
+      &.zust-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        margin-top: 23px;
+        margin-left: 23px;
+      }
+
+      &.zust-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-left: 0;
+        margin-top: 23px;
+        margin-right: 23px;
+      }
+    }
+
+    $expadding: 55px;
+
+    &.zust-with-icon-left {
+      padding-left: $expadding;
+    }
+
+    &.zust-with-icon-right {
+      padding-right: $expadding;
+    }
+
+    &.zust-with-icon-both {
+      padding-right: $expadding;
+      padding-left: $expadding;
+    }
   }
 
   &.zust-transparent {
@@ -132,6 +291,13 @@
       box-shadow: 0 0 0 2px var(--link-color-l);
     }
   }
+}
+
+// In Container
+.zust-input-container {
+  margin: 0;
+  display: inline-flex;
+  position: relative;
 }
 
 input, input:hover, input:active, input:focus {
