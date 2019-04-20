@@ -34,6 +34,7 @@
   --card-bg-color: hsl(0, 0%, 100%);
   --card-border-color: hsl(0, 0%, 88%);
   --chip-bg-color: hsl(0, 0%, 97%);
+  --dialog-bg-color: hsl(0, 0%, 100%);
   --dropdown-bg-color: hsl(0, 0%, 100%);
   --dropdown-border-color: hsl(0, 0%, 88%);
   --dropdown-text-color: hsl(0, 0%, 26%);
@@ -49,6 +50,7 @@
   --radio-button-border-color: hsl(0, 0%, 46%);
   --radio-button-selected-border-color: hsl(0, 0%, 100%);
   --radio-button-disabled-border-color: hsl(0, 0%, 88%);
+  --dimmer-bg-color: hsla(0, 0%, 0%, 0.6);
 }
 
 @supports (--css: variables) {
@@ -69,6 +71,7 @@
     --card-bg-color: hsl(0, 0%, 17%);
     --card-border-color: hsl(0, 0%, 42%);
     --chip-bg-color: hsl(0, 0%, 17%);
+    --dialog-bg-color: hsl(0, 0%, 26%);
     --dropdown-bg-color: hsl(0, 0%, 17%);
     --dropdown-border-color: hsl(0, 0%, 42%);
     --dropdown-text-color: hsl(0, 0%, 88%);
@@ -1176,6 +1179,63 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
   float: none;
 }
 
+.zust-dialog, .zust-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--dimmer-bg-color);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zust-dialog > .zust-content, .zust-modal > .zust-content {
+  background-color: var(--dialog-bg-color);
+  padding: 20px;
+  color: var(--text-color-secondary);
+  border-radius: 14px;
+  transform: scale(0);
+  transition: transform 1s, background-color 0.3s, opacity 0.2s;
+  opacity: 0;
+  margin: 15px;
+  max-width: 400px;
+  font-size: 15px;
+}
+
+.zust-dialog > .zust-content > .zust-header, .zust-modal > .zust-content > .zust-header {
+  display: flex;
+  align-items: center;
+  margin: 15px 5px;
+}
+
+.zust-dialog > .zust-content > .zust-header > img, .zust-modal > .zust-content > .zust-header > img {
+  height: 50px;
+  width: 50px;
+}
+
+.zust-dialog > .zust-content > .zust-header > h1, .zust-dialog > .zust-content > .zust-header h2, .zust-dialog > .zust-content > .zust-header h3, .zust-dialog > .zust-content > .zust-header h4, .zust-dialog > .zust-content > .zust-header h5, .zust-dialog > .zust-content > .zust-header h6, .zust-modal > .zust-content > .zust-header > h1, .zust-modal > .zust-content > .zust-header h2, .zust-modal > .zust-content > .zust-header h3, .zust-modal > .zust-content > .zust-header h4, .zust-modal > .zust-content > .zust-header h5, .zust-modal > .zust-content > .zust-header h6 {
+  display: inline-block;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.zust-dialog.zust-active, .zust-modal.zust-active {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in-out 0.1s, visibility 0s linear;
+}
+
+.zust-dialog.zust-active > .zust-content, .zust-modal.zust-active > .zust-content {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
+}
+
 .zust-dropdown:not(.zust-upside) .zust-items, .zust-dropdown.zust-upside .zust-items, .zust-dropdown.zust-leftside .zust-items {
   border-style: solid;
   border-width: 2px;
@@ -1980,39 +2040,11 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
   color: #ff0000 !important;
 }
 
-/*
-.zust-group {
-  display: flex;
-  margin: 5px;
-
-  .zust-item {
-    margin: 0 !important;
-  }
-
-  .zust-item:not(:first-child) {
-    border-radius: 0 !important;
-  }
-
-  .zust-item:not(:last-child) {
-    border-radius: 0 !important;
-  }
-
-  .zust-item:first-child {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-
-  .zust-item:last-child {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
-}
-*/
-.zust-show {
+.zust-show, .zust-visible {
   display: block;
 }
 
-.zust-hide {
+.zust-hide, .zust-hidden {
   display: none;
 }
 
@@ -2151,6 +2183,18 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
 
 .zust-radiusless, .zust-sharp {
   border-radius: 0 !important;
+}
+
+.zust-text-bold {
+  font-weight: 600;
+}
+
+.zust-text-normal {
+  font-weight: 400;
+}
+
+.zust-text-light {
+  font-weight: 100;
 }
 
 .zust-text-centered {
