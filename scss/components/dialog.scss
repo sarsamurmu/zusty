@@ -1,0 +1,56 @@
+.zust-dialog, .zust-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--dimmer-bg-color);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear $secondary-transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .zust-content {
+    background-color: var(--dialog-bg-color);
+    padding: 20px;
+    color: var(--text-color-secondary);
+    border-radius: 14px;
+    transform: scale(0);
+    transition: transform 1s, background-color 0.3s, opacity 0.2s;
+    opacity: 0;
+    margin: 15px;
+    max-width: 400px;
+    font-size: 15px;
+
+    > .zust-header {
+      display: flex;
+      align-items: center;
+      margin: 15px 5px;
+
+      > img {
+        height: 50px;
+        width: 50px;
+      }
+
+      > h1, h2, h3, h4, h5, h6 {
+        display: inline-block;
+        margin: 0;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &.zust-active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out 0.1s, visibility 0s linear;
+
+    > .zust-content {
+      transform: scale(1);
+      opacity: 1;
+      transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
+    }
+  }
+}
