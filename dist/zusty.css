@@ -1,5 +1,5 @@
 /*! Zusty v0.0.1 | MIT License | github.com/sarsamurmu/zusty */
-:root, [zust-theme="default"] {
+:root, [zust-theme="light"] {
   --primary-color-d: hsl(0, 69%, 67%);
   --primary-color: hsl(36, 100%, 50%);
   --primary-color-l: hsl(36, 100%, 57%);
