@@ -17,11 +17,12 @@
     padding: 20px;
     color: var(--text-color-secondary);
     border-radius: 14px;
-    transform: scale(0);
+    transform: scale(0) rotateX(180deg);
     transition: transform 1s, background-color 0.3s, opacity 0.2s;
     opacity: 0;
     margin: 15px;
     max-width: 400px;
+    max-height: 80%;
     font-size: 15px;
 
     > .zust-header {
@@ -32,12 +33,26 @@
       > img {
         height: 50px;
         width: 50px;
-      }
+        }
 
       > h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         margin: 0;
         margin-left: 15px;
+      }
+    }
+
+    > .zust-button {
+      float: right;
+    }
+
+    > .zust-button-container {
+        float: right;
+        button.zust-button,
+        a.zust-button,
+        .zust-button[type="submit"],
+        .zust-button[type="reset"] {
+          float: right;
       }
     }
   }
@@ -48,9 +63,22 @@
     transition: all 0.3s ease-in-out 0.1s, visibility 0s linear;
 
     > .zust-content {
-      transform: scale(1);
+      transform: scale(1) rotateX(0deg);
       opacity: 1;
       transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
     }
+  }
+
+  &.zust-large > .zust-content {
+    max-width: 600px;
+  }
+
+  &.zust-xlarge > .zust-content {
+    max-width: 800px;
+  }
+
+  &.zust-full > .zust-content {
+    max-height: 85%;
+    max-width: 95%;
   }
 }
