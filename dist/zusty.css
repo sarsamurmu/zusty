@@ -51,6 +51,7 @@
   --radio-button-selected-border-color: hsl(0, 0%, 100%);
   --radio-button-disabled-border-color: hsl(0, 0%, 88%);
   --dimmer-bg-color: hsla(0, 0%, 0%, 0.6);
+  --light-color: hsl(0, 0%, 96%);
 }
 
 @supports (--css: variables) {
@@ -87,6 +88,7 @@
     --radio-button-border-color: hsl(0, 0%, 96%);
     --radio-button-selected-border-color: hsl(0, 0%, 13%);
     --radio-button-disabled-border-color: hsl(0, 0%, 40%);
+    --light-color: hsl(0, 0%, 18%);
   }
 }
 
@@ -110,6 +112,12 @@
   width: fill-available;
 }
 
+.zust-fullheight, .zust-full-height {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}
+
 .zust-button, a.zust-button, .zust-button[type="submit"], .zust-button[type="reset"] {
   display: inline-flex;
   align-items: center;
@@ -127,6 +135,14 @@
   cursor: pointer;
   transition: 0.2s;
   text-align: center;
+}
+
+.zust-button.zust-icon-button, a.zust-button.zust-icon-button, .zust-button[type="submit"].zust-icon-button, .zust-button[type="reset"].zust-icon-button {
+  padding: 8px !important;
+}
+
+.zust-button.zust-icon-button .zust-icon, a.zust-button.zust-icon-button .zust-icon, .zust-button[type="submit"].zust-icon-button .zust-icon, .zust-button[type="reset"].zust-icon-button .zust-icon {
+  margin: 0 !important;
 }
 
 .zust-button .zust-icon, a.zust-button .zust-icon, .zust-button[type="submit"] .zust-icon, .zust-button[type="reset"] .zust-icon {
@@ -152,13 +168,13 @@
 }
 
 .zust-button.zust-transparent, a.zust-button.zust-transparent, .zust-button[type="submit"].zust-transparent, .zust-button[type="reset"].zust-transparent {
-  background-color: rgba(255, 255, 255, 0);
-  border-width: 0;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-width: 0 !important;
 }
 
 .zust-button.zust-transparent:hover, .zust-button.zust-transparent.zust-hovered, a.zust-button.zust-transparent:hover, a.zust-button.zust-transparent.zust-hovered, .zust-button[type="submit"].zust-transparent:hover, .zust-button[type="submit"].zust-transparent.zust-hovered, .zust-button[type="reset"].zust-transparent:hover, .zust-button[type="reset"].zust-transparent.zust-hovered {
   background-color: rgba(144, 144, 144, 0.1) !important;
-  box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1);
+  box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1) !important;
 }
 
 .zust-button.zust-primary, a.zust-button.zust-primary, .zust-button[type="submit"].zust-primary, .zust-button[type="reset"].zust-primary {
@@ -228,9 +244,33 @@
   padding: 18px 27px !important;
 }
 
+.zust-button.zust-xlarge.zust-icon-button, a.zust-button.zust-xlarge.zust-icon-button, .zust-button[type="submit"].zust-xlarge.zust-icon-button, .zust-button[type="reset"].zust-xlarge.zust-icon-button {
+  padding: 18px !important;
+}
+
+.zust-button.zust-xlarge.zust-icon-button .zust-icon, a.zust-button.zust-xlarge.zust-icon-button .zust-icon, .zust-button[type="submit"].zust-xlarge.zust-icon-button .zust-icon, .zust-button[type="reset"].zust-xlarge.zust-icon-button .zust-icon {
+  margin: 0 !important;
+}
+
+.zust-button.zust-xlarge.zust-icon-button .zust-icon i, a.zust-button.zust-xlarge.zust-icon-button .zust-icon i, .zust-button[type="submit"].zust-xlarge.zust-icon-button .zust-icon i, .zust-button[type="reset"].zust-xlarge.zust-icon-button .zust-icon i {
+  font-size: x-large !important;
+}
+
 .zust-button.zust-large, a.zust-button.zust-large, .zust-button[type="submit"].zust-large, .zust-button[type="reset"].zust-large {
   font-size: larger !important;
   padding: 14px 21px !important;
+}
+
+.zust-button.zust-large.zust-icon-button, a.zust-button.zust-large.zust-icon-button, .zust-button[type="submit"].zust-large.zust-icon-button, .zust-button[type="reset"].zust-large.zust-icon-button {
+  padding: 14px !important;
+}
+
+.zust-button.zust-large.zust-icon-button .zust-icon, a.zust-button.zust-large.zust-icon-button .zust-icon, .zust-button[type="submit"].zust-large.zust-icon-button .zust-icon, .zust-button[type="reset"].zust-large.zust-icon-button .zust-icon {
+  margin: 0 !important;
+}
+
+.zust-button.zust-large.zust-icon-button .zust-icon i, a.zust-button.zust-large.zust-icon-button .zust-icon i, .zust-button[type="submit"].zust-large.zust-icon-button .zust-icon i, .zust-button[type="reset"].zust-large.zust-icon-button .zust-icon i {
+  font-size: larger !important;
 }
 
 .zust-button.zust-default, a.zust-button.zust-default, .zust-button[type="submit"].zust-default, .zust-button[type="reset"].zust-default {
@@ -238,9 +278,33 @@
   padding: 8px 12px !important;
 }
 
+.zust-button.zust-default.zust-icon-button, a.zust-button.zust-default.zust-icon-button, .zust-button[type="submit"].zust-default.zust-icon-button, .zust-button[type="reset"].zust-default.zust-icon-button {
+  padding: 8px !important;
+}
+
+.zust-button.zust-default.zust-icon-button .zust-icon, a.zust-button.zust-default.zust-icon-button .zust-icon, .zust-button[type="submit"].zust-default.zust-icon-button .zust-icon, .zust-button[type="reset"].zust-default.zust-icon-button .zust-icon {
+  margin: 0 !important;
+}
+
+.zust-button.zust-default.zust-icon-button .zust-icon i, a.zust-button.zust-default.zust-icon-button .zust-icon i, .zust-button[type="submit"].zust-default.zust-icon-button .zust-icon i, .zust-button[type="reset"].zust-default.zust-icon-button .zust-icon i {
+  font-size: medium !important;
+}
+
 .zust-button.zust-small, a.zust-button.zust-small, .zust-button[type="submit"].zust-small, .zust-button[type="reset"].zust-small {
   font-size: small !important;
   padding: 4px 12px !important;
+}
+
+.zust-button.zust-small.zust-icon-button, a.zust-button.zust-small.zust-icon-button, .zust-button[type="submit"].zust-small.zust-icon-button, .zust-button[type="reset"].zust-small.zust-icon-button {
+  padding: 4px !important;
+}
+
+.zust-button.zust-small.zust-icon-button .zust-icon, a.zust-button.zust-small.zust-icon-button .zust-icon, .zust-button[type="submit"].zust-small.zust-icon-button .zust-icon, .zust-button[type="reset"].zust-small.zust-icon-button .zust-icon {
+  margin: 0 !important;
+}
+
+.zust-button.zust-small.zust-icon-button .zust-icon i, a.zust-button.zust-small.zust-icon-button .zust-icon i, .zust-button[type="submit"].zust-small.zust-icon-button .zust-icon i, .zust-button[type="reset"].zust-small.zust-icon-button .zust-icon i {
+  font-size: small !important;
 }
 
 .zust-button.zust-outlined, a.zust-button.zust-outlined, .zust-button[type="submit"].zust-outlined, .zust-button[type="reset"].zust-outlined {
@@ -329,6 +393,20 @@
 .zust-button-container .zust-button[type="reset"].zust-focused {
   box-shadow: 0 0 0 3px var(--button-focus-border-color);
   border-color: var(--button-focus-border-color);
+}
+
+.zust-button-container.zust-left button.zust-button,
+.zust-button-container.zust-left a.zust-button,
+.zust-button-container.zust-left .zust-button[type="submit"],
+.zust-button-container.zust-left .zust-button[type="reset"] {
+  float: left;
+}
+
+.zust-button-container.zust-right button.zust-button,
+.zust-button-container.zust-right a.zust-button,
+.zust-button-container.zust-right .zust-button[type="submit"],
+.zust-button-container.zust-right .zust-button[type="reset"] {
+  float: right;
 }
 
 .zust-button-container.zust-xlarge button.zust-button,
@@ -764,7 +842,7 @@ input, input:hover, input:active, input:focus {
   transition: 0.2s;
 }
 
-.zust-icon svg {
+.zust-icon svg, .zust-icon i {
   height: 1em;
   width: 1em;
 }
@@ -774,7 +852,7 @@ input, input:hover, input:active, input:focus {
   width: 0.8em !important;
 }
 
-.zust-icon.zust-small svg {
+.zust-icon.zust-small svg, .zust-icon.zust-small i {
   height: 0.8em !important;
   width: 0.8em !important;
 }
@@ -784,7 +862,7 @@ input, input:hover, input:active, input:focus {
   width: 1em !important;
 }
 
-.zust-icon.zust-normal svg, .zust-icon.zust-default svg {
+.zust-icon.zust-normal svg, .zust-icon.zust-normal i, .zust-icon.zust-default svg, .zust-icon.zust-default i {
   height: 1em !important;
   width: 1em !important;
 }
@@ -794,7 +872,7 @@ input, input:hover, input:active, input:focus {
   width: 1.4em !important;
 }
 
-.zust-icon.zust-large svg {
+.zust-icon.zust-large svg, .zust-icon.zust-large i {
   height: 1.4em !important;
   width: 1.4em !important;
 }
@@ -804,7 +882,7 @@ input, input:hover, input:active, input:focus {
   width: 1.8em !important;
 }
 
-.zust-icon.zust-xlarge svg {
+.zust-icon.zust-xlarge svg, .zust-icon.zust-xlarge i {
   height: 1.8em !important;
   width: 1.8em !important;
 }
@@ -1199,11 +1277,12 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
   padding: 20px;
   color: var(--text-color-secondary);
   border-radius: 14px;
-  transform: scale(0);
+  transform: scale(0) rotateX(180deg);
   transition: transform 1s, background-color 0.3s, opacity 0.2s;
   opacity: 0;
   margin: 15px;
   max-width: 400px;
+  max-height: 80%;
   font-size: 15px;
 }
 
@@ -1224,6 +1303,24 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
   margin-left: 15px;
 }
 
+.zust-dialog > .zust-content > .zust-button, .zust-modal > .zust-content > .zust-button {
+  float: right;
+}
+
+.zust-dialog > .zust-content > .zust-button-container, .zust-modal > .zust-content > .zust-button-container {
+  float: right;
+}
+
+.zust-dialog > .zust-content > .zust-button-container button.zust-button,
+.zust-dialog > .zust-content > .zust-button-container a.zust-button,
+.zust-dialog > .zust-content > .zust-button-container .zust-button[type="submit"],
+.zust-dialog > .zust-content > .zust-button-container .zust-button[type="reset"], .zust-modal > .zust-content > .zust-button-container button.zust-button,
+.zust-modal > .zust-content > .zust-button-container a.zust-button,
+.zust-modal > .zust-content > .zust-button-container .zust-button[type="submit"],
+.zust-modal > .zust-content > .zust-button-container .zust-button[type="reset"] {
+  float: right;
+}
+
 .zust-dialog.zust-active, .zust-modal.zust-active {
   visibility: visible;
   opacity: 1;
@@ -1231,9 +1328,22 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
 }
 
 .zust-dialog.zust-active > .zust-content, .zust-modal.zust-active > .zust-content {
-  transform: scale(1);
+  transform: scale(1) rotateX(0deg);
   opacity: 1;
   transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
+}
+
+.zust-dialog.zust-large > .zust-content, .zust-modal.zust-large > .zust-content {
+  max-width: 600px;
+}
+
+.zust-dialog.zust-xlarge > .zust-content, .zust-modal.zust-xlarge > .zust-content {
+  max-width: 800px;
+}
+
+.zust-dialog.zust-full > .zust-content, .zust-modal.zust-full > .zust-content {
+  max-height: 85%;
+  max-width: 95%;
 }
 
 .zust-dropdown:not(.zust-upside) .zust-items, .zust-dropdown.zust-upside .zust-items, .zust-dropdown.zust-leftside .zust-items {
@@ -2041,19 +2151,19 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
 }
 
 .zust-show, .zust-visible {
-  display: block;
+  display: block !important;
 }
 
 .zust-hide, .zust-hidden {
-  display: none;
+  display: none !important;
 }
 
-[zust-theme="dark"] .zust-show-on-dark {
-  display: block;
+[zust-theme="dark"] .zust-show-on-dark, [zust-theme="dark"] .zust-visible-on-dark {
+  display: block !important;
 }
 
-[zust-theme="dark"] .zust-hide-on-dark {
-  display: none;
+[zust-theme="dark"] .zust-hide-on-dark, [zust-theme="dark"] .zust-hidden-on-dark {
+  display: none !important;
 }
 
 .zust-centered {
@@ -2065,6 +2175,14 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.zust-left {
+  float: left !important;
+}
+
+.zust-right {
+  float: right !important;
 }
 
 .zust-flip-horizontal, .zust-flip-x {
@@ -2103,11 +2221,18 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
   transform: rotate(30deg);
 }
 
-.zust-rotate--30, -30deg {
-  -webkit-transform: rotate(45, 45deg);
-  -moz-transform: rotate(45, 45deg);
-  -o-transform: rotate(45, 45deg);
-  transform: rotate(45, 45deg);
+.zust-rotate--30 {
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+.zust-rotate-45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .zust-rotate--45 {
@@ -2186,15 +2311,15 @@ div.zust-badge.zust-rounded span:last-child:not(:only-of-type) {
 }
 
 .zust-text-bold {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .zust-text-normal {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .zust-text-light {
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 
 .zust-text-centered {
