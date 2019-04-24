@@ -50,12 +50,12 @@
   }
 
   &.zust-transparent {
-    background-color: $transparent;
-    border-width: 0;
+    background-color: $transparent !important;
+    border-width: 0 !important;
 
     &:hover, &.zust-hovered {
       background-color: rgba(144, 144, 144, 0.1) !important;
-      box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1);
+      box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1) !important;
     }
   }
 
@@ -269,6 +269,24 @@
     &:focus, &.zust-focused {
       box-shadow: 0 0 0 3px var(--button-focus-border-color);
       border-color: var(--button-focus-border-color);
+    }
+  }
+
+  &.zust-left {  
+    button.zust-button,
+    a.zust-button,
+    .zust-button[type="submit"],
+    .zust-button[type="reset"] {
+      float: left;
+    }
+  }
+
+  &.zust-right {
+    button.zust-button,
+    a.zust-button,
+    .zust-button[type="submit"],
+    .zust-button[type="reset"] {
+      float: right;
     }
   }
 
