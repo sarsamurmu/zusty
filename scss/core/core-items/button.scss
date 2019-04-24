@@ -17,6 +17,16 @@
   transition: $primary-transition;
   text-align: center;
 
+
+  // Important
+  &.zust-icon-button {
+    padding: 8px !important;
+
+    .zust-icon {
+      margin: 0 !important;
+    }
+  }
+
   .zust-icon {
     margin-right: 0.3em;
     margin-top: -0.05em;
@@ -118,21 +128,69 @@
   &.zust-xlarge {
     font-size: $xlarge-text !important;
     padding: 18px 27px !important;
+
+    &.zust-icon-button {
+      padding: 18px !important;
+
+      .zust-icon {
+        margin: 0 !important;
+
+        i {
+          font-size: $xlarge-text !important;
+        }
+      }
+    }
   }
 
   &.zust-large {
     font-size: $large-text !important;
     padding: 14px 21px !important;
+
+    &.zust-icon-button {
+      padding: 14px !important;
+
+      .zust-icon {
+        margin: 0 !important;
+
+        i {
+          font-size: $large-text !important;
+        }
+      }
+    }
   }
 
   &.zust-default {
     font-size: $medium-text !important;
     padding: 8px 12px !important;
+
+    &.zust-icon-button {
+      padding: 8px !important;
+
+      .zust-icon {
+        margin: 0 !important;
+
+        i {
+          font-size: $medium-text !important;
+        }
+      }
+    }
   }
 
   &.zust-small {
     font-size: $small-text !important;
     padding: 4px 12px !important;
+
+    &.zust-icon-button {
+      padding: 4px !important;
+
+      .zust-icon {
+        margin: 0 !important;
+
+        i {
+          font-size: $small-text !important;
+        }
+      }
+    }
   }
 
   &.zust-outlined {
