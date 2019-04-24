@@ -27,6 +27,14 @@
   @include transform(translateX(-50%));
 }
 
+// Float
+.zust-left {
+  float: left !important;
+}
+
+.zust-right {
+  float: right !important;
+}
 
 // Image Helper
 .zust-flip-horizontal, .zust-flip-x {
@@ -71,6 +79,10 @@
   @extend %full-width;
 }
 
+.zust-fullheight, .zust-full-height {
+  @extend %full-height;
+}
+
 .zust-rounded {
   border-radius: $corner-radius-full !important;
 }
@@ -85,15 +97,15 @@
 
 // Text Helper
 .zust-text-bold {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .zust-text-normal {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .zust-text-light {
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 
 .zust-text-centered {
