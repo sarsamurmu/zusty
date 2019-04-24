@@ -75,6 +75,7 @@
 
   // Misc.
   --dimmer-bg-color: hsla(0, 0%, 0%, 0.6);
+  --light-color: hsl(0, 0%, 96%);
 
 }
 
@@ -132,5 +133,8 @@
     --radio-button-border-color: hsl(0, 0%, 96%);
     --radio-button-selected-border-color: hsl(0, 0%, 13%);
     --radio-button-disabled-border-color: hsl(0, 0%, 40%);
+
+    // Misc.
+    --light-color: hsl(0, 0%, 18%);
   }
 }
