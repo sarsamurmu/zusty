@@ -13,3 +13,9 @@
   width: -moz-available;
   width: fill-available;
 }
+
+%full-height {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}
