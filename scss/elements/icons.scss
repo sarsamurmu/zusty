@@ -7,7 +7,7 @@
   margin: 1px;
   transition: $primary-transition;
 
-  svg {
+  svg, i {
     height:  1em;
     width: 1em;
   }
@@ -17,7 +17,7 @@
     height: $size;
     width: $size;
 
-    svg {
+    svg, i {
       height:  $size;
       width: $size;
     }
@@ -28,7 +28,7 @@
     height: $size;
     width: $size;
 
-    svg {
+    svg, i {
       height:  $size;
       width: $size;
     }
@@ -39,7 +39,7 @@
     height: $size;
     width: $size;
 
-    svg {
+    svg, i {
       height:  $size;
       width: $size;
     }
@@ -50,7 +50,7 @@
     height: $size;
     width: $size;
 
-    svg {
+    svg, i {
       height:  $size;
       width: $size;
     }
