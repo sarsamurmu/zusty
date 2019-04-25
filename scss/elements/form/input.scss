@@ -21,7 +21,7 @@
   background-color: var(--input-bg-color);
 
   ~ .zust-icon {
-    $size: 16px !important;
+    $size: 18px !important;
     height: $size;
     width: $size;
 
@@ -30,12 +30,16 @@
       width: $size;
     }
 
+    i {
+      font-size: $size;
+    }
+
     &.zust-left {
       position: absolute;
       top: 0;
       left: 0;
       margin-right: 0;
-      margin-top: 15px;
+      margin-top: 14px;
       margin-left: 16px;
     }
 
@@ -44,7 +48,7 @@
       top: 0;
       right: 0;
       margin-left: 0;
-      margin-top: 15px;
+      margin-top: 14px;
       margin-right: 16px;
     }
   }
@@ -92,6 +96,10 @@
         width: $size;
       }
 
+      i {
+        font-size: $size;
+      }
+
       &.zust-left {
         position: absolute;
         top: 0;
@@ -137,7 +145,7 @@
     padding-right: $padding2;
 
     ~ .zust-icon {
-      $size: 20px !important;
+      $size: 24px !important;
       height: $size;
       width: $size;
 
@@ -146,13 +154,17 @@
         width: $size;
       }
 
+      i {
+        font-size: $size;
+      }
+
       &.zust-left {
         position: absolute;
         top: 0;
         left: 0;
         margin-right: 0;
         margin-top: 18px;
-        margin-left: 20px;
+        margin-left: 18px;
       }
 
       &.zust-right {
@@ -161,7 +173,7 @@
         right: 0;
         margin-left: 0;
         margin-top: 18px;
-        margin-right: 20px;
+        margin-right: 18px;
       }
     }
 
@@ -191,7 +203,7 @@
     padding-right: $padding2;
 
     ~ .zust-icon {
-      $size: 25px !important;
+      $size: 36px !important;
       height: $size;
       width: $size;
 
@@ -200,13 +212,17 @@
         width: $size;
       }
 
+      i {
+        font-size: $size;
+      }
+
       &.zust-left {
         position: absolute;
         top: 0;
         left: 0;
         margin-right: 0;
-        margin-top: 23px;
-        margin-left: 23px;
+        margin-top: 18px;
+        margin-left: 17px;
       }
 
       &.zust-right {
@@ -214,8 +230,8 @@
         top: 0;
         right: 0;
         margin-left: 0;
-        margin-top: 23px;
-        margin-right: 23px;
+        margin-top: 18px;
+        margin-right: 17px;
       }
     }
 
