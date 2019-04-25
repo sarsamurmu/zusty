@@ -7,9 +7,13 @@
   margin: 1px;
   transition: $primary-transition;
 
-  svg, i {
+  svg {
     height:  1em;
     width: 1em;
+  }
+
+  i {
+    font-size: 1em;
   }
 
   &.zust-small {
@@ -17,9 +21,13 @@
     height: $size;
     width: $size;
 
-    svg, i {
+    svg {
       height:  $size;
       width: $size;
+    }
+
+    i {
+      font-size: $size;
     }
   }
 
@@ -28,9 +36,13 @@
     height: $size;
     width: $size;
 
-    svg, i {
+    svg {
       height:  $size;
       width: $size;
+    }
+
+    i {
+      font-size: $size;
     }
   }
 
@@ -39,9 +51,13 @@
     height: $size;
     width: $size;
 
-    svg, i {
+    svg {
       height:  $size;
       width: $size;
+    }
+
+    i {
+      font-size: $size;
     }
   }
 
@@ -50,9 +66,13 @@
     height: $size;
     width: $size;
 
-    svg, i {
+    svg {
       height:  $size;
       width: $size;
+    }
+
+    i {
+      font-size: $size;
     }
   }
 }
