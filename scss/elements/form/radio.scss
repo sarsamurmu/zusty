@@ -1,3 +1,4 @@
+
 .zust-radio:not(:checked),
 .zust-radio:checked {
   position: absolute;
@@ -31,7 +32,7 @@
   position: absolute;
   margin: 0;
   border-radius: 100%;
-  transition: $secondary-transition;
+  transition: 0.4s;
 }
 
 .zust-radio:disabled + span::after,
