@@ -96,6 +96,7 @@
 }
 
 // Text Helper
+
 .zust-text-bold {
   font-weight: 600 !important;
 }
@@ -108,12 +109,16 @@
   font-weight: 100 !important;
 }
 
-.zust-text-centered {
-  text-align: center;
+.zust-text-centered, .zust-text-center {
+  text-align: center !important;
 }
 
-.zust-rtl {
-  text-align: right;
+.zust-rtl, .zust-right-to-left, .zust-text-rtl, .zust-text-right-to-left {
+  text-align: right !important;
+}
+
+.zust-ltr, .zust-left-to-right, .zust-text-ltr, .zust-text-left-to-right {
+  text-align: left !important;
 }
 
 .zust-unselectable {
