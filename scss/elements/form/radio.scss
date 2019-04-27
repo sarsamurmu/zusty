@@ -26,8 +26,8 @@
   cursor: default;
 }
 
-.zust-radio + span::before,
-.zust-radio + span::after {
+.zust-radio + span:before,
+.zust-radio + span:after {
   content: '';
   position: absolute;
   margin: 0;
@@ -35,12 +35,12 @@
   transition: 0.4s;
 }
 
-.zust-radio:disabled + span::after,
-.zust-radio[disabled] + span::after {
+.zust-radio:disabled + span:after,
+.zust-radio[disabled] + span:after {
   border-color: var(--radio-button-disabled-border-color);
 }
 
-.zust-radio + span::after {
+.zust-radio + span:after {
   top: 0;
   left: 0;
   border-style: solid;
@@ -51,7 +51,7 @@
   height: $size;
 }
 
-.zust-radio + span::before {
+.zust-radio + span:before {
   background-color: $orange;
   $size: 0px;
   width: $size;
@@ -64,7 +64,7 @@
   opacity: 0;
 }
 
-.zust-radio:checked + span::before {
+.zust-radio:checked + span:before {
   $size: 19px;
   width: $size;
   height: $size;
@@ -73,7 +73,7 @@
   opacity: 1;
 }
 
-.zust-radio:checked + span::after {
+.zust-radio:checked + span:after {
   $margin: 3px;
   margin-left: $margin;
   margin-top: $margin;
@@ -85,23 +85,23 @@
   background-color: hsla(0, 0, 100, 0.2);
 }
 
-.zust-radio.zust-error + span::before {
+.zust-radio.zust-error + span:before {
   background-color: var(--error-color);
 }
 
-.zust-radio.zust-success + span::before {
+.zust-radio.zust-success + span:before {
   background-color: var(--success-color);
 }
 
-.zust-radio.zust-warning + span::before {
+.zust-radio.zust-warning + span:before {
   background-color: var(--warning-color);
 }
 
-.zust-radio.zust-link + span::before {
+.zust-radio.zust-link + span:before {
   background-color: var(--link-color);
 }
 
-.zust-radio.zust-rect + span::before,
-.zust-radio.zust-rect + span::after {
+.zust-radio.zust-rect + span:before,
+.zust-radio.zust-rect + span:after {
   border-radius: 30%;
 }
