@@ -1,0 +1,46 @@
+.zust-slider, .zust-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--slider-bg-color);
+  height: 10px;
+  border-radius: $corner-radius-full;
+  transition: $primary-transition;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--primary-color);
+    height: 18px;
+    width: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--primary-color);
+    height: 18px;
+    width: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  @each $name, $color in  (success, --success-color),
+                          (error, --error-color),
+                          (warning, --warning-color),
+                          (link, --link-color) {
+    &.zust-#{$name} {
+      &::-webkit-slider-thumb {
+        background-color: var($color);
+      }
+
+      &::-moz-range-thumb {
+        background-color: var($color);
+      }
+    }
+  }
+}
