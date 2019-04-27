@@ -9,7 +9,6 @@
   border-color: var(--button-border-color);
   border-radius: $button-corner-radius;
   padding: 8px 12px;
-  padding-top: 10px;
   color: var(--button-text-color);
   border-width: 2px;
   margin: 5px;
@@ -28,6 +27,7 @@
   }
 
   .zust-icon {
+    margin: 0;
     margin-right: 0.3em;
     margin-top: -0.05em;
   }
@@ -65,59 +65,22 @@
     color: $white;
   }
 
-  &.zust-warning {
-    border-width: 0 !important;
-    background-color: var(--warning-color) !important;
-    color: $white;
+  @each $name, $color, $hover-color, $focus-color in  (warning, --warning-color, --warning-color-l, --warning-color-el),
+                                                      (error, --error-color, --error-color-l, --error-color-el),
+                                                      (success, --success-color, --success-color-l, --success-color-el),
+                                                      (link, --link-color, --link-color-l, --link-color-el) {
+    &.zust-#{$name} {
+      border-width: 0 !important;
+      background-color: var($color) !important;
+      color: $white;
 
-    &:hover, &.zust-hovered {
-      background-color: var(--warning-color-l) !important;
-    }
+      &:hover, &.zust-hovered {
+        background-color: var($hover-color) !important;
+      }
 
-    &:focus, &.zust-focused {
-      box-shadow: 0 0 0 3px var(--warning-color-el) !important;
-    }
-  }
-
-  &.zust-success {
-    border-width: 0 !important;
-    background-color: var(--success-color) !important;
-    color: $white;
-
-    &:hover, &.zust-hovered {
-      background-color: var(--success-color-l) !important;
-    }
-
-    &:focus, &.zust-focused {
-      box-shadow: 0 0 0 3px var(--success-color-el) !important;
-    }
-  }
-
-  &.zust-error {
-    border-width: 0 !important;
-    background-color: var(--error-color) !important;
-    color: $white;
-
-    &:hover, &.zust-hovered {
-      background-color: var(--error-color-l) !important;
-    }
-
-    &:focus, &.zust-focused {
-      box-shadow: 0 0 0 3px var(--error-color-el) !important;
-    }
-  }
-
-  &.zust-link {
-    border-width: 0 !important;
-    background-color: var(--link-color) !important;
-    color: $white;
-
-    &:hover, &.zust-hovered {
-      background-color: var(--link-color-l) !important;
-    }
-
-    &:focus, &.zust-focused {
-      box-shadow: 0 0 0 3px var(--link-color-el) !important;
+      &:focus, &.zust-focused {
+        box-shadow: 0 0 0 3px var($focus-color) !important;
+      }
     }
   }
 
@@ -198,47 +161,19 @@
     border-width: 2px !important;
   }
 
-  &.zust-outlined.zust-warning {
-    border-color: var(--warning-color) !important;
-    background-color: $transparent !important;
-    color: var(--warning-color);
-
-    &:hover, &.zust-hovered {
-      border-color: var(--warning-color-l) !important;
+  @each $name, $color, $hover-color in  (warning, --warning-color, --warning-color-l),
+                                        (error, --error-color, --error-color-l),
+                                        (success, --success-color, --success-color-l),
+                                        (link, --link-color, --link-color-l) {
+    &.zust-outlined.zust-#{$name} {
+      border-color: var($color) !important;
       background-color: $transparent !important;
-    }
-  }
+      color: var($color);
 
-  &.zust-outlined.zust-success {
-    border-color: var(--success-color) !important;
-    background-color: $transparent !important;
-    color: var(--success-color);
-
-    &:hover, &.zust-hovered {
-      border-color: var(--success-color-l) !important;
-      background-color: $transparent !important;
-    }
-  }
-
-  &.zust-outlined.zust-error {
-    border-color: var(--error-color) !important;
-    background-color: $transparent !important;
-    color: var(--error-color);
-
-    &:hover, &.zust-hovered {
-      border-color: var(--error-color-l) !important;
-      background-color: $transparent !important;
-    }
-  }
-
-  &.zust-outlined.zust-link {
-    border-color: var(--link-color) !important;
-    background-color: $transparent !important;
-    color: var(--link-color);
-
-    &:hover, &.zust-hovered {
-      border-color: var(--link-color-l) !important;
-      background-color: $transparent !important;
+      &:hover, &.zust-hovered {
+        border-color: var($hover-color) !important;
+        background-color: $transparent !important;
+      }
     }
   }
 }
@@ -272,7 +207,7 @@
     }
   }
 
-  &.zust-left {  
+  &.zust-left {
     button.zust-button,
     a.zust-button,
     .zust-button[type="submit"],
