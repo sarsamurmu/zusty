@@ -64,6 +64,9 @@
   --input-text-color: hsl(0, 0%, 35%);
   --input-border-color: hsl(187, 100%, 70%);
 
+  // Slider/Range
+  --slider-bg-color: hsl(0, 0%, 93%);
+
   // Progress Bar
   --progress-bar-bg-color: hsl(0, 0%, 93%);
 
@@ -72,6 +75,8 @@
   --radio-button-selected-border-color: hsl(0, 0%, 100%);
   --radio-button-disabled-border-color: hsl(0, 0%, 88%);
 
+  // Tooltip
+  --tooltip-bg-color: hsl(0, 0%, 94%);
 
   // Misc.
   --dimmer-bg-color: hsla(0, 0%, 0%, 0.6);
@@ -126,6 +131,9 @@
     --input-text-color: hsl(0, 0%, 85%);
     --input-border-color: hsl(187, 100%, 42%);
 
+    // Slider/Range
+    --slider-bg-color: hsl(0, 0%, 18%);
+
     // Progress Bar
     --progress-bar-bg-color: hsl(0, 0%, 18%);
 
@@ -133,6 +141,9 @@
     --radio-button-border-color: hsl(0, 0%, 96%);
     --radio-button-selected-border-color: hsl(0, 0%, 13%);
     --radio-button-disabled-border-color: hsl(0, 0%, 40%);
+
+    // Tooltip
+    --tooltip-bg-color: hsl(0, 0%, 26%);
 
     // Misc.
     --light-color: hsl(0, 0%, 18%);
