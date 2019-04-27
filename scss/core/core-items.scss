@@ -2,14 +2,21 @@
 
 body {
   background-color: var(--body-color-primary);
-  @include transition($primary-transition);
+  transition: $primary-transition;
   color: var(--text-color-secondary);
   padding: 20px;
 }
 
 a {
-  color: $blue;
+  color: hsl(210, 100%, 50%);
   text-decoration: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  transition: 0.2s;
+
+  &:hover {
+    color: hsl(210, 100%, 60%);
+  }
 }
 
 hr {

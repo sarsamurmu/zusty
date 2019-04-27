@@ -1,41 +1,41 @@
 
 // Spin //
 .zust-spin {
-  @include animation-name(spin);
-  @include animation-duration(2s);
+  animation-name: spin;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 
   &.zust-fast {
-    @include animation-duration(1s);
+    animation-duration: 1s;
   }
 
   &.zust-slow {
-    @include animation-duration(3s);
+    animation-duration: 3s;
   }
 
   &.zust-single {
-    @include animation-name(spin);
-    @include animation-duration(2s);
+    animation-name: spin;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 
     &.zust-fast {
-      @include animation-duration(1s);
+      animation-duration: 1s;
     }
 
     &.zust-slow {
-      @include animation-duration(3s);
+      animation-duration: 3s;
     }
   }
 }
 
 @keyframes spin {
   0% {
-    @include transform(rotate(0deg));
+    transform: rotate(0deg);
   }
 
   100% {
-    @include transform(rotate(359deg));
+    transform: rotate(359deg);
   }
 }

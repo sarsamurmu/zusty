@@ -23,38 +23,3 @@
     @content;
   }
 }
-
-@mixin transition ($value) {
-  -webkit-transition: $value;
-  -moz-transition: $value;
-  -o-transition: $value;
-  transition: $value;
-}
-
-@mixin transform ($value) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  -o-transform: $value;
-  transform: $value;
-}
-
-@mixin animation ($value) {
-  -webkit-animation: $value;
-  -moz-animation: $value;
-  -o-animation: $value;
-  animation: $value;
-}
-
-@mixin animation-name ($value) {
-  -webkit-animation-name: $value;
-  -moz-animation-name: $value;
-  -o-animation-name: $value;
-  animation-name: $value;
-}
-
-@mixin animation-duration ($value) {
-  -webkit-animation-duration: $value;
-  -moz-animation-duration: $value;
-  -o-animation-duration: $value;
-  animation-duration: $value;
-}

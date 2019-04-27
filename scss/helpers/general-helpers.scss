@@ -24,7 +24,7 @@
   margin-right: 0 !important;
   position: absolute;
   left: 50%;
-  @include transform(translateX(-50%));
+  transform: translateX(-50%);
 }
 
 // Float
@@ -69,7 +69,7 @@
                        (180, 180deg),
                        (-180, -180deg) {
   .zust-rotate-#{$name} {
-    @include transform(rotate($value));
+    transform: rotate($value);
   }
 }
 

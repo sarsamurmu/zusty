@@ -11,7 +11,7 @@
     justify-content: center;
     width: auto;
     position: static;
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
 }
 

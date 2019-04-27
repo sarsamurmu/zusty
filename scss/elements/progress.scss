@@ -71,7 +71,7 @@ progress[value].zust-progress {
     transition: $progress-bar-transition;
     border-radius: $progress-bar-corner-radius;
     border: none;
-    @include transition($primary-transition);
+    transition: $primary-transition;
   }
 
   &.zust-success::-webkit-progress-value {
