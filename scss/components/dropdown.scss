@@ -13,7 +13,7 @@ $dropdown-margin: 0.8em;
   z-index: $dropdown-z-index;
   transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
   padding: 10px;
-  font-size: 13px;
+  font-size: 15px;
   height: fit-content;
 }
 
@@ -105,6 +105,7 @@ $dropdown-margin: 0.8em;
 
 .zust-dropdown.zust-small > .zust-items {
   width: 100px !important;
+  text-align: center;
 }
 
 .zust-dropdown.zust-large > .zust-items {
@@ -139,7 +140,7 @@ $dropdown-margin: 0.8em;
   font-weight: 500;
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #FF5722;
+  background-color: var(--primary-color);
 }
 
 .zust-dropdown > .zust-items > a,
@@ -172,15 +173,15 @@ $dropdown-margin: 0.8em;
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  color: var(--dropdown-text-color);
+  margin-top: 2px;
+  margin-bottom: 2px;
   cursor: pointer;
-  transition: background-color 0.5s !important;
-  @extend %full-width;
-  border: none;
-  background-color: $blue;
+  transition: 0.5s !important;
   text-align: center;
-  color: white;
+  background-color: $blue;
+  color: $white;
+  border-style: solid;
 }
 
 .zust-dropdown > .zust-items > a:not([active], .active):hover,
