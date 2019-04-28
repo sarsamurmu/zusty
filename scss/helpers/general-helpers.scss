@@ -1,6 +1,8 @@
 // Show/Hide
 .zust-show, .zust-visible {
   display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .zust-hide, .zust-hidden {
@@ -11,6 +13,8 @@
 [zust-theme="dark"] {
   .zust-show-on-dark, .zust-visible-on-dark {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .zust-hide-on-dark, .zust-hidden-on-dark {
@@ -95,8 +99,8 @@
   border-radius: 0 !important;
 }
 
-// Text Helper
 
+// Text Helper
 .zust-text-bold {
   font-weight: 600 !important;
 }
