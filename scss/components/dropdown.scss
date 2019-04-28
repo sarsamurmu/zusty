@@ -1,190 +1,169 @@
 $dropdown-animation-duration: 0.3s;
-$dropdown-margin: 0.8em;
+$dropdown-margin: 13px;
+$dropdown-child-margin: 18px;
+$dropdown-translate: 10px;
 
-%dropdown-base {
-  border-style: solid;
-  border-width: 2px;
-  border-color: var(--dropdown-border-color);
-  visibility: hidden;
-  opacity: 0;
-  border-radius: 12px;
-  background-color: var(--dropdown-bg-color);
-  position: absolute;
-  z-index: $dropdown-z-index;
-  transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
-  padding: 10px;
-  font-size: 15px;
-  height: fit-content;
-}
+.zust-dropdown {
+  position: relative;
 
+  &:focus-within > .zust-items,
+  &.zust-hover:hover > .zust-items,
+  &.zust-active > .zust-items {
+    transition: all 0.2s ease-in-out 0.1s, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
 
-// Default - Down Side
-.zust-dropdown:not(.zust-upside) {
   .zust-items {
-     @extend %dropdown-base;
-     top: 100%;
-     left: 0;
-     margin-top: $dropdown-margin;
-     margin-bottom: $dropdown-margin;
-     margin-left: 0;
-     margin-right: 0;
-     width: 150px;
-     transform: translateY(-10px);
-   }
-}
+    position: absolute;
+    list-style: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--dropdown-border-color);
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 12px;
+    background-color: var(--dropdown-bg-color);
+    position: absolute;
+    z-index: $dropdown-z-index;
+    transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
+    padding: 10px;
+    font-size: 15px;
+    height: fit-content;
+    width: 150px;
+    top: 100%;
+    left: 0;
+    bottom: auto;
+    margin: 0;
+    margin-top: $dropdown-margin - 4px;
+    margin-left: 5px;
+    transform: translateY($dropdown-translate);
 
-.zust-dropdown:focus > .zust-items,
-.zust-dropdown:focus-within > .zust-items,
-.zust-dropdown.zust-hover:hover > .zust-items, {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(0);
-  transition-delay: 0s, 0s, 0.3s;
-}
+    p {
+      text-align: left;
+    }
 
-// Up Side
-.zust-dropdown.zust-upside {
-  .zust-items {
-     @extend %dropdown-base;
-     left: 0;
-     bottom: 100%;
-     width: 150px;
-     margin-top: $dropdown-margin;
-     margin-bottom: $dropdown-margin;
-     margin-left: 0;
-     margin-right: 0;
-     transform: translateY(-10px);
-   }
-}
+    li {
+      position: relative;
+      list-style: none;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 4px;
+      transition: background-color 0.5s;
 
-.zust-dropdown.zust-upside:focus > .zust-items,
-.zust-dropdown.zust-upside:focus-within > .zust-items,
-.zust-dropdown.zust-upside.zust-hover:hover > .zust-items {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(0);
-  transition-delay: 0s, 0s, 0.3s;
-}
+      &:hover, &.zust-hovered {
+        background-color: var(--dropdown-option-hover-color);
 
-// Left Side
-.zust-dropdown.zust-leftside {
-  .zust-items {
-     @extend %dropdown-base;
-     left: 100%;
-     top: 0;
-     width: 150px;
-     margin-left: $dropdown-margin;
-     margin-right: $dropdown-margin;
-     margin-top: 0;
-     margin-bottom: 0;
-     transform: translateX(10px);
-   }
-}
+        & > ul {
+          transition: all 0.2s ease-in-out 0.1s, visibility 0s linear 0s;
+          visibility: visible;
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-.zust-dropdown.zust-leftside:focus > .zust-items,
-.zust-dropdown.zust-leftside:focus-within > .zust-items,
-.zust-dropdown.zust-leftside.zust-hover:hover > .zust-items {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(0);
-  transition-delay: 0s, 0s, 0.3s;
-}
+      &[active], &.zust-active {
+        background-color: var(--primary-color);
 
-// Active State
-.zust-dropdown.zust-active > .zust-items {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(0);
-  transition-delay: 0s, 0s, 0.3s;
-}
+        &:hover, &.zust-hovered {
+          background-color: var(--primary-color-l);
+        }
+      }
 
-// Sizes
-.zust-dropdown.zust-narrow > .zust-items {
-  width: 50px !important;
-}
+      ul {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 150px;
+        padding: 10px;
+        margin: 0;
+        margin-left: $dropdown-child-margin;
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--dropdown-border-color);
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 12px;
+        background-color: var(--dropdown-bg-color);
+        z-index: $dropdown-z-index;
+        transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
+        font-size: 15px;
+        height: fit-content;
+        transform: translateX($dropdown-translate);
 
-.zust-dropdown.zust-small > .zust-items {
-  width: 100px !important;
-  text-align: center;
-}
+        // Sizes
+        &.zust-narrow {
+          width: 50px !important;
+        }
 
-.zust-dropdown.zust-large > .zust-items {
-  width: 200px !important;
-}
+        &.zust-small {
+          width: 100px !important;
+        }
 
-// Alignments
-.zust-dropdown.zust-left > .zust-items {
-  text-align: left;
-}
+        &.zust-large {
+          width: 200px !important;
+        }
 
-.zust-dropdown.zust-right > .zust-items {
-  text-align: right;
-}
+        &.zust-xlarge {
+          width: 300px !important;
+        }
+      }
 
-// Option's Text Alignment
-.zust-dropdown.zust-option-left > .zust-items > a,
-.zust-dropdown.zust-option-left > .zust-items > .zust-option {
-  text-align: left !important;
-}
+      // Sizes
+      &.zust-narrow > ul {
+        width: 50px !important;
+      }
 
-.zust-dropdown.zust-option-right > .zust-items > a,
-.zust-dropdown.zust-option-right > .zust-items > .zust-option {
-  text-align: right !important;
-}
+      &.zust-small > ul {
+        width: 100px !important;
+      }
 
-// Active Links
-.zust-dropdown > .zust-items > a[active],
-.zust-dropdown > .zust-items > .zust-option.active,
-.zust-dropdown > .zust-items > .zust-option[active] {
-  color: white;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-color: var(--primary-color);
-}
+      &.zust-large > ul {
+        width: 200px !important;
+      }
 
-.zust-dropdown > .zust-items > a,
-.zust-dropdown > .zust-items > zust-option {
-  @extend %no-select;
-  display: block;
-  padding: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  border-radius: 5px;
-  color: var(--dropdown-text-color);
-  margin-top: 2px;
-  margin-bottom: 2px;
-  cursor: pointer;
-  transition: 0.5s !important;
-  text-align: center;
-}
+      &.zust-xlarge > ul {
+        width: 300px !important;
+      }
+    }
+  }
 
-.zust-dropdown > .zust-items > p {
-  $margin: 2px;
-  margin-top: $margin;
-  margin-left: $margin;
-  margin-right: $margin;
-}
+  // Upside
+  &.zust-upside > .zust-items {
+    top: auto !important;
+    bottom: 100%;
+    margin: 0;
+    margin-bottom: $dropdown-margin - 4px;
+    margin-left: 5px;
+    transform: translateY( - $dropdown-translate);
+  }
 
-.zust-dropdown > .zust-dropdown-button {
-  @extend %no-select;
-  display: block;
-  padding: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  border-radius: 5px;
-  color: var(--dropdown-text-color);
-  margin-top: 2px;
-  margin-bottom: 2px;
-  cursor: pointer;
-  transition: 0.5s !important;
-  text-align: center;
-  background-color: $blue;
-  color: $white;
-  border-style: solid;
-}
+  // Leftside
+  &.zust-leftside > .zust-items {
+    top: 0 !important;
+    left: 100%;
+    margin: 0;
+    margin-left: $dropdown-margin - 4px;
+    margin-top: 5px;
+    transform: translateX( - $dropdown-translate);
+  }
 
-.zust-dropdown > .zust-items > a:not([active], .active):hover,
-.zust-dropdown > .zust-items > .zust-option:not([active], .active):hover, {
-  background-color: var(--dropdown-option-hover-color);
+  // Sizes
+  &.zust-narrow > .zust-items {
+    width: 50px !important;
+  }
+
+  &.zust-small > .zust-items {
+    width: 100px !important;
+  }
+
+  &.zust-large > .zust-items {
+    width: 200px !important;
+  }
+
+  &.zust-xlarge > .zust-items {
+    width: 300px !important;
+  }
 }
