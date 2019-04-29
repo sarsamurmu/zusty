@@ -1,6 +1,6 @@
 $dropdown-animation-duration: 0.3s;
 $dropdown-margin: 13px;
-$dropdown-child-margin: 18px;
+$dropdown-child-margin: 20px;
 $dropdown-translate: 10px;
 
 .zust-dropdown {
@@ -46,6 +46,7 @@ $dropdown-translate: 10px;
 
     li {
       position: relative;
+      @extend %no-select;
       list-style: none;
       padding: 10px;
       text-align: center;
