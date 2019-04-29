@@ -50,27 +50,27 @@
 
 .zust-bg-light-green {
   background-color: $light-green !important;
-  color: black;
+  color: $black;
 }
 
 .zust-bg-lime {
   background-color: $lime !important;
-  color: black;
+  color: $black;
 }
 
 .zust-bg-yellow {
   background-color: $yellow !important;
-  color: black;
+  color: $black;
 }
 
 .zust-bg-amber {
   background-color: $amber !important;
-  color: black;
+  color: $black;
 }
 
 .zust-bg-orange {
   background-color: $orange !important;
-  color: black;
+  color: $black;
 }
 
 .zust-bg-deep-orange {
@@ -101,6 +101,16 @@
 .zust-bg-light {
   background-color: rgba(144, 144, 144, 0.1) !important;
   color: var(--text-color-primary);
+}
+
+.zust-bg-white {
+  background-color: $white !important;
+  color: var(--text-color-primary);
+}
+
+.zust-bg-black {
+  background-color: $black !important;
+  color: $white;
 }
 
 // Status
@@ -211,27 +221,27 @@
 
   .zust-dark-bg-light-green {
     background-color: $light-green !important;
-    color: black;
+    color: $black;
   }
 
   .zust-dark-bg-lime {
     background-color: $lime !important;
-    color: black;
+    color: $black;
   }
 
   .zust-dark-bg-yellow {
     background-color: $yellow !important;
-    color: black;
+    color: $black;
   }
 
   .zust-dark-bg-amber {
     background-color: $amber !important;
-    color: black;
+    color: $black;
   }
 
   .zust-dark-bg-orange {
     background-color: $orange !important;
-    color: black;
+    color: $black;
   }
 
   .zust-dark-bg-deep-orange {
@@ -262,6 +272,16 @@
   .zust-dark-bg-light {
     background-color: rgba(144, 144, 144, 0.1) !important;
     color: var(--text-color-primary);
+  }
+
+  .zust-dark-bg-white {
+    background-color: $white !important;
+    color: var(--text-color-primary);
+  }
+
+  .zust-dark-bg-black {
+    background-color: $black !important;
+    color: $white;
   }
 
   // Status
@@ -397,14 +417,14 @@
 }
 
 .zust-text-black {
-  color: black !important;
+  color: $black !important;
 }
 
 .zust-text-white {
   color: $white !important;
 }
 
-.zust-text-adaptive {
+.zust-text-inverted {
   color: $white !important;
 }
 
@@ -545,7 +565,7 @@
     color: $white !important;
   }
 
-  .zust-text-adaptive {
+  .zust-text-inverted {
     color: #484848 !important;
   }
 
