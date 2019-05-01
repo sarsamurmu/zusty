@@ -9,6 +9,64 @@
   display: none !important;
 }
 
+// Based on Size
+.zust-show-on-mobile, .zust-visible-on-mobile {
+  @include mobile {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+.zust-show-on-tablet, .zust-visible-on-tablet {
+  @include zust-tablet {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+.zust-show-on-touch, .zust-visible-on-touch {
+  @include touch {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+.zust-show-on-desktop, .zust-visible-on-desktop {
+  @include desktop {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+.zust-hide-on-mobile, .zust-hidden-on-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.zust-hide-on-tablet, .zust-hidden-on-tablet {
+  @include zust-tablet {
+    display: none !important;
+  }
+}
+
+.zust-hide-on-touch, .zust-hidden-on-touch {
+  @include touch {
+    display: none !important;
+  }
+}
+
+.zust-hide-on-desktop, .zust-hidden-on-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+
 // On Dark
 [zust-theme="dark"] {
   .zust-show-on-dark, .zust-visible-on-dark {
@@ -113,6 +171,22 @@
   font-weight: 100 !important;
 }
 
+.zust-text-small {
+  font-size: $small-text !important;
+}
+
+.zust-text-medium {
+  font-size: $medium-text !important;
+}
+
+.zust-text-large {
+  font-size: $large-text !important;
+}
+
+.zust-text-xlarge {
+  font-size: $xlarge-text !important;
+}
+
 .zust-text-centered, .zust-text-center {
   text-align: center !important;
 }
@@ -130,13 +204,13 @@
 }
 
 .zust-uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .zust-lowercase {
-  text-transform: lowercase;
+  text-transform: lowercase !important;
 }
 
 .zust-capitalize {
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
