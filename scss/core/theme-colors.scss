@@ -60,10 +60,10 @@ $button-text-color: hsl(0, 0%, 40%) !default;
 $button-text-color-dark: hsl(0, 0%, 85%) !default;
 $button-focus-border-color: hsla(291, 64%, 42%, 0.14) !default;
 $button-focus-border-color-dark: hsla(291, 47%, 51%, 0.45) !default;
-$button-disabled-bg-color: hsl(0, 0%, 88%) !default;
-$button-disabled-bg-color-dark: hsla(291, 47%, 51%, 0.45) !default;
-$button-disabled-text-color: hsl(0, 0%, 62%) !default;
-$button-disabled-text-color-dark: hsl(0, 1%, 65%) !default;
+$button-disabled-bg-color: hsla(0, 0%, 98%, 1) !default;
+$button-disabled-bg-color-dark: hsla(0, 0%, 16%, 1) !default;
+$button-disabled-text-color: hsl(0, 0%, 86%) !default;
+$button-disabled-text-color-dark: hsla(0, 0%, 30%, 1) !default;
 
 // Bottom Nav
 $bottom-nav-bg-color: hsl(0, 0%, 90%) !default;
@@ -106,10 +106,30 @@ $input-text-color: hsl(0, 0%, 35%) !default;
 $input-text-color-dark: hsl(0, 0%, 85%) !default;
 $input-border-color: hsl(187, 100%, 70%) !default;
 $input-border-color-dark: hsl(187, 100%, 42%) !default;
+$input-placeholder-text-color: hsl(0, 0%, 46%) !default;
+$input-placeholder-text-color-dark: hsl(0, 0%, 46%) !default;
+// Disabled
+$input-disabled-bg-color: $button-disabled-bg-color !default;
+$input-disabled-bg-color-dark: $button-disabled-bg-color-dark !default;
+$input-disabled-text-color: $button-disabled-text-color !default;
+$input-disabled-text-color-dark: $button-disabled-text-color-dark !default;
 
 // Slider/Range
 $slider-bg-color: hsl(0, 0%, 93%) !default;
 $slider-bg-color-dark: hsl(0, 0%, 18%) !default;
+
+// Switch
+$switch-bg-color: hsl(0, 0%, 75%) !default;
+$switch-bg-color-dark: hsl(0, 0%, 70%) !default;
+$switch-active-bg-color: hsl(0, 0%, 60%) !default;
+$switch-active-bg-color-dark: hsl(0, 0%, 90%) !default;
+$switch-fg-color: hsl(0, 0%, 85%) !default;
+$switch-fg-color-dark: hsl(0, 0%, 50%) !default;
+$switch-active-fg-color: $primary-color !default;
+$switch-active-fg-color-dark: $primary-color !default;
+// Disabled
+$switch-disabled-bg-color: hsl(0, 0%, 90%) !default;
+$switch-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
 
 // Progress Bar
 $progress-bar-bg-color: hsl(0, 0%, 93%) !default;
@@ -198,9 +218,21 @@ $light-color-dark: hsl(0, 0%, 18%) !default;
   --input-hovered-bg-color: #{$input-hovered-bg-color};
   --input-text-color: #{$input-text-color};
   --input-border-color: #{$input-border-color};
+  --input-placeholder-text-color: #{$input-placeholder-text-color};
+  // Disabled
+  --input-disabled-bg-color: #{$input-disabled-bg-color};
+  --input-disabled-text-color: #{$input-disabled-text-color};
 
   // Slider/Range
   --slider-bg-color: #{$slider-bg-color};
+
+  // Switch
+  --switch-bg-color: #{$switch-bg-color};
+  --switch-active-bg-color: #{$switch-active-bg-color};
+  --switch-fg-color: #{$switch-fg-color};
+  --switch-active-fg-color: #{$switch-active-fg-color};
+  // Disabled
+  --switch-disabled-bg-color: #{$switch-disabled-bg-color};
 
   // Progress Bar
   --progress-bar-bg-color: #{$progress-bar-bg-color};
@@ -283,9 +315,21 @@ $light-color-dark: hsl(0, 0%, 18%) !default;
     --input-hovered-bg-color: #{$input-hovered-bg-color-dark};
     --input-text-color: #{$input-text-color-dark};
     --input-border-color: #{$input-border-color-dark};
+    --input-placeholder-text-color: #{$input-placeholder-text-color-dark};
+    // Disabled
+    --input-disabled-bg-color: #{$input-disabled-bg-color-dark};
+    --input-disabled-text-color: #{$input-disabled-text-color-dark};
 
     // Slider/Range
     --slider-bg-color: #{$slider-bg-color-dark};
+
+    // Switch
+    --switch-bg-color: #{$switch-bg-color-dark};
+    --switch-active-bg-color: #{$switch-active-bg-color-dark};
+    --switch-fg-color: #{$switch-fg-color-dark};
+    --switch-active-fg-color: #{$switch-active-fg-color-dark};
+    // Disabled
+    --switch-disabled-bg-color: #{$switch-disabled-bg-color-dark};
 
     // Progress Bar
     --progress-bar-bg-color: #{$progress-bar-bg-color-dark};
