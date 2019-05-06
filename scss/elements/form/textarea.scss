@@ -1,0 +1,97 @@
+$textarea-border-radius: 8px !default;
+
+textarea.zust-textarea {
+  appearance: none;
+  padding: 8px 10px;
+  transition: $primary-transition;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border-width: 0;
+  border-radius: $textarea-border-radius;
+  border-bottom-width: 2px;
+  border-color: $transparent;
+  font-size: $medium-text;
+
+  &:hover, &.zust-hovered {
+    background-color: var(--input-hovered-bg-color);
+  }
+
+  &:focus, &.zust-focused {
+    background-color: var(--body-color-primary);
+    box-shadow: 0 0 0 2px var(--input-border-color);
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder-text-color);
+  }
+
+  &.zust-disabled, &[disabled] {
+    background-color: var(--input-disabled-bg-color);
+    color: var(--input-disabled-text-color);
+
+    &::placeholder {
+      color: var(--input-disabled-text-color);
+    }
+  }
+
+  &.zust-transparent {
+    background-color: var(--input-stransparent-bg-color);
+
+    &:hover, &.zust-hovered {
+      background-color: var(--input-stransparent-hovered-bg-color);
+    }
+
+    &:focus, &.zust-focused {
+      background-color: var(--body-color-primary);
+    }
+  }
+
+  &.zust-primary {
+    border-color: var(--primary-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--primary-color);
+    }
+  }
+
+  &.zust-success {
+    border-color: var(--success-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--success-color-l);
+    }
+  }
+
+  &.zust-warning {
+    border-color: var(--warning-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--warning-color-l);
+    }
+  }
+
+  &.zust-error {
+    border-color: var(--error-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--error-color-l);
+    }
+  }
+
+  &.zust-link {
+    border-color: var(--link-color);
+
+    &:focus, &.zust-focused {
+      border-color: $transparent;
+      box-shadow: 0 0 0 2px var(--link-color-l);
+    }
+  }
+}
+
+textarea, textarea:hover, textarea:active, textarea:focus {
+  outline: none;
+}
