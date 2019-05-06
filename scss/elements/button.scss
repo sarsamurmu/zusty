@@ -1,3 +1,5 @@
+$button-corner-radius: 6px !default;
+
 .zust-button, a.zust-button, .zust-button[type="submit"], .zust-button[type="reset"] {
   @extend %no-select;
   display: inline-flex;
@@ -29,7 +31,8 @@
   .zust-icon {
     margin: 0;
     margin-right: 0.3em;
-    margin-top: -0.05em;
+    margin-left: 0.3em;
+    //margin-top: -0.05em;
   }
 
   &:hover, &.zust-hovered {

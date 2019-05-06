@@ -1,155 +1,305 @@
+$primary-color: hsl(36, 100%, 50%) !default;
+$primary-color-dark: $primary-color !default;
+$primary-color-l: hsl(36, 100%, 57%) !default;
+$primary-color-l-dark: $primary-color-l !default;
+$primary-color-el: hsla(36, 100%, 57%, 0.3) !default;
+$primary-color-el-dark: $primary-color-el !default;
+
+$success-color: hsl(88, 50%, 53%) !default;
+$success-color-dark: $success-color !default;
+$success-color-l: hsl(88, 50%, 60%) !default;
+$success-color-l-dark: $success-color-l !default;
+$success-color-el: hsla(88, 50%, 53%, 0.3) !default;
+$success-color-el-dark: $success-color-el !default;
+
+$warning-color: hsl(45, 100%, 51%) !default;
+$warning-color-dark: $warning-color !default;
+$warning-color-l: hsl(45, 100%, 58%) !default;
+$warning-color-l-dark: $warning-color-l !default;
+$warning-color-el: hsla(45, 100%, 51%, 0.3) !default;
+$warning-color-el-dark: $warning-color-el !default;
+
+$error-color: hsl(4, 90%, 58%) !default;
+$error-color-dark: $error-color !default;
+$error-color-l: hsl(1, 83%, 63%) !default;
+$error-color-l-dark: $error-color-l !default;
+$error-color-el: hsla(4, 90%, 58%, 0.3) !default;
+$error-color-el-dark: $error-color-el !default;
+
+$link-color: hsl(210, 100%, 50%) !default;
+$link-color-dark: $link-color !default;
+$link-color-l: hsl(210, 100%, 60%) !default;
+$link-color-l-dark: $link-color-l !default;
+$link-color-el: hsla(210, 100%, 50%, 0.3) !default;
+$link-color-el-dark: $link-color-el !default;
+
+// General Items
+$body-color-primary: hsl(0, 0%, 100%) !default;
+$body-color-primary-dark: hsl(0, 0%, 13%) !default;
+$text-color-primary: hsl(0, 0%, 25%) !default;
+$text-color-primary-dark: hsl(0, 0%, 95%) !default;
+$text-color-secondary: hsl(0, 0%, 35%) !default;
+$text-color-secondary-dark: hsl(0, 0%, 85%) !default;
+$text-color-tertiary: hsl(0, 0%, 45%) !default;
+$text-color-tertiary-dark: hsl(0, 0%, 75%) !default;
+$divider-color: hsl(0, 0%, 82%) !default;
+$divider-color-dark: hsl(0, 0%, 42%) !default;
+
+// Badge
+$badge-text-color: hsl(0, 0%, 35%) !default;
+$badge-text-color-dark: hsl(0, 0%, 95%) !default;
+
+// Button
+$button-bg-color: hsl(0, 0%, 100%) !default;
+$button-bg-color-dark: hsl(0, 0%, 15%) !default;
+$button-border-color: hsl(0, 0%, 90%) !default;
+$button-border-color-dark: hsl(0, 0%, 28%) !default;
+$button-hover-border-color: hsl(0, 0%, 84%) !default;
+$button-hover-border-color-dark: hsl(0, 0%, 35%) !default;
+$button-text-color: hsl(0, 0%, 40%) !default;
+$button-text-color-dark: hsl(0, 0%, 85%) !default;
+$button-focus-border-color: hsla(291, 64%, 42%, 0.14) !default;
+$button-focus-border-color-dark: hsla(291, 47%, 51%, 0.45) !default;
+$button-disabled-bg-color: hsl(0, 0%, 88%) !default;
+$button-disabled-bg-color-dark: hsla(291, 47%, 51%, 0.45) !default;
+$button-disabled-text-color: hsl(0, 0%, 62%) !default;
+$button-disabled-text-color-dark: hsl(0, 1%, 65%) !default;
+
+// Bottom Nav
+$bottom-nav-bg-color: hsl(0, 0%, 90%) !default;
+$bottom-nav-bg-color-dark: hsl(0, 0%, 25%) !default;
+
+// Cards
+$card-bg-color: hsl(0, 0%, 100%) !default;
+$card-bg-color-dark: hsl(0, 0%, 17%) !default;
+$card-border-color: hsl(0, 0%, 88%) !default;
+$card-border-color-dark: hsl(0, 0%, 42%) !default;
+
+// Chip
+$chip-bg-color: hsl(0, 0%, 97%) !default;
+$chip-bg-color-dark: hsl(0, 0%, 17%) !default;
+
+// Dialog
+$dialog-bg-color: hsl(0, 0%, 100%) !default;
+$dialog-bg-color-dark: hsl(0, 0%, 26%) !default;
+
+// Dropdown
+$dropdown-bg-color: hsl(0, 0%, 100%) !default;
+$dropdown-bg-color-dark: hsl(0, 0%, 17%) !default;
+$dropdown-border-color: hsl(0, 0%, 88%) !default;
+$dropdown-border-color-dark: hsl(0, 0%, 42%) !default;
+$dropdown-text-color: hsl(0, 0%, 26%) !default;
+$dropdown-text-color-dark: hsl(0, 0%, 88%) !default;
+$dropdown-option-hover-color: hsl(0, 0%, 93%) !default;
+$dropdown-option-hover-color-dark: hsl(0, 0%, 28%) !default;
+
+// Input
+$input-bg-color: hsl(0, 0%, 97%) !default;
+$input-bg-color-dark: hsl(0, 0%, 10%) !default;
+$input-stransparent-bg-color: hsla(0, 0%, 0%, 0.04) !default;
+$input-stransparent-bg-color-dark: hsla(0, 0%, 0%, 0.23) !default;
+$input-stransparent-hovered-bg-color: hsla(0, 0%, 0%, 0.1) !default;
+$input-stransparent-hovered-bg-color-dark: hsla(0, 0%, 0%, 0.4) !default;
+$input-hovered-bg-color: hsl(0, 0%, 93%) !default;
+$input-hovered-bg-color-dark: hsl(0, 0%, 7%) !default;
+$input-text-color: hsl(0, 0%, 35%) !default;
+$input-text-color-dark: hsl(0, 0%, 85%) !default;
+$input-border-color: hsl(187, 100%, 70%) !default;
+$input-border-color-dark: hsl(187, 100%, 42%) !default;
+
+// Slider/Range
+$slider-bg-color: hsl(0, 0%, 93%) !default;
+$slider-bg-color-dark: hsl(0, 0%, 18%) !default;
+
+// Progress Bar
+$progress-bar-bg-color: hsl(0, 0%, 93%) !default;
+$progress-bar-bg-color-dark: hsl(0, 0%, 18%) !default;
+
+// Radio Buttons
+$radio-button-border-color: hsl(0, 0%, 46%) !default;
+$radio-button-border-color-dark: hsl(0, 0%, 96%) !default;
+$radio-button-selected-border-color: hsl(0, 0%, 100%) !default;
+$radio-button-selected-border-color-dark: hsl(0, 0%, 13%) !default;
+$radio-button-disabled-border-color: hsl(0, 0%, 88%) !default;
+$radio-button-disabled-border-color-dark: hsl(0, 0%, 40%) !default;
+
+// Tooltip
+$tooltip-bg-color: hsl(0, 0%, 94%) !default;
+$tooltip-bg-color-dark: hsl(0, 0%, 26%) !default;
+
+// Misc.
+$dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
+$dimmer-bg-color-dark: $dimmer-bg-color !default;
+$light-color: hsl(0, 0%, 96%) !default;
+$light-color-dark: hsl(0, 0%, 18%) !default;
+
+
 :root, [zust-theme="light"] {
 
   // Primary Colors
-  --primary-color-d: hsl(0, 69%, 67%);
-  --primary-color: hsl(36, 100%, 50%);
-  --primary-color-l: hsl(36, 100%, 57%);
-  --primary-color-el: hsl(36, 100%, 57%, 0.3);
-  --success-color: hsl(88, 50%, 53%);
-  --success-color-l: hsl(88, 50%, 60%);
-  --success-color-el: hsla(88, 50%, 53%, 0.3);
-  --warning-color: hsl(45, 100%, 51%);
-  --warning-color-l: hsl(45, 100%, 58%);
-  --warning-color-el: hsla(45, 100%, 51%, 0.3);
-  --error-color-d: hsl(0, 69%, 67%);
-  --error-color: hsl(4, 90%, 58%);
-  --error-color-l: hsl(1, 83%, 63%);
-  --error-color-el: hsla(4, 90%, 58%, 0.3);
-  --link-color-d: hsl(210, 100%, 40%);
-  --link-color: hsl(210, 100%, 50%);
-  --link-color-l: hsl(210, 100%, 60%);
-  --link-color-el: hsla(210, 100%, 50%, 0.3);
+  --primary-color: #{$primary-color};
+  --primary-color-l: #{$primary-color-l};
+  --primary-color-el: #{$primary-color-el};
+  --success-color: #{$success-color};
+  --success-color-l: #{$success-color-l};
+  --success-color-el: #{$success-color-el};
+  --warning-color: #{$warning-color};
+  --warning-color-l: #{$warning-color-l};
+  --warning-color-el: #{$warning-color-el};
+  --error-color: #{$error-color};
+  --error-color-l: #{$error-color-l};
+  --error-color-el: #{$error-color-el};
+  --link-color: #{$link-color};
+  --link-color-l: #{$link-color-l};
+  --link-color-el: #{$link-color-el};
 
   // General Items
-  --body-color-primary: hsl(0, 0%, 100%);
-  --text-color-primary: hsl(0, 0%, 25%);
-  --text-color-secondary: hsl(0, 0%, 35%);
-  --text-color-tertiary: hsl(0, 0%, 45%);
-  --divider-color: hsl(0, 0%, 82%);
+  --body-color-primary: #{$body-color-primary};
+  --text-color-primary: #{$text-color-primary};
+  --text-color-secondary: #{$text-color-secondary};
+  --text-color-tertiary: #{$text-color-tertiary};
+  --divider-color: #{$divider-color};
 
   // Badge
-  --badge-text-color: hsl(0, 0%, 35%);
+  --badge-text-color: #{$badge-text-color};
 
   // Button
-  --button-bg-color: hsl(0, 0%, 100%);
-  --button-border-color: hsl(0, 0%, 90%);
-  --button-hover-border-color: hsl(0, 0%, 84%);
-  --button-text-color: hsl(0, 0%, 40%);
-  --button-focus-border-color: hsla(291, 64%, 42%, 0.14);
-  --button-disabled-bg-color: hsl(0, 0%, 88%);
-  --button-disabled-text-color: hsl(0, 0%, 62%);
+  --button-bg-color: #{$button-bg-color};
+  --button-border-color: #{$button-border-color};
+  --button-hover-border-color: #{$button-hover-border-color};
+  --button-text-color: #{$button-text-color};
+  --button-focus-border-color: #{$button-focus-border-color};
+  --button-disabled-bg-color: #{$button-disabled-bg-color};
+  --button-disabled-text-color: #{$button-disabled-text-color};
 
   // Bottom Nav
-  --bottom-nav-bg-color: hsl(0, 0%, 90%);
+  --bottom-nav-bg-color: #{$bottom-nav-bg-color};
 
   // Cards
-  --card-bg-color: hsl(0, 0%, 100%);
-  --card-border-color: hsl(0, 0%, 88%);
+  --card-bg-color: #{$card-bg-color};
+  --card-border-color: #{$card-border-color};
 
   // Chip
-  --chip-bg-color: hsl(0, 0%, 97%);
+  --chip-bg-color: #{$chip-bg-color};
 
   // Dialog
-  --dialog-bg-color: hsl(0, 0%, 100%);
+  --dialog-bg-color: #{$dialog-bg-color};
 
   // Dropdown
-  --dropdown-bg-color: hsl(0, 0%, 100%);
-  --dropdown-border-color: hsl(0, 0%, 88%);
-  --dropdown-text-color: hsl(0, 0%, 26%);
-  --dropdown-option-hover-color: hsl(0, 0%, 93%);
+  --dropdown-bg-color: #{$dropdown-bg-color};
+  --dropdown-border-color: #{$dropdown-border-color};
+  --dropdown-text-color: #{$dropdown-text-color};
+  --dropdown-option-hover-color: #{$dropdown-option-hover-color};
 
   // Input
-  --input-bg-color: hsl(0, 0%, 97%);
-  --input-stransparent-bg-color: hsla(0, 0%, 0%, 0.04);
-  --input-stransparent-hovered-bg-color: hsla(0, 0%, 0%, 0.1);
-  --input-hovered-bg-color: hsl(0, 0%, 93%);
-  --input-text-color: hsl(0, 0%, 35%);
-  --input-border-color: hsl(187, 100%, 70%);
+  --input-bg-color: #{$input-bg-color};
+  --input-stransparent-bg-color: #{$input-stransparent-bg-color};
+  --input-stransparent-hovered-bg-color: #{$input-stransparent-hovered-bg-color};
+  --input-hovered-bg-color: #{$input-hovered-bg-color};
+  --input-text-color: #{$input-text-color};
+  --input-border-color: #{$input-border-color};
 
   // Slider/Range
-  --slider-bg-color: hsl(0, 0%, 93%);
+  --slider-bg-color: #{$slider-bg-color};
 
   // Progress Bar
-  --progress-bar-bg-color: hsl(0, 0%, 93%);
+  --progress-bar-bg-color: #{$progress-bar-bg-color};
 
   // Radio Buttons
-  --radio-button-border-color: hsl(0, 0%, 46%);
-  --radio-button-selected-border-color: hsl(0, 0%, 100%);
-  --radio-button-disabled-border-color: hsl(0, 0%, 88%);
+  --radio-button-border-color: #{$radio-button-border-color};
+  --radio-button-selected-border-color: #{$radio-button-selected-border-color};
+  --radio-button-disabled-border-color: #{$radio-button-disabled-border-color};
 
   // Tooltip
-  --tooltip-bg-color: hsl(0, 0%, 94%);
+  --tooltip-bg-color: #{$tooltip-bg-color};
 
   // Misc.
-  --dimmer-bg-color: hsla(0, 0%, 0%, 0.6);
-  --light-color: hsl(0, 0%, 96%);
-
+  --dimmer-bg-color: #{$dimmer-bg-color};
+  --light-color: #{$light-color};
 }
 
 @supports (--css: variables) {
   [zust-theme="dark"] {
 
+    // Primary Colors
+    --primary-color: #{$primary-color-dark};
+    --primary-color-l: #{$primary-color-l-dark};
+    --primary-color-el: #{$primary-color-el-dark};
+    --success-color: #{$success-color-dark};
+    --success-color-l: #{$success-color-l-dark};
+    --success-color-el: #{$success-color-el-dark};
+    --warning-color: #{$warning-color-dark};
+    --warning-color-l: #{$warning-color-l-dark};
+    --warning-color-el: #{$warning-color-el-dark};
+    --error-color: #{$error-color-dark};
+    --error-color-l: #{$error-color-l-dark};
+    --error-color-el: #{$error-color-el-dark};
+    --link-color: #{$link-color-dark};
+    --link-color-l: #{$link-color-l-dark};
+    --link-color-el: #{$link-color-el-dark};
+
     // General Items
-    --body-color-primary: hsl(0, 0%, 13%);
-    --text-color-primary: hsl(0, 0%, 95%);
-    --text-color-secondary: hsl(0, 0%, 85%);
-    --text-color-tertiary: hsl(0, 0%, 75%);
-    --divider-color: hsl(0, 0%, 42%);
+    --body-color-primary: #{$body-color-primary-dark};
+    --text-color-primary: #{$text-color-primary-dark};
+    --text-color-secondary: #{$text-color-secondary-dark};
+    --text-color-tertiary: #{$text-color-tertiary-dark};
+    --divider-color: #{$divider-color-dark};
 
     // Badge
-    --badge-text-color: hsl(0, 0%, 95%);
+    --badge-text-color: #{$badge-text-color-dark};
 
     // Button
-    --button-bg-color: hsl(0, 0%, 15%);
-    --button-border-color: hsl(0, 0%, 28%);
-    --button-hover-border-color: hsl(0, 0%, 35%);
-    --button-text-color: hsl(0, 0%, 85%);
-    --button-focus-border-color: hsla(291, 47%, 51%, 0.45);
-    --button-disabled-bg-color: hsla(291, 47%, 51%, 0.45);
-    --button-disabled-text-color: hsl(0, 1%, 65%);
+    --button-bg-color: #{$button-bg-color-dark};
+    --button-border-color: #{$button-border-color-dark};
+    --button-hover-border-color: #{$button-hover-border-color-dark};
+    --button-text-color: #{$button-text-color-dark};
+    --button-focus-border-color: #{$button-focus-border-color-dark};
+    --button-disabled-bg-color: #{$button-disabled-bg-color-dark};
+    --button-disabled-text-color: #{$button-disabled-text-color-dark};
 
     // Bottom Nav
-    --bottom-nav-bg-color: hsl(0, 0%, 25%);
+    --bottom-nav-bg-color: #{$bottom-nav-bg-color-dark};
 
     // Cards
-    --card-bg-color: hsl(0, 0%, 17%);
-    --card-border-color: hsl(0, 0%, 42%);
+    --card-bg-color: #{$card-bg-color-dark};
+    --card-border-color: #{$card-border-color-dark};
 
     // Chip
-    --chip-bg-color: hsl(0, 0%, 17%);
+    --chip-bg-color: #{$chip-bg-color-dark};
 
     // Dialog
-    --dialog-bg-color: hsl(0, 0%, 26%);
+    --dialog-bg-color: #{$dialog-bg-color-dark};
 
     // Dropdown
-    --dropdown-bg-color: hsl(0, 0%, 17%);
-    --dropdown-border-color: hsl(0, 0%, 42%);
-    --dropdown-text-color: hsl(0, 0%, 88%);
-    --dropdown-option-hover-color: hsl(0, 0%, 28%);
+    --dropdown-bg-color: #{$dropdown-bg-color-dark};
+    --dropdown-border-color: #{$dropdown-border-color-dark};
+    --dropdown-text-color: #{$dropdown-text-color-dark};
+    --dropdown-option-hover-color: #{$dropdown-option-hover-color-dark};
 
     // Input
-    --input-bg-color: hsl(0, 0%, 10%);
-    --input-stransparent-bg-color: hsla(0, 0%, 0%, 0.23);
-    --input-stransparent-hovered-bg-color: hsla(0, 0%, 0%, 0.4);
-    --input-hovered-bg-color: hsl(0, 0%, 7%);
-    --input-text-color: hsl(0, 0%, 85%);
-    --input-border-color: hsl(187, 100%, 42%);
+    --input-bg-color: #{$input-bg-color-dark};
+    --input-stransparent-bg-color: #{$input-stransparent-bg-color-dark};
+    --input-stransparent-hovered-bg-color: #{$input-stransparent-hovered-bg-color-dark};
+    --input-hovered-bg-color: #{$input-hovered-bg-color-dark};
+    --input-text-color: #{$input-text-color-dark};
+    --input-border-color: #{$input-border-color-dark};
 
     // Slider/Range
-    --slider-bg-color: hsl(0, 0%, 18%);
+    --slider-bg-color: #{$slider-bg-color-dark};
 
     // Progress Bar
-    --progress-bar-bg-color: hsl(0, 0%, 18%);
+    --progress-bar-bg-color: #{$progress-bar-bg-color-dark};
 
     // Radio Buttons
-    --radio-button-border-color: hsl(0, 0%, 96%);
-    --radio-button-selected-border-color: hsl(0, 0%, 13%);
-    --radio-button-disabled-border-color: hsl(0, 0%, 40%);
+    --radio-button-border-color: #{$radio-button-border-color-dark};
+    --radio-button-selected-border-color: #{$radio-button-selected-border-color-dark};
+    --radio-button-disabled-border-color: #{$radio-button-disabled-border-color-dark};
 
     // Tooltip
-    --tooltip-bg-color: hsl(0, 0%, 26%);
+    --tooltip-bg-color: #{$tooltip-bg-color-dark};
 
     // Misc.
-    --light-color: hsl(0, 0%, 18%);
+    --dimmer-bg-color: #{$dimmer-bg-color-dark};
+    --light-color: #{$light-color-dark};
   }
 }

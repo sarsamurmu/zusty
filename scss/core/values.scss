@@ -3,21 +3,18 @@ $tablet: 769px;
 $desktop: 1024px;
 
 // Text Sizes
-$xlarge-text: x-large;
-$large-text: larger;
-$medium-text: medium;
-$small-text: small;
-
-// Button
-$button-corner-radius: 6px;
+$xlarge-text: x-large !default;
+$large-text: larger !default;
+$medium-text: medium !default;
+$small-text: small !default;
 
 // z-indexs
-$bottom-nav-z-index: 6;
-$dropdown-z-index: 5;
-$dialog-z-index: 10;
-$tooltip-z-index: 9999;
+$bottom-nav-z-index: 6 !default;
+$dropdown-z-index: 5 !default;
+$dialog-z-index: 20 !default;
+$tooltip-z-index: 9999 !default;
 
 // Misc; Don't change them
 $corner-radius-full: 999999px;
-$primary-transition: 0.2s;
-$secondary-transition: 0.5s;
+$primary-transition: 0.2s !default;
+$secondary-transition: 0.5s !default;

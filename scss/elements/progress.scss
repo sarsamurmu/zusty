@@ -1,5 +1,5 @@
-$progress-bar-corner-radius: 6px;
-$progress-bar-transition: 1s;
+$progress-bar-corner-radius: 6px !default;
+$progress-bar-transition: 1s !default;
 
 progress.zust-progress {
   -webkit-appearance: none;
