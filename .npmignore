@@ -1,0 +1,6 @@
+css/
+demo/
+docs/
+*.html
+*.config
+*.min.scss

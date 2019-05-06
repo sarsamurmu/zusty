@@ -1,0 +1,37 @@
+{
+  "name": "zusty",
+  "version": "0.0.1",
+  "description": "A Powerful CSS Framework",
+  "author": "Sarsa Murmu <sarsamurmu05@gmail.com>",
+  "keywords": [
+    "css",
+    "framework",
+    "scss",
+    "html5"
+  ],
+  "main": "zusty.scss",
+  "scripts": {
+    "build": "npm run build-css && npm run add-autoprefix && npm run minify-css",
+    "add-autoprefix": "postcss --use autoprefixer --map false --output dist/zusty.css dist/zusty.css",
+    "build-css": "node-sass --output-style expanded --source-map true zusty.scss dist/zusty.css",
+    "minify-css": "cleancss -o dist/zusty.min.css dist/zusty.css",
+    "start": "npm run build-css -- --watch"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2"
+  },
+  "browserslist": [ "last 10 versions" ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarsamurmu/zusty.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarsamurmu/zusty/issues",
+    "email": "sarsamurmu05@gmail.com"
+  },
+  "homepage": "https://github.com/sarsamurmu/zusty#readme"
+}
