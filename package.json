@@ -23,7 +23,9 @@
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2"
   },
-  "browserslist": [ "last 10 versions" ],
+  "browserslist": [
+    "last 10 versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarsamurmu/zusty.git"
