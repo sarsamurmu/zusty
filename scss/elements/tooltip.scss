@@ -1,4 +1,5 @@
 $tooltip-margin: 10px;
+$tooltip-translate: 20px;
 
 [zust-tooltip] {
   position: relative;
@@ -12,11 +13,6 @@ $tooltip-margin: 10px;
     padding: 5px 10px;
     border-radius: 8px;
     position: absolute;
-    top: auto;
-    left: 100%;
-    right: auto;
-    bottom: auto;
-    margin-left: $tooltip-margin;
     font-size: 12px;
     color: var(--text-color-primary);
     visibility: hidden;
@@ -25,12 +21,27 @@ $tooltip-margin: 10px;
     transition: all 0.3s ease 0s, visibility 0s ease 0.3s;
   }
 
+  &:not([zust-tooltip-position="right"]):not([zust-tooltip-position="top"]):not([zust-tooltip-position="top-left"]):not([zust-tooltip-position="top-right"]):not([zust-tooltip-position="bottom"]):not([zust-tooltip-position="bottom-left"]):not([zust-tooltip-position="bottom-right"]):before {
+    top: auto;
+    left: 100%;
+    right: auto;
+    bottom: auto;
+    margin-left: $tooltip-margin;
+  }
+
   &:hover, &.zust-hovered, &.zust-active {
     &:before {
       transition: all 0.3s ease 0.1s, visibility 0s ease 0s;
       visibility: visible;
       opacity: 1;
-      transform: none;
+    }
+  }
+
+  &:not([zust-tooltip-position="top"]):not([zust-tooltip-position="bottom"]) {
+    &:hover, &.zust-hovered, &.zust-active {
+      &:before {
+        transform: none !important;
+      }
     }
   }
 
@@ -41,7 +52,7 @@ $tooltip-margin: 10px;
       right: 100%;
       bottom: auto;
       margin-right: $tooltip-margin;
-      transform: translateX(50%);
+      transform: translateX($tooltip-translate);
     }
   }
 
@@ -53,7 +64,7 @@ $tooltip-margin: 10px;
       bottom: 100%;
       margin-left: 0 !important;
       margin-bottom: $tooltip-margin;
-      transform: translateY(50%) translateX(-50%);
+      transform: translateY($tooltip-translate) translateX(-50%);
     }
 
     &:hover, &.zust-hovered, &.zust-active {
@@ -71,13 +82,7 @@ $tooltip-margin: 10px;
       bottom: 100%;
       margin-left: 0 !important;
       margin-bottom: $tooltip-margin;
-      transform: translateY(50%);
-    }
-
-    &:hover, &.zust-hovered, &.zust-active {
-      &:before {
-        transform: none;
-      }
+      transform: translateY($tooltip-translate);
     }
   }
 
@@ -89,13 +94,7 @@ $tooltip-margin: 10px;
       bottom: 100%;
       margin-left: 0 !important;
       margin-bottom: $tooltip-margin;
-      transform: translateY(50%);
-    }
-
-    &:hover, &.zust-hovered, &.zust-active {
-      &:before {
-        transform: none;
-      }
+      transform: translateY($tooltip-translate);
     }
   }
 
@@ -107,7 +106,7 @@ $tooltip-margin: 10px;
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(-50%) translateX(-50%);
+      transform: translateY(- $tooltip-translate) translateX(-50%);
     }
 
     &:hover, &.zust-hovered, &.zust-active {
@@ -125,13 +124,7 @@ $tooltip-margin: 10px;
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(-50%);
-    }
-
-    &:hover, &.zust-hovered, &.zust-active {
-      &:before {
-        transform: none;
-      }
+      transform: translateY(- $tooltip-translate);
     }
   }
 
@@ -143,19 +136,7 @@ $tooltip-margin: 10px;
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(-50%);
-    }
-
-    &:hover, &.zust-hovered, &.zust-active {
-      &:before {
-        transform: none;
-      }
-    }
-  }
-
-  &[zust-type] {
-    &:before {
-      color: $white;
+      transform: translateY(- $tooltip-translate);
     }
   }
 
@@ -167,6 +148,7 @@ $tooltip-margin: 10px;
     &[zust-type="#{$name}"] {
       &:before {
         background-color: var($color);
+        color: $white;
       }
     }
   }
