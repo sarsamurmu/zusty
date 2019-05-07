@@ -1,4 +1,3 @@
-
 .zust-radio:not(:checked),
 .zust-radio:checked {
   position: absolute;
@@ -52,7 +51,7 @@
 }
 
 .zust-radio + span:before {
-  background-color: $orange;
+  background-color: var(--primary-color);
   $size: 0px;
   width: $size;
   height: $size;
