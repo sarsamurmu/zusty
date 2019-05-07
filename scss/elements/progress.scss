@@ -13,7 +13,7 @@ progress.zust-progress {
   width: 100%;
   height: 16px;
   border-radius: $progress-bar-corner-radius;
-  color: $orange;
+  color: var(--primary-color);
   background-color: var(--progress-bar-color);
 
   &.zust-line {
