@@ -1,6 +1,6 @@
 $button-corner-radius: 6px !default;
 
-.zust-button, a.zust-button, .zust-button[type="submit"], .zust-button[type="reset"] {
+.zust-button {
   @extend %no-select;
   display: inline-flex;
   align-items: center;
@@ -68,14 +68,14 @@ $button-corner-radius: 6px !default;
     color: $white;
   }
 
-  @each $name, $color, $hover-color, $focus-color in  (warning, --warning-color, --warning-color-l, --warning-color-el),
-                                                      (error, --error-color, --error-color-l, --error-color-el),
-                                                      (success, --success-color, --success-color-l, --success-color-el),
-                                                      (link, --link-color, --link-color-l, --link-color-el) {
+  @each $name, $color, $hover-color, $focus-color, $txt-color in  (warning, --warning-color, --warning-color-l, --warning-color-el, $grey-shade-9),
+                                                                  (error, --error-color, --error-color-l, --error-color-el, $white),
+                                                                  (success, --success-color, --success-color-l, --success-color-el, $white),
+                                                                  (link, --link-color, --link-color-l, --link-color-el, $white) {
     &.zust-#{$name} {
       border-width: 0 !important;
       background-color: var($color) !important;
-      color: $white;
+      color: $txt-color;
 
       &:hover, &.zust-hovered {
         background-color: var($hover-color) !important;
@@ -182,10 +182,7 @@ $button-corner-radius: 6px !default;
 }
 
 .zust-button-container  {
-  button.zust-button,
-  a.zust-button,
-  .zust-button[type="submit"],
-  .zust-button[type="reset"] {
+  .zust-button {
     @extend %no-select;
     display: inline-block;
     font-size: $medium-text;
@@ -210,49 +207,30 @@ $button-corner-radius: 6px !default;
     }
   }
 
-  &.zust-left {
-    button.zust-button,
-    a.zust-button,
-    .zust-button[type="submit"],
-    .zust-button[type="reset"] {
-      float: left;
-    }
+  &.zust-left .zust-button {
+    float: left;
   }
 
-  &.zust-right {
-    button.zust-button,
-    a.zust-button,
-    .zust-button[type="submit"],
-    .zust-button[type="reset"] {
-      float: right;
-    }
+  &.zust-right .zust-button {
+    float: right;
   }
 
-  &.zust-xlarge button.zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-xlarge a.zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-xlarge .zust-button[type="submit"]:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-xlarge .zust-button[type="reset"]:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge) {
+  &.zust-xlarge > .zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge) {
     font-size: $xlarge-text;
     padding: 18px 27px;
   }
 
-  &.zust-large button.zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-large a.zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-large .zust-button[type="submit"]:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-large .zust-button[type="reset"]:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge)  {
+  &.zust-large > .zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge)  {
     font-size: $large-text;
     padding: 14px 21px;
   }
 
-  &.zust-small button.zust-button,:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge)
-  &.zust-small a.zust-button:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-small .zust-button[type="submit"]:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge),
-  &.zust-small .zust-button[type="reset"]:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge) {
+  &.zust-small > .zust-button,:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge) {
     font-size: $small-text;
     padding: 4px 12px;
   }
 
-  &.zust-fullwidth button, &.zust-full-width button {
+  &.zust-fullwidth .zust-button, &.zust-full-width .zust-button {
     @extend %full-width;
   }
 }
