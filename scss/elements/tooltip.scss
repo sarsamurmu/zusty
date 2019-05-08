@@ -148,15 +148,15 @@ $tooltip-translate: 20px;
     }
   }
 
-  @each $name, $color in  (error, --error-color),
-                          (primary, --primary-color),
-                          (success, --success-color),
-                          (link, --link-color),
-                          (warning, --warning-color) {
+  @each $name, $color, $txt-color in  (error, --error-color, $white),
+                          (primary, --primary-color, $white),
+                          (success, --success-color, $white),
+                          (link, --link-color, $white),
+                          (warning, --warning-color, $grey-shade-9) {
     &[zust-tooltip-type="#{$name}"] {
       &:before {
         background-color: var($color);
-        color: $white;
+        color: $txt-color;
       }
     }
   }
