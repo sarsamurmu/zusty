@@ -15,7 +15,7 @@
 
   > .zust-content {
     background-color: var(--dialog-bg-color);
-    padding: 20px;
+    //padding: 20px;
     overflow: hidden;
     color: var(--text-color-secondary);
     border-radius: 14px;
@@ -24,19 +24,28 @@
     opacity: 0;
     margin: 15px;
     max-width: 400px;
-    max-height: 80%;
+    max-height: 90%;
     font-size: 15px;
 
-    > .zust-header {
+    hr[divider] {
+      margin: 0;
+      border-color: grey;
+      border-width: 1px;
+      opacity: 0.2;
+    }
+
+    > header {
+      background-color: var(--dialog-bg-color);
       display: flex;
       align-items: center;
-      margin: 15px 5px;
+      margin: 20px;
+      margin-bottom: 10px;
 
       > img {
         height: 50px;
         width: 50px;
         margin-right: 15px;
-        }
+      }
 
       > h1, h2, h3, h4, h5, h6 {
         display: inline-block;
@@ -58,26 +67,37 @@
           font-size: $size;
         }
       }
-    }
 
-    > .zust-button {
-      float: right;
-      margin-bottom: -10px;
+      > .zust-close-button {
+        position: absolute;
+        right: 0;
+        margin-top: 15px;
+        transform: translate(-50%, -50%);
+        padding: 8px !important;
 
-      &:first-of-type {
-        margin-right: -10px;
+        .zust-icon {
+          margin: 0 !important;
+        }
       }
     }
 
-    > .zust-button-container {
+    > div {
+      padding: 0 20px;
+      max-height: 400px;
+      overflow: auto;
+
+      @include mobile {
+        max-height: 300px;
+      }
+    }
+
+    > footer {
+      padding: 10px;
+      background-color: var(--dialog-bg-color);
+
+      > .zust-button {
         float: right;
-        margin-right: -10px;
-        margin-bottom: -10px;
-        button.zust-button,
-        a.zust-button,
-        .zust-button[type="submit"],
-        .zust-button[type="reset"] {
-          float: right;
+        margin-bottom: 15px;
       }
     }
   }
@@ -95,15 +115,28 @@
   }
 
   &.zust-large > .zust-content {
-    max-width: 600px;
+    @include desktop {
+      max-width: 600px;
+    }
   }
 
   &.zust-xlarge > .zust-content {
-    max-width: 800px;
+    @include desktop {
+      max-width: 800px;
+    }
   }
 
   &.zust-full > .zust-content {
-    max-height: 85%;
-    max-width: 95%;
+    @include desktop {
+      max-width: 98%;
+      max-height: 98%;
+      margin: 5px;
+    }
+
+    > div {
+      @include desktop {
+        max-height: 450px;
+      }
+    }
   }
 }
