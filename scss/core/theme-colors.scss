@@ -132,8 +132,14 @@ $switch-disabled-bg-color: hsl(0, 0%, 90%) !default;
 $switch-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
 
 // Progress Bar
-$progress-bar-bg-color: hsl(0, 0%, 93%) !default;
-$progress-bar-bg-color-dark: hsl(0, 0%, 18%) !default;
+$progress-back-bg-color: hsl(0, 0%, 93%) !default;
+$progress-back-bg-color-dark: hsl(0, 0%, 18%) !default;
+$progress-back-text-color: $text-color-secondary !default;
+$progress-back-text-color-dark: $text-color-secondary-dark !default;
+$progress-bar-bg-color: $primary-color !default;
+$progress-bar-bg-color-dark: $progress-bar-bg-color !default;
+$progress-bar-text-color: $white !default;
+$progress-bar-text-color-dark: $white !default;
 
 // Radio Buttons
 $radio-button-border-color: hsl(0, 0%, 46%) !default;
@@ -152,6 +158,10 @@ $dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
 $dimmer-bg-color-dark: $dimmer-bg-color !default;
 $light-color: hsl(0, 0%, 96%) !default;
 $light-color-dark: hsl(0, 0%, 18%) !default;
+$text-color-inverted: #FFFFFF !default;
+$text-color-inverted-dark: #484848 !default;
+$bg-color-inverted: hsl(0, 0%, 13%) !default;
+$bg-color-inverted-dark: whitesmoke !default;
 
 
 :root, [zust-theme="light"] {
@@ -235,7 +245,10 @@ $light-color-dark: hsl(0, 0%, 18%) !default;
   --switch-disabled-bg-color: #{$switch-disabled-bg-color};
 
   // Progress Bar
+  --progress-back-bg-color: #{$progress-back-bg-color};
+  --progress-back-text-color: #{$progress-back-text-color};
   --progress-bar-bg-color: #{$progress-bar-bg-color};
+  --progress-bar-text-color: #{$progress-bar-text-color};
 
   // Radio Buttons
   --radio-button-border-color: #{$radio-button-border-color};
@@ -248,6 +261,8 @@ $light-color-dark: hsl(0, 0%, 18%) !default;
   // Misc.
   --dimmer-bg-color: #{$dimmer-bg-color};
   --light-color: #{$light-color};
+  --text-color-inverted: #{$text-color-inverted};
+  --bg-color-inverted: #{$bg-color-inverted};
 }
 
 @supports (--css: variables) {
@@ -332,7 +347,10 @@ $light-color-dark: hsl(0, 0%, 18%) !default;
     --switch-disabled-bg-color: #{$switch-disabled-bg-color-dark};
 
     // Progress Bar
+    --progress-back-bg-color: #{$progress-back-bg-color-dark};
+    --progress-back-text-color: #{$progress-back-text-color-dark};
     --progress-bar-bg-color: #{$progress-bar-bg-color-dark};
+    --progress-bar-text-color: #{$progress-bar-text-color-dark};
 
     // Radio Buttons
     --radio-button-border-color: #{$radio-button-border-color-dark};
@@ -345,5 +363,7 @@ $light-color-dark: hsl(0, 0%, 18%) !default;
     // Misc.
     --dimmer-bg-color: #{$dimmer-bg-color-dark};
     --light-color: #{$light-color-dark};
+    --text-color-inverted: #{$text-color-inverted-dark};
+    --bg-color-inverted: #{$bg-color-inverted-dark};
   }
 }

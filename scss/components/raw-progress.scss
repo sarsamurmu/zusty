@@ -1,0 +1,176 @@
+.zust-progress:not(progress) {
+  display: flex;
+  width: fill-available;
+  height: 20px;
+  padding: 0;
+  background-color: var(--progress-back-bg-color);
+  transition: $primary-transition;
+  border-radius: $progress-bar-corner-radius;
+  overflow: hidden;
+  color: var(--progress-back-text-color);
+  align-items: center;
+  justify-content: flex-start;
+
+  &.zust-in-progress:not(.zust-striped) > .zust-bar:after {
+    animation: progress-anim 2s linear infinite;
+  }
+
+  &.zust-rtl {
+    justify-content: flex-end;
+
+    > .zust-bar:after {
+      right: 0;
+    }
+  }
+
+  &:not(.zust-rtl) {
+    > .zust-bar:after {
+      left: 0;
+    }
+
+    &.zust-striped.zust-in-progress > .zust-bar {
+      animation: progress-anim-striped 3s linear infinite;
+    }
+  }
+
+  &.zust-striped.zust-in-progress > .zust-bar {
+    animation: progress-anim-striped-rtl 3s linear infinite;
+  }
+
+  &.zust-striped > .zust-bar {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                        transparent 75%, transparent);
+  }
+
+  &:not(.zust-striped) > .zust-bar.zust-in-progress:not(.zust-striped):after {
+    animation: progress-anim 2s linear infinite;
+  }
+
+  &.zust-rtl.zust-striped > .zust-bar.zust-in-progress {
+    animation: progress-anim-striped-rtl 3s linear infinite;
+  }
+
+  &.zust-rtl > .zust-bar.zust-striped.zust-in-progress {
+    animation: progress-anim-striped-rtl 3s linear infinite;
+  }
+
+  > .zust-bar {
+    position: relative;
+    user-select: none;
+    height: 100%;
+    width: 0;
+    background-color: var(--progress-bar-bg-color);
+    color: var(--progress-bar-text-color);
+    transition: $progress-bar-transition;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    @each $name, $color, $txt-color in (success, --success-color, $white),
+                                       (warning, --warning-color, $grey-shade-9),
+                                       (error, --error-color, $white),
+                                       (link, --link-color, $white) {
+      &.zust-#{$name} {
+        background-color: var($color);
+        color: $txt-color;
+      }
+    }
+
+    &.zust-striped {
+      background-size: 30px 30px;
+      background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                          transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                          transparent 75%, transparent);
+
+      &.zust-in-progress {
+        animation: progress-anim-striped 3s linear infinite;
+      }
+    }
+
+    &:after {
+      content: '';
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: #fff;
+      border-radius: 3px;
+    }
+
+    @for $i from 0 through 100 {
+      &[value="#{$i}"] {
+        width: percentage($i/100);
+      }
+    }
+
+    &:only-of-type {
+      border-radius: $progress-bar-corner-radius;
+    }
+
+    &:first-of-type:not(:only-of-type) {
+      border-radius: $progress-bar-corner-radius 0 0 $progress-bar-corner-radius;
+    }
+
+    &:last-of-type:not(:only-of-type) {
+      border-radius: 0 $progress-bar-corner-radius $progress-bar-corner-radius 0;
+    }
+
+    &.zust-text-right {
+      justify-content: flex-end;
+    }
+
+    &.zust-text-left {
+      justify-content: flex-start;
+    }
+
+    > span {
+      margin: 0 10px;
+    }
+  }
+
+  &[value] > .zust-bar {
+    width: 100%;
+  }
+
+  @for $i from 0 through 100 {
+    &[value="#{$i}"] {
+      > .zust-bar {
+        width: percentage($i/100);
+      }
+    }
+  }
+
+  &.zust-line {
+    height: 3px;
+  }
+
+  &.zust-thin, &.zust-narrow {
+    height: 5px;
+  }
+
+  &.zust-small {
+    height: 12px;
+  }
+
+  &.zust-large {
+    height: 28px;
+  }
+
+  &.zust-xlarge {
+    height: 36px;
+  }
+
+  @each $name, $color, $txt-color in (success, --success-color, $white),
+                                     (warning, --warning-color, $grey-shade-9),
+                                     (error, --error-color, $white),
+                                     (link, --link-color, $white) {
+    &.zust-#{$name} > .zust-bar {
+      background-color: var($color);
+      color: $txt-color;
+    }
+  }
+}
