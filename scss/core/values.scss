@@ -18,3 +18,33 @@ $tooltip-z-index: 9999 !default;
 $corner-radius-full: 999999px;
 $primary-transition: 0.2s !default;
 $secondary-transition: 0.5s !default;
+
+// Badge
+$badge-corner-radius: 6px !default;
+$padding-first: 10px;
+$padding-second: 5px;
+$badge-only-part-color: var(--primary-color) !default;
+$badge-only-part-text-color: white !default;
+$badge-first-part-color: rgba(144, 144, 144, 0.1) !default;
+$badge-first-part-text-color: var(--badge-text-color) !default;
+$badge-last-part-color: var(--primary-color) !default;
+$badge-last-part-text-color: $white !default;
+$badge-text-size: $small-text !default;
+
+// Button
+$button-corner-radius: 6px !default;
+$button-border-width: 2px !default;
+
+// Dropdown
+$dropdown-animation-duration: 0.3s !default;
+$dropdown-margin: 13px !default;
+$dropdown-child-margin: 20px !default;
+$dropdown-translate: 10px !default;
+$dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04) !default;
+//$dropdown-shadow: 0 0 $transparent !default;
+$dropdown-border-radius: 12px !default;
+$dropdown-item-border-radius: 10px !default;
+
+// Tooltip
+$tooltip-margin: 10px;
+$tooltip-translate: 20px;
