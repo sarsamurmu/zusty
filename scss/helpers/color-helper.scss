@@ -98,6 +98,11 @@
   color: $white;
 }
 
+.zust-bg-transparent {
+  background-color: $transparent !important;
+  color: var(--text-color-primary);
+}
+
 .zust-bg-light {
   background-color: rgba(144, 144, 144, 0.1) !important;
   color: var(--text-color-primary);
@@ -111,6 +116,11 @@
 .zust-bg-black {
   background-color: $black !important;
   color: $white;
+}
+
+.zust-bg-inverted {
+  background-color: var(--bg-color-inverted) !important;
+  color: var(--text-color-inverted);
 }
 
 // Status
@@ -269,6 +279,11 @@
     color: $white;
   }
 
+  .zust-dark-bg-transparent {
+    background-color: $transparent !important;
+    color: var(--text-color-primary);
+  }
+
   .zust-dark-bg-light {
     background-color: rgba(144, 144, 144, 0.1) !important;
     color: var(--text-color-primary);
@@ -416,6 +431,10 @@
   color: $blue-grey !important;
 }
 
+.zust-text-transparent {
+  color: $transparent !important;
+}
+
 .zust-text-black {
   color: $black !important;
 }
@@ -425,7 +444,7 @@
 }
 
 .zust-text-inverted {
-  color: $white !important;
+  color: var(--text-color-inverted) !important;
 }
 
 .zust-text-primary {
@@ -557,16 +576,16 @@
     color: $blue-grey !important;
   }
 
+  .zust-dark-text-transparent {
+    color: $transparent !important;
+  }
+
   .zust-dark-text-black {
     color: black !important;
   }
 
   .zust-dark-text-white {
     color: $white !important;
-  }
-
-  .zust-text-inverted {
-    color: #484848 !important;
   }
 
   // Status
