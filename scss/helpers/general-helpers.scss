@@ -203,14 +203,14 @@
   @extend %no-select;
 }
 
-.zust-uppercase {
+.zust-uppercase, .zust-text-uppercase {
   text-transform: uppercase !important;
 }
 
-.zust-lowercase {
+.zust-lowercase, .zust-text-lowercase {
   text-transform: lowercase !important;
 }
 
-.zust-capitalize {
+.zust-capitalize, .zust-text-capitalize {
   text-transform: capitalize !important;
 }
