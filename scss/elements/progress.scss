@@ -14,7 +14,7 @@ progress.zust-progress {
   height: 16px;
   border-radius: $progress-bar-corner-radius;
   color: var(--primary-color);
-  background-color: var(--progress-bar-color);
+  background-color: var(--progress-back-bg-color);
 
   &.zust-line {
     height: 3px;
@@ -38,13 +38,13 @@ progress.zust-progress {
 }
 
 progress.zust-progress::-webkit-progress-bar {
-    background-color: var(--progress-bar-bg-color);
+    background-color: var(--progress-back-bg-color);
     -webkit-transition: $primary-transition;
     transition: $primary-transition;
 }
 
 progress.zust-progress::-moz-progress-bar {
-    background-color: var(--primary-color);
+    background-color: var(--progress-bar-bg-color);
     border-radius: $progress-bar-corner-radius;
     -moz-transition: $primary-transition;
     transition: $primary-transition;
