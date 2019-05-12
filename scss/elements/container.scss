@@ -1,4 +1,17 @@
 .zust-container {
   display: flex;
   flex-wrap: wrap;
+
+  &.zust-v-centered {
+    align-items: center;
+  }
+
+  &.zust-h-centered {
+    justify-content: center;
+  }
+
+  &.zust-f-centered {
+    align-items: center;
+    justify-content: center;
+  }
 }
