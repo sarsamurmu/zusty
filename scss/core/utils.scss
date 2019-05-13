@@ -54,3 +54,31 @@
   0% {background-position: 0 0;}
   100% {background-position: -60px 0;}
 }
+
+@keyframes progress-indeterminate {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    width: 60%;
+  }
+  100% {
+    left: 100%;
+    transform: none;
+  }
+}
+
+@keyframes progress-indeterminate-rtl {
+  0% {
+    right: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    width: 60%;
+  }
+  100% {
+    right: 100%;
+    transform: none;
+  }
+}
