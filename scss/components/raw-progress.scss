@@ -10,6 +10,7 @@
   color: var(--progress-back-text-color);
   align-items: center;
   justify-content: flex-start;
+  margin: 8px;
 
   &.zust-in-progress:not(.zust-striped) > .zust-bar:after {
     animation: progress-anim 2s linear infinite;
@@ -21,6 +22,15 @@
     > .zust-bar:after {
       right: 0;
     }
+
+    &.zust-indeterminate > .zust-bar {
+      animation-name: progress-indeterminate-rtl;
+    }
+  }
+
+  &.zust-indeterminate > .zust-bar {
+    width: 30%;
+    animation: progress-indeterminate 2s linear infinite;
   }
 
   &:not(.zust-rtl) {
@@ -31,9 +41,13 @@
     &.zust-striped.zust-in-progress > .zust-bar {
       animation: progress-anim-striped 3s linear infinite;
     }
+
+    &.zust-striped > .zust-bar.zust-in-progress {
+      animation: progress-anim-striped 3s linear infinite;
+    }
   }
 
-  &.zust-striped.zust-in-progress > .zust-bar {
+  &.zust-rtl.zust-striped.zust-in-progress > .zust-bar {
     animation: progress-anim-striped-rtl 3s linear infinite;
   }
 
