@@ -16,6 +16,9 @@
   transition: $primary-transition;
   text-align: center;
 
+  height: min-content;
+  width: min-content;
+
 
   // Important
   &.zust-icon-button {
@@ -202,6 +205,9 @@
     cursor: pointer;
     transition: $primary-transition;
     text-align: center;
+
+    height: min-content;
+    width: min-content;
 
     &:hover, &.zust-hovered {
       border-color: var(--button-hover-border-color);
