@@ -32,6 +32,8 @@
     * {
       float: right;
     }
+
+    @include clearfix;
   }
 
   &.zust-hoverable {
