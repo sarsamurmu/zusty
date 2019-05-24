@@ -1,0 +1,175 @@
+$container-items-margin: 10px !default;
+$container-items-padding: 5px !default;
+$container-padding: 0px !default;
+$container-margin: 5px !default;
+
+// Comfort Use
+$it-mar: $container-items-margin;
+$it-pad: $container-items-padding;
+
+// Sizes
+@mixin sizes {
+  &.zust-1-2, &.zust-half  {
+    flex: none;
+    width: 50%;
+  }
+
+  // Three Parts
+
+  @for $i from 1 through 2 {
+    &.zust-#{$i}-3 {
+      flex: none;
+      width: percentage($i/3);
+    }
+  }
+
+  // Four Parts
+
+  @for $i from 1 through 3 {
+    &.zust-#{$i}-4 {
+      flex: none;
+      width: percentage($i/4);
+    }
+  }
+
+  // Five Parts
+
+  @for $i from 1 through 4 {
+    &.zust-#{$i}-5 {
+      flex: none;
+      width: percentage($i/5);
+    }
+  }
+
+  // 12 Parts
+
+  @for $i from 1 through 11 {
+    &.zust-#{$i}-12 {
+      flex: none;
+      width: percentage($i/12);
+    }
+  }
+}
+
+@mixin c-sizes($value) {
+  &.zust-1-2-#{$value}, &.zust-half-#{$value}  {
+    flex: none;
+    width: 50%;
+  }
+
+  // Three Parts
+
+  @for $i from 1 through 2 {
+    &.zust-#{$i}-3-#{$value} {
+      flex: none;
+      width: percentage($i/3);
+    }
+  }
+
+  // Four Parts
+
+  @for $i from 1 through 3 {
+    &.zust-#{$i}-4-#{$value} {
+      flex: none;
+      width: percentage($i/4);
+    }
+  }
+
+  // Five Parts
+
+  @for $i from 1 through 4 {
+    &.zust-#{$i}-5-#{$value} {
+      flex: none;
+      width: percentage($i/5);
+    }
+  }
+
+  // 12 Parts
+
+  @for $i from 1 through 11 {
+    &.zust-#{$i}-12-#{$value} {
+      flex: none;
+      width: percentage($i/12);
+    }
+  }
+}
+
+.zust-container {
+  padding: $container-padding;
+  margin: $container-margin;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  &.zust-v-centered {
+    align-items: center;
+  }
+
+  &.zust-h-centered {
+    justify-content: center;
+  }
+
+  &.zust-f-centered {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.zust-column {
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &.zust-mobile {
+    @include mobile {
+      flex-wrap: nowrap;
+
+      .zust-column {
+        margin: 0 $it-mar 0 0;
+        width: 100%;
+        padding: $it-pad;
+
+        @include sizes;
+      }
+    }
+  }
+
+  .zust-column {
+    margin: 0 $it-mar 0 0;
+    width: 100%;
+    padding: $it-pad;
+
+    @include mobile {
+      margin: $it-mar 0;
+    }
+
+    &:last-child  {
+      margin: 0;
+    }
+
+    &.zust-full {
+      flex: none;
+      width: 100%;
+    }
+
+    &.zust-container {
+      padding: 0;
+    }
+
+    @include tablet {
+      @include sizes;
+    }
+
+    @include mobile {
+      @include c-sizes(mobile);
+    }
+
+    @include zust-tablet {
+      @include c-sizes(tablet);
+    }
+
+    @include desktop {
+      @include c-sizes(desktop);
+    }
+  }
+}
