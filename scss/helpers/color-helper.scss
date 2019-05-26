@@ -110,7 +110,7 @@
 
 .zust-bg-white {
   background-color: $white !important;
-  color: var(--text-color-primary);
+  color: $grey-shade-9;
 }
 
 .zust-bg-black {
@@ -291,7 +291,7 @@
 
   .zust-dark-bg-white {
     background-color: $white !important;
-    color: var(--text-color-primary);
+    color: $grey-shade-9;
   }
 
   .zust-dark-bg-black {
