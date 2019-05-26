@@ -1,7 +1,7 @@
 $container-items-margin: 10px !default;
 $container-items-padding: 5px !default;
 $container-padding: 0px !default;
-$container-margin: 5px !default;
+$container-margin: 10px !default;
 
 // Comfort Use
 $it-mar: $container-items-margin;
@@ -11,7 +11,7 @@ $it-pad: $container-items-padding;
 @mixin sizes {
   &.zust-1-2, &.zust-half  {
     flex: none;
-    width: 50%;
+    width: 50% !important;
   }
 
   // Three Parts
@@ -19,7 +19,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 2 {
     &.zust-#{$i}-3 {
       flex: none;
-      width: percentage($i/3);
+      width: percentage($i/3) !important;
     }
   }
 
@@ -28,7 +28,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 3 {
     &.zust-#{$i}-4 {
       flex: none;
-      width: percentage($i/4);
+      width: percentage($i/4) !important;
     }
   }
 
@@ -37,7 +37,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 4 {
     &.zust-#{$i}-5 {
       flex: none;
-      width: percentage($i/5);
+      width: percentage($i/5) !important;
     }
   }
 
@@ -46,7 +46,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 11 {
     &.zust-#{$i}-12 {
       flex: none;
-      width: percentage($i/12);
+      width: percentage($i/12) !important;
     }
   }
 }
@@ -54,7 +54,7 @@ $it-pad: $container-items-padding;
 @mixin c-sizes($value) {
   &.zust-1-2-#{$value}, &.zust-half-#{$value}  {
     flex: none;
-    width: 50%;
+    width: 50% !important;
   }
 
   // Three Parts
@@ -62,7 +62,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 2 {
     &.zust-#{$i}-3-#{$value} {
       flex: none;
-      width: percentage($i/3);
+      width: percentage($i/3) !important;
     }
   }
 
@@ -71,7 +71,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 3 {
     &.zust-#{$i}-4-#{$value} {
       flex: none;
-      width: percentage($i/4);
+      width: percentage($i/4) !important;
     }
   }
 
@@ -80,7 +80,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 4 {
     &.zust-#{$i}-5-#{$value} {
       flex: none;
-      width: percentage($i/5);
+      width: percentage($i/5) !important;
     }
   }
 
@@ -89,7 +89,7 @@ $it-pad: $container-items-padding;
   @for $i from 1 through 11 {
     &.zust-#{$i}-12-#{$value} {
       flex: none;
-      width: percentage($i/12);
+      width: percentage($i/12) !important;
     }
   }
 }
@@ -115,36 +115,171 @@ $it-pad: $container-items-padding;
   }
 
   &.zust-column {
-    @include tablet {
-      flex-wrap: nowrap;
+    margin: 0 0 $container-margin 0;
+
+    &:not(.zust-mobile-only):not(.zust-tablet-only):not(.zust-touch):not(.zust-desktop) {
+      @include tablet {
+        flex-wrap: nowrap;
+      }
     }
-  }
 
-  &.zust-mobile {
-    @include mobile {
-      flex-wrap: nowrap;
+    &.zust-mobile {
+      @include mobile {
+        flex-wrap: nowrap;
 
-      .zust-column {
-        margin: 0 $it-mar 0 0;
-        width: 100%;
-        padding: $it-pad;
+        .zust-column {
+          margin: 0 $it-mar 0 0;
 
-        @include sizes;
+          @include sizes;
+        }
+      }
+    }
+
+    &.zust-mobile-only {
+      @include mobile {
+        flex-wrap: nowrap;
+
+        .zust-column {
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
+        }
+      }
+
+      @include tablet {
+        > .zust-column {
+          margin: 0 0 $it-mar 0;
+        }
+      }
+    }
+
+    &.zust-tablet-only {
+      @include zust-tablet {
+        flex-wrap: nowrap;
+
+        .zust-column {
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
+        }
+      }
+
+      @include mobile {
+        > .zust-column {
+          margin: 0 0 $it-mar 0;
+        }
+      }
+
+      @include desktop {
+        > .zust-column {
+          margin: 0 0 $it-mar 0;
+        }
+      }
+    }
+
+    &.zust-touch {
+      @include touch {
+        flex-wrap: nowrap;
+
+        .zust-column {
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
+        }
+      }
+
+      @include desktop {
+        > .zust-column {
+          margin: 0 0 $it-mar 0;
+        }
+      }
+    }
+
+    &.zust-desktop {
+      @include desktop {
+        flex-wrap: nowrap;
+
+        .zust-column {
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
+        }
+      }
+
+      @include touch {
+        > .zust-column {
+          margin: 0 0 $it-mar 0;
+        }
       }
     }
   }
 
   .zust-column {
     margin: 0 $it-mar 0 0;
-    width: 100%;
     padding: $it-pad;
 
-    @include mobile {
-      margin: $it-mar 0;
+    &:not(.zust-default):not(.zust-default-mobile):not(.zust-default-tablet):not(.zust-default-touch):not(.zust-default-desktop) {
+      width: 100%;
     }
 
-    &:last-child  {
-      margin: 0;
+    &.zust-default {
+      flex: none;
+    }
+
+    &.zust-default-mobile {
+      @include mobile {
+        flex: none;
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+
+      @include desktop {
+        width: 100%;
+      }
+    }
+
+    &.zust-default-tablet {
+      @include zust-tablet {
+        flex: none;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      @include desktop {
+        width: 100%;
+      }
+    }
+
+    &.zust-default-touch {
+      @include touch {
+        flex: none;
+      }
+
+      @include desktop {
+        width: 100%;
+      }
+    }
+
+    &.zust-default-desktop {
+      @include desktop {
+        flex: none;
+      }
+
+      @include touch {
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      margin: 0 0 $it-mar 0;
+    }
+
+    &:last-child {
+      margin: 0 !important;
     }
 
     &.zust-full {
@@ -166,6 +301,10 @@ $it-pad: $container-items-padding;
 
     @include zust-tablet {
       @include c-sizes(tablet);
+    }
+
+    @include touch {
+      @include c-sizes(touch);
     }
 
     @include desktop {
