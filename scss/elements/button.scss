@@ -35,6 +35,7 @@
 
   &:hover, &.zust-hovered {
     border-color: var(--button-hover-border-color);
+    color: var(--button-text-color);
   }
 
   &:focus, &.zust-focused {
