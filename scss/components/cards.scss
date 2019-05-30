@@ -29,8 +29,10 @@
     margin: 0 -10px 0 -10px;
     overflow: hidden;
 
-    * {
-      float: right;
+    &:not(.zust-text-center) {
+      * {
+        float: right;
+      }
     }
 
     @include clearfix;
