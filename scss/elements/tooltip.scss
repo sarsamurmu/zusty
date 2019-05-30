@@ -145,6 +145,65 @@
     }
   }
 
+  // Display on Breakpoint
+
+  &[zust-tooltip-visibility="mobile"] {
+    @include mobile {
+      &:before {
+        display: inline-block;
+      }
+    }
+    @include tablet {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &[zust-tooltip-visibility="tablet"] {
+    @include mobile {
+      &:before {
+        display: none;
+      }
+    }
+    @include zust-tablet {
+      &:before {
+        display: inline-block;
+      }
+    }
+    @include desktop {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &[zust-tooltip-visibility="touch"] {
+    @include touch {
+      &:before {
+        display: inline-block;
+      }
+    }
+    @include desktop {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &[zust-tooltip-visibility="desktop"] {
+    @include touch {
+      &:before {
+        display: none;
+      }
+    }
+    @include desktop {
+      &:before {
+        display: inline-block;
+      }
+    }
+  }
+
   @each $name, $color, $txt-color in  (error, --error-color, $white),
                           (primary, --primary-color, $white),
                           (success, --success-color, $white),
