@@ -15,7 +15,8 @@
     "add-autoprefix": "postcss --use autoprefixer --map false --output dist/zusty.css dist/zusty.css",
     "build-css": "node-sass --output-style expanded --source-map true zusty.scss dist/zusty.css",
     "minify-css": "cleancss -o dist/zusty.min.css dist/zusty.css",
-    "start": "npm run build-css -- --watch"
+    "start": "npm run build-css -- --watch",
+    "test": "npm run build-css"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
