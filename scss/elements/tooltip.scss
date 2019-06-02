@@ -16,8 +16,13 @@
     color: var(--text-color-primary);
     visibility: hidden;
     opacity: 0;
+    box-shadow: 0 0 5px 0px hsla(0, 0%, 0%, 0.08);
     transform: translateX(- $tooltip-translate);
     transition: all 0.3s ease 0s, visibility 0s ease 0.3s;
+
+    @include mobile {
+      box-shadow: 0 0 20px 0px hsla(0, 0%, 0%, 0.1);
+    }
   }
 
   @include mobile {
