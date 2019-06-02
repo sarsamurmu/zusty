@@ -273,6 +273,12 @@ $input-border-radius: 8px !default;
       border-color: $transparent;
       box-shadow: 0 0 0 2px var(--primary-color);
     }
+
+    &.zust-readonly, &[readonly] {
+      &:focus, &.zust-focused {
+        box-shadow: 0 0 0 1px var(--primary-color);
+      }
+    }
   }
 
   // Disabled
@@ -296,12 +302,31 @@ $input-border-radius: 8px !default;
     }
   }
 
+  // Readonly
+  &.zust-readonly, &[readonly] {
+
+    &:hover, &.zust-hovered {
+      background-color: var(--input-bg-color);
+    }
+
+    &:focus, &.zust-focused {
+      background-color: var(--input-bg-color);
+      box-shadow: 0 0 0 1px var(--input-border-color);
+    }
+  }
+
   &.zust-success {
     border-color: var(--success-color);
 
     &:focus, &.zust-focused {
       border-color: $transparent;
       box-shadow: 0 0 0 2px var(--success-color-l);
+    }
+
+    &.zust-readonly, &[readonly] {
+      &:focus, &.zust-focused {
+        box-shadow: 0 0 0 1px var(--success-color-l);
+      }
     }
   }
 
@@ -312,6 +337,12 @@ $input-border-radius: 8px !default;
       border-color: $transparent;
       box-shadow: 0 0 0 2px var(--warning-color-l);
     }
+
+    &.zust-readonly, &[readonly] {
+      &:focus, &.zust-focused {
+        box-shadow: 0 0 0 1px var(--warning-color-l);
+      }
+    }
   }
 
   &.zust-error {
@@ -321,6 +352,12 @@ $input-border-radius: 8px !default;
       border-color: $transparent;
       box-shadow: 0 0 0 2px var(--error-color-l);
     }
+
+    &.zust-readonly, &[readonly] {
+      &:focus, &.zust-focused {
+        box-shadow: 0 0 0 1px var(--error-color-l);
+      }
+    }
   }
 
   &.zust-link {
@@ -329,6 +366,12 @@ $input-border-radius: 8px !default;
     &:focus, &.zust-focused {
       border-color: $transparent;
       box-shadow: 0 0 0 2px var(--link-color-l);
+    }
+
+    &.zust-readonly, &[readonly] {
+      &:focus, &.zust-focused {
+        box-shadow: 0 0 0 1px var(--link-color-l);
+      }
     }
   }
 }
