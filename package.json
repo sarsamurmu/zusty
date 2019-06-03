@@ -11,8 +11,8 @@
   ],
   "main": "zusty.scss",
   "scripts": {
-    "build": "npm run build-css && npm run add-autoprefix && npm run minify-css",
-    "build-parted": "npm run build-css-p-theme && npm run build-css-p-values && npm run build-css-p-zusty && npm run add-autoprefix-p && npm run minify-css-p",
+    "build": "npm run build-css && npm run add-autoprefix && npm run minify-css && npm run build-parted",
+    "build-parted": " npm run build-css-p-theme && npm run build-css-p-values && npm run build-css-p-zusty && npm run add-autoprefix-p && npm run minify-css-p",
     "add-autoprefix": "postcss --use autoprefixer --map false --output dist/zusty.css dist/zusty.css",
     "add-autoprefix-p": "postcss --use autoprefixer --map false --output dist/parted/zusty.css dist/parted/zusty.css",
     "build-css": "node-sass --output-style expanded --source-map true zusty.scss dist/zusty.css",
