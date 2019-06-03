@@ -1,0 +1,201 @@
+:root, [zust-theme="light"] {
+
+  // Primary Colors
+  --primary-color: #{$primary-color};
+  --primary-color-l: #{$primary-color-l};
+  --primary-color-el: #{$primary-color-el};
+  --success-color: #{$success-color};
+  --success-color-l: #{$success-color-l};
+  --success-color-el: #{$success-color-el};
+  --warning-color: #{$warning-color};
+  --warning-color-l: #{$warning-color-l};
+  --warning-color-el: #{$warning-color-el};
+  --error-color: #{$error-color};
+  --error-color-l: #{$error-color-l};
+  --error-color-el: #{$error-color-el};
+  --link-color: #{$link-color};
+  --link-color-l: #{$link-color-l};
+  --link-color-el: #{$link-color-el};
+
+  // General Items
+  --body-color-primary: #{$body-color-primary};
+  --text-color-primary: #{$text-color-primary};
+  --text-color-secondary: #{$text-color-secondary};
+  --text-color-tertiary: #{$text-color-tertiary};
+  --divider-color: #{$divider-color};
+
+  // Badge
+  --badge-text-color: #{$badge-text-color};
+
+  // Button
+  --button-bg-color: #{$button-bg-color};
+  --button-border-color: #{$button-border-color};
+  --button-hover-border-color: #{$button-hover-border-color};
+  --button-text-color: #{$button-text-color};
+  --button-focus-border-color: #{$button-focus-border-color};
+  --button-disabled-bg-color: #{$button-disabled-bg-color};
+  --button-disabled-text-color: #{$button-disabled-text-color};
+
+  // Bottom Nav
+  --bottom-nav-bg-color: #{$bottom-nav-bg-color};
+
+  // Cards
+  --card-bg-color: #{$card-bg-color};
+  --card-border-color: #{$card-border-color};
+
+  // Chip
+  --chip-bg-color: #{$chip-bg-color};
+
+  // Dialog
+  --dialog-bg-color: #{$dialog-bg-color};
+
+  // Dropdown
+  --dropdown-bg-color: #{$dropdown-bg-color};
+  --dropdown-border-color: #{$dropdown-border-color};
+  --dropdown-text-color: #{$dropdown-text-color};
+  --dropdown-option-hover-color: #{$dropdown-option-hover-color};
+
+  // Input
+  --input-bg-color: #{$input-bg-color};
+  --input-stransparent-bg-color: #{$input-stransparent-bg-color};
+  --input-stransparent-hovered-bg-color: #{$input-stransparent-hovered-bg-color};
+  --input-hovered-bg-color: #{$input-hovered-bg-color};
+  --input-text-color: #{$input-text-color};
+  --input-border-color: #{$input-border-color};
+  --input-placeholder-text-color: #{$input-placeholder-text-color};
+  // Disabled
+  --input-disabled-bg-color: #{$input-disabled-bg-color};
+  --input-disabled-text-color: #{$input-disabled-text-color};
+
+  // Slider/Range
+  --slider-bg-color: #{$slider-bg-color};
+
+  // Switch
+  --switch-bg-color: #{$switch-bg-color};
+  --switch-active-bg-color: #{$switch-active-bg-color};
+  --switch-fg-color: #{$switch-fg-color};
+  --switch-active-fg-color: #{$switch-active-fg-color};
+  // Disabled
+  --switch-disabled-bg-color: #{$switch-disabled-bg-color};
+
+  // Progress Bar
+  --progress-back-bg-color: #{$progress-back-bg-color};
+  --progress-back-text-color: #{$progress-back-text-color};
+  --progress-bar-bg-color: #{$progress-bar-bg-color};
+  --progress-bar-text-color: #{$progress-bar-text-color};
+
+  // Radio Buttons
+  --radio-button-border-color: #{$radio-button-border-color};
+  --radio-button-selected-border-color: #{$radio-button-selected-border-color};
+  --radio-button-disabled-border-color: #{$radio-button-disabled-border-color};
+
+  // Tooltip
+  --tooltip-bg-color: #{$tooltip-bg-color};
+
+  // Misc.
+  --dimmer-bg-color: #{$dimmer-bg-color};
+  --light-color: #{$light-color};
+  --text-color-inverted: #{$text-color-inverted};
+  --bg-color-inverted: #{$bg-color-inverted};
+}
+
+[zust-theme="dark"] {
+
+  // Primary Colors
+  --primary-color: #{$primary-color-dark};
+  --primary-color-l: #{$primary-color-l-dark};
+  --primary-color-el: #{$primary-color-el-dark};
+  --success-color: #{$success-color-dark};
+  --success-color-l: #{$success-color-l-dark};
+  --success-color-el: #{$success-color-el-dark};
+  --warning-color: #{$warning-color-dark};
+  --warning-color-l: #{$warning-color-l-dark};
+  --warning-color-el: #{$warning-color-el-dark};
+  --error-color: #{$error-color-dark};
+  --error-color-l: #{$error-color-l-dark};
+  --error-color-el: #{$error-color-el-dark};
+  --link-color: #{$link-color-dark};
+  --link-color-l: #{$link-color-l-dark};
+  --link-color-el: #{$link-color-el-dark};
+
+  // General Items
+  --body-color-primary: #{$body-color-primary-dark};
+  --text-color-primary: #{$text-color-primary-dark};
+  --text-color-secondary: #{$text-color-secondary-dark};
+  --text-color-tertiary: #{$text-color-tertiary-dark};
+  --divider-color: #{$divider-color-dark};
+
+  // Badge
+  --badge-text-color: #{$badge-text-color-dark};
+
+  // Button
+  --button-bg-color: #{$button-bg-color-dark};
+  --button-border-color: #{$button-border-color-dark};
+  --button-hover-border-color: #{$button-hover-border-color-dark};
+  --button-text-color: #{$button-text-color-dark};
+  --button-focus-border-color: #{$button-focus-border-color-dark};
+  --button-disabled-bg-color: #{$button-disabled-bg-color-dark};
+  --button-disabled-text-color: #{$button-disabled-text-color-dark};
+
+  // Bottom Nav
+  --bottom-nav-bg-color: #{$bottom-nav-bg-color-dark};
+
+  // Cards
+  --card-bg-color: #{$card-bg-color-dark};
+  --card-border-color: #{$card-border-color-dark};
+
+  // Chip
+  --chip-bg-color: #{$chip-bg-color-dark};
+
+  // Dialog
+  --dialog-bg-color: #{$dialog-bg-color-dark};
+
+  // Dropdown
+  --dropdown-bg-color: #{$dropdown-bg-color-dark};
+  --dropdown-border-color: #{$dropdown-border-color-dark};
+  --dropdown-text-color: #{$dropdown-text-color-dark};
+  --dropdown-option-hover-color: #{$dropdown-option-hover-color-dark};
+
+  // Input
+  --input-bg-color: #{$input-bg-color-dark};
+  --input-stransparent-bg-color: #{$input-stransparent-bg-color-dark};
+  --input-stransparent-hovered-bg-color: #{$input-stransparent-hovered-bg-color-dark};
+  --input-hovered-bg-color: #{$input-hovered-bg-color-dark};
+  --input-text-color: #{$input-text-color-dark};
+  --input-border-color: #{$input-border-color-dark};
+  --input-placeholder-text-color: #{$input-placeholder-text-color-dark};
+  // Disabled
+  --input-disabled-bg-color: #{$input-disabled-bg-color-dark};
+  --input-disabled-text-color: #{$input-disabled-text-color-dark};
+
+  // Slider/Range
+  --slider-bg-color: #{$slider-bg-color-dark};
+
+  // Switch
+  --switch-bg-color: #{$switch-bg-color-dark};
+  --switch-active-bg-color: #{$switch-active-bg-color-dark};
+  --switch-fg-color: #{$switch-fg-color-dark};
+  --switch-active-fg-color: #{$switch-active-fg-color-dark};
+  // Disabled
+  --switch-disabled-bg-color: #{$switch-disabled-bg-color-dark};
+
+  // Progress Bar
+  --progress-back-bg-color: #{$progress-back-bg-color-dark};
+  --progress-back-text-color: #{$progress-back-text-color-dark};
+  --progress-bar-bg-color: #{$progress-bar-bg-color-dark};
+  --progress-bar-text-color: #{$progress-bar-text-color-dark};
+
+  // Radio Buttons
+  --radio-button-border-color: #{$radio-button-border-color-dark};
+  --radio-button-selected-border-color: #{$radio-button-selected-border-color-dark};
+  --radio-button-disabled-border-color: #{$radio-button-disabled-border-color-dark};
+
+  // Tooltip
+  --tooltip-bg-color: #{$tooltip-bg-color-dark};
+
+  // Misc.
+  --dimmer-bg-color: #{$dimmer-bg-color-dark};
+  --light-color: #{$light-color-dark};
+  --text-color-inverted: #{$text-color-inverted-dark};
+  --bg-color-inverted: #{$bg-color-inverted-dark};
+}
