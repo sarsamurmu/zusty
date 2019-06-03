@@ -1,5 +1,4 @@
 $progress-bar-corner-radius: 6px !default;
-$progress-bar-transition: $primary-transition !default;
 
 progress.zust-progress {
   -webkit-appearance: none;
@@ -68,7 +67,7 @@ progress[value].zust-progress {
 
   &::-ms-fill {
     background-color: var(--primary-color);
-    transition: $progress-bar-transition;
+    transition: $primary-transition;
     border-radius: $progress-bar-corner-radius;
     border: none;
     transition: $primary-transition;
