@@ -64,14 +64,20 @@ $tooltip-margin: 10px;
 $tooltip-translate: 20px;
 
 // Status Colors
-$item-colors: (
+$status-colors: (
   // $name, $color, $text-color, $hovered-color, $light-color
   (primary, var(--primary-color), $white, var(--primary-hovered-color), var(--primary-color-light)),
   (success, var(--success-color), $white, var(--success-hovered-color), var(--success-color-light)),
   (warning, var(--warning-color), $text-dark, var(--warning-hovered-color), var(--warning-color-light)),
   (error, var(--error-color), $white, var(--error-hovered-color), var(--error-color-light)),
-  (link, var(--link-color), $white, var(--link-hovered-color), var(--link-color-light)),
+  (link, var(--link-color), $white, var(--link-hovered-color), var(--link-color-light))
 );
+
+// Custom Color's List
+$custom-colors: () !default;
+
+// The List we will Use
+$item-colors: join($status-colors, $custom-colors);
 
 $variables: (
   // Text Sizes
