@@ -65,10 +65,28 @@
     }
   }
 
+  &.zust-custom {
+    background-color: $transparent;
+    border-width: 0;
+    color: $white;
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 $button-border-spread rgba(144, 144, 144, 0.15);
+    }
+  }
+
   &.zust-primary {
     background-color: var(--primary-color);
     border-width: 0;
     color: $white;
+
+    &:hover, &.zust-hovered {
+      background-color: var(--primary-hovered-color) !important;
+    }
+
+    &:focus, &.zust-focused {
+      box-shadow: 0 0 0 $button-border-spread var(--primary-color-light) !important;
+    }
   }
 
   @each $name, $color, $hovered-color, $focus-color, $txt-color in  (warning, --warning-color, --warning-hovered-color, --warning-color-light, $grey-shade-9),
