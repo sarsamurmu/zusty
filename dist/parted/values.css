@@ -1,0 +1,30 @@
+:root {
+  --xlarge-text: 2.2rem;
+  --large-text: 1.6rem;
+  --medium-text: 1rem;
+  --small-text: 0.8rem;
+  --bottom-nav-z-index: 6;
+  --dropdown-z-index: 5;
+  --dialog-z-index: 20;
+  --tooltip-z-index: 9999;
+  --badge-corner-radius: 6px;
+  --badge-only-part-color: var(--primary-color);
+  --badge-only-part-text-color: white;
+  --badge-first-part-color: rgba(144, 144, 144, 0.1);
+  --badge-first-part-text-color: var(--badge-text-color);
+  --badge-last-part-color: var(--primary-color);
+  --badge-last-part-text-color: #FFFFFF;
+  --badge-text-size: 0.8rem;
+  --button-corner-radius: 6px;
+  --button-border-width: 2px;
+  --button-border-spread: 4px;
+  --dropdown-animation-duration: 0.3s;
+  --dropdown-margin: 13px;
+  --dropdown-child-margin: 20px;
+  --dropdown-translate: 10px;
+  --dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04);
+  --dropdown-border-radius: 12px;
+  --dropdown-item-border-radius: 10px;
+}
+
+/*# sourceMappingURL=values.css.map */

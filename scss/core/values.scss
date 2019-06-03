@@ -1,3 +1,6 @@
+// Boleans
+$css-variable-enabled: true;
+
 // Screen Sizes as of Chrome Dev Tools
 $tablet: 768px;
 $desktop: 1024px;
@@ -53,3 +56,41 @@ $input-border-spread: 2px !default;
 // Tooltip
 $tooltip-margin: 10px;
 $tooltip-translate: 20px;
+
+$variables: (
+  // Text Sizes
+  --xlarge-text: $xlarge-text,
+  --large-text: $large-text,
+  --medium-text: $medium-text,
+  --small-text: $small-text,
+
+  // z-indexs
+  --bottom-nav-z-index: $bottom-nav-z-index,
+  --dropdown-z-index: $dropdown-z-index,
+  --dialog-z-index: $dialog-z-index,
+  --tooltip-z-index: $tooltip-z-index,
+
+  // Badge
+  --badge-corner-radius: $badge-corner-radius,
+  --badge-only-part-color: $badge-only-part-color,
+  --badge-only-part-text-color: $badge-only-part-text-color,
+  --badge-first-part-color: $badge-first-part-color,
+  --badge-first-part-text-color: $badge-first-part-text-color,
+  --badge-last-part-color: $badge-last-part-color,
+  --badge-last-part-text-color: $badge-last-part-text-color,
+  --badge-text-size: $badge-text-size,
+
+  // Button
+  --button-corner-radius: $button-corner-radius,
+  --button-border-width: $button-border-width,
+  --button-border-spread: $button-border-spread,
+
+  // Dropdown
+  --dropdown-animation-duration: $dropdown-animation-duration,
+  --dropdown-margin: $dropdown-margin,
+  --dropdown-child-margin: $dropdown-child-margin,
+  --dropdown-translate: $dropdown-translate,
+  --dropdown-shadow: $dropdown-shadow,
+  --dropdown-border-radius: $dropdown-border-radius,
+  --dropdown-item-border-radius: $dropdown-item-border-radius,
+);
