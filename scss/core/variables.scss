@@ -53,12 +53,15 @@ $dropdown-item-border-radius: 10px !default;
 $input-border-radius: 8px !default;
 $input-border-spread: 2px !default;
 
+// Textarea
+$textarea-border-radius: 8px !default;
+
+// Progress Bar
+$progress-bar-corner-radius: 6px !default;
+
 // Tooltip
 $tooltip-margin: 10px;
 $tooltip-translate: 20px;
-
-// Textarea
-$textarea-border-radius: 8px !default;
 
 // Status Colors
 $item-colors: (
@@ -113,4 +116,7 @@ $variables: (
 
   // Textarea
   --textarea-border-radius: $textarea-border-radius,
+
+  // Progress Bar
+  --progress-bar-corner-radius: $progress-bar-corner-radius,
 );
