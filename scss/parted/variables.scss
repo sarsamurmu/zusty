@@ -1,5 +1,5 @@
 @import '../core/colors.scss';
-@import '../core/values.scss';
+@import '../core/variables.scss';
 
 :root {
   @each $variable, $value in $variables {
