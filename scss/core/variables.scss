@@ -58,7 +58,7 @@ $tooltip-margin: 10px;
 $tooltip-translate: 20px;
 
 // Status Colors
-$status-colors: (
+$item-colors: (
   // $name, $color, $text-color, $hovered-color, $light-color
   (primary, var(--primary-color), $white, var(--primary-hovered-color), var(--primary-color-light)),
   (success, var(--success-color), $white, var(--success-hovered-color), var(--success-color-light)),
