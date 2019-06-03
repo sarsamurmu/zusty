@@ -29,17 +29,15 @@
     cursor: pointer;
   }
 
-  @each $name, $color in  (success, --success-color),
-                          (error, --error-color),
-                          (warning, --warning-color),
-                          (link, --link-color) {
+  // Colors
+  @each $name, $color in $item-colors {
     &.zust-#{$name} {
       &::-webkit-slider-thumb {
-        background-color: var($color);
+        background-color: $color;
       }
 
       &::-moz-range-thumb {
-        background-color: var($color);
+        background-color: $color;
       }
     }
   }

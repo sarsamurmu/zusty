@@ -84,12 +84,9 @@
     padding: 0;
     margin: 0;
 
-    @each $name, $color, $txt-color in (success, --success-color, $white),
-                                       (warning, --warning-color, $grey-shade-9),
-                                       (error, --error-color, $white),
-                                       (link, --link-color, $white) {
+    @each $name, $color, $txt-color in $item-colors {
       &.zust-#{$name} {
-        background-color: var($color);
+        background-color: $color;
         color: $txt-color;
       }
     }
@@ -178,12 +175,9 @@
     height: 36px;
   }
 
-  @each $name, $color, $txt-color in (success, --success-color, $white),
-                                     (warning, --warning-color, $grey-shade-9),
-                                     (error, --error-color, $white),
-                                     (link, --link-color, $white) {
+  @each $name, $color, $txt-color in $item-colors {
     &.zust-#{$name} > .zust-bar {
-      background-color: var($color);
+      background-color: $color;
       color: $txt-color;
     }
   }

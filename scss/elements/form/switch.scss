@@ -48,15 +48,15 @@
     }
   }
 
-  @each $name, $color in (success, $success-color), (error, $error-color), (warning, $warning-color), (link, $link-color) {
+  @each $name, $color in $item-colors {
     &.zust-#{$name} {
       input:checked {
         + span {
-          border-color: lighten($color, 15%);
+          background-color: $color;
 
           &:before {
             background-color: $color;
-            border-color: lighten($color, 15%);
+            transform: translateX(26px);
           }
         }
       }

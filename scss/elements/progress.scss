@@ -71,51 +71,19 @@ progress[value].zust-progress {
     transition: $primary-transition;
   }
 
-  &.zust-success::-webkit-progress-value {
-    background-color: var(--success-color);
+  @each $name, $color in $item-colors {
+    &.zust-#{$name} {
+      &::-webkit-progress-value {
+        background-color: $color;
+      }
+
+      &::-moz-progress-value {
+        background-color: $color;
+      }
+
+      &::-moz-progress-bar {
+        background-color: $color;
+      }
+    }
   }
-
-  &.zust-success::-moz-progress-value {
-    background-color: var(--success-color);
-  }
-
-  &.zust-success::-moz-progress-bar {
-    background-color: var(--success-color);
-  }
-
-  &.zust-warning::-webkit-progress-value {
-    background-color: var(--warning-color);
-  }
-
-  &.zust-warning::-moz-progress-value {
-    background-color: var(--warning-color);
-  }
-
-  &.zust-warning::-moz-progress-bar {
-    background-color: var(--warning-color);
-  }
-
-  &.zust-error::-webkit-progress-value {
-    background-color: var(--error-color);
-  }
-
-  &.zust-error::-moz-progress-value {
-    background-color: var(--error-color);
-  }
-
-  &.zust-error::-moz-progress-bar {
-    background-color: var(--error-color);
-  }
-
-  &.zust-link::-webkit-progress-value {
-    background-color: var(--link-color);
-  }
-
-  &.zust-link::-moz-progress-value {
-   background-color: var(--link-color);
- }
-
-  &.zust-link::-moz-progress-bar {
-   background-color: var(--link-color);
- }
 }

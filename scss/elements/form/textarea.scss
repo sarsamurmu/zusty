@@ -44,48 +44,14 @@ textarea.zust-textarea {
     }
   }
 
-  &.zust-primary {
-    border-color: var(--primary-color);
+  @each $name, $color, $skip, $hovered-color in $item-colors {
+    &.zust-#{$name} {
+      border-color: $color;
 
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--primary-color);
-    }
-  }
-
-  &.zust-success {
-    border-color: var(--success-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--success-hovered-color);
-    }
-  }
-
-  &.zust-warning {
-    border-color: var(--warning-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--warning-hovered-color);
-    }
-  }
-
-  &.zust-error {
-    border-color: var(--error-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--error-hovered-color);
-    }
-  }
-
-  &.zust-link {
-    border-color: var(--link-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--link-hovered-color);
+      &:focus, &.zust-focused {
+        border-color: $transparent;
+        box-shadow: 0 0 0 $input-border-spread $hovered-color;
+      }
     }
   }
 }

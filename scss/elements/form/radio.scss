@@ -96,21 +96,11 @@
   }
 }
 
-// Status Colors
-.zust-radio.zust-error + span:before {
-  background-color: var(--error-color);
-}
-
-.zust-radio.zust-success + span:before {
-  background-color: var(--success-color);
-}
-
-.zust-radio.zust-warning + span:before {
-  background-color: var(--warning-color);
-}
-
-.zust-radio.zust-link + span:before {
-  background-color: var(--link-color);
+// Colors
+@each $name, $color in $item-colors {
+  .zust-radio.zust-#{$name} + span:before {
+    background-color: $color;
+  }
 }
 
 // Rectangle Radio

@@ -264,21 +264,6 @@
     }
   }
 
-  &.zust-primary {
-    border-color: var(--primary-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 $input-border-spread var(--primary-color);
-    }
-
-    &.zust-readonly, &[readonly] {
-      &:focus, &.zust-focused {
-        box-shadow: 0 0 0 1px var(--primary-color);
-      }
-    }
-  }
-
   // Disabled
   &.zust-disabled, &[disabled] {
     background-color: var(--input-disabled-bg-color);
@@ -313,62 +298,20 @@
     }
   }
 
-  &.zust-success {
-    border-color: var(--success-color);
+  // Colors
+  @each $name, $color, $skip, $hovered-color in $item-colors {
+    &.zust-#{$name} {
+      border-color: $color;
 
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 $input-border-spread var(--success-hovered-color);
-    }
-
-    &.zust-readonly, &[readonly] {
       &:focus, &.zust-focused {
-        box-shadow: 0 0 0 1px var(--success-hovered-color);
+        border-color: $transparent;
+        box-shadow: 0 0 0 $input-border-spread $hovered-color;
       }
-    }
-  }
 
-  &.zust-warning {
-    border-color: var(--warning-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 $input-border-spread var(--warning-hovered-color);
-    }
-
-    &.zust-readonly, &[readonly] {
-      &:focus, &.zust-focused {
-        box-shadow: 0 0 0 1px var(--warning-hovered-color);
-      }
-    }
-  }
-
-  &.zust-error {
-    border-color: var(--error-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 $input-border-spread var(--error-hovered-color);
-    }
-
-    &.zust-readonly, &[readonly] {
-      &:focus, &.zust-focused {
-        box-shadow: 0 0 0 1px var(--error-hovered-color);
-      }
-    }
-  }
-
-  &.zust-link {
-    border-color: var(--link-color);
-
-    &:focus, &.zust-focused {
-      border-color: $transparent;
-      box-shadow: 0 0 0 $input-border-spread var(--link-hovered-color);
-    }
-
-    &.zust-readonly, &[readonly] {
-      &:focus, &.zust-focused {
-        box-shadow: 0 0 0 1px var(--link-hovered-color);
+      &.zust-readonly, &[readonly] {
+        &:focus, &.zust-focused {
+          box-shadow: 0 0 0 1px $hovered-color;
+        }
       }
     }
   }

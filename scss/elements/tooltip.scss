@@ -209,14 +209,10 @@
     }
   }
 
-  @each $name, $color, $txt-color in  (error, --error-color, $white),
-                          (primary, --primary-color, $white),
-                          (success, --success-color, $white),
-                          (link, --link-color, $white),
-                          (warning, --warning-color, $grey-shade-9) {
+  @each $name, $color, $txt-color in $item-colors {
     &[zust-tooltip-type="#{$name}"] {
       &:before {
-        background-color: var($color);
+        background-color: $color;
         color: $txt-color;
       }
     }
