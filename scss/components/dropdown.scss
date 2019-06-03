@@ -125,7 +125,7 @@
       transition: background-color 0.5s;
 
       &:hover, &.zust-hovered {
-        background-color: var(--dropdown-option-hover-color);
+        background-color: var(--dropdown-option-hovered-color);
 
         > ul {
           transition: all 0.2s ease-in-out 0.1s, visibility 0s linear 0s;
@@ -140,7 +140,7 @@
         color: $white;
 
         &:hover, &.zust-hovered {
-          background-color: var(--primary-color-l);
+          background-color: var(--primary-hovered-color);
         }
       }
 

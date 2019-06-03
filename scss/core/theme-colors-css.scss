@@ -2,20 +2,20 @@
 
   // Primary Colors
   --primary-color: #{$primary-color};
-  --primary-color-l: #{$primary-color-l};
-  --primary-color-el: #{$primary-color-el};
+  --primary-hovered-color: #{$primary-hovered-color};
+  --primary-color-light: #{$primary-color-light};
   --success-color: #{$success-color};
-  --success-color-l: #{$success-color-l};
-  --success-color-el: #{$success-color-el};
+  --success-hovered-color: #{$success-hovered-color};
+  --success-color-light: #{$success-color-light};
   --warning-color: #{$warning-color};
-  --warning-color-l: #{$warning-color-l};
-  --warning-color-el: #{$warning-color-el};
+  --warning-hovered-color: #{$warning-hovered-color};
+  --warning-color-light: #{$warning-color-light};
   --error-color: #{$error-color};
-  --error-color-l: #{$error-color-l};
-  --error-color-el: #{$error-color-el};
+  --error-hovered-color: #{$error-hovered-color};
+  --error-color-light: #{$error-color-light};
   --link-color: #{$link-color};
-  --link-color-l: #{$link-color-l};
-  --link-color-el: #{$link-color-el};
+  --link-hovered-color: #{$link-hovered-color};
+  --link-color-light: #{$link-color-light};
 
   // General Items
   --body-color-primary: #{$body-color-primary};
@@ -53,7 +53,7 @@
   --dropdown-bg-color: #{$dropdown-bg-color};
   --dropdown-border-color: #{$dropdown-border-color};
   --dropdown-text-color: #{$dropdown-text-color};
-  --dropdown-option-hover-color: #{$dropdown-option-hover-color};
+  --dropdown-option-hovered-color: #{$dropdown-option-hovered-color};
 
   // Input
   --input-bg-color: #{$input-bg-color};
@@ -103,20 +103,20 @@
 
   // Primary Colors
   --primary-color: #{$primary-color-dark};
-  --primary-color-l: #{$primary-color-l-dark};
-  --primary-color-el: #{$primary-color-el-dark};
+  --primary-hovered-color: #{$primary-hovered-color-dark};
+  --primary-color-light: #{$primary-color-light-dark};
   --success-color: #{$success-color-dark};
-  --success-color-l: #{$success-color-l-dark};
-  --success-color-el: #{$success-color-el-dark};
+  --success-hovered-color: #{$success-hovered-color-dark};
+  --success-color-light: #{$success-color-light-dark};
   --warning-color: #{$warning-color-dark};
-  --warning-color-l: #{$warning-color-l-dark};
-  --warning-color-el: #{$warning-color-el-dark};
+  --warning-hovered-color: #{$warning-hovered-color-dark};
+  --warning-color-light: #{$warning-color-light-dark};
   --error-color: #{$error-color-dark};
-  --error-color-l: #{$error-color-l-dark};
-  --error-color-el: #{$error-color-el-dark};
+  --error-hovered-color: #{$error-hovered-color-dark};
+  --error-color-light: #{$error-color-light-dark};
   --link-color: #{$link-color-dark};
-  --link-color-l: #{$link-color-l-dark};
-  --link-color-el: #{$link-color-el-dark};
+  --link-hovered-color: #{$link-hovered-color-dark};
+  --link-color-light: #{$link-color-light-dark};
 
   // General Items
   --body-color-primary: #{$body-color-primary-dark};
@@ -154,7 +154,7 @@
   --dropdown-bg-color: #{$dropdown-bg-color-dark};
   --dropdown-border-color: #{$dropdown-border-color-dark};
   --dropdown-text-color: #{$dropdown-text-color-dark};
-  --dropdown-option-hover-color: #{$dropdown-option-hover-color-dark};
+  --dropdown-option-hovered-color: #{$dropdown-option-hovered-color-dark};
 
   // Input
   --input-bg-color: #{$input-bg-color-dark};

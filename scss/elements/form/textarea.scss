@@ -60,7 +60,7 @@ textarea.zust-textarea {
 
     &:focus, &.zust-focused {
       border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--success-color-l);
+      box-shadow: 0 0 0 2px var(--success-hovered-color);
     }
   }
 
@@ -69,7 +69,7 @@ textarea.zust-textarea {
 
     &:focus, &.zust-focused {
       border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--warning-color-l);
+      box-shadow: 0 0 0 2px var(--warning-hovered-color);
     }
   }
 
@@ -78,7 +78,7 @@ textarea.zust-textarea {
 
     &:focus, &.zust-focused {
       border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--error-color-l);
+      box-shadow: 0 0 0 2px var(--error-hovered-color);
     }
   }
 
@@ -87,7 +87,7 @@ textarea.zust-textarea {
 
     &:focus, &.zust-focused {
       border-color: $transparent;
-      box-shadow: 0 0 0 2px var(--link-color-l);
+      box-shadow: 0 0 0 2px var(--link-hovered-color);
     }
   }
 }

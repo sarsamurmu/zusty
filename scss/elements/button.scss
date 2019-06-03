@@ -71,17 +71,17 @@
     color: $white;
   }
 
-  @each $name, $color, $hover-color, $focus-color, $txt-color in  (warning, --warning-color, --warning-color-l, --warning-color-el, $grey-shade-9),
-                                                                  (error, --error-color, --error-color-l, --error-color-el, $white),
-                                                                  (success, --success-color, --success-color-l, --success-color-el, $white),
-                                                                  (link, --link-color, --link-color-l, --link-color-el, $white) {
+  @each $name, $color, $hovered-color, $focus-color, $txt-color in  (warning, --warning-color, --warning-hovered-color, --warning-color-light, $grey-shade-9),
+                                                                  (error, --error-color, --error-hovered-color, --error-color-light, $white),
+                                                                  (success, --success-color, --success-hovered-color, --success-color-light, $white),
+                                                                  (link, --link-color, --link-hovered-color, --link-color-light, $white) {
     &.zust-#{$name} {
       border-width: 0 !important;
       background-color: var($color) !important;
       color: $txt-color;
 
       &:hover, &.zust-hovered {
-        background-color: var($hover-color) !important;
+        background-color: var($hovered-color) !important;
       }
 
       &:focus, &.zust-focused {
@@ -168,17 +168,17 @@
     border-width: 2px !important;
   }
 
-  @each $name, $color, $hover-color in  (warning, --warning-color, --warning-color-l),
-                                        (error, --error-color, --error-color-l),
-                                        (success, --success-color, --success-color-l),
-                                        (link, --link-color, --link-color-l) {
+  @each $name, $color, $hovered-color in  (warning, --warning-color, --warning-hovered-color),
+                                        (error, --error-color, --error-hovered-color),
+                                        (success, --success-color, --success-hovered-color),
+                                        (link, --link-color, --link-hovered-color) {
     &.zust-outlined.zust-#{$name} {
       border-color: var($color) !important;
       background-color: $transparent !important;
       color: var($color);
 
       &:hover, &.zust-hovered {
-        border-color: var($hover-color) !important;
+        border-color: var($hovered-color) !important;
         background-color: $transparent !important;
       }
     }
