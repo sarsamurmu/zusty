@@ -12,11 +12,12 @@
 
     &:checked {
       + span {
-        border-color: lighten($switch-active-fg-color, 15%);
+        background-color: var(--switch-active-fg-color);
+        filter: brightness(1.2);
 
         &:before {
           background-color: var(--switch-active-fg-color);
-          border-color: lighten($switch-active-fg-color, 15%);
+          filter: brightness(0.8);
           transform: translateX(26px);
         }
       }
@@ -30,25 +31,19 @@
     left: 6px;
     right: 6px;
     bottom: 6px;
-    background-color: $transparent;
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--switch-bg-color);
-    transition: .4s;
+    background-color: var(--switch-bg-color);
+    transition: 0.4s;
     border-radius: 99999px;
 
     &:before {
       position: absolute;
       content: "";
-      height: 24px;
-      width: 24px;
+      height: 28px;
+      width: 28px;
       left: -6px;
-      bottom: -5px;
+      bottom: -3px;
       background-color: var(--switch-fg-color);
-      border-style: solid;
-      border-width: 2px;
-      border-color: var(--switch-bg-color);
-      transition: .4s;
+      transition: 0.4s;
       border-radius: 99999px;
     }
   }
@@ -71,24 +66,23 @@
   &.zust-disabled, &[disabled] {
     input:checked {
       + span {
-        border-color: var(--switch-disabled-bg-color);
+        background-color: var(--switch-disabled-bg-color);
+        filter: brightness(1);
 
         &:before {
-          background-color: var(--switch-disabled-bg-color);
-          border-color: var(--switch-disabled-bg-color);
-          transform: none;
+          background-color: var(--switch-disabled-fg-color);
+          transform: translateX(0);
+          filter: brightness(1);
         }
       }
     }
 
     span {
       cursor: default;
-      background-color: $transparent;
-      border-color: var(--switch-disabled-bg-color);
+      background-color: var(--switch-disabled-bg-color);
 
       &:before {
-        background-color: var(--switch-disabled-bg-color);
-        border-color: var(--switch-disabled-bg-color);
+        background-color: var(--switch-disabled-fg-color);
       }
     }
   }

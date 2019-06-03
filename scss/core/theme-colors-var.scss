@@ -119,17 +119,19 @@ $slider-bg-color: hsl(0, 0%, 93%) !default;
 $slider-bg-color-dark: hsl(0, 0%, 18%) !default;
 
 // Switch
-$switch-bg-color: hsl(0, 0%, 75%) !default;
-$switch-bg-color-dark: hsl(0, 0%, 70%) !default;
-$switch-active-bg-color: hsl(0, 0%, 60%) !default;
-$switch-active-bg-color-dark: hsl(0, 0%, 90%) !default;
-$switch-fg-color: hsl(0, 0%, 85%) !default;
-$switch-fg-color-dark: hsl(0, 0%, 50%) !default;
+$switch-fg-color: hsl(0, 0%, 90%) !default;
+$switch-fg-color-dark: hsl(0, 0%, 70%) !default;
 $switch-active-fg-color: $primary-color !default;
 $switch-active-fg-color-dark: $primary-color !default;
+$switch-bg-color: hsl(0, 0%, 75%) !default;
+$switch-bg-color-dark: hsl(0, 0%, 30%) !default;
+$switch-active-bg-color: lighten($switch-active-fg-color, 20%) !default;
+$switch-active-bg-color-dark: lighten($switch-active-fg-color, 15%) !default;
 // Disabled
-$switch-disabled-bg-color: hsl(0, 0%, 90%) !default;
+$switch-disabled-bg-color: hsl(0, 0%, 85%) !default;
 $switch-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
+$switch-disabled-fg-color: hsl(0, 0%, 90%) !default;
+$switch-disabled-fg-color-dark: hsl(0, 0%, 20%) !default;
 
 // Progress Bar
 $progress-back-bg-color: hsl(0, 0%, 93%) !default;
