@@ -39,7 +39,7 @@
   }
 
   &:focus, &.zust-focused {
-    box-shadow: 0 0 0 3px var(--button-focus-border-color);
+    box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
     border-color: var(--button-focus-border-color);
   }
 
@@ -85,7 +85,7 @@
       }
 
       &:focus, &.zust-focused {
-        box-shadow: 0 0 0 3px var($focus-color) !important;
+        box-shadow: 0 0 0 $button-border-spread var($focus-color) !important;
       }
     }
   }
@@ -209,7 +209,7 @@
     }
 
     &:focus, &.zust-focused {
-      box-shadow: 0 0 0 3px var(--button-focus-border-color);
+      box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
       border-color: var(--button-focus-border-color);
     }
   }
