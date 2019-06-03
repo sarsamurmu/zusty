@@ -29,7 +29,11 @@
     margin: 0 -10px 0 -10px;
     overflow: hidden;
 
-    &:not(.zust-text-center) {
+    &.zust-center {
+      text-align: center;
+    }
+
+    &:not(.zust-center):not(.zust-text-center) {
       * {
         float: right;
       }
@@ -51,8 +55,10 @@
     text-align: right;
 
     footer {
-      * {
-        float: left;
+      &:not(.zust-center):not(.zust-text-center) {
+        * {
+          float: left;
+        }
       }
     }
   }
