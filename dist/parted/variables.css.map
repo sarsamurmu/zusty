@@ -1,10 +1,10 @@
 {
 	"version": 3,
-	"file": "values.css",
+	"file": "variables.css",
 	"sources": [
-		"../../scss/parted/values.scss",
+		"../../scss/parted/variables.scss",
 		"../../scss/core/colors.scss",
-		"../../scss/core/values.scss"
+		"../../scss/core/variables.scss"
 	],
 	"names": [],
 	"mappings": "AAGA,AAAA,KAAK,CAAC;EAEF,aAAY,EEGF,MAAM;EFHhB,YAAY,EEIH,MAAM;EFJf,aAAY,EEKF,IAAI;EFLd,YAAY,EEMH,MAAM;EFNf,oBAAY,EESK,CAAC;EFTlB,kBAAY,EEUG,CAAC;EFVhB,gBAAY,EEWC,EAAE;EFXf,iBAAY,EEYE,IAAI;EFZlB,qBAAY,EEoBM,GAAG;EFpBrB,uBAAY,EEuBQ,oBAAoB;EFvBxC,4BAAY,EEwBa,KAAK;EFxB9B,wBAAY,EEyBS,wBAAwB;EFzB7C,6BAAY,EE0Bc,uBAAuB;EF1BjD,uBAAY,EE2BQ,oBAAoB;EF3BxC,4BAAY,ECDR,OAAO;EDCX,iBAAY,EEMH,MAAM;EFNf,sBAAY,EEgCO,GAAG;EFhCtB,qBAAY,EEiCM,GAAG;EFjCrB,sBAAY,EEkCO,GAAG;EFlCtB,6BAAY,EEqCc,IAAI;EFrC9B,iBAAY,EEsCE,IAAI;EFtClB,uBAAY,EEuCQ,IAAI;EFvCxB,oBAAY,EEwCK,IAAI;EFxCrB,iBAAY,EEyCE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,sBAAsB;EFzC/C,wBAAY,EE2CS,IAAI;EF3CzB,6BAAY,EE4Cc,IAAI;CF1CjC"
