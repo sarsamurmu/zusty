@@ -14,7 +14,7 @@ $small-text: 0.8rem !default;
 // z-indexs
 $bottom-nav-z-index: 6 !default;
 $dropdown-z-index: 5 !default;
-$dialog-z-index: 20 !default;
+$modal-z-index: 20 !default;
 $tooltip-z-index: 9999 !default;
 
 // Misc; Don't change them
@@ -89,7 +89,7 @@ $variables: (
   // z-indexs
   --bottom-nav-z-index: $bottom-nav-z-index,
   --dropdown-z-index: $dropdown-z-index,
-  --dialog-z-index: $dialog-z-index,
+  --modal-z-index: $modal-z-index,
   --tooltip-z-index: $tooltip-z-index,
 
   // Badge
