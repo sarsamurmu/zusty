@@ -11,10 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: $dialog-z-index;
+  z-index: $modal-z-index;
 
   > .zust-content {
-    background-color: var(--dialog-bg-color);
+    background-color: var(--modal-bg-color);
     //padding: 20px;
     overflow: hidden;
     color: var(--text-color-secondary);
@@ -35,7 +35,7 @@
     }
 
     > header {
-      background-color: var(--dialog-bg-color);
+      background-color: var(--modal-bg-color);
       display: flex;
       align-items: center;
       margin: 20px;
@@ -93,7 +93,7 @@
 
     > footer {
       padding: 10px;
-      background-color: var(--dialog-bg-color);
+      background-color: var(--modal-bg-color);
 
       > .zust-button {
         float: right;
