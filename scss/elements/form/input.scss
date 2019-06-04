@@ -299,14 +299,9 @@
   }
 
   // Validity Check
-  &.zust-check-valid {
-    &:invalid {
-      border-color: var(--error-color);
-
-      &:focus, &.zust-focused {
-        border-color: $transparent;
-        box-shadow: 0 0 0 $input-border-spread var(--error-color);
-      }
+  &.zust-check-validity {
+    & ~ .zust-icon.zust-if-valid {
+      opacity: 0;
     }
 
     &:valid {
@@ -315,6 +310,10 @@
       &:focus, &.zust-focused {
         border-color: $transparent;
         box-shadow: 0 0 0 $input-border-spread var(--success-color);
+      }
+
+      & ~ .zust-icon.zust-if-valid {
+        opacity: 1;
       }
     }
   }
