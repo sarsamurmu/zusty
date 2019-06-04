@@ -1,4 +1,4 @@
-[type="text"].zust-input, [type="date"].zust-input {
+.zust-input {
   appearance: none;
   transition: $primary-transition;
   border-style: solid;
@@ -295,6 +295,27 @@
     &:focus, &.zust-focused {
       background-color: var(--input-bg-color);
       box-shadow: 0 0 0 1px var(--input-border-color);
+    }
+  }
+
+  // Validity Check
+  &.zust-check-valid {
+    &:invalid {
+      border-color: var(--error-color);
+
+      &:focus, &.zust-focused {
+        border-color: $transparent;
+        box-shadow: 0 0 0 $input-border-spread var(--error-color);
+      }
+    }
+
+    &:valid {
+      border-color: var(--success-color);
+
+      &:focus, &.zust-focused {
+        border-color: $transparent;
+        box-shadow: 0 0 0 $input-border-spread var(--success-color);
+      }
     }
   }
 
