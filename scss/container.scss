@@ -118,9 +118,27 @@ $it-pad: $container-items-padding;
   &.zust-column {
     margin: 0 0 $container-margin 0;
 
-    &:not(.zust-mobile-only):not(.zust-tablet-only):not(.zust-touch):not(.zust-desktop) {
+    &:not(.zust-custom):not(.zust-mobile-only):not(.zust-tablet-only):not(.zust-touch):not(.zust-desktop) {
       @include tablet {
         flex-wrap: nowrap;
+      }
+    }
+
+    &.zust-custom {
+      &:not(.zust-active) {
+        .zust-column {
+          margin: 0 0 $it-mar 0;
+        }
+      }
+
+      &.zust-active {
+        flex-wrap: nowrap;
+
+        .zust-column {
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
+        }
       }
     }
 
