@@ -1,7 +1,7 @@
 textarea.zust-textarea {
   appearance: none;
   padding: 8px 10px;
-  transition: $primary-transition;
+  transition: background-color $primary-transition;
   background-color: var(--input-bg-color);
   color: var(--input-text-color);
   border-width: 0;
