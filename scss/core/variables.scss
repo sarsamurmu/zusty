@@ -17,6 +17,7 @@ $dropdown-z-index: 5 !default;
 $modal-z-index: 20 !default;
 $tooltip-z-index: 9999 !default;
 
+// Transition
 $primary-transition: 0.2s !default;
 $secondary-transition: 0.5s !default;
 
@@ -57,6 +58,12 @@ $textarea-border-radius: 8px !default;
 // Progress Bar
 $progress-bar-corner-radius: 6px !default;
 
+// Icon
+$icon-size-small: 0.8rem;
+$icon-size: 1.2rem;
+$icon-size-large: 1.6rem;
+$icon-size-xlarge: 2rem;
+
 // Tooltip
 $tooltip-margin: 10px;
 $tooltip-translate: 20px;
@@ -89,6 +96,10 @@ $variables: (
   --dropdown-z-index: $dropdown-z-index,
   --modal-z-index: $modal-z-index,
   --tooltip-z-index: $tooltip-z-index,
+
+  // Transition
+  --primary-transition: $primary-transition,
+  --secondary-transition: $secondary-transition,
 
   // Badge
   --badge-corner-radius: $badge-corner-radius,
@@ -123,4 +134,10 @@ $variables: (
 
   // Progress Bar
   --progress-bar-corner-radius: $progress-bar-corner-radius,
+
+  // Icon
+  --icon-size-small: $icon-size-small,
+  --icon-size: $icon-size,
+  --icon-size-large: $icon-size-large,
+  --icon-size-xlarge: $icon-size-xlarge,
 );
