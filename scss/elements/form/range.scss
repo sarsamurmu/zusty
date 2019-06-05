@@ -5,7 +5,12 @@
   background-color: var(--range-bg-color);
   height: 5px;
   border-radius: 9999px;
-  transition: $primary-transition;
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+  } @else {
+    transition: $primary-transition;
+  }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
