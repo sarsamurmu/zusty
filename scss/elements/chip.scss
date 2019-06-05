@@ -7,11 +7,15 @@ div.zust-chip {
   height: 20px;
   padding: 10px 15px;
   border-radius: 10000px;
-  //line-height: 22px;
   font-size: 14px;
-  transition: $primary-transition;
   cursor: default;
   margin: 6px;
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+  } @else {
+    transition: $primary-transition;
+  }
 
   > .zust-icon {
     margin-left: 10px;
