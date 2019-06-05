@@ -58,19 +58,19 @@
     }
   } @else {
     &.zust-small {
-      --get-icon-size: 0.8rem;
+      --get-icon-size: #{$icon-size-small};
     }
 
     &.zust-normal, &.zust-default {
-      --get-icon-size: 1rem;
+      --get-icon-size: #{$icon-size};
     }
 
     &.zust-large {
-      --get-icon-size: 1.4rem;
+      --get-icon-size: #{$icon-size-large};
     }
 
     &.zust-xlarge {
-      --get-icon-size: 1.8rem;
+      --get-icon-size: #{$icon-size-xlarge};
     }
   }
 }
