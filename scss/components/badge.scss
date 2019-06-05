@@ -1,17 +1,21 @@
 span.zust-badge {
   @extend %no-select;
-  font-size: $badge-text-size;
   display: inline-block;
-  border-radius: $badge-corner-radius;
   $padding: 4px;
   $extra: 4px;
-  padding-left: $padding + $extra;
-  padding-right: $padding + $extra;
-  padding-top: $padding;
-  padding-bottom: $padding;
-  background-color: $badge-only-part-color;
-  color: $badge-only-part-text-color;
-  transition: $secondary-transition;
+  padding: $padding ($padding + $extra) $padding ($padding + $extra);
+
+  @if $css-variable-enabled {
+    border-radius: var(--badge-corner-radius);
+    background-color: var(--badge-only-part-color);
+    color: var(--badge-only-part-text-color);
+    transition: var(--secondary-transition);
+  } @else {
+    border-radius: $badge-corner-radius;
+    background-color: $badge-only-part-color;
+    color: $badge-only-part-text-color;
+    transition: $secondary-transition;
+  }
 }
 
 div.zust-badge {
@@ -26,51 +30,68 @@ div.zust-badge {
     @extend %no-select;
     padding: 4px;
     margin: 0px;
-    font-size: $badge-text-size;
+
+    @if $css-variable-enabled {
+      transition: var(--secondary-transition);
+    } @else {
+      transition: $secondary-transition;
+    }
   }
 
   span:only-of-type {
     @extend %no-select;
-    border-radius: $badge-corner-radius;
     $padding: 4px;
     $extra: 4px;
-    padding-left: $padding + $extra;
-    padding-right: $padding + $extra;
-    padding-top: $padding;
-    padding-bottom: $padding;
-    background-color: $badge-only-part-color;
-    color: $badge-only-part-text-color;
-    transition: $secondary-transition;
+    padding: $padding ($padding + $extra) $padding ($padding + $extra);
+
+    @if $css-variable-enabled {
+      border-radius: var(--badge-corner-radius);
+      background-color: var(--badge-only-part-color);
+      color: var(--badge-only-part-text-color);
+    } @else {
+      border-radius: $badge-corner-radius;
+      background-color: $badge-only-part-color;
+      color: $badge-only-part-text-color;
+    }
   }
 
   span:first-child:not(:only-of-type) {
-    border-top-left-radius: $badge-corner-radius;
-    border-bottom-left-radius: $badge-corner-radius;
     padding-left: $padding-first;
     padding-right: $padding-second;
-    background-color: $badge-first-part-color;
-    color: $badge-first-part-text-color;
-    transition: $secondary-transition;
+
+    @if $css-variable-enabled {
+      border-radius: var(--badge-corner-radius) 0 0 var(--badge-corner-radius);
+      background-color: var(--badge-first-part-color);
+      color: var(--badge-first-part-text-color);
+    } @else {
+      border-radius: $badge-corner-radius 0 0 $badge-corner-radius;
+      background-color: $badge-first-part-color;
+      color: $badge-first-part-text-color;
+    }
   }
 
   span:last-child:not(:only-of-type) {
-    border-top-right-radius: $badge-corner-radius;
-    border-bottom-right-radius: $badge-corner-radius;
     padding-right: $padding-first;
     padding-left: $padding-second;
-    background-color: $badge-last-part-color;
-    color: $badge-last-part-text-color;
+
+    @if $css-variable-enabled {
+      border-radius: 0 var(--badge-corner-radius) var(--badge-corner-radius) 0;
+      background-color: var(--badge-last-part-color);
+      color: var(--badge-last-part-text-color);
+    } @else {
+      border-radius: 0 $badge-corner-radius $badge-corner-radius 0;
+      background-color: $badge-last-part-color;
+      color: $badge-last-part-text-color;
+    }
   }
 
   &.zust-rounded {
     span:first-child:not(:only-of-type) {
-      border-top-left-radius: 9999px;
-      border-bottom-left-radius: 9999px;
+      border-radius: 9999px 0 0 9999px;
     }
 
     span:last-child:not(:only-of-type) {
-      border-top-right-radius: 9999px;
-      border-bottom-right-radius: 9999px;
+      border-radius: 0 9999px 9999px 0;
     }
   }
 }
