@@ -9,9 +9,14 @@ progress.zust-progress {
   margin: 5px;
   width: 100%;
   height: 16px;
-  border-radius: $progress-bar-corner-radius;
   color: var(--primary-color);
   background-color: var(--progress-back-bg-color);
+
+  @if $css-variable-enabled {
+    border-radius: var(--progress-bar-corner-radius);
+  } @else {
+    border-radius: $progress-bar-corner-radius;
+  }
 
   &.zust-line {
     height: 3px;
@@ -35,40 +40,59 @@ progress.zust-progress {
 }
 
 progress.zust-progress::-webkit-progress-bar {
-    background-color: var(--progress-back-bg-color);
-    -webkit-transition: $primary-transition;
+  background-color: var(--progress-back-bg-color);
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+  } @else {
     transition: $primary-transition;
+  }
 }
 
 progress.zust-progress::-moz-progress-bar {
-    background-color: var(--progress-bar-bg-color);
+  background-color: var(--progress-bar-bg-color);
+  @if $css-variable-enabled {
+    border-radius: var(--progress-bar-corner-radius);
+    transition: var(--primary-transition);
+  } @else {
     border-radius: $progress-bar-corner-radius;
-    -moz-transition: $primary-transition;
     transition: $primary-transition;
+  }
 }
 
 progress[value].zust-progress {
 
   &::-webkit-progress-value {
     background-color: var(--primary-color);
-    border-radius: $progress-bar-corner-radius;
-    -webkit-transition: $primary-transition;
-    transition: $primary-transition;
+    @if $css-variable-enabled {
+      border-radius: var(--progress-bar-corner-radius);
+      transition: var(--primary-transition);
+    } @else {
+      border-radius: $progress-bar-corner-radius;
+      transition: $primary-transition;
+    }
   }
 
   &::-moz-progress-value {
     background-color: var(--primary-color);
-    border-radius: $progress-bar-corner-radius;
-    -moz-transition: $primary-transition;
-    transition: $primary-transition;
+    @if $css-variable-enabled {
+      border-radius: var(--progress-bar-corner-radius);
+      transition: var(--primary-transition);
+    } @else {
+      border-radius: $progress-bar-corner-radius;
+      transition: $primary-transition;
+    }
   }
 
   &::-ms-fill {
     background-color: var(--primary-color);
-    transition: $primary-transition;
-    border-radius: $progress-bar-corner-radius;
     border: none;
-    transition: $primary-transition;
+    @if $css-variable-enabled {
+      border-radius: var(--progress-bar-corner-radius);
+      transition: var(--primary-transition);
+    } @else {
+      border-radius: $progress-bar-corner-radius;
+      transition: $primary-transition;
+    }
   }
 
   @each $name, $color in $item-colors {
