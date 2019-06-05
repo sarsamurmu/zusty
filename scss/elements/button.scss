@@ -3,18 +3,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: $medium-text;
   background-color: var(--button-bg-color);
   border-style: solid;
   border-color: var(--button-border-color);
-  border-radius: $button-corner-radius;
   padding: 8px 12px;
   color: var(--button-text-color);
-  border-width: $button-border-width;
   margin: 5px;
   cursor: pointer;
-  transition: $primary-transition;
   text-align: center;
+
+  @if $css-variable-enabled {
+    border-radius: var(--button-corner-radius);
+    border-width: var(--button-border-width);
+    font-size: var(--medium-text);
+    transition: var(--primary-transition);
+  } @else {
+    border-radius: $button-corner-radius;
+    border-width: $button-border-width;
+    font-size: $medium-text;
+    transition: $primary-transition;
+  }
 
 
   // Important
@@ -39,8 +47,12 @@
   }
 
   &:focus, &.zust-focused {
-    box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
     border-color: var(--button-focus-border-color);
+    @if $css-variable-enabled {
+      box-shadow: 0 0 0 var(--button-border-spread) var(--button-focus-border-color);
+    } @else {
+      box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
+    }
   }
 
   &.disabled, &[disabled], &.disbled:hover, &[disbled]:hover, &.disbled:focus, &[disbled]:focus {
@@ -71,21 +83,11 @@
     color: $white;
 
     &:focus, &.zust-focused {
-      box-shadow: 0 0 0 $button-border-spread rgba(144, 144, 144, 0.15);
-    }
-  }
-
-  &.zust-primary {
-    background-color: var(--primary-color);
-    border-width: 0;
-    color: $white;
-
-    &:hover, &.zust-hovered {
-      background-color: var(--primary-hovered-color) !important;
-    }
-
-    &:focus, &.zust-focused {
-      box-shadow: 0 0 0 $button-border-spread var(--primary-color-light) !important;
+      @if $css-variable-enabled {
+        box-shadow: 0 0 0 var(button-border-spread) rgba(144, 144, 144, 0.15);
+      } @else {
+        box-shadow: 0 0 0 $button-border-spread rgba(144, 144, 144, 0.15);
+      }
     }
   }
 
@@ -101,7 +103,11 @@
       }
 
       &:focus, &.zust-focused {
-        box-shadow: 0 0 0 $button-border-spread $border-spread-color !important;
+        @if $css-variable-enabled {
+          box-shadow: 0 0 0 var(--button-border-spread) $border-spread-color !important;
+        } @else {
+          box-shadow: 0 0 0 $button-border-spread $border-spread-color !important;
+        }
       }
     }
   }
@@ -191,26 +197,38 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: $medium-text;
     background-color: var(--button-bg-color);
     border-style: solid;
     border-color: var(--button-border-color);
-    border-radius: $button-corner-radius;
     padding: 8px 12px;
     color: var(--button-text-color);
-    border-width: $button-border-width;
     margin: 5px;
     cursor: pointer;
-    transition: $primary-transition;
     text-align: center;
+
+    @if $css-variable-enabled {
+      border-radius: var(--button-corner-radius);
+      border-width: var(--button-border-width);
+      font-size: var(--medium-text);
+      transition: var(--primary-transition);
+    } @else {
+      border-radius: $button-corner-radius;
+      border-width: $button-border-width;
+      font-size: $medium-text;
+      transition: $primary-transition;
+    }
 
     &:hover, &.zust-hovered {
       border-color: var(--button-hover-border-color);
     }
 
     &:focus, &.zust-focused {
-      box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
       border-color: var(--button-focus-border-color);
+      @if $css-variable-enabled {
+        box-shadow: 0 0 0 var(--button-border-spread) var(--button-focus-border-color);
+      } @else {
+        box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
+      }
     }
   }
 
@@ -240,8 +258,4 @@
   &.zust-buttons-fullwidth .zust-button, &.zust-buttons-full-width .zust-button {
     @extend %full-width;
   }
-}
-
-button, button:hover, button:focus, button:active, [type="submit"], [type="reset"] {
-  outline: none;
 }
