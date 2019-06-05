@@ -1,14 +1,22 @@
 textarea.zust-textarea {
   appearance: none;
   padding: 8px 10px;
-  transition: background-color $primary-transition;
   background-color: var(--input-bg-color);
   color: var(--input-text-color);
   border-width: 0;
-  border-radius: $textarea-border-radius;
   border-bottom-width: 2px;
   border-color: $transparent;
-  font-size: $medium-text;
+  transition-property: background-color, box-shadow, border-color;
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+    border-radius: var(--textarea-border-radius);
+    font-size: var(--medium-text);
+  } @else {
+    transition: $primary-transition;
+    border-radius: $textarea-border-radius;
+    font-size: $medium-text;
+  }
 
   &:hover, &.zust-hovered {
     background-color: var(--input-hovered-bg-color);
@@ -16,7 +24,11 @@ textarea.zust-textarea {
 
   &:focus, &.zust-focused {
     background-color: var(--body-color-primary);
-    box-shadow: 0 0 0 $input-border-spread var(--input-border-color);
+    @if $css-variable-enabled {
+      box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-color);
+    } @else {
+      box-shadow: 0 0 0 $input-border-spread var(--input-border-color);
+    }
   }
 
   &::placeholder {
@@ -51,11 +63,12 @@ textarea.zust-textarea {
       &:focus, &.zust-focused {
         border-color: $transparent;
         box-shadow: 0 0 0 $input-border-spread $hovered-color;
+        @if $css-variable-enabled {
+          box-shadow: 0 0 0 var(--input-border-spread) $hovered-color;
+        } @else {
+          box-shadow: 0 0 0 $input-border-spread $hovered-color;
+        }
       }
     }
   }
-}
-
-textarea, textarea:hover, textarea:active, textarea:focus {
-  outline: none;
 }
