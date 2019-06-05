@@ -64,13 +64,13 @@ div.zust-badge {
 
   &.zust-rounded {
     span:first-child:not(:only-of-type) {
-      border-top-left-radius: $corner-radius-full;
-      border-bottom-left-radius: $corner-radius-full;
+      border-top-left-radius: 9999px;
+      border-bottom-left-radius: 9999px;
     }
 
     span:last-child:not(:only-of-type) {
-      border-top-right-radius: $corner-radius-full;
-      border-bottom-right-radius: $corner-radius-full;
+      border-top-right-radius: 9999px;
+      border-bottom-right-radius: 9999px;
     }
   }
 }

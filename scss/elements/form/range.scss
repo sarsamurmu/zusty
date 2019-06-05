@@ -4,7 +4,7 @@
   appearance: none;
   background-color: var(--range-bg-color);
   height: 5px;
-  border-radius: $corner-radius-full;
+  border-radius: 9999px;
   transition: $primary-transition;
 
   &::-webkit-slider-thumb {
