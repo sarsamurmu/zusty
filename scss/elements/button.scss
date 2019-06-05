@@ -116,14 +116,10 @@
 
     &.zust-icon-button {
       padding: 18px !important;
+    }
 
-      .zust-icon {
-        margin: 0 !important;
-
-        i {
-          font-size: $xlarge-text !important;
-        }
-      }
+    .zust-icon {
+      --get-icon-size: 2rem;
     }
   }
 
@@ -133,14 +129,10 @@
 
     &.zust-icon-button {
       padding: 14px !important;
+    }
 
-      .zust-icon {
-        margin: 0 !important;
-
-        i {
-          font-size: $large-text !important;
-        }
-      }
+    .zust-icon {
+      --get-icon-size: 1.6rem;
     }
   }
 
@@ -151,14 +143,10 @@
 
     &.zust-icon-button {
       padding: 8px !important;
+    }
 
-      .zust-icon {
-        margin: 0 !important;
-
-        i {
-          font-size: $medium-text !important;
-        }
-      }
+    .zust-icon {
+      --get-icon-size: 1.2rem;
     }
   }
 
@@ -168,14 +156,10 @@
 
     &.zust-icon-button {
       padding: 4px !important;
+    }
 
-      .zust-icon {
-        margin: 0 !important;
-
-        i {
-          font-size: $small-text !important;
-        }
-      }
+    .zust-icon {
+      --get-icon-size: 0.8rem;
     }
   }
 
