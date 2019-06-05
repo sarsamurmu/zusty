@@ -4,7 +4,6 @@
 
   &:before {
     content: attr(zust-tooltip);
-    z-index: $tooltip-z-index;
     display: inline-block;
     width: max-content;
     max-width: 500px;
@@ -19,6 +18,11 @@
     box-shadow: 0 0 5px 0px hsla(0, 0%, 0%, 0.08);
     transform: translateX(- $tooltip-translate);
     transition: all 0.3s ease 0s, visibility 0s ease 0.3s;
+    @if $css-variable-enabled {
+      z-index: var(--tooltip-z-index);
+    } @else {
+      z-index: $tooltip-z-index;
+    }
 
     @include mobile {
       box-shadow: 0 0 20px 0px hsla(0, 0%, 0%, 0.1);
