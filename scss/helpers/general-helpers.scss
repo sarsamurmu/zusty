@@ -10,62 +10,59 @@
 }
 
 // Based on Size
-.zust-show-on-mobile, .zust-visible-on-mobile {
-  @include mobile {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+.zust-show, .zust-visible {
+  &-on-mobile {
+    @include mobile {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+  &-on-touch {
+    @include touch {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+  &-on-desktop {
+    @include desktop {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   }
 }
 
-.zust-show-on-tablet, .zust-visible-on-tablet {
-  @include zust-tablet {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+.zust-hide, .zust-hidden {
+  &-on-mobile {
+    @include mobile {
+      display: none !important;
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      display: none !important;
+    }
+  }
+  &-on-touch {
+    @include touch {
+      display: none !important;
+    }
+  }
+  &-on-desktop {
+    @include desktop {
+      display: none !important;
+    }
   }
 }
-
-.zust-show-on-touch, .zust-visible-on-touch {
-  @include touch {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-}
-
-.zust-show-on-desktop, .zust-visible-on-desktop {
-  @include desktop {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-}
-
-.zust-hide-on-mobile, .zust-hidden-on-mobile {
-  @include mobile {
-    display: none !important;
-  }
-}
-
-.zust-hide-on-tablet, .zust-hidden-on-tablet {
-  @include zust-tablet {
-    display: none !important;
-  }
-}
-
-.zust-hide-on-touch, .zust-hidden-on-touch {
-  @include touch {
-    display: none !important;
-  }
-}
-
-.zust-hide-on-desktop, .zust-hidden-on-desktop {
-  @include desktop {
-    display: none !important;
-  }
-}
-
 
 // On Dark
 [zust-theme="dark"] {
@@ -77,6 +74,134 @@
 
   .zust-hide-on-dark, .zust-hidden-on-dark {
     display: none !important;
+  }
+}
+
+// Margin and Padding
+@mixin marginless {
+  margin: 0 !important;
+  margin: {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+@mixin paddingless {
+  padding: 0 !important;
+  padding: {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+.zust-marginless {
+  @include marginless
+}
+
+.zust-paddingless {
+  @include paddingless
+}
+
+.zust-marginless {
+  &-on-mobile {
+    @include mobile {
+      @include marginless
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      @include marginless
+    }
+  }
+  &-on-touch {
+    @include zust-tablet {
+      @include marginless
+    }
+  }
+  &-on-desktop {
+    @include zust-tablet {
+      @include marginless
+    }
+  }
+}
+
+.zust-paddingless {
+  &-on-mobile {
+    @include mobile {
+      @include paddingless
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      @include paddingless
+    }
+  }
+  &-on-touch {
+    @include zust-tablet {
+      @include paddingless
+    }
+  }
+  &-on-desktop {
+    @include zust-tablet {
+      @include paddingless
+    }
+  }
+}
+
+@for $value from 1 through 10 {
+
+  // Margin
+  .zust-m-#{$value} {
+    margin: $value * 1rem;
+  }
+  .zust-m-t-#{$value} {
+    margin-top: $value * 1rem;
+  }
+  .zust-m-b-#{$value} {
+    margin-bottom: $value * 1rem;
+  }
+  .zust-m-l-#{$value} {
+    margin-left: $value * 1rem;
+  }
+  .zust-m-r-#{$value} {
+    margin-right: $value * 1rem;
+  }
+  .zust-m-x-#{$value} {
+    margin-left: $value * 1rem;
+    margin-right: $value * 1rem;
+  }
+  .zust-m-y-#{$value} {
+    margin-top: $value * 1rem;
+    margin-bottom: $value * 1rem;
+  }
+
+  // Padding
+  .zust-p-#{$value} {
+    padding: $value * 1rem;
+  }
+  .zust-p-t-#{$value} {
+    padding-top: $value * 1rem;
+  }
+  .zust-p-b-#{$value} {
+    padding-bottom: $value * 1rem;
+  }
+  .zust-p-l-#{$value} {
+    padding-left: $value * 1rem;
+  }
+  .zust-p-r-#{$value} {
+    padding-right: $value * 1rem;
+  }
+  .zust-p-x-#{$value} {
+    padding-left: $value * 1rem;
+    padding-right: $value * 1rem;
+  }
+  .zust-p-y-#{$value} {
+    padding-top: $value * 1rem;
+    padding-bottom: $value * 1rem;
   }
 }
 
