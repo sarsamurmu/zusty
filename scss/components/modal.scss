@@ -7,15 +7,19 @@
   visibility: hidden;
   opacity: 0;
   background-color: var(--dimmer-bg-color);
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear $secondary-transition;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: $modal-z-index;
+  @if $css-variable-enabled {
+    z-index: var(--modal-z-index);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear var(--secondary-transition);
+  } @else {
+    z-index: $modal-z-index;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear $secondary-transition;
+  }
 
   > .zust-content {
     background-color: var(--modal-bg-color);
-    //padding: 20px;
     overflow: hidden;
     color: var(--text-color-secondary);
     border-radius: 14px;
@@ -54,18 +58,7 @@
 
       > .zust-icon {
         margin-right: 15px;
-        $size: 50px;
-        height: $size;
-        width: $size;
-
-        svg {
-          height:  $size;
-          width: $size;
-        }
-
-        i {
-          font-size: $size;
-        }
+        --get-icon-size: 50px;
       }
 
       > .zust-close-button {
