@@ -28,6 +28,11 @@
     > .zust-items {
       left: 50%;
       transform: translate(-50%, - $dropdown-translate) !important;
+      @if $css-variable-enabled {
+        transform: translate(-50%, calc(0px - var(--dropdown-translate))) !important;
+      } @else {
+        transform: translate(-50%, - $dropdown-translate) !important;
+      }
     }
 
     &:focus-within > .zust-items,
@@ -43,7 +48,11 @@
   &.zust-center-aligned:not(.zust-upside) {
     > .zust-items {
       left: 50%;
-      transform: translate(-50%, $dropdown-translate) !important;
+      @if $css-variable-enabled {
+        transform: translate(-50%, var(--dropdown-translate)) !important;
+      } @else {
+        transform: translate(-50%, $dropdown-translate) !important;
+      }
     }
 
     &:focus-within > .zust-items,
@@ -61,9 +70,20 @@
     left: 0;
     bottom: auto;
     margin: 0;
-    margin-top: $dropdown-margin - 4px;
     margin-left: 5px;
-    transform: translateY($dropdown-translate);
+    @if $css-variable-enabled {
+      margin-top: calc(var(--dropdown-margin) - 4px);
+      transform: translateY($dropdown-translate);
+      border-radius: var(--dropdown-border-radius);
+      z-index: var(--dropdown-z-index);
+      box-shadow: var(--dropdown-shadow);
+    } @else {
+      margin-top: $dropdown-margin - 4px;
+      transform: translateY($dropdown-translate);
+      border-radius: $dropdown-border-radius;
+      z-index: $dropdown-z-index;
+      box-shadow: $dropdown-shadow;
+    }
 
     position: absolute;
     list-style: none;
@@ -72,19 +92,20 @@
     border-color: var(--dropdown-border-color);
     visibility: hidden;
     opacity: 0;
-    border-radius: $dropdown-border-radius;
     background-color: var(--dropdown-bg-color);
     position: absolute;
-    z-index: $dropdown-z-index;
     transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
     padding: 10px;
     font-size: 15px;
     height: fit-content;
     width: 150px;
-    box-shadow: $dropdown-shadow;
 
     .zust-center-aligned & {
-      transform: translateY($dropdown-translate);
+      @if $css-variable-enabled {
+        transform: translateY(var(--dropdown-translate));
+      } @else {
+        transform: translateY($dropdown-translate);
+      }
     }
 
     // Sizes
@@ -120,9 +141,13 @@
       list-style: none;
       padding: 10px;
       text-align: center;
-      border-radius: $dropdown-item-border-radius;
       margin: 4px;
       transition: background-color 0.5s;
+      @if $css-variable-enabled {
+        border-radius: var(--dropdown-item-border-radius);
+      } @else {
+        border-radius: $dropdown-item-border-radius;
+      }
 
       &:hover, &.zust-hovered {
         background-color: var(--dropdown-option-hovered-color);
@@ -149,8 +174,6 @@
         top: 0;
         left: 100%;
         margin: 0;
-        margin-left: $dropdown-child-margin;
-        transform: translateX($dropdown-translate);
         padding: 10px;
         width: 150px;
         border-style: solid;
@@ -158,13 +181,23 @@
         border-color: var(--dropdown-border-color);
         visibility: hidden;
         opacity: 0;
-        border-radius: $dropdown-border-radius;
         background-color: var(--dropdown-bg-color);
-        z-index: $dropdown-z-index;
         transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
         font-size: 15px;
         height: fit-content;
-        box-shadow: $dropdown-shadow;
+        @if $css-variable-enabled {
+          margin-left: var(--dropdown-child-margin);
+          transform: translateX(var(--dropdown-translate));
+          border-radius: var(--dropdown-border-radius);
+          z-index: var(--dropdown-z-index);
+          box-shadow: var(--dropdown-shadow);
+        } @else {
+          margin-left: $dropdown-child-margin;
+          transform: translateX($dropdown-translate);
+          border-radius: $dropdown-border-radius;
+          z-index: $dropdown-z-index;
+          box-shadow: $dropdown-shadow;
+        }
       }
 
       // Sizes
@@ -192,15 +225,24 @@
       top: auto;
       bottom: 100%;
       margin: 0;
-      margin-bottom: $dropdown-margin - 4px;
       margin-left: 5px;
-      transform: translateY( - $dropdown-translate);
+      @if $css-variable-enabled {
+        margin-bottom: calc(var(--dropdown-margin) - 4px);
+        transform: translateY(calc(0px - var(--dropdown-translate)));
+      } @else {
+        margin-bottom: $dropdown-margin - 4px;
+        transform: translateY( - $dropdown-translate);
+      }
     }
 
     li ul {
       bottom: 0 !important;
       top: auto !important;
-      margin-right: $dropdown-child-margin;
+      @if $css-variable-enabled {
+        margin-right: var(--dropdown-child-margin);
+      } @else {
+        margin-right: $dropdown-child-margin;
+      }
     }
   }
 
@@ -235,9 +277,14 @@
     left: 100% !important;
     right: auto !important;
     margin: 0;
-    margin-left: $dropdown-margin - 4px;
     margin-top: 5px !important;
-    transform: translateX($dropdown-translate) !important;
+    @if $css-variable-enabled {
+      margin-left: calc(var(--dropdown-margin) - 4px);
+      transform: translateX(var(--dropdown-translate)) !important;
+    } @else {
+      margin-left: $dropdown-margin - 4px;
+      transform: translateX($dropdown-translate) !important;
+    }
   }
 
   // Nested Dropdown Rightside
@@ -245,9 +292,14 @@
     left: 100% !important;
     right: auto !important;
     margin: 0 !important;
-    margin-left: $dropdown-child-margin !important;
     margin-top: 5px !important;
-    transform: translateX($dropdown-translate) !important;
+    @if $css-variable-enabled {
+      margin-left: var(--dropdown-child-margin) !important;
+      transform: translateX(var(--dropdown-translate)) !important;
+    } @else {
+      margin-left: $dropdown-child-margin !important;
+      transform: translateX($dropdown-translate) !important;
+    }
   }
 
   // All Nested
@@ -255,9 +307,14 @@
     left: 100% !important;
     right: auto !important;
     margin: 0 !important;
-    margin-left: $dropdown-child-margin !important;
     margin-top: 5px !important;
-    transform: translateX($dropdown-translate) !important;
+    @if $css-variable-enabled {
+      margin-left: var(--dropdown-child-margin) !important;
+      transform: translateX(var(--dropdown-translate)) !important;
+    } @else {
+      margin-left: $dropdown-child-margin !important;
+      transform: translateX($dropdown-translate) !important;
+    }
   }
 
   // Leftside
@@ -266,15 +323,25 @@
     right: 100%;
     left: auto;
     margin: 0;
-    margin-right: $dropdown-margin - 4px;
     margin-top: 5px;
-    transform: translateX( - $dropdown-translate);
+    @if $css-variable-enabled {
+      margin-right: calc(var(--dropdown-margin) - 4px);
+      transform: translateX(calc(0px - var(--dropdown-translate)));
+    } @else {
+      margin-right: $dropdown-margin - 4px;
+      transform: translateX( - $dropdown-translate);
+    }
 
     li ul {
       left: auto !important;
       right: 100% !important;
-      margin-right: $dropdown-child-margin !important;
-      transform: translateX( - $dropdown-translate) !important;
+      @if $css-variable-enabled {
+        margin-right: var(--dropdown-child-margin) !important;
+        transform: translateX(calc(0px - var(--dropdown-translate))) !important;
+      } @else {
+        margin-right: $dropdown-child-margin !important;
+        transform: translateX( - $dropdown-translate) !important;
+      }
     }
   }
 
@@ -282,16 +349,26 @@
   .zust-leftside > ul {
     left: auto !important;
     right: 100% !important;
-    margin-right: $dropdown-child-margin !important;
-    transform: translateX( - $dropdown-translate) !important;
+    @if $css-variable-enabled {
+      margin-right: var(--dropdown-child-margin) !important;
+      transform: translateX(calc(0px - var(--dropdown-translate))) !important;
+    } @else {
+      margin-right: $dropdown-child-margin !important;
+      transform: translateX( - $dropdown-translate) !important;
+    }
   }
 
   // All Nested
   .zust-nested-leftside ul {
     left: auto !important;
     right: 100% !important;
-    margin-right: $dropdown-child-margin !important;
-    transform: translateX( - $dropdown-translate) !important;
+    @if $css-variable-enabled {
+      margin-right: var(--dropdown-child-margin) !important;
+      transform: translateX(calc(0px - var(--dropdown-translate))) !important;
+    } @else {
+      margin-right: $dropdown-child-margin !important;
+      transform: translateX( - $dropdown-translate) !important;
+    }
   }
 
   // Sizes
