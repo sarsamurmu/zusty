@@ -4,11 +4,17 @@
   max-width: 200px;
   min-width: 180px;
   height: max-content;
-  border-radius: 10px;
   border-color: var(--card-border-color);
-  transition: $primary-transition;
   box-shadow: 0 0 10px 0px hsla(0, 0%, 0%, 0.1);
   margin: 10px;
+
+  @if $css-variable-enabled {
+    border-radius: var(--card-border-radius);
+    transition: var(--primary-transition);
+  } @else {
+    border-radius: $card-border-radius;
+    transition: $primary-transition;
+  }
 
   &.zust-flat {
     border-width: 2px;
