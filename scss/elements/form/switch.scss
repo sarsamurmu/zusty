@@ -5,14 +5,23 @@
   width: 60px;
   height: 34px;
 
-  &.zust-gummy:active {
-    input:not(:checked) ~ span:before {
-      width: 56px;
+  &.zust-gummy {
+    &:active {
+      input:not(:checked) ~ span:before {
+        width: 56px;
+        box-shadow: 0 0 0 0 !important;
+      }
+      input:checked ~ span:before {
+        width: 56px;
+        transform: translateX(0);
+        box-shadow: 0 0 0 0 !important;
+      }
     }
-    input:checked ~ span:before {
-      width: 56px;
-      transform: translateX(0);
-    }
+  }
+
+  &:active > span:before {
+    transition: all 0.4s, box-shadow 0.2s 0.3s;
+    box-shadow: 0 0 0 10px rgba(144, 144, 144, 0.3);
   }
 
   input {
@@ -53,7 +62,7 @@
       left: -6px;
       bottom: -3px;
       background-color: var(--switch-fg-color);
-      transition: 0.4s;
+      transition: all 0.4s;
       border-radius: 99999px;
     }
   }
