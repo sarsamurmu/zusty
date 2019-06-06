@@ -5,6 +5,16 @@
   width: 60px;
   height: 34px;
 
+  &.zust-gummy:active {
+    input:not(:checked) ~ span:before {
+      width: 56px;
+    }
+    input:checked ~ span:before {
+      width: 56px;
+      transform: translateX(0);
+    }
+  }
+
   input {
     opacity: 0;
     width: 0;
