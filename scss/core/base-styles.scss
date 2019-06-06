@@ -76,3 +76,10 @@ h6, .zust-h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
 }
+
+// Resetting Outline
+*, *:focus, *:hover, *:active, *:focus-within {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-color: $transparent !important;
+}
