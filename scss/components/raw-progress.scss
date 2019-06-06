@@ -4,13 +4,19 @@
   height: 20px;
   padding: 0;
   background-color: var(--progress-back-bg-color);
-  transition: $primary-transition;
-  border-radius: $progress-bar-corner-radius;
   overflow: hidden;
   color: var(--progress-back-text-color);
   align-items: center;
   justify-content: flex-start;
   margin: 8px;
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+    border-radius: var(--progress-bar-corner-radius);
+  } @else {
+    transition: $primary-transition;
+    border-radius: $progress-bar-corner-radius;
+  }
 
   &.zust-in-progress:not(.zust-striped) > .zust-bar:after {
     animation: progress-anim 2s linear infinite;
@@ -77,12 +83,17 @@
     width: 0;
     background-color: var(--progress-bar-bg-color);
     color: var(--progress-bar-text-color);
-    transition: $primary-transition;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin: 0;
+
+    @if $css-variable-enabled {
+      transition: var(--primary-transition);
+    } @else {
+      transition: $primary-transition;
+    }
 
     @each $name, $color, $txt-color in $item-colors {
       &.zust-#{$name} {
@@ -119,15 +130,27 @@
     }
 
     &:only-of-type {
-      border-radius: $progress-bar-corner-radius;
+      @if $css-variable-enabled {
+        border-radius: var(--progress-bar-corner-radius);
+      } @else {
+        border-radius: $progress-bar-corner-radius;
+      }
     }
 
     &:first-of-type:not(:only-of-type) {
-      border-radius: $progress-bar-corner-radius 0 0 $progress-bar-corner-radius;
+      @if $css-variable-enabled {
+        border-radius: var(--progress-bar-corner-radius) 0 0 var(--progress-bar-corner-radius);
+      } @else {
+        border-radius: $progress-bar-corner-radius 0 0 $progress-bar-corner-radius;
+      }
     }
 
     &:last-of-type:not(:only-of-type) {
-      border-radius: 0 $progress-bar-corner-radius $progress-bar-corner-radius 0;
+      @if $css-variable-enabled {
+        border-radius: 0 var(--progress-bar-corner-radius) var(--progress-bar-corner-radius) 0;
+      } @else {
+        border-radius: 0 $progress-bar-corner-radius $progress-bar-corner-radius 0;
+      }
     }
 
     &.zust-text-right {
