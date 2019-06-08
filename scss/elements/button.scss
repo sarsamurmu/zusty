@@ -63,12 +63,10 @@
     }
   }
 
-  &.disabled, &[disabled], &.disbled:hover, &[disbled]:hover, &.disbled:focus, &[disbled]:focus {
+  &[disabled] {
+    pointer-events: none;
     cursor: default !important;
-    background-color: var(--button-disabled-bg-color) !important;
-    color: var(--button-disabled-text-color) !important;
-    border-style: none;
-    box-shadow: 0 0 0 0px var(--button-disabled-bg-color) !important;
+    opacity: 0.6;
   }
 
   &.zust-transparent {
