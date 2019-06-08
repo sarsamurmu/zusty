@@ -45,15 +45,15 @@
   }
 
   &.zust-disabled, &[disabled] {
-    background-color: var(--input-disabled-bg-color);
+    background-color: var(--item-disabled-bg-color);
 
     &::-webkit-slider-thumb {
-      background-color: var(--input-disabled-text-color);
+      background-color: var(--item-disabled-fg-color);
       cursor: default;
     }
 
     &::-moz-range-thumb {
-      background-color: var(--input-disabled-text-color);
+      background-color: var(--item-disabled-fg-color);
       cursor: default;
     }
   }

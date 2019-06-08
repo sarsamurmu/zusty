@@ -33,8 +33,6 @@
   --button-hover-border-color: #{$button-hover-border-color};
   --button-text-color: #{$button-text-color};
   --button-focus-border-color: #{$button-focus-border-color};
-  --button-disabled-bg-color: #{$button-disabled-bg-color};
-  --button-disabled-text-color: #{$button-disabled-text-color};
 
   // Bottom Nav
   --bottom-nav-bg-color: #{$bottom-nav-bg-color};
@@ -63,9 +61,10 @@
   --input-text-color: #{$input-text-color};
   --input-border-color: #{$input-border-color};
   --input-placeholder-text-color: #{$input-placeholder-text-color};
-  // Disabled
-  --input-disabled-bg-color: #{$input-disabled-bg-color};
-  --input-disabled-text-color: #{$input-disabled-text-color};
+
+  // Item Disabled
+  --item-disabled-bg-color: #{$item-disabled-bg-color};
+  --item-disabled-fg-color: #{$item-disabled-fg-color};
 
   // Slider/Range
   --range-bg-color: #{$range-bg-color};
@@ -135,8 +134,6 @@
   --button-hover-border-color: #{$button-hover-border-color-dark};
   --button-text-color: #{$button-text-color-dark};
   --button-focus-border-color: #{$button-focus-border-color-dark};
-  --button-disabled-bg-color: #{$button-disabled-bg-color-dark};
-  --button-disabled-text-color: #{$button-disabled-text-color-dark};
 
   // Bottom Nav
   --bottom-nav-bg-color: #{$bottom-nav-bg-color-dark};
@@ -165,9 +162,10 @@
   --input-text-color: #{$input-text-color-dark};
   --input-border-color: #{$input-border-color-dark};
   --input-placeholder-text-color: #{$input-placeholder-text-color-dark};
-  // Disabled
-  --input-disabled-bg-color: #{$input-disabled-bg-color-dark};
-  --input-disabled-text-color: #{$input-disabled-text-color-dark};
+
+  // Item Disabled
+  --item-disabled-bg-color: #{$item-disabled-bg-color-dark};
+  --item-disabled-fg-color: #{$item-disabled-fg-color-dark};
 
   // Slider/Range
   --range-bg-color: #{$range-bg-color-dark};

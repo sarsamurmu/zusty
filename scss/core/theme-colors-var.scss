@@ -60,10 +60,6 @@ $button-text-color: hsl(0, 0%, 40%) !default;
 $button-text-color-dark: hsl(0, 0%, 85%) !default;
 $button-focus-border-color: hsla(291, 64%, 42%, 0.14) !default;
 $button-focus-border-color-dark: hsla(291, 47%, 51%, 0.45) !default;
-$button-disabled-bg-color: hsla(0, 0%, 98%, 1) !default;
-$button-disabled-bg-color-dark: hsla(0, 0%, 16%, 1) !default;
-$button-disabled-text-color: hsl(0, 0%, 86%) !default;
-$button-disabled-text-color-dark: hsla(0, 0%, 30%, 1) !default;
 
 // Bottom Nav
 $bottom-nav-bg-color: hsl(0, 0%, 90%) !default;
@@ -108,11 +104,12 @@ $input-border-color: hsl(187, 100%, 70%) !default;
 $input-border-color-dark: hsl(187, 100%, 42%) !default;
 $input-placeholder-text-color: hsl(0, 0%, 46%) !default;
 $input-placeholder-text-color-dark: hsl(0, 0%, 46%) !default;
-// Disabled
-$input-disabled-bg-color: $button-disabled-bg-color !default;
-$input-disabled-bg-color-dark: $button-disabled-bg-color-dark !default;
-$input-disabled-text-color: $button-disabled-text-color !default;
-$input-disabled-text-color-dark: $button-disabled-text-color-dark !default;
+
+// Item Disabled
+$item-disabled-bg-color: hsla(0, 0%, 98%, 1) !default;
+$item-disabled-bg-color-dark: hsla(0, 0%, 16%, 1) !default;
+$item-disabled-fg-color: hsl(0, 0%, 86%) !default;
+$item-disabled-fg-color-dark: hsla(0, 0%, 30%, 1) !default;
 
 // Slider/Range
 $range-bg-color: hsl(0, 0%, 93%) !default;
