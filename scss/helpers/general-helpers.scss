@@ -272,3 +272,34 @@
 .zust-radiusless, .zust-sharp {
   border-radius: 0 !important;
 }
+
+// Grouping
+.zust-el-group {
+  display: inline-flex;
+
+  > * {
+    margin: 0 !important;
+  }
+  > :first-child {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  > *:not(:first-child):not(:last-child) {
+    border-radius: 0 0 0 0 !important;
+
+    &.zust-btn {
+      border-left-width: 0 !important;
+      border-right-width: 0 !important;
+    }
+  }
+
+  > :last-child {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+
+    &.zust-btn {
+      border-left-width: 0 !important;
+    }
+  }
+}
