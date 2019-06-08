@@ -62,7 +62,7 @@ $progress-bar-corner-radius: 6px !default;
 
 // Icon
 $icon-size-small: 0.8rem;
-$icon-size: 1.2rem;
+$icon-size-default: 1.2rem;
 $icon-size-large: 1.6rem;
 $icon-size-xlarge: 2rem;
 
@@ -141,7 +141,7 @@ $variables: (
 
   // Icon
   --icon-size-small: $icon-size-small,
-  --icon-size: $icon-size,
+  --icon-size-default: $icon-size-default,
   --icon-size-large: $icon-size-large,
   --icon-size-xlarge: $icon-size-xlarge,
 );

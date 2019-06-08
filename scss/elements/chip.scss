@@ -21,6 +21,7 @@ div.zust-chip {
     margin-left: 10px;
     border-radius: 10000px;
     padding: 2px;
+    --icon-size: 1rem;
 
     &:hover, &.zust-hovered, &:focus {
       background-color: $stransparent;

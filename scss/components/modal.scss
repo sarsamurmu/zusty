@@ -58,18 +58,19 @@
 
       > .zust-icon {
         margin-right: 15px;
-        --get-icon-size: 50px;
+        --icon-size: 50px;
       }
 
       > .zust-close-button {
         position: absolute;
         right: 0;
-        margin-top: 15px;
+        margin-top: 20px;
         transform: translate(-50%, -50%);
         padding: 8px !important;
 
         .zust-icon {
           margin: 0 !important;
+          --icon-size: 1.1rem;
         }
       }
     }

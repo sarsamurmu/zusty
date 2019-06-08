@@ -25,7 +25,7 @@
   }
 
   ~ .zust-icon {
-    --get-icon-size: 18px;
+    --icon-size: 18px;
 
     &.zust-left {
       position: absolute;
@@ -75,7 +75,7 @@
     padding-right: $padding2;
 
     ~ .zust-icon {
-      --get-icon-size: 12px;
+      --icon-size: 12px;
 
       &.zust-left {
         position: absolute;
@@ -126,7 +126,7 @@
     padding-right: $padding2;
 
     ~ .zust-icon {
-      --get-icon-size: 24px;
+      --icon-size: 24px;
 
       &.zust-left {
         position: absolute;
@@ -177,7 +177,7 @@
     padding-right: $padding2;
 
     ~ .zust-icon {
-      --get-icon-size: 36px;
+      --icon-size: 36px;
 
       &.zust-left {
         position: absolute;
