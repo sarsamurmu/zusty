@@ -15,15 +15,15 @@ assignees: ''
 
 **General Info**
 <!-- Which Version Are You Using -->
-Version: 
+Version:
 <!-- Which Implementation you're Using? Whole Pack or Parted -->
-Implementation: 
+Implementation:
 <!-- How are you using that? By CDN or By SASS(SCSS) -->
-Using Via: 
+Using Via:
 <!-- You're Testing on Which Browser? Ex. Chrome, Firefox, Safari, Opera, Edge, Internet Explorer -->
-Testing Browser: 
+Testing Browser:
 <!-- You're Testing on which Device? Desktop or Smartphone -->
-Testing Device: 
+Testing Device:
 
 <!-- From Now You can Delete them :D --><!-- Replace `Answer Here` with Your answer -->
 
@@ -32,12 +32,13 @@ Testing Device:
 Answer Here
 
 **To Reproduce**
-<!-- Example 
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+
+<!-- Example
+* Steps to reproduce the behavior:
+* 1. Go to '...'
+* 2. Click on '....'
+* 3. Scroll down to '....'
+* 4. See error
 -->
 Answer Here
 
