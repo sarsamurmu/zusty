@@ -83,7 +83,7 @@
     }
   }
 
-  &.zust-custom {
+  &.zust-custom, .zust-btns-custom > & {
     background-color: $transparent;
     border-width: 0;
     color: $white;
@@ -118,11 +118,11 @@
     }
   }
 
-  &.zust-full-width, &.zust-fullwidth {
+  &.zust-full-width, &.zust-fullwidth, .zust-btns-full-width > &:not(.zust-ignore), .zust-btns-fullwidth > &:not(.zust-ignore) {
     @extend %full-width;
   }
 
-  &.zust-xlarge {
+  &.zust-xlarge, .zust-btns-xlarge > &:not(.zust-ignore) {
     font-size: $xlarge-text !important;
     padding: 18px 27px !important;
 
@@ -135,7 +135,7 @@
     }
   }
 
-  &.zust-large {
+  &.zust-large, .zust-btns-large > &:not(.zust-ignore) {
     font-size: $large-text !important;
     padding: 14px 21px !important;
 
@@ -150,19 +150,12 @@
 
   &.zust-default {
     width: max-content !important;
+    height: max-content !important;
     font-size: $medium-text !important;
     padding: 8px 12px !important;
-
-    &.zust-icon-btn {
-      padding: 8px !important;
-    }
-
-    .zust-icon {
-      --icon-size: 1rem;
-    }
   }
 
-  &.zust-small {
+  &.zust-small, .zust-small > &:not(.zust-ignore) {
     font-size: $small-text !important;
     padding: 4px 12px !important;
 
@@ -175,7 +168,7 @@
     }
   }
 
-  &.zust-outlined {
+  &.zust-outlined, .zust-btns-outlined > & {
     background-color: $transparent !important;
     border-width: 2px !important;
 
@@ -213,74 +206,5 @@
       background-color: currentColor;
       animation: zust-spinner 1s infinite;
     }
-  }
-}
-
-.zust-group {
-  .zust-btn {
-    @extend %no-select;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--button-bg-color);
-    border-style: solid;
-    border-color: var(--button-border-color);
-    padding: 8px 12px;
-    color: var(--button-text-color);
-    margin: 5px;
-    cursor: pointer;
-    text-align: center;
-
-    @if $css-variable-enabled {
-      border-radius: var(--button-corner-radius);
-      border-width: var(--button-border-width);
-      font-size: var(--medium-text);
-      transition: var(--primary-transition);
-    } @else {
-      border-radius: $button-corner-radius;
-      border-width: $button-border-width;
-      font-size: $medium-text;
-      transition: $primary-transition;
-    }
-
-    &:hover, &.zust-hovered {
-      border-color: var(--button-hover-border-color);
-    }
-
-    &:focus, &.zust-focused {
-      border-color: var(--button-focus-border-color);
-      @if $css-variable-enabled {
-        box-shadow: 0 0 0 var(--button-border-spread) var(--button-focus-border-color);
-      } @else {
-        box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
-      }
-    }
-  }
-
-  &.zust-left .zust-btn {
-    float: left;
-  }
-
-  &.zust-right .zust-btn {
-    float: right;
-  }
-
-  &.zust-btns-xlarge > .zust-btn:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge) {
-    font-size: $xlarge-text;
-    padding: 18px 27px;
-  }
-
-  &.zust-btns-large > .zust-btn:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge)  {
-    font-size: $large-text;
-    padding: 14px 21px;
-  }
-
-  &.zust-btns-small > .zust-btn:not(.zust-default):not(.zust-small):not(.zust-large):not(.zust-xlarge) {
-    font-size: $small-text;
-    padding: 4px 12px;
-  }
-
-  &.zust-btns-fullwidth .zust-btn, &.zust-btns-full-width .zust-btn {
-    @extend %full-width;
   }
 }
