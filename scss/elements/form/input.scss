@@ -243,20 +243,12 @@
     }
   }
 
-  // Disabled
-  &.zust-disabled, &[disabled] {
-    background-color: var(--input-disabled-bg-color);
-    color: var(--input-disabled-text-color);
-
-    &::placeholder {
-      color: var(--input-disabled-text-color);
-    }
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.4;
 
     ~ .zust-icon {
-
-      svg, i {
-        color: var(--input-disabled-text-color);
-      }
+      opacity: 0.4;
     }
   }
 
