@@ -9,6 +9,10 @@ assignees: ''
 
 <!-- Just Answer Them, No Need To Delete Anything -->
 
+<!-- Change [ ] to [x] to if you've done the task -->
+- [ ] I've already searched in issues and I'm not able to find this kind of issue.
+- [ ] I'm Using the Latest Version of Zusty CSS Framework.
+
 **General Info**
 <!-- Which Version Are You Using -->
 Version: 
