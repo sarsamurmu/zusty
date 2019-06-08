@@ -15,7 +15,7 @@ text, p {
   color: var(--text-color-secondary);
 }
 
-a {
+a:not(.zust-btn) {
   color: hsl(210, 100%, 50%);
   text-decoration: none;
   word-break: break-word;
