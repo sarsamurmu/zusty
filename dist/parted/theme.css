@@ -1,18 +1,18 @@
 :root, [zust-theme="light"] {
   --primary-color: #ff9900;
-  --primary-hovered-color: #ffa724;
+  --primary-hovered-color: #f09000;
   --primary-color-light: rgba(255, 167, 36, 0.3);
   --success-color: #8bc34b;
-  --success-hovered-color: #9ccc66;
+  --success-hovered-color: #7eb83d;
   --success-color-light: rgba(139, 195, 75, 0.3);
   --warning-color: #ffc105;
-  --warning-hovered-color: #ffc929;
+  --warning-hovered-color: #f5b800;
   --warning-color-light: rgba(255, 193, 5, 0.3);
   --error-color: #f44034;
-  --error-hovered-color: #ef5552;
+  --error-hovered-color: #eb302d;
   --error-color-light: rgba(244, 64, 52, 0.3);
   --link-color: #0080ff;
-  --link-hovered-color: #3399ff;
+  --link-hovered-color: #0078f0;
   --link-color-light: rgba(0, 128, 255, 0.3);
   --body-color-primary: white;
   --text-color-primary: #404040;
@@ -25,13 +25,11 @@
   --button-hover-border-color: #d6d6d6;
   --button-text-color: #666666;
   --button-focus-border-color: rgba(155, 39, 176, 0.14);
-  --button-disabled-bg-color: #fafafa;
-  --button-disabled-text-color: #dbdbdb;
   --bottom-nav-bg-color: #e6e6e6;
   --card-bg-color: white;
   --card-border-color: #e0e0e0;
   --chip-bg-color: #f7f7f7;
-  --dialog-bg-color: white;
+  --modal-bg-color: white;
   --dropdown-bg-color: white;
   --dropdown-border-color: #e0e0e0;
   --dropdown-text-color: #424242;
@@ -43,14 +41,15 @@
   --input-text-color: #595959;
   --input-border-color: #66edff;
   --input-placeholder-text-color: #757575;
-  --input-disabled-bg-color: #fafafa;
-  --input-disabled-text-color: #dbdbdb;
-  --slider-bg-color: #ededed;
+  --item-disabled-bg-color: #fafafa;
+  --item-disabled-fg-color: #dbdbdb;
+  --range-bg-color: #ededed;
   --switch-bg-color: #bfbfbf;
-  --switch-active-bg-color: #999999;
-  --switch-fg-color: #d9d9d9;
+  --switch-active-bg-color: #ffc266;
+  --switch-fg-color: #e6e6e6;
   --switch-active-fg-color: #ff9900;
-  --switch-disabled-bg-color: #e6e6e6;
+  --switch-disabled-bg-color: #d9d9d9;
+  --switch-disabled-fg-color: #e6e6e6;
   --progress-back-bg-color: #ededed;
   --progress-back-text-color: #595959;
   --progress-bar-bg-color: #ff9900;
@@ -67,19 +66,19 @@
 
 [zust-theme="dark"] {
   --primary-color: #ff9900;
-  --primary-hovered-color: #ffa724;
+  --primary-hovered-color: #f09000;
   --primary-color-light: rgba(255, 167, 36, 0.3);
   --success-color: #8bc34b;
-  --success-hovered-color: #9ccc66;
+  --success-hovered-color: #7eb83d;
   --success-color-light: rgba(139, 195, 75, 0.3);
   --warning-color: #ffc105;
-  --warning-hovered-color: #ffc929;
+  --warning-hovered-color: #f5b800;
   --warning-color-light: rgba(255, 193, 5, 0.3);
   --error-color: #f44034;
-  --error-hovered-color: #ef5552;
+  --error-hovered-color: #eb302d;
   --error-color-light: rgba(244, 64, 52, 0.3);
   --link-color: #0080ff;
-  --link-hovered-color: #3399ff;
+  --link-hovered-color: #0078f0;
   --link-color-light: rgba(0, 128, 255, 0.3);
   --body-color-primary: #212121;
   --text-color-primary: white;
@@ -92,13 +91,11 @@
   --button-hover-border-color: #595959;
   --button-text-color: #d9d9d9;
   --button-focus-border-color: rgba(171, 71, 189, 0.45);
-  --button-disabled-bg-color: #292929;
-  --button-disabled-text-color: #4d4d4d;
   --bottom-nav-bg-color: #404040;
   --card-bg-color: #2b2b2b;
   --card-border-color: #6b6b6b;
   --chip-bg-color: #2b2b2b;
-  --dialog-bg-color: #424242;
+  --modal-bg-color: #424242;
   --dropdown-bg-color: #2b2b2b;
   --dropdown-border-color: #6b6b6b;
   --dropdown-text-color: #e0e0e0;
@@ -110,14 +107,15 @@
   --input-text-color: #d9d9d9;
   --input-border-color: #00bdd6;
   --input-placeholder-text-color: #757575;
-  --input-disabled-bg-color: #292929;
-  --input-disabled-text-color: #4d4d4d;
-  --slider-bg-color: #2e2e2e;
-  --switch-bg-color: #b3b3b3;
-  --switch-active-bg-color: #e6e6e6;
-  --switch-fg-color: gray;
+  --item-disabled-bg-color: #292929;
+  --item-disabled-fg-color: #4d4d4d;
+  --range-bg-color: #2e2e2e;
+  --switch-bg-color: #4d4d4d;
+  --switch-active-bg-color: #ffb84d;
+  --switch-fg-color: #b3b3b3;
   --switch-active-fg-color: #ff9900;
   --switch-disabled-bg-color: #333333;
+  --switch-disabled-fg-color: #333333;
   --progress-back-bg-color: #2e2e2e;
   --progress-back-text-color: #d9d9d9;
   --progress-bar-bg-color: #ff9900;
@@ -131,5 +129,3 @@
   --text-color-inverted: #484848;
   --bg-color-inverted: whitesmoke;
 }
-
-/*# sourceMappingURL=theme.css.map */

@@ -5,8 +5,10 @@
   --small-text: 0.8rem;
   --bottom-nav-z-index: 6;
   --dropdown-z-index: 5;
-  --dialog-z-index: 20;
+  --modal-z-index: 20;
   --tooltip-z-index: 9999;
+  --primary-transition: 0.2s;
+  --secondary-transition: 0.5s;
   --badge-corner-radius: 6px;
   --badge-only-part-color: var(--primary-color);
   --badge-only-part-text-color: white;
@@ -14,7 +16,6 @@
   --badge-first-part-text-color: var(--badge-text-color);
   --badge-last-part-color: var(--primary-color);
   --badge-last-part-text-color: #FFFFFF;
-  --badge-text-size: 0.8rem;
   --button-corner-radius: 6px;
   --button-border-width: 2px;
   --button-border-spread: 4px;
@@ -25,6 +26,13 @@
   --dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04);
   --dropdown-border-radius: 12px;
   --dropdown-item-border-radius: 10px;
+  --card-border-radius: 10px;
+  --input-border-radius: 8px;
+  --input-border-spread: 2px;
+  --textarea-border-radius: 8px;
+  --progress-bar-corner-radius: 6px;
+  --icon-size-small: 0.8rem;
+  --icon-size-default: 1.2rem;
+  --icon-size-large: 1.6rem;
+  --icon-size-xlarge: 2rem;
 }
-
-/*# sourceMappingURL=variables.css.map */
