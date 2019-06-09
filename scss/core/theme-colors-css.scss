@@ -61,6 +61,9 @@
   --input-text-color: #{$input-text-color};
   --input-border-color: #{$input-border-color};
   --input-placeholder-text-color: #{$input-placeholder-text-color};
+  // Input Append
+  --input-append-bg-color: #{$input-append-bg-color};
+  --input-append-fg-color: #{$input-append-fg-color};
 
   // Item Disabled
   --item-disabled-bg-color: #{$item-disabled-bg-color};
@@ -162,6 +165,9 @@
   --input-text-color: #{$input-text-color-dark};
   --input-border-color: #{$input-border-color-dark};
   --input-placeholder-text-color: #{$input-placeholder-text-color-dark};
+  // Input Append
+  --input-append-bg-color: #{$input-append-bg-color-dark};
+  --input-append-fg-color: #{$input-append-fg-color-dark};
 
   // Item Disabled
   --item-disabled-bg-color: #{$item-disabled-bg-color-dark};
