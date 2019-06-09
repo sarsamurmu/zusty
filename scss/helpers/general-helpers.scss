@@ -1,4 +1,8 @@
 // Show/Hide
+.zust-invisible {
+  visibility: hidden !important;
+}
+
 .zust-show, .zust-visible {
   display: block !important;
   visibility: visible !important;
@@ -10,6 +14,29 @@
 }
 
 // Based on Size
+.zust-invisible {
+  &-on-mobile {
+    @include mobile {
+      visibility: hidden !important;
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      visibility: hidden !important;
+    }
+  }
+  &-on-touch {
+    @include touch {
+      visibility: hidden !important;
+    }
+  }
+  &-on-desktop {
+    @include desktop {
+      visibility: hidden !important;
+    }
+  }
+}
+
 .zust-show, .zust-visible {
   &-on-mobile {
     @include mobile {
@@ -74,6 +101,10 @@
 
   .zust-hide-on-dark, .zust-hidden-on-dark {
     display: none !important;
+  }
+
+  .zust-invisible-on-dark {
+    visibility: hidden !important;
   }
 }
 
@@ -273,9 +304,15 @@
   border-radius: 0 !important;
 }
 
+// No Pointer Event
+.zust-static, .zust-unresponsive {
+  pointer-events: none;
+}
+
 // Grouping
 .zust-el-group {
   display: inline-flex;
+  margin: 4px;
 
   > * {
     margin: 0 !important;
