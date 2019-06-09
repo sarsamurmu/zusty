@@ -22,7 +22,7 @@ span.zust-badge {
     transition: $secondary-transition;
   }
 
-  &.zust-outlined, .zust-outlined & {
+  &.zust-outlined, .zust-badges-outlined & {
     background-color: $transparent;
     border-style: solid;
     border-width: 2px;
@@ -30,7 +30,7 @@ span.zust-badge {
     color: var(--text-color-secondary);
   }
 
-  .zust-rounded & {
+  .zust-badges-rounded & {
     border-radius: 100000px;
   }
 }
@@ -106,7 +106,7 @@ div.zust-badge {
     }
   }
 
-  &.zust-rounded, .zust-rounded & {
+  &.zust-rounded, .zust-badges-rounded & {
     overflow: hidden;
     border-radius: 100000px;
   }
