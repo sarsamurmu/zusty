@@ -24,41 +24,44 @@
     font-size: $medium-text;
   }
 
+  // Reuse Vars
+  --in-pad: 35px;
+
   ~ .zust-icon {
     --icon-size: 18px;
+    --ic-margin: 10px;
+    position: absolute !important;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: {
+      top: 0 !important;
+      bottom: 0 !important;
+    }
 
     &.zust-left {
-      position: absolute;
-      top: 0;
       left: 0;
-      margin-right: 0;
-      margin-top: 14px;
-      margin-left: 14px;
+      margin-right: 0 !important;
+      margin-left: var(--ic-margin);
     }
 
     &.zust-right {
-      position: absolute;
-      top: 0;
       right: 0;
-      margin-left: 0;
-      margin-top: 14px;
-      margin-right: 14px;
+      margin-left: 0 !important;
+      margin-right: var(--ic-margin);
     }
   }
 
-  $expadding: 35px;
-
   &.zust-with-icon-left {
-    padding-left: $expadding;
+    padding-left: var(--in-pad) !important;
   }
 
   &.zust-with-icon-right {
-    padding-right: $expadding;
+    padding-right: var(--in-pad) !important;
   }
 
   &.zust-with-icon-both {
-    padding-right: $expadding;
-    padding-left: $expadding;
+    padding-right: var(--in-pad) !important;
+    padding-left: var(--in-pad) !important;
   }
 
   &.zust-small {
@@ -74,41 +77,11 @@
     padding-left: $padding2;
     padding-right: $padding2;
 
+    --in-pad: 25px;
+
     ~ .zust-icon {
       --icon-size: 12px;
-
-      &.zust-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-right: 0;
-        margin-top: 12px;
-        margin-left: 12px;
-      }
-
-      &.zust-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-left: 0;
-        margin-top: 12px;
-        margin-right: 12px;
-      }
-    }
-
-    $expadding: 25px;
-
-    &.zust-with-icon-left {
-      padding-left: $expadding;
-    }
-
-    &.zust-with-icon-right {
-      padding-right: $expadding;
-    }
-
-    &.zust-with-icon-both {
-      padding-right: $expadding;
-      padding-left: $expadding;
+      --ic-margin: 8px;
     }
   }
 
@@ -125,41 +98,11 @@
     padding-left: $padding2;
     padding-right: $padding2;
 
+    --in-pad: 45px;
+
     ~ .zust-icon {
       --icon-size: 24px;
-
-      &.zust-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-right: 0;
-        margin-top: 22px;
-        margin-left: 18px;
-      }
-
-      &.zust-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-left: 0;
-        margin-top: 22px;
-        margin-right: 18px;
-      }
-    }
-
-    $expadding: 45px;
-
-    &.zust-with-icon-left {
-      padding-left: $expadding;
-    }
-
-    &.zust-with-icon-right {
-      padding-right: $expadding;
-    }
-
-    &.zust-with-icon-both {
-      padding-right: $expadding;
-      padding-left: $expadding;
+      --ic-margin: 14px;
     }
   }
 
@@ -176,41 +119,11 @@
     padding-left: $padding2;
     padding-right: $padding2;
 
+    --in-pad: 55px;
+
     ~ .zust-icon {
       --icon-size: 36px;
-
-      &.zust-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-right: 0;
-        margin-top: 25px;
-        margin-left: 17px;
-      }
-
-      &.zust-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-left: 0;
-        margin-top: 25px;
-        margin-right: 17px;
-      }
-    }
-
-    $expadding: 55px;
-
-    &.zust-with-icon-left {
-      padding-left: $expadding;
-    }
-
-    &.zust-with-icon-right {
-      padding-right: $expadding;
-    }
-
-    &.zust-with-icon-both {
-      padding-right: $expadding;
-      padding-left: $expadding;
+      --ic-margin: 13px;
     }
   }
 
@@ -289,6 +202,10 @@
     }
   }
 
+  .zust-el-group &, .zust-el-group > .zust-input-container & {
+    margin: 0 !important;
+  }
+
   // Colors
   @each $name, $color, $skip, $hovered-color in $item-colors {
     &.zust-#{$name} {
@@ -313,9 +230,54 @@
   }
 }
 
+.zust-input-append, .zust-input-prepend {
+  display: inline-flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--input-append-bg-color);
+  color: var(--input-append-fg-color);
+  pointer-events: none;
+  user-select: none;
+
+  @if $css-variable-enabled {
+
+  } @else {
+    border-radius: $input-border-radius;
+    transition: $primary-transition;
+  }
+}
+
 // In Container
 .zust-input-container {
   margin: 0;
   display: inline-flex;
   position: relative;
+  //overflow: hidden;
+  margin: 4px;
+
+  .zust-input {
+    margin: 0;
+  }
+
+  .zust-el-group > & > .zust-input {
+    border-radius: 0;
+  }
+
+  .zust-el-group &:first-child .zust-input {
+    @if $css-variable-enabled {
+      border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+    } @else {
+      border-radius: $input-border-radius 0 0 $input-border-radius;
+    }
+  }
+
+  .zust-el-group &:last-child .zust-input {
+    @if $css-variable-enabled {
+      border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
+    } @else {
+      border-radius: 0 $input-border-radius $input-border-radius 0;
+    }
+  }
 }
