@@ -11,6 +11,7 @@
   margin: 5px;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
 
   @if $css-variable-enabled {
     border-radius: var(--button-corner-radius);
