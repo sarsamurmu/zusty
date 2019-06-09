@@ -329,7 +329,7 @@
   }
 
   // Gradients
-  .zust#{$prefix}bg-blue-gadient, .zust#{$prefix}bg-link-gadient {
+  .zust#{$prefix}bg-blue-gradient, .zust#{$prefix}bg-link-gradient {
     background: linear-gradient(135deg, $blue 0%, #00cfe9 100%) !important;
     color: $white;
 
@@ -338,7 +338,7 @@
     }
   }
 
-  .zust#{$prefix}bg-red-gadient, .zust#{$prefix}bg-error-gadient {
+  .zust#{$prefix}bg-red-gradient, .zust#{$prefix}bg-error-gradient {
     background: linear-gradient(135deg, $red 0%, $pink 100%) !important;
     color: $white;
 
@@ -347,7 +347,7 @@
     }
   }
 
-  .zust#{$prefix}bg-green-gadient, .zust#{$prefix}bg-success-gadient {
+  .zust#{$prefix}bg-green-gradient, .zust#{$prefix}bg-success-gradient {
     background: linear-gradient(135deg, $light-green 0%, $light-blue 100%) !important;
     color: $white;
 
@@ -356,7 +356,7 @@
     }
   }
 
-  .zust#{$prefix}bg-amber-gadient, .zust#{$prefix}bg-warning-gadient {
+  .zust#{$prefix}bg-amber-gradient, .zust#{$prefix}bg-warning-gradient {
     background: linear-gradient(135deg, $amber 0%, #ff8330 100%) !important;
     color: $white;
 
@@ -660,25 +660,25 @@
   }
 
   // Gradients
-  .zust#{$prefix}blue-gadient, .zust#{$prefix}link-gadient {
+  .zust#{$prefix}blue-gradient, .zust#{$prefix}link-gradient {
     background: linear-gradient(135deg, $blue 0%, #00cfe9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .zust#{$prefix}red-gadient, .zust#{$prefix}error-gadient {
+  .zust#{$prefix}red-gradient, .zust#{$prefix}error-gradient {
     background: linear-gradient(135deg, $red 0%, $pink 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .zust#{$prefix}green-gadient, .zust#{$prefix}success-gadient {
+  .zust#{$prefix}green-gradient, .zust#{$prefix}success-gradient {
     background: linear-gradient(135deg, $light-green 0%, $light-blue 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .zust#{$prefix}amber-gadient, .zust#{$prefix}warning-gadient {
+  .zust#{$prefix}amber-gradient, .zust#{$prefix}warning-gradient {
     background: linear-gradient(135deg, $amber 0%, #ff8330 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
