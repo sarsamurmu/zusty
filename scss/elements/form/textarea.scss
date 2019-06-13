@@ -57,6 +57,19 @@ textarea.zust-textarea {
     }
   }
 
+  // Readonly
+  &.zust-readonly, &[readonly] {
+
+    &:hover, &.zust-hovered {
+      background-color: var(--input-bg-color);
+    }
+
+    &:focus, &.zust-focused {
+      background-color: var(--input-bg-color);
+      box-shadow: 0 0 0 1px var(--input-border-color);
+    }
+  }
+
   @each $name, $color, $skip, $hovered-color in $item-colors {
     &.zust-#{$name} {
       border-color: $color;
@@ -68,6 +81,12 @@ textarea.zust-textarea {
           box-shadow: 0 0 0 var(--input-border-spread) $hovered-color;
         } @else {
           box-shadow: 0 0 0 $input-border-spread $hovered-color;
+        }
+      }
+
+      &.zust-readonly, &[readonly] {
+        &:focus, &.zust-focused {
+          box-shadow: 0 0 0 1px $hovered-color;
         }
       }
     }
