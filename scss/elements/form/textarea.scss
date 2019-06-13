@@ -9,11 +9,11 @@ textarea.zust-textarea {
   transition-property: background-color, box-shadow, border-color;
 
   @if $css-variable-enabled {
-    transition: var(--primary-transition);
+    transition: all var(--primary-transition), width 0s, height 0s;
     border-radius: var(--textarea-border-radius);
     font-size: var(--medium-text);
   } @else {
-    transition: $primary-transition;
+    transition: all $primary-transition, width 0s, height 0s;
     border-radius: $textarea-border-radius;
     font-size: $medium-text;
   }
