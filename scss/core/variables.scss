@@ -83,12 +83,13 @@ $status-colors: (
   (link, var(--link-color), $white, var(--link-hovered-color), var(--link-color-light))
 );
 
-// Custom Color's List
+// Custom Color's List. User will made it by themself.
 $custom-colors: () !default;
 
-// The List we will Use
+// The Color List we will Use
 $item-colors: join($status-colors, $custom-colors);
 
+// This is Just  For Making CSS Variables
 $variables: (
   // Text Sizes
   --xlarge-text: $xlarge-text,
