@@ -39,5 +39,12 @@
     "url": "https://github.com/sarsamurmu/zusty/issues",
     "email": "sarsamurmu05@gmail.com"
   },
-  "homepage": "https://github.com/sarsamurmu/zusty#readme"
+  "homepage": "https://github.com/sarsamurmu/zusty#readme",
+  "files": [
+    "dist",
+    "scss",
+    "zusty.scss",
+    "LICENSE.md",
+    "README.md"
+  ]
 }
