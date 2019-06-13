@@ -24,7 +24,7 @@
     "start": "npm run build-css -- --watch",
     "test": "npm run build-css"
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^9.5.1",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^4.12.0",
