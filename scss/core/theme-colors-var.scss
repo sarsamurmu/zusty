@@ -89,6 +89,14 @@ $dropdown-text-color-dark: hsl(0, 0%, 88%) !default;
 $dropdown-option-hovered-color: hsl(0, 0%, 93%) !default;
 $dropdown-option-hovered-color-dark: hsl(0, 0%, 28%) !default;
 
+// Table
+$table-border-color: hsl(0, 0%, 90%) !default;
+$table-border-color-dark: hsl(0, 0%, 30%) !default;
+$table-bg-color: hsl(0, 0%, 95%) !default;
+$table-bg-color-dark: hsl(0, 0%, 20%) !default;
+$table-bg-color-hovered: $table-border-color !default;
+$table-bg-color-hovered-dark: $table-border-color-dark !default;
+
 // Input
 $input-bg-color: hsl(0, 0%, 97%) !default;
 $input-bg-color-dark: hsl(0, 0%, 10%) !default;

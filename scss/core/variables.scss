@@ -47,6 +47,9 @@ $dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04) !default;
 $dropdown-border-radius: 12px !default;
 $dropdown-item-border-radius: 10px !default;
 
+// Table
+$table-border-width: 2px !default;
+
 // Cards
 $card-border-radius: 10px !default;
 
@@ -125,6 +128,9 @@ $variables: (
   --dropdown-shadow: $dropdown-shadow,
   --dropdown-border-radius: $dropdown-border-radius,
   --dropdown-item-border-radius: $dropdown-item-border-radius,
+
+  // Table
+  --table-border-width: $table-border-width,
 
   // Card
   --card-border-radius: $card-border-radius,

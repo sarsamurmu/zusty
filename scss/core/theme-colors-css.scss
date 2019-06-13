@@ -53,6 +53,11 @@
   --dropdown-text-color: #{$dropdown-text-color};
   --dropdown-option-hovered-color: #{$dropdown-option-hovered-color};
 
+  // Table
+  --table-border-color: #{$table-border-color};
+  --table-bg-color: #{$table-bg-color};
+  --table-bg-color-hovered: #{$table-bg-color-hovered};
+
   // Input
   --input-bg-color: #{$input-bg-color};
   --input-stransparent-bg-color: #{$input-stransparent-bg-color};
@@ -156,6 +161,11 @@
   --dropdown-border-color: #{$dropdown-border-color-dark};
   --dropdown-text-color: #{$dropdown-text-color-dark};
   --dropdown-option-hovered-color: #{$dropdown-option-hovered-color-dark};
+
+  // Table
+  --table-border-color: #{$table-border-color-dark};
+  --table-bg-color: #{$table-bg-color-dark};
+  --table-bg-color-hovered: #{$table-bg-color-hovered-dark};
 
   // Input
   --input-bg-color: #{$input-bg-color-dark};
