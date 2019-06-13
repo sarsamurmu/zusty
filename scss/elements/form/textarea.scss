@@ -35,9 +35,10 @@ textarea.zust-textarea {
     color: var(--input-placeholder-text-color);
   }
 
-  &.zust-disabled, &[disabled] {
+  &[disabled] {
     background-color: var(--item-disabled-bg-color);
     color: var(--item-disabled-fg-color);
+    pointer-events: none;
 
     &::placeholder {
       color: var(--item-disabled-fg-color);
