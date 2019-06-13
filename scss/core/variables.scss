@@ -2,8 +2,8 @@
 $css-variable-enabled: false !default;
 
 // Screen Sizes as of Chrome Dev Tools
-$tablet: 768px;
-$desktop: 1024px;
+$tablet: 768px !default;
+$desktop: 1024px !default;
 
 // Text Sizes
 $xlarge-text: 2.2rem !default;
@@ -64,10 +64,10 @@ $textarea-border-radius: 8px !default;
 $progress-bar-corner-radius: 6px !default;
 
 // Icon
-$icon-size-small: 0.8rem;
-$icon-size-default: 1.2rem;
-$icon-size-large: 1.6rem;
-$icon-size-xlarge: 2rem;
+$icon-size-small: 0.8rem !default;
+$icon-size-default: 1.2rem !default;
+$icon-size-large: 1.6rem !default;
+$icon-size-xlarge: 2rem !default;
 
 // Tooltip
 $tooltip-margin: 10px;
