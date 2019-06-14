@@ -183,56 +183,56 @@
   }
 }
 
-@for $value from 1 through 10 {
+@for $value from 0 through 10 {
 
   // Margin
   .zust-m-#{$value} {
-    margin: $value * 1rem;
+    margin: $value * 1rem !important;
   }
   .zust-m-t-#{$value} {
-    margin-top: $value * 1rem;
+    margin-top: $value * 1rem !important;
   }
   .zust-m-b-#{$value} {
-    margin-bottom: $value * 1rem;
+    margin-bottom: $value * 1rem !important;
   }
   .zust-m-l-#{$value} {
-    margin-left: $value * 1rem;
+    margin-left: $value * 1rem !important;
   }
   .zust-m-r-#{$value} {
-    margin-right: $value * 1rem;
+    margin-right: $value * 1rem !important;
   }
   .zust-m-x-#{$value} {
-    margin-left: $value * 1rem;
-    margin-right: $value * 1rem;
+    margin-left: $value * 1rem !important;
+    margin-right: $value * 1rem !important;
   }
   .zust-m-y-#{$value} {
-    margin-top: $value * 1rem;
-    margin-bottom: $value * 1rem;
+    margin-top: $value * 1rem !important;
+    margin-bottom: $value * 1rem !important;
   }
 
   // Padding
   .zust-p-#{$value} {
-    padding: $value * 1rem;
+    padding: $value * 1rem !important;
   }
   .zust-p-t-#{$value} {
-    padding-top: $value * 1rem;
+    padding-top: $value * 1rem !important;
   }
   .zust-p-b-#{$value} {
-    padding-bottom: $value * 1rem;
+    padding-bottom: $value * 1rem !important;
   }
   .zust-p-l-#{$value} {
-    padding-left: $value * 1rem;
+    padding-left: $value * 1rem !important;
   }
   .zust-p-r-#{$value} {
-    padding-right: $value * 1rem;
+    padding-right: $value * 1rem !important;
   }
   .zust-p-x-#{$value} {
-    padding-left: $value * 1rem;
-    padding-right: $value * 1rem;
+    padding-left: $value * 1rem !important;
+    padding-right: $value * 1rem !important;
   }
   .zust-p-y-#{$value} {
-    padding-top: $value * 1rem;
-    padding-bottom: $value * 1rem;
+    padding-top: $value * 1rem !important;
+    padding-bottom: $value * 1rem !important;
   }
 }
 
