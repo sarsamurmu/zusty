@@ -108,81 +108,33 @@
   }
 }
 
+@mixin display-types($value) {
+  @each $name in (inline, block, flex, inline-block, inline-flex, list-item) {
+    .zust-#{$name}#{$value} {
+      display: #{$name} !important;
+    }
+  }
+}
+
+@include display-types('');
+
+@include mobile {
+  @include display-types('-on-mobile');
+}
+
+@include zust-tablet {
+  @include display-types('-on-tablet');
+}
+
+@include touch {
+  @include display-types('-on-touch');
+}
+
+@include desktop {
+  @include display-types('-on-desktop');
+}
+
 // Margin and Padding
-@mixin marginless {
-  margin: 0 !important;
-  margin: {
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-  }
-}
-
-@mixin paddingless {
-  padding: 0 !important;
-  padding: {
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-  }
-}
-
-.zust-marginless {
-  @include marginless
-}
-
-.zust-paddingless {
-  @include paddingless
-}
-
-.zust-marginless {
-  &-on-mobile {
-    @include mobile {
-      @include marginless
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      @include marginless
-    }
-  }
-  &-on-touch {
-    @include zust-tablet {
-      @include marginless
-    }
-  }
-  &-on-desktop {
-    @include zust-tablet {
-      @include marginless
-    }
-  }
-}
-
-.zust-paddingless {
-  &-on-mobile {
-    @include mobile {
-      @include paddingless
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      @include paddingless
-    }
-  }
-  &-on-touch {
-    @include zust-tablet {
-      @include paddingless
-    }
-  }
-  &-on-desktop {
-    @include zust-tablet {
-      @include paddingless
-    }
-  }
-}
-
 @for $value from 0 through 10 {
 
   // Margin
@@ -233,6 +185,80 @@
   .zust-p-y-#{$value} {
     padding-top: $value * 1rem !important;
     padding-bottom: $value * 1rem !important;
+  }
+}
+
+@mixin marginless {
+  margin: 0 !important;
+  margin: {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+@mixin paddingless {
+  padding: 0 !important;
+  padding: {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+.zust-marginless {
+  @include marginless
+}
+
+.zust-paddingless {
+  @include paddingless
+}
+
+.zust-marginless {
+  &-on-mobile {
+    @include mobile {
+      @include marginless
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      @include marginless
+    }
+  }
+  &-on-touch {
+    @include touch {
+      @include marginless
+    }
+  }
+  &-on-desktop {
+    @include desktop {
+      @include marginless
+    }
+  }
+}
+
+.zust-paddingless {
+  &-on-mobile {
+    @include mobile {
+      @include paddingless
+    }
+  }
+  &-on-tablet {
+    @include zust-tablet {
+      @include paddingless
+    }
+  }
+  &-on-touch {
+    @include touch {
+      @include paddingless
+    }
+  }
+  &-on-desktop {
+    @include desktop {
+      @include paddingless
+    }
   }
 }
 
