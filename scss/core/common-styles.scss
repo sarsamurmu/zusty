@@ -1,0 +1,16 @@
+// Resetting Outline
+*, *:focus, *:hover, *:active, *:focus-within {
+  outline: none !important;
+  outline-width: 0 !important;
+  outline-color: $transparent !important;
+}
+
+.zust-btn, label {
+  @include desktop {
+    cursor: pointer;
+  }
+
+  @include touch {
+    cursor: default;
+  }
+}
