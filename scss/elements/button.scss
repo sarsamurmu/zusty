@@ -49,9 +49,9 @@
     }
   }
 
-  &:hover, &.zust-hovered {
+  &:hover, &.zust-hovered, input:checked + & {
     border-color: var(--button-hover-border-color);
-    color: var(--button-text-color);
+    //color: var(--button-text-color);
   }
 
   &:focus, &.zust-focused {
@@ -73,7 +73,7 @@
     background-color: $transparent !important;
     border-width: 0 !important;
 
-    &:hover, &.zust-hovered {
+    &:hover, &.zust-hovered, input:checked + & {
       background-color: rgba(144, 144, 144, 0.1) !important;
       box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1) !important;
     }
@@ -104,7 +104,7 @@
       background-color: $color !important;
       color: $txt-color;
 
-      &:hover, &.zust-hovered {
+      &:hover, &.zust-hovered, input:checked + & {
         background-color: $hovered-color !important;
       }
 
@@ -205,6 +205,21 @@
       border-radius: calc(var(--spinner-height) / 3);
       background-color: currentColor;
       animation: zust-spinner 1s infinite;
+    }
+  }
+}
+
+.zust-toggle-btn {
+  input[type="checkbox"], input[type="radio"] {
+    display: none;
+  }
+
+  input:checked + .zust-btn {
+    filter: brightness(0.9);
+  }
+  .zust-el-group > & {
+    > .zust-btn {
+      margin: 0 !important;
     }
   }
 }
