@@ -11,6 +11,8 @@
     transition: $primary-transition;
   }
 
+  @extend %no-select;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
