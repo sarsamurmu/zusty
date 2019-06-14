@@ -13,6 +13,7 @@
   padding-left: $padding2;
   padding-right: $padding2;
   background-color: var(--input-bg-color);
+  width: 100%;
 
   @if $css-variable-enabled {
     transition: var(--primary-transition);
@@ -254,8 +255,11 @@
   margin: 0;
   display: inline-flex;
   position: relative;
-  //overflow: hidden;
-  margin: 4px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    margin-right: 8px;
+  }
 
   .zust-input {
     margin: 0;
