@@ -338,31 +338,82 @@
 // Grouping
 .zust-el-group {
   display: inline-flex;
-  margin: 4px;
+  justify-content: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 
   > * {
     margin: 0 !important;
   }
-  > :first-child {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-  }
 
-  > *:not(:first-child):not(:last-child) {
-    border-radius: 0 0 0 0 !important;
+  &:not(.zust-vertical) {
+    > :first-child, > label:first-child > .zust-btn {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
 
-    &.zust-btn {
+    > *:not(:first-child):not(:last-child), label:not(:first-child):not(:last-child) > .zust-btn {
+      border-radius: 0 0 0 0 !important;
+    }
+
+    > *:not(:first-child):not(:last-child).zust-btn {
       border-left-width: 0 !important;
       border-right-width: 0 !important;
     }
+
+    > :last-child, > label:last-child > .zust-btn {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+
+    > :last-child.zust-btn {
+      border-left-width: 0 !important;
+    }
   }
 
-  > :last-child {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+  &.zust-vertical {
+    display: inline-flex;
+    flex-direction: column;
 
-    &.zust-btn {
-      border-left-width: 0 !important;
+    > :first-child, > label:first-child > .zust-btn {
+      border-bottom-right-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+
+    > :first-child.zust-button {
+      border-bottom-width: 0 !important;
+    }
+
+    > *:not(:first-child):not(:last-child), label:not(:first-child):not(:last-child) > .zust-btn {
+      border-radius: 0 0 0 0 !important;
+    }
+
+    > *:not(:first-child):not(:last-child).zust-btn {
+      border-bottom-width: 0 !important;
+    }
+
+    > :last-child, > label:last-child > .zust-btn {
+      border-top-right-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+    }
+
+    > label {
+      width: 100%;
+      display: flex;
+
+      > .zust-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &.zust-fullwidth, &.zust-full-width {
+    display: flex;
+
+    > .zust-input-container {
+      width: 100%;
     }
   }
 }
