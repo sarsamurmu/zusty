@@ -22,7 +22,7 @@
     "minify-css": "cleancss -o dist/zusty.min.css dist/zusty.css",
     "minify-css-p": "cleancss -o dist/parted/zusty.min.css dist/parted/zusty.css",
     "start": "npm run build-css -- --watch",
-    "test": "npm run build-css"
+    "test": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
