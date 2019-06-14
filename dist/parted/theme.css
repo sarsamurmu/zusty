@@ -34,6 +34,9 @@
   --dropdown-border-color: #e0e0e0;
   --dropdown-text-color: #424242;
   --dropdown-option-hovered-color: #ededed;
+  --table-border-color: #e6e6e6;
+  --table-bg-color: #f2f2f2;
+  --table-bg-color-hovered: #e6e6e6;
   --input-bg-color: #f7f7f7;
   --input-stransparent-bg-color: rgba(0, 0, 0, 0.04);
   --input-stransparent-hovered-bg-color: rgba(0, 0, 0, 0.1);
@@ -41,6 +44,8 @@
   --input-text-color: #595959;
   --input-border-color: #66edff;
   --input-placeholder-text-color: #757575;
+  --input-append-bg-color: #e0e0e0;
+  --input-append-fg-color: gray;
   --item-disabled-bg-color: #fafafa;
   --item-disabled-fg-color: #dbdbdb;
   --range-bg-color: #ededed;
@@ -100,6 +105,9 @@
   --dropdown-border-color: #6b6b6b;
   --dropdown-text-color: #e0e0e0;
   --dropdown-option-hovered-color: #474747;
+  --table-border-color: #4d4d4d;
+  --table-bg-color: #333333;
+  --table-bg-color-hovered: #4d4d4d;
   --input-bg-color: #1a1a1a;
   --input-stransparent-bg-color: rgba(0, 0, 0, 0.23);
   --input-stransparent-hovered-bg-color: rgba(0, 0, 0, 0.4);
@@ -107,6 +115,8 @@
   --input-text-color: #d9d9d9;
   --input-border-color: #00bdd6;
   --input-placeholder-text-color: #757575;
+  --input-append-bg-color: #404040;
+  --input-append-fg-color: #b3b3b3;
   --item-disabled-bg-color: #292929;
   --item-disabled-fg-color: #4d4d4d;
   --range-bg-color: #2e2e2e;
