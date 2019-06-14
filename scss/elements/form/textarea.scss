@@ -7,6 +7,7 @@ textarea.zust-textarea {
   border-bottom-width: 2px;
   border-color: $transparent;
   transition-property: background-color, box-shadow, border-color;
+  display: block;
 
   @if $css-variable-enabled {
     transition: all var(--primary-transition), width 0s, height 0s;
@@ -39,6 +40,7 @@ textarea.zust-textarea {
     background-color: var(--item-disabled-bg-color);
     color: var(--item-disabled-fg-color);
     pointer-events: none;
+    resize: none;
 
     &::placeholder {
       color: var(--item-disabled-fg-color);
@@ -90,5 +92,25 @@ textarea.zust-textarea {
         }
       }
     }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &.zust-v-resize, &.zust-v-resizable {
+    resize: vertical;
+  }
+
+  &.zust-h-resize, &.zust-h-resizable {
+    resize: horizontal;
+  }
+
+  &.zust-unresizable {
+    resize: none;
+  }
+
+  .zust-input-container & {
+    width: 100%;
   }
 }
