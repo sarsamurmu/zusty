@@ -1,6 +1,94 @@
 @import '../core/colors.scss';
 @import '../core/variables.scss';
 
+// This is Just For Making CSS Variables
+$variables: (
+  // Text Sizes
+  --xlarge-text: $xlarge-text,
+  --large-text: $large-text,
+  --medium-text: $medium-text,
+  --small-text: $small-text,
+
+  // z-indexs
+  --bottom-nav-z-index: $bottom-nav-z-index,
+  --dropdown-z-index: $dropdown-z-index,
+  --modal-z-index: $modal-z-index,
+  --tooltip-z-index: $tooltip-z-index,
+
+  // Transition
+  --primary-transition: $primary-transition,
+  --secondary-transition: $secondary-transition,
+
+
+
+  //==//-----------//==//
+  //==//  Elements //==//
+  //==//-----------//==//
+
+  // Button
+  --button-corner-radius: $button-corner-radius,
+  --button-border-width: $button-border-width,
+  --button-border-spread: $button-border-spread,
+
+  // Icon
+  --icon-size-small: $icon-size-small,
+  --icon-size-default: $icon-size-default,
+  --icon-size-large: $icon-size-large,
+  --icon-size-xlarge: $icon-size-xlarge,
+
+  // Progress Bar
+  --progress-bar-corner-radius: $progress-bar-corner-radius,
+
+  // Table
+  --table-border-width: $table-border-width,
+
+  // Tooltip
+  --tooltip-margin: $tooltip-margin,
+  --tooltip-translate: $tooltip-translate,
+
+
+
+  //==//-----------//==//
+  //==//   Form    //==//
+  //==//-----------//==//
+
+  // Input
+  --input-border-radius: $input-border-radius,
+  --input-border-spread: $input-border-spread,
+
+// Textarea
+  --textarea-border-radius: $textarea-border-radius,
+
+
+
+  //==//------------//==//
+  //==// Components //==//
+  //==//------------//==//
+
+  // Badge
+  --badge-corner-radius: $badge-corner-radius,
+  --padding-first: $padding-first,
+  --padding-second: $padding-second,
+  --badge-only-part-color: $badge-only-part-color,
+  --badge-only-part-text-color: $badge-only-part-text-color,
+  --badge-first-part-color: $badge-first-part-color,
+  --badge-first-part-text-color: $badge-first-part-text-color,
+  --badge-last-part-color: $badge-last-part-color,
+  --badge-last-part-text-color: $badge-last-part-text-color,
+
+  // Cards
+  --card-border-radius: $card-border-radius,
+
+  // Dropdown
+  --dropdown-animation-duration: $dropdown-animation-duration,
+  --dropdown-margin: $dropdown-margin,
+  --dropdown-child-margin: $dropdown-child-margin,
+  --dropdown-translate: $dropdown-translate,
+  --dropdown-shadow: $dropdown-shadow,
+  --dropdown-border-radius: $dropdown-border-radius,
+  --dropdown-item-border-radius: $dropdown-item-border-radius
+);
+
 :root {
   @each $variable, $value in $variables {
     #{$variable}: $value;

@@ -1,6 +1,10 @@
 // Boleans
 $css-variable-enabled: false !default;
 
+//==//-----------//==//
+//==//  General  //==//
+//==//-----------//==//
+
 // Screen Sizes as of Chrome Dev Tools
 $tablet: 768px !default;
 $desktop: 1024px !default;
@@ -21,6 +25,52 @@ $tooltip-z-index: 9999 !default;
 $primary-transition: 0.2s !default;
 $secondary-transition: 0.5s !default;
 
+
+
+//==//-----------//==//
+//==//  Elements //==//
+//==//-----------//==//
+
+// Button
+$button-corner-radius: 6px !default;
+$button-border-width: 2px !default;
+$button-border-spread: 4px !default;
+
+// Icon
+$icon-size-small: 0.8rem !default;
+$icon-size-default: 1.2rem !default;
+$icon-size-large: 1.6rem !default;
+$icon-size-xlarge: 2rem !default;
+
+// Progress Bar
+$progress-bar-corner-radius: 6px !default;
+
+// Table
+$table-border-width: 2px !default;
+
+// Tooltip
+$tooltip-margin: 10px;
+$tooltip-translate: 20px;
+
+
+
+//==//-----------//==//
+//==//   Form    //==//
+//==//-----------//==//
+
+// Input
+$input-border-radius: 8px !default;
+$input-border-spread: 2px !default;
+
+// Textarea
+$textarea-border-radius: 8px !default;
+
+
+
+//==//------------//==//
+//==// Components //==//
+//==//------------//==//
+
 // Badge
 $badge-corner-radius: 6px !default;
 $padding-first: 10px;
@@ -32,10 +82,8 @@ $badge-first-part-text-color: var(--badge-text-color) !default;
 $badge-last-part-color: var(--primary-color) !default;
 $badge-last-part-text-color: $white !default;
 
-// Button
-$button-corner-radius: 6px !default;
-$button-border-width: 2px !default;
-$button-border-spread: 4px !default;
+// Cards
+$card-border-radius: 10px !default;
 
 // Dropdown
 $dropdown-animation-duration: 0.3s !default;
@@ -47,31 +95,11 @@ $dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04) !default;
 $dropdown-border-radius: 12px !default;
 $dropdown-item-border-radius: 10px !default;
 
-// Table
-$table-border-width: 2px !default;
 
-// Cards
-$card-border-radius: 10px !default;
 
-// Input
-$input-border-radius: 8px !default;
-$input-border-spread: 2px !default;
-
-// Textarea
-$textarea-border-radius: 8px !default;
-
-// Progress Bar
-$progress-bar-corner-radius: 6px !default;
-
-// Icon
-$icon-size-small: 0.8rem !default;
-$icon-size-default: 1.2rem !default;
-$icon-size-large: 1.6rem !default;
-$icon-size-xlarge: 2rem !default;
-
-// Tooltip
-$tooltip-margin: 10px;
-$tooltip-translate: 20px;
+//==//--------------//==//
+//==// Theme Colors //==//
+//==//--------------//==//
 
 // Status Colors
 $status-colors: (
@@ -88,67 +116,3 @@ $custom-colors: () !default;
 
 // The Color List we will Use
 $item-colors: join($status-colors, $custom-colors);
-
-// This is Just  For Making CSS Variables
-$variables: (
-  // Text Sizes
-  --xlarge-text: $xlarge-text,
-  --large-text: $large-text,
-  --medium-text: $medium-text,
-  --small-text: $small-text,
-
-  // z-indexs
-  --bottom-nav-z-index: $bottom-nav-z-index,
-  --dropdown-z-index: $dropdown-z-index,
-  --modal-z-index: $modal-z-index,
-  --tooltip-z-index: $tooltip-z-index,
-
-  // Transition
-  --primary-transition: $primary-transition,
-  --secondary-transition: $secondary-transition,
-
-  // Badge
-  --badge-corner-radius: $badge-corner-radius,
-  --badge-only-part-color: $badge-only-part-color,
-  --badge-only-part-text-color: $badge-only-part-text-color,
-  --badge-first-part-color: $badge-first-part-color,
-  --badge-first-part-text-color: $badge-first-part-text-color,
-  --badge-last-part-color: $badge-last-part-color,
-  --badge-last-part-text-color: $badge-last-part-text-color,
-
-  // Button
-  --button-corner-radius: $button-corner-radius,
-  --button-border-width: $button-border-width,
-  --button-border-spread: $button-border-spread,
-
-  // Dropdown
-  --dropdown-animation-duration: $dropdown-animation-duration,
-  --dropdown-margin: $dropdown-margin,
-  --dropdown-child-margin: $dropdown-child-margin,
-  --dropdown-translate: $dropdown-translate,
-  --dropdown-shadow: $dropdown-shadow,
-  --dropdown-border-radius: $dropdown-border-radius,
-  --dropdown-item-border-radius: $dropdown-item-border-radius,
-
-  // Table
-  --table-border-width: $table-border-width,
-
-  // Card
-  --card-border-radius: $card-border-radius,
-
-  // Input
-  --input-border-radius: $input-border-radius,
-  --input-border-spread: $input-border-spread,
-
-  // Textarea
-  --textarea-border-radius: $textarea-border-radius,
-
-  // Progress Bar
-  --progress-bar-corner-radius: $progress-bar-corner-radius,
-
-  // Icon
-  --icon-size-small: $icon-size-small,
-  --icon-size-default: $icon-size-default,
-  --icon-size-large: $icon-size-large,
-  --icon-size-xlarge: $icon-size-xlarge,
-);
