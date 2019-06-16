@@ -26,7 +26,7 @@ $variables: (
   //==//-----------//==//
 
   // Button
-  --button-corner-radius: $button-corner-radius,
+  --button-border-radius: $button-border-radius,
   --button-border-width: $button-border-width,
   --button-border-spread: $button-border-spread,
 
@@ -37,7 +37,7 @@ $variables: (
   --icon-size-xlarge: $icon-size-xlarge,
 
   // Progress Bar
-  --progress-bar-corner-radius: $progress-bar-corner-radius,
+  --progress-bar-border-radius: $progress-bar-border-radius,
 
   // Table
   --table-border-width: $table-border-width,
@@ -66,7 +66,7 @@ $variables: (
   //==//------------//==//
 
   // Badge
-  --badge-corner-radius: $badge-corner-radius,
+  --badge-border-radius: $badge-border-radius,
   --badge-only-part-color: $badge-only-part-color,
   --badge-only-part-text-color: $badge-only-part-text-color,
   --badge-first-part-color: $badge-first-part-color,

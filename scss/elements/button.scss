@@ -13,12 +13,12 @@
   text-decoration: none;
 
   @if $css-variable-enabled {
-    border-radius: var(--button-corner-radius);
+    border-radius: var(--button-border-radius);
     border-width: var(--button-border-width);
     font-size: var(--medium-text);
     transition: var(--primary-transition);
   } @else {
-    border-radius: $button-corner-radius;
+    border-radius: $button-border-radius;
     border-width: $button-border-width;
     font-size: $medium-text;
     transition: $primary-transition;
@@ -50,7 +50,7 @@
   }
 
   &:hover, &.zust-hovered, input:checked + & {
-    border-color: var(--button-hover-border-color);
+    border-color: var(--button-hovered-border-color);
     //color: var(--button-text-color);
   }
 
