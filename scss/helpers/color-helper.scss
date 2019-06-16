@@ -236,49 +236,15 @@
     }
   }
 
-  // Status
-  .zust#{$prefix}bg-primary {
-    background-color: var(--primary-color) !important;
-    color: $white;
+  // Item Colors
+  @each $name, $color, $txt-color in $item-colors {
+    .zust#{$prefix}bg-#{$name} {
+      background-color: $color !important;
+      color: $txt-color;
 
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-warning {
-    background-color: var(--warning-color) !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-error {
-    background-color: var(--error-color) !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-success {
-    background-color: var(--success-color) !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-link {
-    background-color: var(--link-color) !important;
-    color: $white;
-
-    * {
-      color: $white;
+      * {
+        color: $txt-color;
+      }
     }
   }
 
@@ -585,36 +551,14 @@
     }
   }
 
-  // Status
-  .zust#{$prefix}error {
-    color: var(--error-color) !important;
+  // Item Colors
+  @each $name, $color, $txt-color in $item-colors {
+    .zust#{$prefix}bg-#{$name} {
+      color: $color !important;
 
-    * {
-      color: var(--error-color);
-    }
-  }
-
-  .zust#{$prefix}warning {
-    color: var(--warning-color) !important;
-
-    * {
-      color: var(--warning-color);
-    }
-  }
-
-  .zust#{$prefix}success {
-    color: var(--success-color) !important;
-
-    * {
-      color: var(--success-color);
-    }
-  }
-
-  .zust#{$prefix}link {
-    color: var(--link-color) !important;
-
-    * {
-      color: var(--link-color);
+      * {
+        color: $color;
+      }
     }
   }
 
