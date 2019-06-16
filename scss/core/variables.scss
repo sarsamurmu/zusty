@@ -5,9 +5,18 @@ $css-variable-enabled: false !default;
 //==//  General  //==//
 //==//-----------//==//
 
-// Screen Sizes as of Chrome Dev Tools
+// Screen Breakpoint Sizes as of Chrome Dev Tools
 $tablet: 768px !default;
 $desktop: 1024px !default;
+
+$default-breakpoints: (
+  (mobile, null, $tablet - 1px),
+  (touch, null, $desktop - 1px),
+  (tablet, $tablet, $desktop - 1px),
+  (desktop, $desktop, null)
+);
+
+@debug $default-breakpoints;
 
 // Text Sizes
 $xlarge-text: 2.2rem !default;
@@ -15,7 +24,7 @@ $large-text: 1.6rem !default;
 $medium-text: 1rem !default;
 $small-text: 0.8rem !default;
 
-// z-indexs
+// z-indexes
 $bottom-nav-z-index: 6 !default;
 $dropdown-z-index: 5 !default;
 $modal-z-index: 20 !default;
@@ -32,7 +41,7 @@ $secondary-transition: 0.5s !default;
 //==//-----------//==//
 
 // Button
-$button-corner-radius: 6px !default;
+$button-border-radius: 6px !default;
 $button-border-width: 2px !default;
 $button-border-spread: 4px !default;
 
@@ -43,7 +52,7 @@ $icon-size-large: 1.6rem !default;
 $icon-size-xlarge: 2rem !default;
 
 // Progress Bar
-$progress-bar-corner-radius: 6px !default;
+$progress-bar-border-radius: 6px !default;
 
 // Table
 $table-border-width: 2px !default;
@@ -72,7 +81,7 @@ $textarea-border-radius: 8px !default;
 //==//------------//==//
 
 // Badge
-$badge-corner-radius: 6px !default;
+$badge-border-radius: 6px !default;
 $badge-only-part-color: var(--primary-color) !default;
 $badge-only-part-text-color: white !default;
 $badge-first-part-color: rgba(144, 144, 144, 0.1) !default;
@@ -112,5 +121,4 @@ $status-colors: (
 // Custom Color's List. User will made it by themself.
 $custom-colors: () !default;
 
-// The Color List we will Use
-$item-colors: join($status-colors, $custom-colors);
+$item-colors: generate-colors($status-colors, $custom-colors);
