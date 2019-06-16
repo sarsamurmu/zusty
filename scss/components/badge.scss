@@ -14,12 +14,12 @@ span.zust-badge {
   }
 
   @if $css-variable-enabled {
-    border-radius: var(--badge-corner-radius);
+    border-radius: var(--badge-border-radius);
     background-color: var(--badge-only-part-color);
     color: var(--badge-only-part-text-color);
     transition: var(--secondary-transition);
   } @else {
-    border-radius: $badge-corner-radius;
+    border-radius: $badge-border-radius;
     background-color: $badge-only-part-color;
     color: $badge-only-part-text-color;
     transition: $secondary-transition;
@@ -69,11 +69,11 @@ div.zust-badge {
     padding: $padding ($padding + $extra) $padding ($padding + $extra);
 
     @if $css-variable-enabled {
-      border-radius: var(--badge-corner-radius);
+      border-radius: var(--badge-border-radius);
       background-color: var(--badge-only-part-color);
       color: var(--badge-only-part-text-color);
     } @else {
-      border-radius: $badge-corner-radius;
+      border-radius: $badge-border-radius;
       background-color: $badge-only-part-color;
       color: $badge-only-part-text-color;
     }
@@ -84,11 +84,11 @@ div.zust-badge {
     padding-right: $padding-second;
 
     @if $css-variable-enabled {
-      border-radius: var(--badge-corner-radius) 0 0 var(--badge-corner-radius);
+      border-radius: var(--badge-border-radius) 0 0 var(--badge-border-radius);
       background-color: var(--badge-first-part-color);
       color: var(--badge-first-part-text-color);
     } @else {
-      border-radius: $badge-corner-radius 0 0 $badge-corner-radius;
+      border-radius: $badge-border-radius 0 0 $badge-border-radius;
       background-color: $badge-first-part-color;
       color: $badge-first-part-text-color;
     }
@@ -99,11 +99,11 @@ div.zust-badge {
     padding-left: $padding-second;
 
     @if $css-variable-enabled {
-      border-radius: 0 var(--badge-corner-radius) var(--badge-corner-radius) 0;
+      border-radius: 0 var(--badge-border-radius) var(--badge-border-radius) 0;
       background-color: var(--badge-last-part-color);
       color: var(--badge-last-part-text-color);
     } @else {
-      border-radius: 0 $badge-corner-radius $badge-corner-radius 0;
+      border-radius: 0 $badge-border-radius $badge-border-radius 0;
       background-color: $badge-last-part-color;
       color: $badge-last-part-text-color;
     }

@@ -12,10 +12,10 @@
 
   @if $css-variable-enabled {
     transition: var(--primary-transition);
-    border-radius: var(--progress-bar-corner-radius);
+    border-radius: var(--progress-bar-border-radius);
   } @else {
     transition: $primary-transition;
-    border-radius: $progress-bar-corner-radius;
+    border-radius: $progress-bar-border-radius;
   }
 
   &.zust-in-progress:not(.zust-striped) > .zust-bar:after {
@@ -131,25 +131,25 @@
 
     &:only-of-type {
       @if $css-variable-enabled {
-        border-radius: var(--progress-bar-corner-radius);
+        border-radius: var(--progress-bar-border-radius);
       } @else {
-        border-radius: $progress-bar-corner-radius;
+        border-radius: $progress-bar-border-radius;
       }
     }
 
     &:first-of-type:not(:only-of-type) {
       @if $css-variable-enabled {
-        border-radius: var(--progress-bar-corner-radius) 0 0 var(--progress-bar-corner-radius);
+        border-radius: var(--progress-bar-border-radius) 0 0 var(--progress-bar-border-radius);
       } @else {
-        border-radius: $progress-bar-corner-radius 0 0 $progress-bar-corner-radius;
+        border-radius: $progress-bar-border-radius 0 0 $progress-bar-border-radius;
       }
     }
 
     &:last-of-type:not(:only-of-type) {
       @if $css-variable-enabled {
-        border-radius: 0 var(--progress-bar-corner-radius) var(--progress-bar-corner-radius) 0;
+        border-radius: 0 var(--progress-bar-border-radius) var(--progress-bar-border-radius) 0;
       } @else {
-        border-radius: 0 $progress-bar-corner-radius $progress-bar-corner-radius 0;
+        border-radius: 0 $progress-bar-border-radius $progress-bar-border-radius 0;
       }
     }
 
