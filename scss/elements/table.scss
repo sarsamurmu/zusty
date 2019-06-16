@@ -21,7 +21,7 @@
 
   &.zust-hoverable tbody tr{
     &:hover, &.zust-hovered {
-      background-color: var(--table-bg-color-hovered);
+      background-color: var(--table-hovered-bg-color);
     }
   }
 

@@ -54,8 +54,8 @@ $button-bg-color: hsl(0, 0%, 100%) !default;
 $button-bg-color-dark: hsl(0, 0%, 15%) !default;
 $button-border-color: hsl(0, 0%, 90%) !default;
 $button-border-color-dark: hsl(0, 0%, 28%) !default;
-$button-hover-border-color: hsl(0, 0%, 84%) !default;
-$button-hover-border-color-dark: hsl(0, 0%, 35%) !default;
+$button-hovered-border-color: hsl(0, 0%, 84%) !default;
+$button-hovered-border-color-dark: hsl(0, 0%, 35%) !default;
 $button-text-color: hsl(0, 0%, 40%) !default;
 $button-text-color-dark: hsl(0, 0%, 85%) !default;
 $button-focus-border-color: hsla(291, 64%, 42%, 0.14) !default;
@@ -94,8 +94,8 @@ $table-border-color: hsl(0, 0%, 90%) !default;
 $table-border-color-dark: hsl(0, 0%, 30%) !default;
 $table-bg-color: hsl(0, 0%, 95%) !default;
 $table-bg-color-dark: hsl(0, 0%, 20%) !default;
-$table-bg-color-hovered: $table-border-color !default;
-$table-bg-color-hovered-dark: $table-border-color-dark !default;
+$table-hovered-bg-color: $table-border-color !default;
+$table-hovered-bg-color-dark: $table-border-color-dark !default;
 
 // Input
 $input-bg-color: hsl(0, 0%, 97%) !default;
