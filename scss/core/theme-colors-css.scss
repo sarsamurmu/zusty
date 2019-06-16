@@ -30,7 +30,7 @@
   // Button
   --button-bg-color: #{$button-bg-color};
   --button-border-color: #{$button-border-color};
-  --button-hover-border-color: #{$button-hover-border-color};
+  --button-hovered-border-color: #{$button-hovered-border-color};
   --button-text-color: #{$button-text-color};
   --button-focus-border-color: #{$button-focus-border-color};
 
@@ -56,7 +56,7 @@
   // Table
   --table-border-color: #{$table-border-color};
   --table-bg-color: #{$table-bg-color};
-  --table-bg-color-hovered: #{$table-bg-color-hovered};
+  --table-hovered-bg-color: #{$table-hovered-bg-color};
 
   // Input
   --input-bg-color: #{$input-bg-color};
@@ -137,7 +137,7 @@
   // Button
   --button-bg-color: #{$button-bg-color-dark};
   --button-border-color: #{$button-border-color-dark};
-  --button-hover-border-color: #{$button-hover-border-color-dark};
+  --button-hovered-border-color: #{$button-hovered-border-color-dark};
   --button-text-color: #{$button-text-color-dark};
   --button-focus-border-color: #{$button-focus-border-color-dark};
 
@@ -163,7 +163,7 @@
   // Table
   --table-border-color: #{$table-border-color-dark};
   --table-bg-color: #{$table-bg-color-dark};
-  --table-bg-color-hovered: #{$table-bg-color-hovered-dark};
+  --table-hovered-bg-color: #{$table-hovered-bg-color-dark};
 
   // Input
   --input-bg-color: #{$input-bg-color-dark};
