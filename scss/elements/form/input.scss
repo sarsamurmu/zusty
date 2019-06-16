@@ -145,18 +145,6 @@
     }
   }
 
-  &.zust-transparent {
-    background-color: var(--input-stransparent-bg-color);
-
-    &:hover, &.zust-hovered {
-      background-color: var(--input-stransparent-hovered-bg-color);
-    }
-
-    &:focus, &.zust-focused {
-      background-color: var(--body-color-primary);
-    }
-  }
-
   &[disabled] {
     pointer-events: none;
     opacity: 0.4;
