@@ -18,6 +18,8 @@
   transition: $primary-transition ease;
   user-select: none;
   max-height: 20px;
+  box-sizing: content-box;
+
   @if $css-variable-enabled {
     transition: var(--primary-transition) ease;
   } @else {
@@ -37,6 +39,7 @@
   margin: 0;
   border-radius: 100%;
   transition: 0.4s;
+  box-sizing: content-box;
 }
 
 // Disabled Style

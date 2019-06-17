@@ -10,6 +10,7 @@ div.zust-chip {
   font-size: 14px;
   cursor: default;
   margin: 6px;
+  box-sizing: content-box;
 
   @if $css-variable-enabled {
     transition: var(--primary-transition);
