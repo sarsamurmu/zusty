@@ -96,9 +96,11 @@
     }
 
     @each $name, $color, $txt-color in $item-colors {
-      &.zust-#{$name} {
-        background-color: $color;
-        color: $txt-color;
+      @if $name {
+        &.zust-#{$name} {
+          background-color: $color;
+          color: $txt-color;
+        }
       }
     }
 
@@ -199,9 +201,11 @@
   }
 
   @each $name, $color, $txt-color in $item-colors {
-    &.zust-#{$name} > .zust-bar {
-      background-color: $color;
-      color: $txt-color;
+    @if $name {
+      &.zust-#{$name} > .zust-bar {
+        background-color: $color;
+        color: $txt-color;
+      }
     }
   }
 }

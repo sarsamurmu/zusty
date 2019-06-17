@@ -1,13 +1,3 @@
-@function generate-colors($default, $custom) {
-  @if (length($custom) >= 2) {
-    $th-colors: join($status-colors, $custom-colors);
-    @return $th-colors;
-  } @else if (length($custom) < 2) {
-    $th-colors: $status-colors;
-    @return $th-colors;
-  }
-}
-
 // Replace `$search` with `$replace` in `$string`
 // @author Hugo Giraudel
 @function str-replace($string, $search, $replace: '') {

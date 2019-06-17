@@ -60,13 +60,15 @@
 
   // Colors
   @each $name, $color in $item-colors {
-    &.zust-#{$name} {
-      &::-webkit-slider-thumb {
-        background-color: $color;
-      }
+    @if $name {
+      &.zust-#{$name} {
+        &::-webkit-slider-thumb {
+          background-color: $color;
+        }
 
-      &::-moz-range-thumb {
-        background-color: $color;
+        &::-moz-range-thumb {
+          background-color: $color;
+        }
       }
     }
   }

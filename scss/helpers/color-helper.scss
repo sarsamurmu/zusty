@@ -238,12 +238,14 @@
 
   // Item Colors
   @each $name, $color, $txt-color in $item-colors {
-    .zust#{$prefix}bg-#{$name} {
-      background-color: $color !important;
-      color: $txt-color;
-
-      * {
+    @if $name {
+      .zust#{$prefix}bg-#{$name} {
+        background-color: $color !important;
         color: $txt-color;
+
+        * {
+          color: $txt-color;
+        }
       }
     }
   }
@@ -553,11 +555,13 @@
 
   // Item Colors
   @each $name, $color, $txt-color in $item-colors {
-    .zust#{$prefix}bg-#{$name} {
-      color: $color !important;
+    @if $name {
+      .zust#{$prefix}#{$name} {
+        color: $color !important;
 
-      * {
-        color: $color;
+        * {
+          color: $color;
+        }
       }
     }
   }

@@ -119,4 +119,4 @@ $status-colors: (
 // Custom Color's List. User will made it by themself.
 $custom-colors: () !default;
 
-$item-colors: generate-colors($status-colors, $custom-colors);
+$item-colors: join($status-colors, $custom-colors);

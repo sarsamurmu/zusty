@@ -68,14 +68,16 @@
   }
 
   @each $name, $color in $item-colors {
-    &.zust-#{$name} {
-      input:checked {
-        + span {
-          background-color: $color;
-
-          &:before {
+    @if $name {
+      &.zust-#{$name} {
+        input:checked {
+          + span {
             background-color: $color;
-            transform: translateX(26px);
+
+            &:before {
+              background-color: $color;
+              transform: translateX(26px);
+            }
           }
         }
       }

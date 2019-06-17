@@ -96,17 +96,19 @@ progress[value].zust-progress {
   }
 
   @each $name, $color in $item-colors {
-    &.zust-#{$name} {
-      &::-webkit-progress-value {
-        background-color: $color;
-      }
+    @if $name {
+      &.zust-#{$name} {
+        &::-webkit-progress-value {
+          background-color: $color;
+        }
 
-      &::-moz-progress-value {
-        background-color: $color;
-      }
+        &::-moz-progress-value {
+          background-color: $color;
+        }
 
-      &::-moz-progress-bar {
-        background-color: $color;
+        &::-moz-progress-bar {
+          background-color: $color;
+        }
       }
     }
   }

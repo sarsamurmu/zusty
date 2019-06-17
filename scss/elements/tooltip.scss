@@ -214,10 +214,12 @@
   }
 
   @each $name, $color, $txt-color in $item-colors {
-    &[zust-tooltip-type="#{$name}"] {
-      &:before {
-        background-color: $color;
-        color: $txt-color;
+    @if $name {
+      &[zust-tooltip-type="#{$name}"] {
+        &:before {
+          background-color: $color;
+          color: $txt-color;
+        }
       }
     }
   }

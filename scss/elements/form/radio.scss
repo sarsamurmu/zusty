@@ -103,8 +103,10 @@
 
 // Colors
 @each $name, $color in $item-colors {
-  .zust-radio.zust-#{$name} + span:before {
-    background-color: $color;
+  @if $name {
+    .zust-radio.zust-#{$name} + span:before {
+      background-color: $color;
+    }
   }
 }
 

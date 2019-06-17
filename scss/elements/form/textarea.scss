@@ -73,22 +73,24 @@ textarea.zust-textarea {
   }
 
   @each $name, $color, $skip, $hovered-color in $item-colors {
-    &.zust-#{$name} {
-      border-color: $color;
+    @if $name {
+      &.zust-#{$name} {
+        border-color: $color;
 
-      &:focus, &.zust-focused {
-        border-color: $transparent;
-        box-shadow: 0 0 0 $input-border-spread $hovered-color;
-        @if $css-variable-enabled {
-          box-shadow: 0 0 0 var(--input-border-spread) $hovered-color;
-        } @else {
-          box-shadow: 0 0 0 $input-border-spread $hovered-color;
-        }
-      }
-
-      &.zust-readonly, &[readonly] {
         &:focus, &.zust-focused {
-          box-shadow: 0 0 0 1px $hovered-color;
+          border-color: $transparent;
+          box-shadow: 0 0 0 $input-border-spread $hovered-color;
+          @if $css-variable-enabled {
+            box-shadow: 0 0 0 var(--input-border-spread) $hovered-color;
+          } @else {
+            box-shadow: 0 0 0 $input-border-spread $hovered-color;
+          }
+        }
+
+        &.zust-readonly, &[readonly] {
+          &:focus, &.zust-focused {
+            box-shadow: 0 0 0 1px $hovered-color;
+          }
         }
       }
     }

@@ -99,20 +99,22 @@
 
   // Colors
   @each $name, $color, $txt-color, $hovered-color, $border-spread-color in $item-colors {
-    &.zust-#{$name} {
-      border-width: 0 !important;
-      background-color: $color !important;
-      color: $txt-color;
+    @if $name {
+      &.zust-#{$name} {
+        border-width: 0 !important;
+        background-color: $color !important;
+        color: $txt-color;
 
-      &:hover, &.zust-hovered, input:checked + & {
-        background-color: $hovered-color !important;
-      }
+        &:hover, &.zust-hovered, input:checked + & {
+          background-color: $hovered-color !important;
+        }
 
-      &:focus, &.zust-focused {
-        @if $css-variable-enabled {
-          box-shadow: 0 0 0 var(--button-border-spread) $border-spread-color !important;
-        } @else {
-          box-shadow: 0 0 0 $button-border-spread $border-spread-color !important;
+        &:focus, &.zust-focused {
+          @if $css-variable-enabled {
+            box-shadow: 0 0 0 var(--button-border-spread) $border-spread-color !important;
+          } @else {
+            box-shadow: 0 0 0 $button-border-spread $border-spread-color !important;
+          }
         }
       }
     }
@@ -179,12 +181,14 @@
 
 
   @each $name, $color, $skip, $hovered-color in $item-colors {
-    &.zust-outlined.zust-#{$name} {
-      border-color: $color !important;
-      color: $color;
+    @if $name {
+      &.zust-outlined.zust-#{$name} {
+        border-color: $color !important;
+        color: $color;
 
-      &:hover, &.zust-hovered {
-        border-color: $hovered-color !important;
+        &:hover, &.zust-hovered {
+          border-color: $hovered-color !important;
+        }
       }
     }
   }
