@@ -1,0 +1,27 @@
+.zust-note {
+  background-color: var(--light-color);
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0;
+
+  @if $css-variable-enabled {
+    transition: background-color var(--primary-transition);
+  } @else {
+    transition: background-color $primary-transition;
+  }
+
+  > div:first-child {
+    padding: 3px 15px;
+    border-left-style: solid;
+    border-width: 4px;
+    border-color: var(--primary-color);
+  }
+
+  @each $name, $color in $item-colors {
+    @if $name {
+      &.zust-#{$name} > div:first-child {
+        border-color: $color !important;
+      }
+    }
+  }
+}
