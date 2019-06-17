@@ -14,3 +14,7 @@
     cursor: default;
   }
 }
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
