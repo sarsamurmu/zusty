@@ -9,6 +9,8 @@
     "scss",
     "html5"
   ],
+  "jsdelivr": "dist/zusty.min.css",
+  "browser": "dist/zusty.min.css",
   "main": "zusty.scss",
   "scripts": {
     "build": "rimraf dist && npm run build-css && npm run add-autoprefix && npm run minify-css && npm run build-parted",
