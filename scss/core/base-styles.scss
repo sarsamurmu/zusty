@@ -41,6 +41,28 @@ hr[divider] {
   transition: $secondary-transition;
 }
 
+blockquote {
+  border-left-style: solid;
+  border-width: 4px;
+  border-radius: 4px;
+  margin: {
+    left: 10px;
+    right: 10px;
+  }
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+
+  @each $name, $color in $item-colors {
+    @if $name {
+      &.zust-#{$name} {
+        border-color: $color;
+      }
+    }
+  }
+}
+
 h1, h2, h3, h4, h5, h6, .zust-h1, .zust-h2, .zust-h3, .zust-h4, .zust-h5, .zust-h6 {
   display: block;
   color: var(--text-color-primary);
