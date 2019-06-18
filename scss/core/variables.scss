@@ -16,6 +16,8 @@ $default-breakpoints: (
   (desktop, $desktop, null)
 );
 
+$custom-breakpoints: () !default;
+
 // Text Sizes
 $xlarge-text: 2.2rem !default;
 $large-text: 1.6rem !default;
