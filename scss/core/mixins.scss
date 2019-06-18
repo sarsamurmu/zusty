@@ -42,24 +42,26 @@
 
 @mixin each-breakpoint ($selector, $replace) {
   @each $name, $min-width, $max-width in $default-breakpoints {
-    $selector-name: str-replace($selector, $replace, $name);
+    @if $name {
+      $selector-name: str-replace($selector, $replace, $name);
 
-    @if ($min-width not null) and ($max-width == null) {
-      @media screen and (min-width: $min-width) {
-        #{$selector-name} {
-          @content;
+      @if ($min-width not null) and ($max-width == null) {
+        @media screen and (min-width: $min-width) {
+          #{$selector-name} {
+            @content;
+          }
         }
-      }
-    } @else if ($min-width == null) and ($max-width not null) {
-      @media screen and (max-width: $max-width) {
-        #{$selector-name} {
-          @content;
+      } @else if ($min-width == null) and ($max-width not null) {
+        @media screen and (max-width: $max-width) {
+          #{$selector-name} {
+            @content;
+          }
         }
-      }
-    } @else if ($min-width not null) and ($max-width not null) {
-      @media screen and (min-width: $min-width) and (max-width: $max-width) {
-        #{$selector-name} {
-          @content;
+      } @else if ($min-width not null) and ($max-width not null) {
+        @media screen and (min-width: $min-width) and (max-width: $max-width) {
+          #{$selector-name} {
+            @content;
+          }
         }
       }
     }
