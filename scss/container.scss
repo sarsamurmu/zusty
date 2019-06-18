@@ -15,7 +15,6 @@ $it-pad: $container-items-padding;
   }
 
   // Three Parts
-
   @for $i from 1 through 2 {
     &.zust-#{$i}-3 {
       flex: none;
@@ -24,7 +23,6 @@ $it-pad: $container-items-padding;
   }
 
   // Four Parts
-
   @for $i from 1 through 3 {
     &.zust-#{$i}-4 {
       flex: none;
@@ -33,7 +31,6 @@ $it-pad: $container-items-padding;
   }
 
   // Five Parts
-
   @for $i from 1 through 4 {
     &.zust-#{$i}-5 {
       flex: none;
@@ -42,7 +39,6 @@ $it-pad: $container-items-padding;
   }
 
   // 12 Parts
-
   @for $i from 1 through 11 {
     &.zust-#{$i}-12 {
       flex: none;
@@ -58,7 +54,6 @@ $it-pad: $container-items-padding;
   }
 
   // Three Parts
-
   @for $i from 1 through 2 {
     &.zust-#{$i}-3-#{$value} {
       flex: none;
@@ -67,7 +62,6 @@ $it-pad: $container-items-padding;
   }
 
   // Four Parts
-
   @for $i from 1 through 3 {
     &.zust-#{$i}-4-#{$value} {
       flex: none;
@@ -76,7 +70,6 @@ $it-pad: $container-items-padding;
   }
 
   // Five Parts
-
   @for $i from 1 through 4 {
     &.zust-#{$i}-5-#{$value} {
       flex: none;
@@ -85,7 +78,6 @@ $it-pad: $container-items-padding;
   }
 
   // 12 Parts
-
   @for $i from 1 through 11 {
     &.zust-#{$i}-12-#{$value} {
       flex: none;
