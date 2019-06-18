@@ -171,27 +171,15 @@
   transform: scale(-1, -1);
 }
 
+@each $value in (15, 30, 45, 60, 90, 120, 180) {
+  .zust-rotate-#{$value} {
+    transform: rotate(#{$value}deg);
+  }
 
-// Rotation
-@each $name, $value in (15, 15deg),
-                       (-15, -15deg),
-                       (30, 30deg),
-                       (-30, -30deg),
-                       (45, 45deg),
-                       (-45, -45deg),
-                       (60, 60deg),
-                       (-60, -60deg),
-                       (90, 90deg),
-                       (-90, -90deg),
-                       (120, 120deg),
-                       (-120, -120deg),
-                       (180, 180deg),
-                       (-180, -180deg) {
-  .zust-rotate-#{$name} {
-    transform: rotate($value);
+  .zust-rotate--#{$value} {
+    transform: rotate(-#{$value}deg);
   }
 }
-
 
 // Shape Helper
 .zust-fullwidth, .zust-full-width {
