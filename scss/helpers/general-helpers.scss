@@ -14,92 +14,29 @@
 }
 
 // Based on Size
-.zust-invisible {
-  &-on-mobile {
-    @include mobile {
-      visibility: hidden !important;
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      visibility: hidden !important;
-    }
-  }
-  &-on-touch {
-    @include touch {
-      visibility: hidden !important;
-    }
-  }
-  &-on-desktop {
-    @include desktop {
-      visibility: hidden !important;
-    }
-  }
+@include each-breakpoint('.zust-invisible-name', 'name') {
+  visibility: hidden !important;
 }
 
-.zust-show, .zust-visible {
-  &-on-mobile {
-    @include mobile {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-  }
-  &-on-touch {
-    @include touch {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-  }
-  &-on-desktop {
-    @include desktop {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-  }
+@include each-breakpoint('.zust-visible-name', 'name') {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-.zust-hide, .zust-hidden {
-  &-on-mobile {
-    @include mobile {
-      display: none !important;
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      display: none !important;
-    }
-  }
-  &-on-touch {
-    @include touch {
-      display: none !important;
-    }
-  }
-  &-on-desktop {
-    @include desktop {
-      display: none !important;
-    }
-  }
+@include each-breakpoint('.zust-hidden-name', 'name') {
+  display: none !important;
 }
 
 // On Dark
 [zust-theme="dark"] {
-  .zust-show-on-dark, .zust-visible-on-dark {
+  .zust-visible-on-dark {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  .zust-hide-on-dark, .zust-hidden-on-dark {
+  .zust-hidden-on-dark {
     display: none !important;
   }
 
@@ -108,30 +45,15 @@
   }
 }
 
-@mixin display-types($value) {
-  @each $name in (inline, block, flex, inline-block, inline-flex, list-item) {
-    .zust-#{$name}#{$value} {
-      display: #{$name} !important;
-    }
+// Display Types
+@each $name in (inline, block, flex, inline-block, inline-flex, list-item) {
+  .zust-#{$name} {
+    display: #{$name} !important;
   }
-}
 
-@include display-types('');
-
-@include mobile {
-  @include display-types('-on-mobile');
-}
-
-@include zust-tablet {
-  @include display-types('-on-tablet');
-}
-
-@include touch {
-  @include display-types('-on-touch');
-}
-
-@include desktop {
-  @include display-types('-on-desktop');
+  @include each-breakpoint('.zust-#{$name}-brname', 'brname') {
+    display: #{$name} !important;
+  }
 }
 
 // Margin and Padding
@@ -216,50 +138,12 @@
   @include paddingless
 }
 
-.zust-marginless {
-  &-on-mobile {
-    @include mobile {
-      @include marginless
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      @include marginless
-    }
-  }
-  &-on-touch {
-    @include touch {
-      @include marginless
-    }
-  }
-  &-on-desktop {
-    @include desktop {
-      @include marginless
-    }
-  }
+@include each-breakpoint('.zust-marginless-name', 'name') {
+  @include marginless;
 }
 
-.zust-paddingless {
-  &-on-mobile {
-    @include mobile {
-      @include paddingless
-    }
-  }
-  &-on-tablet {
-    @include zust-tablet {
-      @include paddingless
-    }
-  }
-  &-on-touch {
-    @include touch {
-      @include paddingless
-    }
-  }
-  &-on-desktop {
-    @include desktop {
-      @include paddingless
-    }
-  }
+@include each-breakpoint('.zust-paddingless-name', 'name') {
+  @include paddingless;
 }
 
 // Float
