@@ -164,8 +164,8 @@ $tooltip-bg-color-dark: hsl(0, 0%, 26%) !default;
 // Misc.
 $dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
 $dimmer-bg-color-dark: $dimmer-bg-color !default;
-$light-color: hsl(0, 0%, 96%) !default;
-$light-color-dark: hsl(0, 0%, 18%) !default;
+$light-color: rgba(144, 144, 144, 0.1) !default;
+$light-color-dark: rgba(144, 144, 144, 0.1) !default;
 $text-color-inverted: #FFFFFF !default;
 $text-color-inverted-dark: #484848 !default;
 $bg-color-inverted: hsl(0, 0%, 13%) !default;
