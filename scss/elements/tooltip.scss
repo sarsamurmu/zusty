@@ -155,64 +155,14 @@
   }
 
   // Display on Breakpoint
-
-  &[zust-tooltip-visibility="mobile"] {
-    @include mobile {
-      &:before {
-        display: inline-block;
-      }
-    }
-    @include tablet {
-      &:before {
-        display: none;
-      }
-    }
+  &[zust-tooltip-visibility]:before {
+    display: none;
   }
 
-  &[zust-tooltip-visibility="tablet"] {
-    @include mobile {
-      &:before {
-        display: none;
-      }
-    }
-    @include zust-tablet {
-      &:before {
-        display: inline-block;
-      }
-    }
-    @include desktop {
-      &:before {
-        display: none;
-      }
-    }
+  @include each-breakpoint('&[zust-tooltip-visibility="name"]:before', 'name') {
+    display: inline-block;
   }
-
-  &[zust-tooltip-visibility="touch"] {
-    @include touch {
-      &:before {
-        display: inline-block;
-      }
-    }
-    @include desktop {
-      &:before {
-        display: none;
-      }
-    }
-  }
-
-  &[zust-tooltip-visibility="desktop"] {
-    @include touch {
-      &:before {
-        display: none;
-      }
-    }
-    @include desktop {
-      &:before {
-        display: inline-block;
-      }
-    }
-  }
-
+  
   @each $name, $color, $txt-color in $item-colors {
     @if $name {
       &[zust-tooltip-type="#{$name}"] {
