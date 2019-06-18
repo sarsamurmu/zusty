@@ -101,3 +101,15 @@
   color: inherit;
   font-style: normal;
 }
+
+@for $i from 1 through 10 {
+  .zust-text-#{$i} {
+    font-size: ($i/25) * 10rem;
+  }
+
+  $name: '.zust-text-#{$i}-name';
+
+  @include each-breakpoint($name, 'name') {
+    font-size: ($i/25) * 10rem;
+  }
+}
