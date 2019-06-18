@@ -71,6 +71,7 @@
     bottom: auto;
     margin: 0;
     margin-left: 5px;
+    box-sizing: content-box;
     @if $css-variable-enabled {
       margin-top: calc(var(--dropdown-margin) - 4px);
       transform: translateY($dropdown-translate);
@@ -143,6 +144,7 @@
       text-align: center;
       margin: 4px;
       transition: background-color 0.5s;
+      box-sizing: content-box;
       @if $css-variable-enabled {
         border-radius: var(--dropdown-item-border-radius);
       } @else {
@@ -185,6 +187,7 @@
         transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
         font-size: 15px;
         height: fit-content;
+        box-sizing: content-box;
         @if $css-variable-enabled {
           margin-left: var(--dropdown-child-margin);
           transform: translateX(var(--dropdown-translate));
