@@ -9,3 +9,36 @@
 
   @return $string;
 }
+
+@function getListItems($given-list, $it-index) {
+  $list: () !default;
+
+  @for $index from 1 through length($given-list) {
+    $item-list: nth($given-list, $index);
+
+    @if length($item-list) == 0 {} @else {
+      $item: nth($item-list, $it-index);
+      $list: append($list, $item, $separator: comma);
+    }
+  }
+
+  @return $list;
+}
+
+@function getClassList($list, $selector, $replace, $prefix, $suffix, $seperator: '') {
+  $classlist: $prefix;
+
+  @for $i from 1 through length($list) {
+    $name: nth($list, $i);
+
+    $classname: str-replace($selector, $replace, $name);
+
+    @if $i < length($list) {
+      $classlist: $classlist + $classname + $seperator;
+    } @else if $i == length($list) {
+      $classlist: $classlist + $classname + $suffix;
+    }
+  }
+
+  @return $classlist;
+}
