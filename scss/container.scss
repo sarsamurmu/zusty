@@ -8,15 +8,15 @@ $it-mar: $container-items-margin;
 $it-pad: $container-items-padding;
 
 // Sizes
-@mixin sizes {
-  &.zust-1-2, &.zust-half  {
+@mixin sizes($suffix: '') {
+  &.zust-1-2#{$suffix}, &.zust-half#{$suffix}  {
     flex: none;
     width: 50% !important;
   }
 
   // Three Parts
   @for $i from 1 through 2 {
-    &.zust-#{$i}-3 {
+    &.zust-#{$i}-3#{$suffix} {
       flex: none;
       width: percentage($i/3) !important;
     }
@@ -24,7 +24,7 @@ $it-pad: $container-items-padding;
 
   // Four Parts
   @for $i from 1 through 3 {
-    &.zust-#{$i}-4 {
+    &.zust-#{$i}-4#{$suffix} {
       flex: none;
       width: percentage($i/4) !important;
     }
@@ -32,7 +32,7 @@ $it-pad: $container-items-padding;
 
   // Five Parts
   @for $i from 1 through 4 {
-    &.zust-#{$i}-5 {
+    &.zust-#{$i}-5#{$suffix} {
       flex: none;
       width: percentage($i/5) !important;
     }
@@ -40,46 +40,7 @@ $it-pad: $container-items-padding;
 
   // 12 Parts
   @for $i from 1 through 11 {
-    &.zust-#{$i}-12 {
-      flex: none;
-      width: percentage($i/12) !important;
-    }
-  }
-}
-
-@mixin c-sizes($value) {
-  &.zust-1-2-#{$value}, &.zust-half-#{$value}  {
-    flex: none;
-    width: 50% !important;
-  }
-
-  // Three Parts
-  @for $i from 1 through 2 {
-    &.zust-#{$i}-3-#{$value} {
-      flex: none;
-      width: percentage($i/3) !important;
-    }
-  }
-
-  // Four Parts
-  @for $i from 1 through 3 {
-    &.zust-#{$i}-4-#{$value} {
-      flex: none;
-      width: percentage($i/4) !important;
-    }
-  }
-
-  // Five Parts
-  @for $i from 1 through 4 {
-    &.zust-#{$i}-5-#{$value} {
-      flex: none;
-      width: percentage($i/5) !important;
-    }
-  }
-
-  // 12 Parts
-  @for $i from 1 through 11 {
-    &.zust-#{$i}-12-#{$value} {
+    &.zust-#{$i}-12#{$suffix} {
       flex: none;
       width: percentage($i/12) !important;
     }
@@ -110,15 +71,43 @@ $it-pad: $container-items-padding;
   &.zust-column {
     margin: 0 0 $container-margin 0;
 
-    &:not(.zust-custom):not(.zust-mobile-only):not(.zust-tablet-only):not(.zust-touch):not(.zust-desktop) {
+// Replacement #1
+
+    $not-selector: getClassList($breakpoint-names, ':not(.zust-name)', 'name', '', '', '');
+
+    &:not(.zust-custom)#{$not-selector} {
       @include tablet {
         flex-wrap: nowrap;
       }
     }
 
+    $common-selector: getClassList($breakpoint-names, '.zust-name', 'name', '&', '', ', &');
+
+    #{$common-selector} {
+      > .zust-column {
+        margin: 0 0 $it-mar 0;
+      }
+    }
+
+/*
+//    &:not(.zust-custom):not(.zust-mobile):not(.zust-tablet):not(.zust-touch):not(.zust-desktop) {
+//      @include tablet {
+//        flex-wrap: nowrap;
+//      }
+//    }
+
+
+    &.zust-mobile, &.zust-tablet, &.zust-touch, &.zust-desktop {
+      > .zust-column {
+        margin: 0 0 $it-mar 0;
+      }
+    }
+*/
+// End of Replacement #1
+
     &.zust-custom {
       &:not(.zust-active) {
-        .zust-column {
+        > .zust-column {
           margin: 0 0 $it-mar 0;
         }
       }
@@ -126,64 +115,36 @@ $it-pad: $container-items-padding;
       &.zust-active {
         flex-wrap: nowrap;
 
-        .zust-column {
-          margin: 0 $it-mar 0 0;
-
-          @include sizes;
-        }
-      }
-    }
-
-    &.zust-mobile {
-      @include mobile {
-        flex-wrap: nowrap;
-
-        .zust-column {
-          margin: 0 $it-mar 0 0;
-
-          @include sizes;
-        }
-      }
-    }
-
-    &.zust-mobile-only {
-      @include mobile {
-        flex-wrap: nowrap;
-
-        .zust-column {
-          margin: 0 $it-mar 0 0;
-
-          @include sizes;
-        }
-      }
-
-      @include tablet {
         > .zust-column {
-          margin: 0 0 $it-mar 0;
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
         }
       }
     }
 
-    &.zust-tablet-only {
+    &.zust-all/*, &.zust-mobile*/ {
+      @include mobile {
+        flex-wrap: nowrap;
+
+        > .zust-column {
+          margin: 0 $it-mar 0 0;
+
+          @include sizes;
+        }
+      }
+    }
+
+    // Replacement #2
+    /*
+    &.zust-tablet {
       @include zust-tablet {
         flex-wrap: nowrap;
 
-        .zust-column {
+        > .zust-column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
-        }
-      }
-
-      @include mobile {
-        > .zust-column {
-          margin: 0 0 $it-mar 0;
-        }
-      }
-
-      @include desktop {
-        > .zust-column {
-          margin: 0 0 $it-mar 0;
         }
       }
     }
@@ -192,16 +153,10 @@ $it-pad: $container-items-padding;
       @include touch {
         flex-wrap: nowrap;
 
-        .zust-column {
+        > .zust-column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
-        }
-      }
-
-      @include desktop {
-        > .zust-column {
-          margin: 0 0 $it-mar 0;
         }
       }
     }
@@ -210,33 +165,49 @@ $it-pad: $container-items-padding;
       @include desktop {
         flex-wrap: nowrap;
 
-        .zust-column {
+        > .zust-column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
         }
       }
+    }
+    */
 
-      @include touch {
-        > .zust-column {
-          margin: 0 0 $it-mar 0;
-        }
+    @include each-breakpoint('&.zust-name', 'name') {
+      flex-wrap: nowrap;
+
+      > .zust-column {
+        margin: 0 $it-mar 0 0;
+
+        @include sizes;
       }
     }
+
+    // End of Replacement 2
   }
 
   .zust-column {
     margin: 0 $it-mar 0 0;
     padding: $it-pad;
+    width: 100%;
 
+    // Replacement #3
+    //$not-selector: getClassList($breakpoint-names, ':not(.zust-default-name)', 'name', '', '', '');
+
+    //&:not(.zust-default)#{$not-selector} {
+    //  width: 100%;
+    //}
+
+    /*
     &:not(.zust-default):not(.zust-default-mobile):not(.zust-default-tablet):not(.zust-default-touch):not(.zust-default-desktop) {
       width: 100%;
     }
+    */
+    // End of Replacement #3
 
-    &.zust-default {
-      flex: none;
-    }
-
+    // Replacement #4
+    /*
     &.zust-default-mobile {
       @include mobile {
         flex: none;
@@ -284,6 +255,25 @@ $it-pad: $container-items-padding;
         width: 100%;
       }
     }
+    */
+
+    //$default-selector: getClassList($breakpoint-names, '&.zust-default-name', 'name', '', '', ', ');
+
+    //@debug $default-selector;
+
+    //#{$default-selector} {
+    //  width: 100%;
+    //}
+
+    &.zust-default {
+      flex: none;
+      width: auto;
+    }
+
+    @include each-breakpoint('&.zust-default-name', 'name') {
+      flex: none;
+      width: auto;
+    }
 
     @include mobile {
       margin: 0 0 $it-mar 0;
@@ -305,7 +295,7 @@ $it-pad: $container-items-padding;
     @include tablet {
       @include sizes;
     }
-
+    /*
     @include mobile {
       @include c-sizes(mobile);
     }
@@ -321,5 +311,25 @@ $it-pad: $container-items-padding;
     @include desktop {
       @include c-sizes(desktop);
     }
+    */
+
+    @each $name, $min-width, $max-width in $breakpoints {
+      @if $name {
+        @if ($min-width not null) and ($max-width == null) {
+          @media screen and (min-width: $min-width) {
+            @include sizes(-#{$name});
+          }
+        } @else if ($min-width == null) and ($max-width not null) {
+          @media screen and (max-width: $max-width) {
+            @include sizes(-#{$name});
+          }
+        } @else if ($min-width not null) and ($max-width not null) {
+          @media screen and (min-width: $min-width) and (max-width: $max-width) {
+            @include sizes(-#{$name});
+          }
+        }
+      }
+    }
+
   }
 }
