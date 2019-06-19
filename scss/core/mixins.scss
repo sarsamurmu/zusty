@@ -69,7 +69,7 @@
   }
 
   // Custom Breakpoint
-  @each $name, $min-width, $max-width in $custom-breakpoints {
+  @each $name, $min-width, $max-width in $breakpoints {
     @if $name {
       $selector-name: str-replace($selector, $replace, $name);
 

@@ -18,6 +18,10 @@ $default-breakpoints: (
 
 $custom-breakpoints: () !default;
 
+$breakpoints: join($default-breakpoints, $custom-breakpoints);
+
+$breakpoint-names: getListItems($breakpoints, 1);
+
 // Text Sizes
 $xlarge-text: 2.2rem !default;
 $large-text: 1.6rem !default;
