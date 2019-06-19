@@ -9,6 +9,12 @@ textarea.zust-textarea {
   transition-property: background-color, box-shadow, border-color;
   display: block;
 
+  min-height: 4em;
+
+  &:not([cols]) {
+    min-width: 15em;
+  }
+
   @if $css-variable-enabled {
     transition: all var(--primary-transition), width 0s, height 0s;
     border-radius: var(--textarea-border-radius);
@@ -114,5 +120,6 @@ textarea.zust-textarea {
 
   .zust-form-el & {
     width: 100%;
+    resize: vertical;
   }
 }
