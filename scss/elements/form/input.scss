@@ -191,7 +191,7 @@
     }
   }
 
-  .zust-el-group &, .zust-el-group > .zust-input-container & {
+  .zust-el-group &, .zust-el-group > .zust-form-el & {
     margin: 0 !important;
   }
 
@@ -241,7 +241,7 @@
 }
 
 // In Container
-.zust-input-container {
+.zust-form-el {
   margin: 0;
   display: inline-flex;
   position: relative;
