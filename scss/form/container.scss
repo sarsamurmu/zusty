@@ -14,23 +14,24 @@
     margin: 0;
   }
 
-  .zust-el-group > & > .zust-input {
-    border-radius: 0;
-  }
-
-  .zust-el-group &:first-child .zust-input {
-    @if $css-variable-enabled {
-      border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
-    } @else {
-      border-radius: $input-border-radius 0 0 $input-border-radius;
+  .zust-el-group > &:not(:first-child):not(:last-child) > {
+    .zust-input, .zust-select {
+      border-radius: 0;
     }
   }
 
-  .zust-el-group &:last-child .zust-input {
-    @if $css-variable-enabled {
-      border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
-    } @else {
-      border-radius: 0 $input-border-radius $input-border-radius 0;
+
+  .zust-el-group > &:first-child > {
+    .zust-input, .zust-select {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .zust-el-group > &:last-child > {
+    .zust-input, .zust-select {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 }
