@@ -119,6 +119,10 @@ textarea.zust-textarea {
   }
 
   .zust-form-el & {
+    max-width: calc(100% - 0.5px);
+  }
+
+  .zust-form-el.zust-fullwidth & {
     width: 100%;
     resize: vertical;
   }
