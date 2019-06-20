@@ -13,8 +13,16 @@ select.zust-select {
   border-width: 0;
   border-bottom-width: 2px;
   border-color: $transparent;
-  width: 100%;
   box-sizing: content-box;
+  width: 100%;
+
+  &.zust-fixed {
+    width: auto;
+  }
+
+  .zust-form-el.zust-fullwidth &, .zust-form-el.zust-full-width & {
+    width: 100%;
+  }
 
   @if $css-variable-enabled {
     border-radius: var(--select-border-radius);
@@ -167,6 +175,12 @@ select.zust-select {
           }
         }
       }
+    }
+  }
+
+  @include mobile {
+    &[multiple] {
+      padding: 10px;
     }
   }
 
