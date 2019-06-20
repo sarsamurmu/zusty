@@ -75,6 +75,10 @@ $tooltip-translate: 20px;
 $input-border-radius: 8px !default;
 $input-border-spread: 2px !default;
 
+// Select
+$select-border-radius: $input-border-radius !default;
+$select-border-spread: $input-border-spread !default;
+
 // Textarea
 $textarea-border-radius: 8px !default;
 

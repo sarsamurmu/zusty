@@ -56,7 +56,11 @@ $variables: (
   --input-border-radius: $input-border-radius,
   --input-border-spread: $input-border-spread,
 
-// Textarea
+  // Select
+  --select-border-radius: $select-border-radius,
+  --select-border-spread: $select-border-spread,
+
+  // Textarea
   --textarea-border-radius: $textarea-border-radius,
 
 

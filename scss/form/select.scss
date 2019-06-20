@@ -1,0 +1,181 @@
+select.zust-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: {
+    top: 8px;
+    bottom: 6px;
+    left: 10px;
+    right: 10px;
+  }
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border-width: 0;
+  border-bottom-width: 2px;
+  border-color: $transparent;
+  width: 100%;
+  box-sizing: content-box;
+
+  @if $css-variable-enabled {
+    border-radius: var(--select-border-radius);
+  } @else {
+    border-radius: $select-border-radius;
+  }
+
+  --in-pad: 35px;
+
+  ~ .zust-icon {
+    --icon-size: 18px;
+    --ic-margin: 10px;
+    position: absolute !important;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: {
+      top: 0 !important;
+      bottom: 0 !important;
+    }
+
+    &.zust-left {
+      left: 0;
+      margin-right: 0 !important;
+      margin-left: var(--ic-margin);
+    }
+
+    &.zust-right {
+      right: 0;
+      margin-left: 0 !important;
+      margin-right: var(--ic-margin);
+    }
+  }
+
+  &.zust-with-icon-left {
+    padding-left: var(--in-pad) !important;
+  }
+
+  &.zust-with-icon-right {
+    padding-right: var(--in-pad) !important;
+  }
+
+  &.zust-with-icon-both {
+    padding-right: var(--in-pad) !important;
+    padding-left: var(--in-pad) !important;
+  }
+
+  &.zust-small {
+    @if $css-variable-enabled {
+      font-size: var(--small-text);
+    } @else {
+      font-size: $small-text;
+    }
+    padding: {
+      left: 9px;
+      right: 9px;
+    }
+
+    --in-pad: 25px;
+
+    ~ .zust-icon {
+      --icon-size: 12px;
+      --ic-margin: 8px;
+    }
+  }
+
+  &.zust-large {
+    @if $css-variable-enabled {
+      font-size: var(--large-text);
+    } @else {
+      font-size: $large-text;
+    }
+    padding: {
+      left: 16px;
+      right: 16px;
+    }
+
+    --in-pad: 45px;
+
+    ~ .zust-icon {
+      --icon-size: 24px;
+      --ic-margin: 14px;
+    }
+  }
+
+  &.zust-xlarge {
+    @if $css-variable-enabled {
+      font-size: var(--xlarge-text);
+    } @else {
+      font-size: $xlarge-text;
+    }
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+
+    --in-pad: 55px;
+
+    ~ .zust-icon {
+      --icon-size: 36px;
+      --ic-margin: 13px;
+    }
+  }
+
+  &[multiple] {
+    padding: 0;
+    border-bottom-width: 0px;
+    box-sizing: content-box;
+    width: max-content;
+
+    option {
+      padding: 5px 100px;
+      text-align: center;
+      background-color: var(--input-bg-color);
+    }
+  }
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+    font-size: var(--medium-text);
+  } @else {
+    transition: $primary-transition;
+    font-size: $medium-text;
+  }
+
+  &:hover, &.zust-hovered {
+    background-color: var(--input-hovered-bg-color);
+  }
+
+  &:focus, &.zust-focused {
+    background-color: var(--body-color-primary);
+    border-color: $transparent !important;
+
+    @if $css-variable-enabled {
+      box-shadow: 0 0 0 var(--select-border-spread) var(--input-border-color);
+    } @else {
+      box-shadow: 0 0 0 $select-border-spread var(--input-border-color);
+    }
+  }
+
+  @each $name, $color, $skip, $hovered-color in $item-colors {
+    @if $name {
+      &.zust-#{$name} {
+        border-color: $color;
+
+        &:focus, &.zust-focused {
+          @if $css-variable-enabled {
+            box-shadow: 0 0 0 var(--select-border-spread) $hovered-color;
+          } @else {
+            box-shadow: 0 0 0 $select-border-spread $hovered-color;
+          }
+        }
+      }
+    }
+  }
+
+  option {
+    background-color: var(--body-color-primary);
+    @if $css-variable-enabled {
+      transition: var(--primary-transition);
+    } @else {
+      transition: $primary-transition;
+    }
+  }
+}
