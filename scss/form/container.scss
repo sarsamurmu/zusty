@@ -1,0 +1,36 @@
+
+// In Container
+.zust-form-el {
+  margin: 0;
+  display: inline-flex;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    margin-right: 8px;
+  }
+
+  .zust-input {
+    margin: 0;
+  }
+
+  .zust-el-group > & > .zust-input {
+    border-radius: 0;
+  }
+
+  .zust-el-group &:first-child .zust-input {
+    @if $css-variable-enabled {
+      border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+    } @else {
+      border-radius: $input-border-radius 0 0 $input-border-radius;
+    }
+  }
+
+  .zust-el-group &:last-child .zust-input {
+    @if $css-variable-enabled {
+      border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
+    } @else {
+      border-radius: 0 $input-border-radius $input-border-radius 0;
+    }
+  }
+}
