@@ -4,7 +4,7 @@
 }
 
 .zust-visible {
-  display: block !important;
+  display: initial !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -19,7 +19,7 @@
 }
 
 @include each-breakpoint('.zust-visible-name', 'name') {
-  display: block !important;
+  display: initial !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -31,7 +31,7 @@
 // On Dark
 [zust-theme="dark"] {
   .zust-visible-on-dark {
-    display: block !important;
+    display: initial !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
