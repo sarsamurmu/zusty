@@ -1,5 +1,71 @@
+// Form Item - zust-form-it
+.zust-form-it {
+  $margin: 20px;
+  margin-bottom: $margin;
+  display: flex;
 
-// In Container
+  .zust-form-inline & {
+    display: inline-block;
+    margin: {
+      bottom: 0;
+      right: $margin;
+    }
+
+    @include mobile {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  > .zust-form-el, > .zust-btn {
+    margin: {
+      bottom: 0 !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+  }
+
+  @include mobile {
+    > .zust-form-el, > .zust-el-group {
+      width: -webkit-fill-available;
+      width: -moz-fill-avaialable;
+      width: fill-available;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.zust-form-inline {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    > .zust-label {
+      width: 100px;
+      text-align: right;
+      margin-right: 30px;
+    }
+  }
+
+  margin-bottom: 20px;
+}
+
+.zust-label {
+  margin: 5px;
+  display: block;
+}
+
+// Form Element
 .zust-form-el {
   margin: 0;
   display: inline-flex;
