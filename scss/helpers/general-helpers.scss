@@ -182,12 +182,24 @@
 }
 
 // Shape Helper
-.zust-fullwidth, .zust-fillup, .zust-full-width {
+.zust-fullwidth, .zust-fillup {
   @extend %full-width;
 }
 
-.zust-fullheight, .zust-full-height {
+@include each-breakpoint('.zust-fullwidth-name, .zust-fillup-name', 'name') {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.zust-fullheight {
   @extend %full-height;
+}
+
+@include each-breakpoint('.zust-fullheight-name', 'name') {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
 }
 
 .zust-rounded {
