@@ -182,7 +182,7 @@
 }
 
 // Shape Helper
-.zust-fullwidth, .zust-full-width {
+.zust-fullwidth, .zust-fillup, .zust-full-width {
   @extend %full-width;
 }
 
@@ -211,6 +211,7 @@
 .zust-el-group {
   display: inline-flex;
   justify-content: flex-start;
+  //align-items: flex-start;
 
   &:not(:last-child) {
     margin-bottom: 8px;
@@ -285,7 +286,7 @@
     display: flex;
 
     > .zust-form-el {
-      width: 100%;
+      //width: 100%;
     }
   }
 }
