@@ -22,7 +22,7 @@
   --badge-text-color: #595959;
   --button-bg-color: white;
   --button-border-color: #e6e6e6;
-  --button-hover-border-color: #d6d6d6;
+  --button-hovered-border-color: #d6d6d6;
   --button-text-color: #666666;
   --button-focus-border-color: rgba(155, 39, 176, 0.14);
   --bottom-nav-bg-color: #e6e6e6;
@@ -36,10 +36,8 @@
   --dropdown-option-hovered-color: #ededed;
   --table-border-color: #e6e6e6;
   --table-bg-color: #f2f2f2;
-  --table-bg-color-hovered: #e6e6e6;
+  --table-hovered-bg-color: #e6e6e6;
   --input-bg-color: #f7f7f7;
-  --input-stransparent-bg-color: rgba(0, 0, 0, 0.04);
-  --input-stransparent-hovered-bg-color: rgba(0, 0, 0, 0.1);
   --input-hovered-bg-color: #ededed;
   --input-text-color: #595959;
   --input-border-color: #66edff;
@@ -64,7 +62,7 @@
   --radio-button-disabled-border-color: #e0e0e0;
   --tooltip-bg-color: #FFF;
   --dimmer-bg-color: rgba(0, 0, 0, 0.6);
-  --light-color: whitesmoke;
+  --light-color: rgba(144, 144, 144, 0.1);
   --text-color-inverted: #FFFFFF;
   --bg-color-inverted: #212121;
 }
@@ -93,7 +91,7 @@
   --badge-text-color: #f2f2f2;
   --button-bg-color: #262626;
   --button-border-color: #474747;
-  --button-hover-border-color: #595959;
+  --button-hovered-border-color: #595959;
   --button-text-color: #d9d9d9;
   --button-focus-border-color: rgba(171, 71, 189, 0.45);
   --bottom-nav-bg-color: #404040;
@@ -107,10 +105,8 @@
   --dropdown-option-hovered-color: #474747;
   --table-border-color: #4d4d4d;
   --table-bg-color: #333333;
-  --table-bg-color-hovered: #4d4d4d;
+  --table-hovered-bg-color: #4d4d4d;
   --input-bg-color: #1a1a1a;
-  --input-stransparent-bg-color: rgba(0, 0, 0, 0.23);
-  --input-stransparent-hovered-bg-color: rgba(0, 0, 0, 0.4);
   --input-hovered-bg-color: #121212;
   --input-text-color: #d9d9d9;
   --input-border-color: #00bdd6;
@@ -135,7 +131,7 @@
   --radio-button-disabled-border-color: #666666;
   --tooltip-bg-color: #424242;
   --dimmer-bg-color: rgba(0, 0, 0, 0.6);
-  --light-color: #2e2e2e;
+  --light-color: rgba(144, 144, 144, 0.1);
   --text-color-inverted: #484848;
   --bg-color-inverted: whitesmoke;
 }
