@@ -251,6 +251,15 @@
   }
 
   // Brands
+  .zust#{$prefix}bg-github {
+    background-color: $github !important;
+    color: $white;
+
+    * {
+      color: $white;
+    }
+  }
+
   .zust#{$prefix}bg-facebook {
     background-color: $facebook !important;
     color: $white;
@@ -567,6 +576,14 @@
   }
 
   // Brands
+  .zust#{$prefix}github {
+    color: $github !important;
+
+    * {
+      color: $github;
+    }
+  }
+
   .zust#{$prefix}facebook {
     color: $facebook !important;
 
