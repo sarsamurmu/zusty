@@ -1,6 +1,6 @@
 {
   "name": "zusty",
-  "version": "0.0.1-alpha3",
+  "version": "0.0.1",
   "description": "A Powerful CSS Framework",
   "author": "Sarsa Murmu <sarsamurmu05@gmail.com>",
   "keywords": [
@@ -41,7 +41,7 @@
     "url": "https://github.com/sarsamurmu/zusty/issues",
     "email": "sarsamurmu05@gmail.com"
   },
-  "homepage": "https://github.com/sarsamurmu/zusty#readme",
+  "homepage": "https://zustycss.com",
   "files": [
     "dist",
     "scss",
