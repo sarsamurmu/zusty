@@ -47,7 +47,7 @@ This is the Starter Template that You can use to get started right away.
     <title>Hello Zusty CSS</title>
   </head>
   <body>
-    <p>My First Page Based on Zusty Framework</p>
+    <p>My First Page with Zusty CSS</p>
   </body>
 </html>
 ```
