@@ -12,11 +12,11 @@ You can Use it in Many Ways. Here's it.
 Add this to top of all Stylesheets which are inside of `<head></head>`
 ```html
 <!-- For This Version -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@0.0.1" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@0.0.1">
 
 <!-- Always Get the Latest Version -->
 <!-- Not Recommended for Production. It can Break Anytime -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty">
 <!-- Other CSS Goes Down Here -->
 ```
 ### npm
@@ -26,7 +26,7 @@ npm i zusty
 ```
 Then in `<head></head>`, add this to top of your CSS Files
 ```html
-<link rel="stylesheet" href="path/to/node_modules/zusty/dist/zusty.min.css" />
+<link rel="stylesheet" href="path/to/node_modules/zusty/dist/zusty.min.css">
 ```
 
 ### Starter Template
@@ -41,7 +41,7 @@ This is the Starter Template that You can use to get started right away.
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Zusty CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@0.0.1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@0.0.1">
     <!-- Other CSS Goes Down Here -->
 
     <title>Hello Zusty CSS</title>
