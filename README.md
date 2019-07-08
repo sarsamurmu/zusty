@@ -1,4 +1,4 @@
-# Zusty CSS Framework
+# Zusty CSS
 [![Build Status](https://travis-ci.com/sarsamurmu/zusty.svg?branch=master)](https://travis-ci.com/sarsamurmu/zusty)
 [![npm version](https://img.shields.io/npm/v/zusty.svg?color)](https://www.npmjs.com/package/zusty)
 
