@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.com/sarsamurmu/zusty.svg?branch=master)](https://travis-ci.com/sarsamurmu/zusty)
 [![npm version](https://img.shields.io/npm/v/zusty.svg?color)](https://www.npmjs.com/package/zusty)
 
+![Zusty](https://zustycss.com/docs/resource/brand_logo_transparent.png)
+
 Power Packed CSS Framework for Building Beautiful Interfaces.
 
 [Read The Docs](https://zustycss.com/docs)
