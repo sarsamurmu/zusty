@@ -192,25 +192,6 @@
       }
     }
   }
-
-  &.zust-loading {
-    position: relative;
-    min-height: 36px;
-    min-width: 90px;
-    pointer-events: none;
-    --spinner-height: 20px;
-
-    &:after {
-      position: absolute;
-      display: block;
-      content: '';
-      width: var(--spinner-height);
-      height: var(--spinner-height);
-      border-radius: calc(var(--spinner-height) / 3);
-      background-color: currentColor;
-      animation: zust-spinner 1s infinite;
-    }
-  }
 }
 
 .zust-toggle-btn {
