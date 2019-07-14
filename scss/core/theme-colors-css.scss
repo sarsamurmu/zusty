@@ -1,19 +1,24 @@
 :root, [zust-theme="light"] {
 
-  // Primary Colors
+  // Theme Colors
   --primary-color: #{$primary-color};
+  --primary-text-color: #{$primary-text-color};
   --primary-hovered-color: #{$primary-hovered-color};
   --primary-color-light: #{$primary-color-light};
   --success-color: #{$success-color};
+  --success-text-color: #{$success-text-color};
   --success-hovered-color: #{$success-hovered-color};
   --success-color-light: #{$success-color-light};
   --warning-color: #{$warning-color};
+  --warning-text-color: #{$warning-text-color};
   --warning-hovered-color: #{$warning-hovered-color};
   --warning-color-light: #{$warning-color-light};
   --error-color: #{$error-color};
+  --error-text-color: #{$error-text-color};
   --error-hovered-color: #{$error-hovered-color};
   --error-color-light: #{$error-color-light};
   --link-color: #{$link-color};
+  --link-text-color: #{$link-text-color};
   --link-hovered-color: #{$link-hovered-color};
   --link-color-light: #{$link-color-light};
 
@@ -107,20 +112,25 @@
 
 [zust-theme="dark"] {
 
-  // Primary Colors
+  // Theme Colors
   --primary-color: #{$primary-color-dark};
+  --primary-text-color: #{$primary-text-color-dark};
   --primary-hovered-color: #{$primary-hovered-color-dark};
   --primary-color-light: #{$primary-color-light-dark};
   --success-color: #{$success-color-dark};
+  --success-text-color: #{$success-text-color-dark};
   --success-hovered-color: #{$success-hovered-color-dark};
   --success-color-light: #{$success-color-light-dark};
   --warning-color: #{$warning-color-dark};
+  --warning-text-color: #{$warning-text-color-dark};
   --warning-hovered-color: #{$warning-hovered-color-dark};
   --warning-color-light: #{$warning-color-light-dark};
   --error-color: #{$error-color-dark};
+  --error-text-color: #{$error-text-color-dark};
   --error-hovered-color: #{$error-hovered-color-dark};
   --error-color-light: #{$error-color-light-dark};
   --link-color: #{$link-color-dark};
+  --link-text-color: #{$link-text-color-dark};
   --link-hovered-color: #{$link-hovered-color-dark};
   --link-color-light: #{$link-color-light-dark};
 

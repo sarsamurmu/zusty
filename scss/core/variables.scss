@@ -119,11 +119,11 @@ $dropdown-item-border-radius: 10px !default;
 // Status Colors
 $status-colors: (
   // $name, $color, $text-color, $hovered-color, $light-color
-  (primary, var(--primary-color), $white, var(--primary-hovered-color), var(--primary-color-light)),
-  (success, var(--success-color), $white, var(--success-hovered-color), var(--success-color-light)),
-  (warning, var(--warning-color), $text-dark, var(--warning-hovered-color), var(--warning-color-light)),
-  (error, var(--error-color), $white, var(--error-hovered-color), var(--error-color-light)),
-  (link, var(--link-color), $white, var(--link-hovered-color), var(--link-color-light))
+  (primary, var(--primary-color), var(--primary-text-color), var(--primary-hovered-color), var(--primary-color-light)),
+  (success, var(--success-color), var(--success-text-color), var(--success-hovered-color), var(--success-color-light)),
+  (warning, var(--warning-color), var(--warning-text-color), var(--warning-hovered-color), var(--warning-color-light)),
+  (error, var(--error-color), var(--error-text-color), var(--error-hovered-color), var(--error-color-light)),
+  (link, var(--link-color), var(--link-text-color), var(--link-hovered-color), var(--link-color-light))
 );
 
 // Custom Color's List. User will made it by themself.
