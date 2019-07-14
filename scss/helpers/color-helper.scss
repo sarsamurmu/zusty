@@ -1,312 +1,67 @@
-// Background Color
-@mixin bg-colors($prefix) {
-  .zust#{$prefix}bg-red {
-    background-color: $red !important;
-    color: $white;
+// Background Colors
+$bg-color-helpers: (
+  ('red', $red, textForBg($red)),
+  ('pink', $pink, textForBg($pink)),
+  ('purple', $purple, textForBg($purple)),
+  ('deep-purple', $deep-purple, textForBg($deep-purple)),
+  ('indigo', $indigo, textForBg($indigo)),
+  ('blue', $blue, textForBg($blue)),
+  ('light-blue', $light-blue, textForBg($light-blue)),
+  ('cyan', $cyan, textForBg($cyan)),
+  ('teal', $teal, textForBg($teal)),
+  ('green', $green, textForBg($green)),
+  ('light-green', $light-green, textForBg($light-green)),
+  ('lime', $lime, textForBg($lime)),
+  ('yellow', $yellow, textForBg($yellow)),
+  ('amber', $amber, textForBg($amber)),
+  ('orange', $orange, textForBg($orange)),
+  ('deep-orange', $deep-orange, textForBg($deep-orange)),
+  ('brown', $brown, textForBg($brown)),
+  ('grey', $grey, textForBg($grey)),
+  ('light-grey', $light-grey, textForBg($light-grey)),
+  ('blue-grey', $blue-grey, textForBg($blue-grey)),
+  ('transparent', $transparent, var(--text-color-primary)),
+  ('light', var(--light-color), var(--text-color-primary)),
+  ('white', $white, textForBg($white)),
+  ('black', $black, textForBg($black)),
+  ('inverted', var(--bg-color-inverted), var(--text-color-inverted)),
+  ('default', var(--body-color-primary), var(--text-color-secondary)),
+  ('github', $github, textForBg($github)),
+  ('facebook', $facebook, textForBg($facebook)),
+  ('twitter', $twitter, textForBg($twitter)),
+  ('linked', $linkedin, textForBg($linkedin)),
+  ('youtube', $youtube, textForBg($youtube))
+);
 
-    * {
-      color: $white;
-    }
-  }
+@mixin bg-colors($fix: '') {
+  // From List
+  @each $name, $bg-color, $txt-color in $bg-color-helpers {
+    .zust#{$fix}-bg-#{$name} {
+      background-color: $bg-color !important;
+      color: $txt-color;
 
-  .zust#{$prefix}bg-pink {
-    background-color: $pink !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-purple {
-    background-color: $purple !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-deep-purple {
-    background-color: $deep-purple !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-indigo {
-    background-color: $indigo !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-blue {
-    background-color: $blue !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-light-blue {
-    background-color: $light-blue !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-cyan {
-    background-color: $cyan !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-teal {
-    background-color: $teal !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-green {
-    background-color: $green !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-light-green {
-    background-color: $light-green !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-lime {
-    background-color: $lime !important;
-    color: $text-dark;
-
-    * {
-      color: $text-dark;
-    }
-  }
-
-  .zust#{$prefix}bg-yellow {
-    background-color: $yellow !important;
-    color: $text-dark;
-
-    * {
-      color: $text-dark;
-    }
-  }
-
-  .zust#{$prefix}bg-amber {
-    background-color: $amber !important;
-    color: $text-dark;
-
-    * {
-      color: $text-dark;
-    }
-  }
-
-  .zust#{$prefix}bg-orange {
-    background-color: $orange !important;
-    color: $text-dark;
-
-    * {
-      color: $text-dark;
-    }
-  }
-
-  .zust#{$prefix}bg-deep-orange {
-    background-color: $deep-orange !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-brown {
-    background-color: $brown !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-grey {
-    background-color: $grey !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-light-grey {
-    background-color: $light-grey !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-blue-grey {
-    background-color: $blue-grey !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  // Necessery
-
-  .zust#{$prefix}bg-transparent {
-    background-color: $transparent !important;
-    color: var(--text-color-primary);
-
-    * {
-      color: var(--text-color-primary);
-    }
-  }
-
-  .zust#{$prefix}bg-light {
-    background-color: rgba(144, 144, 144, 0.1) !important;
-    color: var(--text-color-primary);
-
-    * {
-      color: var(--text-color-primary);
-    }
-  }
-
-  .zust#{$prefix}bg-white {
-    background-color: $white !important;
-    color: $text-dark;
-
-    * {
-      color: $text-dark;
-    }
-  }
-
-  .zust#{$prefix}bg-black {
-    background-color: $black !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-inverted {
-    background-color: var(--bg-color-inverted) !important;
-    color: var(--text-color-inverted);
-
-    * {
-      color: var(--text-color-inverted);
-    }
-  }
-
-  .zust#{$prefix}bg-default {
-    background-color: var(--body-color-primary) !important;
-    color: var(--text-color-secondary);
-
-    * {
-      color: var(--text-color-secondary);
+      * {
+        color: $txt-color
+      }
     }
   }
 
   // Item Colors
   @each $name, $color, $txt-color in $item-colors {
     @if $name {
-      .zust#{$prefix}bg-#{$name} {
+      .zust#{$fix}-bg-#{$name} {
         background-color: $color !important;
         color: $txt-color;
 
         * {
-          color: $txt-color;
+          color: $txt-color
         }
       }
     }
   }
 
-  // Brands
-  .zust#{$prefix}bg-github {
-    background-color: $github !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-facebook {
-    background-color: $facebook !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-facebook-messenger {
-    background-color: $facebook-messenger !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-youtube {
-    background-color: $youtube !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-twitter {
-    background-color: $twitter !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}bg-linkedin {
-    background-color: $linkedin !important;
-    color: $white;
-
-    * {
-      color: $white;
-    }
-  }
-
   // Gradients
-  .zust#{$prefix}bg-blue-gradient, .zust#{$prefix}bg-link-gradient {
+  .zust#{$fix}-bg-blue-gradient, .zust#{$fix}-bg-link-gradient {
     background: linear-gradient(135deg, $blue 0%, #00cfe9 100%) !important;
     color: $white;
 
@@ -315,7 +70,7 @@
     }
   }
 
-  .zust#{$prefix}bg-red-gradient, .zust#{$prefix}bg-error-gradient {
+  .zust#{$fix}-bg-red-gradient, .zust#{$fix}-bg-error-gradient {
     background: linear-gradient(135deg, $red 0%, $pink 100%) !important;
     color: $white;
 
@@ -324,7 +79,7 @@
     }
   }
 
-  .zust#{$prefix}bg-green-gradient, .zust#{$prefix}bg-success-gradient {
+  .zust#{$fix}-bg-green-gradient, .zust#{$fix}-bg-success-gradient {
     background: linear-gradient(135deg, $light-green 0%, $light-blue 100%) !important;
     color: $white;
 
@@ -333,7 +88,7 @@
     }
   }
 
-  .zust#{$prefix}bg-amber-gradient, .zust#{$prefix}bg-warning-gradient {
+  .zust#{$fix}-bg-amber-gradient, .zust#{$fix}-bg-warning-gradient {
     background: linear-gradient(135deg, $amber 0%, #ff8330 100%) !important;
     color: $white;
 
@@ -343,229 +98,65 @@
   }
 }
 
-@include bg-colors('-');
+@include bg-colors;
 
 // Backgrounds on Dark Theme
-
 [zust-theme="dark"] {
-  @include bg-colors('-dark-');
+  @include bg-colors('-dark');
 }
 
-
 // Text Colors
-@mixin text-colors($prefix) {
-  .zust#{$prefix}red {
-    color: $red !important;
+$text-color-helpers: (
+  ('red', $red),
+  ('pink', $pink),
+  ('purple', $purple),
+  ('deep-purple', $deep-purple),
+  ('indigo', $indigo),
+  ('blue', $blue),
+  ('light-blue', $light-blue),
+  ('cyan', $cyan),
+  ('teal', $teal),
+  ('green', $green),
+  ('light-green', $light-green),
+  ('lime', $lime),
+  ('yellow', $yellow),
+  ('amber', $amber),
+  ('orange', $orange),
+  ('deep-orange', $deep-orange),
+  ('brown', $brown),
+  ('grey', $grey),
+  ('light-grey', $light-grey),
+  ('blue-grey', $blue-grey),
+  ('transparent', $transparent),
+  ('black', $black),
+  ('white', $white),
+  ('inverted', var(--text-color-inverted)),
+  ('pow-primary', var(--text-color-primary)),
+  ('pow-secondary', var(--text-color-secondary)),
+  ('pow-tertiary', var(--text-color-tertiary)),
+  ('github', $github),
+  ('facebook', $facebook),
+  ('twitter', $twitter),
+  ('linked', $linkedin),
+  ('youtube', $youtube)
+);
 
-    * {
-      color: $red;
-    }
-  }
+@mixin text-colors($fix: '') {
+  // From List
+  @each $name, $color in $text-color-helpers {
+    .zust#{$fix}-text-#{$name} {
+      color: $color !important;
 
-  .zust#{$prefix}pink {
-    color: $pink !important;
-
-    * {
-      color: $pink;
-    }
-  }
-
-  .zust#{$prefix}purple {
-    color: $purple !important;
-
-    * {
-      color: $purple;
-    }
-  }
-
-  .zust#{$prefix}deep-purple {
-    color: $deep-purple !important;
-
-    * {
-      color: $deep-purple;
-    }
-  }
-
-  .zust#{$prefix}indigo {
-    color: $indigo !important;
-
-    * {
-      color: $indigo;
-    }
-  }
-
-  .zust#{$prefix}blue {
-    color: $blue !important;
-
-    * {
-      color: $blue;
-    }
-  }
-
-  .zust#{$prefix}light-blue {
-    color: $light-blue !important;
-
-    * {
-      color: $light-blue;
-    }
-  }
-
-  .zust#{$prefix}cyan {
-    color: $cyan !important;
-
-    * {
-      color: $cyan;
-    }
-  }
-
-  .zust#{$prefix}teal {
-    color: $teal !important;
-
-    * {
-      color: $teal;
-    }
-  }
-
-  .zust#{$prefix}green {
-    color: $green !important;
-
-    * {
-      color: $green;
-    }
-  }
-
-  .zust#{$prefix}light-green {
-    color: $light-green !important;
-
-    * {
-      color: $light-green;
-    }
-  }
-
-  .zust#{$prefix}lime {
-    color: $lime !important;
-
-    * {
-      color: $lime;
-    }
-  }
-
-  .zust#{$prefix}yellow {
-    color: $yellow !important;
-
-    * {
-      color: $yellow;
-    }
-  }
-
-  .zust#{$prefix}amber {
-    color: $amber !important;
-
-    * {
-      color: $amber;
-    }
-  }
-
-  .zust#{$prefix}orange {
-    color: $orange !important;
-
-    * {
-      color: $orange;
-    }
-  }
-
-  .zust#{$prefix}deep-orange {
-    color: $deep-orange !important;
-
-    * {
-      color: $deep-orange;
-    }
-  }
-
-  .zust#{$prefix}brown {
-    color: $brown !important;
-
-    * {
-      color: $brown;
-    }
-  }
-
-  .zust#{$prefix}grey {
-    color: $grey !important;
-
-    * {
-      color: $grey;
-    }
-  }
-
-  .zust#{$prefix}blue-grey {
-    color: $blue-grey !important;
-
-    * {
-      color: $blue-grey;
-    }
-  }
-
-  .zust#{$prefix}transparent {
-    color: $transparent !important;
-
-    * {
-      color: $transparent;
-    }
-  }
-
-  .zust#{$prefix}black {
-    color: $black !important;
-
-    * {
-      color: $black;
-    }
-  }
-
-  .zust#{$prefix}white {
-    color: $white !important;
-
-    * {
-      color: $white;
-    }
-  }
-
-  .zust#{$prefix}inverted {
-    color: var(--text-color-inverted) !important;
-
-    * {
-      color: var(--text-color-inverted);
-    }
-  }
-
-  .zust#{$prefix}pow-primary {
-    color: var(--text-color-primary) !important;
-
-    * {
-      color: var(--text-color-primary);
-    }
-  }
-
-  .zust#{$prefix}pow-secondary {
-    color: var(--text-color-secondary) !important;
-
-    * {
-      color: var(--text-color-secondary);
-    }
-  }
-
-  .zust#{$prefix}pow-tertiary {
-    color: var(--text-color-tertiary) !important;
-
-    * {
-      color: var(--text-color-tertiary);
+      * {
+        color: $color
+      }
     }
   }
 
   // Item Colors
-  @each $name, $color, $txt-color in $item-colors {
+  @each $name, $color in $item-colors {
     @if $name {
-      .zust#{$prefix}#{$name} {
+      .zust#{$fix}-text-#{$name} {
         color: $color !important;
 
         * {
@@ -575,85 +166,35 @@
     }
   }
 
-  // Brands
-  .zust#{$prefix}github {
-    color: $github !important;
-
-    * {
-      color: $github;
-    }
-  }
-
-  .zust#{$prefix}facebook {
-    color: $facebook !important;
-
-    * {
-      color: $facebook;
-    }
-  }
-
-  .zust#{$prefix}facebook-messenger {
-    color: $facebook-messenger !important;
-
-    * {
-      color: $facebook-messenger;
-    }
-  }
-
-  .zust#{$prefix}linkedin {
-    color: $linkedin !important;
-
-    * {
-      color: $linkedin;
-    }
-  }
-
-  .zust#{$prefix}twitter {
-    color: $twitter !important;
-
-    * {
-      color: $twitter;
-    }
-  }
-
-  .zust#{$prefix}youtube {
-    color: $youtube !important;
-
-    * {
-      color: $youtube;
-    }
-  }
-
   // Gradients
-  .zust#{$prefix}blue-gradient, .zust#{$prefix}link-gradient {
+  .zust#{$fix}-text-blue-gradient, .zust#{$fix}-text-link-gradient {
     background: linear-gradient(135deg, $blue 0%, #00cfe9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .zust#{$prefix}red-gradient, .zust#{$prefix}error-gradient {
+  .zust#{$fix}-text-red-gradient, .zust#{$fix}-text-error-gradient {
     background: linear-gradient(135deg, $red 0%, $pink 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .zust#{$prefix}green-gradient, .zust#{$prefix}success-gradient {
+  .zust#{$fix}-text-green-gradient, .zust#{$fix}-text-success-gradient {
     background: linear-gradient(135deg, $light-green 0%, $light-blue 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .zust#{$prefix}amber-gradient, .zust#{$prefix}warning-gradient {
+  .zust#{$fix}-text-amber-gradient, .zust#{$fix}-text-warning-gradient {
     background: linear-gradient(135deg, $amber 0%, #ff8330 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
 
-@include text-colors('-text-');
+@include text-colors;
 
-// Text on Dark Mode
-
+// Text on Dark Theme
 [zust-theme="dark"] {
-  @include text-colors('-dark-text-');
+  @include text-colors('-dark');
 }
