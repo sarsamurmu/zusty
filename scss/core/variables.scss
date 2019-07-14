@@ -10,10 +10,10 @@ $tablet: 768px !default;
 $desktop: 1024px !default;
 
 $default-breakpoints: (
-  (mobile, null, $tablet - 1px),
-  (touch, null, $desktop - 1px),
-  (tablet, $tablet, $desktop - 1px),
-  (desktop, $desktop, null)
+  ('mobile', null, $tablet - 1px),
+  ('touch', null, $desktop - 1px),
+  ('tablet', $tablet, $desktop - 1px),
+  ('desktop', $desktop, null)
 );
 
 $custom-breakpoints: () !default;
@@ -119,11 +119,11 @@ $dropdown-item-border-radius: 10px !default;
 // Status Colors
 $status-colors: (
   // $name, $color, $text-color, $hovered-color, $light-color
-  (primary, var(--primary-color), var(--primary-text-color), var(--primary-hovered-color), var(--primary-color-light)),
-  (success, var(--success-color), var(--success-text-color), var(--success-hovered-color), var(--success-color-light)),
-  (warning, var(--warning-color), var(--warning-text-color), var(--warning-hovered-color), var(--warning-color-light)),
-  (error, var(--error-color), var(--error-text-color), var(--error-hovered-color), var(--error-color-light)),
-  (link, var(--link-color), var(--link-text-color), var(--link-hovered-color), var(--link-color-light))
+  ('primary', var(--primary-color), var(--primary-text-color), var(--primary-hovered-color), var(--primary-color-light)),
+  ('success', var(--success-color), var(--success-text-color), var(--success-hovered-color), var(--success-color-light)),
+  ('warning', var(--warning-color), var(--warning-text-color), var(--warning-hovered-color), var(--warning-color-light)),
+  ('error', var(--error-color), var(--error-text-color), var(--error-hovered-color), var(--error-color-light)),
+  ('link', var(--link-color), var(--link-text-color), var(--link-hovered-color), var(--link-color-light))
 );
 
 // Custom Color's List. User will made it by themself.
