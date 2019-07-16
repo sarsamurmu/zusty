@@ -172,6 +172,8 @@ $radio-button-disabled-border-color-dark: hsl(0, 0%, 40%) !default;
 // Tooltip
 $tooltip-bg-color: #FFF !default;
 $tooltip-bg-color-dark: hsl(0, 0%, 26%) !default;
+$tooltip-text-color: $text-color-secondary !default;
+$tooltip-text-color-dark: $text-color-secondary-dark !default;
 
 // Misc.
 $dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;

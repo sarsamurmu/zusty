@@ -12,7 +12,7 @@
     border-radius: 8px;
     position: absolute;
     font-size: 12px;
-    color: var(--text-color-primary);
+    color: var(--tooltip-text-color);
     visibility: hidden;
     opacity: 0;
     box-shadow: 0 0 5px 0px hsla(0, 0%, 0%, 0.08);
@@ -162,7 +162,7 @@
   @include each-breakpoint('&[zust-tooltip-visibility="name"]:before', 'name') {
     display: inline-block;
   }
-  
+
   @each $name, $color, $txt-color in $item-colors {
     @if $name {
       &[zust-tooltip-type="#{$name}"] {
