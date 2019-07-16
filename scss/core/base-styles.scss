@@ -7,12 +7,12 @@ body {
   height: min-content;
   background-color: var(--body-bg-color);
   transition: $primary-transition;
-  color: var(--text-color-secondary);
+  color: var(--body-text-color);
   padding: 20px;
 }
 
 text, p {
-  color: var(--text-color-secondary);
+  color: var(--body-text-color);
 }
 
 a:not(.zust-btn) {

@@ -22,8 +22,9 @@
   --link-hovered-color: #{$link-hovered-color};
   --link-color-light: #{$link-color-light};
 
-  // General Items
+  // Base
   --body-bg-color: #{$body-bg-color};
+  --body-text-color: #{$body-text-color};
   --text-color-primary: #{$text-color-primary};
   --text-color-secondary: #{$text-color-secondary};
   --text-color-tertiary: #{$text-color-tertiary};
@@ -134,8 +135,9 @@
   --link-hovered-color: #{$link-hovered-color-dark};
   --link-color-light: #{$link-color-light-dark};
 
-  // General Items
+  // Base
   --body-bg-color: #{$body-bg-color-dark};
+  --body-text-color: #{$body-text-color-dark};
   --text-color-primary: #{$text-color-primary-dark};
   --text-color-secondary: #{$text-color-secondary-dark};
   --text-color-tertiary: #{$text-color-tertiary-dark};

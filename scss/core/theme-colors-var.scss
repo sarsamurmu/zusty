@@ -43,15 +43,17 @@ $link-hovered-color-dark: $link-hovered-color !default;
 $link-color-light: hsla(210, 100%, 50%, 0.3) !default;
 $link-color-light-dark: $link-color-light !default;
 
-// General Items
-$body-bg-color: hsl(0, 0%, 100%) !default;
-$body-bg-color-dark: hsl(0, 0%, 13%) !default;
+// Base
 $text-color-primary: hsl(0, 0%, 25%) !default;
 $text-color-primary-dark: hsl(0, 0%, 100%) !default;
 $text-color-secondary: hsl(0, 0%, 35%) !default;
 $text-color-secondary-dark: hsl(0, 0%, 85%) !default;
 $text-color-tertiary: hsl(0, 0%, 45%) !default;
 $text-color-tertiary-dark: hsl(0, 0%, 75%) !default;
+$body-bg-color: hsl(0, 0%, 100%) !default;
+$body-bg-color-dark: hsl(0, 0%, 13%) !default;
+$body-text-color: $text-color-secondary !default;
+$body-text-color-dark: $text-color-secondary-dark !default;
 $divider-color: hsl(0, 0%, 82%) !default;
 $divider-color-dark: hsl(0, 0%, 42%) !default;
 
