@@ -152,7 +152,7 @@ select.zust-select {
   }
 
   &:focus, &.zust-focused {
-    background-color: var(--body-color-primary);
+    background-color: var(--body-bg-color);
     border-color: $transparent !important;
 
     @if $css-variable-enabled {
@@ -201,7 +201,7 @@ select.zust-select {
   }
 
   option {
-    background-color: var(--body-color-primary);
+    background-color: var(--body-bg-color);
     @if $css-variable-enabled {
       transition: var(--primary-transition);
     } @else {

@@ -5,7 +5,7 @@ html {
 
 body {
   height: min-content;
-  background-color: var(--body-color-primary);
+  background-color: var(--body-bg-color);
   transition: $primary-transition;
   color: var(--text-color-secondary);
   padding: 20px;

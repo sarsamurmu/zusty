@@ -137,7 +137,7 @@
   }
 
   &:focus, &.zust-focused {
-    background-color: var(--body-color-primary);
+    background-color: var(--body-bg-color);
     @if $css-variable-enabled {
       box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-color);
     } @else {

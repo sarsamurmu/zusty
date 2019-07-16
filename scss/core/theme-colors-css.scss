@@ -23,7 +23,7 @@
   --link-color-light: #{$link-color-light};
 
   // General Items
-  --body-color-primary: #{$body-color-primary};
+  --body-bg-color: #{$body-bg-color};
   --text-color-primary: #{$text-color-primary};
   --text-color-secondary: #{$text-color-secondary};
   --text-color-tertiary: #{$text-color-tertiary};
@@ -135,7 +135,7 @@
   --link-color-light: #{$link-color-light-dark};
 
   // General Items
-  --body-color-primary: #{$body-color-primary-dark};
+  --body-bg-color: #{$body-bg-color-dark};
   --text-color-primary: #{$text-color-primary-dark};
   --text-color-secondary: #{$text-color-secondary-dark};
   --text-color-tertiary: #{$text-color-tertiary-dark};

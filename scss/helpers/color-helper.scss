@@ -25,7 +25,7 @@ $bg-color-helpers: (
   ('white', $white, textForBg($white)),
   ('black', $black, textForBg($black)),
   ('inverted', var(--bg-color-inverted), var(--text-color-inverted)),
-  ('default', var(--body-color-primary), var(--text-color-secondary)),
+  ('default', var(--body-bg-color), var(--text-color-secondary)),
   ('github', $github, textForBg($github)),
   ('facebook', $facebook, textForBg($facebook)),
   ('twitter', $twitter, textForBg($twitter)),
