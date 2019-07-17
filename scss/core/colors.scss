@@ -42,10 +42,43 @@ $nephritis: #27AE60;
 $peter-river: #3498DB;
 $alizarin: #E74C3C;
 
-
 // Brands
 $github: #24292e;
 $facebook: #4267b2;
 $twitter: #38A1F3;
 $linkedin: #0077B5;
 $youtube: #ff0000;
+
+// List
+$colors: (
+  ('red', $red, textForBg($red)),
+  ('pink', $pink, textForBg($pink)),
+  ('purple', $purple, textForBg($purple)),
+  ('deep-purple', $deep-purple, textForBg($deep-purple)),
+  ('indigo', $indigo, textForBg($indigo)),
+  ('blue', $blue, textForBg($blue)),
+  ('light-blue', $light-blue, textForBg($light-blue)),
+  ('cyan', $cyan, textForBg($cyan)),
+  ('teal', $teal, textForBg($teal)),
+  ('green', $green, textForBg($green)),
+  ('light-green', $light-green, textForBg($light-green)),
+  ('lime', $lime, textForBg($lime)),
+  ('yellow', $yellow, textForBg($yellow)),
+  ('amber', $amber, textForBg($amber)),
+  ('orange', $orange, textForBg($orange)),
+  ('deep-orange', $deep-orange, textForBg($deep-orange)),
+  ('brown', $brown, textForBg($brown)),
+  ('grey', $grey, textForBg($grey)),
+  ('light-grey', $light-grey, textForBg($light-grey)),
+  ('blue-grey', $blue-grey, textForBg($blue-grey)),
+  ('white', $white, textForBg($white)),
+  ('black', $black, textForBg($black)),
+  ('transparent', $transparent, var(--text-color-primary)),
+
+  // Brands
+  ('github', $github, textForBg($github)),
+  ('facebook', $facebook, textForBg($facebook)),
+  ('twitter', $twitter, textForBg($twitter)),
+  ('linkedin', $linkedin, textForBg($linkedin)),
+  ('youtube', $youtube, textForBg($youtube))
+);

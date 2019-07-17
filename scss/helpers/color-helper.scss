@@ -1,37 +1,10 @@
 // Background Colors
-$bg-color-helpers: (
-  ('red', $red, textForBg($red)),
-  ('pink', $pink, textForBg($pink)),
-  ('purple', $purple, textForBg($purple)),
-  ('deep-purple', $deep-purple, textForBg($deep-purple)),
-  ('indigo', $indigo, textForBg($indigo)),
-  ('blue', $blue, textForBg($blue)),
-  ('light-blue', $light-blue, textForBg($light-blue)),
-  ('cyan', $cyan, textForBg($cyan)),
-  ('teal', $teal, textForBg($teal)),
-  ('green', $green, textForBg($green)),
-  ('light-green', $light-green, textForBg($light-green)),
-  ('lime', $lime, textForBg($lime)),
-  ('yellow', $yellow, textForBg($yellow)),
-  ('amber', $amber, textForBg($amber)),
-  ('orange', $orange, textForBg($orange)),
-  ('deep-orange', $deep-orange, textForBg($deep-orange)),
-  ('brown', $brown, textForBg($brown)),
-  ('grey', $grey, textForBg($grey)),
-  ('light-grey', $light-grey, textForBg($light-grey)),
-  ('blue-grey', $blue-grey, textForBg($blue-grey)),
-  ('transparent', $transparent, var(--text-color-primary)),
-  ('light', var(--light-color), var(--text-color-primary)),
-  ('white', $white, textForBg($white)),
-  ('black', $black, textForBg($black)),
+$extra-bg-colors: (
   ('inverted', var(--bg-color-inverted), var(--text-color-inverted)),
-  ('default', var(--body-bg-color), var(--text-color-secondary)),
-  ('github', $github, textForBg($github)),
-  ('facebook', $facebook, textForBg($facebook)),
-  ('twitter', $twitter, textForBg($twitter)),
-  ('linked', $linkedin, textForBg($linkedin)),
-  ('youtube', $youtube, textForBg($youtube))
+  ('default', var(--body-bg-color), var(--text-color-secondary))
 );
+
+$bg-color-helpers: join($colors, $extra-bg-colors);
 
 @mixin bg-colors($fix: '') {
   // From List
@@ -106,40 +79,14 @@ $bg-color-helpers: (
 }
 
 // Text Colors
-$text-color-helpers: (
-  ('red', $red),
-  ('pink', $pink),
-  ('purple', $purple),
-  ('deep-purple', $deep-purple),
-  ('indigo', $indigo),
-  ('blue', $blue),
-  ('light-blue', $light-blue),
-  ('cyan', $cyan),
-  ('teal', $teal),
-  ('green', $green),
-  ('light-green', $light-green),
-  ('lime', $lime),
-  ('yellow', $yellow),
-  ('amber', $amber),
-  ('orange', $orange),
-  ('deep-orange', $deep-orange),
-  ('brown', $brown),
-  ('grey', $grey),
-  ('light-grey', $light-grey),
-  ('blue-grey', $blue-grey),
-  ('transparent', $transparent),
-  ('black', $black),
-  ('white', $white),
+$extra-text-colors: (
   ('inverted', var(--text-color-inverted)),
   ('pow-primary', var(--text-color-primary)),
   ('pow-secondary', var(--text-color-secondary)),
-  ('pow-tertiary', var(--text-color-tertiary)),
-  ('github', $github),
-  ('facebook', $facebook),
-  ('twitter', $twitter),
-  ('linked', $linkedin),
-  ('youtube', $youtube)
+  ('pow-tertiary', var(--text-color-tertiary))
 );
+
+$text-color-helpers: join($colors, $extra-text-colors);
 
 @mixin text-colors($fix: '') {
   // From List
@@ -198,3 +145,12 @@ $text-color-helpers: (
 [zust-theme="dark"] {
   @include text-colors('-dark');
 }
+
+//@for $i from 1 through 9 {
+//  .zust-bg-grey-#{$i}00 {
+//    $bg: mix(black, white, $i * 10);
+//
+//    background-color: $bg;
+//    color: textForBg($bg);
+//  }
+//}
