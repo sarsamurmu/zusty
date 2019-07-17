@@ -1,5 +1,5 @@
-// Replace `$search` with `$replace` in `$string`
-// @author Hugo Giraudel
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
 
@@ -10,8 +10,8 @@
   @return $string;
 }
 
-// @author Hugo Giraudel
-// Taken from https://css-tricks.com/snippets/sass/power-function/
+/// @author Hugo Giraudel
+/// Taken from https://css-tricks.com/snippets/sass/power-function/
 @function pow($number, $exponent) {
   $value: 1;
 
@@ -24,8 +24,9 @@
   @return $value;
 }
 
-// @author Hugo Giraudel
-// Taken from https://css-tricks.com/snippets/sass/luminance-color-function/
+/// Checks Luminance of Given Color
+/// @author Hugo Giraudel
+/// Taken from https://css-tricks.com/snippets/sass/luminance-color-function/
 @function luminance($color) {
   $colors: (
     'red': red($color),
@@ -50,6 +51,20 @@
   @return (map-get($colors, 'red') * .2126) + (map-get($colors, 'green') * .7152) + (map-get($colors, 'blue') * .0722);
 }
 
+/// Returns a List with all List item from a given index from a List
+/// @author Sarsa Murmu
+/// @param {list} $given-list - A List with Nested Lists.
+/// @param {number} $it-index - Index of the item to get.
+/// @return {list} - List of all Items Found.
+/// @example Usage
+/// $list: (
+///   ('mobile', null, $tablet - 1px),
+///   ('touch', null, $desktop - 1px),
+///   ('tablet', $tablet, $desktop - 1px),
+///   ('desktop', $desktop, null)
+/// );
+///
+/// @debug getListItems($list, 1); -> ('mobile', 'touch', 'tablet', 'desktop')
 @function getListItems($given-list, $it-index) {
   $list: () !default;
 
@@ -64,6 +79,7 @@
 
   @return $list;
 }
+
 
 @function getClassList($list, $selector, $replace, $prefix, $suffix, $seperator: '') {
   $classlist: $prefix;
@@ -91,4 +107,16 @@
   } @else {
     @return $white;
   }
+}
+
+@function getColor($name) {
+  @for $i from 1 through length($colors) {
+    $currentList: nth($colors, $i);
+
+    @if index($currentList, $name) {
+      @return nth($currentList, 2);
+    }
+  }
+
+  @return $name;
 }
