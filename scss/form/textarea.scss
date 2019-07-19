@@ -53,15 +53,13 @@ textarea.zust-textarea {
     }
   }
 
+  // Transparent
   &.zust-transparent {
-    background-color: var(--input-stransparent-bg-color);
-
-    &:hover, &.zust-hovered {
-      background-color: var(--input-stransparent-hovered-bg-color);
-    }
+    background-color: $transparent !important;
 
     &:focus, &.zust-focused {
-      background-color: var(--body-bg-color);
+      background-color: $transparent !important;
+      box-shadow: 0 0 0 0 !important;
     }
   }
 

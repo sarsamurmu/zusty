@@ -167,6 +167,16 @@
     }
   }
 
+  // Transparent
+  &.zust-transparent {
+    background-color: $transparent !important;
+
+    &:focus, &.zust-focused {
+      background-color: $transparent !important;
+      box-shadow: 0 0 0 0 !important;
+    }
+  }
+
   // Validity Check
   &.zust-check-validity {
     & ~ .zust-icon.zust-if-valid {
