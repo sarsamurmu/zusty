@@ -1,46 +1,46 @@
-$primary-color: hsl(36, 100%, 50%) !default;
+$primary-color: #2ECC71 !default;
 $primary-color-dark: $primary-color !default;
 $primary-text-color: textForBg($primary-color) !default;
 $primary-text-color-dark: textForBg($primary-color-dark) !default;
-$primary-hovered-color: hsl(36, 100%, 47%) !default;
+$primary-hovered-color: darken($primary-color, 5%) !default;
 $primary-hovered-color-dark: $primary-hovered-color !default;
-$primary-color-light: hsla(36, 100%, 57%, 0.3) !default;
+$primary-color-light: transparentize($primary-color, 0.7) !default;
 $primary-color-light-dark: $primary-color-light !default;
 
-$success-color: hsl(88, 50%, 53%) !default;
+$success-color: #BADC58 !default;
 $success-color-dark: $success-color !default;
 $success-text-color: textForBg($success-color) !default;
 $success-text-color-dark: textForBg($success-color-dark) !default;
-$success-hovered-color: hsl(88, 50%, 48%) !default;
+$success-hovered-color: darken($success-color, 5%) !default;
 $success-hovered-color-dark: $success-hovered-color !default;
-$success-color-light: hsla(88, 50%, 53%, 0.3) !default;
+$success-color-light: transparentize($success-color, 0.7) !default;
 $success-color-light-dark: $success-color-light !default;
 
 $warning-color: hsl(45, 100%, 51%) !default;
 $warning-color-dark: $warning-color !default;
 $warning-text-color: textForBg($warning-color) !default;
 $warning-text-color-dark: textForBg($warning-color-dark) !default;
-$warning-hovered-color: hsl(45, 100%, 48%) !default;
+$warning-hovered-color: darken($warning-color, 3%) !default;
 $warning-hovered-color-dark: $warning-hovered-color !default;
-$warning-color-light: hsla(45, 100%, 51%, 0.3) !default;
+$warning-color-light: transparentize($warning-color, 0.7) !default;
 $warning-color-light-dark: $warning-color-light !default;
 
-$error-color: hsl(4, 90%, 58%) !default;
+$error-color: #FF6348 !default;
 $error-color-dark: $error-color !default;
 $error-text-color: textForBg($error-color) !default;
 $error-text-color-dark: textForBg($error-color-dark) !default;
-$error-hovered-color: hsl(1, 83%, 55%) !default;
+$error-hovered-color: darken($error-color, 3%) !default;
 $error-hovered-color-dark: $error-hovered-color !default;
-$error-color-light: hsla(4, 90%, 58%, 0.3) !default;
+$error-color-light: transparentize($error-color, 0.7) !default;
 $error-color-light-dark: $error-color-light !default;
 
 $link-color: hsl(210, 100%, 50%) !default;
 $link-color-dark: $link-color !default;
 $link-text-color: textForBg($link-color) !default;
 $link-text-color-dark: textForBg($link-color-dark) !default;
-$link-hovered-color: hsl(210, 100%, 47%) !default;
+$link-hovered-color: darken($link-color, 3%) !default;
 $link-hovered-color-dark: $link-hovered-color !default;
-$link-color-light: hsla(210, 100%, 50%, 0.3) !default;
+$link-color-light: transparentize($link-color, 0.7) !default;
 $link-color-light-dark: $link-color-light !default;
 
 // Base
