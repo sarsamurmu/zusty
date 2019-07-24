@@ -1,3 +1,5 @@
+$selector-text: '&:hover, &:focus, &.zust-hovered, &.zust-active';
+
 [zust-tooltip] {
   overflow: visible;
   position: relative;
@@ -43,7 +45,7 @@
     margin-left: $tooltip-margin;
   }
 
-  &:hover, &.zust-hovered, &.zust-active {
+  #{$selector-text} {
     &:before {
       transition: all 0.3s ease 0.1s, visibility 0s ease 0s;
       visibility: visible;
@@ -52,7 +54,7 @@
   }
 
   &:not([zust-tooltip-position="top"]):not([zust-tooltip-position="bottom"]) {
-    &:hover, &.zust-hovered, &.zust-active {
+    #{$selector-text} {
       &:before {
         transform: none !important;
       }
@@ -81,7 +83,7 @@
       transform: translateY($tooltip-translate) translateX(-50%);
     }
 
-    &:hover, &.zust-hovered, &.zust-active {
+    #{$selector-text} {
       &:before {
         transform: translateY(0) translateX(-50%);
       }
@@ -123,7 +125,7 @@
       transform: translateY(- $tooltip-translate) translateX(-50%);
     }
 
-    &:hover, &.zust-hovered, &.zust-active {
+    #{$selector-text} {
       &:before {
         transform: translateY(0) translateX(-50%);
       }
