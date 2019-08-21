@@ -1,7 +1,8 @@
 // Background Colors
 $extra-bg-colors: (
   ('inverted', var(--bg-color-inverted), var(--text-color-inverted)),
-  ('default', var(--body-bg-color), var(--text-color-secondary))
+  ('default', var(--body-bg-color), var(--text-color-secondary)),
+  ('light', var(--light-color), var(--text-color-secondary))
 );
 
 $bg-color-helpers: join($colors, $extra-bg-colors);
