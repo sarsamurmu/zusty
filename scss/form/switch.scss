@@ -1,110 +1,91 @@
 .zust-switch {
   position: relative;
+  margin: 0 0 8px 8px;
   display: inline-block;
-  margin: 2px;
-  width: 60px;
-  height: 34px;
+  user-select: none;
 
-  &.zust-gummy {
-    &:active {
-      input:not(:checked) ~ span:before {
-        width: 56px;
-        box-shadow: 0 0 0 0 !important;
-      }
-      input:checked ~ span:before {
-        width: 56px;
-        transform: translateX(0);
-        box-shadow: 0 0 0 0 !important;
-      }
-    }
+  span ~ span {
+    margin-left: 8px;
   }
 
-  &:active > span:before {
-    transition: all 0.4s, box-shadow 0.2s 0.3s;
-    box-shadow: 0 0 0 10px rgba(144, 144, 144, 0.3);
-  }
-
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-
-    &:checked {
-      + span {
-        background-color: var(--switch-active-fg-color);
-        filter: brightness(1.2);
-
-        &:before {
-          background-color: var(--switch-active-fg-color);
-          filter: brightness(0.8);
-          transform: translateX(26px);
-        }
-      }
-    }
-  }
-
-  input + span {
-    position: absolute;
-    cursor: pointer;
-    top: 6px;
-    left: 6px;
-    right: 6px;
-    bottom: 6px;
+  > input + span {
+    padding-left: 35px;
     background-color: var(--switch-bg-color);
-    transition: 0.4s;
-    border-radius: 99999px;
+    border-radius: 100px;
+    transition: $primary-transition;
+    box-shadow: 0 0 0px 2px var(--switch-border-color);
+    height: 18px;
+    position: relative;
 
-    &:before {
-      position: absolute;
-      content: "";
-      height: 28px;
-      width: 28px;
-      left: -6px;
-      bottom: -3px;
+    &:after {
+      content: '';
+      border-radius: 100px;
+      width: 6px;
+      height: 12px;
       background-color: var(--switch-fg-color);
-      transition: all 0.4s;
-      border-radius: 99999px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 7px;
+      transition: $primary-transition;
     }
   }
 
-  @each $name, $color in $item-colors {
+  > input {
+    display: none;
+
+    &:checked + span {
+      background-color: var(--switch-active-bg-color);
+      box-shadow: 0 0 0px 2px var(--switch-active-border-color);
+
+      &:after {
+        background-color: var(--switch-active-fg-color);
+        left: 22px;
+      }
+    }
+  }
+
+  @each $name, $color, $s, $g, $light-color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
-        input:checked {
-          + span {
-            background-color: $color;
-
-            &:before {
-              background-color: $color;
-              transform: translateX(26px);
-            }
-          }
-        }
+      &.zust-#{$name} > input:checked + span {
+        background-color: $color;
+        box-shadow: 0 0 0px 2px $light-color;
       }
     }
   }
 
-  &.zust-disabled, &[disabled] {
-    input:checked {
-      + span {
-        background-color: var(--switch-disabled-bg-color);
-        filter: brightness(1);
-
-        &:before {
-          background-color: var(--switch-disabled-fg-color);
-          transform: translateX(0);
-          filter: brightness(1);
-        }
-      }
-    }
+  &[disabled] {
+    pointer-events: none;
 
     span {
-      cursor: default;
-      background-color: var(--switch-disabled-bg-color);
+      color: var(--switch-disabled-fg-color);
+    }
 
-      &:before {
+    > input + span {
+      background-color: var(--switch-disabled-bg-color);
+      box-shadow: 0 0 0px 1px var(--switch-disabled-bg-color);
+
+      &:after {
         background-color: var(--switch-disabled-fg-color);
       }
     }
+
+    > input:checked + span {
+      background-color: var(--switch-disabled-bg-color);
+      box-shadow: 0 0 0px 1px var(--switch-disabled-bg-color);
+
+      &:after {
+        background-color: var(--switch-disabled-fg-color);
+      }
+    }
+  }
+
+  &.zust-gummy:active > input + span:after {
+    width: 20px;
+  }
+
+  &.zust-gummy:active > input:checked + span:after {
+    width: 20px;
+    transform: translate(-12px, -50%);
   }
 }

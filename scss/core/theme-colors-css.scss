@@ -86,6 +86,8 @@
   --switch-active-bg-color: #{$switch-active-bg-color};
   --switch-fg-color: #{$switch-fg-color};
   --switch-active-fg-color: #{$switch-active-fg-color};
+  --switch-border-color: #{$switch-border-color};
+  --switch-active-border-color: #{$switch-active-border-color};
   // Disabled
   --switch-disabled-bg-color: #{$switch-disabled-bg-color};
   --switch-disabled-fg-color: #{$switch-disabled-fg-color};
@@ -200,6 +202,8 @@
   --switch-active-bg-color: #{$switch-active-bg-color-dark};
   --switch-fg-color: #{$switch-fg-color-dark};
   --switch-active-fg-color: #{$switch-active-fg-color-dark};
+  --switch-border-color: #{$switch-border-color-dark};
+  --switch-active-border-color: #{$switch-active-border-color-dark};
   // Disabled
   --switch-disabled-bg-color: #{$switch-disabled-bg-color-dark};
   --switch-disabled-fg-color: #{$switch-disabled-fg-color-dark};

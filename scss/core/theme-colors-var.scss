@@ -7,7 +7,8 @@ $primary-hovered-color-dark: darken($primary-color-dark, 5%) !default;
 $primary-color-light: transparentize($primary-color, 0.7) !default;
 $primary-color-light-dark: transparentize($primary-color-dark, 0.7) !default;
 
-$success-color: #9DC822 !default;
+//$success-color: #9DC822 !default;
+$success-color: #71d013 !default;
 $success-color-dark: $success-color !default;
 $success-text-color: textForBg($success-color) !default;
 $success-text-color-dark: textForBg($success-color-dark) !default;
@@ -137,19 +138,23 @@ $range-bg-color: hsl(0, 0%, 93%) !default;
 $range-bg-color-dark: hsl(0, 0%, 18%) !default;
 
 // Switch
-$switch-fg-color: hsl(0, 0%, 90%) !default;
+$switch-fg-color: hsl(0, 0%, 85%) !default;
 $switch-fg-color-dark: hsl(0, 0%, 70%) !default;
-$switch-active-fg-color: $primary-color !default;
-$switch-active-fg-color-dark: $primary-color !default;
-$switch-bg-color: hsl(0, 0%, 75%) !default;
-$switch-bg-color-dark: hsl(0, 0%, 30%) !default;
-$switch-active-bg-color: lighten($switch-active-fg-color, 20%) !default;
-$switch-active-bg-color-dark: lighten($switch-active-fg-color, 15%) !default;
+$switch-active-fg-color: #FFF !default;
+$switch-active-fg-color-dark: $switch-active-fg-color !default;
+$switch-bg-color: hsl(0, 0%, 100%) !default;
+$switch-bg-color-dark: hsl(0, 0%, 20%) !default;
+$switch-active-bg-color: $primary-color !default;
+$switch-active-bg-color-dark: $switch-active-bg-color !default;
+$switch-border-color: hsl(0, 0%, 90%) !default;
+$switch-border-color-dark: hsl(0, 0%, 30%) !default;
+$switch-active-border-color: transparentize($switch-active-bg-color, 0.6) !default;
+$switch-active-border-color-dark: $switch-active-border-color !default;
 // Disabled
-$switch-disabled-bg-color: hsl(0, 0%, 85%) !default;
+$switch-disabled-bg-color: hsl(0, 0%, 90%) !default;
 $switch-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
-$switch-disabled-fg-color: hsl(0, 0%, 90%) !default;
-$switch-disabled-fg-color-dark: hsl(0, 0%, 20%) !default;
+$switch-disabled-fg-color: hsl(0, 0%, 85%) !default;
+$switch-disabled-fg-color-dark: hsl(0, 0%, 25%) !default;
 
 // Progress Bar
 $progress-back-bg-color: hsl(0, 0%, 93%) !default;
