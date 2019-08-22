@@ -208,4 +208,20 @@ select.zust-select {
       transition: $primary-transition;
     }
   }
+
+  &[disabled] {
+    pointer-events: none;
+
+    background-color: var(--item-disabled-bg-color);
+    color: var(--item-disabled-fg-color);
+
+    ~ .zust-icon {
+      color: var(--item-disabled-fg-color);
+    }
+
+    option {
+      background-color: var(--item-disabled-bg-color);
+      color: var(--item-disabled-fg-color);
+    }
+  }
 }
