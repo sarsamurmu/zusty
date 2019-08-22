@@ -128,10 +128,10 @@ $input-append-fg-color: hsl(0, 0%, 50%) !default;
 $input-append-fg-color-dark: hsl(0, 0%, 70%) !default;
 
 // Item Disabled
-$item-disabled-bg-color: hsla(0, 0%, 98%, 1) !default;
-$item-disabled-bg-color-dark: hsla(0, 0%, 16%, 1) !default;
-$item-disabled-fg-color: hsl(0, 0%, 86%) !default;
-$item-disabled-fg-color-dark: hsla(0, 0%, 30%, 1) !default;
+$item-disabled-bg-color: hsl(0, 0%, 93%) !default;
+$item-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
+$item-disabled-fg-color: hsl(0, 0%, 82%) !default;
+$item-disabled-fg-color-dark: hsl(0, 0%, 30%) !default;
 
 // Slider/Range
 $range-bg-color: hsl(0, 0%, 93%) !default;
@@ -150,11 +150,12 @@ $switch-border-color: hsl(0, 0%, 90%) !default;
 $switch-border-color-dark: hsl(0, 0%, 30%) !default;
 $switch-active-border-color: transparentize($switch-active-bg-color, 0.6) !default;
 $switch-active-border-color-dark: $switch-active-border-color !default;
-// Disabled
-$switch-disabled-bg-color: hsl(0, 0%, 90%) !default;
-$switch-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
-$switch-disabled-fg-color: hsl(0, 0%, 85%) !default;
-$switch-disabled-fg-color-dark: hsl(0, 0%, 25%) !default;
+
+// Checkbox
+$checkbox-color: hsl(0, 0%, 70%) !default;
+$checkbox-color-dark: hsl(0, 0%, 50%) !default;
+$checkbox-check-color: $primary-color !default;
+$checkbox-check-color-dark: $checkbox-check-color !default;
 
 // Progress Bar
 $progress-back-bg-color: hsl(0, 0%, 93%) !default;
@@ -166,13 +167,11 @@ $progress-bar-bg-color-dark: $progress-bar-bg-color !default;
 $progress-bar-text-color: $white !default;
 $progress-bar-text-color-dark: $white !default;
 
-// Radio Buttons
-$radio-button-border-color: hsl(0, 0%, 46%) !default;
-$radio-button-border-color-dark: hsl(0, 0%, 96%) !default;
-$radio-button-selected-border-color: hsl(0, 0%, 100%) !default;
-$radio-button-selected-border-color-dark: hsl(0, 0%, 13%) !default;
-$radio-button-disabled-border-color: hsl(0, 0%, 88%) !default;
-$radio-button-disabled-border-color-dark: hsl(0, 0%, 40%) !default;
+// Radio
+$radio-color: hsl(0, 0%, 70%) !default;
+$radio-color-dark: hsl(0, 0%, 50%) !default;
+$radio-selected-color: $primary-color !default;
+$radio-selected-color-dark: $radio-selected-color !default;
 
 // Tooltip
 $tooltip-bg-color: #FFF !default;

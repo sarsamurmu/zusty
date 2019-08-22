@@ -81,6 +81,10 @@
   // Slider/Range
   --range-bg-color: #{$range-bg-color};
 
+  // Checkbox
+  --checkbox-color: #{$checkbox-color};
+  --checkbox-check-color: #{$checkbox-check-color};
+
   // Switch
   --switch-bg-color: #{$switch-bg-color};
   --switch-active-bg-color: #{$switch-active-bg-color};
@@ -88,9 +92,6 @@
   --switch-active-fg-color: #{$switch-active-fg-color};
   --switch-border-color: #{$switch-border-color};
   --switch-active-border-color: #{$switch-active-border-color};
-  // Disabled
-  --switch-disabled-bg-color: #{$switch-disabled-bg-color};
-  --switch-disabled-fg-color: #{$switch-disabled-fg-color};
 
   // Progress Bar
   --progress-back-bg-color: #{$progress-back-bg-color};
@@ -98,10 +99,9 @@
   --progress-bar-bg-color: #{$progress-bar-bg-color};
   --progress-bar-text-color: #{$progress-bar-text-color};
 
-  // Radio Buttons
-  --radio-button-border-color: #{$radio-button-border-color};
-  --radio-button-selected-border-color: #{$radio-button-selected-border-color};
-  --radio-button-disabled-border-color: #{$radio-button-disabled-border-color};
+  // Radio
+  --radio-color: #{$radio-color};
+  --radio-selected-color: #{$radio-selected-color};
 
   // Tooltip
   --tooltip-bg-color: #{$tooltip-bg-color};
@@ -197,6 +197,10 @@
   // Slider/Range
   --range-bg-color: #{$range-bg-color-dark};
 
+  // Checkbox
+  --checkbox-color: #{$checkbox-color-dark};
+  --checkbox-check-color: #{$checkbox-check-color-dark};
+
   // Switch
   --switch-bg-color: #{$switch-bg-color-dark};
   --switch-active-bg-color: #{$switch-active-bg-color-dark};
@@ -204,9 +208,6 @@
   --switch-active-fg-color: #{$switch-active-fg-color-dark};
   --switch-border-color: #{$switch-border-color-dark};
   --switch-active-border-color: #{$switch-active-border-color-dark};
-  // Disabled
-  --switch-disabled-bg-color: #{$switch-disabled-bg-color-dark};
-  --switch-disabled-fg-color: #{$switch-disabled-fg-color-dark};
 
   // Progress Bar
   --progress-back-bg-color: #{$progress-back-bg-color-dark};
@@ -214,10 +215,9 @@
   --progress-bar-bg-color: #{$progress-bar-bg-color-dark};
   --progress-bar-text-color: #{$progress-bar-text-color-dark};
 
-  // Radio Buttons
-  --radio-button-border-color: #{$radio-button-border-color-dark};
-  --radio-button-selected-border-color: #{$radio-button-selected-border-color-dark};
-  --radio-button-disabled-border-color: #{$radio-button-disabled-border-color-dark};
+  // Radio
+  --radio-color: #{$radio-color-dark};
+  --radio-selected-color: #{$radio-selected-color-dark};
 
   // Tooltip
   --tooltip-bg-color: #{$tooltip-bg-color-dark};

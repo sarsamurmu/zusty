@@ -1,123 +1,98 @@
-.zust-radio:not(:checked),
-.zust-radio:checked {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.zust-radio:not(:checked) + span,
-.zust-radio:checked + span {
-  background-color: $transparent;
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
+.zust-radio {
   display: inline-block;
-  height: 25px;
-  line-height: 25px;
-  font-size: 1rem;
-  transition: $primary-transition ease;
+  margin: 0 0 6px 6px;
   user-select: none;
-  max-height: 20px;
-  box-sizing: content-box;
 
-  @if $css-variable-enabled {
-    transition: var(--primary-transition) ease;
-  } @else {
-    transition: $primary-transition ease;
-  }
-}
+  span {
+    vertical-align: middle;
 
-.zust-radio:not(:checked):disabled + span,
-.zust-radio:checked:disabled + span {
-  cursor: default;
-}
-
-.zust-radio + span:before,
-.zust-radio + span:after {
-  content: '';
-  position: absolute;
-  margin: 0;
-  border-radius: 100%;
-  transition: 0.4s;
-  box-sizing: content-box;
-}
-
-// Disabled Style
-.zust-radio:disabled, .zust-radio[disabled] {
-  + span {
-    color: var(--radio-button-disabled-border-color);
-
-    &:after {
-      border-color: var(--radio-button-disabled-border-color);
+    ~ span {
+      margin-left: 8px;
     }
   }
-}
 
-// Not Checked Style
-.zust-radio {
-  + span:after {
-    top: 0;
-    left: 0;
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--radio-button-border-color);
-    $size: 15px;
-    width: $size;
-    height: $size;
-  }
+  > input {
+    display: none;
 
-  + span:before {
-    background-color: var(--primary-color);
-    $size: 0px;
-    width: $size;
-    height: $size;
-    $pos: 0px;
-    top: $pos;
-    left: $pos;
-    margin-left: 10px;
-    margin-top: 10px;
-    opacity: 0;
-  }
-}
+    + span {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 100px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: var(--radio-color);
+      position: relative;
+      overflow: hidden;
 
-// Checked Style
-.zust-radio:checked {
-  + span:before {
-    $size: 19px;
-    width: $size;
-    height: $size;
-    margin-left: 0;
-    margin-top: 0;
-    opacity: 1;
-  }
+      @if $css-variable-enabled {
+        transition: var(--primary-transition);
+      } @else {
+        transition: $primary-transition;
+      }
 
-  + span:after {
-    $margin: 3px;
-    margin-left: $margin;
-    margin-top: $margin;
-    $size: 13px;
-    width: $size;
-    height: $size;
-    border-color: $transparent;
-    border-width: 0;
-    background-color: hsla(0, 0, 100, 0.2);
-  }
-}
+      &:after {
+        content: '';
+        display: inline-block;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        background-color: #FFF;
+        border-radius: 100px;
 
-// Colors
-@each $name, $color in $item-colors {
-  @if $name {
-    .zust-radio.zust-#{$name} + span:before {
-      background-color: $color;
+        @if $css-variable-enabled {
+          transition: var(--primary-transition);
+        } @else {
+          transition: $primary-transition;
+        }
+      }
+    }
+
+    &:checked + span {
+      background-color: var(--radio-selected-color);
+      border-color: $transparent;
+
+      &:after {
+        padding: 6px;
+        opacity: 0.9;
+      }
     }
   }
-}
 
-// Rectangle Radio
-.zust-radio {
-  &.zust-rect, &.zust-rectangle {
-    + span:after, + span:before {
-      border-radius: 30%;
+  &.zust-rect, &.zust-rectangle, &.zust-rectangular {
+    > input + span {
+      border-radius: 7px;
+
+      &:after {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  @each $name, $color in $item-colors {
+    @if $name {
+      &.zust-#{$name} > input:checked + span {
+        background-color: $color;
+      }
+    }
+  }
+
+  &[disabled] {
+    pointer-events: none;
+
+    span {
+      color: var(--item-disabled-fg-color);
+    }
+
+    input + span {
+      background-color: var(--item-disabled-bg-color);
+      border-color: $transparent;
+
+      &:after {
+        background-color: var(--item-disabled-fg-color);
+      }
     }
   }
 }

@@ -12,10 +12,15 @@
     padding-left: 35px;
     background-color: var(--switch-bg-color);
     border-radius: 100px;
-    transition: $primary-transition;
     box-shadow: 0 0 0px 2px var(--switch-border-color);
     height: 18px;
     position: relative;
+
+    @if $css-variable-enabled {
+      transition: var(--primary-transition);
+    } @else {
+      transition: $primary-transition;
+    }
 
     &:after {
       content: '';
@@ -27,7 +32,12 @@
       top: 50%;
       transform: translateY(-50%);
       left: 7px;
-      transition: $primary-transition;
+
+      @if $css-variable-enabled {
+        transition: var(--primary-transition);
+      } @else {
+        transition: $primary-transition;
+      }
     }
   }
 
@@ -58,24 +68,24 @@
     pointer-events: none;
 
     span {
-      color: var(--switch-disabled-fg-color);
+      color: var(--item-disabled-fg-color);
     }
 
     > input + span {
-      background-color: var(--switch-disabled-bg-color);
-      box-shadow: 0 0 0px 1px var(--switch-disabled-bg-color);
+      background-color: var(--item-disabled-bg-color);
+      box-shadow: 0 0 0px 1px var(--item-disabled-bg-color);
 
       &:after {
-        background-color: var(--switch-disabled-fg-color);
+        background-color: var(--item-disabled-fg-color);
       }
     }
 
     > input:checked + span {
-      background-color: var(--switch-disabled-bg-color);
-      box-shadow: 0 0 0px 1px var(--switch-disabled-bg-color);
+      background-color: var(--item-disabled-bg-color);
+      box-shadow: 0 0 0px 1px var(--item-disabled-bg-color);
 
       &:after {
-        background-color: var(--switch-disabled-fg-color);
+        background-color: var(--item-disabled-fg-color);
       }
     }
   }
