@@ -60,6 +60,12 @@ $span-translate: -8px, -4px;
         transform: rotate(45deg) translate($span-translate);
       }
     }
+
+    &:indeterminate + span:after {
+        width: 0;
+        border-color: var(--checkbox-check-color);
+        transform: rotate(90deg) translate(-6px, 1px);
+    }
   }
 
   &.zust-outlined > input + span {
@@ -83,7 +89,7 @@ $span-translate: -8px, -4px;
         border-color: $color;
       }
 
-      &.zust-outlined.zust-#{$name} > input:checked + span:after {
+      &.zust-outlined.zust-#{$name} > input:checked + span:after, &.zust-#{$name} > input:indeterminate + span:after {
         border-color: $color;
       }
     }
