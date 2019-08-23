@@ -338,18 +338,21 @@ $it-pad: $container-items-padding;
 .zust-el-group {
   display: inline-flex;
   justify-content: flex-start;
-  //align-items: flex-start;
+  align-items: stretch;
+  margin-top: 0;
+  margin-right: 8px;
+  margin-bottom: 8px;
 
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  > * {
+  > *, > .zust-dropdown > .zust-btn {
     margin: 0 !important;
   }
 
+  > .zust-dropdown > .zust-btn {
+    height: 100%;
+  }
+
   &:not(.zust-vertical) {
-    > :first-child, > label:first-child > .zust-btn {
+    > :first-child, > label:first-child > .zust-btn, > .zust-dropdown:first-child > .zust-btn {
       border-top-right-radius: 0 !important;
       border-bottom-right-radius: 0 !important;
     }
@@ -358,17 +361,18 @@ $it-pad: $container-items-padding;
       border-radius: 0 0 0 0 !important;
     }
 
+
     > *:not(:first-child):not(:last-child).zust-btn {
       border-left-width: 0 !important;
-      border-right-width: 0 !important;
+      //border-right-width: 0 !important;
     }
 
-    > :last-child, > label:last-child > .zust-btn {
+    > :last-child, > label:last-child > .zust-btn, > .zust-dropdown:last-child > .zust-btn {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
     }
 
-    > :last-child.zust-btn {
+    > :last-child.zust-btn, > .zust-dropdown:last-child > .zust-btn {
       border-left-width: 0 !important;
     }
   }
