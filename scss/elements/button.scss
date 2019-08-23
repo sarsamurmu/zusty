@@ -189,7 +189,12 @@
 
   &.zust-outlined, .zust-btns-outlined > & {
     background-color: $transparent !important;
-    border-width: 2px !important;
+
+    @if $css-variable-enabled {
+      border-width: var(--button-outlined-border-width) !important;
+    } @else {
+      border-width: $button-outlined-border-width !important;
+    }
 
     &:hover, &.zust-hovered {
       background-color: $transparent !important;
@@ -219,6 +224,7 @@
   input:checked + .zust-btn {
     filter: brightness(0.9);
   }
+  
   .zust-el-group > & {
     > .zust-btn {
       margin: 0 !important;
