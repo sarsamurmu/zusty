@@ -108,6 +108,10 @@
   --tooltip-bg-color: #{$tooltip-bg-color};
   --tooltip-text-color: #{$tooltip-text-color};
 
+  // Placeholder
+  --placeholder-color: #{$placeholder-color};
+  --placeholder-holder-color: #{$placeholder-holder-color};
+
   // Misc.
   --dimmer-bg-color: #{$dimmer-bg-color};
   --light-color: #{$light-color};
@@ -224,6 +228,10 @@
   // Tooltip
   --tooltip-bg-color: #{$tooltip-bg-color-dark};
   --tooltip-text-color: #{$tooltip-text-color-dark};
+
+  // Placeholder
+  --placeholder-color: #{$placeholder-color-dark};
+  --placeholder-holder-color: #{$placeholder-holder-color-dark};
 
   // Misc.
   --dimmer-bg-color: #{$dimmer-bg-color-dark};

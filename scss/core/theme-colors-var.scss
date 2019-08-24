@@ -8,7 +8,8 @@ $primary-color-light: transparentize($primary-color, 0.7) !default;
 $primary-color-light-dark: transparentize($primary-color-dark, 0.7) !default;
 
 //$success-color: #9DC822 !default;
-$success-color: #71d013 !default;
+//$success-color: #71d013 !default;
+$success-color: #70c51c !default;
 $success-color-dark: $success-color !default;
 $success-text-color: textForBg($success-color) !default;
 $success-text-color-dark: textForBg($success-color-dark) !default;
@@ -180,6 +181,12 @@ $tooltip-bg-color: #FFF !default;
 $tooltip-bg-color-dark: hsl(0, 0%, 26%) !default;
 $tooltip-text-color: $text-color-secondary !default;
 $tooltip-text-color-dark: $text-color-secondary-dark !default;
+
+// Placeholder
+$placeholder-color: transparentize($body-bg-color, 0.5) !default;
+$placeholder-color-dark: transparentize($body-bg-color-dark, 0.5) !default;
+$placeholder-holder-color: rgba(144, 144, 144, 0.2) !default;
+$placeholder-holder-color-dark: rgba(144, 144, 144, 0.2) !default;
 
 // Misc.
 $dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;

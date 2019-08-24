@@ -6,8 +6,13 @@
 - Replace 'body-color-primary' with 'body-bg-color'
 - Used New Theme Colors.
 - Added Transparent Input and Textarea.
-- Tooltip Now Gets Active on Focus.
-- New Styled Switch.
+- Tooltip Now Gets Active even on Focus.
+- New Radio, Checkbox and Switch.
+- Completely New Radio.
+- Full Refactorization of Whole Docs.
+- New Floating Style in Buttons.
+- `zust-el-group` can now group dropdown.
+- Added Placeholder.
 
 ## 0.0.1
 - Initial Release.
