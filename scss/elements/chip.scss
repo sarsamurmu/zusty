@@ -1,16 +1,10 @@
-div.zust-chip {
-  position: relative;
-  background-color: var(--chip-bg-color);
+.zust-chip {
   display: inline-flex;
+  height: 30px;
+  background-color: var(--chip-bg-color);
   align-items: center;
-  justify-content: center;
-  height: 20px;
-  padding: 10px 15px;
-  border-radius: 10000px;
-  font-size: 14px;
-  cursor: default;
-  margin: 6px;
-  box-sizing: content-box;
+  border-radius: 1000px;
+  margin: 0 8px 8px 0;
 
   @if $css-variable-enabled {
     transition: var(--primary-transition);
@@ -18,11 +12,26 @@ div.zust-chip {
     transition: $primary-transition;
   }
 
+  > span {
+    margin-right: 12px;
+    margin-left: 8px;
+  }
+
+  span:only-child {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  span:first-child {
+    margin-left: 12px;
+  }
+
   > .zust-icon {
-    margin-left: 10px;
-    border-radius: 10000px;
-    padding: 2px;
+    margin-right: 8px;
+    margin-left: -4px;
     --icon-size: 1rem;
+    border-radius: 1000px;
+    padding: 10px;
 
     &:hover, &.zust-hovered, &:focus {
       background-color: $stransparent;
@@ -30,47 +39,20 @@ div.zust-chip {
   }
 
   > img {
-    float:left;
-    $size: 40px;
-    height: $size;
-    width: $size;
-    margin-left: -15px;
-    border-radius: 2000px;
-    margin-right: 10px;
+    height: 100%;
   }
 
   &.zust-large {
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
-
-    & > img {
-      $size: 50px;
-      height: $size;
-      width: $size;
-      margin-left: -20px;
-      border-radius: 2000px;
-      margin-right: 10px;
-    }
+    height: 40px;
   }
 
   &.zust-small {
-    height: 10px;
-    line-height: 30px;
-    font-size: 12px;
-    padding: 10px 10px;
-
-    & > img {
-      $size: 30px;
-      height: $size;
-      width: $size;
-      margin-left: -10px;
-      border-radius: 2000px;
-      margin-right: 5px;
-    }
+    height: 22px;
+    font-size: 13px;
 
     > .zust-icon {
-      margin-left: 6px;
+      --icon-size: 0.7rem;
+      padding: 5px;
     }
   }
 }
