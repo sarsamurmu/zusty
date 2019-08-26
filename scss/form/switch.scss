@@ -8,50 +8,64 @@
     margin-left: 8px;
   }
 
-  > input + span {
-    padding-left: 35px;
-    background-color: var(--switch-bg-color);
-    border-radius: 100px;
-    box-shadow: 0 0 0px 2px var(--switch-border-color);
-    height: 18px;
-    position: relative;
+  > input {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    opacity: 0;
 
-    @if $css-variable-enabled {
-      transition: var(--primary-transition);
-    } @else {
-      transition: $primary-transition;
-    }
-
-    &:after {
-      content: '';
+    + span {
+      padding-left: 35px;
+      background-color: var(--switch-bg-color);
       border-radius: 100px;
-      width: 6px;
-      height: 12px;
-      background-color: var(--switch-fg-color);
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 7px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: var(--switch-border-color);
+      height: 18px;
+      position: relative;
 
       @if $css-variable-enabled {
         transition: var(--primary-transition);
       } @else {
         transition: $primary-transition;
       }
-    }
-  }
 
-  > input {
-    display: none;
+      &:after {
+        content: '';
+        border-radius: 100px;
+        width: 6px;
+        height: 12px;
+        background-color: var(--switch-fg-color);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 7px;
+
+        @if $css-variable-enabled {
+          transition: var(--primary-transition);
+        } @else {
+          transition: $primary-transition;
+        }
+      }
+    }
 
     &:checked + span {
       background-color: var(--switch-active-bg-color);
-      box-shadow: 0 0 0px 2px var(--switch-active-border-color);
+      border-color: var(--switch-active-border-color);
 
       &:after {
         background-color: var(--switch-active-fg-color);
         left: 22px;
       }
+    }
+
+    &:focus + span,
+    &.zust-focused + span {
+      box-shadow: 0 0 0 2px var(--switch-border-spread-color);
+      border-color: var(--switch-active-border-color);
     }
   }
 
@@ -59,7 +73,13 @@
     @if $name {
       &.zust-#{$name} > input:checked + span {
         background-color: $color;
+        border-color: $color;
+      }
+
+      &.zust-#{$name} > input:focus + span,
+      &.zust-#{$name} > input.zust-focused + span {
         box-shadow: 0 0 0px 2px $light-color;
+        border-color: $color;
       }
     }
   }
@@ -73,7 +93,8 @@
 
     > input + span {
       background-color: var(--item-disabled-bg-color);
-      box-shadow: 0 0 0px 1px var(--item-disabled-bg-color);
+      border-color: var(--item-disabled-bg-color);
+      box-shadow: 0 0 0 0 $transparent;
 
       &:after {
         background-color: var(--item-disabled-fg-color);
@@ -82,7 +103,7 @@
 
     > input:checked + span {
       background-color: var(--item-disabled-bg-color);
-      box-shadow: 0 0 0px 1px var(--item-disabled-bg-color);
+      border-color: var(--item-disabled-bg-color);
 
       &:after {
         background-color: var(--item-disabled-fg-color);

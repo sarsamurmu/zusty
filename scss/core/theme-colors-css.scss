@@ -85,6 +85,7 @@
   // Checkbox
   --checkbox-color: #{$checkbox-color};
   --checkbox-check-color: #{$checkbox-check-color};
+  --checkbox-border-spread-color: #{$checkbox-border-spread-color};
 
   // Switch
   --switch-bg-color: #{$switch-bg-color};
@@ -93,6 +94,7 @@
   --switch-active-fg-color: #{$switch-active-fg-color};
   --switch-border-color: #{$switch-border-color};
   --switch-active-border-color: #{$switch-active-border-color};
+  --switch-border-spread-color: #{$switch-border-spread-color};
 
   // Progress Bar
   --progress-back-bg-color: #{$progress-back-bg-color};
@@ -103,6 +105,7 @@
   // Radio
   --radio-color: #{$radio-color};
   --radio-selected-color: #{$radio-selected-color};
+  --radio-border-spread-color: #{$radio-border-spread-color};
 
   // Tooltip
   --tooltip-bg-color: #{$tooltip-bg-color};
@@ -206,6 +209,7 @@
   // Checkbox
   --checkbox-color: #{$checkbox-color-dark};
   --checkbox-check-color: #{$checkbox-check-color-dark};
+  --checkbox-border-spread-color: #{$checkbox-border-spread-color-dark};
 
   // Switch
   --switch-bg-color: #{$switch-bg-color-dark};
@@ -214,6 +218,7 @@
   --switch-active-fg-color: #{$switch-active-fg-color-dark};
   --switch-border-color: #{$switch-border-color-dark};
   --switch-active-border-color: #{$switch-active-border-color-dark};
+  --switch-border-spread-color: #{$switch-border-spread-color-dark};
 
   // Progress Bar
   --progress-back-bg-color: #{$progress-back-bg-color-dark};
@@ -224,6 +229,7 @@
   // Radio
   --radio-color: #{$radio-color-dark};
   --radio-selected-color: #{$radio-selected-color-dark};
+  --radio-border-spread-color: #{$radio-border-spread-color-dark};
 
   // Tooltip
   --tooltip-bg-color: #{$tooltip-bg-color-dark};

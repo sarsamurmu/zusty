@@ -14,7 +14,13 @@ $span-translate: -8px, -4px;
   }
 
   > input {
-    display: none;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    opacity: 0;
 
     + span {
       overflow: hidden;
@@ -61,10 +67,14 @@ $span-translate: -8px, -4px;
       }
     }
 
+    &:focus + span, &.zust-focused + span {
+      box-shadow: 0 0 0 2px var(--checkbox-border-spread-color);
+    }
+
     &:indeterminate + span:after {
-        width: 0;
-        border-color: var(--checkbox-check-color);
-        transform: rotate(90deg) translate(-6px, 1px);
+      width: 0;
+      border-color: var(--checkbox-check-color);
+      transform: rotate(90deg) translate(-6px, 1px);
     }
   }
 
@@ -82,14 +92,21 @@ $span-translate: -8px, -4px;
     }
   }
 
-  @each $name, $color in $item-colors {
+  @each $name, $color, $skip, $skip, $light-color in $item-colors {
     @if $name {
       &.zust-#{$name} > input:checked + span {
         background-color: $color;
         border-color: $color;
       }
 
-      &.zust-outlined.zust-#{$name} > input:checked + span:after, &.zust-#{$name} > input:indeterminate + span:after {
+      &.zust-#{$name} > input:focus + span,
+      &.zust-#{$name} > input.zust-focused + span {
+        border-color: $color;
+        box-shadow: 0 0 0 2px $light-color;
+      }
+
+      &.zust-outlined.zust-#{$name} > input:checked + span:after,
+      &.zust-#{$name} > input:indeterminate + span:after {
         border-color: $color;
       }
     }
@@ -106,6 +123,7 @@ $span-translate: -8px, -4px;
       + span {
         background-color: var(--item-disabled-bg-color);
         border-color: var(--item-disabled-bg-color);
+        box-shadow: 0 0 0 0 $transparent;
 
         &:after {
           border-color: var(--item-disabled-fg-color);

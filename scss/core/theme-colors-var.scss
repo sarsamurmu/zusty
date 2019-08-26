@@ -153,12 +153,16 @@ $switch-border-color: hsl(0, 0%, 90%) !default;
 $switch-border-color-dark: hsl(0, 0%, 30%) !default;
 $switch-active-border-color: transparentize($switch-active-bg-color, 0.6) !default;
 $switch-active-border-color-dark: $switch-active-border-color !default;
+$switch-border-spread-color: transparentize($switch-active-bg-color, 0.3) !default;
+$switch-border-spread-color-dark: $switch-border-spread-color !default;
 
 // Checkbox
 $checkbox-color: hsl(0, 0%, 70%) !default;
 $checkbox-color-dark: hsl(0, 0%, 50%) !default;
 $checkbox-check-color: $primary-color !default;
 $checkbox-check-color-dark: $checkbox-check-color !default;
+$checkbox-border-spread-color: $primary-color-light !default;
+$checkbox-border-spread-color-dark: $primary-color-light-dark !default;
 
 // Progress Bar
 $progress-back-bg-color: hsl(0, 0%, 93%) !default;
@@ -175,6 +179,8 @@ $radio-color: hsl(0, 0%, 70%) !default;
 $radio-color-dark: hsl(0, 0%, 50%) !default;
 $radio-selected-color: $primary-color !default;
 $radio-selected-color-dark: $radio-selected-color !default;
+$radio-border-spread-color: $primary-color-light !default;
+$radio-border-spread-color-dark: $primary-color-light-dark !default;
 
 // Tooltip
 $tooltip-bg-color: #FFF !default;

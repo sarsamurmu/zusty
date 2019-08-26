@@ -12,7 +12,13 @@
   }
 
   > input {
-    display: none;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    opacity: 0;
 
     + span {
       display: inline-block;
@@ -59,6 +65,11 @@
         opacity: 0.9;
       }
     }
+
+    &:focus + span,
+    &.zust-focused + span {
+      box-shadow: 0 0 0 2px var(--radio-border-spread-color);
+    }
   }
 
   &.zust-rect, &.zust-rectangle, &.zust-rectangular {
@@ -71,10 +82,15 @@
     }
   }
 
-  @each $name, $color in $item-colors {
+  @each $name, $color, $skip, $skip, $light-color in $item-colors {
     @if $name {
       &.zust-#{$name} > input:checked + span {
         background-color: $color;
+      }
+
+      &.zust-#{$name} > input:focus + span,
+      &.zust-#{$name} > input.zust-focused + span {
+        box-shadow: 0 0 0 2px $light-color;
       }
     }
   }
@@ -89,6 +105,7 @@
     input + span {
       background-color: var(--item-disabled-bg-color);
       border-color: $transparent;
+      box-shadow: 0 0 0 0 $transparent;
 
       &:after {
         background-color: var(--item-disabled-fg-color);
