@@ -1,14 +1,29 @@
 html {
   height: 100%;
   width: 100%;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @if $css-variable-enabled {
+    font-size: var(--body-text);
+  } @else {
+    font-size: $body-text;
+  }
 }
 
 body {
   height: min-content;
   background-color: var(--body-bg-color);
-  transition: $primary-transition;
   color: var(--body-text-color);
   padding: 20px;
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+  } @else {
+    transition: $primary-transition;
+  }
 }
 
 text, p {

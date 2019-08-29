@@ -27,6 +27,7 @@ $xlarge-text: 2.2rem !default;
 $large-text: 1.6rem !default;
 $medium-text: 1rem !default;
 $small-text: 0.8rem !default;
+$body-text: $medium-text !default;
 
 // z-indexes
 $bottom-nav-z-index: 6 !default;
@@ -37,7 +38,6 @@ $tooltip-z-index: 9999 !default;
 // Transition
 $primary-transition: 0.2s !default;
 $secondary-transition: 0.5s !default;
-
 
 
 //==//-----------//==//
