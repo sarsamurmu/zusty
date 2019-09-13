@@ -1,4 +1,4 @@
-.zust-modal {
+.#{$prefix}modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
     transition: all 0.3s ease-in-out 0s, visibility 0s linear $secondary-transition;
   }
 
-  > .zust-content {
+  > .#{$prefix}content {
     background-color: var(--modal-bg-color);
     overflow: hidden;
     color: var(--text-color-secondary);
@@ -56,19 +56,19 @@
         margin: 0;
       }
 
-      > .zust-icon {
+      > .#{$prefix}icon {
         margin-right: 15px;
         --icon-size: 50px;
       }
 
-      > .zust-close-button {
+      > .#{$prefix}close-button {
         position: absolute;
         right: 0;
         margin-top: 20px;
         transform: translate(-50%, -50%);
         padding: 8px !important;
 
-        .zust-icon {
+        .#{$prefix}icon {
           margin: 0 !important;
           --icon-size: 1.1rem;
         }
@@ -89,38 +89,38 @@
       padding: 10px;
       background-color: var(--modal-bg-color);
 
-      > .zust-btn {
+      > .#{$prefix}btn {
         float: right;
         margin-bottom: 15px;
       }
     }
   }
 
-  &.zust-active {
+  &.#{$prefix}active {
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease-in-out 0.1s, visibility 0s linear;
 
-    > .zust-content {
+    > .#{$prefix}content {
       transform: scale(1);
       opacity: 1;
       transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
     }
   }
 
-  &.zust-large > .zust-content {
+  &.#{$prefix}large > .#{$prefix}content {
     @include desktop {
       max-width: 600px;
     }
   }
 
-  &.zust-xlarge > .zust-content {
+  &.#{$prefix}xlarge > .#{$prefix}content {
     @include desktop {
       max-width: 800px;
     }
   }
 
-  &.zust-full > .zust-content {
+  &.#{$prefix}full > .#{$prefix}content {
     @include desktop {
       max-width: 98%;
       max-height: 98%;

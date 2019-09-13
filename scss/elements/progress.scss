@@ -1,4 +1,4 @@
-progress.zust-progress {
+progress.#{$prefix}progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -18,28 +18,28 @@ progress.zust-progress {
     border-radius: $progress-bar-border-radius;
   }
 
-  &.zust-line {
+  &.#{$prefix}line {
     height: 3px;
   }
 
-  &.zust-thin, &.zust-narrow {
+  &.#{$prefix}thin, &.#{$prefix}narrow {
     height: 5px;
   }
 
-  &.zust-small {
+  &.#{$prefix}small {
     height: 12px;
   }
 
-  &.zust-large {
+  &.#{$prefix}large {
     height: 28px;
   }
 
-  &.zust-xlarge {
+  &.#{$prefix}xlarge {
     height: 36px;
   }
 }
 
-progress.zust-progress::-webkit-progress-bar {
+progress.#{$prefix}progress::-webkit-progress-bar {
   background-color: var(--progress-back-bg-color);
   @if $css-variable-enabled {
     transition: var(--primary-transition);
@@ -48,7 +48,7 @@ progress.zust-progress::-webkit-progress-bar {
   }
 }
 
-progress.zust-progress::-moz-progress-bar {
+progress.#{$prefix}progress::-moz-progress-bar {
   background-color: var(--progress-bar-bg-color);
   @if $css-variable-enabled {
     border-radius: var(--progress-bar-border-radius);
@@ -59,7 +59,7 @@ progress.zust-progress::-moz-progress-bar {
   }
 }
 
-progress[value].zust-progress {
+progress[value].#{$prefix}progress {
 
   &::-webkit-progress-value {
     background-color: var(--primary-color);
@@ -97,7 +97,7 @@ progress[value].zust-progress {
 
   @each $name, $color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
+      &.#{$prefix}#{$name} {
         &::-webkit-progress-value {
           background-color: $color;
         }

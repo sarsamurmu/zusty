@@ -1,57 +1,57 @@
 // Show/Hide
-.zust-invisible {
+.#{$prefix}invisible {
   visibility: hidden !important;
 }
 
-.zust-visible {
+.#{$prefix}visible {
   display: initial !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-.zust-hidden {
+.#{$prefix}hidden {
   display: none !important;
 }
 
 // Based on Size
-@include each-breakpoint('.zust-invisible-name', 'name') {
+@include each-breakpoint('.#{$prefix}invisible-name', 'name') {
   visibility: hidden !important;
 }
 
-@include each-breakpoint('.zust-visible-name', 'name') {
+@include each-breakpoint('.#{$prefix}visible-name', 'name') {
   display: initial !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-@include each-breakpoint('.zust-hidden-name', 'name') {
+@include each-breakpoint('.#{$prefix}hidden-name', 'name') {
   display: none !important;
 }
 
 // On Dark
-[zust-theme="dark"] {
-  .zust-visible-on-dark {
+[#{$prefix}theme="dark"] {
+  .#{$prefix}visible-on-dark {
     display: initial !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  .zust-hidden-on-dark {
+  .#{$prefix}hidden-on-dark {
     display: none !important;
   }
 
-  .zust-invisible-on-dark {
+  .#{$prefix}invisible-on-dark {
     visibility: hidden !important;
   }
 }
 
 // Display Types
 @each $name in (inline, block, flex, inline-block, inline-flex, list-item) {
-  .zust-#{$name} {
+  .#{$prefix}#{$name} {
     display: #{$name} !important;
   }
 
-  @include each-breakpoint('.zust-#{$name}-brname', 'brname') {
+  @include each-breakpoint('.#{$prefix}#{$name}-brname', 'brname') {
     display: #{$name} !important;
   }
 }
@@ -60,51 +60,51 @@
 @for $value from 0 through 10 {
 
   // Margin
-  .zust-m-#{$value} {
+  .#{$prefix}m-#{$value} {
     margin: $value * 1rem !important;
   }
-  .zust-m-t-#{$value} {
+  .#{$prefix}m-t-#{$value} {
     margin-top: $value * 1rem !important;
   }
-  .zust-m-b-#{$value} {
+  .#{$prefix}m-b-#{$value} {
     margin-bottom: $value * 1rem !important;
   }
-  .zust-m-l-#{$value} {
+  .#{$prefix}m-l-#{$value} {
     margin-left: $value * 1rem !important;
   }
-  .zust-m-r-#{$value} {
+  .#{$prefix}m-r-#{$value} {
     margin-right: $value * 1rem !important;
   }
-  .zust-m-x-#{$value} {
+  .#{$prefix}m-x-#{$value} {
     margin-left: $value * 1rem !important;
     margin-right: $value * 1rem !important;
   }
-  .zust-m-y-#{$value} {
+  .#{$prefix}m-y-#{$value} {
     margin-top: $value * 1rem !important;
     margin-bottom: $value * 1rem !important;
   }
 
   // Padding
-  .zust-p-#{$value} {
+  .#{$prefix}p-#{$value} {
     padding: $value * 1rem !important;
   }
-  .zust-p-t-#{$value} {
+  .#{$prefix}p-t-#{$value} {
     padding-top: $value * 1rem !important;
   }
-  .zust-p-b-#{$value} {
+  .#{$prefix}p-b-#{$value} {
     padding-bottom: $value * 1rem !important;
   }
-  .zust-p-l-#{$value} {
+  .#{$prefix}p-l-#{$value} {
     padding-left: $value * 1rem !important;
   }
-  .zust-p-r-#{$value} {
+  .#{$prefix}p-r-#{$value} {
     padding-right: $value * 1rem !important;
   }
-  .zust-p-x-#{$value} {
+  .#{$prefix}p-x-#{$value} {
     padding-left: $value * 1rem !important;
     padding-right: $value * 1rem !important;
   }
-  .zust-p-y-#{$value} {
+  .#{$prefix}p-y-#{$value} {
     padding-top: $value * 1rem !important;
     padding-bottom: $value * 1rem !important;
   }
@@ -130,91 +130,91 @@
   }
 }
 
-.zust-marginless {
+.#{$prefix}marginless {
   @include marginless
 }
 
-.zust-paddingless {
+.#{$prefix}paddingless {
   @include paddingless
 }
 
-@include each-breakpoint('.zust-marginless-name', 'name') {
+@include each-breakpoint('.#{$prefix}marginless-name', 'name') {
   @include marginless;
 }
 
-@include each-breakpoint('.zust-paddingless-name', 'name') {
+@include each-breakpoint('.#{$prefix}paddingless-name', 'name') {
   @include paddingless;
 }
 
 // Float
-.zust-left {
+.#{$prefix}left {
   float: left !important;
 }
 
-.zust-right {
+.#{$prefix}right {
   float: right !important;
 }
 
 // Image Helper
-.zust-flip-horizontal, .zust-flip-x {
+.#{$prefix}flip-horizontal, .#{$prefix}flip-x {
   transform: scaleX(-1);
 }
 
-.zust-flip-vertical, .zust-flip-y {
+.#{$prefix}flip-vertical, .#{$prefix}flip-y {
   transform: scaleY(-1);
 }
 
-.zust-flip-horizontal.zust-flip-y,
-.zust-flip-horizontal.zust-flip-vertical,
-.zust-flip-vertical.zust-flip-x,
-.zust-flip-x.zust-flip-y {
+.#{$prefix}flip-horizontal.#{$prefix}flip-y,
+.#{$prefix}flip-horizontal.#{$prefix}flip-vertical,
+.#{$prefix}flip-vertical.#{$prefix}flip-x,
+.#{$prefix}flip-x.#{$prefix}flip-y {
   transform: scale(-1, -1);
 }
 
 @each $value in (15, 30, 45, 60, 90, 120, 180) {
-  .zust-rotate-#{$value} {
+  .#{$prefix}rotate-#{$value} {
     transform: rotate(#{$value}deg);
   }
 
-  .zust-rotate--#{$value} {
+  .#{$prefix}rotate--#{$value} {
     transform: rotate(-#{$value}deg);
   }
 }
 
 // Shape Helper
-.zust-fullwidth, .zust-fillup {
+.#{$prefix}fullwidth, .#{$prefix}fillup {
   @extend %full-width;
 }
 
-@include each-breakpoint('.zust-fullwidth-name, .zust-fillup-name', 'name') {
+@include each-breakpoint('.#{$prefix}fullwidth-name, .#{$prefix}fillup-name', 'name') {
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
 }
 
-.zust-fullheight {
+.#{$prefix}fullheight {
   @extend %full-height;
 }
 
-@include each-breakpoint('.zust-fullheight-name', 'name') {
+@include each-breakpoint('.#{$prefix}fullheight-name', 'name') {
   height: -webkit-fill-available;
   height: -moz-available;
   height: fill-available;
 }
 
-.zust-rounded {
+.#{$prefix}rounded {
   border-radius: 9999px !important;
 }
 
-.zust-semi-rounded {
+.#{$prefix}semi-rounded {
   border-radius: 2px !important;
 }
 
-.zust-radiusless, .zust-sharp {
+.#{$prefix}radiusless, .#{$prefix}sharp {
   border-radius: 0 !important;
 }
 
 // No Pointer Event
-.zust-static, .zust-unresponsive {
+.#{$prefix}static, .#{$prefix}unresponsive {
   pointer-events: none;
 }

@@ -18,7 +18,7 @@
   }
 }
 
-@mixin zust-tablet {
+@mixin only-tablet {
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     @content;
   }

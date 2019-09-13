@@ -1,4 +1,4 @@
-.zust-switch {
+.#{$prefix}switch {
   position: relative;
   margin: 0 0 8px 8px;
   display: inline-block;
@@ -63,7 +63,7 @@
     }
 
     &:focus + span,
-    &.zust-focused + span {
+    &.#{$prefix}focused + span {
       box-shadow: 0 0 0 2px var(--switch-border-spread-color);
       border-color: var(--switch-active-border-color);
     }
@@ -71,13 +71,13 @@
 
   @each $name, $color, $s, $g, $light-color in $item-colors {
     @if $name {
-      &.zust-#{$name} > input:checked + span {
+      &.#{$prefix}#{$name} > input:checked + span {
         background-color: $color;
         border-color: $color;
       }
 
-      &.zust-#{$name} > input:focus + span,
-      &.zust-#{$name} > input.zust-focused + span {
+      &.#{$prefix}#{$name} > input:focus + span,
+      &.#{$prefix}#{$name} > input.#{$prefix}focused + span {
         box-shadow: 0 0 0px 2px $light-color;
         border-color: $color;
       }
@@ -111,11 +111,11 @@
     }
   }
 
-  &.zust-gummy:active > input + span:after {
+  &.#{$prefix}gummy:active > input + span:after {
     width: 20px;
   }
 
-  &.zust-gummy:active > input:checked + span:after {
+  &.#{$prefix}gummy:active > input:checked + span:after {
     width: 20px;
     transform: translate(-12px, -50%);
   }

@@ -1,4 +1,4 @@
-.zust-table {
+.#{$prefix}table {
   border-collapse: collapse;
 
   td, th {
@@ -13,19 +13,19 @@
     }
   }
 
-  &.zust-striped tbody {
+  &.#{$prefix}striped tbody {
     tr:nth-child(odd) {
       background-color: var(--table-bg-color);
     }
   }
 
-  &.zust-hoverable tbody tr{
-    &:hover, &.zust-hovered {
+  &.#{$prefix}hoverable tbody tr{
+    &:hover, &.#{$prefix}hovered {
       background-color: var(--table-hovered-bg-color);
     }
   }
 
-  &.zust-bottom-bordered tr {
+  &.#{$prefix}bottom-bordered tr {
     border-style: solid;
     border-width: 0;
     border-color: var(--table-border-color);
@@ -37,7 +37,7 @@
     }
   }
 
-  &.zust-bordered {
+  &.#{$prefix}bordered {
     td, th {
       border-style: solid;
       border-color: var(--table-border-color);

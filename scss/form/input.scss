@@ -1,4 +1,4 @@
-.zust-input {
+.#{$prefix}input {
   appearance: none;
   border-style: solid;
   border-width: 0;
@@ -28,7 +28,7 @@
   // Reuse Vars
   --in-pad: 35px;
 
-  ~ .zust-icon {
+  ~ .#{$prefix}icon {
     --icon-size: 18px;
     --ic-margin: 10px;
     position: absolute !important;
@@ -39,33 +39,33 @@
       bottom: 0 !important;
     }
 
-    &.zust-left {
+    &.#{$prefix}left {
       left: 0;
       margin-right: 0 !important;
       margin-left: var(--ic-margin);
     }
 
-    &.zust-right {
+    &.#{$prefix}right {
       right: 0;
       margin-left: 0 !important;
       margin-right: var(--ic-margin);
     }
   }
 
-  &.zust-with-icon-left {
+  &.#{$prefix}with-icon-left {
     padding-left: var(--in-pad) !important;
   }
 
-  &.zust-with-icon-right {
+  &.#{$prefix}with-icon-right {
     padding-right: var(--in-pad) !important;
   }
 
-  &.zust-with-icon-both {
+  &.#{$prefix}with-icon-both {
     padding-right: var(--in-pad) !important;
     padding-left: var(--in-pad) !important;
   }
 
-  &.zust-small {
+  &.#{$prefix}small {
     @if $css-variable-enabled {
       font-size: var(--small-text);
     } @else {
@@ -80,13 +80,13 @@
 
     --in-pad: 25px;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       --icon-size: 12px;
       --ic-margin: 8px;
     }
   }
 
-  &.zust-large {
+  &.#{$prefix}large {
     @if $css-variable-enabled {
       font-size: var(--large-text);
     } @else {
@@ -101,13 +101,13 @@
 
     --in-pad: 45px;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       --icon-size: 24px;
       --ic-margin: 14px;
     }
   }
 
-  &.zust-xlarge {
+  &.#{$prefix}xlarge {
     @if $css-variable-enabled {
       font-size: var(--xlarge-text);
     } @else {
@@ -122,7 +122,7 @@
 
     --in-pad: 55px;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       --icon-size: 36px;
       --ic-margin: 13px;
     }
@@ -132,11 +132,11 @@
     color: var(--input-placeholder-text-color);
   }
 
-  &:hover, &.zust-hovered {
+  &:hover, &.#{$prefix}hovered {
     background-color: var(--input-hovered-bg-color);
   }
 
-  &:focus, &.zust-focused {
+  &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
     @if $css-variable-enabled {
       box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-color);
@@ -149,44 +149,44 @@
     pointer-events: none;
     opacity: 0.4;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       opacity: 0.4;
     }
   }
 
   // Readonly
-  &.zust-readonly, &[readonly] {
+  &.#{$prefix}readonly, &[readonly] {
 
-    &:hover, &.zust-hovered {
+    &:hover, &.#{$prefix}hovered {
       background-color: var(--input-bg-color);
     }
 
-    &:focus, &.zust-focused {
+    &:focus, &.#{$prefix}focused {
       background-color: var(--input-bg-color);
       box-shadow: 0 0 0 1px var(--input-border-color);
     }
   }
 
   // Transparent
-  &.zust-transparent {
+  &.#{$prefix}transparent {
     background-color: $transparent !important;
 
-    &:focus, &.zust-focused {
+    &:focus, &.#{$prefix}focused {
       background-color: $transparent !important;
       box-shadow: 0 0 0 0 !important;
     }
   }
 
   // Validity Check
-  &.zust-check-validity {
-    & ~ .zust-icon.zust-if-valid {
+  &.#{$prefix}check-validity {
+    & ~ .#{$prefix}icon.#{$prefix}if-valid {
       opacity: 0;
     }
 
     &:valid {
       border-color: var(--success-color);
 
-      &:focus, &.zust-focused {
+      &:focus, &.#{$prefix}focused {
         border-color: $transparent;
         @if $css-variable-enabled {
           box-shadow: 0 0 0 var(--input-border-spread) var(--success-color);
@@ -195,23 +195,23 @@
         }
       }
 
-      & ~ .zust-icon.zust-if-valid {
+      & ~ .#{$prefix}icon.#{$prefix}if-valid {
         opacity: 1;
       }
     }
   }
 
-  .zust-el-group &, .zust-el-group > .zust-form-el & {
+  .#{$prefix}el-group &, .#{$prefix}el-group > .#{$prefix}form-el & {
     margin: 0 !important;
   }
 
   // Colors
   @each $name, $color, $skip, $hovered-color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
+      &.#{$prefix}#{$name} {
         border-color: $color;
 
-        &:focus, &.zust-focused {
+        &:focus, &.#{$prefix}focused {
           border-color: $transparent;
           box-shadow: 0 0 0 $input-border-spread $hovered-color;
           @if $css-variable-enabled {
@@ -221,8 +221,8 @@
           }
         }
 
-        &.zust-readonly, &[readonly] {
-          &:focus, &.zust-focused {
+        &.#{$prefix}readonly, &[readonly] {
+          &:focus, &.#{$prefix}focused {
             box-shadow: 0 0 0 1px $hovered-color;
           }
         }
@@ -231,7 +231,7 @@
   }
 }
 
-.zust-input-append, .zust-input-prepend {
+.#{$prefix}input-append, .#{$prefix}input-prepend {
   display: inline-flex;
   background-color: black;
   align-items: center;

@@ -1,8 +1,8 @@
-.zust-placeholder {
+.#{$prefix}placeholder {
   position: relative;
   overflow: hidden;
 
-  .zust-holder {
+  .#{$prefix}holder {
     background-color: var(--placeholder-holder-color);
   }
 

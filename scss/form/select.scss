@@ -1,4 +1,4 @@
-select.zust-select {
+select.#{$prefix}select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -16,11 +16,11 @@ select.zust-select {
   box-sizing: content-box;
   width: 100%;
 
-  &.zust-fixed {
+  &.#{$prefix}fixed {
     width: auto;
   }
 
-  .zust-form-el.zust-fullwidth &, .zust-form-el.zust-full-width & {
+  .#{$prefix}form-el.#{$prefix}fullwidth &, .#{$prefix}form-el.#{$prefix}full-width & {
     width: 100%;
   }
 
@@ -32,7 +32,7 @@ select.zust-select {
 
   --in-pad: 35px;
 
-  ~ .zust-icon {
+  ~ .#{$prefix}icon {
     --icon-size: 18px;
     --ic-margin: 10px;
     position: absolute !important;
@@ -43,33 +43,33 @@ select.zust-select {
       bottom: 0 !important;
     }
 
-    &.zust-left {
+    &.#{$prefix}left {
       left: 0;
       margin-right: 0 !important;
       margin-left: var(--ic-margin);
     }
 
-    &.zust-right {
+    &.#{$prefix}right {
       right: 0;
       margin-left: 0 !important;
       margin-right: var(--ic-margin);
     }
   }
 
-  &.zust-with-icon-left {
+  &.#{$prefix}with-icon-left {
     padding-left: var(--in-pad) !important;
   }
 
-  &.zust-with-icon-right {
+  &.#{$prefix}with-icon-right {
     padding-right: var(--in-pad) !important;
   }
 
-  &.zust-with-icon-both {
+  &.#{$prefix}with-icon-both {
     padding-right: var(--in-pad) !important;
     padding-left: var(--in-pad) !important;
   }
 
-  &.zust-small {
+  &.#{$prefix}small {
     @if $css-variable-enabled {
       font-size: var(--small-text);
     } @else {
@@ -82,13 +82,13 @@ select.zust-select {
 
     --in-pad: 25px;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       --icon-size: 12px;
       --ic-margin: 8px;
     }
   }
 
-  &.zust-large {
+  &.#{$prefix}large {
     @if $css-variable-enabled {
       font-size: var(--large-text);
     } @else {
@@ -101,13 +101,13 @@ select.zust-select {
 
     --in-pad: 45px;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       --icon-size: 24px;
       --ic-margin: 14px;
     }
   }
 
-  &.zust-xlarge {
+  &.#{$prefix}xlarge {
     @if $css-variable-enabled {
       font-size: var(--xlarge-text);
     } @else {
@@ -120,7 +120,7 @@ select.zust-select {
 
     --in-pad: 55px;
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       --icon-size: 36px;
       --ic-margin: 13px;
     }
@@ -147,11 +147,11 @@ select.zust-select {
     font-size: $medium-text;
   }
 
-  &:hover, &.zust-hovered {
+  &:hover, &.#{$prefix}hovered {
     background-color: var(--input-hovered-bg-color);
   }
 
-  &:focus, &.zust-focused {
+  &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
     border-color: $transparent !important;
 
@@ -164,10 +164,10 @@ select.zust-select {
 
   @each $name, $color, $skip, $hovered-color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
+      &.#{$prefix}#{$name} {
         border-color: $color;
 
-        &:focus, &.zust-focused {
+        &:focus, &.#{$prefix}focused {
           @if $css-variable-enabled {
             box-shadow: 0 0 0 var(--select-border-spread) $hovered-color;
           } @else {
@@ -215,7 +215,7 @@ select.zust-select {
     background-color: var(--item-disabled-bg-color);
     color: var(--item-disabled-fg-color);
 
-    ~ .zust-icon {
+    ~ .#{$prefix}icon {
       color: var(--item-disabled-fg-color);
     }
 

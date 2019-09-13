@@ -1,6 +1,6 @@
 $span-translate: -8px, -4px;
 
-.zust-checkbox {
+.#{$prefix}checkbox {
   display: inline-block;
   margin: 0 0 6px 6px;
   user-select: none;
@@ -67,7 +67,7 @@ $span-translate: -8px, -4px;
       }
     }
 
-    &:focus + span, &.zust-focused + span {
+    &:focus + span, &.#{$prefix}focused + span {
       box-shadow: 0 0 0 2px var(--checkbox-border-spread-color);
     }
 
@@ -78,7 +78,7 @@ $span-translate: -8px, -4px;
     }
   }
 
-  &.zust-outlined > input + span {
+  &.#{$prefix}outlined > input + span {
     background-color: $transparent !important;
 
     &:after {
@@ -86,7 +86,7 @@ $span-translate: -8px, -4px;
     }
   }
 
-  &.zust-circle, &.zust-circular {
+  &.#{$prefix}circle, &.#{$prefix}circular {
     > input + span {
       border-radius: 100px;
     }
@@ -94,19 +94,19 @@ $span-translate: -8px, -4px;
 
   @each $name, $color, $skip, $skip, $light-color in $item-colors {
     @if $name {
-      &.zust-#{$name} > input:checked + span {
+      &.#{$prefix}#{$name} > input:checked + span {
         background-color: $color;
         border-color: $color;
       }
 
-      &.zust-#{$name} > input:focus + span,
-      &.zust-#{$name} > input.zust-focused + span {
+      &.#{$prefix}#{$name} > input:focus + span,
+      &.#{$prefix}#{$name} > input.#{$prefix}focused + span {
         border-color: $color;
         box-shadow: 0 0 0 2px $light-color;
       }
 
-      &.zust-outlined.zust-#{$name} > input:checked + span:after,
-      &.zust-#{$name} > input:indeterminate + span:after {
+      &.#{$prefix}outlined.#{$prefix}#{$name} > input:checked + span:after,
+      &.#{$prefix}#{$name} > input:indeterminate + span:after {
         border-color: $color;
       }
     }

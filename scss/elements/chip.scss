@@ -1,4 +1,4 @@
-.zust-chip {
+.#{$prefix}chip {
   display: inline-flex;
   height: 30px;
   background-color: var(--chip-bg-color);
@@ -26,14 +26,14 @@
     margin-left: 12px;
   }
 
-  > .zust-icon {
+  > .#{$prefix}icon {
     margin-right: 8px;
     margin-left: -4px;
     --icon-size: 1rem;
     border-radius: 1000px;
     padding: 10px;
 
-    &:hover, &.zust-hovered, &:focus {
+    &:hover, &.#{$prefix}hovered, &:focus {
       background-color: $stransparent;
     }
   }
@@ -42,15 +42,15 @@
     height: 100%;
   }
 
-  &.zust-large {
+  &.#{$prefix}large {
     height: 40px;
   }
 
-  &.zust-small {
+  &.#{$prefix}small {
     height: 22px;
     font-size: 13px;
 
-    > .zust-icon {
+    > .#{$prefix}icon {
       --icon-size: 0.7rem;
       padding: 5px;
     }

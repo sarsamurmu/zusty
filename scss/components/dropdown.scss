@@ -1,12 +1,12 @@
-.zust-dropdown {
+.#{$prefix}dropdown {
   position: relative;
   display: inline-block;
 
-  &:not(.zust-center-aligned) {
+  &:not(.#{$prefix}center-aligned) {
 
-    &:focus-within > .zust-items,
-    &.zust-hover:hover > .zust-items,
-    &.zust-active > .zust-items {
+    &:focus-within > .#{$prefix}items,
+    &.#{$prefix}hover:hover > .#{$prefix}items,
+    &.#{$prefix}active > .#{$prefix}items {
       transition: all 0.2s ease-in-out 0.1s, visibility 0s linear 0s;
       visibility: visible !important;
       opacity: 1 !important;
@@ -14,18 +14,18 @@
     }
   }
 
-  &.zust-left-aligned > .zust-items {
+  &.#{$prefix}left-aligned > .#{$prefix}items {
     left: 0 !important;
     right: auto !important;
   }
 
-  &.zust-right-aligned > .zust-items {
+  &.#{$prefix}right-aligned > .#{$prefix}items {
     left: auto !important;
     right: 0 !important;
   }
 
-  &.zust-center-aligned.zust-upside {
-    > .zust-items {
+  &.#{$prefix}center-aligned.#{$prefix}upside {
+    > .#{$prefix}items {
       left: 50%;
       transform: translate(-50%, - $dropdown-translate) !important;
       @if $css-variable-enabled {
@@ -35,9 +35,9 @@
       }
     }
 
-    &:focus-within > .zust-items,
-    &.zust-hover:hover > .zust-items,
-    &.zust-active > .zust-items {
+    &:focus-within > .#{$prefix}items,
+    &.#{$prefix}hover:hover > .#{$prefix}items,
+    &.#{$prefix}active > .#{$prefix}items {
       transition: all 0.2s ease-in-out 0.1s, visibility 0s linear 0s;
       visibility: visible !important;
       opacity: 1 !important;
@@ -45,8 +45,8 @@
     }
   }
 
-  &.zust-center-aligned:not(.zust-upside) {
-    > .zust-items {
+  &.#{$prefix}center-aligned:not(.#{$prefix}upside) {
+    > .#{$prefix}items {
       left: 50%;
       @if $css-variable-enabled {
         transform: translate(-50%, var(--dropdown-translate)) !important;
@@ -55,9 +55,9 @@
       }
     }
 
-    &:focus-within > .zust-items,
-    &.zust-hover:hover > .zust-items,
-    &.zust-active > .zust-items {
+    &:focus-within > .#{$prefix}items,
+    &.#{$prefix}hover:hover > .#{$prefix}items,
+    &.#{$prefix}active > .#{$prefix}items {
       transition: all 0.2s ease-in-out 0.1s, visibility 0s linear 0s;
       visibility: visible !important;
       opacity: 1 !important;
@@ -65,7 +65,7 @@
     }
   }
 
-  .zust-items {
+  .#{$prefix}items {
     top: 100%;
     left: 0;
     bottom: auto;
@@ -101,7 +101,7 @@
     height: fit-content;
     width: 150px;
 
-    .zust-center-aligned & {
+    .#{$prefix}center-aligned & {
       @if $css-variable-enabled {
         transform: translateY(var(--dropdown-translate));
       } @else {
@@ -110,19 +110,19 @@
     }
 
     // Sizes
-    &.zust-narrow {
+    &.#{$prefix}narrow {
       width: 50px !important;
     }
 
-    &.zust-small {
+    &.#{$prefix}small {
       width: 100px !important;
     }
 
-    &.zust-large {
+    &.#{$prefix}large {
       width: 200px !important;
     }
 
-    &.zust-xlarge {
+    &.#{$prefix}xlarge {
       width: 300px !important;
     }
 
@@ -151,7 +151,7 @@
         border-radius: $dropdown-item-border-radius;
       }
 
-      &:hover, &.zust-hovered {
+      &:hover, &.#{$prefix}hovered {
         background-color: var(--dropdown-option-hovered-color);
 
         > ul {
@@ -162,11 +162,11 @@
         }
       }
 
-      &[active], &.zust-active {
+      &[active], &.#{$prefix}active {
         background-color: var(--primary-color);
         color: $white;
 
-        &:hover, &.zust-hovered {
+        &:hover, &.#{$prefix}hovered {
           background-color: var(--primary-hovered-color);
         }
       }
@@ -204,27 +204,27 @@
       }
 
       // Sizes
-      &.zust-narrow > ul {
+      &.#{$prefix}narrow > ul {
         width: 50px !important;
       }
 
-      &.zust-small > ul {
+      &.#{$prefix}small > ul {
         width: 100px !important;
       }
 
-      &.zust-large > ul {
+      &.#{$prefix}large > ul {
         width: 200px !important;
       }
 
-      &.zust-xlarge > ul {
+      &.#{$prefix}xlarge > ul {
         width: 300px !important;
       }
     }
   }
 
   // Upside
-  &.zust-upside {
-    > .zust-items {
+  &.#{$prefix}upside {
+    > .#{$prefix}items {
       top: auto;
       bottom: 100%;
       margin: 0;
@@ -250,32 +250,32 @@
   }
 
   // Nested Dropdown Upside
-  .zust-upside > ul {
+  .#{$prefix}upside > ul {
     bottom: 0 !important;
     top: auto !important;
   }
 
   // All Nested
-  .zust-nested-upside ul {
+  .#{$prefix}nested-upside ul {
     bottom: 0 !important;
     top: auto !important;
   }
 
   // Down Side
   // Nested Dropdown Downside
-  .zust-downside > ul {
+  .#{$prefix}downside > ul {
     top: 0 !important;
     bottom: auto !important;
   }
 
   // All Nested
-  .zust-nested-downside ul {
+  .#{$prefix}nested-downside ul {
     top: 0 !important;
     bottom: auto !important;
   }
 
   // Rightside
-  &.zust-rightside > .zust-items {
+  &.#{$prefix}rightside > .#{$prefix}items {
     top: 0 !important;
     left: 100% !important;
     right: auto !important;
@@ -291,7 +291,7 @@
   }
 
   // Nested Dropdown Rightside
-  .zust-rightside > ul {
+  .#{$prefix}rightside > ul {
     left: 100% !important;
     right: auto !important;
     margin: 0 !important;
@@ -306,7 +306,7 @@
   }
 
   // All Nested
-  .zust-nested-rightside ul {
+  .#{$prefix}nested-rightside ul {
     left: 100% !important;
     right: auto !important;
     margin: 0 !important;
@@ -321,7 +321,7 @@
   }
 
   // Leftside
-  &.zust-leftside > .zust-items {
+  &.#{$prefix}leftside > .#{$prefix}items {
     top: 0;
     right: 100%;
     left: auto;
@@ -349,7 +349,7 @@
   }
 
   // Nested Dropdown Leftside
-  .zust-leftside > ul {
+  .#{$prefix}leftside > ul {
     left: auto !important;
     right: 100% !important;
     @if $css-variable-enabled {
@@ -362,7 +362,7 @@
   }
 
   // All Nested
-  .zust-nested-leftside ul {
+  .#{$prefix}nested-leftside ul {
     left: auto !important;
     right: 100% !important;
     @if $css-variable-enabled {
@@ -375,19 +375,19 @@
   }
 
   // Sizes
-  &.zust-narrow > .zust-items {
+  &.#{$prefix}narrow > .#{$prefix}items {
     width: 50px !important;
   }
 
-  &.zust-small > .zust-items {
+  &.#{$prefix}small > .#{$prefix}items {
     width: 100px !important;
   }
 
-  &.zust-large > .zust-items {
+  &.#{$prefix}large > .#{$prefix}items {
     width: 200px !important;
   }
 
-  &.zust-xlarge > .zust-items {
+  &.#{$prefix}xlarge > .#{$prefix}items {
     width: 300px !important;
   }
 }

@@ -5,7 +5,7 @@
   outline-color: $transparent !important;
 }
 
-.zust-btn, label {
+.#{$prefix}btn, label {
   @include desktop {
     cursor: pointer;
   }

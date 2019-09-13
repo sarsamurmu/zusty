@@ -1,4 +1,4 @@
-.zust-btn {
+.#{$prefix}btn {
   @extend %no-select;
   display: inline-flex;
   align-items: center;
@@ -26,15 +26,15 @@
 
 
   // Important
-  &.zust-icon-btn {
+  &.#{$prefix}icon-btn {
     padding: 8px !important;
 
-    .zust-icon {
+    .#{$prefix}icon {
       margin: 0 !important;
     }
   }
 
-  .zust-icon {
+  .#{$prefix}icon {
     margin: 0;
     --icon-size: 1rem;
 
@@ -49,21 +49,21 @@
     }
   }
 
-  &.zust-floating {
+  &.#{$prefix}floating {
     border-width: 0;
     box-shadow: 0px 1px 4px 0px var(--button-shadow-color);
 
-    &:hover, &.zust-hovered, &:focus, &.zust-focused {
+    &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
       transform: translateY(-2px);
     }
   }
 
-  &:hover, &.zust-hovered, input:checked + & {
+  &:hover, &.#{$prefix}hovered, input:checked + & {
     border-color: var(--button-hovered-border-color);
     //color: var(--button-text-color);
   }
 
-  &:focus, &.zust-focused {
+  &:focus, &.#{$prefix}focused {
     border-color: var(--button-focus-border-color);
     @if $css-variable-enabled {
       box-shadow: 0 0 0 var(--button-border-spread) var(--button-focus-border-color);
@@ -78,30 +78,30 @@
     opacity: 0.6;
   }
 
-  &.zust-transparent {
+  &.#{$prefix}transparent {
     background-color: $transparent !important;
     border-width: 0 !important;
 
-    &:hover, &.zust-hovered, input:checked + & {
+    &:hover, &.#{$prefix}hovered, input:checked + & {
       background-color: rgba(144, 144, 144, 0.1) !important;
       box-shadow: 0 0 0 0px rgba(144, 144, 144, 0.1) !important;
     }
 
-    &:focus, &.zust-focused {
+    &:focus, &.#{$prefix}focused {
       background-color: $transparent;
     }
   }
 
-  &.zust-custom, .zust-btns-custom > & {
+  &.#{$prefix}custom, .#{$prefix}btns-custom > & {
     background-color: $transparent;
     border-width: 0;
     color: $white;
 
-    &.zust-floating {
+    &.#{$prefix}floating {
       box-shadow: 0px 2px 3px 0px var(--button-shadow-color);
     }
 
-    &:focus, &.zust-focused {
+    &:focus, &.#{$prefix}focused {
       @if $css-variable-enabled {
         box-shadow: 0 0 0 var(button-border-spread) rgba(144, 144, 144, 0.15);
       } @else {
@@ -113,16 +113,16 @@
   // Colors
   @each $name, $color, $txt-color, $hovered-color, $border-spread-color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
+      &.#{$prefix}#{$name} {
         border-width: 0 !important;
         background-color: $color !important;
         color: $txt-color;
 
-        &:hover, &.zust-hovered, input:checked + & {
+        &:hover, &.#{$prefix}hovered, input:checked + & {
           background-color: $hovered-color !important;
         }
 
-        &:focus, &.zust-focused {
+        &:focus, &.#{$prefix}focused {
           @if $css-variable-enabled {
             box-shadow: 0 0 0 var(--button-border-spread) $border-spread-color !important;
           } @else {
@@ -131,63 +131,63 @@
         }
       }
 
-      &.zust-floating.zust-#{$name} {
+      &.#{$prefix}floating.#{$prefix}#{$name} {
         box-shadow: 0px 2px 3px 1px $border-spread-color;
       }
     }
   }
 
-  &.zust-full-width, &.zust-fullwidth, .zust-btns-full-width > &:not(.zust-ignored), .zust-btns-fullwidth > &:not(.zust-ignored) {
+  &.#{$prefix}full-width, &.#{$prefix}fullwidth, .#{$prefix}btns-full-width > &:not(.#{$prefix}ignored), .#{$prefix}btns-fullwidth > &:not(.#{$prefix}ignored) {
     @extend %full-width;
   }
 
-  &.zust-xlarge, .zust-btns-xlarge > &:not(.zust-ignored) {
+  &.#{$prefix}xlarge, .#{$prefix}btns-xlarge > &:not(.#{$prefix}ignored) {
     font-size: $xlarge-text !important;
     padding: 18px 27px !important;
 
-    &.zust-icon-btn {
+    &.#{$prefix}icon-btn {
       padding: 18px !important;
     }
 
-    .zust-icon {
+    .#{$prefix}icon {
       --icon-size: 1.9rem;
     }
   }
 
-  &.zust-large, .zust-btns-large > &:not(.zust-ignored) {
+  &.#{$prefix}large, .#{$prefix}btns-large > &:not(.#{$prefix}ignored) {
     font-size: $large-text !important;
     padding: 14px 21px !important;
 
-    &.zust-icon-btn {
+    &.#{$prefix}icon-btn {
       padding: 14px !important;
     }
 
-    .zust-icon {
+    .#{$prefix}icon {
       --icon-size: 1.4rem;
     }
   }
 
-  &.zust-default {
+  &.#{$prefix}default {
     width: max-content !important;
     height: max-content !important;
     font-size: $medium-text !important;
     padding: 8px 12px !important;
   }
 
-  &.zust-small, .zust-small > &:not(.zust-ignored) {
+  &.#{$prefix}small, .#{$prefix}small > &:not(.#{$prefix}ignored) {
     font-size: $small-text !important;
     padding: 4px 12px !important;
 
-    &.zust-icon-btn {
+    &.#{$prefix}icon-btn {
       padding: 4px !important;
     }
 
-    .zust-icon {
+    .#{$prefix}icon {
       --icon-size: 0.8rem;
     }
   }
 
-  &.zust-outlined, .zust-btns-outlined > & {
+  &.#{$prefix}outlined, .#{$prefix}btns-outlined > & {
     background-color: $transparent !important;
 
     @if $css-variable-enabled {
@@ -196,7 +196,7 @@
       border-width: $button-outlined-border-width !important;
     }
 
-    &:hover, &.zust-hovered {
+    &:hover, &.#{$prefix}hovered {
       background-color: $transparent !important;
     }
   }
@@ -204,11 +204,11 @@
 
   @each $name, $color, $skip, $hovered-color in $item-colors {
     @if $name {
-      &.zust-outlined.zust-#{$name} {
+      &.#{$prefix}outlined.#{$prefix}#{$name} {
         border-color: $color !important;
         color: $color;
 
-        &:hover, &.zust-hovered {
+        &:hover, &.#{$prefix}hovered {
           border-color: $hovered-color !important;
         }
       }
@@ -216,17 +216,17 @@
   }
 }
 
-.zust-toggle-btn {
+.#{$prefix}toggle-btn {
   input[type="checkbox"], input[type="radio"] {
     display: none;
   }
 
-  input:checked + .zust-btn {
+  input:checked + .#{$prefix}btn {
     filter: brightness(0.9);
   }
 
-  .zust-el-group > & {
-    > .zust-btn {
+  .#{$prefix}el-group > & {
+    > .#{$prefix}btn {
       margin: 0 !important;
     }
   }

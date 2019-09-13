@@ -1,4 +1,4 @@
-.zust-radio {
+.#{$prefix}radio {
   display: inline-block;
   margin: 0 0 6px 6px;
   user-select: none;
@@ -67,12 +67,12 @@
     }
 
     &:focus + span,
-    &.zust-focused + span {
+    &.#{$prefix}focused + span {
       box-shadow: 0 0 0 2px var(--radio-border-spread-color);
     }
   }
 
-  &.zust-rect, &.zust-rectangle, &.zust-rectangular {
+  &.#{$prefix}rect, &.#{$prefix}rectangle, &.#{$prefix}rectangular {
     > input + span {
       border-radius: 7px;
 
@@ -84,12 +84,12 @@
 
   @each $name, $color, $skip, $skip, $light-color in $item-colors {
     @if $name {
-      &.zust-#{$name} > input:checked + span {
+      &.#{$prefix}#{$name} > input:checked + span {
         background-color: $color;
       }
 
-      &.zust-#{$name} > input:focus + span,
-      &.zust-#{$name} > input.zust-focused + span {
+      &.#{$prefix}#{$name} > input:focus + span,
+      &.#{$prefix}#{$name} > input.#{$prefix}focused + span {
         box-shadow: 0 0 0 2px $light-color;
       }
     }

@@ -1,100 +1,100 @@
 
-.zust-text-bold {
+.#{$prefix}text-bold {
   font-weight: 600 !important;
 }
 
-.zust-text-normal {
+.#{$prefix}text-normal {
   font-weight: 400 !important;
 }
 
-.zust-text-italic {
+.#{$prefix}text-italic {
   font-style: italic !important;
 }
 
-.zust-text-underline, .zust-text-underlined {
+.#{$prefix}text-underline, .#{$prefix}text-underlined {
   text-decoration: underline !important;
 }
 
-.zust-text-light {
+.#{$prefix}text-light {
   font-weight: lighter !important;
 }
 
-.zust-text-small {
+.#{$prefix}text-small {
   font-size: $small-text !important;
 }
 
-.zust-text-medium {
+.#{$prefix}text-medium {
   font-size: $medium-text !important;
 }
 
-.zust-text-large {
+.#{$prefix}text-large {
   font-size: $large-text !important;
 }
 
-.zust-text-xlarge {
+.#{$prefix}text-xlarge {
   font-size: $xlarge-text !important;
 }
 
-.zust-text-centered, .zust-text-center {
+.#{$prefix}text-centered, .#{$prefix}text-center {
   text-align: center !important;
 }
 
-.zust-rtl, .zust-right-to-left, .zust-text-rtl, .zust-text-right-to-left, .zust-text-right {
+.#{$prefix}rtl, .#{$prefix}right-to-left, .#{$prefix}text-rtl, .#{$prefix}text-right-to-left, .#{$prefix}text-right {
   text-align: right !important;
 }
 
-.zust-ltr, .zust-left-to-right, .zust-text-ltr, .zust-text-left-to-right, .zust-text-left {
+.#{$prefix}ltr, .#{$prefix}left-to-right, .#{$prefix}text-ltr, .#{$prefix}text-left-to-right, .#{$prefix}text-left {
   text-align: left !important;
 }
 
-.zust-unselectable, .zust-text-unselectable {
+.#{$prefix}unselectable, .#{$prefix}text-unselectable {
   @extend %no-select;
 }
 
-.zust-uppercase, .zust-text-uppercase {
+.#{$prefix}uppercase, .#{$prefix}text-uppercase {
   text-transform: uppercase !important;
 }
 
-.zust-lowercase, .zust-text-lowercase {
+.#{$prefix}lowercase, .#{$prefix}text-lowercase {
   text-transform: lowercase !important;
 }
 
-.zust-capitalize, .zust-text-capitalize {
+.#{$prefix}capitalize, .#{$prefix}text-capitalize {
   text-transform: capitalize !important;
 }
 
-.zust-text-justify, .zust-text-justified {
+.#{$prefix}text-justify, .#{$prefix}text-justified {
   text-align: justify !important;
 }
 
-.zust-text-no-wrap, .zust-text-nowrap {
+.#{$prefix}text-no-wrap, .#{$prefix}text-nowrap {
   white-space: nowrap !important;
 }
 
-.zust-text-truncate {
+.#{$prefix}text-truncate {
   max-width: 100% !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
 }
 
-.zust-text-family-inherit {
+.#{$prefix}text-family-inherit {
   font-family: inherit !important;
 }
 
-.zust-text-size-inherit {
+.#{$prefix}text-size-inherit {
   font-size: inherit !important;
 }
 
-.zust-text-no-decoration {
+.#{$prefix}text-no-decoration {
   text-decoration: none !important;
 }
 
-.zust-text-breakable {
+.#{$prefix}text-breakable {
   word-break: break-all !important;
 }
 
-.zust-text-reset {
+.#{$prefix}text-reset {
   font-family: inherit;
   font-size: inherit;
   font-weight: normal;
@@ -103,11 +103,11 @@
 }
 
 @for $i from 1 through 10 {
-  .zust-text-#{$i} {
+  .#{$prefix}text-#{$i} {
     font-size: ($i/25) * 10rem;
   }
 
-  $name: '.zust-text-#{$i}-name';
+  $name: '.#{$prefix}text-#{$i}-name';
 
   @include each-breakpoint($name, 'name') {
     font-size: ($i/25) * 10rem;

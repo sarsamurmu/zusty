@@ -1,7 +1,7 @@
 // Changable Variables
 // --icon-size
 
-.zust-icon {
+.#{$prefix}icon {
 
   @if $css-variable-enabled {
     --icon-size: var(--icon-size-default);
@@ -45,35 +45,35 @@
   }
 
   @if $css-variable-enabled {
-    &.zust-small {
+    &.#{$prefix}small {
       --icon-size: var(--icon-size-small);
     }
 
-    &.zust-normal, &.zust-default {
+    &.#{$prefix}normal, &.#{$prefix}default {
       --icon-size: var(--icon-size-default);
     }
 
-    &.zust-large {
+    &.#{$prefix}large {
       --icon-size: var(--icon-size-large);
     }
 
-    &.zust-xlarge {
+    &.#{$prefix}xlarge {
       --icon-size: var(--icon-size-xlarge);
     }
   } @else {
-    &.zust-small {
+    &.#{$prefix}small {
       --icon-size: #{$icon-size-small};
     }
 
-    &.zust-normal, &.zust-default {
+    &.#{$prefix}normal, &.#{$prefix}default {
       --icon-size: #{$icon-size-default};
     }
 
-    &.zust-large {
+    &.#{$prefix}large {
       --icon-size: #{$icon-size-large};
     }
 
-    &.zust-xlarge {
+    &.#{$prefix}xlarge {
       --icon-size: #{$icon-size-xlarge};
     }
   }

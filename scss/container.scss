@@ -9,14 +9,14 @@ $it-pad: $container-items-padding;
 
 // Sizes
 @mixin sizes($suffix: '') {
-  &.zust-1-2#{$suffix}, &.zust-half#{$suffix}  {
+  &.#{$prefix}1-2#{$suffix}, &.#{$prefix}half#{$suffix}  {
     flex: none;
     width: 50% !important;
   }
 
   // Three Parts
   @for $i from 1 through 2 {
-    &.zust-#{$i}-3#{$suffix} {
+    &.#{$prefix}#{$i}-3#{$suffix} {
       flex: none;
       width: percentage($i/3) !important;
     }
@@ -24,7 +24,7 @@ $it-pad: $container-items-padding;
 
   // Four Parts
   @for $i from 1 through 3 {
-    &.zust-#{$i}-4#{$suffix} {
+    &.#{$prefix}#{$i}-4#{$suffix} {
       flex: none;
       width: percentage($i/4) !important;
     }
@@ -32,7 +32,7 @@ $it-pad: $container-items-padding;
 
   // Five Parts
   @for $i from 1 through 4 {
-    &.zust-#{$i}-5#{$suffix} {
+    &.#{$prefix}#{$i}-5#{$suffix} {
       flex: none;
       width: percentage($i/5) !important;
     }
@@ -40,14 +40,14 @@ $it-pad: $container-items-padding;
 
   // 12 Parts
   @for $i from 1 through 11 {
-    &.zust-#{$i}-12#{$suffix} {
+    &.#{$prefix}#{$i}-12#{$suffix} {
       flex: none;
       width: percentage($i/12) !important;
     }
   }
 }
 
-.zust-container {
+.#{$prefix}container {
   padding: $container-padding;
   margin: $container-margin;
   display: flex;
@@ -55,67 +55,67 @@ $it-pad: $container-items-padding;
   overflow: hidden;
   overflow: visible;
 
-  &.zust-v-centered {
+  &.#{$prefix}v-centered {
     align-items: center;
   }
 
-  &.zust-h-centered {
+  &.#{$prefix}h-centered {
     justify-content: center;
   }
 
-  &.zust-f-centered {
+  &.#{$prefix}f-centered {
     align-items: center;
     justify-content: center;
   }
 
-  &.zust-column {
+  &.#{$prefix}column {
     margin: 0 0 $container-margin 0;
 
 // Replacement #1
 
-    $not-selector: getClassList($breakpoint-names, ':not(.zust-name)', 'name', '', '', '');
+    $not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}name)', 'name', '', '', '');
 
-    &:not(.zust-custom)#{$not-selector} {
+    &:not(.#{$prefix}custom)#{$not-selector} {
       @include tablet {
         flex-wrap: nowrap;
       }
     }
 
-    $common-selector: getClassList($breakpoint-names, '.zust-name', 'name', '&', '', ', &');
+    $common-selector: getClassList($breakpoint-names, '.#{$prefix}name', 'name', '&', '', ', &');
 
     #{$common-selector} {
-      > .zust-column {
+      > .#{$prefix}column {
         margin: 0 0 $it-mar 0;
       }
     }
 
 /*
-//    &:not(.zust-custom):not(.zust-mobile):not(.zust-tablet):not(.zust-touch):not(.zust-desktop) {
+//    &:not(.#{$prefix}custom):not(.#{$prefix}mobile):not(.#{$prefix}tablet):not(.#{$prefix}touch):not(.#{$prefix}desktop) {
 //      @include tablet {
 //        flex-wrap: nowrap;
 //      }
 //    }
 
 
-    &.zust-mobile, &.zust-tablet, &.zust-touch, &.zust-desktop {
-      > .zust-column {
+    &.#{$prefix}mobile, &.#{$prefix}tablet, &.#{$prefix}touch, &.#{$prefix}desktop {
+      > .#{$prefix}column {
         margin: 0 0 $it-mar 0;
       }
     }
 */
 // End of Replacement #1
 
-    &.zust-custom {
-      &:not(.zust-active) {
-        > .zust-column {
+    &.#{$prefix}custom {
+      &:not(.#{$prefix}active) {
+        > .#{$prefix}column {
           margin: 0 0 $it-mar 0;
         }
       }
 
-      &.zust-active {
+      &.#{$prefix}active {
         flex-wrap: nowrap;
 
-        > .zust-column {
+        > .#{$prefix}column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
@@ -123,11 +123,11 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.zust-all/*, &.zust-mobile*/ {
+    &.#{$prefix}all/*, &.#{$prefix}mobile*/ {
       @include mobile {
         flex-wrap: nowrap;
 
-        > .zust-column {
+        > .#{$prefix}column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
@@ -137,11 +137,11 @@ $it-pad: $container-items-padding;
 
     // Replacement #2
     /*
-    &.zust-tablet {
-      @include zust-tablet {
+    &.#{$prefix}tablet {
+      @include only-tablet {
         flex-wrap: nowrap;
 
-        > .zust-column {
+        > .#{$prefix}column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
@@ -149,11 +149,11 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.zust-touch {
+    &.#{$prefix}touch {
       @include touch {
         flex-wrap: nowrap;
 
-        > .zust-column {
+        > .#{$prefix}column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
@@ -161,11 +161,11 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.zust-desktop {
+    &.#{$prefix}desktop {
       @include desktop {
         flex-wrap: nowrap;
 
-        > .zust-column {
+        > .#{$prefix}column {
           margin: 0 $it-mar 0 0;
 
           @include sizes;
@@ -174,10 +174,10 @@ $it-pad: $container-items-padding;
     }
     */
 
-    @include each-breakpoint('&.zust-name', 'name') {
+    @include each-breakpoint('&.#{$prefix}name', 'name') {
       flex-wrap: nowrap;
 
-      > .zust-column {
+      > .#{$prefix}column {
         margin: 0 $it-mar 0 0;
 
         @include sizes;
@@ -187,20 +187,20 @@ $it-pad: $container-items-padding;
     // End of Replacement 2
   }
 
-  .zust-column {
+  .#{$prefix}column {
     margin: 0 $it-mar 0 0;
     padding: $it-pad;
     width: 100%;
 
     // Replacement #3
-    //$not-selector: getClassList($breakpoint-names, ':not(.zust-default-name)', 'name', '', '', '');
+    //$not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}default-name)', 'name', '', '', '');
 
-    //&:not(.zust-default)#{$not-selector} {
+    //&:not(.#{$prefix}default)#{$not-selector} {
     //  width: 100%;
     //}
 
     /*
-    &:not(.zust-default):not(.zust-default-mobile):not(.zust-default-tablet):not(.zust-default-touch):not(.zust-default-desktop) {
+    &:not(.#{$prefix}default):not(.#{$prefix}default-mobile):not(.#{$prefix}default-tablet):not(.#{$prefix}default-touch):not(.#{$prefix}default-desktop) {
       width: 100%;
     }
     */
@@ -208,7 +208,7 @@ $it-pad: $container-items-padding;
 
     // Replacement #4
     /*
-    &.zust-default-mobile {
+    &.#{$prefix}default-mobile {
       @include mobile {
         flex: none;
       }
@@ -222,8 +222,8 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.zust-default-tablet {
-      @include zust-tablet {
+    &.#{$prefix}default-tablet {
+      @include only-tablet {
         flex: none;
       }
 
@@ -236,7 +236,7 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.zust-default-touch {
+    &.#{$prefix}default-touch {
       @include touch {
         flex: none;
       }
@@ -246,7 +246,7 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.zust-default-desktop {
+    &.#{$prefix}default-desktop {
       @include desktop {
         flex: none;
       }
@@ -257,7 +257,7 @@ $it-pad: $container-items-padding;
     }
     */
 
-    //$default-selector: getClassList($breakpoint-names, '&.zust-default-name', 'name', '', '', ', ');
+    //$default-selector: getClassList($breakpoint-names, '&.#{$prefix}default-name', 'name', '', '', ', ');
 
     //@debug $default-selector;
 
@@ -265,12 +265,12 @@ $it-pad: $container-items-padding;
     //  width: 100%;
     //}
 
-    &.zust-default {
+    &.#{$prefix}default {
       flex: none;
       width: auto;
     }
 
-    @include each-breakpoint('&.zust-default-name', 'name') {
+    @include each-breakpoint('&.#{$prefix}default-name', 'name') {
       flex: none;
       width: auto;
     }
@@ -283,12 +283,12 @@ $it-pad: $container-items-padding;
       margin: 0 !important;
     }
 
-    &.zust-full {
+    &.#{$prefix}full {
       flex: none;
       width: 100%;
     }
 
-    &.zust-container {
+    &.#{$prefix}container {
       padding: 0;
     }
 
@@ -300,7 +300,7 @@ $it-pad: $container-items-padding;
       @include c-sizes(mobile);
     }
 
-    @include zust-tablet {
+    @include only-tablet {
       @include c-sizes(tablet);
     }
 
@@ -335,7 +335,7 @@ $it-pad: $container-items-padding;
 }
 
 // Grouping
-.zust-el-group {
+.#{$prefix}el-group {
   display: inline-flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -343,62 +343,62 @@ $it-pad: $container-items-padding;
   margin-right: 8px;
   margin-bottom: 8px;
 
-  > *, > .zust-dropdown > .zust-btn {
+  > *, > .#{$prefix}dropdown > .#{$prefix}btn {
     margin: 0 !important;
   }
 
-  > .zust-dropdown > .zust-btn {
+  > .#{$prefix}dropdown > .#{$prefix}btn {
     height: 100%;
   }
 
-  &:not(.zust-vertical) {
-    > :first-child, > label:first-child > .zust-btn, > .zust-dropdown:first-child > .zust-btn {
+  &:not(.#{$prefix}vertical) {
+    > :first-child, > label:first-child > .#{$prefix}btn, > .#{$prefix}dropdown:first-child > .#{$prefix}btn {
       border-top-right-radius: 0 !important;
       border-bottom-right-radius: 0 !important;
     }
 
-    > *:not(:first-child):not(:last-child), label:not(:first-child):not(:last-child) > .zust-btn {
+    > *:not(:first-child):not(:last-child), label:not(:first-child):not(:last-child) > .#{$prefix}btn {
       border-radius: 0 0 0 0 !important;
     }
 
 
-    > *:not(:first-child):not(:last-child).zust-btn {
+    > *:not(:first-child):not(:last-child).#{$prefix}btn {
       border-left-width: 0 !important;
       //border-right-width: 0 !important;
     }
 
-    > :last-child, > label:last-child > .zust-btn, > .zust-dropdown:last-child > .zust-btn {
+    > :last-child, > label:last-child > .#{$prefix}btn, > .#{$prefix}dropdown:last-child > .#{$prefix}btn {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
     }
 
-    > :last-child.zust-btn, > .zust-dropdown:last-child > .zust-btn {
+    > :last-child.#{$prefix}btn, > .#{$prefix}dropdown:last-child > .#{$prefix}btn {
       border-left-width: 0 !important;
     }
   }
 
-  &.zust-vertical {
+  &.#{$prefix}vertical {
     display: inline-flex;
     flex-direction: column;
 
-    > :first-child, > label:first-child > .zust-btn {
+    > :first-child, > label:first-child > .#{$prefix}btn {
       border-bottom-right-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
     }
 
-    > :first-child.zust-button {
+    > :first-child.#{$prefix}button {
       border-bottom-width: 0 !important;
     }
 
-    > *:not(:first-child):not(:last-child), label:not(:first-child):not(:last-child) > .zust-btn {
+    > *:not(:first-child):not(:last-child), label:not(:first-child):not(:last-child) > .#{$prefix}btn {
       border-radius: 0 0 0 0 !important;
     }
 
-    > *:not(:first-child):not(:last-child).zust-btn {
+    > *:not(:first-child):not(:last-child).#{$prefix}btn {
       border-bottom-width: 0 !important;
     }
 
-    > :last-child, > label:last-child > .zust-btn {
+    > :last-child, > label:last-child > .#{$prefix}btn {
       border-top-right-radius: 0 !important;
       border-top-left-radius: 0 !important;
     }
@@ -407,16 +407,16 @@ $it-pad: $container-items-padding;
       width: 100%;
       display: flex;
 
-      > .zust-btn {
+      > .#{$prefix}btn {
         width: 100%;
       }
     }
   }
 
-  &.zust-fullwidth, &.zust-full-width {
+  &.#{$prefix}fullwidth, &.#{$prefix}full-width {
     display: flex;
 
-    > .zust-form-el {
+    > .#{$prefix}form-el {
       //width: 100%;
     }
   }

@@ -1,4 +1,4 @@
-.zust-bottom-nav  {
+.#{$prefix}bottom-nav  {
   position: fixed;
   display: flex;
   bottom: 0;
@@ -12,7 +12,7 @@
   justify-content: space-around;
   z-index: $bottom-nav-z-index;
 
-  .zust-item {
+  .#{$prefix}item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
       height: 18px;
     }
 
-    a .zust-icon, .zust-icon {
+    a .#{$prefix}icon, .#{$prefix}icon {
       font-size: 18px;
       margin-top: 0;
     }
@@ -43,7 +43,7 @@
         color: var(--primary-color);
       }
 
-      & ~ .zust-icon, & ~ a .zust-icon {
+      & ~ .#{$prefix}icon, & ~ a .#{$prefix}icon {
         font-size: 20px;
       }
     }
@@ -53,14 +53,14 @@
     }
   }
 
-  &.zust-max-content .zust-item {
+  &.#{$prefix}max-content .#{$prefix}item {
     a span, span {
       font-size: 0;
       opacity: 0;
       transition-timing-function: linear;
     }
 
-    a .zust-icon, .zust-icon {
+    a .#{$prefix}icon, .#{$prefix}icon {
       font-size: 18px;
       margin-bottom: 0;
       opacity: 1;
@@ -73,7 +73,7 @@
         opacity: 1;
       }
 
-      & ~ .zust-icon, & ~ a .zust-icon {
+      & ~ .#{$prefix}icon, & ~ a .#{$prefix}icon {
         font-size: 20px;
         margin-bottom: 4px;
       }

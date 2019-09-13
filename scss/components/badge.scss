@@ -1,7 +1,7 @@
 $padding-first: 10px;
 $padding-second: 5px;
 
-span.zust-badge {
+span.#{$prefix}badge {
   @extend %no-select;
   display: inline-block;
   $padding: 4px;
@@ -25,7 +25,7 @@ span.zust-badge {
     transition: $secondary-transition;
   }
 
-  &.zust-outlined, .zust-badges-outlined & {
+  &.#{$prefix}outlined, .#{$prefix}badges-outlined & {
     background-color: $transparent;
     border-style: solid;
     border-width: 2px;
@@ -33,12 +33,12 @@ span.zust-badge {
     color: var(--text-color-secondary);
   }
 
-  .zust-badges-rounded & {
+  .#{$prefix}badges-rounded & {
     border-radius: 100000px;
   }
 }
 
-div.zust-badge {
+div.#{$prefix}badge {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -109,7 +109,7 @@ div.zust-badge {
     }
   }
 
-  &.zust-rounded, .zust-badges-rounded & {
+  &.#{$prefix}rounded, .#{$prefix}badges-rounded & {
     overflow: hidden;
     border-radius: 100000px;
   }

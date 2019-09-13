@@ -1,4 +1,4 @@
-.zust-progress:not(progress) {
+.#{$prefix}progress:not(progress) {
   display: flex;
   width: fill-available;
   height: 20px;
@@ -18,65 +18,65 @@
     border-radius: $progress-bar-border-radius;
   }
 
-  &.zust-in-progress:not(.zust-striped) > .zust-bar:after {
+  &.#{$prefix}in-progress:not(.#{$prefix}striped) > .#{$prefix}bar:after {
     animation: progress-anim 2s linear infinite;
   }
 
-  &.zust-rtl {
+  &.#{$prefix}rtl {
     justify-content: flex-end;
 
-    > .zust-bar:after {
+    > .#{$prefix}bar:after {
       right: 0;
     }
 
-    &.zust-indeterminate > .zust-bar {
+    &.#{$prefix}indeterminate > .#{$prefix}bar {
       animation-name: progress-indeterminate-rtl;
     }
   }
 
-  &.zust-indeterminate > .zust-bar {
+  &.#{$prefix}indeterminate > .#{$prefix}bar {
     width: 30%;
     animation: progress-indeterminate 2s linear infinite;
   }
 
-  &:not(.zust-rtl) {
-    > .zust-bar:after {
+  &:not(.#{$prefix}rtl) {
+    > .#{$prefix}bar:after {
       left: 0;
     }
 
-    &.zust-striped.zust-in-progress > .zust-bar {
+    &.#{$prefix}striped.#{$prefix}in-progress > .#{$prefix}bar {
       animation: progress-anim-striped 3s linear infinite;
     }
 
-    &.zust-striped > .zust-bar.zust-in-progress {
+    &.#{$prefix}striped > .#{$prefix}bar.#{$prefix}in-progress {
       animation: progress-anim-striped 3s linear infinite;
     }
   }
 
-  &.zust-rtl.zust-striped.zust-in-progress > .zust-bar {
+  &.#{$prefix}rtl.#{$prefix}striped.#{$prefix}in-progress > .#{$prefix}bar {
     animation: progress-anim-striped-rtl 3s linear infinite;
   }
 
-  &.zust-striped > .zust-bar {
+  &.#{$prefix}striped > .#{$prefix}bar {
     background-size: 30px 30px;
     background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
                       transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
                       transparent 75%, transparent);
   }
 
-  &:not(.zust-striped) > .zust-bar.zust-in-progress:not(.zust-striped):after {
+  &:not(.#{$prefix}striped) > .#{$prefix}bar.#{$prefix}in-progress:not(.#{$prefix}striped):after {
     animation: progress-anim 2s linear infinite;
   }
 
-  &.zust-rtl.zust-striped > .zust-bar.zust-in-progress {
+  &.#{$prefix}rtl.#{$prefix}striped > .#{$prefix}bar.#{$prefix}in-progress {
     animation: progress-anim-striped-rtl 3s linear infinite;
   }
 
-  &.zust-rtl > .zust-bar.zust-striped.zust-in-progress {
+  &.#{$prefix}rtl > .#{$prefix}bar.#{$prefix}striped.#{$prefix}in-progress {
     animation: progress-anim-striped-rtl 3s linear infinite;
   }
 
-  > .zust-bar {
+  > .#{$prefix}bar {
     position: relative;
     user-select: none;
     height: 100%;
@@ -97,20 +97,20 @@
 
     @each $name, $color, $txt-color in $item-colors {
       @if $name {
-        &.zust-#{$name} {
+        &.#{$prefix}#{$name} {
           background-color: $color;
           color: $txt-color;
         }
       }
     }
 
-    &.zust-striped {
+    &.#{$prefix}striped {
       background-size: 30px 30px;
       background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
                           transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
                           transparent 75%, transparent);
 
-      &.zust-in-progress {
+      &.#{$prefix}in-progress {
         animation: progress-anim-striped 3s linear infinite;
       }
     }
@@ -155,11 +155,11 @@
       }
     }
 
-    &.zust-text-right {
+    &.#{$prefix}text-right {
       justify-content: flex-end;
     }
 
-    &.zust-text-left {
+    &.#{$prefix}text-left {
       justify-content: flex-start;
     }
 
@@ -168,41 +168,41 @@
     }
   }
 
-  &[value] > .zust-bar {
+  &[value] > .#{$prefix}bar {
     width: 100%;
   }
 
   @for $i from 0 through 100 {
     &[value="#{$i}"] {
-      > .zust-bar {
+      > .#{$prefix}bar {
         width: percentage($i/100);
       }
     }
   }
 
-  &.zust-line {
+  &.#{$prefix}line {
     height: 3px;
   }
 
-  &.zust-thin, &.zust-narrow {
+  &.#{$prefix}thin, &.#{$prefix}narrow {
     height: 5px;
   }
 
-  &.zust-small {
+  &.#{$prefix}small {
     height: 12px;
   }
 
-  &.zust-large {
+  &.#{$prefix}large {
     height: 28px;
   }
 
-  &.zust-xlarge {
+  &.#{$prefix}xlarge {
     height: 36px;
   }
 
   @each $name, $color, $txt-color in $item-colors {
     @if $name {
-      &.zust-#{$name} > .zust-bar {
+      &.#{$prefix}#{$name} > .#{$prefix}bar {
         background-color: $color;
         color: $txt-color;
       }

@@ -1,4 +1,4 @@
-.zust-card {
+.#{$prefix}card {
   background-color: var(--card-bg-color);
   padding: 10px 20px;
   max-width: 200px;
@@ -17,13 +17,13 @@
     transition: $primary-transition;
   }
 
-  &.zust-flat {
+  &.#{$prefix}flat {
     border-width: 2px;
     border-style: solid;
     box-shadow: 0 0 $transparent;
   }
 
-  &.zust-landscape {
+  &.#{$prefix}landscape {
     max-width: 350px;
     min-width: 260px;
   }
@@ -36,11 +36,11 @@
     margin: 0 -10px 0 -10px;
     overflow: hidden;
 
-    &.zust-center {
+    &.#{$prefix}center {
       text-align: center;
     }
 
-    &:not(.zust-center):not(.zust-text-center) {
+    &:not(.#{$prefix}center):not(.#{$prefix}text-center) {
       * {
         float: right;
       }
@@ -49,20 +49,20 @@
     @include clearfix;
   }
 
-  &.zust-hoverable {
+  &.#{$prefix}hoverable {
 
-    &:hover, &.zust-hovered {
+    &:hover, &.#{$prefix}hovered {
       border-color: $transparent;
       transform: translateY(-8px);
       box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
     }
   }
 
-  &.zust-rtl {
+  &.#{$prefix}rtl {
     text-align: right;
 
     footer {
-      &:not(.zust-center):not(.zust-text-center) {
+      &:not(.#{$prefix}center):not(.#{$prefix}text-center) {
         * {
           float: left;
         }

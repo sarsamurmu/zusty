@@ -1,4 +1,4 @@
-.zust-spinner {
+.#{$prefix}spinner {
   background-color: currentColor;
   border-radius: 20%;
   animation: spin-spinner 0.8s linear infinite;

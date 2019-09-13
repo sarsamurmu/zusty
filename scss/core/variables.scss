@@ -5,6 +5,8 @@ $css-variable-enabled: false !default;
 //==//  General  //==//
 //==//-----------//==//
 
+$prefix: 'zust-';
+
 // Screen Breakpoint Sizes as of Chrome Dev Tools
 $tablet: 768px !default;
 $desktop: 1024px !default;

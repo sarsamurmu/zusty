@@ -1,4 +1,4 @@
-.zust-note {
+.#{$prefix}note {
   background-color: var(--light-color);
   overflow: hidden;
   border-radius: 10px;
@@ -19,7 +19,7 @@
 
   @each $name, $color in $item-colors {
     @if $name {
-      &.zust-#{$name} > div:first-child {
+      &.#{$prefix}#{$name} > div:first-child {
         border-color: $color !important;
       }
     }

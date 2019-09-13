@@ -30,13 +30,13 @@ text, p {
   color: var(--body-text-color);
 }
 
-a:not(.zust-btn) {
+a:not(.#{$prefix}btn) {
   color: hsl(210, 100%, 50%);
   text-decoration: none;
   word-break: break-word;
   transition: 0.2s;
 
-  &:hover, &.zust-hovered {
+  &:hover, &.#{$prefix}hovered {
     color: hsl(210, 100%, 60%);
   }
 }
@@ -71,45 +71,45 @@ blockquote {
 
   @each $name, $color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
+      &.#{$prefix}#{$name} {
         border-color: $color;
       }
     }
   }
 }
 
-h1, h2, h3, h4, h5, h6, .zust-h1, .zust-h2, .zust-h3, .zust-h4, .zust-h5, .zust-h6 {
+h1, h2, h3, h4, h5, h6, .#{$prefix}h1, .#{$prefix}h2, .#{$prefix}h3, .#{$prefix}h4, .#{$prefix}h5, .#{$prefix}h6 {
   display: block;
   color: var(--text-color-primary);
   transition: $primary-transition;
 }
 
-h1, .zust-h1 {
+h1, .#{$prefix}h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-h2, .zust-h2 {
+h2, .#{$prefix}h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-h3, .zust-h3 {
+h3, .#{$prefix}h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-h4, .zust-h4 {
+h4, .#{$prefix}h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-h5, .zust-h5 {
+h5, .#{$prefix}h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-h6, .zust-h6 {
+h6, .#{$prefix}h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
 }

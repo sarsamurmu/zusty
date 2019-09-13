@@ -75,7 +75,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
 @include bg-colors;
 
 // Backgrounds on Dark Theme
-[zust-theme="dark"] {
+[#{$prefix}theme="dark"] {
   @include bg-colors('-dark');
 }
 
@@ -143,12 +143,12 @@ $text-color-helpers: join($colors, $extra-text-colors);
 @include text-colors;
 
 // Text on Dark Theme
-[zust-theme="dark"] {
+[#{$prefix}theme="dark"] {
   @include text-colors('-dark');
 }
 
 //@for $i from 1 through 9 {
-//  .zust-bg-grey-#{$i}00 {
+//  .#{$prefix}bg-grey-#{$i}00 {
 //    $bg: mix(black, white, $i * 10);
 //
 //    background-color: $bg;

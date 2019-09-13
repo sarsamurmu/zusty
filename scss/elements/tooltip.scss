@@ -1,11 +1,11 @@
-$selector-text: '&:hover, &:focus, &.zust-tooltip-active';
+$selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
 
-[zust-tooltip] {
+[#{$prefix}tooltip] {
   overflow: visible;
   position: relative;
 
   &:before {
-    content: attr(zust-tooltip);
+    content: attr(#{$prefix}tooltip);
     display: inline-block;
     width: max-content;
     max-width: 500px;
@@ -37,7 +37,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &:not([zust-tooltip-position="left"]):not([zust-tooltip-position="top"]):not([zust-tooltip-position="top-left"]):not([zust-tooltip-position="top-right"]):not([zust-tooltip-position="bottom"]):not([zust-tooltip-position="bottom-left"]):not([zust-tooltip-position="bottom-right"]):before {
+  &:not([#{$prefix}tooltip-position="left"]):not([#{$prefix}tooltip-position="top"]):not([#{$prefix}tooltip-position="top-left"]):not([#{$prefix}tooltip-position="top-right"]):not([#{$prefix}tooltip-position="bottom"]):not([#{$prefix}tooltip-position="bottom-left"]):not([#{$prefix}tooltip-position="bottom-right"]):before {
     top: auto;
     left: 100%;
     right: auto;
@@ -53,7 +53,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &:not([zust-tooltip-position="top"]):not([zust-tooltip-position="bottom"]) {
+  &:not([#{$prefix}tooltip-position="top"]):not([#{$prefix}tooltip-position="bottom"]) {
     #{$selector-text} {
       &:before {
         transform: none !important;
@@ -61,7 +61,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="left"] {
+  &[#{$prefix}tooltip-position="left"] {
     &:before {
       top: auto;
       left: auto !important;
@@ -72,7 +72,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="top"] {
+  &[#{$prefix}tooltip-position="top"] {
     &:before {
       top: auto;
       left: 50%;
@@ -90,7 +90,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="top-left"] {
+  &[#{$prefix}tooltip-position="top-left"] {
     &:before {
       top: auto;
       left: 0;
@@ -102,7 +102,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="top-right"] {
+  &[#{$prefix}tooltip-position="top-right"] {
     &:before {
       top: auto;
       left: auto !important;
@@ -114,7 +114,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="bottom"] {
+  &[#{$prefix}tooltip-position="bottom"] {
     &:before {
       top: 100%;
       left: 50%;
@@ -132,7 +132,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="bottom-left"] {
+  &[#{$prefix}tooltip-position="bottom-left"] {
     &:before {
       top: 100%;
       left: 0;
@@ -144,7 +144,7 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
     }
   }
 
-  &[zust-tooltip-position="bottom-right"] {
+  &[#{$prefix}tooltip-position="bottom-right"] {
     &:before {
       top: 100%;
       left: auto !important;
@@ -157,17 +157,17 @@ $selector-text: '&:hover, &:focus, &.zust-tooltip-active';
   }
 
   // Display on Breakpoint
-  &[zust-tooltip-visibility]:before {
+  &[#{$prefix}tooltip-visibility]:before {
     display: none;
   }
 
-  @include each-breakpoint('&[zust-tooltip-visibility="name"]:before', 'name') {
+  @include each-breakpoint('&[#{$prefix}tooltip-visibility="name"]:before', 'name') {
     display: inline-block;
   }
 
   @each $name, $color, $txt-color in $item-colors {
     @if $name {
-      &[zust-tooltip-type="#{$name}"] {
+      &[#{$prefix}tooltip-type="#{$name}"] {
         &:before {
           background-color: $color;
           color: $txt-color;

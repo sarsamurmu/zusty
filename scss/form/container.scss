@@ -1,10 +1,10 @@
-// Form Item - zust-form-it
-.zust-form-it {
+// Form Item - #{$prefix}form-it
+.#{$prefix}form-it {
   $margin: 20px;
   margin-bottom: $margin;
   display: flex;
 
-  .zust-form-inline & {
+  .#{$prefix}form-inline & {
     display: inline-block;
     margin: {
       bottom: 0;
@@ -18,7 +18,7 @@
     }
   }
 
-  > .zust-form-el, > .zust-btn {
+  > .#{$prefix}form-el, > .#{$prefix}btn {
     margin: {
       bottom: 0 !important;
       top: 0 !important;
@@ -27,7 +27,7 @@
   }
 
   @include mobile {
-    > .zust-form-el, > .zust-el-group {
+    > .#{$prefix}form-el, > .#{$prefix}el-group {
       width: -webkit-fill-available;
       width: -moz-fill-avaialable;
       width: fill-available;
@@ -40,7 +40,7 @@
   }
 }
 
-.zust-form-inline {
+.#{$prefix}form-inline {
   @include tablet {
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@
       margin: 0;
     }
 
-    > .zust-label {
+    > .#{$prefix}label {
       width: 100px;
       text-align: right;
       margin-right: 30px;
@@ -60,13 +60,13 @@
   margin-bottom: 20px;
 }
 
-.zust-label {
+.#{$prefix}label {
   margin: 5px;
   display: block;
 }
 
 // Form Element
-.zust-form-el {
+.#{$prefix}form-el {
   margin: 0;
   display: inline-flex;
   position: relative;
@@ -76,32 +76,32 @@
     margin-right: 8px;
   }
 
-  .zust-input {
+  .#{$prefix}input {
     margin: 0;
   }
 
-  .zust-el-group > &:not(:first-child):not(:last-child) > {
-    .zust-input, .zust-select {
+  .#{$prefix}el-group > &:not(:first-child):not(:last-child) > {
+    .#{$prefix}input, .#{$prefix}select {
       border-radius: 0;
     }
   }
 
 
-  .zust-el-group > &:first-child > {
-    .zust-input, .zust-select {
+  .#{$prefix}el-group > &:first-child > {
+    .#{$prefix}input, .#{$prefix}select {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
   }
 
-  .zust-el-group > &:last-child > {
-    .zust-input, .zust-select {
+  .#{$prefix}el-group > &:last-child > {
+    .#{$prefix}input, .#{$prefix}select {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
   }
 
-  &.zust-responsive {
+  &.#{$prefix}responsive {
     display: flex;
   }
 }

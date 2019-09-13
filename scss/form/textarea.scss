@@ -1,4 +1,4 @@
-textarea.zust-textarea {
+textarea.#{$prefix}textarea {
   appearance: none;
   padding: 8px 10px;
   background-color: var(--input-bg-color);
@@ -25,11 +25,11 @@ textarea.zust-textarea {
     font-size: $medium-text;
   }
 
-  &:hover, &.zust-hovered {
+  &:hover, &.#{$prefix}hovered {
     background-color: var(--input-hovered-bg-color);
   }
 
-  &:focus, &.zust-focused {
+  &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
     @if $css-variable-enabled {
       box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-color);
@@ -54,23 +54,23 @@ textarea.zust-textarea {
   }
 
   // Transparent
-  &.zust-transparent {
+  &.#{$prefix}transparent {
     background-color: $transparent !important;
 
-    &:focus, &.zust-focused {
+    &:focus, &.#{$prefix}focused {
       background-color: $transparent !important;
       box-shadow: 0 0 0 0 !important;
     }
   }
 
   // Readonly
-  &.zust-readonly, &[readonly] {
+  &.#{$prefix}readonly, &[readonly] {
 
-    &:hover, &.zust-hovered {
+    &:hover, &.#{$prefix}hovered {
       background-color: var(--input-bg-color);
     }
 
-    &:focus, &.zust-focused {
+    &:focus, &.#{$prefix}focused {
       background-color: var(--input-bg-color);
       box-shadow: 0 0 0 1px var(--input-border-color);
     }
@@ -78,10 +78,10 @@ textarea.zust-textarea {
 
   @each $name, $color, $skip, $hovered-color in $item-colors {
     @if $name {
-      &.zust-#{$name} {
+      &.#{$prefix}#{$name} {
         border-color: $color;
 
-        &:focus, &.zust-focused {
+        &:focus, &.#{$prefix}focused {
           border-color: $transparent;
           box-shadow: 0 0 0 $input-border-spread $hovered-color;
           @if $css-variable-enabled {
@@ -91,8 +91,8 @@ textarea.zust-textarea {
           }
         }
 
-        &.zust-readonly, &[readonly] {
-          &:focus, &.zust-focused {
+        &.#{$prefix}readonly, &[readonly] {
+          &:focus, &.#{$prefix}focused {
             box-shadow: 0 0 0 1px $hovered-color;
           }
         }
@@ -104,23 +104,23 @@ textarea.zust-textarea {
     margin-bottom: 8px;
   }
 
-  &.zust-v-resize, &.zust-v-resizable {
+  &.#{$prefix}v-resize, &.#{$prefix}v-resizable {
     resize: vertical;
   }
 
-  &.zust-h-resize, &.zust-h-resizable {
+  &.#{$prefix}h-resize, &.#{$prefix}h-resizable {
     resize: horizontal;
   }
 
-  &.zust-unresizable {
+  &.#{$prefix}unresizable {
     resize: none;
   }
 
-  .zust-form-el & {
+  .#{$prefix}form-el & {
     max-width: calc(100% - 0.5px);
   }
 
-  .zust-form-el.zust-fullwidth & {
+  .#{$prefix}form-el.#{$prefix}fullwidth & {
     width: 100%;
     resize: vertical;
   }
