@@ -97,16 +97,16 @@
     border-width: 0;
     color: $white;
 
+    &.zust-floating {
+      box-shadow: 0px 2px 3px 0px var(--button-shadow-color);
+    }
+
     &:focus, &.zust-focused {
       @if $css-variable-enabled {
         box-shadow: 0 0 0 var(button-border-spread) rgba(144, 144, 144, 0.15);
       } @else {
         box-shadow: 0 0 0 $button-border-spread rgba(144, 144, 144, 0.15);
       }
-    }
-
-    &.zust-floating {
-      box-shadow: 0px 2px 3px 0px var(--button-shadow-color);
     }
   }
 
@@ -137,11 +137,11 @@
     }
   }
 
-  &.zust-full-width, &.zust-fullwidth, .zust-btns-full-width > &:not(.zust-ignore), .zust-btns-fullwidth > &:not(.zust-ignore) {
+  &.zust-full-width, &.zust-fullwidth, .zust-btns-full-width > &:not(.zust-ignored), .zust-btns-fullwidth > &:not(.zust-ignored) {
     @extend %full-width;
   }
 
-  &.zust-xlarge, .zust-btns-xlarge > &:not(.zust-ignore) {
+  &.zust-xlarge, .zust-btns-xlarge > &:not(.zust-ignored) {
     font-size: $xlarge-text !important;
     padding: 18px 27px !important;
 
@@ -154,7 +154,7 @@
     }
   }
 
-  &.zust-large, .zust-btns-large > &:not(.zust-ignore) {
+  &.zust-large, .zust-btns-large > &:not(.zust-ignored) {
     font-size: $large-text !important;
     padding: 14px 21px !important;
 
@@ -174,7 +174,7 @@
     padding: 8px 12px !important;
   }
 
-  &.zust-small, .zust-small > &:not(.zust-ignore) {
+  &.zust-small, .zust-small > &:not(.zust-ignored) {
     font-size: $small-text !important;
     padding: 4px 12px !important;
 
@@ -224,7 +224,7 @@
   input:checked + .zust-btn {
     filter: brightness(0.9);
   }
-  
+
   .zust-el-group > & {
     > .zust-btn {
       margin: 0 !important;
