@@ -102,6 +102,10 @@
   font-style: normal;
 }
 
+.#{$prefix}text-smallcaps {
+  font-variant: small-caps;
+}
+
 @for $i from 1 through 10 {
   .#{$prefix}text-#{$i} {
     font-size: ($i/25) * 10rem;
