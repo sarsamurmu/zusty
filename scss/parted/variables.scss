@@ -91,6 +91,10 @@ $variables: (
   --dropdown-shadow: $dropdown-shadow,
   --dropdown-border-radius: $dropdown-border-radius,
   --dropdown-item-border-radius: $dropdown-item-border-radius
+  --dropdown-item-border-radius: $dropdown-item-border-radius,
+
+  // Modal
+  --modal-border-radius: $modal-border-radius,
 );
 
 :root {

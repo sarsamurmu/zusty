@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   visibility: hidden;
   opacity: 0;
   background-color: var(--dimmer-bg-color);
@@ -26,10 +26,21 @@
     transform: scale(0.8);
     transition: transform 1s, background-color 0.3s, opacity 0.2s;
     opacity: 0;
-    margin: 15px;
-    max-width: 400px;
-    max-height: 90%;
     font-size: 15px;
+    $pos: 20px;
+    $pos2: 400px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100% - #{$pos} * 2);
+    max-width: calc(100% - #{$pos2} * 2);
+    min-width: calc(100% - #{$pos2} * 2);
+    position: relative;
+
+    @include touch {
+      max-height: calc(100% - #{$pos} * 2) !important;
+      max-width: calc(100% - #{$pos} * 2) !important;
+      min-width: calc(100% - #{$pos} * 2) !important;
+    }
 
     hr[divider] {
       margin: 0;
@@ -44,6 +55,7 @@
       align-items: center;
       margin: 20px;
       margin-bottom: 10px;
+      position: relative;
 
       > img {
         height: 50px;
@@ -61,12 +73,13 @@
         --icon-size: 50px;
       }
 
-      > .#{$prefix}close-button {
+      > .#{$prefix}close-btn {
         position: absolute;
         right: 0;
-        margin-top: 20px;
+        top: 50%;
         transform: translate(-50%, -50%);
         padding: 8px !important;
+        margin: 0 !important;
 
         .#{$prefix}icon {
           margin: 0 !important;
@@ -76,22 +89,18 @@
     }
 
     > div {
-      padding: 0 20px;
-      max-height: 400px;
+      padding: 10px 20px 20px 20px;
       overflow: auto;
-
-      @include mobile {
-        max-height: 300px;
-      }
     }
 
     > footer {
       padding: 10px;
       background-color: var(--modal-bg-color);
+      display: block;
+      width: 100%;
 
       > .#{$prefix}btn {
         float: right;
-        margin-bottom: 15px;
       }
     }
   }
@@ -102,35 +111,35 @@
     transition: all 0.3s ease-in-out 0.1s, visibility 0s linear;
 
     > .#{$prefix}content {
-      transform: scale(1);
+      transform: scale(1) translateY(0);
       opacity: 1;
       transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
     }
   }
 
   &.#{$prefix}large > .#{$prefix}content {
-    @include desktop {
-      max-width: 600px;
-    }
+    max-width: calc(100% - 200px * 2);
+    min-width: calc(100% - 200px * 2);
   }
 
   &.#{$prefix}xlarge > .#{$prefix}content {
-    @include desktop {
-      max-width: 800px;
-    }
+    max-width: calc(100% - 80px * 2);
+    min-width: calc(100% - 80px * 2);
   }
 
   &.#{$prefix}full > .#{$prefix}content {
-    @include desktop {
-      max-width: 98%;
-      max-height: 98%;
-      margin: 5px;
-    }
+    max-width: calc(100% - 20px * 2);
+    min-width: calc(100% - 20px * 2);
+    max-height: calc(100% - 20px * 2);
+    min-height: calc(100% - 20px * 2);
 
     > div {
-      @include desktop {
-        max-height: 450px;
-      }
+      margin-bottom: 66px;
+    }
+
+    > footer {
+      position: absolute;
+      bottom: 0;
     }
   }
 }
