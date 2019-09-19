@@ -24,14 +24,8 @@
     transition: $primary-transition;
   }
 
-
-  // Important
-  &.#{$prefix}icon-btn {
-    padding: 8px !important;
-
-    .#{$prefix}icon {
-      margin: 0 !important;
-    }
+  > .#{$prefix}icon:only-child {
+    margin: 0 -4px;
   }
 
   .#{$prefix}icon {
@@ -60,7 +54,6 @@
 
   &:hover, &.#{$prefix}hovered, input:checked + & {
     border-color: var(--button-hovered-border-color);
-    //color: var(--button-text-color);
   }
 
   &:focus, &.#{$prefix}focused {
@@ -145,8 +138,8 @@
     font-size: $xlarge-text !important;
     padding: 18px 27px !important;
 
-    &.#{$prefix}icon-btn {
-      padding: 18px !important;
+    > .#{$prefix}icon:only-child {
+      margin: 0 -9px;
     }
 
     .#{$prefix}icon {
@@ -158,8 +151,8 @@
     font-size: $large-text !important;
     padding: 14px 21px !important;
 
-    &.#{$prefix}icon-btn {
-      padding: 14px !important;
+    > .#{$prefix}icon:only-child {
+      margin: 0 -7px;
     }
 
     .#{$prefix}icon {
@@ -178,8 +171,8 @@
     font-size: $small-text !important;
     padding: 4px 12px !important;
 
-    &.#{$prefix}icon-btn {
-      padding: 4px !important;
+    > .#{$prefix}icon:only-child {
+      margin: 0 -8px;
     }
 
     .#{$prefix}icon {
