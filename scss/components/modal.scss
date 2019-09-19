@@ -22,7 +22,6 @@
     background-color: var(--modal-bg-color);
     overflow: hidden;
     color: var(--text-color-secondary);
-    border-radius: 14px;
     transform: scale(0.8);
     transition: transform 1s, background-color 0.3s, opacity 0.2s;
     opacity: 0;
@@ -35,6 +34,11 @@
     max-width: calc(100% - #{$pos2} * 2);
     min-width: calc(100% - #{$pos2} * 2);
     position: relative;
+    @if $css-variable-enabled {
+      border-radius: var(--modal-border-radius);
+    } @else {
+      border-radius: $modal-border-radius;
+    }
 
     @include touch {
       max-height: calc(100% - #{$pos} * 2) !important;

@@ -45,7 +45,7 @@ $span-translate: -8px, -4px;
         left: 50%;
         border-style: solid;
         border-width: 0 2px 2px 0;
-        border-color: #FFF;
+        border-color: var(--checkbox-checkmark-color);
         width: 6px;
         height: 13px;
         transform: rotate(45deg) translate(10px, 10px);
@@ -92,11 +92,15 @@ $span-translate: -8px, -4px;
     }
   }
 
-  @each $name, $color, $skip, $skip, $light-color in $item-colors {
+  @each $name, $color, $text-color, $skip, $light-color in $item-colors {
     @if $name {
       &.#{$prefix}#{$name} > input:checked + span {
         background-color: $color;
         border-color: $color;
+      }
+
+      &.#{$prefix}#{$name} > input:checked + span:after {
+        border-color: $text-color;
       }
 
       &.#{$prefix}#{$name} > input:focus + span,

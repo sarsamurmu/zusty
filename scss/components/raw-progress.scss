@@ -59,8 +59,8 @@
 
   &.#{$prefix}striped > .#{$prefix}bar {
     background-size: 30px 30px;
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    background-image: linear-gradient(135deg, var(--progress-bar-stripe-color) 25%, transparent 25%,
+                      transparent 50%, var(--progress-bar-stripe-color) 50%, var(--progress-bar-stripe-color) 75%,
                       transparent 75%, transparent);
   }
 
@@ -106,8 +106,8 @@
 
     &.#{$prefix}striped {
       background-size: 30px 30px;
-      background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                          transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+      background-image: linear-gradient(135deg, var(--progress-bar-stripe-color) 25%, transparent 25%,
+                          transparent 50%, var(--progress-bar-stripe-color) 50%, var(--progress-bar-stripe-color) 75%,
                           transparent 75%, transparent);
 
       &.#{$prefix}in-progress {
@@ -117,11 +117,10 @@
 
     &:after {
       content: '';
-      opacity: 0;
       position: absolute;
       top: 0;
       bottom: 0;
-      background: #fff;
+      background-color: var(--progress-bar-stripe-color);
       border-radius: 3px;
     }
 
@@ -213,7 +212,7 @@
 // Animation Keyframes
 @keyframes progress-anim {
   0% {opacity: 0; width: 0;}
-  50% {opacity: 0.2;}
+  50% {opacity: 1;}
   100% {opacity: 0; width: 95%;}
 }
 

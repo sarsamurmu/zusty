@@ -1,7 +1,7 @@
 $primary-color: #2ECC71 !default;
-$primary-color-dark: $primary-color !default;
+$primary-color-dark: lighten($primary-color, 10%) !default;
 $primary-text-color: textForBg($primary-color) !default;
-$primary-text-color-dark: textForBg($primary-color-dark) !default;
+$primary-text-color-dark: $text-dark !default;
 $primary-hovered-color: darken($primary-color, 5%) !default;
 $primary-hovered-color-dark: darken($primary-color-dark, 5%) !default;
 $primary-color-light: transparentize($primary-color, 0.7) !default;
@@ -10,36 +10,36 @@ $primary-color-light-dark: transparentize($primary-color-dark, 0.7) !default;
 //$success-color: #9DC822 !default;
 //$success-color: #71d013 !default;
 $success-color: #70c51c !default;
-$success-color-dark: $success-color !default;
+$success-color-dark: #91dc48 !default;
 $success-text-color: textForBg($success-color) !default;
-$success-text-color-dark: textForBg($success-color-dark) !default;
+$success-text-color-dark: $text-dark !default;
 $success-hovered-color: darken($success-color, 5%) !default;
 $success-hovered-color-dark: darken($success-color-dark, 5%) !default;
 $success-color-light: transparentize($success-color, 0.7) !default;
 $success-color-light-dark: transparentize($success-color-dark, 0.7) !default;
 
 $warning-color: hsl(45, 100%, 51%) !default;
-$warning-color-dark: $warning-color !default;
+$warning-color-dark: lighten($warning-color, 8%) !default;
 $warning-text-color: textForBg($warning-color) !default;
-$warning-text-color-dark: textForBg($warning-color-dark) !default;
+$warning-text-color-dark: $text-dark !default;
 $warning-hovered-color: darken($warning-color, 3%) !default;
 $warning-hovered-color-dark: darken($warning-color-dark, 3%) !default;
 $warning-color-light: transparentize($warning-color, 0.7) !default;
 $warning-color-light-dark: transparentize($warning-color-dark, 0.7) !default;
 
 $error-color: #FF6348 !default;
-$error-color-dark: $error-color !default;
+$error-color-dark: lighten($error-color, 8%) !default;
 $error-text-color: textForBg($error-color) !default;
-$error-text-color-dark: textForBg($error-color-dark) !default;
+$error-text-color-dark: $text-dark !default;
 $error-hovered-color: darken($error-color, 3%) !default;
 $error-hovered-color-dark: darken($error-color-dark, 3%) !default;
 $error-color-light: transparentize($error-color, 0.7) !default;
 $error-color-light-dark: transparentize($error-color-dark, 0.7) !default;
 
 $link-color: hsl(210, 100%, 50%) !default;
-$link-color-dark: $link-color !default;
+$link-color-dark: lighten($link-color, 15%) !default;
 $link-text-color: textForBg($link-color) !default;
-$link-text-color-dark: textForBg($link-color-dark) !default;
+$link-text-color-dark: $text-dark !default;
 $link-hovered-color: darken($link-color, 3%) !default;
 $link-hovered-color-dark: darken($link-color-dark, 3%) !default;
 $link-color-light: transparentize($link-color, 0.7) !default;
@@ -56,12 +56,22 @@ $body-bg-color: hsl(0, 0%, 100%) !default;
 $body-bg-color-dark: hsl(0, 0%, 13%) !default;
 $body-text-color: $text-color-secondary !default;
 $body-text-color-dark: $text-color-secondary-dark !default;
-$divider-color: hsl(0, 0%, 82%) !default;
-$divider-color-dark: hsl(0, 0%, 42%) !default;
+$divider-color: hsl(0, 0%, 90%) !default;
+$divider-color-dark: hsl(0, 0%, 30%) !default;
 
 // Badge
-$badge-text-color: hsl(0, 0%, 35%) !default;
-$badge-text-color-dark: hsl(0, 0%, 95%) !default;
+$badge-only-part-bg-color: $primary-color !default;
+$badge-only-part-bg-color-dark: $primary-color-dark !default;
+$badge-only-part-text-color: $primary-text-color !default;
+$badge-only-part-text-color-dark: $primary-text-color-dark !default;
+$badge-first-part-bg-color: rgba(144, 144, 144, 0.1) !default;
+$badge-first-part-bg-color-dark: $badge-first-part-bg-color !default;
+$badge-first-part-text-color: $text-color-primary !default;
+$badge-first-part-text-color-dark: $text-color-primary-dark !default;
+$badge-last-part-bg-color: $badge-only-part-bg-color !default;
+$badge-last-part-bg-color-dark: $badge-only-part-bg-color-dark !default;
+$badge-last-part-text-color: $badge-only-part-text-color !default;
+$badge-last-part-text-color-dark: $badge-only-part-text-color-dark !default;
 
 // Button
 $button-bg-color: hsl(0, 0%, 100%) !default;
@@ -160,7 +170,9 @@ $switch-border-spread-color-dark: $switch-border-spread-color !default;
 $checkbox-color: hsl(0, 0%, 70%) !default;
 $checkbox-color-dark: hsl(0, 0%, 50%) !default;
 $checkbox-check-color: $primary-color !default;
-$checkbox-check-color-dark: $checkbox-check-color !default;
+$checkbox-check-color-dark: $primary-color-dark !default;
+$checkbox-checkmark-color: $primary-text-color !default;
+$checkbox-checkmark-color-dark: $primary-text-color-dark !default;
 $checkbox-border-spread-color: $primary-color-light !default;
 $checkbox-border-spread-color-dark: $primary-color-light-dark !default;
 
@@ -170,9 +182,11 @@ $progress-back-bg-color-dark: hsl(0, 0%, 18%) !default;
 $progress-back-text-color: $text-color-secondary !default;
 $progress-back-text-color-dark: $text-color-secondary-dark !default;
 $progress-bar-bg-color: $primary-color !default;
-$progress-bar-bg-color-dark: $progress-bar-bg-color !default;
-$progress-bar-text-color: $white !default;
-$progress-bar-text-color-dark: $white !default;
+$progress-bar-bg-color-dark: $primary-color-dark !default;
+$progress-bar-text-color: $primary-text-color !default;
+$progress-bar-text-color-dark: $primary-text-color-dark !default;
+$progress-bar-stripe-color: rgba(255, 255, 255, 0.15) !default;
+$progress-bar-stripe-color-dark: rgba(0, 0, 0, 0.08) !default;
 
 // Radio
 $radio-color: hsl(0, 0%, 70%) !default;

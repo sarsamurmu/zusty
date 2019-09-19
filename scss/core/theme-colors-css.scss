@@ -31,7 +31,12 @@
   --divider-color: #{$divider-color};
 
   // Badge
-  --badge-text-color: #{$badge-text-color};
+  --badge-only-part-bg-color: #{$badge-only-part-bg-color};
+  --badge-only-part-text-color: #{$badge-only-part-text-color};
+  --badge-first-part-bg-color: #{$badge-first-part-bg-color};
+  --badge-first-part-text-color: #{$badge-first-part-text-color};
+  --badge-last-part-bg-color: #{$badge-last-part-bg-color};
+  --badge-last-part-text-color: #{$badge-last-part-text-color};
 
   // Button
   --button-bg-color: #{$button-bg-color};
@@ -85,6 +90,7 @@
   // Checkbox
   --checkbox-color: #{$checkbox-color};
   --checkbox-check-color: #{$checkbox-check-color};
+  --checkbox-checkmark-color: #{$checkbox-checkmark-color};
   --checkbox-border-spread-color: #{$checkbox-border-spread-color};
 
   // Switch
@@ -101,6 +107,7 @@
   --progress-back-text-color: #{$progress-back-text-color};
   --progress-bar-bg-color: #{$progress-bar-bg-color};
   --progress-bar-text-color: #{$progress-bar-text-color};
+  --progress-bar-stripe-color: #{$progress-bar-stripe-color};
 
   // Radio
   --radio-color: #{$radio-color};
@@ -155,7 +162,12 @@
   --divider-color: #{$divider-color-dark};
 
   // Badge
-  --badge-text-color: #{$badge-text-color-dark};
+  --badge-only-part-bg-color: #{$badge-only-part-bg-color-dark};
+  --badge-only-part-text-color: #{$badge-only-part-text-color-dark};
+  --badge-first-part-bg-color: #{$badge-first-part-bg-color-dark};
+  --badge-first-part-text-color: #{$badge-first-part-text-color-dark};
+  --badge-last-part-bg-color: #{$badge-last-part-bg-color-dark};
+  --badge-last-part-text-color: #{$badge-last-part-text-color-dark};
 
   // Button
   --button-bg-color: #{$button-bg-color-dark};
@@ -209,6 +221,7 @@
   // Checkbox
   --checkbox-color: #{$checkbox-color-dark};
   --checkbox-check-color: #{$checkbox-check-color-dark};
+  --checkbox-checkmark-color: #{$checkbox-checkmark-color-dark};
   --checkbox-border-spread-color: #{$checkbox-border-spread-color-dark};
 
   // Switch
@@ -225,6 +238,7 @@
   --progress-back-text-color: #{$progress-back-text-color-dark};
   --progress-bar-bg-color: #{$progress-bar-bg-color-dark};
   --progress-bar-text-color: #{$progress-bar-text-color-dark};
+  --progress-bar-stripe-color: #{$progress-bar-stripe-color-dark};
 
   // Radio
   --radio-color: #{$radio-color-dark};

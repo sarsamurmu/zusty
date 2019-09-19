@@ -164,7 +164,7 @@
 
       &[active], &.#{$prefix}active {
         background-color: var(--primary-color);
-        color: $white;
+        color: var(--primary-text-color);
 
         &:hover, &.#{$prefix}hovered {
           background-color: var(--primary-hovered-color);
