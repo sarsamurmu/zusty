@@ -31,13 +31,13 @@ text, p {
 }
 
 a:not(.#{$prefix}btn) {
-  color: hsl(210, 100%, 50%);
+  color: var(--link-color);
   text-decoration: none;
   word-break: break-word;
-  transition: 0.2s;
+  transition: $primary-transition;
 
   &:hover, &.#{$prefix}hovered {
-    color: hsl(210, 100%, 60%);
+    color: var(--link-hovered-color);
   }
 }
 
@@ -53,7 +53,7 @@ hr[divider] {
   margin-top: 10px;
   margin-bottom: 10px;
   unicode-bidi: unset;
-  transition: $secondary-transition;
+  transition: $primary-transition;
 }
 
 blockquote {
