@@ -39,7 +39,6 @@ $tooltip-z-index: 9999 !default;
 
 // Transition
 $primary-transition: 0.2s !default;
-$secondary-transition: 0.5s !default;
 
 
 //==//-----------//==//
@@ -109,6 +108,8 @@ $dropdown-item-border-radius: 10px !default;
 
 // Modal
 $modal-border-radius: 14px;
+$modal-transition: 0.5s;
+
 
 
 //==//--------------//==//

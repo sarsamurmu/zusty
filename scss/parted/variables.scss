@@ -18,7 +18,6 @@ $variables: (
 
   // Transition
   --primary-transition: $primary-transition,
-  --secondary-transition: $secondary-transition,
 
 
 
@@ -90,11 +89,12 @@ $variables: (
   --dropdown-translate: $dropdown-translate,
   --dropdown-shadow: $dropdown-shadow,
   --dropdown-border-radius: $dropdown-border-radius,
-  --dropdown-item-border-radius: $dropdown-item-border-radius
   --dropdown-item-border-radius: $dropdown-item-border-radius,
 
   // Modal
   --modal-border-radius: $modal-border-radius,
+  --modal-transition: $modal-transition,
+
 );
 
 :root {

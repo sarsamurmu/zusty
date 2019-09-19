@@ -17,10 +17,10 @@ span.#{$prefix}badge {
 
   @if $css-variable-enabled {
     border-radius: var(--badge-border-radius);
-    transition: var(--secondary-transition);
+    transition: var(--primary-transition);
   } @else {
     border-radius: $badge-border-radius;
-    transition: $secondary-transition;
+    transition: $primary-transition;
   }
 
   &.#{$prefix}outlined, .#{$prefix}badges-outlined & {
@@ -54,9 +54,9 @@ div.#{$prefix}badge {
     font-size: 0.9em;
 
     @if $css-variable-enabled {
-      transition: var(--secondary-transition);
+      transition: var(--primary-transition);
     } @else {
-      transition: $secondary-transition;
+      transition: $primary-transition;
     }
   }
 
