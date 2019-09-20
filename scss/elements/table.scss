@@ -49,7 +49,7 @@
 .#{$prefix}table-container {
   overflow-x: auto;
 
-  table {
+  .#{$prefix}table {
     display: block;
   }
 }
