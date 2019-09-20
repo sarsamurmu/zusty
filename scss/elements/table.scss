@@ -41,12 +41,15 @@
     td, th {
       border-style: solid;
       border-color: var(--table-border-color);
-
-      @if $css-variable-enabled {
-        border-bottom-width: var(--table-border-width);
-      } @else {
-        border-bottom-width: $table-border-width;
-      }
+      border-width: 2px;
     }
+  }
+}
+
+.#{$prefix}table-container {
+  overflow-x: auto;
+
+  table {
+    display: block;
   }
 }
