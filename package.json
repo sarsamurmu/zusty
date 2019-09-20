@@ -12,7 +12,6 @@
   "jsdelivr": "dist/zusty.min.css",
   "browser": "dist/zusty.min.css",
   "main": "zusty.scss",
-  "publishConfig": {"registry": "https://npm.pkg.github.com/@sarsamurmu"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarsamurmu/zusty.git"
