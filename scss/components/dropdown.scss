@@ -94,7 +94,6 @@
     visibility: hidden;
     opacity: 0;
     background-color: var(--dropdown-bg-color);
-    position: absolute;
     transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
     padding: 10px;
     font-size: 15px;
@@ -137,11 +136,10 @@
       @extend %no-select;
       display: flex;
       align-items: center;
-      justify-content: center;
       color: var(--text-color-secondary);
       list-style: none;
       padding: 10px;
-      text-align: center;
+      text-align: left;
       margin: 4px;
       transition: background-color 0.5s;
       box-sizing: content-box;
@@ -206,6 +204,11 @@
       // Sizes
       &.#{$prefix}narrow > ul {
         width: 50px !important;
+        text-align: center;
+
+        > li {
+          justify-content: center;
+        }
       }
 
       &.#{$prefix}small > ul {
@@ -377,6 +380,11 @@
   // Sizes
   &.#{$prefix}narrow > .#{$prefix}items {
     width: 50px !important;
+    text-align: center;
+
+    > li {
+      justify-content: center;
+    }
   }
 
   &.#{$prefix}small > .#{$prefix}items {
