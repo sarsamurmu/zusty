@@ -71,8 +71,6 @@ $it-pad: $container-items-padding;
   &.#{$prefix}column {
     margin: 0 0 $container-margin 0;
 
-// Replacement #1
-
     $not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}name)', 'name', '', '', '');
 
     &:not(.#{$prefix}custom)#{$not-selector} {
@@ -88,22 +86,6 @@ $it-pad: $container-items-padding;
         margin: 0 0 $it-mar 0;
       }
     }
-
-/*
-//    &:not(.#{$prefix}custom):not(.#{$prefix}mobile):not(.#{$prefix}tablet):not(.#{$prefix}touch):not(.#{$prefix}desktop) {
-//      @include tablet {
-//        flex-wrap: nowrap;
-//      }
-//    }
-
-
-    &.#{$prefix}mobile, &.#{$prefix}tablet, &.#{$prefix}touch, &.#{$prefix}desktop {
-      > .#{$prefix}column {
-        margin: 0 0 $it-mar 0;
-      }
-    }
-*/
-// End of Replacement #1
 
     &.#{$prefix}custom {
       &:not(.#{$prefix}active) {
@@ -123,7 +105,7 @@ $it-pad: $container-items-padding;
       }
     }
 
-    &.#{$prefix}all/*, &.#{$prefix}mobile*/ {
+    &.#{$prefix}all {
       @include mobile {
         flex-wrap: nowrap;
 
@@ -134,45 +116,6 @@ $it-pad: $container-items-padding;
         }
       }
     }
-
-    // Replacement #2
-    /*
-    &.#{$prefix}tablet {
-      @include only-tablet {
-        flex-wrap: nowrap;
-
-        > .#{$prefix}column {
-          margin: 0 $it-mar 0 0;
-
-          @include sizes;
-        }
-      }
-    }
-
-    &.#{$prefix}touch {
-      @include touch {
-        flex-wrap: nowrap;
-
-        > .#{$prefix}column {
-          margin: 0 $it-mar 0 0;
-
-          @include sizes;
-        }
-      }
-    }
-
-    &.#{$prefix}desktop {
-      @include desktop {
-        flex-wrap: nowrap;
-
-        > .#{$prefix}column {
-          margin: 0 $it-mar 0 0;
-
-          @include sizes;
-        }
-      }
-    }
-    */
 
     @include each-breakpoint('&.#{$prefix}name', 'name') {
       flex-wrap: nowrap;
@@ -184,86 +127,12 @@ $it-pad: $container-items-padding;
       }
     }
 
-    // End of Replacement 2
   }
 
   .#{$prefix}column {
     margin: 0 $it-mar 0 0;
     padding: $it-pad;
     width: 100%;
-
-    // Replacement #3
-    //$not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}default-name)', 'name', '', '', '');
-
-    //&:not(.#{$prefix}default)#{$not-selector} {
-    //  width: 100%;
-    //}
-
-    /*
-    &:not(.#{$prefix}default):not(.#{$prefix}default-mobile):not(.#{$prefix}default-tablet):not(.#{$prefix}default-touch):not(.#{$prefix}default-desktop) {
-      width: 100%;
-    }
-    */
-    // End of Replacement #3
-
-    // Replacement #4
-    /*
-    &.#{$prefix}default-mobile {
-      @include mobile {
-        flex: none;
-      }
-
-      @include tablet {
-        width: 100%;
-      }
-
-      @include desktop {
-        width: 100%;
-      }
-    }
-
-    &.#{$prefix}default-tablet {
-      @include only-tablet {
-        flex: none;
-      }
-
-      @include mobile {
-        width: 100%;
-      }
-
-      @include desktop {
-        width: 100%;
-      }
-    }
-
-    &.#{$prefix}default-touch {
-      @include touch {
-        flex: none;
-      }
-
-      @include desktop {
-        width: 100%;
-      }
-    }
-
-    &.#{$prefix}default-desktop {
-      @include desktop {
-        flex: none;
-      }
-
-      @include touch {
-        width: 100%;
-      }
-    }
-    */
-
-    //$default-selector: getClassList($breakpoint-names, '&.#{$prefix}default-name', 'name', '', '', ', ');
-
-    //@debug $default-selector;
-
-    //#{$default-selector} {
-    //  width: 100%;
-    //}
 
     &.#{$prefix}default {
       flex: none;
@@ -295,23 +164,6 @@ $it-pad: $container-items-padding;
     @include tablet {
       @include sizes;
     }
-    /*
-    @include mobile {
-      @include c-sizes(mobile);
-    }
-
-    @include only-tablet {
-      @include c-sizes(tablet);
-    }
-
-    @include touch {
-      @include c-sizes(touch);
-    }
-
-    @include desktop {
-      @include c-sizes(desktop);
-    }
-    */
 
     @each $name, $min-width, $max-width in $breakpoints {
       @if $name {
