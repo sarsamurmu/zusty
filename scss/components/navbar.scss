@@ -1,0 +1,204 @@
+.#{$prefix}navbar {
+  background-color: var(--navbar-bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 10px 10px;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: $transparent;
+
+  @if $css-variable-enabled {
+    transition: var(--primary-transition);
+    z-index: var(--navbar-z-index);
+    height: var(--navbar-height);
+    box-shadow: var(--navbar-shadow);
+  } @else {
+    transition: $primary-transition;
+    z-index: $navbar-z-index;
+    height: $navbar-height;
+    box-shadow: $navbar-shadow;
+  }
+
+  &.#{$prefix}flat {
+    box-shadow: 0 0 $transparent;
+    border-color: var(--light-color);
+  }
+
+  .#{$prefix}header {
+    display: inline-flex;
+    margin-left: 20px;
+    align-items: center;
+    font-size: 24px;
+
+    > img {
+      height: 40px;
+      width: auto;
+    }
+
+    > span {
+      margin-left: 10px;
+    }
+
+    @include touch {
+      display: flex;
+    }
+
+    .#{$prefix}menu-btn {
+      display: none;
+
+      @include touch {
+        display: inline-flex;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .#{$prefix}content {
+    display: inline-block;
+
+    .#{$prefix}options {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-left: 30px;
+
+      > * {
+        margin-left: 20px;
+        height: 100%;
+        align-items: center;
+      }
+
+      > a:not(.#{$prefix}btn) {
+        display: inline-flex;
+        color: var(--text-color-tertiary);
+
+        &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
+          color: var(--text-color-primary);
+        }
+
+        &.#{$prefix}selected, &[selected] {
+          color: var(--navbar-selected-item-color);
+          cursor: default;
+        }
+      }
+
+      > .#{$prefix}dropdown {
+
+        > .#{$prefix}btn {
+          height: 100%;
+          margin: 0 !important;
+          border-style: none;
+          color: var(--text-color-tertiary);
+          background-color: $transparent !important;
+          padding: 0 !important;
+
+          &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
+            color: var(--text-color-primary);
+            box-shadow: 0 0 black;
+          }
+        }
+
+        &.#{$prefix}selected > .#{$prefix}btn, &[selected] > .#{$prefix}btn {
+          color: var(--navbar-selected-item-color);
+        }
+      }
+    }
+
+    .#{$prefix}actions {
+      display: inline-flex;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+
+      button {
+        margin: {
+          top: 0 !important;
+          bottom: 0 !important;
+        }
+      }
+    }
+
+    @include touch {
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--navbar-bg-color);
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: 10px;
+      @if $css-variable-enabled {
+        transition: var(--primary-transition);
+      } @else {
+        transition: $primary-transition;
+      }
+
+      > .#{$prefix}options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+        margin-left: 0;
+        margin-bottom: 30px;
+        margin-top: 10px;
+
+        > * {
+          margin-left: 0;
+          padding: 10px;
+          padding-left: 20px;
+          width: 100%;
+
+          &.#{$prefix}selected, &[selected] {
+            background-color: var(--navbar-selected-item-bg-color);
+            color: var(--navbar-selected-item-text-color) !important;
+          }
+
+          &.#{$prefix}selected.#{$prefix}dropdown > .#{$prefix}btn, &[selected].#{$prefix}dropdown > .#{$prefix}btn {
+            color: var(--navbar-selected-item-text-color) !important;
+          }
+
+          &.#{$prefix}dropdown {
+            padding: 0;
+
+            > .#{$prefix}btn {
+              padding: 10px !important;
+              padding-left: 20px !important;
+              width: 100%;
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+
+      > .#{$prefix}actions {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+        padding-left: 14px;
+      }
+    }
+  }
+
+  &.#{$prefix}expanded > .#{$prefix}content {
+    visibility: visible;
+    opacity: 1;
+
+    @if $css-variable-enabled {
+      box-shadow: var(--navbar-shadow);
+    } @else {
+      box-shadow: $navbar-shadow;
+    }
+  }
+}

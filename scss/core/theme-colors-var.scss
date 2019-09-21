@@ -206,6 +206,17 @@ $placeholder-color-dark: transparentize($body-bg-color-dark, 0.5) !default;
 $placeholder-holder-color: rgba(144, 144, 144, 0.2) !default;
 $placeholder-holder-color-dark: rgba(144, 144, 144, 0.2) !default;
 
+// Navbar
+$navbar-bg-color: #FFF !default;
+$navbar-bg-color-dark: hsl(0, 0%, 16%) !default;
+$navbar-shadow-color: hsla(0, 0%, 0%, 0.05) !default;
+$navbar-shadow-color-dark: hsla(0, 0%, 0%, 0.12) !default;
+$navbar-selected-item-color: $primary-color !default;
+$navbar-selected-item-color-dark: $primary-color-dark !default;
+$navbar-selected-item-bg-color: $primary-color !default;
+$navbar-selected-item-bg-color-dark: $primary-color-dark !default;
+$navbar-selected-item-text-color: $primary-text-color !default;
+$navbar-selected-item-text-color-dark: $primary-text-color-dark !default;
 // Misc.
 $dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
 $dimmer-bg-color-dark: $dimmer-bg-color !default;

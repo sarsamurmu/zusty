@@ -14,6 +14,7 @@ $variables: (
   --dropdown-z-index: $dropdown-z-index,
   --modal-z-index: $modal-z-index,
   --tooltip-z-index: $tooltip-z-index,
+  --navbar-z-index: $navbar-z-index,
 
   // Transition
   --primary-transition: $primary-transition,
@@ -94,6 +95,9 @@ $variables: (
   --modal-border-radius: $modal-border-radius,
   --modal-transition: $modal-transition,
 
+  // Navbar
+  --navbar-height: $navbar-height,
+  --navbar-shadow: $navbar-shadow,
 );
 
 :root {
