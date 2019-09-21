@@ -5,10 +5,8 @@
 
   @if $css-variable-enabled {
     --icon-size: var(--icon-size-default);
-    transition: var(--primary-transition);
   } @else {
     --icon-size: #{$icon-size-default};
-    transition: $primary-transition;
   }
 
   @extend %no-select;
