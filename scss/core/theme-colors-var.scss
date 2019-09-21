@@ -217,6 +217,15 @@ $navbar-selected-item-bg-color: $primary-color !default;
 $navbar-selected-item-bg-color-dark: $primary-color-dark !default;
 $navbar-selected-item-text-color: $primary-text-color !default;
 $navbar-selected-item-text-color-dark: $primary-text-color-dark !default;
+
+// Tabs
+$tab-border-color: rgba(144, 144, 144, 0.2) !default;
+$tab-border-color-dark: $tab-border-color !default;
+$tab-selected-item-color: $primary-color !default;
+$tab-selected-item-color-dark: $primary-color-dark !default;
+$tab-selected-item-text-color: $primary-text-color !default;
+$tab-selected-item-text-color-dark: $primary-text-color-dark !default;
+
 // Misc.
 $dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
 $dimmer-bg-color-dark: $dimmer-bg-color !default;

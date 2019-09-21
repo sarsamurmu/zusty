@@ -125,6 +125,12 @@
   --navbar-selected-item-color: #{$navbar-selected-item-color};
   --navbar-selected-item-bg-color: #{$navbar-selected-item-bg-color};
   --navbar-selected-item-text-color: #{$navbar-selected-item-text-color};
+
+  // Tabs
+  --tab-selected-item-color: #{$tab-selected-item-color};
+  --tab-selected-item-text-color: #{$tab-selected-item-text-color};
+  --tab-border-color: #{$tab-border-color};
+
   // Misc.
   --dimmer-bg-color: #{$dimmer-bg-color};
   --light-color: #{$light-color};
@@ -259,6 +265,12 @@
   --navbar-selected-item-color: #{$navbar-selected-item-color-dark};
   --navbar-selected-item-bg-color: #{$navbar-selected-item-bg-color-dark};
   --navbar-selected-item-text-color: #{$navbar-selected-item-text-color-dark};
+
+  // Tabs
+  --tab-selected-item-color: #{$tab-selected-item-color-dark};
+  --tab-selected-item-text-color: #{$tab-selected-item-text-color-dark};
+  --tab-border-color: #{$tab-border-color-dark};
+
   // Misc.
   --dimmer-bg-color: #{$dimmer-bg-color-dark};
   --light-color: #{$light-color-dark};

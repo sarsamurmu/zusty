@@ -1,0 +1,118 @@
+.#{$prefix}tabs {
+  overflow-x: auto;
+  margin-bottom: 10px;
+
+  &.#{$prefix}center-aligned > ul {
+    justify-content: center;
+  }
+
+  &.#{$prefix}right-aligned > ul {
+    justify-content: flex-end;
+  }
+
+  &.#{$prefix}fullwidth > ul, &.#{$prefix}full-width > ul {
+    > li {
+      width: 100%;
+    }
+  }
+
+  > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom-style: solid;
+    border-width: 2px;
+    padding: 0;
+    margin: 0;
+    border-color: var(--tab-selected-item-color);
+    @extend %no-select;
+
+    > li {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 40px;
+      padding: 0 20px;
+      margin-bottom: -2px;
+      position: relative;
+      transform-style: preserve-3d;
+      white-space: nowrap;
+      cursor: pointer;
+
+      @if $css-variable-enabled {
+        transition: var(--primary-transition);
+      } @else {
+        transition: $primary-transition;
+      }
+
+      > .#{$prefix}icon {
+        $offset: 10px;
+        --icon-size: 24px;
+
+        &:not(:only-child) {
+
+          &:first-child {
+            margin-right: $offset;
+          }
+
+          &:last-child {
+            margin-left: $offset;
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--tab-selected-item-color);
+        height: 2px;
+        width: 100%;
+        transform: translateZ(-1px);
+        @if $css-variable-enabled {
+          transition: var(--primary-transition);
+        } @else {
+          transition: $primary-transition;
+        }
+      }
+
+      &.#{$prefix}selected, &[selected] {
+        color: var(--tab-selected-item-text-color);
+
+        &:after {
+          height: 100%;
+          @if $css-variable-enabled {
+            border-radius: var(--tab-top-border-radius) var(--tab-top-border-radius) 0 0;
+          } @else {
+            border-radius: $tab-top-border-radius $tab-top-border-radius 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.#{$prefix}lined {
+    > ul {
+      border-color: var(--tab-border-color);
+
+      > li {
+        cursor: pointer;
+        border-bottom-style: solid;
+        border-width: 2px;
+        border-color: $transparent;
+
+        &:after {
+          height: 0 !important;
+          width: 0 !important;
+        }
+
+        &.#{$prefix}selected, &[selected] {
+          color: var(--tab-selected-item-color);
+          border-color: var(--tab-selected-item-color);
+        }
+      }
+    }
+  }
+}
