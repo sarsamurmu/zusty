@@ -29,7 +29,7 @@ $variables: (
   --button-border-radius: $button-border-radius,
   --button-border-width: $button-border-width,
   --button-border-spread: $button-border-spread,
-  --button-outlined-border-width: $button-outlined-border-width
+  --button-outlined-border-width: $button-outlined-border-width,
 
   // Icon
   --icon-size-small: $icon-size-small,
@@ -72,12 +72,6 @@ $variables: (
 
   // Badge
   --badge-border-radius: $badge-border-radius,
-  --badge-only-part-color: $badge-only-part-color,
-  --badge-only-part-text-color: $badge-only-part-text-color,
-  --badge-first-part-color: $badge-first-part-color,
-  --badge-first-part-text-color: $badge-first-part-text-color,
-  --badge-last-part-color: $badge-last-part-color,
-  --badge-last-part-text-color: $badge-last-part-text-color,
 
   // Cards
   --card-border-radius: $card-border-radius,
