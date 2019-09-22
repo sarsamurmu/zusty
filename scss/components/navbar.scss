@@ -139,6 +139,9 @@
       left: 0;
       right: 0;
       margin-top: 10px;
+      border-bottom-style: solid;
+      border-width: 2px;
+      border-color: var(--light-color);
       @if $css-variable-enabled {
         transition: var(--primary-transition);
       } @else {
@@ -191,14 +194,22 @@
     }
   }
 
-  &.#{$prefix}expanded > .#{$prefix}content {
-    visibility: visible;
-    opacity: 1;
+  &.#{$prefix}expanded {
+    border-color: $transparent;
 
-    @if $css-variable-enabled {
-      box-shadow: var(--navbar-shadow);
-    } @else {
-      box-shadow: $navbar-shadow;
+    > .#{$prefix}content {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:not(.#{$prefix}flat) {
+      > .#{$prefix}content {
+        @if $css-variable-enabled {
+          box-shadow: var(--navbar-shadow);
+        } @else {
+          box-shadow: $navbar-shadow;
+        }
+      }
     }
   }
 }

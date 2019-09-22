@@ -18,6 +18,7 @@ body {
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
   padding: 20px;
+  transition-property: background-color !important;
 
   @if $css-variable-enabled {
     transition: var(--primary-transition);
