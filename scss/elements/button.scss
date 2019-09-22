@@ -134,9 +134,18 @@
     @extend %full-width;
   }
 
+  &.#{$prefix}max-pad {
+    padding: 12px 20px;
+    border-radius: 2px;
+  }
+
   &.#{$prefix}xlarge, .#{$prefix}btns-xlarge > &:not(.#{$prefix}ignored) {
     font-size: $xlarge-text !important;
     padding: 18px 27px !important;
+
+    &.#{$prefix}max-pad {
+      padding: 20px 40px !important;
+    }
 
     > .#{$prefix}icon:only-child {
       margin: 0 -9px;
@@ -150,6 +159,10 @@
   &.#{$prefix}large, .#{$prefix}btns-large > &:not(.#{$prefix}ignored) {
     font-size: $large-text !important;
     padding: 14px 21px !important;
+
+    &.#{$prefix}max-pad {
+      padding: 18px 30px !important;
+    }
 
     > .#{$prefix}icon:only-child {
       margin: 0 -7px;
@@ -170,6 +183,10 @@
   &.#{$prefix}small, .#{$prefix}small > &:not(.#{$prefix}ignored) {
     font-size: $small-text !important;
     padding: 4px 12px !important;
+
+    &.#{$prefix}max-pad {
+      padding: 8px 16px !important;
+    }
 
     > .#{$prefix}icon:only-child {
       margin: 0 -8px;
