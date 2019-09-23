@@ -41,7 +41,7 @@
     "build:css:theme": "node-sass --output-style expanded scss/variants/theme.scss dist/theme.css",
     "build:css:p:theme": "node-sass --output-style expanded scss/variants/parted/theme.scss dist/parted/theme.css",
     "build:css:p:variables": "node-sass --output-style expanded scss/variants/parted/variables.scss dist/parted/variables.css",
-    "build:css:p:zusty": "node-sass --output-style expanded --source-map true scss/variants/parted/zusty.scss dist/parted/zusty.css",
+    "build:css:p:zusty": "node-sass --output-style expanded scss/variants/parted/zusty.scss dist/parted/zusty.css",
     "minify:css": "cleancss -o dist/zusty.min.css dist/zusty.css",
     "minify:css:prefixless": "cleancss -o dist/zusty.prefixless.min.css dist/zusty.prefixless.css",
     "minify:css:p": "cleancss -o dist/parted/zusty.min.css dist/parted/zusty.css",
