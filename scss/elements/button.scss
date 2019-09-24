@@ -107,9 +107,12 @@
   @each $name, $color, $txt-color, $hovered-color, $border-spread-color in $item-colors {
     @if $name {
       &.#{$prefix}#{$name} {
-        border-width: 0 !important;
         background-color: $color !important;
         color: $txt-color;
+
+        &:not(.#{$prefix}outlined) {
+          border-color: $transparent !important;
+        }
 
         &:hover, &.#{$prefix}hovered, input:checked + & {
           background-color: $hovered-color !important;
