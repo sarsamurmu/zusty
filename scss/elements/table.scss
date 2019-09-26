@@ -1,11 +1,25 @@
 .#{$prefix}table {
   border-collapse: collapse;
 
-  td, th {
-    padding: 5px 10px;
+  thead {
+    background-color: var(--table-header-bg-color);
+    color: var(--table-header-text-color);
   }
 
-  tr, td, th {
+  tfoot {
+    background-color: var(--table-footer-bg-color);
+    color: var(--table-footer-text-color);
+  }
+
+  td, th {
+    @if $css-variable-enabled {
+      padding: var(--table-cell-padding);
+    } @else {
+      padding: $table-cell-padding;
+    }
+  }
+
+  tr, td, th, thead, tfoot {
     @if $css-variable-enabled {
       transition: border-color var(--primary-transition), background-color var(--primary-transition);
     } @else {
@@ -19,7 +33,7 @@
     }
   }
 
-  &.#{$prefix}hoverable tbody tr{
+  &.#{$prefix}hoverable tbody tr {
     &:hover, &.#{$prefix}hovered {
       background-color: var(--table-hovered-bg-color);
     }
@@ -31,9 +45,9 @@
     border-color: var(--table-border-color);
 
     @if $css-variable-enabled {
-      border-bottom-width: var(--table-border-width);
+      border-bottom-width: var(--table-cell-border-width);
     } @else {
-      border-bottom-width: $table-border-width;
+      border-bottom-width: $table-cell-border-width;
     }
   }
 
@@ -41,7 +55,12 @@
     td, th {
       border-style: solid;
       border-color: var(--table-border-color);
-      border-width: 2px;
+
+      @if $css-variable-enabled {
+        border-width: var(--table-cell-border-width);
+      } @else {
+        border-width: $table-cell-border-width;
+      }
     }
   }
 }

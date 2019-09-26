@@ -7,7 +7,6 @@
   display: block;
   padding: 10px 10px;
   border-bottom-style: solid;
-  border-width: 2px;
   border-color: $transparent;
 
   @if $css-variable-enabled {
@@ -15,11 +14,13 @@
     z-index: var(--navbar-z-index);
     height: var(--navbar-height);
     box-shadow: var(--navbar-shadow);
+    border-width: var(--navbar-border-bottom-width);
   } @else {
     transition: $primary-transition;
     z-index: $navbar-z-index;
     height: $navbar-height;
     box-shadow: $navbar-shadow;
+    border-width: $navbar-border-bottom-width;
   }
 
   &.#{$prefix}flat {
@@ -121,6 +122,7 @@
       top: 50%;
       right: 30px;
       transform: translateY(-50%);
+      align-items: center;
 
       button {
         margin: {

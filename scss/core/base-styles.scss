@@ -58,22 +58,32 @@ hr[divider] {
 }
 
 blockquote {
-  border-left-style: solid;
-  border-width: 4px;
-  border-radius: 4px;
-  margin: {
-    left: 10px;
-    right: 10px;
-  }
-  padding: {
-    left: 20px;
-    right: 20px;
+  position: relative;
+  margin: 0 10px;
+  padding: 4px 20px;
+  color: var(--text-color-tertiary);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 6px;
+    background-color: var(--blockquote-line-color);
+    border-radius: 20px;
+
+    @if $css-variable-enabled {
+      transition: var(--primary-transition);
+    } @else {
+      transition: $primary-transition;
+    }
   }
 
   @each $name, $color in $item-colors {
     @if $name {
-      &.#{$prefix}#{$name} {
-        border-color: $color;
+      &.#{$prefix}#{$name}:after {
+        background-color: $color;
       }
     }
   }

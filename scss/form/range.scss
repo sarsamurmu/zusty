@@ -3,12 +3,14 @@
   -moz-appearance: none;
   appearance: none;
   background-color: var(--range-bg-color);
-  height: 5px;
-  border-radius: 9999px;
 
   @if $css-variable-enabled {
+    height: var(--range-height);
+    border-radius: var(--range-border-radius);
     transition: var(--primary-transition);
   } @else {
+    height: $range-height;
+    border-radius: $range-border-radius;
     transition: $primary-transition;
   }
 
@@ -22,6 +24,16 @@
     border-radius: 6px;
     cursor: pointer;
     border-style: none;
+
+    @if $css-variable-enabled {
+      height: var(--range-thumb-height);
+      width: var(--range-thumb-width);
+      border-radius: var(--range-thumb-border-radius);
+    } @else {
+      height: $range-thumb-height;
+      width: $range-thumb-width;
+      border-radius: $range-thumb-border-radius;
+    }
   }
 
   &::-moz-range-thumb {
@@ -29,11 +41,18 @@
     -moz-appearance: none;
     appearance: none;
     background-color: var(--primary-color);
-    height: 18px;
-    width: 18px;
-    border-radius: 6px;
     cursor: pointer;
     border-style: none;
+
+    @if $css-variable-enabled {
+      height: var(--range-thumb-height);
+      width: var(--range-thumb-width);
+      border-radius: var(--range-thumb-border-radius);
+    } @else {
+      height: $range-thumb-height;
+      width: $range-thumb-width;
+      border-radius: $range-thumb-border-radius;
+    }
   }
 
   &.#{$prefix}rounded {

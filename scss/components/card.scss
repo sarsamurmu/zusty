@@ -1,31 +1,46 @@
 .#{$prefix}card {
   background-color: var(--card-bg-color);
-  padding: 10px 20px;
-  max-width: 200px;
-  min-width: 180px;
-  height: max-content;
   border-color: var(--card-border-color);
-  box-shadow: 0 0 10px 0px hsla(0, 0%, 0%, 0.1);
-  margin: 10px;
+  height: max-content;
   box-sizing: content-box;
 
   @if $css-variable-enabled {
+    padding: var(--card-padding);
+    margin: var(--card-padding);
+    max-width: var(--card-max-width);
+    min-width: var(--card-min-width);
+    box-shadow: var(--card-box-shadow);
     border-radius: var(--card-border-radius);
     transition: var(--primary-transition);
   } @else {
+    padding: $card-padding;
+    margin: $card-padding;
+    max-width: $card-max-width;
+    min-width: $card-min-width;
+    box-shadow: $card-box-shadow;
     border-radius: $card-border-radius;
     transition: $primary-transition;
   }
 
   &.#{$prefix}flat {
-    border-width: 2px;
     border-style: solid;
     box-shadow: 0 0 $transparent;
+
+    @if $css-variable-enabled {
+      border-width: var(--card-border-width);
+    } @else {
+      border-width: $card-border-width;
+    }
   }
 
   &.#{$prefix}landscape {
-    max-width: 350px;
-    min-width: 260px;
+    @if $css-variable-enabled {
+      max-width: car(--card-landscape-max-width);
+      min-width: car(--card-landscape-min-width);
+    } @else {
+      max-width: $card-landscape-max-width;
+      min-width: $card-landscape-min-width;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -50,11 +65,16 @@
   }
 
   &.#{$prefix}hoverable {
-
     &:hover, &.#{$prefix}hovered {
       border-color: $transparent;
-      transform: translateY(-8px);
-      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+
+      @if $css-variable-enabled {
+        transform: translateY(var(--card-hover-translate));
+        box-shadow: var(--card-hovered-box-shadow);
+      } @else {
+        transform: translateY($card-hover-translate);
+        box-shadow: $card-hovered-box-shadow;
+      }
     }
   }
 

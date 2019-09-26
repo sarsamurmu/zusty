@@ -3,12 +3,15 @@
   height: 30px;
   background-color: var(--chip-bg-color);
   align-items: center;
-  border-radius: 1000px;
-  margin: 0 8px 8px 0;
+  vertical-align: bottom;
 
   @if $css-variable-enabled {
+    border-radius: var(--chip-border-radius);
+    margin: var(--chip-margin);
     transition: var(--primary-transition);
   } @else {
+    border-radius: $chip-border-radius;
+    margin: $chip-margin;
     transition: $primary-transition;
   }
 

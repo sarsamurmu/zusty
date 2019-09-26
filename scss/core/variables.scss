@@ -1,9 +1,9 @@
 // Boleans
 $css-variable-enabled: false !default;
 
-//==//-----------//==//
-//==//  General  //==//
-//==//-----------//==//
+// --------------
+//    General
+// --------------
 
 // Prefix Used for all zusty's selectors;
 $prefix: 'zust-' !default;
@@ -42,15 +42,20 @@ $navbar-z-index: 4 !default;
 $primary-transition: 0.2s !default;
 
 
-//==//-----------//==//
-//==//  Elements //==//
-//==//-----------//==//
+// --------------
+//    Elements
+// --------------
 
 // Button
+$button-margin: 5px !default;
 $button-border-radius: 6px !default;
 $button-border-width: 2px !default;
 $button-border-spread: 4px !default;
 $button-outlined-border-width: 2px !default;
+
+// Chip
+$chip-border-radius: 1000px !default;
+$chip-margin: 0 8px 8px 0 !default;
 
 // Icon
 $icon-size-small: 0.8rem !default;
@@ -58,69 +63,139 @@ $icon-size-default: 1.2rem !default;
 $icon-size-large: 1.6rem !default;
 $icon-size-xlarge: 2rem !default;
 
+// Note Block
+$note-block-border-radius: 10px !default;
+$note-block-margin: 20px 0 !default;
+$note-block-padding: 3px 18px !default;
+$note-block-line-width: 4px !default;
+
 // Progress Bar
 $progress-bar-border-radius: 6px !default;
 
 // Table
-$table-border-width: 2px !default;
+$table-cell-border-width: 2px !default;
+$table-cell-padding: 5px 10px !default;
 
 // Tooltip
 $tooltip-margin: 10px;
 $tooltip-translate: 20px;
+$tooltip-font-size: 12px !default;
+$tooltip-border-radius: 8px !default;
+$tooltip-padding: 5px 10px !default;
+$tooltip-shadow: 0 0 5px 0px hsla(0, 0%, 0%, 0.08) !default;
 
 
 
-//==//-----------//==//
-//==//   Form    //==//
-//==//-----------//==//
+// --------------
+//   Container
+// --------------
+
+$container-margin: 10px !default;
+$container-padding: 0px !default;
+$container-column-margin: 10px !default;
+$container-column-padding: 5px !default;
+
+
+
+// --------------
+//      Form
+// --------------
+$form-label-text-margin: 5px;
+$form-label-text-font-size: $medium-text;
+$form-help-text-margin: 5px;
+$form-help-text-font-size: $small-text;
+
+// Checkbox
+$checkbox-margin: 0 0 6px 6px !default;
+$checkbox-border-width: 2px !default;
+$checkbox-border-radius: 8px !default;
+$checkbox-padding: 10px !default;
+$checkbox-label-margin: 8px !default;
 
 // Input
+$input-margin: 4px !default;
 $input-border-radius: 8px !default;
 $input-border-spread: 2px !default;
+
+// Radio
+$radio-margin: 0 0 6px 6px !default;
+$radio-border-width: 2px !default;
+$radio-border-radius: 100px !default;
+$radio-padding: 10px !default;
+$radio-label-margin: 8px !default;
+
+// Range
+$range-height: 5px !default;
+$range-border-radius: 9999px !default;
+$range-thumb-height: 18px !default;
+$range-thumb-width: $range-thumb-height !default;
+$range-thumb-border-radius: 6px !default;
 
 // Select
 $select-border-radius: $input-border-radius !default;
 $select-border-spread: $input-border-spread !default;
 
+// Switch
+$switch-border-width: 2px !default;
+$switch-border-radius: 100px !default;
+$switch-margin: 0 0 8px 8px !default;
+$switch-label-margin: 8px !default;
+
 // Textarea
-$textarea-border-radius: 8px !default;
+$textarea-border-radius: $input-border-radius !default;
+$textarea-border-spread: $input-border-spread !default;
 
 
 
-//==//------------//==//
-//==// Components //==//
-//==//------------//==//
+// --------------
+//   Components
+// --------------
 
 // Badge
 $badge-border-radius: 6px !default;
 
 // Cards
 $card-border-radius: 10px !default;
+$card-padding: 10px 20px !default;
+$card-margin: 10px !default;
+$card-max-width: 200px !default;
+$card-min-width: 180px !default;
+$card-box-shadow: 0 0 10px 0px hsla(0, 0%, 0%, 0.1) !default;
+$card-border-width: 2px !default;
+$card-landscape-max-width: 200px !default;
+$card-landscape-min-width: 180px !default;
+$card-hover-translate: -8px !default;
+$card-hovered-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1) !default;
 
 // Dropdown
-$dropdown-animation-duration: 0.3s !default;
-$dropdown-margin: 13px !default;
+$dropdown-margin: 14px !default;
 $dropdown-child-margin: 20px !default;
 $dropdown-translate: 10px !default;
 $dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04) !default;
 $dropdown-border-radius: 10px !default;
 $dropdown-item-border-radius: 10px !default;
+$dropdown-padding: 10px !default;
+$dropdown-child-padding: 10px !default;
+$dropdown-item-padding: 10px !default;
+$dropdown-item-margin: 4px !default;
 
 // Modal
-$modal-border-radius: 14px;
-$modal-transition: 0.5s;
+$modal-border-radius: 14px !default;
+$modal-transition: 0.5s !default;
 
 // Navbar
-$navbar-height: 60px;
-$navbar-shadow: 0px 3px 3px var(--navbar-shadow-color);
+$navbar-height: 60px !default;
+$navbar-shadow: 0px 3px 3px var(--navbar-shadow-color) !default;
+$navbar-border-bottom-width: 2px !default;
 
 // Tabs
-$tab-top-border-radius: 4px;
+$tab-top-border-radius: 4px !default;
+$tab-border-bottom-width: 2px !default;
 
 
-//==//--------------//==//
-//==// Theme Colors //==//
-//==//--------------//==//
+// --------------
+//  Theme Colors
+// --------------
 
 // Status Colors
 $status-colors: (

@@ -8,8 +8,8 @@ select.#{$prefix}select {
     left: 10px;
     right: 10px;
   }
-  background-color: var(--input-bg-color);
-  color: var(--input-text-color);
+  background-color: var(--select-bg-color);
+  color: var(--select-text-color);
   border-width: 0;
   border-bottom-width: 2px;
   border-color: $transparent;
@@ -135,7 +135,7 @@ select.#{$prefix}select {
     option {
       padding: 5px 15px;
       text-align: center;
-      background-color: var(--input-bg-color);
+      background-color: var(--select-bg-color);
     }
   }
 
@@ -148,7 +148,7 @@ select.#{$prefix}select {
   }
 
   &:hover, &.#{$prefix}hovered {
-    background-color: var(--input-hovered-bg-color);
+    background-color: var(--select-hovered-bg-color);
   }
 
   &:focus, &.#{$prefix}focused {
@@ -156,9 +156,9 @@ select.#{$prefix}select {
     border-color: $transparent !important;
 
     @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--select-border-spread) var(--input-border-color);
+      box-shadow: 0 0 0 var(--select-border-spread) var(--select-border-spread-color);
     } @else {
-      box-shadow: 0 0 0 $select-border-spread var(--input-border-color);
+      box-shadow: 0 0 0 $select-border-spread var(--select-border-spread-color);
     }
   }
 

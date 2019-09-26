@@ -21,11 +21,16 @@
     align-items: center;
     justify-content: flex-start;
     border-bottom-style: solid;
-    border-width: 2px;
     padding: 0;
     margin: 0;
     border-color: var(--tab-selected-item-color);
     @extend %no-select;
+
+    @if $css-variable-enabled {
+      border-width: var(--tab-border-bottom-width);
+    } @else {
+      border-width: $tab-border-bottom-width;
+    }
 
     > li {
       display: inline-flex;
@@ -34,15 +39,16 @@
       text-align: center;
       height: 40px;
       padding: 0 20px;
-      margin-bottom: -2px;
       position: relative;
       transform-style: preserve-3d;
       white-space: nowrap;
       cursor: pointer;
 
       @if $css-variable-enabled {
+        margin-bottom: calc(0px - var(--tab-border-bottom-width));
         transition: var(--primary-transition);
       } @else {
+        margin-bottom: 0 - $tab-border-bottom-width;
         transition: $primary-transition;
       }
 
@@ -68,12 +74,13 @@
         bottom: 0;
         left: 0;
         background-color: var(--tab-selected-item-color);
-        height: 2px;
         width: 100%;
         transform: translateZ(-1px);
         @if $css-variable-enabled {
+          height: var(--tab-border-bottom-width);
           transition: var(--primary-transition);
         } @else {
+          height: $tab-border-bottom-width;
           transition: $primary-transition;
         }
       }

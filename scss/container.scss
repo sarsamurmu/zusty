@@ -1,11 +1,11 @@
-$container-items-margin: 10px !default;
-$container-items-padding: 5px !default;
-$container-padding: 0px !default;
-$container-margin: 10px !default;
-
 // Comfort Use
-$it-mar: $container-items-margin;
-$it-pad: $container-items-padding;
+$it-mar: $container-column-margin;
+$it-pad: $container-column-padding;
+
+@if $css-variable-enabled {
+  $it-mar: var(--container-column-margin);
+  $it-pad: var(--container-column-padding);
+}
 
 // Sizes
 @mixin sizes($suffix: '') {
@@ -48,12 +48,18 @@ $it-pad: $container-items-padding;
 }
 
 .#{$prefix}container {
-  padding: $container-padding;
-  margin: $container-margin;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   overflow: visible;
+
+  @if $css-variable-enabled {
+    margin: var(--container-margin);
+    padding: var(--container-padding);
+  } @else {
+    margin: $container-margin;
+    padding: $container-padding;
+  }
 
   &.#{$prefix}v-centered {
     align-items: center;
@@ -69,7 +75,7 @@ $it-pad: $container-items-padding;
   }
 
   &.#{$prefix}column {
-    margin: 0 0 $container-margin 0;
+    margin: 0 0 0 0;
 
     $not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}name)', 'name', '', '', '');
 

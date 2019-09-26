@@ -72,20 +72,6 @@
     margin: 0;
     margin-left: 5px;
     box-sizing: content-box;
-    @if $css-variable-enabled {
-      margin-top: calc(var(--dropdown-margin) - 4px);
-      transform: translateY($dropdown-translate);
-      border-radius: var(--dropdown-border-radius);
-      z-index: var(--dropdown-z-index);
-      box-shadow: var(--dropdown-shadow);
-    } @else {
-      margin-top: $dropdown-margin - 4px;
-      transform: translateY($dropdown-translate);
-      border-radius: $dropdown-border-radius;
-      z-index: $dropdown-z-index;
-      box-shadow: $dropdown-shadow;
-    }
-
     position: absolute;
     list-style: none;
     border-style: solid;
@@ -95,10 +81,24 @@
     opacity: 0;
     background-color: var(--dropdown-bg-color);
     transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
-    padding: 10px;
-    font-size: 15px;
     height: fit-content;
     width: 150px;
+
+    @if $css-variable-enabled {
+      margin-top: calc(var(--dropdown-margin) - 4px);
+      transform: translateY($dropdown-translate);
+      border-radius: var(--dropdown-border-radius);
+      z-index: var(--dropdown-z-index);
+      box-shadow: var(--dropdown-shadow);
+      padding: var(--dropdown-padding);
+    } @else {
+      margin-top: $dropdown-margin - 4px;
+      transform: translateY($dropdown-translate);
+      border-radius: $dropdown-border-radius;
+      z-index: $dropdown-z-index;
+      box-shadow: $dropdown-shadow;
+      padding: $dropdown-padding;
+    }
 
     .#{$prefix}center-aligned & {
       @if $css-variable-enabled {
@@ -138,15 +138,17 @@
       align-items: center;
       color: var(--text-color-secondary);
       list-style: none;
-      padding: 10px;
       text-align: left;
-      margin: 4px;
       transition: background-color 0.5s;
       box-sizing: content-box;
       @if $css-variable-enabled {
         border-radius: var(--dropdown-item-border-radius);
+        padding: var(--dropdown-item-padding);
+        margin: var(--dropdown-item-margin);
       } @else {
         border-radius: $dropdown-item-border-radius;
+        padding: $dropdown-item-padding;
+        margin: $dropdown-item-margin;
       }
 
       &:hover, &.#{$prefix}hovered {
@@ -161,11 +163,11 @@
       }
 
       &[active], &.#{$prefix}active {
-        background-color: var(--primary-color);
-        color: var(--primary-text-color);
+        background-color: var(--dropdown-active-item-bg-color);
+        color: var(--dropdown-active-item-text-color);
 
         &:hover, &.#{$prefix}hovered {
-          background-color: var(--primary-hovered-color);
+          background-color: var(--dropdown-active-item-bg-color);
         }
       }
 
@@ -174,7 +176,6 @@
         top: 0;
         left: 100%;
         margin: 0;
-        padding: 10px;
         width: 150px;
         border-style: solid;
         border-width: 2px;
@@ -183,21 +184,23 @@
         opacity: 0;
         background-color: var(--dropdown-bg-color);
         transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s;
-        font-size: 15px;
         height: fit-content;
         box-sizing: content-box;
+
         @if $css-variable-enabled {
           margin-left: var(--dropdown-child-margin);
           transform: translateX(var(--dropdown-translate));
           border-radius: var(--dropdown-border-radius);
           z-index: var(--dropdown-z-index);
           box-shadow: var(--dropdown-shadow);
+          padding: var(--dropdown-child-padding);
         } @else {
           margin-left: $dropdown-child-margin;
           transform: translateX($dropdown-translate);
           border-radius: $dropdown-border-radius;
           z-index: $dropdown-z-index;
           box-shadow: $dropdown-shadow;
+          padding: $dropdown-child-padding;
         }
       }
 

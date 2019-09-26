@@ -1,11 +1,24 @@
 .#{$prefix}switch {
   position: relative;
-  margin: 0 0 8px 8px;
   display: inline-block;
   user-select: none;
 
-  span ~ span {
-    margin-left: 8px;
+  @if $css-variable-enabled {
+    margin: var(--switch-margin);
+  } @else {
+    margin: $switch-margin;
+  }
+
+  span {
+    vertical-align: middle;
+
+    ~ span {
+      @if $css-variable-enabled {
+        margin-left: var(--switch-label-margin);
+      } @else {
+        margin-left: $switch-label-margin;
+      }
+    }
   }
 
   > input {
@@ -20,16 +33,18 @@
     + span {
       padding-left: 35px;
       background-color: var(--switch-bg-color);
-      border-radius: 100px;
-      border-width: 2px;
       border-style: solid;
       border-color: var(--switch-border-color);
       height: 18px;
       position: relative;
 
       @if $css-variable-enabled {
+        border-radius: var(--switch-border-radius);
+        border-width: var(--switch-border-width);
         transition: var(--primary-transition);
       } @else {
+        border-radius: $switch-border-radius;
+        border-width: $switch-border-width;
         transition: $primary-transition;
       }
 

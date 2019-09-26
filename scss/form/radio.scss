@@ -1,13 +1,22 @@
 .#{$prefix}radio {
   display: inline-block;
-  margin: 0 0 6px 6px;
   user-select: none;
+
+  @if $css-variable-enabled {
+    margin: var(--radio-margin);
+  } @else {
+    margin: $radio-margin;
+  }
 
   span {
     vertical-align: middle;
 
     ~ span {
-      margin-left: 8px;
+      @if $css-variable-enabled {
+        margin-left: var(--radio-label-margin);
+      } @else {
+        margin-left: $radio-label-margin;
+      }
     }
   }
 
@@ -22,17 +31,20 @@
 
     + span {
       display: inline-block;
-      padding: 10px;
-      border-radius: 100px;
       border-style: solid;
-      border-width: 2px;
-      border-color: var(--radio-color);
+      border-color: var(--radio-border-color);
       position: relative;
       overflow: hidden;
 
       @if $css-variable-enabled {
+        border-radius: var(--radio-border-radius);
+        border-width: var(--radio-border-width);
+        padding: var(--radio-padding);
         transition: var(--primary-transition);
       } @else {
+        border-radius: $radio-border-radius;
+        border-width: $radio-border-width;
+        padding: $radio-padding;
         transition: $primary-transition;
       }
 

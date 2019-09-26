@@ -3,6 +3,7 @@
   $margin: 20px;
   margin-bottom: $margin;
   display: flex;
+  flex-wrap: wrap;
 
   .#{$prefix}form-inline & {
     display: inline-block;
@@ -38,6 +39,10 @@
     margin-right: 0;
     margin-bottom: 0;
   }
+
+  &.zust-fullwidth {
+    flex-wrap: nowrap;
+  }
 }
 
 .#{$prefix}form-inline {
@@ -60,9 +65,33 @@
   margin-bottom: 20px;
 }
 
-.#{$prefix}label {
+.#{$prefix}label-text {
+  display: block;
+  width: 100%;
+
+  @if $css-variable-enabled {
+    font-size: var(--form-label-text-font-size);
+    margin: var(--form-label-text-margin);
+  } @else {
+    font-size: $form-label-text-font-size;
+    margin: $form-label-text-margin;
+  }
+}
+
+.#{$prefix}help-text {
   margin: 5px;
   display: block;
+  width: 100%;
+
+  @if $css-variable-enabled {
+    font-size: var(--form-help-text-font-size);
+    margin: var(--form-help-text-margin);
+    margin-top: calc(var(--form-help-text-margin) + 3px);
+  } @else {
+    font-size: $form-help-text-font-size;
+    margin: $form-help-text-margin;
+    margin-top: $form-help-text-margin + 3px;
+  }
 }
 
 // Form Element
@@ -74,6 +103,10 @@
   &:not(:last-child) {
     margin-bottom: 8px;
     margin-right: 8px;
+  }
+
+  &.#{$prefix}fillup {
+    width: 100%;
   }
 
   .#{$prefix}input {

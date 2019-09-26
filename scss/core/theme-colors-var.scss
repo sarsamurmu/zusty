@@ -1,3 +1,7 @@
+// --------------
+//  Theme Colors
+// --------------
+
 //$primary-color: #2ECC71 !default;
 $primary-color: hsl(162, 100%, 36%) !default;
 $primary-color-dark: lighten($primary-color, 4%) !default;
@@ -58,22 +62,27 @@ $body-bg-color: hsl(0, 0%, 100%) !default;
 $body-bg-color-dark: hsl(0, 0%, 13%) !default;
 $body-text-color: $text-color-secondary !default;
 $body-text-color-dark: $text-color-secondary-dark !default;
+$blockquote-line-color: hsl(0, 0%, 85%) !default;
+$blockquote-line-color-dark: hsl(0, 0%, 35%) !default;
 $divider-color: hsl(0, 0%, 90%) !default;
 $divider-color-dark: hsl(0, 0%, 30%) !default;
+$dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
+$dimmer-bg-color-dark: $dimmer-bg-color !default;
+$light-color: rgba(144, 144, 144, 0.1) !default;
+$light-color-dark: rgba(144, 144, 144, 0.1) !default;
+$text-color-inverted: #FFFFFF !default;
+$text-color-inverted-dark: #484848 !default;
+$bg-color-inverted: hsl(0, 0%, 13%) !default;
+$bg-color-inverted-dark: whitesmoke !default;
+// Item Disabled
+$item-disabled-bg-color: hsl(0, 0%, 93%) !default;
+$item-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
+$item-disabled-fg-color: hsl(0, 0%, 82%) !default;
+$item-disabled-fg-color-dark: hsl(0, 0%, 30%) !default;
 
-// Badge
-$badge-only-part-bg-color: $primary-color !default;
-$badge-only-part-bg-color-dark: $primary-color-dark !default;
-$badge-only-part-text-color: $primary-text-color !default;
-$badge-only-part-text-color-dark: $primary-text-color-dark !default;
-$badge-first-part-bg-color: rgba(144, 144, 144, 0.1) !default;
-$badge-first-part-bg-color-dark: $badge-first-part-bg-color !default;
-$badge-first-part-text-color: $text-color-primary !default;
-$badge-first-part-text-color-dark: $text-color-primary-dark !default;
-$badge-last-part-bg-color: $badge-only-part-bg-color !default;
-$badge-last-part-bg-color-dark: $badge-only-part-bg-color-dark !default;
-$badge-last-part-text-color: $badge-only-part-text-color !default;
-$badge-last-part-text-color-dark: $badge-only-part-text-color-dark !default;
+// --------------
+//    Elements
+// --------------
 
 // Button
 $button-bg-color: hsl(0, 0%, 100%) !default;
@@ -89,29 +98,15 @@ $button-focus-border-color-dark: hsla(291, 47%, 51%, 0.45) !default;
 $button-shadow-color: hsla(0, 0%, 84%, 0.87) !default;
 $button-shadow-color-dark: hsla(0, 0%, 30%, 0.87) !default;
 
-// Cards
-$card-bg-color: hsl(0, 0%, 100%) !default;
-$card-bg-color-dark: hsl(0, 0%, 17%) !default;
-$card-border-color: hsl(0, 0%, 88%) !default;
-$card-border-color-dark: hsl(0, 0%, 42%) !default;
-
 // Chip
 $chip-bg-color: hsl(0, 0%, 97%) !default;
 $chip-bg-color-dark: hsl(0, 0%, 17%) !default;
 
-// Dialog
-$modal-bg-color: hsl(0, 0%, 100%) !default;
-$modal-bg-color-dark: hsl(0, 0%, 26%) !default;
-
-// Dropdown
-$dropdown-bg-color: hsl(0, 0%, 100%) !default;
-$dropdown-bg-color-dark: hsl(0, 0%, 17%) !default;
-$dropdown-border-color: hsl(0, 0%, 88%) !default;
-$dropdown-border-color-dark: hsl(0, 0%, 42%) !default;
-$dropdown-text-color: hsl(0, 0%, 26%) !default;
-$dropdown-text-color-dark: hsl(0, 0%, 88%) !default;
-$dropdown-option-hovered-color: hsl(0, 0%, 93%) !default;
-$dropdown-option-hovered-color-dark: hsl(0, 0%, 28%) !default;
+// Note Block
+$note-block-bg-color: $light-color !default;
+$note-block-bg-color-dark: $light-color-dark !default;
+$note-block-line-color: $primary-color !default;
+$note-block-line-color-dark: $primary-color-dark !default;
 
 // Table
 $table-border-color: hsl(0, 0%, 90%) !default;
@@ -120,6 +115,34 @@ $table-bg-color: hsl(0, 0%, 97%) !default;
 $table-bg-color-dark: hsl(0, 0%, 17%) !default;
 $table-hovered-bg-color: $table-border-color !default;
 $table-hovered-bg-color-dark: $table-border-color-dark !default;
+$table-header-bg-color: $body-bg-color !default;
+$table-header-bg-color-dark: $body-bg-color-dark !default;
+$table-header-text-color: $body-text-color !default;
+$table-header-text-color-dark: $body-text-color-dark !default;
+$table-footer-bg-color: $body-bg-color !default;
+$table-footer-bg-color-dark: $body-bg-color-dark !default;
+$table-footer-text-color: $body-text-color !default;
+$table-footer-text-color-dark: $body-text-color-dark !default;
+
+// Tooltip
+$tooltip-bg-color: #FFF !default;
+$tooltip-bg-color-dark: hsl(0, 0%, 26%) !default;
+$tooltip-text-color: $text-color-secondary !default;
+$tooltip-text-color-dark: $text-color-secondary-dark !default;
+
+// --------------
+//     Form
+// --------------
+
+// Checkbox
+$checkbox-border-color: hsl(0, 0%, 70%) !default;
+$checkbox-border-color-dark: hsl(0, 0%, 50%) !default;
+$checkbox-checked-border-color: $primary-color !default;
+$checkbox-checked-border-color-dark: $primary-color-dark !default;
+$checkbox-checkmark-color: $primary-text-color !default;
+$checkbox-checkmark-color-dark: $primary-text-color-dark !default;
+$checkbox-border-spread-color: $primary-color-light !default;
+$checkbox-border-spread-color-dark: $primary-color-light-dark !default;
 
 // Input
 $input-bg-color: hsl(0, 0%, 97%) !default;
@@ -128,8 +151,8 @@ $input-hovered-bg-color: hsl(0, 0%, 93%) !default;
 $input-hovered-bg-color-dark: hsl(0, 0%, 7%) !default;
 $input-text-color: hsl(0, 0%, 35%) !default;
 $input-text-color-dark: hsl(0, 0%, 85%) !default;
-$input-border-color: hsl(187, 100%, 70%) !default;
-$input-border-color-dark: hsl(187, 100%, 42%) !default;
+$input-border-spread-color: hsl(187, 100%, 70%) !default;
+$input-border-spread-color-dark: hsl(187, 100%, 42%) !default;
 $input-placeholder-text-color: hsl(0, 0%, 46%) !default;
 $input-placeholder-text-color-dark: hsl(0, 0%, 46%) !default;
 // Input Append
@@ -138,11 +161,13 @@ $input-append-bg-color-dark: hsl(0, 0%, 25%) !default;
 $input-append-fg-color: hsl(0, 0%, 50%) !default;
 $input-append-fg-color-dark: hsl(0, 0%, 70%) !default;
 
-// Item Disabled
-$item-disabled-bg-color: hsl(0, 0%, 93%) !default;
-$item-disabled-bg-color-dark: hsl(0, 0%, 20%) !default;
-$item-disabled-fg-color: hsl(0, 0%, 82%) !default;
-$item-disabled-fg-color-dark: hsl(0, 0%, 30%) !default;
+// Radio
+$radio-border-color: hsl(0, 0%, 70%) !default;
+$radio-border-color-dark: hsl(0, 0%, 50%) !default;
+$radio-selected-color: $primary-color !default;
+$radio-selected-color-dark: $radio-selected-color !default;
+$radio-border-spread-color: $primary-color-light !default;
+$radio-border-spread-color-dark: $primary-color-light-dark !default;
 
 // Slider/Range
 $range-bg-color: hsl(0, 0%, 93%) !default;
@@ -164,47 +189,67 @@ $switch-active-border-color-dark: $switch-active-border-color !default;
 $switch-border-spread-color: transparentize($switch-active-bg-color, 0.3) !default;
 $switch-border-spread-color-dark: $switch-border-spread-color !default;
 
-// Checkbox
-$checkbox-color: hsl(0, 0%, 70%) !default;
-$checkbox-color-dark: hsl(0, 0%, 50%) !default;
-$checkbox-check-color: $primary-color !default;
-$checkbox-check-color-dark: $primary-color-dark !default;
-$checkbox-checkmark-color: $primary-text-color !default;
-$checkbox-checkmark-color-dark: $primary-text-color-dark !default;
-$checkbox-border-spread-color: $primary-color-light !default;
-$checkbox-border-spread-color-dark: $primary-color-light-dark !default;
+// Select
+$select-bg-color: $input-bg-color !default;
+$select-bg-color-dark: $input-bg-color-dark !default;
+$select-hovered-bg-color: $input-hovered-bg-color !default;
+$select-hovered-bg-color-dark: $input-hovered-bg-color-dark !default;
+$select-text-color: $input-text-color !default;
+$select-text-color-dark: $input-text-color-dark !default;
+$select-border-spread-color: $input-border-spread-color !default;
+$select-border-spread-color-dark: $input-border-spread-color-dark !default;
 
-// Progress Bar
-$progress-back-bg-color: hsl(0, 0%, 93%) !default;
-$progress-back-bg-color-dark: hsl(0, 0%, 18%) !default;
-$progress-back-text-color: $text-color-secondary !default;
-$progress-back-text-color-dark: $text-color-secondary-dark !default;
-$progress-bar-bg-color: $primary-color !default;
-$progress-bar-bg-color-dark: $primary-color-dark !default;
-$progress-bar-text-color: $primary-text-color !default;
-$progress-bar-text-color-dark: $primary-text-color-dark !default;
-$progress-bar-stripe-color: rgba(255, 255, 255, 0.15) !default;
-$progress-bar-stripe-color-dark: rgba(0, 0, 0, 0.08) !default;
+// Textarea
+$textarea-bg-color: $input-bg-color !default;
+$textarea-bg-color-dark: $input-bg-color-dark !default;
+$textarea-hovered-bg-color: $input-hovered-bg-color !default;
+$textarea-hovered-bg-color-dark: $input-hovered-bg-color-dark !default;
+$textarea-text-color: $input-text-color !default;
+$textarea-text-color-dark: $input-text-color-dark !default;
+$textarea-border-spread-color: $input-border-spread-color !default;
+$textarea-border-spread-color-dark: $input-border-spread-color-dark !default;
 
-// Radio
-$radio-color: hsl(0, 0%, 70%) !default;
-$radio-color-dark: hsl(0, 0%, 50%) !default;
-$radio-selected-color: $primary-color !default;
-$radio-selected-color-dark: $radio-selected-color !default;
-$radio-border-spread-color: $primary-color-light !default;
-$radio-border-spread-color-dark: $primary-color-light-dark !default;
+// --------------
+//   Components
+// --------------
 
-// Tooltip
-$tooltip-bg-color: #FFF !default;
-$tooltip-bg-color-dark: hsl(0, 0%, 26%) !default;
-$tooltip-text-color: $text-color-secondary !default;
-$tooltip-text-color-dark: $text-color-secondary-dark !default;
+// Badge
+$badge-only-part-bg-color: $primary-color !default;
+$badge-only-part-bg-color-dark: $primary-color-dark !default;
+$badge-only-part-text-color: $primary-text-color !default;
+$badge-only-part-text-color-dark: $primary-text-color-dark !default;
+$badge-first-part-bg-color: rgba(144, 144, 144, 0.1) !default;
+$badge-first-part-bg-color-dark: $badge-first-part-bg-color !default;
+$badge-first-part-text-color: $text-color-primary !default;
+$badge-first-part-text-color-dark: $text-color-primary-dark !default;
+$badge-last-part-bg-color: $badge-only-part-bg-color !default;
+$badge-last-part-bg-color-dark: $badge-only-part-bg-color-dark !default;
+$badge-last-part-text-color: $badge-only-part-text-color !default;
+$badge-last-part-text-color-dark: $badge-only-part-text-color-dark !default;
 
-// Placeholder
-$placeholder-color: transparentize($body-bg-color, 0.5) !default;
-$placeholder-color-dark: transparentize($body-bg-color-dark, 0.5) !default;
-$placeholder-holder-color: rgba(144, 144, 144, 0.2) !default;
-$placeholder-holder-color-dark: rgba(144, 144, 144, 0.2) !default;
+// Cards
+$card-bg-color: hsl(0, 0%, 100%) !default;
+$card-bg-color-dark: hsl(0, 0%, 17%) !default;
+$card-border-color: hsl(0, 0%, 88%) !default;
+$card-border-color-dark: hsl(0, 0%, 42%) !default;
+
+// Dialog
+$modal-bg-color: hsl(0, 0%, 100%) !default;
+$modal-bg-color-dark: hsl(0, 0%, 26%) !default;
+
+// Dropdown
+$dropdown-bg-color: hsl(0, 0%, 100%) !default;
+$dropdown-bg-color-dark: hsl(0, 0%, 17%) !default;
+$dropdown-border-color: hsl(0, 0%, 88%) !default;
+$dropdown-border-color-dark: hsl(0, 0%, 42%) !default;
+$dropdown-text-color: hsl(0, 0%, 26%) !default;
+$dropdown-text-color-dark: hsl(0, 0%, 88%) !default;
+$dropdown-option-hovered-color: hsl(0, 0%, 93%) !default;
+$dropdown-option-hovered-color-dark: hsl(0, 0%, 28%) !default;
+$dropdown-active-item-bg-color: $primary-color !default;
+$dropdown-active-item-bg-color-dark: $primary-color-dark !default;
+$dropdown-active-item-text-color: $primary-text-color !default;
+$dropdown-active-item-text-color-dark: $primary-text-color-dark !default;
 
 // Navbar
 $navbar-bg-color: #FFF !default;
@@ -218,6 +263,24 @@ $navbar-selected-item-bg-color-dark: $primary-color-dark !default;
 $navbar-selected-item-text-color: $primary-text-color !default;
 $navbar-selected-item-text-color-dark: $primary-text-color-dark !default;
 
+// Placeholder
+$placeholder-color: transparentize($body-bg-color, 0.5) !default;
+$placeholder-color-dark: transparentize($body-bg-color-dark, 0.5) !default;
+$placeholder-holder-color: rgba(144, 144, 144, 0.2) !default;
+$placeholder-holder-color-dark: rgba(144, 144, 144, 0.2) !default;
+
+// Progress Bar
+$progress-back-bg-color: hsl(0, 0%, 93%) !default;
+$progress-back-bg-color-dark: hsl(0, 0%, 18%) !default;
+$progress-back-text-color: $text-color-secondary !default;
+$progress-back-text-color-dark: $text-color-secondary-dark !default;
+$progress-bar-bg-color: $primary-color !default;
+$progress-bar-bg-color-dark: $primary-color-dark !default;
+$progress-bar-text-color: $primary-text-color !default;
+$progress-bar-text-color-dark: $primary-text-color-dark !default;
+$progress-bar-stripe-color: rgba(255, 255, 255, 0.15) !default;
+$progress-bar-stripe-color-dark: rgba(0, 0, 0, 0.08) !default;
+
 // Tabs
 $tab-border-color: rgba(144, 144, 144, 0.2) !default;
 $tab-border-color-dark: $tab-border-color !default;
@@ -225,13 +288,3 @@ $tab-selected-item-color: $primary-color !default;
 $tab-selected-item-color-dark: $primary-color-dark !default;
 $tab-selected-item-text-color: $primary-text-color !default;
 $tab-selected-item-text-color-dark: $primary-text-color-dark !default;
-
-// Misc.
-$dimmer-bg-color: hsla(0, 0%, 0%, 0.6) !default;
-$dimmer-bg-color-dark: $dimmer-bg-color !default;
-$light-color: rgba(144, 144, 144, 0.1) !default;
-$light-color-dark: rgba(144, 144, 144, 0.1) !default;
-$text-color-inverted: #FFFFFF !default;
-$text-color-inverted-dark: #484848 !default;
-$bg-color-inverted: hsl(0, 0%, 13%) !default;
-$bg-color-inverted-dark: whitesmoke !default;

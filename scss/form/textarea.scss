@@ -1,8 +1,8 @@
 textarea.#{$prefix}textarea {
   appearance: none;
   padding: 8px 10px;
-  background-color: var(--input-bg-color);
-  color: var(--input-text-color);
+  background-color: var(--textarea-bg-color);
+  color: var(--textarea-text-color);
   border-width: 0;
   border-bottom-width: 2px;
   border-color: $transparent;
@@ -26,20 +26,20 @@ textarea.#{$prefix}textarea {
   }
 
   &:hover, &.#{$prefix}hovered {
-    background-color: var(--input-hovered-bg-color);
+    background-color: var(--textarea-hovered-bg-color);
   }
 
   &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
     @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-color);
+      box-shadow: 0 0 0 var(--textarea-border-spread) var(--textarea-border-spread-color);
     } @else {
-      box-shadow: 0 0 0 $input-border-spread var(--input-border-color);
+      box-shadow: 0 0 0 $textarea-border-spread var(--textarea-border-spread-color);
     }
   }
 
   &::placeholder {
-    color: var(--input-placeholder-text-color);
+    color: var(--textarea-placeholder-text-color);
   }
 
   &[disabled] {
@@ -67,12 +67,12 @@ textarea.#{$prefix}textarea {
   &.#{$prefix}readonly, &[readonly] {
 
     &:hover, &.#{$prefix}hovered {
-      background-color: var(--input-bg-color);
+      background-color: var(--textarea-bg-color);
     }
 
     &:focus, &.#{$prefix}focused {
-      background-color: var(--input-bg-color);
-      box-shadow: 0 0 0 1px var(--input-border-color);
+      background-color: var(--textarea-bg-color);
+      box-shadow: 0 0 0 1px var(--textarea-border-spread-color);
     }
   }
 
@@ -83,11 +83,11 @@ textarea.#{$prefix}textarea {
 
         &:focus, &.#{$prefix}focused {
           border-color: $transparent;
-          box-shadow: 0 0 0 $input-border-spread $hovered-color;
+
           @if $css-variable-enabled {
-            box-shadow: 0 0 0 var(--input-border-spread) $hovered-color;
+            box-shadow: 0 0 0 var(--textarea-border-spread) $hovered-color;
           } @else {
-            box-shadow: 0 0 0 $input-border-spread $hovered-color;
+            box-shadow: 0 0 0 $textarea-border-spread $hovered-color;
           }
         }
 

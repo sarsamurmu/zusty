@@ -8,18 +8,19 @@
   border-color: var(--button-border-color);
   padding: 8px 12px;
   color: var(--button-text-color);
-  margin: 5px;
   text-align: center;
   text-decoration: none;
 
   @if $css-variable-enabled {
     border-radius: var(--button-border-radius);
     border-width: var(--button-border-width);
+    margin: var(--button-margin);
     font-size: var(--medium-text);
     transition: var(--primary-transition);
   } @else {
     border-radius: $button-border-radius;
     border-width: $button-border-width;
+    margin: $button-margin;
     font-size: $medium-text;
     transition: $primary-transition;
   }

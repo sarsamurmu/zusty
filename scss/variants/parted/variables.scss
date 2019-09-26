@@ -21,15 +21,20 @@ $variables: (
 
 
 
-  //==//-----------//==//
-  //==//  Elements //==//
-  //==//-----------//==//
+  // --------------
+  //    Elements
+  // --------------
 
   // Button
+  --button-margin: $button-margin,
   --button-border-radius: $button-border-radius,
   --button-border-width: $button-border-width,
   --button-border-spread: $button-border-spread,
   --button-outlined-border-width: $button-outlined-border-width,
+
+  // Chip
+  --chip-border-radius: $chip-border-radius,
+  --chip-margin: $chip-margin,
 
   // Icon
   --icon-size-small: $icon-size-small,
@@ -37,53 +42,121 @@ $variables: (
   --icon-size-large: $icon-size-large,
   --icon-size-xlarge: $icon-size-xlarge,
 
+  // Note Block
+  --note-block-border-radius: $note-block-border-radius,
+  --note-block-margin: $note-block-margin,
+  --note-block-padding: $note-block-padding,
+  --note-block-line-width: $note-block-line-width,
+
   // Progress Bar
   --progress-bar-border-radius: $progress-bar-border-radius,
 
   // Table
-  --table-border-width: $table-border-width,
+  --table-cell-border-width: $table-cell-border-width,
+  --table-cell-padding: $table-cell-padding,
 
   // Tooltip
   --tooltip-margin: $tooltip-margin,
   --tooltip-translate: $tooltip-translate,
+  --tooltip-font-size: $tooltip-font-size,
+  --tooltip-border-radius: $tooltip-border-radius,
+  --tooltip-padding: $tooltip-padding,
+  --tooltip-shadow: $tooltip-shadow,
 
 
 
-  //==//-----------//==//
-  //==//   Form    //==//
-  //==//-----------//==//
+  // --------------
+  //   Container
+  // --------------
+
+  --container-margin: $container-margin,
+  --container-padding: $container-padding,
+  --container-column-margin: $container-column-margin,
+  --container-column-padding: $container-column-padding,
+
+
+
+  // --------------
+  //      Form
+  // --------------
+  --form-label-text-margin: $form-label-text-margin;
+  --form-label-text-font-size: $form-label-text-font-size;
+  --form-help-text-margin: $form-help-text-margin;
+  --form-help-text-font-size: $form-help-text-font-size;
+
+  // Checkbox
+  --checkbox-margin: $checkbox-margin,
+  --checkbox-border-width: $checkbox-border-width,
+  --checkbox-border-radius: $checkbox-border-radius,
+  --checkbox-padding: $checkbox-padding,
+  --checkbox-label-margin: $checkbox-label-margin,
 
   // Input
+  --input-margin: $input-margin,
   --input-border-radius: $input-border-radius,
   --input-border-spread: $input-border-spread,
+
+  // Radio
+  --radio-margin: $radio-margin,
+  --radio-border-width: $radio-border-width,
+  --radio-border-radius: $radio-border-radius,
+  --radio-padding: $radio-padding,
+  --radio-label-margin: $radio-label-margin,
+
+  // Range
+  --range-height: $range-height,
+  --range-border-radius: $range-border-radius,
+  --range-thumb-height: $range-thumb-height,
+  --range-thumb-width: $range-thumb-width,
+  --range-thumb-border-radius: $range-thumb-border-radius,
 
   // Select
   --select-border-radius: $select-border-radius,
   --select-border-spread: $select-border-spread,
 
+  // Switch
+  --switch-border-width: $switch-border-width,
+  --switch-border-radius: $switch-border-radius,
+  --switch-margin: $switch-margin,
+  --switch-label-margin: $switch-label-margin,
+
   // Textarea
   --textarea-border-radius: $textarea-border-radius,
+  --textarea-border-spread: $textarea-border-spread,
 
 
 
-  //==//------------//==//
-  //==// Components //==//
-  //==//------------//==//
+  // --------------
+  //   Components
+  // --------------
 
   // Badge
   --badge-border-radius: $badge-border-radius,
 
   // Cards
   --card-border-radius: $card-border-radius,
+  --card-padding: $card-padding,
+  --card-margin: $card-margin,
+  --card-max-width: $card-max-width,
+  --card-min-width: $card-min-width,
+  --card-box-shadow: $card-box-shadow,
+  --card-border-width: $card-border-width,
+  --card-landscape-max-width: $card-landscape-max-width,
+  --card-landscape-min-width: $card-landscape-min-width,
+  --card-hover-translate: $card-hover-translate,
+  --card-hovered-box-shadow: $card-hovered-box-shadow,
 
   // Dropdown
-  --dropdown-animation-duration: $dropdown-animation-duration,
   --dropdown-margin: $dropdown-margin,
   --dropdown-child-margin: $dropdown-child-margin,
   --dropdown-translate: $dropdown-translate,
   --dropdown-shadow: $dropdown-shadow,
   --dropdown-border-radius: $dropdown-border-radius,
   --dropdown-item-border-radius: $dropdown-item-border-radius,
+  --dropdown-padding: $dropdown-padding,
+  --dropdown-child-padding: $dropdown-child-padding,
+  --dropdown-item-padding: $dropdown-item-padding,
+  --dropdown-item-margin: $dropdown-item-margin,
 
   // Modal
   --modal-border-radius: $modal-border-radius,
@@ -92,9 +165,11 @@ $variables: (
   // Navbar
   --navbar-height: $navbar-height,
   --navbar-shadow: $navbar-shadow,
+  --navbar-border-bottom-width: $navbar-border-bottom-width,
 
   // Tabs
-  --tab-top-border-radius: $tab-top-border-radius
+  --tab-top-border-radius: $tab-top-border-radius,
+  --tab-border-bottom-width: $tab-border-bottom-width
 );
 
 :root {

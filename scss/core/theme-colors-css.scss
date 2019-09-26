@@ -7,7 +7,9 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
 
 #{$main-selector} {
 
-  // Theme Colors
+  // --------------
+  //  Theme Colors
+  // --------------
   --primary-color: #{$primary-color};
   --primary-text-color: #{$primary-text-color};
   --primary-hovered-color: #{$primary-hovered-color};
@@ -35,15 +37,19 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --text-color-primary: #{$text-color-primary};
   --text-color-secondary: #{$text-color-secondary};
   --text-color-tertiary: #{$text-color-tertiary};
+  --blockquote-line-color: #{$blockquote-line-color};
   --divider-color: #{$divider-color};
+  --dimmer-bg-color: #{$dimmer-bg-color};
+  --light-color: #{$light-color};
+  --text-color-inverted: #{$text-color-inverted};
+  --bg-color-inverted: #{$bg-color-inverted};
+  // Item Disabled
+  --item-disabled-bg-color: #{$item-disabled-bg-color};
+  --item-disabled-fg-color: #{$item-disabled-fg-color};
 
-  // Badge
-  --badge-only-part-bg-color: #{$badge-only-part-bg-color};
-  --badge-only-part-text-color: #{$badge-only-part-text-color};
-  --badge-first-part-bg-color: #{$badge-first-part-bg-color};
-  --badge-first-part-text-color: #{$badge-first-part-text-color};
-  --badge-last-part-bg-color: #{$badge-last-part-bg-color};
-  --badge-last-part-text-color: #{$badge-last-part-text-color};
+  // --------------
+  //    Elements
+  // --------------
 
   // Button
   --button-bg-color: #{$button-bg-color};
@@ -53,49 +59,53 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --button-focus-border-color: #{$button-focus-border-color};
   --button-shadow-color: #{$button-shadow-color};
 
-  // Cards
-  --card-bg-color: #{$card-bg-color};
-  --card-border-color: #{$card-border-color};
-
   // Chip
   --chip-bg-color: #{$chip-bg-color};
 
-  // Dialog
-  --modal-bg-color: #{$modal-bg-color};
-
-  // Dropdown
-  --dropdown-bg-color: #{$dropdown-bg-color};
-  --dropdown-border-color: #{$dropdown-border-color};
-  --dropdown-text-color: #{$dropdown-text-color};
-  --dropdown-option-hovered-color: #{$dropdown-option-hovered-color};
+  // Note Block
+  --note-block-bg-color: #{$note-block-bg-color};
+  --note-block-line-color: #{$note-block-line-color};
 
   // Table
   --table-border-color: #{$table-border-color};
   --table-bg-color: #{$table-bg-color};
   --table-hovered-bg-color: #{$table-hovered-bg-color};
+  --table-header-bg-color: #{$table-header-bg-color};
+  --table-header-text-color: #{$table-header-text-color};
+  --table-footer-bg-color: #{$table-footer-bg-color};
+  --table-footer-text-color: #{$table-footer-text-color};
+
+  // Tooltip
+  --tooltip-bg-color: #{$tooltip-bg-color};
+  --tooltip-text-color: #{$tooltip-text-color};
+
+  // --------------
+  //     Form
+  // --------------
+
+  // Checkbox
+  --checkbox-border-color: #{$checkbox-border-color};
+  --checkbox-checked-border-color: #{$checkbox-checked-border-color};
+  --checkbox-checkmark-color: #{$checkbox-checkmark-color};
+  --checkbox-border-spread-color: #{$checkbox-border-spread-color};
 
   // Input
   --input-bg-color: #{$input-bg-color};
   --input-hovered-bg-color: #{$input-hovered-bg-color};
   --input-text-color: #{$input-text-color};
-  --input-border-color: #{$input-border-color};
+  --input-border-spread-color: #{$input-border-spread-color};
   --input-placeholder-text-color: #{$input-placeholder-text-color};
   // Input Append
   --input-append-bg-color: #{$input-append-bg-color};
   --input-append-fg-color: #{$input-append-fg-color};
 
-  // Item Disabled
-  --item-disabled-bg-color: #{$item-disabled-bg-color};
-  --item-disabled-fg-color: #{$item-disabled-fg-color};
+  // Radio
+  --radio-border-color: #{$radio-border-color};
+  --radio-selected-color: #{$radio-selected-color};
+  --radio-border-spread-color: #{$radio-border-spread-color};
 
   // Slider/Range
   --range-bg-color: #{$range-bg-color};
-
-  // Checkbox
-  --checkbox-color: #{$checkbox-color};
-  --checkbox-check-color: #{$checkbox-check-color};
-  --checkbox-checkmark-color: #{$checkbox-checkmark-color};
-  --checkbox-border-spread-color: #{$checkbox-border-spread-color};
 
   // Switch
   --switch-bg-color: #{$switch-bg-color};
@@ -106,6 +116,34 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --switch-active-border-color: #{$switch-active-border-color};
   --switch-border-spread-color: #{$switch-border-spread-color};
 
+  // Select
+  --select-bg-color: #{$select-bg-color};
+  --select-hovered-bg-color: #{$select-hovered-bg-color};
+  --select-text-color: #{$select-text-color};
+  --select-border-spread-color: #{$select-border-spread-color};
+
+  // Textarea
+  --textarea-bg-color: #{$textarea-bg-color};
+  --textarea-hovered-bg-color: #{$textarea-hovered-bg-color};
+  --textarea-text-color: #{$textarea-text-color};
+  --textarea-border-spread-color: #{$textarea-border-spread-color};
+
+  // --------------
+  //   Components
+  // --------------
+
+  // Badge
+  --badge-only-part-bg-color: #{$badge-only-part-bg-color};
+  --badge-only-part-text-color: #{$badge-only-part-text-color};
+  --badge-first-part-bg-color: #{$badge-first-part-bg-color};
+  --badge-first-part-text-color: #{$badge-first-part-text-color};
+  --badge-last-part-bg-color: #{$badge-last-part-bg-color};
+  --badge-last-part-text-color: #{$badge-last-part-text-color};
+
+  // Cards
+  --card-bg-color: #{$card-bg-color};
+  --card-border-color: #{$card-border-color};
+
   // Progress Bar
   --progress-back-bg-color: #{$progress-back-bg-color};
   --progress-back-text-color: #{$progress-back-text-color};
@@ -113,18 +151,16 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --progress-bar-text-color: #{$progress-bar-text-color};
   --progress-bar-stripe-color: #{$progress-bar-stripe-color};
 
-  // Radio
-  --radio-color: #{$radio-color};
-  --radio-selected-color: #{$radio-selected-color};
-  --radio-border-spread-color: #{$radio-border-spread-color};
+  // Dialog
+  --modal-bg-color: #{$modal-bg-color};
 
-  // Tooltip
-  --tooltip-bg-color: #{$tooltip-bg-color};
-  --tooltip-text-color: #{$tooltip-text-color};
-
-  // Placeholder
-  --placeholder-color: #{$placeholder-color};
-  --placeholder-holder-color: #{$placeholder-holder-color};
+  // Dropdown
+  --dropdown-bg-color: #{$dropdown-bg-color};
+  --dropdown-border-color: #{$dropdown-border-color};
+  --dropdown-text-color: #{$dropdown-text-color};
+  --dropdown-option-hovered-color: #{$dropdown-option-hovered-color};
+  --dropdown-active-item-bg-color: #{$dropdown-active-item-bg-color};
+  --dropdown-active-item-text-color: #{$dropdown-active-item-text-color};
 
   // Navbar
   --navbar-bg-color: #{$navbar-bg-color};
@@ -133,22 +169,22 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --navbar-selected-item-bg-color: #{$navbar-selected-item-bg-color};
   --navbar-selected-item-text-color: #{$navbar-selected-item-text-color};
 
+  // Placeholder
+  --placeholder-color: #{$placeholder-color};
+  --placeholder-holder-color: #{$placeholder-holder-color};
+
   // Tabs
   --tab-selected-item-color: #{$tab-selected-item-color};
   --tab-selected-item-text-color: #{$tab-selected-item-text-color};
   --tab-border-color: #{$tab-border-color};
-
-  // Misc.
-  --dimmer-bg-color: #{$dimmer-bg-color};
-  --light-color: #{$light-color};
-  --text-color-inverted: #{$text-color-inverted};
-  --bg-color-inverted: #{$bg-color-inverted};
 }
 
 @if $just-base-theme == false {
   [#{$prefix}theme="dark"] {
 
-    // Theme Colors
+    // --------------
+    //  Theme Colors
+    // --------------
     --primary-color: #{$primary-color-dark};
     --primary-text-color: #{$primary-text-color-dark};
     --primary-hovered-color: #{$primary-hovered-color-dark};
@@ -176,15 +212,19 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --text-color-primary: #{$text-color-primary-dark};
     --text-color-secondary: #{$text-color-secondary-dark};
     --text-color-tertiary: #{$text-color-tertiary-dark};
+    --blockquote-line-color: #{$blockquote-line-color-dark};
     --divider-color: #{$divider-color-dark};
+    --dimmer-bg-color: #{$dimmer-bg-color-dark};
+    --light-color: #{$light-color-dark};
+    --text-color-inverted: #{$text-color-inverted-dark};
+    --bg-color-inverted: #{$bg-color-inverted-dark};
+    // Item Disabled
+    --item-disabled-bg-color: #{$item-disabled-bg-color-dark};
+    --item-disabled-fg-color: #{$item-disabled-fg-color-dark};
 
-    // Badge
-    --badge-only-part-bg-color: #{$badge-only-part-bg-color-dark};
-    --badge-only-part-text-color: #{$badge-only-part-text-color-dark};
-    --badge-first-part-bg-color: #{$badge-first-part-bg-color-dark};
-    --badge-first-part-text-color: #{$badge-first-part-text-color-dark};
-    --badge-last-part-bg-color: #{$badge-last-part-bg-color-dark};
-    --badge-last-part-text-color: #{$badge-last-part-text-color-dark};
+    // --------------
+    //    Elements
+    // --------------
 
     // Button
     --button-bg-color: #{$button-bg-color-dark};
@@ -194,49 +234,53 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --button-focus-border-color: #{$button-focus-border-color-dark};
     --button-shadow-color: #{$button-shadow-color-dark};
 
-    // Cards
-    --card-bg-color: #{$card-bg-color-dark};
-    --card-border-color: #{$card-border-color-dark};
-
     // Chip
     --chip-bg-color: #{$chip-bg-color-dark};
 
-    // Dialog
-    --modal-bg-color: #{$modal-bg-color-dark};
-
-    // Dropdown
-    --dropdown-bg-color: #{$dropdown-bg-color-dark};
-    --dropdown-border-color: #{$dropdown-border-color-dark};
-    --dropdown-text-color: #{$dropdown-text-color-dark};
-    --dropdown-option-hovered-color: #{$dropdown-option-hovered-color-dark};
+    // Note Block
+    --note-block-bg-color: #{$note-block-bg-color-dark};
+    --note-block-line-color: #{$note-block-line-color-dark};
 
     // Table
     --table-border-color: #{$table-border-color-dark};
     --table-bg-color: #{$table-bg-color-dark};
     --table-hovered-bg-color: #{$table-hovered-bg-color-dark};
+    --table-header-bg-color: #{$table-header-bg-color-dark};
+    --table-header-text-color: #{$table-header-text-color-dark};
+    --table-footer-bg-color: #{$table-footer-bg-color-dark};
+    --table-footer-text-color: #{$table-footer-text-color-dark};
+
+    // Tooltip
+    --tooltip-bg-color: #{$tooltip-bg-color-dark};
+    --tooltip-text-color: #{$tooltip-text-color-dark};
+
+    // --------------
+    //     Form
+    // --------------
+
+    // Checkbox
+    --checkbox-border-color: #{$checkbox-border-color-dark};
+    --checkbox-checked-border-color: #{$checkbox-checked-border-color-dark};
+    --checkbox-checkmark-color: #{$checkbox-checkmark-color-dark};
+    --checkbox-border-spread-color: #{$checkbox-border-spread-color-dark};
 
     // Input
     --input-bg-color: #{$input-bg-color-dark};
     --input-hovered-bg-color: #{$input-hovered-bg-color-dark};
     --input-text-color: #{$input-text-color-dark};
-    --input-border-color: #{$input-border-color-dark};
+    --input-border-spread-color: #{$input-border-spread-color-dark};
     --input-placeholder-text-color: #{$input-placeholder-text-color-dark};
     // Input Append
     --input-append-bg-color: #{$input-append-bg-color-dark};
     --input-append-fg-color: #{$input-append-fg-color-dark};
 
-    // Item Disabled
-    --item-disabled-bg-color: #{$item-disabled-bg-color-dark};
-    --item-disabled-fg-color: #{$item-disabled-fg-color-dark};
+    // Radio
+    --radio-border-color: #{$radio-border-color-dark};
+    --radio-selected-color: #{$radio-selected-color-dark};
+    --radio-border-spread-color: #{$radio-border-spread-color-dark};
 
     // Slider/Range
     --range-bg-color: #{$range-bg-color-dark};
-
-    // Checkbox
-    --checkbox-color: #{$checkbox-color-dark};
-    --checkbox-check-color: #{$checkbox-check-color-dark};
-    --checkbox-checkmark-color: #{$checkbox-checkmark-color-dark};
-    --checkbox-border-spread-color: #{$checkbox-border-spread-color-dark};
 
     // Switch
     --switch-bg-color: #{$switch-bg-color-dark};
@@ -247,6 +291,34 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --switch-active-border-color: #{$switch-active-border-color-dark};
     --switch-border-spread-color: #{$switch-border-spread-color-dark};
 
+    // Select
+    --select-bg-color: #{$select-bg-color-dark};
+    --select-hovered-bg-color: #{$select-hovered-bg-color-dark};
+    --select-text-color: #{$select-text-color-dark};
+    --select-border-spread-color: #{$select-border-spread-color-dark};
+
+    // Textarea
+    --textarea-bg-color: #{$textarea-bg-color-dark};
+    --textarea-hovered-bg-color: #{$textarea-hovered-bg-color-dark};
+    --textarea-text-color: #{$textarea-text-color-dark};
+    --textarea-border-spread-color: #{$textarea-border-spread-color-dark};
+
+    // --------------
+    //   Components
+    // --------------
+
+    // Badge
+    --badge-only-part-bg-color: #{$badge-only-part-bg-color-dark};
+    --badge-only-part-text-color: #{$badge-only-part-text-color-dark};
+    --badge-first-part-bg-color: #{$badge-first-part-bg-color-dark};
+    --badge-first-part-text-color: #{$badge-first-part-text-color-dark};
+    --badge-last-part-bg-color: #{$badge-last-part-bg-color-dark};
+    --badge-last-part-text-color: #{$badge-last-part-text-color-dark};
+
+    // Cards
+    --card-bg-color: #{$card-bg-color-dark};
+    --card-border-color: #{$card-border-color-dark};
+
     // Progress Bar
     --progress-back-bg-color: #{$progress-back-bg-color-dark};
     --progress-back-text-color: #{$progress-back-text-color-dark};
@@ -254,18 +326,16 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --progress-bar-text-color: #{$progress-bar-text-color-dark};
     --progress-bar-stripe-color: #{$progress-bar-stripe-color-dark};
 
-    // Radio
-    --radio-color: #{$radio-color-dark};
-    --radio-selected-color: #{$radio-selected-color-dark};
-    --radio-border-spread-color: #{$radio-border-spread-color-dark};
+    // Dialog
+    --modal-bg-color: #{$modal-bg-color-dark};
 
-    // Tooltip
-    --tooltip-bg-color: #{$tooltip-bg-color-dark};
-    --tooltip-text-color: #{$tooltip-text-color-dark};
-
-    // Placeholder
-    --placeholder-color: #{$placeholder-color-dark};
-    --placeholder-holder-color: #{$placeholder-holder-color-dark};
+    // Dropdown
+    --dropdown-bg-color: #{$dropdown-bg-color-dark};
+    --dropdown-border-color: #{$dropdown-border-color-dark};
+    --dropdown-text-color: #{$dropdown-text-color-dark};
+    --dropdown-option-hovered-color: #{$dropdown-option-hovered-color-dark};
+    --dropdown-active-item-bg-color: #{$dropdown-active-item-bg-color-dark};
+    --dropdown-active-item-text-color: #{$dropdown-active-item-text-color-dark};
 
     // Navbar
     --navbar-bg-color: #{$navbar-bg-color-dark};
@@ -274,15 +344,13 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --navbar-selected-item-bg-color: #{$navbar-selected-item-bg-color-dark};
     --navbar-selected-item-text-color: #{$navbar-selected-item-text-color-dark};
 
+    // Placeholder
+    --placeholder-color: #{$placeholder-color-dark};
+    --placeholder-holder-color: #{$placeholder-holder-color-dark};
+
     // Tabs
     --tab-selected-item-color: #{$tab-selected-item-color-dark};
     --tab-selected-item-text-color: #{$tab-selected-item-text-color-dark};
     --tab-border-color: #{$tab-border-color-dark};
-
-    // Misc.
-    --dimmer-bg-color: #{$dimmer-bg-color-dark};
-    --light-color: #{$light-color-dark};
-    --text-color-inverted: #{$text-color-inverted-dark};
-    --bg-color-inverted: #{$bg-color-inverted-dark};
   }
 }

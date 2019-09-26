@@ -10,24 +10,24 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
     width: max-content;
     max-width: 500px;
     background-color: var(--tooltip-bg-color);
-    padding: 5px 10px;
-    border-radius: 8px;
-    position: absolute;
-    font-size: 12px;
     color: var(--tooltip-text-color);
+    position: absolute;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0 0 5px 0px hsla(0, 0%, 0%, 0.08);
     transform: translateX(- $tooltip-translate);
     transition: all 0.3s ease 0s, visibility 0s ease 0.3s;
     @if $css-variable-enabled {
       z-index: var(--tooltip-z-index);
+      font-size: var(--tooltip-font-size);
+      border-radius: var(--tooltip-border-radius);
+      padding: var(--tooltip-padding);
+      box-shadow: var(--tooltip-shadow);
     } @else {
       z-index: $tooltip-z-index;
-    }
-
-    @include mobile {
-      box-shadow: 0 0 20px 0px hsla(0, 0%, 0%, 0.1);
+      font-size: $tooltip-font-size;
+      border-radius: $tooltip-border-radius;
+      padding: $tooltip-padding;
+      box-shadow: $tooltip-shadow;
     }
   }
 

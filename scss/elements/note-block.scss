@@ -1,14 +1,17 @@
 .#{$prefix}note {
-  background-color: var(--light-color);
+  background-color: var(--note-block-bg-color);
   overflow: hidden;
-  border-radius: 10px;
-  margin: 20px 0;
-  padding: 3px 18px;
   position: relative;
 
   @if $css-variable-enabled {
+    border-radius: var(--note-block-border-radius);
+    margin: var(--note-block-margin);
+    padding: var(--note-block-padding);
     transition: background-color var(--primary-transition);
   } @else {
+    border-radius: $note-block-border-radius;
+    margin: $note-block-margin;
+    padding: $note-block-padding;
     transition: background-color $primary-transition;
   }
 
@@ -17,9 +20,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--note-block-line-color);
+
+    @if $css-variable-enabled {
+      width: var(--note-block-line-width);
+    } @else {
+      width: $note-block-line-width;
+    }
   }
 
   @each $name, $color in $item-colors {

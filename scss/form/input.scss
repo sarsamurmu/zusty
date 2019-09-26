@@ -5,7 +5,6 @@
   border-bottom-width: 2px;
   border-color: $transparent;
   color: var(--input-text-color);
-  margin: 4px;
   $padding1: 7px;
   $padding2: 20px;
   padding-top: 9px;
@@ -19,10 +18,12 @@
     transition: var(--primary-transition);
     border-radius: var(--input-border-radius);
     font-size: var(--medium-text);
+    margin: var(--input-margin);
   } @else {
     transition: $primary-transition;
     border-radius: $input-border-radius;
     font-size: $medium-text;
+    margin: $input-margin;
   }
 
   // Reuse Vars
@@ -139,9 +140,9 @@
   &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
     @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-color);
+      box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-spread-color);
     } @else {
-      box-shadow: 0 0 0 $input-border-spread var(--input-border-color);
+      box-shadow: 0 0 0 $input-border-spread var(--input-border-spread-color);
     }
   }
 
@@ -163,7 +164,7 @@
 
     &:focus, &.#{$prefix}focused {
       background-color: var(--input-bg-color);
-      box-shadow: 0 0 0 1px var(--input-border-color);
+      box-shadow: 0 0 0 1px var(--input-border-spread-color);
     }
   }
 
