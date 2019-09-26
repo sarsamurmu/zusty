@@ -49,8 +49,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "clean:css:cli": "^4.3.0",
+    "clean-css-cli": "^4.3.0",
     "node-sass": "^4.12.0",
-    "postcss:cli": "^6.1.2"
+    "postcss-cli": "^6.1.3"
   }
 }
