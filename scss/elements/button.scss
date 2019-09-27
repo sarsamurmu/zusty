@@ -45,7 +45,7 @@
   }
 
   &.#{$prefix}floating {
-    border-width: 0;
+    border-color: $transparent;
     box-shadow: 0px 1px 4px 0px var(--button-shadow-color);
 
     &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
@@ -74,7 +74,7 @@
 
   &.#{$prefix}transparent {
     background-color: $transparent !important;
-    border-width: 0 !important;
+    border-color: $transparent !important;
 
     &:hover, &.#{$prefix}hovered, input:checked + & {
       background-color: rgba(144, 144, 144, 0.1) !important;
@@ -86,9 +86,9 @@
     }
   }
 
-  &.#{$prefix}custom, .#{$prefix}btns-custom > & {
+  &.#{$prefix}custom, .#{$prefix}btns-custom > &:not(.#{$prefix}ignored) {
     background-color: $transparent;
-    border-width: 0;
+    border-color: $transparent;
     color: $white;
 
     &.#{$prefix}floating {
@@ -201,7 +201,7 @@
     }
   }
 
-  &.#{$prefix}outlined, .#{$prefix}btns-outlined > & {
+  &.#{$prefix}outlined, &.#{$prefix}ghost, .#{$prefix}btns-outlined > &:not(.#{$prefix}ignored), .#{$prefix}btns-ghost > &:not(.#{$prefix}ignored) {
     background-color: $transparent !important;
 
     @if $css-variable-enabled {
@@ -209,20 +209,31 @@
     } @else {
       border-width: $button-outlined-border-width !important;
     }
+  }
 
+  &.#{$prefix}outlined, .#{$prefix}btns-outlined > &:not(.#{$prefix}ignored) {
     &:hover, &.#{$prefix}hovered {
       background-color: $transparent !important;
     }
   }
 
 
-  @each $name, $color, $skip, $hovered-color in $item-colors {
+  @each $name, $color, $text-color, $hovered-color in $item-colors {
     @if $name {
-      &.#{$prefix}outlined.#{$prefix}#{$name} {
+      &.#{$prefix}outlined.#{$prefix}#{$name}, .#{$prefix}btns-outlined > &.#{$prefix}#{$name}:not(.#{$prefix}ignored),
+      &.#{$prefix}ghost.#{$prefix}#{$name}, .#{$prefix}btns-ghost > &.#{$prefix}#{$name}:not(.#{$prefix}ignored) {
         border-color: $color !important;
         color: $color;
 
         &:hover, &.#{$prefix}hovered {
+          border-color: $hovered-color !important;
+        }
+      }
+
+      &.#{$prefix}ghost.#{$prefix}#{$name}, .#{$prefix}btns-ghost > &.#{$prefix}#{$name}:not(.#{$prefix}ignored) {
+        &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
+          background-color: $hovered-color !important;
+          color: $text-color !important;
           border-color: $hovered-color !important;
         }
       }
