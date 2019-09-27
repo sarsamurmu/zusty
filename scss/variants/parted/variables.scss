@@ -167,6 +167,12 @@ $variables: (
   --navbar-shadow: $navbar-shadow,
   --navbar-border-bottom-width: $navbar-border-bottom-width,
 
+  // Pagination
+  --pagination-item-margin: $pagination-item-margin,
+  --pagination-item-padding: $pagination-item-padding,
+  --pagination-item-border-width: $pagination-item-border-width,
+  --pagination-item-border-radius: $pagination-item-border-radius,
+
   // Tabs
   --tab-top-border-radius: $tab-top-border-radius,
   --tab-border-bottom-width: $tab-border-bottom-width

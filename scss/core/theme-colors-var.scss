@@ -263,6 +263,22 @@ $navbar-selected-item-bg-color-dark: $primary-color-dark !default;
 $navbar-selected-item-text-color: $primary-text-color !default;
 $navbar-selected-item-text-color-dark: $primary-text-color-dark !default;
 
+// Pagination
+$pagination-item-bg-color: $button-bg-color !default;
+$pagination-item-bg-color-dark: $button-bg-color-dark !default;
+$pagination-item-text-color: $button-text-color !default;
+$pagination-item-text-color-dark: $button-text-color-dark !default;
+$pagination-item-border-color: $button-border-color !default;
+$pagination-item-border-color-dark: $button-border-color-dark !default;
+$pagination-item-hovered-border-color: $button-hovered-border-color !default;
+$pagination-item-hovered-border-color-dark: $button-hovered-border-color-dark !default;
+$pagination-item-active-bg-color: $primary-color !default;
+$pagination-item-active-bg-color-dark: $primary-color-dark !default;
+$pagination-item-active-text-color: $primary-text-color !default;
+$pagination-item-active-text-color-dark: $primary-text-color-dark !default;
+$pagination-item-active-border-color: $transparent !default;
+$pagination-item-active-border-color-dark: $transparent !default;
+
 // Placeholder
 $placeholder-color: transparentize($body-bg-color, 0.5) !default;
 $placeholder-color-dark: transparentize($body-bg-color-dark, 0.5) !default;

@@ -188,6 +188,12 @@ $navbar-height: 60px !default;
 $navbar-shadow: 0px 3px 3px var(--navbar-shadow-color) !default;
 $navbar-border-bottom-width: 2px !default;
 
+// Pagination
+$pagination-item-margin: 5px 10px !default;
+$pagination-item-padding: 8px 12px !default;
+$pagination-item-border-width: 2px !default;
+$pagination-item-border-radius: 8px !default;
+
 // Tabs
 $tab-top-border-radius: 4px !default;
 $tab-border-bottom-width: 2px !default;
