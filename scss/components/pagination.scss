@@ -9,6 +9,8 @@
   }
 
   @include mobile {
+    margin-bottom: 20px;
+    
     & > a:nth-child(1) {
       order: 2;
       flex-grow: 1;
@@ -48,18 +50,21 @@
         border-style: solid;
         border-color: var(--pagination-item-border-color);
         background-color: var(--pagination-item-bg-color);
+        cursor: pointer;
 
         @if $css-variable-enabled {
           padding: var(--pagination-item-padding);
           border-width: var(--pagination-item-border-width);
           border-radius: var(--pagination-item-border-radius);
+          transition: var(--primary-transition);
         } @else {
           padding: $pagination-item-padding;
           border-width: $pagination-item-border-width;
           border-radius: $pagination-item-border-radius;
+          transition: $primary-transition;
         }
 
-        &:hover {
+        &:hover, &:focus {
           border-color: var(--pagination-item-hovered-border-color);
         }
 
@@ -67,6 +72,7 @@
           background-color: var(--pagination-item-active-bg-color);
           color: var(--pagination-item-active-text-color);
           border-color: var(--pagination-item-active-border-color);
+          cursor: default;
         }
       }
     }
