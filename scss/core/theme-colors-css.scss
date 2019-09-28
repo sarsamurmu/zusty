@@ -140,6 +140,12 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --badge-last-part-bg-color: #{$badge-last-part-bg-color};
   --badge-last-part-text-color: #{$badge-last-part-text-color};
 
+  // Breadcrumb
+  --breadcrumb-separator-color: #{$breadcrumb-separator-color};
+  --breadcrumb-item-color: #{$breadcrumb-item-color};
+  --breadcrumb-item-hovered-color: #{$breadcrumb-item-hovered-color};
+  --breadcrumb-item-active-color: #{$breadcrumb-item-active-color};
+
   // Cards
   --card-bg-color: #{$card-bg-color};
   --card-border-color: #{$card-border-color};
@@ -323,6 +329,12 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --badge-first-part-text-color: #{$badge-first-part-text-color-dark};
     --badge-last-part-bg-color: #{$badge-last-part-bg-color-dark};
     --badge-last-part-text-color: #{$badge-last-part-text-color-dark};
+
+    // Breadcrumb
+    --breadcrumb-separator-color: #{$breadcrumb-separator-color-dark};
+    --breadcrumb-item-color: #{$breadcrumb-item-color-dark};
+    --breadcrumb-item-hovered-color: #{$breadcrumb-item-hovered-color-dark};
+    --breadcrumb-item-active-color: #{$breadcrumb-item-active-color-dark};
 
     // Cards
     --card-bg-color: #{$card-bg-color-dark};

@@ -227,6 +227,16 @@ $badge-last-part-bg-color-dark: $badge-only-part-bg-color-dark !default;
 $badge-last-part-text-color: $badge-only-part-text-color !default;
 $badge-last-part-text-color-dark: $badge-only-part-text-color-dark !default;
 
+// Breadcrumb
+$breadcrumb-separator-color: hsl(0, 0%, 75%) !default;
+$breadcrumb-separator-color-dark: hsl(0, 0%, 55%) !default;
+$breadcrumb-item-color: $link-color !default;
+$breadcrumb-item-color-dark: $link-color-dark !default;
+$breadcrumb-item-hovered-color: $link-hovered-color !default;
+$breadcrumb-item-hovered-color-dark: $link-hovered-color-dark !default;
+$breadcrumb-item-active-color: $text-color-secondary !default;
+$breadcrumb-item-active-color-dark: $text-color-secondary-dark !default;
+
 // Cards
 $card-bg-color: hsl(0, 0%, 100%) !default;
 $card-bg-color-dark: hsl(0, 0%, 17%) !default;
