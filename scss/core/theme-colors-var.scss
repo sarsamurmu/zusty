@@ -16,7 +16,7 @@ $primary-color-light-dark: transparentize($primary-color-dark, 0.7) !default;
 //$success-color: #71d013 !default;
 //$success-color-dark: #91dc48 !default;
 $success-color: #70c51c !default;
-$success-color-dark: lighten($success-color, 2%) !default;
+$success-color-dark: lighten($success-color, 0%) !default;
 $success-text-color: textForBg($success-color) !default;
 $success-text-color-dark: $text-dark !default;
 $success-hovered-color: darken($success-color, 3%) !default;

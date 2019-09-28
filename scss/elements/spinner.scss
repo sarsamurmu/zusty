@@ -1,0 +1,110 @@
+.#{$prefix}spinner {
+  background-color: currentColor;
+  border-radius: 20%;
+  animation: spin-spinner 0.8s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin-spinner {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+  100% {
+    transform: scale(0.6) rotate(360deg);
+  }
+}
+
+.#{$prefix}spinner-2 {
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 2px;
+  border-color: currentColor;
+  border-left-color: $transparent;
+  border-bottom-color: $transparent;
+  animation: spinner-2 0.7s linear infinite;
+}
+
+@keyframes spinner-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.#{$prefix}spinner-3 {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  animation: spinner-3 0.8s linear infinite;
+}
+
+@keyframes spinner-3 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.#{$prefix}spinner-4 {
+  background-color: currentColor;
+  border-radius: 100%;
+  animation: spinner-4 0.8s linear infinite;
+}
+
+@keyframes spinner-4 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.#{$prefix}spinner-5 {
+  background-color: currentColor;
+  animation: spinner-5 1s infinite ease-in-out;
+  border-radius: 15%;
+}
+
+@keyframes spinner-5 {
+  0% {
+    transform: perspective(calc(var(--icon-size) * 2)) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(calc(var(--icon-size) * 2)) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(calc(var(--icon-size) * 2)) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.#{$prefix}spinner-6 {
+  background-color: currentColor;
+  border-radius: 20%;
+  animation: spinner-6 1.6s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
+}
+
+@keyframes spinner-6 {
+  50% {
+    border-radius: 50%;
+    transform: scale(0.5) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(720deg);
+  }
+}
