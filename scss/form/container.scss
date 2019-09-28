@@ -5,17 +5,24 @@
   display: flex;
   flex-wrap: wrap;
 
-  .#{$prefix}form-inline & {
-    display: inline-block;
-    margin: {
-      bottom: 0;
-      right: $margin;
-    }
+  &.#{$prefix}form-inline {
+    @include medium {
+      align-items: baseline;
 
-    @include small {
-      display: block;
-      margin-right: 0;
-      margin-bottom: 10px;
+      > .#{$prefix}label-text {
+        display: inline-block;
+        width: unset;
+        flex-grow: 1;
+        flex-basis: 0;
+        text-align: right;
+        margin: 0 30px 0 0;
+        vertical-align: baseline;
+      }
+
+      > .#{$prefix}form-el {
+        flex-grow: 5;
+        flex-basis: 0;
+      }
     }
   }
 
@@ -43,26 +50,6 @@
   &.zust-fullwidth {
     flex-wrap: nowrap;
   }
-}
-
-.#{$prefix}form-inline {
-  @include medium {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    &:last-child {
-      margin: 0;
-    }
-
-    > .#{$prefix}label {
-      width: 100px;
-      text-align: right;
-      margin-right: 30px;
-    }
-  }
-
-  margin-bottom: 20px;
 }
 
 .#{$prefix}label-text {
