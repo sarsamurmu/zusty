@@ -73,3 +73,10 @@
     }
   }
 }
+
+.#{$prefix}angle-down {
+  border-style: solid;
+  border-width: calc(var(--icon-size) / 2);
+  border-color: currentColor $transparent $transparent $transparent;
+  transform: scale(0.5) translateY(calc(var(--icon-size) / 4));
+}
