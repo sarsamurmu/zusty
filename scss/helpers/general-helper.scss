@@ -14,33 +14,33 @@
 }
 
 // Based on Size
-@include each-breakpoint('.#{$prefix}invisible-name', 'name') {
+@include each-breakpoint('.#{$prefix}invisible\\@name', 'name') {
   visibility: hidden !important;
 }
 
-@include each-breakpoint('.#{$prefix}visible-name', 'name') {
+@include each-breakpoint('.#{$prefix}visible\\@name', 'name') {
   display: initial !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-@include each-breakpoint('.#{$prefix}hidden-name', 'name') {
+@include each-breakpoint('.#{$prefix}hidden\\@name', 'name') {
   display: none !important;
 }
 
 // On Dark
 [#{$prefix}theme="dark"] {
-  .#{$prefix}visible-on-dark {
+  .#{$prefix}visible\@dark {
     display: initial !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  .#{$prefix}hidden-on-dark {
+  .#{$prefix}hidden\@dark {
     display: none !important;
   }
 
-  .#{$prefix}invisible-on-dark {
+  .#{$prefix}invisible\@dark {
     visibility: hidden !important;
   }
 }
@@ -51,7 +51,7 @@
     display: #{$name} !important;
   }
 
-  @include each-breakpoint('.#{$prefix}#{$name}-brname', 'brname') {
+  @include each-breakpoint('.#{$prefix}#{$name}\\@brname', 'brname') {
     display: #{$name} !important;
   }
 }
@@ -138,11 +138,11 @@
   @include paddingless
 }
 
-@include each-breakpoint('.#{$prefix}marginless-name', 'name') {
+@include each-breakpoint('.#{$prefix}marginless\\@name', 'name') {
   @include marginless;
 }
 
-@include each-breakpoint('.#{$prefix}paddingless-name', 'name') {
+@include each-breakpoint('.#{$prefix}paddingless\\@name', 'name') {
   @include paddingless;
 }
 
@@ -186,7 +186,7 @@
   @extend %full-width;
 }
 
-@include each-breakpoint('.#{$prefix}fullwidth-name, .#{$prefix}fillup-name', 'name') {
+@include each-breakpoint('.#{$prefix}fullwidth\\@name, .#{$prefix}fillup\\@name', 'name') {
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
@@ -196,7 +196,7 @@
   @extend %full-height;
 }
 
-@include each-breakpoint('.#{$prefix}fullheight-name', 'name') {
+@include each-breakpoint('.#{$prefix}fullheight\\@name', 'name') {
   height: -webkit-fill-available;
   height: -moz-available;
   height: fill-available;

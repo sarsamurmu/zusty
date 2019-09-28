@@ -12,7 +12,7 @@
       right: $margin;
     }
 
-    @include mobile {
+    @include small {
       display: block;
       margin-right: 0;
       margin-bottom: 10px;
@@ -27,7 +27,7 @@
     }
   }
 
-  @include mobile {
+  @include small {
     > .#{$prefix}form-el, > .#{$prefix}el-group {
       width: -webkit-fill-available;
       width: -moz-fill-avaialable;
@@ -46,7 +46,7 @@
 }
 
 .#{$prefix}form-inline {
-  @include tablet {
+  @include medium {
     display: flex;
     align-items: center;
     justify-content: flex-start;

@@ -9,14 +9,14 @@ $css-variable-enabled: false !default;
 $prefix: 'zust-' !default;
 
 // Screen Breakpoint Sizes as of Chrome Dev Tools
-$tablet: 768px !default;
-$desktop: 1024px !default;
+$medium-breakpoint: 768px !default;
+$large-breakpoint: 1024px !default;
 
 $default-breakpoints: (
-  ('mobile', null, $tablet - 1px),
-  ('touch', null, $desktop - 1px),
-  ('tablet', $tablet, $desktop - 1px),
-  ('desktop', $desktop, null)
+  ('small', null, $medium-breakpoint - 1px),
+  ('medium', $medium-breakpoint, $large-breakpoint - 1px),
+  ('until-large', null, $large-breakpoint - 1px),
+  ('large', $large-breakpoint, null)
 );
 
 $custom-breakpoints: () !default;

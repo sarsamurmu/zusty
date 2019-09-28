@@ -6,11 +6,11 @@
 }
 
 .#{$prefix}btn, label {
-  @include desktop {
+  @include large {
     cursor: pointer;
   }
 
-  @include touch {
+  @include until-large {
     cursor: default;
   }
 }

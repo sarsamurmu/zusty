@@ -44,14 +44,14 @@
       margin-left: 10px;
     }
 
-    @include touch {
+    @include until-large {
       display: flex;
     }
 
     .#{$prefix}menu-btn {
       display: none;
 
-      @include touch {
+      @include until-large {
         display: inline-flex;
         position: absolute;
         right: 25px;
@@ -132,7 +132,7 @@
       }
     }
 
-    @include touch {
+    @include until-large {
       visibility: hidden;
       opacity: 0;
       display: flex;

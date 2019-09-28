@@ -47,7 +47,7 @@ a:not(.#{$prefix}btn) {
 
   &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
     color: var(--link-hovered-color);
-    border-color: var(--link-color);
+    border-color: var(--link-hovered-color);
   }
 }
 

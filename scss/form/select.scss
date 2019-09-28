@@ -178,7 +178,7 @@ select.#{$prefix}select {
     }
   }
 
-  @include mobile {
+  @include small {
     &[multiple] {
       padding: 10px;
 

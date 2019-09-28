@@ -111,7 +111,7 @@
     font-size: ($i/25) * 10rem;
   }
 
-  $name: '.#{$prefix}text-#{$i}-name';
+  $name: '.#{$prefix}text-#{$i}\\@name';
 
   @include each-breakpoint($name, 'name') {
     font-size: ($i/25) * 10rem;

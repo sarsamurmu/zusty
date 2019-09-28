@@ -40,7 +40,7 @@
       border-radius: $modal-border-radius;
     }
 
-    @include touch {
+    @include until-large {
       max-height: calc(100% - #{$pos} * 2) !important;
       max-width: calc(100% - #{$pos} * 2) !important;
       min-width: calc(100% - #{$pos} * 2) !important;

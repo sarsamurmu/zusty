@@ -8,7 +8,7 @@
     order: 3;
   }
 
-  @include mobile {
+  @include small {
     margin-bottom: 20px;
     
     & > a:nth-child(1) {
@@ -29,7 +29,7 @@
     flex-wrap: wrap;
     padding: 0;
 
-    @include mobile {
+    @include small {
       flex-basis: 100%;
     }
 

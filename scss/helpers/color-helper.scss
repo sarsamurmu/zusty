@@ -10,7 +10,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
 @mixin bg-colors($fix: '') {
   // From List
   @each $name, $bg-color, $txt-color in $bg-color-helpers {
-    .#{$prefix}#{$fix}bg-#{$name} {
+    .#{$prefix}bg-#{$name}#{$fix} {
       background-color: $bg-color !important;
       color: $txt-color;
 
@@ -23,7 +23,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
   // Item Colors
   @each $name, $color, $txt-color in $item-colors {
     @if $name {
-      .#{$prefix}#{$fix}bg-#{$name} {
+      .#{$prefix}bg-#{$name}#{$fix} {
         background-color: $color !important;
         color: $txt-color;
 
@@ -35,7 +35,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
   }
 
   // Gradients
-  .#{$prefix}#{$fix}bg-blue-gradient, .#{$prefix}#{$fix}bg-link-gradient {
+  .#{$prefix}bg-blue-gradient#{$fix}, .#{$prefix}bg-link-gradient#{$fix} {
     background: linear-gradient(135deg, $blue 0%, #00cfe9 100%) !important;
     color: $white;
 
@@ -44,7 +44,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
     }
   }
 
-  .#{$prefix}#{$fix}bg-red-gradient, .#{$prefix}#{$fix}bg-error-gradient {
+  .#{$prefix}bg-red-gradient#{$fix}, .#{$prefix}bg-error-gradient#{$fix} {
     background: linear-gradient(135deg, $red 0%, $pink 100%) !important;
     color: $white;
 
@@ -53,7 +53,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
     }
   }
 
-  .#{$prefix}#{$fix}bg-green-gradient, .#{$prefix}#{$fix}bg-success-gradient {
+  .#{$prefix}bg-green-gradient#{$fix}, .#{$prefix}bg-success-gradient#{$fix} {
     background: linear-gradient(135deg, $light-green 0%, $light-blue 100%) !important;
     color: $white;
 
@@ -62,7 +62,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
     }
   }
 
-  .#{$prefix}#{$fix}bg-amber-gradient, .#{$prefix}#{$fix}bg-warning-gradient {
+  .#{$prefix}bg-amber-gradient#{$fix}, .#{$prefix}bg-warning-gradient#{$fix} {
     background: linear-gradient(135deg, $amber 0%, #ff8330 100%) !important;
     color: $white;
 
@@ -76,7 +76,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
 
 // Backgrounds on Dark Theme
 [#{$prefix}theme="dark"] {
-  @include bg-colors('dark-');
+  @include bg-colors('\\@dark');
 }
 
 // Text Colors
@@ -92,7 +92,7 @@ $text-color-helpers: join($colors, $extra-text-colors);
 @mixin text-colors($fix: '') {
   // From List
   @each $name, $color in $text-color-helpers {
-    .#{$prefix}#{$fix}text-#{$name} {
+    .#{$prefix}text-#{$name}#{$fix} {
       color: $color !important;
 
       * {
@@ -104,7 +104,7 @@ $text-color-helpers: join($colors, $extra-text-colors);
   // Item Colors
   @each $name, $color in $item-colors {
     @if $name {
-      .#{$prefix}#{$fix}text-#{$name} {
+      .#{$prefix}text-#{$name}#{$fix} {
         color: $color !important;
 
         * {
@@ -115,25 +115,25 @@ $text-color-helpers: join($colors, $extra-text-colors);
   }
 
   // Gradients
-  .#{$prefix}#{$fix}text-blue-gradient, .#{$prefix}#{$fix}text-link-gradient {
+  .#{$prefix}text-blue-gradient#{$fix}, .#{$prefix}text-link-gradient#{$fix} {
     background: linear-gradient(135deg, $blue 0%, #00cfe9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .#{$prefix}#{$fix}text-red-gradient, .#{$prefix}#{$fix}text-error-gradient {
+  .#{$prefix}text-red-gradient#{$fix}, .#{$prefix}text-error-gradient#{$fix} {
     background: linear-gradient(135deg, $red 0%, $pink 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .#{$prefix}#{$fix}text-green-gradient, .#{$prefix}#{$fix}text-success-gradient {
+  .#{$prefix}text-green-gradient#{$fix}, .#{$prefix}text-success-gradient#{$fix} {
     background: linear-gradient(135deg, $light-green 0%, $light-blue 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .#{$prefix}#{$fix}text-amber-gradient, .#{$prefix}#{$fix}text-warning-gradient {
+  .#{$prefix}text-amber-gradient#{$fix}, .#{$prefix}text-warning-gradient#{$fix} {
     background: linear-gradient(135deg, $amber 0%, #ff8330 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -144,5 +144,5 @@ $text-color-helpers: join($colors, $extra-text-colors);
 
 // Text on Dark Theme
 [#{$prefix}theme="dark"] {
-  @include text-colors('dark-');
+  @include text-colors('\\@dark');
 }

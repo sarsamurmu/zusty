@@ -1,31 +1,31 @@
 // Screen Sizes
 
-@mixin mobile {
-  @media screen and (max-width: $tablet - 1px) {
+@mixin small {
+  @media screen and (max-width: $medium-breakpoint - 1px) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media screen and (min-width: $tablet) {
+@mixin medium {
+  @media screen and (min-width: $medium-breakpoint) {
     @content;
   }
 }
 
-@mixin touch {
-  @media screen and (max-width: $desktop - 1px) {
+@mixin until-large {
+  @media screen and (max-width: $large-breakpoint - 1px) {
     @content;
   }
 }
 
-@mixin only-tablet {
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+@mixin only-medium {
+  @media screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint - 1px) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
+@mixin large {
+  @media screen and (min-width: $large-breakpoint) {
     @content;
   }
 }
