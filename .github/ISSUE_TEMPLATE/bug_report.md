@@ -4,7 +4,6 @@ about: Create a report to help us improve
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 <!-- Just Answer Them, No Need To Delete Anything -->
@@ -18,11 +17,11 @@ assignees: ''
 Version:
 <!-- Which Implementation you're Using? Whole Pack or Parted -->
 Implementation:
-<!-- How are you using that? By CDN or By SASS(SCSS) -->
+<!-- How are you using that? By CDN or By Sass(SCSS) -->
 Using Via:
-<!-- You're Testing on Which Browser? Ex. Chrome, Firefox, Safari, Opera, Edge, Internet Explorer -->
+<!-- Which Browser you're testing on? Ex. Chrome, Firefox, Safari, Opera, Edge, Internet Explorer -->
 Testing Browser:
-<!-- You're Testing on which Device? Desktop or Smartphone -->
+<!-- Which Device you're testing on? Desktop or Smartphone -->
 Testing Device:
 
 <!-- From Now You can Delete them :D --><!-- Replace `Answer Here` with Your answer -->
