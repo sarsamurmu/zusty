@@ -36,9 +36,18 @@ a:not(.#{$prefix}btn) {
   text-decoration: none;
   word-break: break-word;
   transition: $primary-transition;
+  border-bottom-style: solid;
+  border-color: $transparent;
 
-  &:hover, &.#{$prefix}hovered {
+  @if $css-variable-enabled {
+    border-width: var(--anchor-border-width);
+  } @else {
+    border-width: $anchor-border-width;
+  }
+
+  &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
     color: var(--link-hovered-color);
+    border-color: var(--link-color);
   }
 }
 
