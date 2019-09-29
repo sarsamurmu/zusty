@@ -9,7 +9,7 @@
     @include medium {
       align-items: baseline;
 
-      > .#{$prefix}label-text {
+      > .#{$prefix}label {
         display: inline-block;
         width: unset;
         flex-grow: 1;
@@ -19,10 +19,19 @@
         vertical-align: baseline;
       }
 
-      > .#{$prefix}form-el {
+      > .#{$prefix}form-body {
         flex-grow: 5;
         flex-basis: 0;
       }
+    }
+  }
+
+  > .#{$prefix}form-body {
+    width: 100%;
+
+    > .#{$prefix}form-el {
+      width: 100%;
+      margin: 0;
     }
   }
 
@@ -52,32 +61,32 @@
   }
 }
 
-.#{$prefix}label-text {
+.#{$prefix}label {
   display: block;
   width: 100%;
 
   @if $css-variable-enabled {
-    font-size: var(--form-label-text-font-size);
-    margin: var(--form-label-text-margin);
+    font-size: var(--form-label-font-size);
+    margin: var(--form-label-margin);
   } @else {
-    font-size: $form-label-text-font-size;
-    margin: $form-label-text-margin;
+    font-size: $form-label-font-size;
+    margin: $form-label-margin;
   }
 }
 
-.#{$prefix}help-text {
+.#{$prefix}help {
   margin: 5px;
   display: block;
   width: 100%;
 
   @if $css-variable-enabled {
-    font-size: var(--form-help-text-font-size);
-    margin: var(--form-help-text-margin);
-    margin-top: calc(var(--form-help-text-margin) + 3px);
+    font-size: var(--form-help-font-size);
+    margin: var(--form-help-margin);
+    margin-top: calc(var(--form-help-margin) + 3px);
   } @else {
-    font-size: $form-help-text-font-size;
-    margin: $form-help-text-margin;
-    margin-top: $form-help-text-margin + 3px;
+    font-size: $form-help-font-size;
+    margin: $form-help-margin;
+    margin-top: $form-help-margin + 3px;
   }
 }
 

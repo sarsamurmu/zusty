@@ -8,7 +8,7 @@
 
     > li {
       display: inline-block;
-      margin-left: 4px;
+      margin-left: 8px;
       color: var(--breadcrumb-item-color);
       cursor: pointer;
 
@@ -27,6 +27,7 @@
 
       > a {
         color: var(--breadcrumb-item-color);
+        border-style: none;
 
         @if $css-variable-enabled {
           font-size: var(--breadcrumb-font-size);

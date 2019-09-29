@@ -2,7 +2,6 @@
 //  Theme Colors
 // --------------
 
-//$primary-color: #2ECC71 !default;
 $primary-color: hsl(162, 100%, 36%) !default;
 $primary-color-dark: lighten($primary-color, 4%) !default;
 $primary-text-color: textForBg($primary-color) !default;
@@ -12,9 +11,6 @@ $primary-hovered-color-dark: darken($primary-color-dark, 3%) !default;
 $primary-color-light: transparentize($primary-color, 0.7) !default;
 $primary-color-light-dark: transparentize($primary-color-dark, 0.7) !default;
 
-//$success-color: #9DC822 !default;
-//$success-color: #71d013 !default;
-//$success-color-dark: #91dc48 !default;
 $success-color: #70c51c !default;
 $success-color-dark: lighten($success-color, 0%) !default;
 $success-text-color: textForBg($success-color) !default;
