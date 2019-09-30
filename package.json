@@ -1,6 +1,6 @@
 {
   "name": "zusty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Powerful CSS Framework",
   "author": "Sarsa Murmu <sarsamurmu05@gmail.com>",
   "keywords": [
@@ -27,7 +27,8 @@
     "scss",
     "zusty.scss",
     "LICENSE.md",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "rimraf dist && npm run build:css && npm run add:autoprefix && npm run minify:css && npm run build:parted && npm run build:prefixless && npm run build:css:theme",

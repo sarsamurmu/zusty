@@ -1,19 +1,79 @@
-## 0.0.2
-- Removed Animation Helper.
-- Renamed general-helpers to general-helper.
+## v0.0.2
+#### New
+- Non Prefixed Variant.
+- Lot of Variables.
+- Variable `$prefix` to change prefix.
+- Selector for breakpoints, like `zust-hidden@small`.
+- The way breakpoint works, New breakpoint names.
+- Helpers.
+- Theme Colors.
+##### Elements
+- Spinners
+- Ghost, Outlined and Floating Style in Buttons.
+- Note-block
+##### Form
+- Radio
+- Checkbox
+- Switch
+- Transparent Input and Textarea
+- Inline Form
+##### Components
+- Breadcrumb
+- Pagination
+- Navbar
+- Tabs
+- Placeholder
+
+#### Fixes/Improvements
+- Base Style Improvements.
+- Better Table as well as Scrollable Table.
+- No longer have to use `zust-icon-btn` in button.
+- Better Modal.
+- Improved Chip.
+- `zust-el-group` can now group dropdown.
+- Tooltip now gets active on focus.
 - Added Function to generate text color for a background-color.
 - Added text color variable for theme-colors.
-- Replace 'body-color-primary' with 'body-bg-color'
-- Used New Theme Colors.
-- Added Transparent Input and Textarea.
-- Tooltip Now Gets Active even on Focus.
-- New Radio, Checkbox and Switch.
-- Completely New Radio.
-- Full Refactorization of Whole Docs.
-- New Floating Style in Buttons.
-- `zust-el-group` can now group dropdown.
-- Added Placeholder.
+- Added basic icon to use with Select.
 
-## 0.0.1
+#### Breaking Changes
+- Selector names, Breakpoint name and format are changed. Here are few examples -
+```
+Breakpoint Names
+mobile  ->  small
+tablet  ->  medium
+touch   ->  until-large
+desktop ->  large
+
+Column
+zust-all     ->  zust-active@all
+zust-mobile  ->  zust-active@small
+zust-tablet  ->  zust-active@medium
+zust-touch   ->  zust-active@until-large
+zust-desktop ->  zust-active@large
+
+Modifier with Breakpoint Control
+zust-modifier-breakpoint-name -> zust-modifier@breakpoint-name
+Same for others...
+
+Display Control based on Theme
+zust-hidden-on-dark -> zust-hidden@dark
+Same for others...
+
+Color Control based on Theme
+zust-dark-bg-blue     -> zust-bg-blue@dark
+zust-dark-text-green  -> zust-text-green@dark
+Same for others...
+```
+
+#### Doc
+- Full Refactorization of Whole Docs.
+- Better Performance.
+- Small in Size.
+- `Open in Codepen` and `Copy to Clipboard` Improvements.
+- Better Mobile Support.
+- Better and Cleaner Snippets.
+
+## v0.0.1
 - Initial Release.
 - Made many Elements, Helpers, Components etc.
