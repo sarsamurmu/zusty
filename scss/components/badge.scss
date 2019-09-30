@@ -7,7 +7,6 @@ span.#{$prefix}badge {
   $padding: 4px;
   $extra: 4px;
   padding: $padding ($padding + $extra) $padding ($padding + $extra);
-  font-size: 0.9em;
   background-color: var(--badge-last-part-bg-color);
   color: var(--badge-only-part-text-color);
   margin: {
@@ -16,9 +15,11 @@ span.#{$prefix}badge {
   }
 
   @if $css-variable-enabled {
+    font-size: var(--badge-font-size);
     border-radius: var(--badge-border-radius);
     transition: var(--primary-transition);
   } @else {
+    font-size: $badge-font-size;
     border-radius: $badge-border-radius;
     transition: $primary-transition;
   }
@@ -51,11 +52,12 @@ div.#{$prefix}badge {
     @extend %no-select;
     padding: 4px;
     margin: 0px;
-    font-size: 0.9em;
 
     @if $css-variable-enabled {
+      font-size: var(--badge-font-size);
       transition: var(--primary-transition);
     } @else {
+      font-size: $badge-font-size;
       transition: $primary-transition;
     }
   }
