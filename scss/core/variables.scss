@@ -25,12 +25,12 @@ $breakpoints: join($default-breakpoints, $custom-breakpoints);
 
 $breakpoint-names: getListItems($breakpoints, 1);
 
-// Text Sizes
+// Font Sizes
 $xlarge-text: 2.2rem !default;
 $large-text: 1.6rem !default;
 $medium-text: 1rem !default;
 $small-text: 0.8rem !default;
-$body-text: $medium-text !default;
+$body-font-size: $medium-text !default;
 
 // z-indexes
 $dropdown-z-index: 5 !default;

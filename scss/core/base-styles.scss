@@ -7,9 +7,9 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @if $css-variable-enabled {
-    font-size: var(--body-text);
+    font-size: var(--body-font-size);
   } @else {
-    font-size: $body-text;
+    font-size: $body-font-size;
   }
 }
 
