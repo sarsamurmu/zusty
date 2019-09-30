@@ -244,7 +244,8 @@
   user-select: none;
 
   @if $css-variable-enabled {
-
+    border-radius: var(--input-border-radius);
+    transition: var(--primary-transition);
   } @else {
     border-radius: $input-border-radius;
     transition: $primary-transition;
