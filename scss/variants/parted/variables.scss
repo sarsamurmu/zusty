@@ -82,10 +82,10 @@ $variables: (
   // --------------
   //      Form
   // --------------
-  --form-label-margin: $form-label-margin;
-  --form-label-font-size: $form-label-font-size;
-  --form-help-margin: $form-help-margin;
-  --form-help-font-size: $form-help-font-size;
+  --form-label-margin: $form-label-margin,
+  --form-label-font-size: $form-label-font-size,
+  --form-help-margin: $form-help-margin,
+  --form-help-font-size: $form-help-font-size,
 
   // Checkbox
   --checkbox-margin: $checkbox-margin,
