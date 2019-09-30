@@ -42,15 +42,17 @@
     "build:css:p:theme": "node-sass --output-style expanded scss/variants/parted/theme.scss dist/parted/theme.css",
     "build:css:p:variables": "node-sass --output-style expanded scss/variants/parted/variables.scss dist/parted/variables.css",
     "build:css:p:zusty": "node-sass --output-style expanded scss/variants/parted/zusty.scss dist/parted/zusty.css",
-    "minify:css": "cleancss -o dist/zusty.min.css dist/zusty.css",
-    "minify:css:prefixless": "cleancss -o dist/zusty.prefixless.min.css dist/zusty.prefixless.css",
-    "minify:css:p": "cleancss -o dist/parted/zusty.min.css dist/parted/zusty.css",
+    "minify:css": "postcss dist/zusty.css > dist/zusty.min.css",
+    "minify:css:prefixless": "postcss dist/zusty.prefixless.css > dist/zusty.prefixless.min.css",
+    "minify:css:p": "postcss dist/parted/zusty.css > dist/parted/zusty.min.css",
+    "lint": "stylelint scss/**/*.scss --syntax scss",
     "start": "npm run build:css -- --watch"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
-    "clean-css-cli": "^4.3.0",
+    "cssnano": "^4.1.10",
     "node-sass": "^4.12.0",
-    "postcss-cli": "^6.1.3"
+    "postcss-cli": "^6.1.3",
+    "stylelint": "^11.0.0"
   }
 }
