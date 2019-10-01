@@ -24,7 +24,7 @@
     padding: 0;
     margin: 0;
     border-color: var(--tab-selected-item-color);
-    @extend %no-select;
+    user-select: none;
 
     @if $css-variable-enabled {
       border-width: var(--tab-border-bottom-width);

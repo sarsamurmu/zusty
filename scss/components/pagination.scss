@@ -10,7 +10,7 @@
 
   @include small {
     margin-bottom: 20px;
-    
+
     & > a:nth-child(1) {
       order: 2;
       flex-grow: 1;
@@ -51,6 +51,7 @@
         border-color: var(--pagination-item-border-color);
         background-color: var(--pagination-item-bg-color);
         cursor: pointer;
+        user-select: none;
 
         @if $css-variable-enabled {
           padding: var(--pagination-item-padding);

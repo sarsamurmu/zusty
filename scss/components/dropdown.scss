@@ -133,7 +133,7 @@
 
     li {
       position: relative;
-      @extend %no-select;
+      user-select: none;
       display: flex;
       align-items: center;
       color: var(--text-color-secondary);

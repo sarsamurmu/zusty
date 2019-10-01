@@ -4,15 +4,6 @@
  * Copyright 2019 Sarsa Murmu
  * https://github.com/sarsamurmu/zusty
  */
-.btn, .icon, span.badge, div.badge span, div.badge span:only-of-type, .dropdown .items li, .tabs > ul, .unselectable, .text-unselectable {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .btn.full-width, .btn.fullwidth, .btns-full-width > .btn:not(.ignored), .btns-fullwidth > .btn:not(.ignored), .fullwidth, .fillup {
   width: -webkit-fill-available;
   width: -moz-available;
@@ -431,6 +422,10 @@ h6, .h6 {
 }
 
 .btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
@@ -850,6 +845,10 @@ h6, .h6 {
 
 .icon {
   --icon-size: 1.2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
@@ -2785,6 +2784,10 @@ textarea.textarea.unresizable {
 }
 
 span.badge {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: inline-block;
   padding: 4px 8px 4px 8px;
   background-color: var(--badge-last-part-bg-color);
@@ -2823,6 +2826,10 @@ div.badge {
 }
 
 div.badge span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 4px;
   margin: 0px;
   font-size: 0.8em;
@@ -2830,6 +2837,10 @@ div.badge span {
 }
 
 div.badge span:only-of-type {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 4px 8px 4px 8px;
   background-color: var(--badge-only-part-bg-color);
   color: var(--badge-only-part-text-color);
@@ -3105,6 +3116,10 @@ div.badge.rounded, .badges-rounded div.badge {
 
 .dropdown .items li {
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -3556,6 +3571,11 @@ div.badge.rounded, .badges-rounded div.badge {
   display: -ms-inline-flexbox;
   display: inline-flex;
   color: var(--text-color-tertiary);
+  border-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .navbar .content .options > a:not(.btn):hover, .navbar .content .options > a:not(.btn).hovered, .navbar .content .options > a:not(.btn):focus, .navbar .content .options > a:not(.btn).focused {
@@ -3750,6 +3770,10 @@ div.badge.rounded, .badges-rounded div.badge {
   border-color: var(--pagination-item-border-color);
   background-color: var(--pagination-item-bg-color);
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 8px 12px;
   border-width: 2px;
   border-radius: 8px;
@@ -4910,6 +4934,10 @@ div.badge.rounded, .badges-rounded div.badge {
   padding: 0;
   margin: 0;
   border-color: var(--tab-selected-item-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-width: 2px;
 }
 
@@ -7611,6 +7639,13 @@ div.badge.rounded, .badges-rounded div.badge {
   text-align: left !important;
 }
 
+.unselectable, .text-unselectable {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .uppercase, .text-uppercase {
   text-transform: uppercase !important;
 }
@@ -9389,5 +9424,3 @@ div.badge.rounded, .badges-rounded div.badge {
   display: -ms-flexbox;
   display: flex;
 }
-
-/*# sourceMappingURL=zusty.prefixless.css.map */

@@ -48,7 +48,7 @@
 }
 
 .#{$prefix}unselectable, .#{$prefix}text-unselectable {
-  @extend %no-select;
+  user-select: none;
 }
 
 .#{$prefix}uppercase, .#{$prefix}text-uppercase {
@@ -111,7 +111,7 @@
     font-size: ($i/25) * 10rem;
   }
 
-  $name: '.#{$prefix}text-#{$i}\\@name';
+  $name: '.#{$prefix}text-#{$i}#{$cd-sep}name';
 
   @include each-breakpoint($name, 'name') {
     font-size: ($i/25) * 10rem;

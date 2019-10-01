@@ -1,5 +1,5 @@
 .#{$prefix}btn {
-  @extend %no-select;
+  user-select: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;

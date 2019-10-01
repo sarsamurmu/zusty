@@ -6,7 +6,7 @@
     --icon-size: #{$icon-size-default};
   }
 
-  @extend %no-select;
+  user-select: none;
 
   display: inline-flex;
   align-items: center;

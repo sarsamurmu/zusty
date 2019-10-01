@@ -1,6 +1,6 @@
 {
   "name": "zusty",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A Powerful CSS Framework",
   "author": "Sarsa Murmu <sarsamurmu05@gmail.com>",
   "keywords": [
@@ -34,9 +34,9 @@
     "build": "rimraf dist && npm run build:css && npm run add:autoprefix && npm run minify:css && npm run build:parted && npm run build:prefixless && npm run build:css:theme",
     "build:prefixless": "npm run build:css:prefixless && npm run add:autoprefix:prefixless && npm run minify:css:prefixless",
     "build:parted": "npm run build:css:p:theme && npm run build:css:p:variables && npm run build:css:p:zusty && npm run add:autoprefix:p && npm run minify:css:p",
-    "add:autoprefix": "postcss --use autoprefixer --map false --output dist/zusty.css dist/zusty.css",
-    "add:autoprefix:prefixless": "postcss --use autoprefixer --map false --output dist/zusty.prefixless.css dist/zusty.prefixless.css",
-    "add:autoprefix:p": "postcss --use autoprefixer --map false --output dist/parted/zusty.css dist/parted/zusty.css",
+    "add:autoprefix": "postcss --use autoprefixer --no-map --output dist/zusty.css dist/zusty.css",
+    "add:autoprefix:prefixless": "postcss --use autoprefixer --no-map --output dist/zusty.prefixless.css dist/zusty.prefixless.css",
+    "add:autoprefix:p": "postcss --use autoprefixer --no-map --output dist/parted/zusty.css dist/parted/zusty.css",
     "build:css": "node-sass --output-style expanded --source-map true zusty.scss dist/zusty.css",
     "build:css:prefixless": "node-sass --output-style expanded scss/variants/zusty-prefixless.scss dist/zusty.prefixless.css",
     "build:css:theme": "node-sass --output-style expanded scss/variants/theme.scss dist/theme.css",

@@ -1,6 +1,3 @@
-// Boleans
-$css-variable-enabled: false !default;
-
 // --------------
 //    General
 // --------------
@@ -8,22 +5,12 @@ $css-variable-enabled: false !default;
 // Prefix Used for all zusty's selectors;
 $prefix: 'zust-' !default;
 
+// Separator used for Conditions
+$condition-separator: '\\@' !default;
+
 // Screen Breakpoint Sizes as of Chrome Dev Tools
 $medium-breakpoint: 768px !default;
 $large-breakpoint: 1024px !default;
-
-$default-breakpoints: (
-  ('small', null, $medium-breakpoint - 1px),
-  ('medium', $medium-breakpoint, $large-breakpoint - 1px),
-  ('until-large', null, $large-breakpoint - 1px),
-  ('large', $large-breakpoint, null)
-);
-
-$custom-breakpoints: () !default;
-
-$breakpoints: join($default-breakpoints, $custom-breakpoints);
-
-$breakpoint-names: getListItems($breakpoints, 1);
 
 // Font Sizes
 $xlarge-text: 2.2rem !default;
@@ -224,3 +211,21 @@ $status-colors: (
 $custom-colors: () !default;
 
 $item-colors: join($status-colors, $custom-colors);
+
+// Breakpoints
+$default-breakpoints: (
+  ('small', null, $medium-breakpoint - 1px),
+  ('medium', $medium-breakpoint, $large-breakpoint - 1px),
+  ('until-large', null, $large-breakpoint - 1px),
+  ('large', $large-breakpoint, null)
+);
+
+$custom-breakpoints: () !default;
+
+$breakpoints: join($default-breakpoints, $custom-breakpoints);
+
+$breakpoint-names: getListItems($breakpoints, 1);
+
+// Misc.
+$css-variable-enabled: false !default;
+$cd-sep: $condition-separator;

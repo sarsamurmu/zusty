@@ -76,7 +76,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
 
 // Backgrounds on Dark Theme
 [#{$prefix}theme="dark"] {
-  @include bg-colors('\\@dark');
+  @include bg-colors('#{$cd-sep}dark');
 }
 
 // Text Colors
@@ -144,5 +144,5 @@ $text-color-helpers: join($colors, $extra-text-colors);
 
 // Text on Dark Theme
 [#{$prefix}theme="dark"] {
-  @include text-colors('\\@dark');
+  @include text-colors('#{$cd-sep}dark');
 }

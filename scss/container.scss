@@ -76,7 +76,7 @@ $it-pad: $container-column-padding;
 
   &.#{$prefix}column {
 
-    $not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}active\\@name)', 'name', '', '', '');
+    $not-selector: getClassList($breakpoint-names, ':not(.#{$prefix}active#{$cd-sep}name)', 'name', '', '', '');
 
     &:not(.#{$prefix}custom)#{$not-selector} {
       @include medium {
@@ -84,7 +84,7 @@ $it-pad: $container-column-padding;
       }
     }
 
-    $common-selector: getClassList($breakpoint-names, '.#{$prefix}active\\@name', 'name', '&', '', ', &');
+    $common-selector: getClassList($breakpoint-names, '.#{$prefix}active#{$cd-sep}name', 'name', '&', '', ', &');
 
     #{$common-selector} {
       > .#{$prefix}column {
@@ -110,7 +110,7 @@ $it-pad: $container-column-padding;
       }
     }
 
-    &.#{$prefix}active\@all {
+    &.#{$prefix}active#{$cd-sep}all {
       @include small {
         flex-wrap: nowrap;
 
@@ -122,7 +122,7 @@ $it-pad: $container-column-padding;
       }
     }
 
-    @include each-breakpoint('&.#{$prefix}active\\@name', 'name') {
+    @include each-breakpoint('&.#{$prefix}active#{$cd-sep}name', 'name') {
       flex-wrap: nowrap;
 
       > .#{$prefix}column {
@@ -144,7 +144,7 @@ $it-pad: $container-column-padding;
       width: auto;
     }
 
-    @include each-breakpoint('&.#{$prefix}default\\@name', 'name') {
+    @include each-breakpoint('&.#{$prefix}default#{$cd-sep}name', 'name') {
       flex: none;
       width: auto;
     }
@@ -174,15 +174,15 @@ $it-pad: $container-column-padding;
       @if $name {
         @if ($min-width not null) and ($max-width == null) {
           @media screen and (min-width: $min-width) {
-            @include sizes('\\@#{$name}');
+            @include sizes('#{$cd-sep}#{$name}');
           }
         } @else if ($min-width == null) and ($max-width not null) {
           @media screen and (max-width: $max-width) {
-            @include sizes('\\@#{$name}');
+            @include sizes('#{$cd-sep}#{$name}');
           }
         } @else if ($min-width not null) and ($max-width not null) {
           @media screen and (min-width: $min-width) and (max-width: $max-width) {
-            @include sizes('\\@#{$name}');
+            @include sizes('#{$cd-sep}#{$name}');
           }
         }
       }

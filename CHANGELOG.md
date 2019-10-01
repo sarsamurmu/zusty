@@ -1,8 +1,8 @@
-## v0.0.2
+## v1.0.0
 #### New
-- Non Prefixed Variant.
-- Lot of Variables.
-- Variable `$prefix` to change prefix.
+- Non-Prefixed Variant.
+- Lots of Variable.
+- Variable `$prefix` to change the prefix.
 - Selector for breakpoints, like `zust-hidden@small`.
 - The way breakpoint works, New breakpoint names.
 - Helpers.
@@ -37,7 +37,7 @@
 - Added basic icon to use with Select.
 
 #### Breaking Changes
-- Selector names, Breakpoint name and format are changed. Here are few examples -
+- Selector names, Breakpoint name, and format are changed. Here are a few examples -
 ```
 Breakpoint Names
 mobile  ->  small
@@ -76,4 +76,4 @@ Same for others...
 
 ## v0.0.1
 - Initial Release.
-- Made many Elements, Helpers, Components etc.
+- Made many Elements, Helpers, Components, etc.

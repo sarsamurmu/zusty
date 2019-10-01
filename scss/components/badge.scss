@@ -2,7 +2,7 @@ $padding-first: 10px;
 $padding-second: 5px;
 
 span.#{$prefix}badge {
-  @extend %no-select;
+  user-select: none;
   display: inline-block;
   $padding: 4px;
   $extra: 4px;
@@ -49,7 +49,7 @@ div.#{$prefix}badge {
   white-space: nowrap;
 
   span {
-    @extend %no-select;
+    user-select: none;
     padding: 4px;
     margin: 0px;
 
@@ -63,7 +63,7 @@ div.#{$prefix}badge {
   }
 
   span:only-of-type {
-    @extend %no-select;
+    user-select: none;
     $padding: 4px;
     $extra: 4px;
     padding: $padding ($padding + $extra) $padding ($padding + $extra);
