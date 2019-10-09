@@ -1,6 +1,6 @@
 
 <p align="center">
-<img width="240px" src="https://sarsamurmu.github.io/uses/zusty.svg" alt="Zusty">
+<img width="240px" src="https://zustycss.com/docs/resource/zusty.svg" alt="Zusty">
 <h1 align="center">Zusty CSS</h1>
 </p>
 
@@ -29,15 +29,15 @@ Then in `<head></head>`, add this to top of your CSS Files
 ```
 
 ### CDN
-Add this to top of all stylesheets which are inside of `<head></head>`
+Add this to top of all stylesheets which are inside of `<head></head>`. Replace `<versionCode>` with the version you want to use. Latest version is [![latest version](https://img.shields.io/badge/dynamic/json?color=&label=&query=%24.tag_name&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fsarsamurmu%2Fzusty%2Freleases%2Flatest)](https://www.npmjs.com/package/zusty)
 ```html
-<!-- For This Version -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@0.0.2">
+<!-- For specific version -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@<versionCode>">
 
 <!-- Always Get the Latest Version -->
 <!-- Not Recommended for Production. It can Break Anytime -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty">
-<!-- Other CSS Goes Down Here -->
+<!-- Other CSS Down Here -->
 ```
 
 ### Starter Template
@@ -52,8 +52,9 @@ This is the Starter Template that You can use to get started right away.
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Zusty CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@0.0.2">
-    <!-- Other CSS Goes Down Here -->
+    <!-- Use versioned CSS, so that your page will not break anytime -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@<versionCode>">
+    <!-- Other CSS Down Here -->
 
     <title>Hello Zusty CSS</title>
   </head>
