@@ -16,7 +16,7 @@
   $value: 1;
 
   @if $exponent > 0 {
-    @for $i from 1 through $exponent {
+    @for $i from 1 through round($exponent) {
       $value: $value * $number;
     }
   }

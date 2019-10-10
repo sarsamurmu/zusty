@@ -9,14 +9,14 @@ $it-pad: $container-column-padding;
 
 // Sizes
 @mixin sizes($suffix: '') {
-  &.#{$prefix}1-2#{$suffix}, &.#{$prefix}half#{$suffix}  {
+  &.#{$prefix}size-1-2#{$suffix}, &.#{$prefix}size-half#{$suffix}  {
     flex: none;
     width: 50% !important;
   }
 
   // Three Parts
   @for $i from 1 through 2 {
-    &.#{$prefix}#{$i}-3#{$suffix} {
+    &.#{$prefix}size-#{$i}-3#{$suffix} {
       flex: none;
       width: percentage($i/3) !important;
     }
@@ -24,7 +24,7 @@ $it-pad: $container-column-padding;
 
   // Four Parts
   @for $i from 1 through 3 {
-    &.#{$prefix}#{$i}-4#{$suffix} {
+    &.#{$prefix}size-#{$i}-4#{$suffix} {
       flex: none;
       width: percentage($i/4) !important;
     }
@@ -32,7 +32,7 @@ $it-pad: $container-column-padding;
 
   // Five Parts
   @for $i from 1 through 4 {
-    &.#{$prefix}#{$i}-5#{$suffix} {
+    &.#{$prefix}size-#{$i}-5#{$suffix} {
       flex: none;
       width: percentage($i/5) !important;
     }
@@ -40,7 +40,7 @@ $it-pad: $container-column-padding;
 
   // 12 Parts
   @for $i from 1 through 11 {
-    &.#{$prefix}#{$i}-12#{$suffix} {
+    &.#{$prefix}size-#{$i}-12#{$suffix} {
       flex: none;
       width: percentage($i/12) !important;
     }
