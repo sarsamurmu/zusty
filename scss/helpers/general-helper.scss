@@ -218,3 +218,38 @@
 .#{$prefix}static, .#{$prefix}unresponsive {
   pointer-events: none;
 }
+
+.#{$prefix}clearfix {
+  overflow: hidden;
+  @include clearfix;
+}
+
+// Justify
+@each $name, $value in ('start', flex-start),
+                       ('center', center),
+                       ('end', flex-end),
+                       ('around', space-around),
+                       ('between', space-between),
+                       ('evenly', space-evenly) {
+  .#{$prefix}justify-#{$name} {
+    justify-content: $value;
+  }
+}
+
+// Align
+@each $name, $value in ('start', flex-start),
+                       ('center', center),
+                       ('end', flex-end),
+                       ('stretch', stretch),
+                       ('baseline', baseline) {
+  .#{$prefix}align-#{$name} {
+    align-items: $value;
+  }
+}
+
+// Align
+@each $value in nowrap, wrap, wrap-reverse {
+  .#{$prefix}#{$value} {
+    flex-wrap: $value;
+  }
+}
