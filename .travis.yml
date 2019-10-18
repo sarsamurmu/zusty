@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "12"
+
+script: npm run build
 # For Discord Webhook
 after_success:
   - wget https://raw.githubusercontent.com/sarsamurmu/travis-ci-discord-webhook/master/send.sh
