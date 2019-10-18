@@ -12,18 +12,17 @@
   justify-content: center;
   @if $css-variable-enabled {
     z-index: var(--modal-z-index);
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear var(--modal-transition);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear calc(var(--modal-transition) + 0.1s);
   } @else {
     z-index: $modal-z-index;
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear $modal-transition;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear ($modal-transition + 0.1s);
   }
 
   > .#{$prefix}content {
     background-color: var(--modal-bg-color);
     overflow: hidden;
     color: var(--text-color-secondary);
-    transform: scale(0.8);
-    transition: transform 1s, background-color 0.3s, opacity 0.2s;
+    transform: scale(1.04);
     opacity: 0;
     font-size: 15px;
     $pos: 20px;
@@ -36,8 +35,10 @@
     position: relative;
     @if $css-variable-enabled {
       border-radius: var(--modal-border-radius);
+      transition: transform var(--modal-transition), background-color var(--primary-transition), opacity var(--modal-transition);
     } @else {
       border-radius: $modal-border-radius;
+      transition: transform $modal-transition, background-color $primary-transition, opacity $modal-transition;
     }
 
     @include until-large {
@@ -81,7 +82,7 @@
         position: absolute;
         right: 0;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
         padding: 8px !important;
         margin: 0 !important;
 
@@ -110,14 +111,23 @@
   }
 
   &.#{$prefix}active {
+    $delay: 0.1s;
     visibility: visible;
     opacity: 1;
-    transition: all 0.3s ease-in-out 0.1s, visibility 0s linear;
+    @if $css-variable-enabled {
+      transition: all var(--modal-transition) ease-in-out $delay, visibility 0s linear;
+    } @else {
+      transition: all $modal-transition ease-in-out $delay, visibility 0s linear;
+    }
 
     > .#{$prefix}content {
       transform: scale(1) translateY(0);
       opacity: 1;
-      transition: transform 0.5s, background-color 0.3s, opacity 0.5s;
+      @if $css-variable-enabled {
+        transition: transform var(--modal-transition) ease-in-out $delay, background-color var(--primary-transition) $delay, opacity var(--modal-transition) $delay;
+      } @else {
+        transition: transform $modal-transition ease-in-out $delay, background-color $primary-transition $delay, opacity $modal-transition $delay;
+      }
     }
   }
 
