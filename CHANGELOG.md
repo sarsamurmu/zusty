@@ -1,3 +1,26 @@
+## v1.1.0
+#### New
+- `zust-clearfix` as helper.
+- Helpers to deal with Flexbox.
+- Added Built-in Icons (Caret, Arrow, Menu, Close).
+
+#### Fixes/Improvements
+- Modal
+
+#### Breaking Changes
+- Column size modifier format changed. `zust-1-2` changed to `zust-size-1-2`, same change for others.
+- Import path changed for importing all.<br>
+Before:
+```scss
+@import 'node_modules/zusty/elements/a';
+```
+Now:
+```scss
+@import 'node_modules/zusty/elements/';
+```
+
+
+
 ## v1.0.0
 #### New
 - Non-Prefixed Variant.

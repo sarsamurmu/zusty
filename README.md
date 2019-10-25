@@ -56,10 +56,10 @@ This is the Starter Template that You can use to get started right away.
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@<versionCode>">
     <!-- Other CSS Down Here -->
 
-    <title>Hello Zusty CSS</title>
+    <title>Base Page</title>
   </head>
   <body>
-    <p>My First Page with Zusty CSS</p>
+    <p>Base Page</p>
   </body>
 </html>
 ```
