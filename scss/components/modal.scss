@@ -12,10 +12,10 @@
   justify-content: center;
   @if $css-variable-enabled {
     z-index: var(--modal-z-index);
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear calc(var(--modal-transition) + 0.1s);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear var(--modal-transition);
   } @else {
     z-index: $modal-z-index;
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear ($modal-transition + 0.1s);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear $modal-transition;
   }
 
   > .#{$prefix}content {
