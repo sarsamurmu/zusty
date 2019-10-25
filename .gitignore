@@ -1,4 +1,10 @@
 *.html
 prepros-6.config
-css/
 demo/
+pages/
+node_modules
+package-lock.json
+*.sh
+*.dat
+*.map
+*.cmd
