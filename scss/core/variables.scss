@@ -17,7 +17,6 @@ $xlarge-text: 2.2rem !default;
 $large-text: 1.6rem !default;
 $medium-text: 1rem !default;
 $small-text: 0.8rem !default;
-$body-font-size: $medium-text !default;
 
 // z-indexes
 $dropdown-z-index: 5 !default;
@@ -33,11 +32,15 @@ $primary-transition: 0.2s !default;
 //    Elements
 // --------------
 
+// Body
+$body-font-size: $medium-text !default;
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
 // Anchor
 $anchor-border-width: 2px !default;
 
 // Button
-$button-margin: 5px !default;
+$button-margin: 0px 8px 8px 0px !default;
 $button-border-radius: 6px !default;
 $button-border-width: 2px !default;
 $button-border-spread: 4px !default;

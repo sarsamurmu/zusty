@@ -1,22 +1,26 @@
 html {
-  height: 100%;
-  width: 100%;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  width: 100%;
 
   @if $css-variable-enabled {
     font-size: var(--body-font-size);
+    font-family: var(--body-font-family);
   } @else {
     font-size: $body-font-size;
+    font-family: $body-font-family;
   }
 }
 
 body {
-  height: min-content;
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
+  height: min-content;
   padding: 20px;
   transition-property: background-color !important;
 
