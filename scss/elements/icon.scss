@@ -14,8 +14,10 @@
   height: var(--icon-size) !important;
   width: var(--icon-size) !important;
   margin: 1px;
+  position: relative;
 
-  i, span {
+  i:not(.#{$prefix}close):not(.#{$prefix}menu),
+  span:not(.#{$prefix}close):not(.#{$prefix}menu) {
     font-size: var(--icon-size) !important;
     height: var(--icon-size) !important;
     width: var(--icon-size) !important;
@@ -74,9 +76,113 @@
   }
 }
 
-.#{$prefix}angle-down {
+.#{$prefix}caret-down,
+.#{$prefix}caret-left,
+.#{$prefix}caret-up,
+.#{$prefix}caret-right {
   border-style: solid;
   border-width: calc(var(--icon-size) / 2);
   border-color: currentColor $transparent $transparent $transparent;
-  transform: scale(0.5) translateY(calc(var(--icon-size) / 4));
+}
+
+.#{$prefix}caret-down {
+  transform: scale(0.5) translateY(25%);
+}
+
+.#{$prefix}caret-left {
+  transform: scale(0.5) rotate(90deg) translateY(25%);
+}
+
+.#{$prefix}caret-up {
+  transform: scale(0.5) rotate(180deg) translateY(25%);
+}
+
+.#{$prefix}caret-right {
+  transform: scale(0.5) rotate(-90deg) translateY(25%);
+}
+
+.#{$prefix}angle-down,
+.#{$prefix}angle-left,
+.#{$prefix}angle-up,
+.#{$prefix}angle-right {
+  border-style: solid;
+  border-width: calc(var(--icon-size) / 4);
+  border-top-width: 0;
+  border-top-left-radius: calc(var(--icon-size) / 4);
+  border-right-width: 0;
+  border-bottom-right-radius: calc(var(--icon-size) / 4);
+  border-color: $transparent $transparent currentColor currentColor;
+}
+
+.#{$prefix}angle-down {
+  transform: scale(0.5) rotate(-45deg) translate(15%, -15%);
+}
+
+.#{$prefix}angle-left {
+  transform: scale(0.5) rotate(45deg) translate(15%, -15%);
+}
+
+.#{$prefix}angle-up {
+  transform: scale(0.5) rotate(135deg) translate(15%, -15%);
+}
+
+.#{$prefix}angle-right {
+  transform: scale(0.5) rotate(-135deg) translate(15%, -15%);
+}
+
+.#{$prefix}close,
+.#{$prefix}menu {
+  background-color: currentColor;
+  height: calc(var(--icon-size) / 10) !important;
+  width: 100%;
+  position: absolute;
+  border-radius: 100000px;
+
+  @if $css-variable-enabled {
+    transition: background-color var(--primary-transition);
+  } @else {
+    transition: background-color $primary-transition;
+  }
+}
+
+.#{$prefix}close,
+.#{$prefix}menu {
+  &:after,
+  &:before {
+    content: '';
+    background-color: currentColor;
+    height: calc(var(--icon-size) / 10) !important;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 100000px;
+
+    @if $css-variable-enabled {
+      transition: transform var(--primary-transition);
+    } @else {
+      transition: transform $primary-transition;
+    }
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+.#{$prefix}close {
+  background-color: $transparent;
+}
+
+.#{$prefix}menu {
+  &:after {
+    transform: translateY(calc(var(--icon-size) / 3.2));
+  }
+
+  &:before {
+    transform: translateY(calc(0px - var(--icon-size) / 3.2));
+  }
 }
