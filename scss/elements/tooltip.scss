@@ -15,7 +15,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
     visibility: hidden;
     opacity: 0;
     transform: translateX(- $tooltip-translate);
-    transition: all 0.3s ease 0s, visibility 0s ease 0.3s;
+    transition: all 0.3s ease 0s, visibility 0s ease 0.2s;
     @if $css-variable-enabled {
       z-index: var(--tooltip-z-index);
       font-size: var(--tooltip-font-size);
