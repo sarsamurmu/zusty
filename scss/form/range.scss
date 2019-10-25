@@ -1,6 +1,4 @@
 .#{$prefix}range {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-color: var(--range-bg-color);
 
@@ -15,8 +13,6 @@
   }
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: var(--primary-color);
     height: 18px;
@@ -37,8 +33,6 @@
   }
 
   &::-moz-range-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: var(--primary-color);
     cursor: pointer;
