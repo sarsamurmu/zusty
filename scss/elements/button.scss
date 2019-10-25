@@ -50,6 +50,7 @@
 
     &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
       transform: translateY(-2px);
+      border-color: $transparent;
     }
   }
 
