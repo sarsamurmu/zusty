@@ -1,3 +1,7 @@
+## v1.1.1
+#### Fixes/Improvements
+- Critical Bug Fix
+
 ## v1.1.0
 #### New
 - `zust-clearfix` as helper.

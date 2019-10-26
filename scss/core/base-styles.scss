@@ -1,7 +1,6 @@
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--body-bg-color);
   color: var(--body-text-color);
   height: 100%;
   text-rendering: optimizeLegibility;
@@ -23,6 +22,7 @@ body {
   height: min-content;
   padding: 20px;
   transition-property: background-color !important;
+  margin: 0;
 
   @if $css-variable-enabled {
     transition: var(--primary-transition);
