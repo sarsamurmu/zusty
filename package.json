@@ -47,7 +47,8 @@
     "minify:css:prefixless": "postcss dist/zusty.prefixless.css > dist/zusty.prefixless.min.css",
     "minify:css:p": "postcss dist/parted/zusty.css > dist/parted/zusty.min.css",
     "lint": "stylelint scss/**/*.scss --syntax scss",
-    "start": "npm run build:css -- --watch"
+    "start": "npm run build:css -- --watch",
+    "deploy": "node updateVer && npm run build && echo \"\n\nPublish to npm by yourself\""
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
