@@ -65,4 +65,4 @@ This is the Starter Template that You can use to get started right away.
 ```
 
 ## License
-MIT [License](https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md).
+Zusty CSS is Licensed under the [MIT License](https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md).

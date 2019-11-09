@@ -523,6 +523,11 @@ h6, .zust-h6 {
   border-color: var(--link-hovered-color) !important;
 }
 
+.zust-btn.zust-fullwidth, .zust-btn.zust-full-width {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .zust-toggle-btn input[type="checkbox"], .zust-toggle-btn input[type="radio"] {
   display: none;
 }
@@ -2794,7 +2799,7 @@ div.zust-badge.zust-rounded, .zust-badges-rounded div.zust-badge {
   height: max-content;
   box-sizing: content-box;
   padding: var(--card-padding);
-  margin: var(--card-padding);
+  margin: var(--card-margin);
   max-width: var(--card-max-width);
   min-width: var(--card-min-width);
   box-shadow: var(--card-box-shadow);
@@ -5084,7 +5089,7 @@ div.zust-badge.zust-rounded, .zust-badges-rounded div.zust-badge {
 }
 
 .zust-bg-facebook {
-  background-color: #4267b2 !important;
+  background-color: #1877f2 !important;
   color: #FFFFFF;
 }
 
@@ -5444,7 +5449,7 @@ div.zust-badge.zust-rounded, .zust-badges-rounded div.zust-badge {
 }
 
 [zust-theme="dark"] .zust-bg-facebook\@dark {
-  background-color: #4267b2 !important;
+  background-color: #1877f2 !important;
   color: #FFFFFF;
 }
 
@@ -5780,11 +5785,11 @@ div.zust-badge.zust-rounded, .zust-badges-rounded div.zust-badge {
 }
 
 .zust-text-facebook {
-  color: #4267b2 !important;
+  color: #1877f2 !important;
 }
 
 .zust-text-facebook * {
-  color: #4267b2;
+  color: #1877f2;
 }
 
 .zust-text-twitter {
@@ -6100,11 +6105,11 @@ div.zust-badge.zust-rounded, .zust-badges-rounded div.zust-badge {
 }
 
 [zust-theme="dark"] .zust-text-facebook\@dark {
-  color: #4267b2 !important;
+  color: #1877f2 !important;
 }
 
 [zust-theme="dark"] .zust-text-facebook\@dark * {
-  color: #4267b2;
+  color: #1877f2;
 }
 
 [zust-theme="dark"] .zust-text-twitter\@dark {

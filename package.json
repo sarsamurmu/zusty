@@ -1,6 +1,6 @@
 {
   "name": "zusty",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A Powerful CSS Framework",
   "author": "Sarsa Murmu <sarsamurmu05@gmail.com>",
   "keywords": [
@@ -11,7 +11,12 @@
   ],
   "jsdelivr": "dist/zusty.min.css",
   "browser": "dist/zusty.min.css",
+  "unpkg": "dist/zusty.min.css",
   "main": "zusty.scss",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/join/sarsamurmu"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarsamurmu/zusty.git"

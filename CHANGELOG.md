@@ -1,3 +1,9 @@
+## v1.1.2
+#### Fixes/Improvements
+- Updated Facebook Color.
+- Fixed Container Margin.
+- Fixed Buttons margin on fullwidth.
+
 ## v1.1.1
 #### Fixes/Improvements
 - Critical Bug Fix
