@@ -240,6 +240,12 @@
       }
     }
   }
+
+  &.#{$prefix}fullwidth,
+  &.#{$prefix}full-width {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .#{$prefix}toggle-btn {
