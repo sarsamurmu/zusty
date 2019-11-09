@@ -63,3 +63,6 @@ This is the Starter Template that You can use to get started right away.
   </body>
 </html>
 ```
+
+## License
+MIT [License](https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md).
