@@ -349,7 +349,7 @@ You can set any element's Text Color just by adding a class. To set any element'
 
 Example. If You want to set any element's background color to red, just add class `zust-text-red`{.class}.
 
-If you want to set different Text Color in Dark Theme, add class #[span.inline-code `zust-text-{comment}(color-name)@dark`{.string}.
+If you want to set different Text Color in Dark Theme, add class `zust-text-{comment}(color-name)@dark`{.string}.
 
 Example. If you want to  set any element's text color to teal in Dark Theme, add class `zust-text-teal@dark`{.class}.
 
