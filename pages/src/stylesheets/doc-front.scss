@@ -1,7 +1,9 @@
 @import "./../../../scss/core/var-only.scss";
 @import "imports/navbar.scss";
-@import "/resources/fonts.css";
+@import "imports/worker-toast";
 @import "imports/footer.scss";
+
+@import "/resources/fonts.css";
 
 body {
   font-family: 'Varela Round', sans-serif;
