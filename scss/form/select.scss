@@ -1,4 +1,14 @@
-select.#{$prefix}select {
+@if $css-variable-enabled {
+  $large-text: var(--large-text);
+  $medium-text: var(--medium-text);
+  $primary-transition: var(--primary-transition);
+  $select-border-radius: var(--select-border-radius);
+  $select-border-spread: var(--select-border-spread);
+  $small-text: var(--small-text);
+  $xlarge-text: var(--xlarge-text);
+}
+
+.#{$prefix}select {
   appearance: none;
   padding: {
     top: 8px;
@@ -13,6 +23,9 @@ select.#{$prefix}select {
   border-color: $transparent;
   box-sizing: content-box;
   width: 100%;
+  border-radius: $select-border-radius;
+  transition: $primary-transition;
+  font-size: $medium-text;
 
   &.#{$prefix}fixed {
     width: auto;
@@ -20,12 +33,6 @@ select.#{$prefix}select {
 
   .#{$prefix}form-el.#{$prefix}fullwidth &, .#{$prefix}form-el.#{$prefix}full-width & {
     width: 100%;
-  }
-
-  @if $css-variable-enabled {
-    border-radius: var(--select-border-radius);
-  } @else {
-    border-radius: $select-border-radius;
   }
 
   --in-pad: 35px;
@@ -68,11 +75,7 @@ select.#{$prefix}select {
   }
 
   &.#{$prefix}small {
-    @if $css-variable-enabled {
-      font-size: var(--small-text);
-    } @else {
-      font-size: $small-text;
-    }
+    font-size: $small-text;
     padding: {
       left: 9px;
       right: 9px;
@@ -87,11 +90,7 @@ select.#{$prefix}select {
   }
 
   &.#{$prefix}large {
-    @if $css-variable-enabled {
-      font-size: var(--large-text);
-    } @else {
-      font-size: $large-text;
-    }
+    font-size: $large-text;
     padding: {
       left: 16px;
       right: 16px;
@@ -106,11 +105,7 @@ select.#{$prefix}select {
   }
 
   &.#{$prefix}xlarge {
-    @if $css-variable-enabled {
-      font-size: var(--xlarge-text);
-    } @else {
-      font-size: $xlarge-text;
-    }
+    font-size: $xlarge-text;
     padding: {
       left: 20px;
       right: 20px;
@@ -137,14 +132,6 @@ select.#{$prefix}select {
     }
   }
 
-  @if $css-variable-enabled {
-    transition: var(--primary-transition);
-    font-size: var(--medium-text);
-  } @else {
-    transition: $primary-transition;
-    font-size: $medium-text;
-  }
-
   &:hover, &.#{$prefix}hovered {
     background-color: var(--select-hovered-bg-color);
   }
@@ -152,12 +139,7 @@ select.#{$prefix}select {
   &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
     border-color: $transparent !important;
-
-    @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--select-border-spread) var(--select-border-spread-color);
-    } @else {
       box-shadow: 0 0 0 $select-border-spread var(--select-border-spread-color);
-    }
   }
 
   @each $name, $color, $skip, $hovered-color in $item-colors {
@@ -166,11 +148,7 @@ select.#{$prefix}select {
         border-color: $color;
 
         &:focus, &.#{$prefix}focused {
-          @if $css-variable-enabled {
-            box-shadow: 0 0 0 var(--select-border-spread) $hovered-color;
-          } @else {
-            box-shadow: 0 0 0 $select-border-spread $hovered-color;
-          }
+          box-shadow: 0 0 0 $select-border-spread $hovered-color;
         }
       }
     }
@@ -200,11 +178,7 @@ select.#{$prefix}select {
 
   option {
     background-color: var(--body-bg-color);
-    @if $css-variable-enabled {
-      transition: var(--primary-transition);
-    } @else {
-      transition: $primary-transition;
-    }
+    transition: $primary-transition;
   }
 
   &[disabled] {

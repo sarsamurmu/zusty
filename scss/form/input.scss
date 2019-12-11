@@ -1,3 +1,14 @@
+@if $css-variable-enabled {
+  $input-border-radius: var(--input-border-radius);
+  $input-border-spread: var(--input-border-spread);
+  $input-margin: var(--input-margin);
+  $large-text: var(--large-text);
+  $medium-text: var(--medium-text);
+  $primary-transition: var(--primary-transition);
+  $small-text: var(--small-text);
+  $xlarge-text: var(--xlarge-text);
+}
+
 .#{$prefix}input {
   appearance: none;
   border-style: solid;
@@ -13,18 +24,10 @@
   padding-right: $padding2;
   background-color: var(--input-bg-color);
   width: 100%;
-
-  @if $css-variable-enabled {
-    transition: var(--primary-transition);
-    border-radius: var(--input-border-radius);
-    font-size: var(--medium-text);
-    margin: var(--input-margin);
-  } @else {
-    transition: $primary-transition;
-    border-radius: $input-border-radius;
-    font-size: $medium-text;
-    margin: $input-margin;
-  }
+  transition: $primary-transition;
+  border-radius: $input-border-radius;
+  font-size: $medium-text;
+  margin: $input-margin;
 
   // Reuse Vars
   --in-pad: 35px;
@@ -67,11 +70,7 @@
   }
 
   &.#{$prefix}small {
-    @if $css-variable-enabled {
-      font-size: var(--small-text);
-    } @else {
-      font-size: $small-text;
-    }
+    font-size: $small-text;
     $padding1: 4px;
     $padding2: 14px;
     padding-top: $padding1 + 2px;
@@ -88,11 +87,7 @@
   }
 
   &.#{$prefix}large {
-    @if $css-variable-enabled {
-      font-size: var(--large-text);
-    } @else {
-      font-size: $large-text;
-    }
+    font-size: $large-text;
     $padding1: 12px;
     $padding2: 24px;
     padding-top: $padding1 + 2px;
@@ -109,11 +104,7 @@
   }
 
   &.#{$prefix}xlarge {
-    @if $css-variable-enabled {
-      font-size: var(--xlarge-text);
-    } @else {
-      font-size: $xlarge-text;
-    }
+    font-size: $xlarge-text;
     $padding1: 16px;
     $padding2: 28px;
     padding-top: $padding1 + 2px;
@@ -139,11 +130,7 @@
 
   &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
-    @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--input-border-spread) var(--input-border-spread-color);
-    } @else {
-      box-shadow: 0 0 0 $input-border-spread var(--input-border-spread-color);
-    }
+    box-shadow: 0 0 0 $input-border-spread var(--input-border-spread-color);
   }
 
   &[disabled] {
@@ -189,11 +176,7 @@
 
       &:focus, &.#{$prefix}focused {
         border-color: $transparent;
-        @if $css-variable-enabled {
-          box-shadow: 0 0 0 var(--input-border-spread) var(--success-color);
-        } @else {
-          box-shadow: 0 0 0 $input-border-spread var(--success-color);
-        }
+        box-shadow: 0 0 0 $input-border-spread var(--success-color);
       }
 
       & ~ .#{$prefix}icon.#{$prefix}if-valid {
@@ -215,11 +198,6 @@
         &:focus, &.#{$prefix}focused {
           border-color: $transparent;
           box-shadow: 0 0 0 $input-border-spread $hovered-color;
-          @if $css-variable-enabled {
-            box-shadow: 0 0 0 var(--input-border-spread) $hovered-color;
-          } @else {
-            box-shadow: 0 0 0 $input-border-spread $hovered-color;
-          }
         }
 
         &.#{$prefix}readonly, &[readonly] {
@@ -241,12 +219,6 @@
   color: var(--input-append-fg-color);
   pointer-events: none;
   user-select: none;
-
-  @if $css-variable-enabled {
-    border-radius: var(--input-border-radius);
-    transition: var(--primary-transition);
-  } @else {
-    border-radius: $input-border-radius;
-    transition: $primary-transition;
-  }
+  border-radius: $input-border-radius;
+  transition: $primary-transition;
 }

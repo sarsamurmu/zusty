@@ -1,13 +1,13 @@
+@if $css-variable-enabled {
+  $icon-size-default: var(--icon-size-default);
+  $icon-size-large: var(--icon-size-large);
+  $icon-size-small: var(--icon-size-small);
+  $icon-size-xlarge: var(--icon-size-xlarge);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}icon {
-
-  @if $css-variable-enabled {
-    --icon-size: var(--icon-size-default);
-  } @else {
-    --icon-size: #{$icon-size-default};
-  }
-
   user-select: none;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +15,7 @@
   width: var(--icon-size) !important;
   margin: 1px;
   position: relative;
+  --icon-size: #{$icon-size-default};
 
   i:not(.#{$prefix}close):not(.#{$prefix}menu),
   span:not(.#{$prefix}close):not(.#{$prefix}menu) {
@@ -41,38 +42,20 @@
     width: var(--icon-size) !important;
   }
 
-  @if $css-variable-enabled {
-    &.#{$prefix}small {
-      --icon-size: var(--icon-size-small);
-    }
+  &.#{$prefix}small {
+    --icon-size: #{$icon-size-small};
+  }
 
-    &.#{$prefix}normal, &.#{$prefix}default {
-      --icon-size: var(--icon-size-default);
-    }
+  &.#{$prefix}normal, &.#{$prefix}default {
+    --icon-size: #{$icon-size-default};
+  }
 
-    &.#{$prefix}large {
-      --icon-size: var(--icon-size-large);
-    }
+  &.#{$prefix}large {
+    --icon-size: #{$icon-size-large};
+  }
 
-    &.#{$prefix}xlarge {
-      --icon-size: var(--icon-size-xlarge);
-    }
-  } @else {
-    &.#{$prefix}small {
-      --icon-size: #{$icon-size-small};
-    }
-
-    &.#{$prefix}normal, &.#{$prefix}default {
-      --icon-size: #{$icon-size-default};
-    }
-
-    &.#{$prefix}large {
-      --icon-size: #{$icon-size-large};
-    }
-
-    &.#{$prefix}xlarge {
-      --icon-size: #{$icon-size-xlarge};
-    }
+  &.#{$prefix}xlarge {
+    --icon-size: #{$icon-size-xlarge};
   }
 }
 
@@ -137,12 +120,7 @@
   width: 100%;
   position: absolute;
   border-radius: 100000px;
-
-  @if $css-variable-enabled {
-    transition: background-color var(--primary-transition);
-  } @else {
-    transition: background-color $primary-transition;
-  }
+  transition: background-color $primary-transition;
 }
 
 .#{$prefix}close,
@@ -156,12 +134,7 @@
     position: absolute;
     left: 0;
     border-radius: 100000px;
-
-    @if $css-variable-enabled {
-      transition: transform var(--primary-transition);
-    } @else {
-      transition: transform $primary-transition;
-    }
+    transition: transform $primary-transition;
   }
 
   &:after {

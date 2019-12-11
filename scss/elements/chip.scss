@@ -1,19 +1,18 @@
+@if $css-variable-enabled {
+  $chip-border-radius: var(--chip-border-radius);
+  $chip-margin: var(--chip-margin);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}chip {
   display: inline-flex;
   height: 30px;
   background-color: var(--chip-bg-color);
   align-items: center;
   vertical-align: bottom;
-
-  @if $css-variable-enabled {
-    border-radius: var(--chip-border-radius);
-    margin: var(--chip-margin);
-    transition: var(--primary-transition);
-  } @else {
-    border-radius: $chip-border-radius;
-    margin: $chip-margin;
-    transition: $primary-transition;
-  }
+  border-radius: $chip-border-radius;
+  margin: $chip-margin;
+  transition: $primary-transition;
 
   > span {
     margin-right: 12px;

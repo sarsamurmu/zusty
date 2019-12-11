@@ -1,3 +1,8 @@
+@if $css-variable-enabled {
+  $primary-transition: var(--primary-transition);
+  $progress-bar-border-radius: var(--progress-bar-border-radius);
+}
+
 progress.#{$prefix}progress {
   appearance: none;
   border: none;
@@ -9,12 +14,7 @@ progress.#{$prefix}progress {
   height: 16px;
   color: var(--primary-color);
   background-color: var(--progress-back-bg-color);
-
-  @if $css-variable-enabled {
-    border-radius: var(--progress-bar-border-radius);
-  } @else {
-    border-radius: $progress-bar-border-radius;
-  }
+  border-radius: $progress-bar-border-radius;
 
   &.#{$prefix}line {
     height: 3px;
@@ -39,58 +39,34 @@ progress.#{$prefix}progress {
 
 progress.#{$prefix}progress::-webkit-progress-bar {
   background-color: var(--progress-back-bg-color);
-  @if $css-variable-enabled {
-    transition: var(--primary-transition);
-  } @else {
-    transition: $primary-transition;
-  }
+  transition: $primary-transition;
 }
 
 progress.#{$prefix}progress::-moz-progress-bar {
   background-color: var(--progress-bar-bg-color);
-  @if $css-variable-enabled {
-    border-radius: var(--progress-bar-border-radius);
-    transition: var(--primary-transition);
-  } @else {
-    border-radius: $progress-bar-border-radius;
-    transition: $primary-transition;
-  }
+  border-radius: $progress-bar-border-radius;
+  transition: $primary-transition;
+}
+
+@mixin base {
+  background-color: var(--primary-color);
+  border-radius: $progress-bar-border-radius;
+  transition: $primary-transition;
 }
 
 progress[value].#{$prefix}progress {
 
   &::-webkit-progress-value {
-    background-color: var(--primary-color);
-    @if $css-variable-enabled {
-      border-radius: var(--progress-bar-border-radius);
-      transition: var(--primary-transition);
-    } @else {
-      border-radius: $progress-bar-border-radius;
-      transition: $primary-transition;
-    }
+    @include base;
   }
 
   &::-moz-progress-value {
-    background-color: var(--primary-color);
-    @if $css-variable-enabled {
-      border-radius: var(--progress-bar-border-radius);
-      transition: var(--primary-transition);
-    } @else {
-      border-radius: $progress-bar-border-radius;
-      transition: $primary-transition;
-    }
+    @include base;
   }
 
   &::-ms-fill {
-    background-color: var(--primary-color);
     border: none;
-    @if $css-variable-enabled {
-      border-radius: var(--progress-bar-border-radius);
-      transition: var(--primary-transition);
-    } @else {
-      border-radius: $progress-bar-border-radius;
-      transition: $primary-transition;
-    }
+    @include base;
   }
 
   @each $name, $color in $item-colors {

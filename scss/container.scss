@@ -5,6 +5,8 @@ $it-pad: $container-column-padding;
 @if $css-variable-enabled {
   $it-mar: var(--container-column-margin);
   $it-pad: var(--container-column-padding);
+  $container-margin: var(--container-margin);
+  $container-padding: var(--container-padding);
 }
 
 // Sizes
@@ -52,14 +54,8 @@ $it-pad: $container-column-padding;
   flex-wrap: wrap;
   overflow: hidden;
   overflow: visible;
-
-  @if $css-variable-enabled {
-    margin: var(--container-margin);
-    padding: var(--container-padding);
-  } @else {
-    margin: $container-margin;
-    padding: $container-padding;
-  }
+  margin: $container-margin;
+  padding: $container-padding;
 
   &.#{$prefix}v-centered {
     align-items: center;

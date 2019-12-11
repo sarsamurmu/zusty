@@ -1,46 +1,40 @@
+@if $css-variable-enabled {
+  $card-border-radius: var(--card-border-radius);
+  $card-border-width: var(--card-border-width);
+  $card-box-shadow: var(--card-box-shadow);
+  $card-hover-translate: var(--card-hover-translate);
+  $card-hovered-box-shadow: var(--card-hovered-box-shadow);
+  $card-landscape-max-width: car(--card-landscape-max-width);
+  $card-landscape-min-width: car(--card-landscape-min-width);
+  $card-margin: var(--card-margin);
+  $card-max-width: var(--card-max-width);
+  $card-min-width: var(--card-min-width);
+  $card-padding: var(--card-padding);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}card {
   background-color: var(--card-bg-color);
   border-color: var(--card-border-color);
   height: max-content;
   box-sizing: content-box;
-
-  @if $css-variable-enabled {
-    padding: var(--card-padding);
-    margin: var(--card-padding);
-    max-width: var(--card-max-width);
-    min-width: var(--card-min-width);
-    box-shadow: var(--card-box-shadow);
-    border-radius: var(--card-border-radius);
-    transition: var(--primary-transition);
-  } @else {
-    padding: $card-padding;
-    margin: $card-padding;
-    max-width: $card-max-width;
-    min-width: $card-min-width;
-    box-shadow: $card-box-shadow;
-    border-radius: $card-border-radius;
-    transition: $primary-transition;
-  }
+  padding: $card-padding;
+  margin: $card-margin;
+  max-width: $card-max-width;
+  min-width: $card-min-width;
+  box-shadow: $card-box-shadow;
+  border-radius: $card-border-radius;
+  transition: $primary-transition;
 
   &.#{$prefix}flat {
     border-style: solid;
     box-shadow: 0 0 $transparent;
-
-    @if $css-variable-enabled {
-      border-width: var(--card-border-width);
-    } @else {
-      border-width: $card-border-width;
-    }
+    border-width: $card-border-width;
   }
 
   &.#{$prefix}landscape {
-    @if $css-variable-enabled {
-      max-width: car(--card-landscape-max-width);
-      min-width: car(--card-landscape-min-width);
-    } @else {
-      max-width: $card-landscape-max-width;
-      min-width: $card-landscape-min-width;
-    }
+    max-width: $card-landscape-max-width;
+    min-width: $card-landscape-min-width;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -49,7 +43,6 @@
 
   footer {
     margin: 0 -10px 0 -10px;
-    overflow: hidden;
 
     &.#{$prefix}center {
       text-align: center;
@@ -65,16 +58,10 @@
   }
 
   &.#{$prefix}hoverable {
-    &:hover, &.#{$prefix}hovered {
+    &:hover, &.#{$prefix}hovered, &:focus-within {
       border-color: $transparent;
-
-      @if $css-variable-enabled {
-        transform: translateY(var(--card-hover-translate));
-        box-shadow: var(--card-hovered-box-shadow);
-      } @else {
-        transform: translateY($card-hover-translate);
-        box-shadow: $card-hovered-box-shadow;
-      }
+      transform: translateY($card-hover-translate);
+      box-shadow: $card-hovered-box-shadow;
     }
   }
 

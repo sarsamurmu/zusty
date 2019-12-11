@@ -1,52 +1,36 @@
+@if $css-variable-enabled {
+  $primary-transition: var(--primary-transition);
+  $range-border-radius: var(--range-border-radius);
+  $range-height: var(--range-height);
+  $range-thumb-border-radius: var(--range-thumb-border-radius);
+  $range-thumb-height: var(--range-thumb-height);
+  $range-thumb-width: var(--range-thumb-width);
+}
+
 .#{$prefix}range {
   appearance: none;
   background-color: var(--range-bg-color);
+  height: $range-height;
+  border-radius: $range-border-radius;
+  transition: $primary-transition;
 
-  @if $css-variable-enabled {
-    height: var(--range-height);
-    border-radius: var(--range-border-radius);
-    transition: var(--primary-transition);
-  } @else {
-    height: $range-height;
-    border-radius: $range-border-radius;
-    transition: $primary-transition;
+  @mixin base {
+    appearance: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-style: none;
+    border-radius: 6px;
+    height: $range-thumb-height;
+    width: $range-thumb-width;
+    border-radius: $range-thumb-border-radius;
   }
 
   &::-webkit-slider-thumb {
-    appearance: none;
-    background-color: var(--primary-color);
-    height: 18px;
-    width: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    border-style: none;
-
-    @if $css-variable-enabled {
-      height: var(--range-thumb-height);
-      width: var(--range-thumb-width);
-      border-radius: var(--range-thumb-border-radius);
-    } @else {
-      height: $range-thumb-height;
-      width: $range-thumb-width;
-      border-radius: $range-thumb-border-radius;
-    }
+    @include base;
   }
 
   &::-moz-range-thumb {
-    appearance: none;
-    background-color: var(--primary-color);
-    cursor: pointer;
-    border-style: none;
-
-    @if $css-variable-enabled {
-      height: var(--range-thumb-height);
-      width: var(--range-thumb-width);
-      border-radius: var(--range-thumb-border-radius);
-    } @else {
-      height: $range-thumb-height;
-      width: $range-thumb-width;
-      border-radius: $range-thumb-border-radius;
-    }
+    @include base;
   }
 
   &.#{$prefix}rounded {

@@ -21,7 +21,7 @@ $small-text: 0.8rem !default;
 // z-indexes
 $dropdown-z-index: 5 !default;
 $modal-z-index: 20 !default;
-$tooltip-z-index: 9999 !default;
+$tooltip-z-index: auto !default;
 $navbar-z-index: 4 !default;
 
 // Transition

@@ -1,3 +1,9 @@
+@if $css-variable-enabled {
+  $primary-transition: var(--primary-transition);
+  $tab-border-bottom-width: var(--tab-border-bottom-width);
+  $tab-top-border-radius: var(--tab-top-border-radius);
+}
+
 .#{$prefix}tabs {
   overflow-x: auto;
   margin-bottom: 10px;
@@ -25,12 +31,7 @@
     margin: 0;
     border-color: var(--tab-selected-item-color);
     user-select: none;
-
-    @if $css-variable-enabled {
-      border-width: var(--tab-border-bottom-width);
-    } @else {
-      border-width: $tab-border-bottom-width;
-    }
+    border-width: $tab-border-bottom-width;
 
     > li {
       display: inline-flex;
@@ -43,13 +44,15 @@
       transform-style: preserve-3d;
       white-space: nowrap;
       cursor: pointer;
+      border-bottom-style: solid;
+      border-width: $tab-border-bottom-width;
+      transition: $primary-transition;
+      border-color: var(--tab-selected-item-color);
 
       @if $css-variable-enabled {
         margin-bottom: calc(0px - var(--tab-border-bottom-width));
-        transition: var(--primary-transition);
       } @else {
         margin-bottom: 0 - $tab-border-bottom-width;
-        transition: $primary-transition;
       }
 
       > .#{$prefix}icon {
@@ -57,7 +60,6 @@
         --icon-size: 24px;
 
         &:not(:only-child) {
-
           &:first-child {
             margin-right: $offset;
           }
@@ -75,26 +77,18 @@
         left: 0;
         background-color: var(--tab-selected-item-color);
         width: 100%;
-        transform: translateZ(-1px);
-        @if $css-variable-enabled {
-          height: var(--tab-border-bottom-width);
-          transition: var(--primary-transition);
-        } @else {
-          height: $tab-border-bottom-width;
-          transition: $primary-transition;
-        }
+        height: 100%;
+        transform: translateZ(-1px) scaleY(0);
+        transform-origin: bottom;
+        transition: $primary-transition;
       }
 
       &.#{$prefix}selected, &[selected] {
         color: var(--tab-selected-item-text-color);
 
         &:after {
-          height: 100%;
-          @if $css-variable-enabled {
-            border-radius: var(--tab-top-border-radius) var(--tab-top-border-radius) 0 0;
-          } @else {
-            border-radius: $tab-top-border-radius $tab-top-border-radius 0 0;
-          }
+          transform: translateZ(-1px) scaleY(1);
+          border-radius: $tab-top-border-radius $tab-top-border-radius 0 0;
         }
       }
     }

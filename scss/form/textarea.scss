@@ -1,4 +1,11 @@
-textarea.#{$prefix}textarea {
+@if $css-variable-enabled {
+  $primary-transition: var(--primary-transition);
+  $textarea-border-radius: var(--textarea-border-radius);
+  $medium-text: var(--medium-text);
+  $textarea-border-spread: var(--textarea-border-spread);
+}
+
+.#{$prefix}textarea {
   appearance: none;
   padding: 8px 10px;
   background-color: var(--textarea-bg-color);
@@ -8,22 +15,15 @@ textarea.#{$prefix}textarea {
   border-color: $transparent;
   transition-property: background-color, box-shadow, border-color;
   display: block;
-
   min-height: 4em;
+  transition: all $primary-transition, width 0s, height 0s;
+  border-radius: $textarea-border-radius;
+  font-size: $medium-text;
 
   &:not([cols]) {
     min-width: 15em;
   }
 
-  @if $css-variable-enabled {
-    transition: all var(--primary-transition), width 0s, height 0s;
-    border-radius: var(--textarea-border-radius);
-    font-size: var(--medium-text);
-  } @else {
-    transition: all $primary-transition, width 0s, height 0s;
-    border-radius: $textarea-border-radius;
-    font-size: $medium-text;
-  }
 
   &:hover, &.#{$prefix}hovered {
     background-color: var(--textarea-hovered-bg-color);
@@ -31,11 +31,7 @@ textarea.#{$prefix}textarea {
 
   &:focus, &.#{$prefix}focused {
     background-color: var(--body-bg-color);
-    @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--textarea-border-spread) var(--textarea-border-spread-color);
-    } @else {
-      box-shadow: 0 0 0 $textarea-border-spread var(--textarea-border-spread-color);
-    }
+    box-shadow: 0 0 0 $textarea-border-spread var(--textarea-border-spread-color);
   }
 
   &::placeholder {
@@ -83,12 +79,7 @@ textarea.#{$prefix}textarea {
 
         &:focus, &.#{$prefix}focused {
           border-color: $transparent;
-
-          @if $css-variable-enabled {
-            box-shadow: 0 0 0 var(--textarea-border-spread) $hovered-color;
-          } @else {
-            box-shadow: 0 0 0 $textarea-border-spread $hovered-color;
-          }
+          box-shadow: 0 0 0 $textarea-border-spread $hovered-color;
         }
 
         &.#{$prefix}readonly, &[readonly] {

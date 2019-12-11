@@ -1,3 +1,11 @@
+@if $css-variable-enabled {
+  $pagination-item-border-radius: var(--pagination-item-border-radius);
+  $pagination-item-border-width: var(--pagination-item-border-width);
+  $pagination-item-margin: var(--pagination-item-margin);
+  $pagination-item-padding: var(--pagination-item-padding);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}pagination {
   display: flex;
   justify-content: space-between;
@@ -37,12 +45,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
-      @if $css-variable-enabled {
-        margin: var(--pagination-item-margin);
-      } @else {
-        margin: $pagination-item-margin;
-      }
+      margin: $pagination-item-margin;
 
       > a[item], > a.#{$prefix}item {
         color: var(--pagination-item-text-color);
@@ -52,18 +55,10 @@
         background-color: var(--pagination-item-bg-color);
         cursor: pointer;
         user-select: none;
-
-        @if $css-variable-enabled {
-          padding: var(--pagination-item-padding);
-          border-width: var(--pagination-item-border-width);
-          border-radius: var(--pagination-item-border-radius);
-          transition: var(--primary-transition);
-        } @else {
-          padding: $pagination-item-padding;
-          border-width: $pagination-item-border-width;
-          border-radius: $pagination-item-border-radius;
-          transition: $primary-transition;
-        }
+        padding: $pagination-item-padding;
+        border-width: $pagination-item-border-width;
+        border-radius: $pagination-item-border-radius;
+        transition: $primary-transition;
 
         &:hover, &:focus {
           border-color: var(--pagination-item-hovered-border-color);

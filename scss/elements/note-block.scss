@@ -1,19 +1,19 @@
+@if $css-variable-enabled {
+  $note-block-border-radius: var(--note-block-border-radius);
+  $note-block-line-width: var(--note-block-line-width);
+  $note-block-margin: var(--note-block-margin);
+  $note-block-padding: var(--note-block-padding);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}note {
   background-color: var(--note-block-bg-color);
   overflow: hidden;
   position: relative;
-
-  @if $css-variable-enabled {
-    border-radius: var(--note-block-border-radius);
-    margin: var(--note-block-margin);
-    padding: var(--note-block-padding);
-    transition: background-color var(--primary-transition);
-  } @else {
-    border-radius: $note-block-border-radius;
-    margin: $note-block-margin;
-    padding: $note-block-padding;
-    transition: background-color $primary-transition;
-  }
+  border-radius: $note-block-border-radius;
+  margin: $note-block-margin;
+  padding: $note-block-padding;
+  transition: background-color $primary-transition;
 
   &:after {
     content: '';
@@ -22,12 +22,7 @@
     left: 0;
     height: 100%;
     background-color: var(--note-block-line-color);
-
-    @if $css-variable-enabled {
-      width: var(--note-block-line-width);
-    } @else {
-      width: $note-block-line-width;
-    }
+    width: $note-block-line-width;
   }
 
   @each $name, $color in $item-colors {

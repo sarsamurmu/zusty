@@ -1,3 +1,7 @@
+@if $css-variable-enabled {
+  $breadcrumb-font-size: var(--breadcrumb-font-size);
+}
+
 .#{$prefix}breadcrumb {
   display: block;
   cursor: default;
@@ -11,12 +15,7 @@
       margin-left: 8px;
       color: var(--breadcrumb-item-color);
       cursor: pointer;
-
-      @if $css-variable-enabled {
-        font-size: var(--breadcrumb-font-size);
-      } @else {
-        font-size: $breadcrumb-font-size;
-      }
+      font-size: $breadcrumb-font-size;
 
       &:not(:last-child):after {
         content: '/';
@@ -28,12 +27,7 @@
       > a {
         color: var(--breadcrumb-item-color);
         border-style: none;
-
-        @if $css-variable-enabled {
-          font-size: var(--breadcrumb-font-size);
-        } @else {
-          font-size: $breadcrumb-font-size;
-        }
+        font-size: $breadcrumb-font-size;
       }
 
       &[active], &.#{$prefix}active {

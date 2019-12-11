@@ -1,22 +1,22 @@
+@if $css-variable-enabled {
+  $radio-margin: var(--radio-margin);
+  $radio-label-margin: var(--radio-label-margin);
+  $radio-border-radius: var(--radio-border-radius);
+  $radio-border-width: var(--radio-border-width);
+  $radio-padding: var(--radio-padding);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}radio {
   display: inline-block;
   user-select: none;
-
-  @if $css-variable-enabled {
-    margin: var(--radio-margin);
-  } @else {
-    margin: $radio-margin;
-  }
+  margin: $radio-margin;
 
   span {
     vertical-align: middle;
 
     ~ span {
-      @if $css-variable-enabled {
-        margin-left: var(--radio-label-margin);
-      } @else {
-        margin-left: $radio-label-margin;
-      }
+      margin-left: $radio-label-margin;
     }
   }
 
@@ -35,18 +35,10 @@
       border-color: var(--radio-border-color);
       position: relative;
       overflow: hidden;
-
-      @if $css-variable-enabled {
-        border-radius: var(--radio-border-radius);
-        border-width: var(--radio-border-width);
-        padding: var(--radio-padding);
-        transition: var(--primary-transition);
-      } @else {
-        border-radius: $radio-border-radius;
-        border-width: $radio-border-width;
-        padding: $radio-padding;
-        transition: $primary-transition;
-      }
+      border-radius: $radio-border-radius;
+      border-width: $radio-border-width;
+      padding: $radio-padding;
+      transition: $primary-transition;
 
       &:after {
         content: '';
@@ -56,15 +48,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        opacity: 0;
-        background-color: #FFF;
         border-radius: 100px;
-
-        @if $css-variable-enabled {
-          transition: var(--primary-transition);
-        } @else {
-          transition: $primary-transition;
-        }
+        background-color: $transparent;
+        transition: $primary-transition;
       }
     }
 
@@ -73,8 +59,8 @@
       border-color: $transparent;
 
       &:after {
-        padding: 6px;
-        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(0.6);
+        background-color: #FFF;
       }
     }
 

@@ -1,6 +1,12 @@
 $padding-first: 10px;
 $padding-second: 5px;
 
+@if $css-variable-enabled {
+  $badge-border-radius: var(--badge-border-radius);
+  $badge-font-size: var(--badge-font-size);
+  $primary-transition: var(--primary-transition);
+}
+
 span.#{$prefix}badge {
   user-select: none;
   display: inline-block;
@@ -13,16 +19,9 @@ span.#{$prefix}badge {
     right: 8px;
     bottom: 8px;
   }
-
-  @if $css-variable-enabled {
-    font-size: var(--badge-font-size);
-    border-radius: var(--badge-border-radius);
-    transition: var(--primary-transition);
-  } @else {
-    font-size: $badge-font-size;
-    border-radius: $badge-border-radius;
-    transition: $primary-transition;
-  }
+  font-size: $badge-font-size;
+  border-radius: $badge-border-radius;
+  transition: $primary-transition;
 
   &.#{$prefix}outlined, .#{$prefix}badges-outlined & {
     background-color: $transparent;
@@ -52,14 +51,8 @@ div.#{$prefix}badge {
     user-select: none;
     padding: 4px;
     margin: 0px;
-
-    @if $css-variable-enabled {
-      font-size: var(--badge-font-size);
-      transition: var(--primary-transition);
-    } @else {
-      font-size: $badge-font-size;
-      transition: $primary-transition;
-    }
+    font-size: $badge-font-size;
+    transition: $primary-transition;
   }
 
   span:only-of-type {
@@ -69,12 +62,7 @@ div.#{$prefix}badge {
     padding: $padding ($padding + $extra) $padding ($padding + $extra);
     background-color: var(--badge-only-part-bg-color);
     color: var(--badge-only-part-text-color);
-
-    @if $css-variable-enabled {
-      border-radius: var(--badge-border-radius);
-    } @else {
-      border-radius: $badge-border-radius;
-    }
+    border-radius: $badge-border-radius;
   }
 
   span:first-child:not(:only-of-type) {
@@ -82,12 +70,7 @@ div.#{$prefix}badge {
     padding-right: $padding-second;
     background-color: var(--badge-first-part-bg-color);
     color: var(--badge-first-part-text-color);
-
-    @if $css-variable-enabled {
-      border-radius: var(--badge-border-radius) 0 0 var(--badge-border-radius);
-    } @else {
-      border-radius: $badge-border-radius 0 0 $badge-border-radius;
-    }
+    border-radius: $badge-border-radius 0 0 $badge-border-radius;
   }
 
   span:last-child:not(:only-of-type) {
@@ -95,12 +78,7 @@ div.#{$prefix}badge {
     padding-left: $padding-second;
     background-color: var(--badge-last-part-bg-color);
     color: var(--badge-last-part-text-color);
-
-    @if $css-variable-enabled {
-      border-radius: 0 var(--badge-border-radius) var(--badge-border-radius) 0;
-    } @else {
-      border-radius: 0 $badge-border-radius $badge-border-radius 0;
-    }
+    border-radius: 0 $badge-border-radius $badge-border-radius 0;
   }
 
   &.#{$prefix}rounded, .#{$prefix}badges-rounded & {

@@ -1,3 +1,14 @@
+@if $css-variable-enabled {
+  $tooltip-border-radius: var(--tooltip-border-radius);
+  $tooltip-font-size: var(--tooltip-font-size);
+  $tooltip-margin: var(--tooltip-margin);
+  $tooltip-padding: var(--tooltip-padding);
+  $tooltip-shadow: var(--tooltip-shadow);
+  $tooltip-translate: var(--tooltip-translate);
+  $tooltip-z-index: var(--tooltip-z-index);
+}
+$cssvar: $css-variable-enabled;
+
 $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
 
 [#{$prefix}tooltip] {
@@ -16,19 +27,11 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
     opacity: 0;
     transform: translateX(- $tooltip-translate);
     transition: all 0.3s ease 0s, visibility 0s ease 0.2s;
-    @if $css-variable-enabled {
-      z-index: var(--tooltip-z-index);
-      font-size: var(--tooltip-font-size);
-      border-radius: var(--tooltip-border-radius);
-      padding: var(--tooltip-padding);
-      box-shadow: var(--tooltip-shadow);
-    } @else {
-      z-index: $tooltip-z-index;
-      font-size: $tooltip-font-size;
-      border-radius: $tooltip-border-radius;
-      padding: $tooltip-padding;
-      box-shadow: $tooltip-shadow;
-    }
+    z-index: $tooltip-z-index;
+    font-size: $tooltip-font-size;
+    border-radius: $tooltip-border-radius;
+    padding: $tooltip-padding;
+    box-shadow: $tooltip-shadow;
   }
 
   @include small {
@@ -122,7 +125,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(- $tooltip-translate) translateX(-50%);
+      transform: translateY(if($cssvar, calc(0px - $tooltip-translate), - $tooltip-translate)) translateX(-50%);
     }
 
     #{$selector-text} {
@@ -140,7 +143,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(- $tooltip-translate);
+      transform: translateY(if($cssvar, calc(0px - $tooltip-translate), - $tooltip-translate));
     }
   }
 
@@ -152,7 +155,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(- $tooltip-translate);
+      transform: translateY(if($cssvar, calc(0px - $tooltip-translate), - $tooltip-translate));
     }
   }
 

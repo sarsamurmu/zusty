@@ -1,3 +1,11 @@
+@if $css-variable-enabled {
+  $navbar-border-bottom-width: var(--navbar-border-bottom-width);
+  $navbar-height: var(--navbar-height);
+  $navbar-shadow: var(--navbar-shadow);
+  $navbar-z-index: var(--navbar-z-index);
+  $primary-transition: var(--primary-transition);
+}
+
 .#{$prefix}navbar {
   background-color: var(--navbar-bg-color);
   position: fixed;
@@ -8,24 +16,24 @@
   padding: 10px 10px;
   border-bottom-style: solid;
   border-color: $transparent;
+  transition: $primary-transition;
+  z-index: $navbar-z-index;
+  height: $navbar-height;
+  box-shadow: $navbar-shadow;
+  border-width: $navbar-border-bottom-width;
 
-  @if $css-variable-enabled {
-    transition: var(--primary-transition);
-    z-index: var(--navbar-z-index);
-    height: var(--navbar-height);
-    box-shadow: var(--navbar-shadow);
-    border-width: var(--navbar-border-bottom-width);
-  } @else {
-    transition: $primary-transition;
-    z-index: $navbar-z-index;
-    height: $navbar-height;
-    box-shadow: $navbar-shadow;
-    border-width: $navbar-border-bottom-width;
+  @include large {
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   &.#{$prefix}flat {
     box-shadow: 0 0 $transparent;
     border-color: var(--light-color);
+  }
+
+  &.#{$prefix}right-aligned .#{$prefix}content {
+    justify-content: flex-end;
   }
 
   .#{$prefix}header {
@@ -34,6 +42,8 @@
     align-items: center;
     font-size: 24px;
     height: 100%;
+    flex: none;
+    width: auto;
 
     > img {
       height: 40px;
@@ -65,19 +75,33 @@
   .#{$prefix}content {
     display: inline-block;
 
+    @include large {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
     .#{$prefix}options {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      position: absolute;
-      top: 0;
-      bottom: 0;
       margin-left: 30px;
+
+      @include until-large {
+        top: 0;
+        bottom: 0;
+      }
 
       > * {
         margin-left: 20px;
         height: 100%;
         align-items: center;
+
+        @include large {
+          &:last-child {
+            margin-right: 20px;
+          }
+        }
       }
 
       > a:not(.#{$prefix}btn) {
@@ -120,11 +144,14 @@
 
     .#{$prefix}actions {
       display: inline-flex;
-      position: absolute;
-      top: 50%;
-      right: 30px;
-      transform: translateY(-50%);
       align-items: center;
+
+      @include until-large {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+      }
 
       button {
         margin: {
@@ -209,11 +236,7 @@
 
     &:not(.#{$prefix}flat) {
       > .#{$prefix}content {
-        @if $css-variable-enabled {
-          box-shadow: var(--navbar-shadow);
-        } @else {
-          box-shadow: $navbar-shadow;
-        }
+        box-shadow: $navbar-shadow;
       }
     }
   }
