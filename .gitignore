@@ -1,10 +1,9 @@
-*.html
-prepros-6.config
-demo/
-pages/
 node_modules
 package-lock.json
-*.sh
+
+demo/
+pages/public/
+
 *.dat
 *.map
 *.cmd
