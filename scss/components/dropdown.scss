@@ -10,8 +10,18 @@
   $dropdown-shadow: var(--dropdown-shadow);
   $dropdown-translate: var(--dropdown-translate);
   $dropdown-z-index: var(--dropdown-z-index);
+  $medium-text: var(--medium-text);
 }
 $cssvar: $css-variable-enabled;
+
+@mixin drop-label {
+  > span {
+    margin: 6px 10px;
+    display: inline-block;
+    color: var(--text-color-primary);
+    font-size: calc(#{$medium-text} + 2px);
+  }
+}
 
 .#{$prefix}dropdown {
   position: relative;
@@ -42,7 +52,7 @@ $cssvar: $css-variable-enabled;
   &.#{$prefix}center-aligned.#{$prefix}upside {
     > .#{$prefix}items {
       left: 50%;
-      transform: translate(-50%, if($cssvar, calc(0px - $dropdown-translate), - $dropdown-translate)) !important;
+      transform: translate(-50%, if($cssvar, calc(0px - #{$dropdown-translate}), - $dropdown-translate)) !important;
     }
 
     &:focus-within > .#{$prefix}items,
@@ -94,7 +104,9 @@ $cssvar: $css-variable-enabled;
     z-index: $dropdown-z-index;
     box-shadow: $dropdown-shadow;
     padding: $dropdown-padding;
-    margin-top: if($cssvar, calc($dropdown-margin - 4px), $dropdown-margin - 4px);
+    margin-top: if($cssvar, calc(#{$dropdown-margin} - 4px), $dropdown-margin - 4px);
+
+    @include drop-label;
 
     .#{$prefix}center-aligned & {
       transform: translateY($dropdown-translate);
@@ -178,6 +190,8 @@ $cssvar: $css-variable-enabled;
         z-index: $dropdown-z-index;
         box-shadow: $dropdown-shadow;
         padding: $dropdown-child-padding;
+
+        @include drop-label;
       }
 
       // Sizes
@@ -211,8 +225,8 @@ $cssvar: $css-variable-enabled;
       bottom: 100%;
       margin: 0;
       margin-left: 5px;
-      margin-bottom: if($cssvar, calc($dropdown-margin - 4px), $dropdown-margin - 4px);
-      transform: translateY(if($cssvar, calc(0px - $dropdown-translate), - $dropdown-translate));
+      margin-bottom: if($cssvar, calc(#{$dropdown-margin} - 4px), $dropdown-margin - 4px);
+      transform: translateY(if($cssvar, calc(0px - #{$dropdown-translate}), - $dropdown-translate));
     }
 
     li ul {
@@ -254,7 +268,7 @@ $cssvar: $css-variable-enabled;
     right: auto !important;
     margin: 0;
     margin-top: 5px !important;
-    margin-left: if($cssvar, calc($dropdown-margin - 4px), $dropdown-margin - 4px);
+    margin-left: if($cssvar, calc(#{$dropdown-margin} - 4px), $dropdown-margin - 4px);
     transform: translateX($dropdown-translate) !important;
   }
 
@@ -285,14 +299,14 @@ $cssvar: $css-variable-enabled;
     left: auto;
     margin: 0;
     margin-top: 5px;
-    margin-right: if($cssvar, calc($dropdown-margin - 4px), $dropdown-margin - 4px);
-    transform: translateX(if($cssvar, calc(0px - $dropdown-translate), - $dropdown-translate));
+    margin-right: if($cssvar, calc(#{$dropdown-margin} - 4px), $dropdown-margin - 4px);
+    transform: translateX(if($cssvar, calc(0px - #{$dropdown-translate}), - $dropdown-translate));
 
     li ul {
       left: auto !important;
       right: 100% !important;
       margin-right: $dropdown-child-margin !important;
-      transform: translateX(if($cssvar, calc(0px - $dropdown-translate), - $dropdown-translate)) !important;
+      transform: translateX(if($cssvar, calc(0px - #{$dropdown-translate}), - $dropdown-translate)) !important;
     }
   }
 
@@ -301,7 +315,7 @@ $cssvar: $css-variable-enabled;
     left: auto !important;
     right: 100% !important;
     margin-right: $dropdown-child-margin !important;
-    transform: translateX(if($cssvar, calc(0px - $dropdown-translate), - $dropdown-translate)) !important;
+    transform: translateX(if($cssvar, calc(0px - #{$dropdown-translate}), - $dropdown-translate)) !important;
   }
 
   // All Nested
@@ -309,7 +323,7 @@ $cssvar: $css-variable-enabled;
     left: auto !important;
     right: 100% !important;
     margin-right: $dropdown-child-margin !important;
-    transform: translateX(if($cssvar, calc(0px - $dropdown-translate), - $dropdown-translate)) !important;
+    transform: translateX(if($cssvar, calc(0px - #{$dropdown-translate}), - $dropdown-translate)) !important;
   }
 
   // Sizes

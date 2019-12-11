@@ -125,7 +125,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(if($cssvar, calc(0px - $tooltip-translate), - $tooltip-translate)) translateX(-50%);
+      transform: translateY(if($cssvar, calc(0px - #{$tooltip-translate}), - $tooltip-translate)) translateX(-50%);
     }
 
     #{$selector-text} {
@@ -143,7 +143,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(if($cssvar, calc(0px - $tooltip-translate), - $tooltip-translate));
+      transform: translateY(if($cssvar, calc(0px - #{$tooltip-translate}), - $tooltip-translate));
     }
   }
 
@@ -155,7 +155,7 @@ $selector-text: '&:hover, &:focus, &.#{$prefix}tooltip-active';
       bottom: auto;
       margin-left: 0 !important;
       margin-top: $tooltip-margin;
-      transform: translateY(if($cssvar, calc(0px - $tooltip-translate), - $tooltip-translate));
+      transform: translateY(if($cssvar, calc(0px - #{$tooltip-translate}), - $tooltip-translate));
     }
   }
 
