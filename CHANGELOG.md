@@ -1,8 +1,19 @@
+## v1.2.0
+#### New
+- Right aligned Navbar
+
+#### Fixes/Improvements
+- Card - Now card hovers up on `focus-within`
+- Tabs - Improved transiton
+- Radio - Improved transiton
+- Dropdown - Minor Improvements
+- Whole refactorization of CSS variable usage
+
 ## v1.1.2
 #### Fixes/Improvements
 - Updated Facebook Color.
 - Fixed Container Margin.
-- Fixed Buttons margin on fullwidth.
+- Fixed Button's margin on fullwidth.
 
 ## v1.1.1
 #### Fixes/Improvements

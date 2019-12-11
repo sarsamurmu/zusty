@@ -1,6 +1,6 @@
 
 <p align="center">
-<img width="240px" src="https://zustycss.com/docs/resource/zusty.svg" alt="Zusty">
+<img width="240" src="https://zustycss.com/docs/resource/zusty.svg" alt="Zusty">
 <h1 align="center">Zusty CSS</h1>
 </p>
 
@@ -65,4 +65,4 @@ This is the Starter Template that You can use to get started right away.
 ```
 
 ## License
-Zusty CSS is Licensed under the [MIT License](https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md).
+Zusty CSS is Licensed under the [MIT License](https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md), webpages under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
