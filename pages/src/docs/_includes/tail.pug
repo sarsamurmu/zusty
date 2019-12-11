@@ -1,0 +1,31 @@
+include copy-toast.pug
+#nextPrevContainer
+  a.prev
+    span.type Previous
+    span.title Sample
+  a.next
+    span.type Next
+    span.title Sample
+include sponsors.pug
+include footer.pug
+//- Dimmer
+.dimmer(onclick='hideSidenav()')
+//- Search
+.search-container
+  .input-box
+    .zust-flex.zust-justify-between
+      span Rapid Search Inside of Docs
+      label.zust-switch
+        span DocSearch 
+        input(type='checkbox' id='searchProvider')
+        span
+    br 
+    .zust-form-el
+      input#searchInput.zust-input(type="text" placeholder="Search for words, pages etc. Ex. checkbox")
+      div
+        input#docSearch.zust-input(type="text" placeholder="Search for words, pages etc. Ex. checkbox")
+    #searchResult
+script(src='/scripts/docs.js')
+if (!debug)
+  script.
+    registerWorker('/offliner.js');

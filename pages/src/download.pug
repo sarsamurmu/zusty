@@ -1,0 +1,111 @@
+doctype html
+html(lang='en' dir='ltr')
+  include _mixins.pug
+  head
+    +title('Download - Zusty CSS')
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(name='mobile-web-app-capable' content='yes')
+    meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1')
+    meta(name='description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    meta(name='author' content='Sarsa Murmu')
+    meta(name='keywords' content='zusty, css, framework, web, open-source, customizable, dark')
+    meta(property='og:site_name' content='Zusty CSS')
+    // Open Graph data
+    meta(property='og:type' content='framework')
+    meta(property='og:url' content='https://zustycss.com/download')
+    meta(property='og:image' content='/resources/brand_logo.png')
+    meta(property='og:description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    meta(property='og:site_name' content='Zusty CSS')
+    meta(property='og:locale' content='en_US')
+    link(rel='canonical' href='https://zustycss.com/download')
+    // Twitter
+    // Twitter Card data
+    meta(name='twitter:card' content='summary')
+    meta(name='twitter:creator' content='@sarsamurmu')
+    meta(name='twitter:site' content='@sarsamurmu')
+    meta(name='twitter:title' content='Zusty CSS')
+    meta(name='twitter:description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    // Twitter summary card with large image must be at least 280x150px
+    meta(name='twitter:image:src' content='/resources/brand_logo.png')
+    // Theme Colors
+    meta(name='theme-color' content='#FFFFFF')
+    meta(name='msapplication-TileColor' content='#00b881')
+    meta(name='msapplication-navbutton-color' content='#00b881')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#00b881')
+    // Favicons
+    link(rel='shortcut icon' href='/resources/favicon.png')
+    link(rel='apple-touch-icon' href='/resources/favicon.png')
+    link(rel='apple-touch-icon' sizes='192x192' href='/resources/favicon.png')
+    link(rel='apple-touch-icon-precomposed' href='/resources/favicon.png')
+    meta(name='msapplication-TileImage' content='/resources/favicon.png')
+    link(rel='icon' href='/resources/favicon.png' sizes='192x192' type='image/png')
+    // Apply The Theme Before Anything Loads
+    script(src='/scripts/theme-apply.js')
+    // CSS
+    if (!debug)
+      link(rel='stylesheet' href='/resources/zusty.min.css')
+    else
+      link(rel='stylesheet' href='/dist/zusty.css')
+    link(rel='stylesheet' href='/stylesheets/download.css')
+    script(defer src='/resources/font-awesome-v5.8.1.js')
+  body
+    
+    +nav('download')
+    
+    .zust-note.zust-link
+      p About file structure
+      pre
+        code.
+           Your SCSS file's location is next to zusty.scss
+           Project View
+            ├─ scss
+            │   ├─ component
+            │   ├─ core
+            │   ├─ elements
+            │   ├─ form
+            │   ├─ helpers
+            │   ├─ variants
+            │   └─ container.scss
+            ├─ zusty.scss
+            └─ yourfile.scss
+          
+            So you can easily import zusty by using
+            @import "zusty";
+          
+            Learn more by reading these two docs
+            <a href="/docs/general/customization-scss">zustycss.com/docs/general/customization-scss</a>
+            <a href="/docs/general/variables">zustycss.com/docs/general/variables</a>
+    
+    .zust-justify-between.zust-align-center(class='zust-flex@large')
+      h3 Write down your SCSS below
+      .div
+        span(style='margin-right: 10px;') Choose Example: 
+        p.zust-form-el
+          select#example.zust-select.zust-with-icon-right
+            option(value='default' selected) Default
+            option(value='prefixless') Prefixless
+            option(value='custom-variables') Custom Variables
+            option(value='partly-import') Partly Import
+          span.zust-icon.zust-right: span.zust-angle-down
+      br(class='zust-hidden zust-visible@until-large')
+    
+    textarea#editor(style='display: none')
+      
+    #errorView.zust-note.zust-hidden.zust-error: p: code
+    
+    h3 Choose output style and Download
+    p.zust-form-el
+      select#outputStyle.zust-select.zust-with-icon-right
+        option(value='nested') Nested
+        option(value='expanded') Expanded
+        option(value='compact') Compact
+        option(value='compressed' selected) Compressed
+      span.zust-icon.zust-right: span.zust-angle-down
+    button.zust-btn.zust-link(onclick='download()' style='margin-left: 20px') Download
+    
+    script(src='/scripts/sass.js')
+    script(src='/scripts/download.js')
+    
+    +footer
+
+    include _includes/tail.pug

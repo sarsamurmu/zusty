@@ -1,0 +1,267 @@
+.CodeMirror {
+  background: var(--editor-bg-clr);
+  color: var(--editor-txt-clr);
+  direction: ltr;
+  font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-family: monospace;
+  height: 100%;
+  height: 300px;
+  line-height: 1.4em;
+  overflow: hidden;
+  position: relative;
+}
+
+.CodeMirror-linenumber {
+  min-width: 20px;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--linenumber-txt-clr);
+  padding: 1px 8px 0 5px;
+  font-size: 11px;
+}
+
+.CodeMirror-cursor {
+  border-left: 2px solid var(--cursor-clr);
+  position: absolute;
+  pointer-events: none;
+  border-right: none;
+  width: 0;
+}
+
+.CodeMirror-lint-tooltip {
+  background: var(--lint-tooltip-bg-clr);
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.52em;
+  color: var(--lint-tooltip-txt-clr);
+  overflow: hidden;
+  padding: 10px 14px;
+  position: fixed;
+  white-space: pre;
+  white-space: pre-wrap;
+  z-index: 100;
+  max-width: 600px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  font-variant-ligatures: none;
+}
+
+.CodeMirror-lint-mark-error {
+  border-bottom: 2px solid var(--lint-mark-error-clr);
+}
+
+.CodeMirror-lint-mark-warning {
+  border-bottom: 2px solid var(--lint-mark-warning-clr);
+}
+
+.CodeMirror-lint-message-error:before {
+  background: var(--lint-mark-error-clr);
+}
+
+.CodeMirror-lint-message-warning:before {
+  background: var(--lint-mark-warning-clr);
+}
+
+.CodeMirror-lint-marker-error {
+  background: var(--lint-mark-error-clr);
+}
+
+.CodeMirror-lint-marker-warning {
+  background: var(--lint-mark-warning-clr);
+}
+
+.CodeMirror-hints {
+  position: absolute;
+  z-index: 300;
+  overflow: hidden;
+  padding: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  border: 1px solid var(--hints-border-clr);
+  background: var(--hints-bg-clr);
+  font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console",
+    "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-size: 11px;
+  max-height: 20em;
+  overflow-y: auto;
+}
+
+.CodeMirror-hint {
+  padding: 5px 8px;
+  border-radius: 8px;
+  white-space: pre;
+  color: var(--hint-txt-clr);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+li.CodeMirror-hint-active {
+  background: var(--hint-active-bg-clr);
+  color: var(--hint-active-txt-clr);
+}
+
+/* Highlights */
+.cm-header {
+  color: var(--code-header);
+}
+.cm-quote {
+  color: var(--code-quote);
+}
+.cm-negative {
+  color: var(--code-negative);
+}
+.cm-positive {
+  color: var(--code-positive);
+}
+.cm-header,
+.cm-strong {
+  font-weight: bold;
+}
+.cm-em {
+  font-style: italic;
+}
+.cm-link {
+  text-decoration: underline;
+}
+.cm-strikethrough {
+  text-decoration: line-through;
+}
+.cm-number {
+  color: var(--code-number);
+}
+.cm-keyword {
+  color: var(--code-keyword);
+}
+.cm-def {
+  color: var(--code-def);
+}
+.cm-operator {
+  color: var(--code-operator);
+}
+.cm-variable,
+.cm-variable-2 {
+  color: var(--code-variable-2);
+}
+.cm-variable-3 {
+  color: var(--code-variable-3);
+}
+.cm-comment {
+  color: var(--code-comment);
+}
+.cm-string {
+  color: var(--code-string);
+}
+.cm-string-2 {
+  color: var(--code-string-2);
+}
+.cm-meta {
+  color: var(--code-meta);
+}
+.cm-builtin,
+.cm-qualifier {
+  color: var(--code-builtin);
+}
+.cm-tag {
+  color: var(--code-tag);
+}
+.cm-bracket {
+  color: var(--code-bracket);
+}
+.cm-attribute {
+  color: var(--code-attribute);
+}
+.cm-hr {
+  color: var(--code-hr);
+}
+.cm-link {
+  color: var(--code-link);
+}
+.cm-callee {
+  color: var(--code-function);
+}
+
+.cm-invalidchar,
+.cm-error,
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  background: var(--code-error-bg-clr);
+  color: var(--code-error-txt-clr);
+}
+
+.CodeMirror-focused .CodeMirror-selected,
+.CodeMirror-selected {
+  background: var(--selected-highlight-clr);
+}
+
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+  background: var(--selected-highlight-clr);
+}
+
+.CodeMirror-line::-moz-selection,
+.CodeMirror-line > span::-moz-selection,
+.CodeMirror-line > span > span::-moz-selection {
+  background: var(--selected-highlight-clr);
+}
+
+.CodeMirror-matchingbracket {
+  border-bottom: 2px solid var(--matching-clr);
+}
+
+.emmet-open-tag,
+.emmet-close-tag {
+	border-bottom: 1px solid var(--matching-clr);
+}
+
+.emmet-abbreviation {
+  border-bottom: 1px dotted var(--matching-clr);
+}
+
+.emmet-preview:not(.emmet-preview__expand) {
+  float: right;
+}
+
+.emmet-label {
+  font-family: serif;
+  font-weight: 600;
+}
+
+.CodeMirror-activeline-background,
+.CodeMirror-activeline-gutter {
+  background-color: var(--active-line-bg-clr);
+}
+
+.CodeMirror-gutter-elt .CodeMirror-line-error {
+  color: #ff4d4d;
+  cursor: help;
+  height: 100%;
+  padding: 0 3px;
+}
+
+.CodeMirror-error-tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  font-size: 13px;
+  opacity: 0.95;
+  line-height: 1.4em;
+  padding: 10px;
+  max-width: 300px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  border: 1px solid #acb3b9;
+}
+
+.CodeMirror-gutters {
+  background-color: var(--editor-bg-clr);
+  min-width: 2em;
+  height: 100%;
+  border-right: 0;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-gutter .CodeMirror-linenumber {
+  color: var(--active-line-gutter-txt-clr);
+}

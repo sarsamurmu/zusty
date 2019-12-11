@@ -1,0 +1,130 @@
+doctype html
+html(lang='en' dir='ltr')
+  include ../_mixins.pug
+  head
+    +title('Docs - Zusty CSS')
+    link(rel="manifest" href="manifest.json")
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(name='mobile-web-app-capable' content='yes')
+    meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1')
+    meta(name='description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    meta(name='author' content='Sarsa Murmu')
+    meta(name='keywords' content='zusty, css, framework, web, open-source, customizable, dark')
+    meta(property='og:site_name' content='Zusty CSS')
+    if (!debug)
+      // Global site tag (gtag.js) - Google Analytics 
+      script(async src="https://www.googletagmanager.com/gtag/js?id=UA-142857751-1")
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-142857751-1');
+    // Open Graph data
+    meta(property='og:type' content='documentation')
+    meta(property='og:url' content=canonical)
+    meta(property='og:image' content='/resources/brand_logo.png')
+    meta(property='og:description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    meta(property='og:site_name' content='Zusty CSS')
+    meta(property='og:locale' content='en_US')
+    link(rel='canonical' href=canonical)
+    // Twitter
+    // Twitter Card data
+    meta(name='twitter:card' content='summary')
+    meta(name='twitter:creator' content='@sarsamurmu')
+    meta(name='twitter:site' content='@sarsamurmu')
+    meta(name='twitter:title' content='Zusty CSS')
+    meta(name='twitter:description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    // Twitter summary card with large image must be at least 280x150px
+    meta(name='twitter:image:src' content='/resources/brand_logo.png')
+    // Theme Colors
+    meta(name='theme-color' content='#FFFFFF')
+    meta(name='msapplication-TileColor' content='#00b881')
+    meta(name='msapplication-navbutton-color' content='#00b881')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#00b881')
+    // Favicons
+    link(rel='shortcut icon' href='/resources/favicon.png')
+    link(rel='apple-touch-icon' href='/resources/favicon.png')
+    link(rel='apple-touch-icon' sizes='192x192' href='/resources/favicon.png')
+    link(rel='apple-touch-icon-precomposed' href='/resources/favicon.png')
+    meta(name='msapplication-TileImage' content='/resources/favicon.png')
+    link(rel='icon' href='/resources/favicon.png' sizes='192x192' type='image/png')
+    // Apply The Theme Before Anything Loads
+    script(src='/scripts/theme-apply.js')
+    // CSS
+    if (!debug)
+      link(rel='stylesheet' href='/resources/zusty.min.css')
+    else
+      link(rel='stylesheet' href='/dist/zusty.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/doc-front.css')
+    style.
+      @media all and (display-mode: standalone) {
+        .hidden-standalone {
+          display: none;
+        }
+      }
+      
+      @media screen and (max-width: 768px) {
+        .zust-container a {
+          display: block;
+          position: relative;
+          width: 100%;
+          border-style: none;
+        }
+        
+        .zust-container a .zust-card {
+          display: flex;
+          max-width: 1000px;
+          flex-direction: column;
+        }
+      }
+  body
+    
+    +nav('docs')
+    
+    h1.zust-text-center Welcome to Zusty Docs
+    p.zust-text-center Here You can Find How You can use Zusty CSS in your Web Project.
+    p.hidden-standalone.zust-text-center(class='zust-hidden@large') Add it to Homescreen for Better Performance.
+    p.hidden-standalone.zust-text-center(class='zust-hidden@until-large') Install it as an App for Better Performance.
+    br
+    .zust-container.zust-f-centered
+      a(href="general")
+        .zust-card.zust-hoverable
+          h2 General
+          p Get to know How You can Get Started, Theme, Customize Zusty.
+      |
+      a(href="helpers")
+        .zust-card.zust-hoverable
+          h2 Helpers
+          p Bunch of Helpers for easily changing CSS Property.
+      |
+      a(href="elements")
+        .zust-card.zust-hoverable
+          h2 Elements
+          p Elements which mostly need a small markup.
+          br
+      |
+      a(href="container")
+        .zust-card.zust-hoverable
+          h2 Container
+          p Container to contain bunch of Elements.
+          br
+      |
+      a(href="form")
+        .zust-card.zust-hoverable
+          h2 Form
+          p For making Clean and Sleek Forms.
+          br
+      |
+      a(href="components")
+        .zust-card.zust-hoverable
+          h2 Components
+          p Made with bunch of Elements, with Better Options.
+      |
+    
+    +footer
+    
+    if (!debug)
+      script(src='/scripts/worker.js')
+      script.
+        registerWorker('/offliner.js');

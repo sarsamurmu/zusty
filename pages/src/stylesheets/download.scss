@@ -1,0 +1,49 @@
+@import "./../../../scss/core/var-only.scss";
+@import "imports/navbar.scss";
+@import "imports/footer.scss";
+@import "imports/worker-toast";
+
+@import "imports/editor/base.scss";
+@import "imports/editor/theme.scss";
+@import "imports/editor/themed.scss";
+
+@import "/resources/fonts.css";
+
+body {
+  padding-top: 70px;
+  font-family: 'Varela Round', sans-serif;
+
+  @include large {
+    padding-top: 90px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+button, select {
+  font-family: 'Varela Round', sans-serif;
+}
+
+h3 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: normal;
+}
+
+.CodeMirror {
+  border-radius: 10px;
+}
+
+pre {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 5px;
+}
+
+code {
+  font-family: 'Consolas', monospace;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 60px;
+}

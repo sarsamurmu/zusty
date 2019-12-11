@@ -1,0 +1,103 @@
+doctype html
+html(lang='en' dir='ltr')
+  include _mixins.pug
+  head
+    +title('Zusty CSS')
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(name='mobile-web-app-capable' content='yes')
+    meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1')
+    meta(name='description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    meta(name='author' content='Sarsa Murmu')
+    meta(name='keywords' content='zusty, css, framework, web, open-source, customizable, dark')
+    meta(property='og:site_name' content='Zusty CSS')
+    meta(name='google-site-verification' content='kG4hnFcgLhxRq1RIsBQbYI-kwFbS_LhLFRJZqTsfBSc')
+    if (!debug)
+      // Global site tag (gtag.js) - Google Analytics
+      script(async src="https://www.googletagmanager.com/gtag/js?id=UA-142857751-2")
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142857751-2');
+    // Open Graph data
+    meta(property='og:type' content='framework')
+    meta(property='og:url' content='https://zustycss.com')
+    meta(property='og:image' content='/resources/brand_logo.png')
+    meta(property='og:description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    meta(property='og:site_name' content='Zusty CSS')
+    meta(property='og:locale' content='en_US')
+    link(rel='canonical' href='https://zustycss.com')
+    // Twitter
+    // Twitter Card data
+    meta(name='twitter:card' content='summary')
+    meta(name='twitter:creator' content='@sarsamurmu')
+    meta(name='twitter:site' content='@sarsamurmu')
+    meta(name='twitter:title' content='Zusty CSS')
+    meta(name='twitter:description' content='Power Packed CSS Framework for Building Beautiful Interfaces.')
+    // Twitter summary card with large image must be at least 280x150px
+    meta(name='twitter:image:src' content='/resources/brand_logo.png')
+    // Theme Colors
+    meta(name='theme-color' content='#FFFFFF')
+    meta(name='msapplication-TileColor' content='#00b881')
+    meta(name='msapplication-navbutton-color' content='#00b881')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#00b881')
+    // Favicons
+    link(rel='shortcut icon' href='/resources/favicon.png')
+    link(rel='apple-touch-icon' href='/resources/favicon.png')
+    link(rel='apple-touch-icon' sizes='192x192' href='/resources/favicon.png')
+    link(rel='apple-touch-icon-precomposed' href='/resources/favicon.png')
+    meta(name='msapplication-TileImage' content='/resources/favicon.png')
+    link(rel='icon' href='/resources/favicon.png' sizes='192x192' type='image/png')
+    // Apply The Theme Before Anything Loads
+    script(src='/scripts/theme-apply.js')
+    // CSS
+    if (!debug)
+      link(rel='stylesheet' href='/resources/zusty.min.css')
+    else
+      link(rel='stylesheet' href='/dist/zusty.css')
+    link(rel='stylesheet' href='/stylesheets/homepage.css')
+    script(defer src='/resources/font-awesome-v5.8.1.js')
+  body
+    
+    +nav('home', 'hideLogo')
+    
+    .hero
+      img(class='heroImage' src='/resources/zusty.svg' width='300' alt='brand_logo')
+      h1.primary Power Packed CSS Framework for Building Beautiful Interfaces
+      p.
+        Zusty CSS is CSS Framework built on the best features. The main aim is to provide a simple yet customizable 
+        framework. Though it is still in development. Try it now!
+      .links
+        a.zust-btn.zust-link(href='/docs/general/getting-started') Get Started
+        a.zust-btn.zust-custom.discord(href='https://discord.gg/cVDFTjt')
+          span.zust-icon: i.fab.fa-discord
+          span Discord
+    
+    .feature
+      h2 Theameable
+      p Zusty is made with theming in mind, so it's themeable from its core. You can even make yours in just few steps.
+    
+    .feature
+      h2 Modular
+      p Like all frameworks, it's modular too. You can just use what you need, not the whole bundle.
+    
+    .feature
+      h2 Customizable
+      p Like theming, it's also customizable. There are lots of variables to change the style or appearance of any element or component.
+    
+    .feature
+      h2 Responsive
+      p Zusty CSS is completely responsive, nothing will look bad on any screen.
+    
+    .feature
+      h2 Open Source
+      p The best thing is that, its totally open source. You can help us make it better too.
+      
+    h1.endText Now what? Let's #[a(href='/docs/general/getting-started') Get Started] :D
+    
+    +footer
+    
+    script(src='/scripts/homepage.js')
+
+    include _includes/tail.pug

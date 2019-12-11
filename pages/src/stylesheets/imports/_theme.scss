@@ -1,0 +1,9 @@
+:root, [zust-theme="light"] {
+  --scrollbar-color: #BDBDBD;
+  --sidenav-bg-color: hsl(0, 0%, 96%);
+}
+
+[zust-theme="dark"] {
+  --scrollbar-color: #616161;
+  --sidenav-bg-color: hsl(0, 0%, 18%);
+}

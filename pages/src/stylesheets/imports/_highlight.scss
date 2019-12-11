@@ -1,0 +1,178 @@
+.tag {
+  color: #fa3d58
+}
+
+.attr-name,
+.selector,
+.keyword,
+.attr {
+  color: #e38800
+}
+
+.string,
+.attr-value,
+.class {
+  color: #2AAB51
+}
+
+.property,
+.variable {
+  color: #108de8
+}
+
+.function,
+.doctype {
+  color: #8d44eb
+}
+
+.punctuation {
+  color: var(--body-text-color);
+}
+
+.comment {
+  color: #abb8c6
+}
+
+[zust-theme=dark] {
+  .tag {
+    color: #ec5f67
+  }
+
+  .attr-name,
+  .selector,
+  .keyword,
+  .attr {
+    color: #99c794
+  }
+
+  .string,
+  .attr-value,
+  .class {
+    color: #fac863
+  }
+
+  .property,
+  .variable {
+    color: #ec5f67
+  }
+
+  .function,
+  .doctype {
+    color: #bb8ff3
+  }
+
+  .comment {
+    color: #65737e
+  }
+}
+
+// [zust-theme="dark"] {
+//   .hljs-comment,.hljs-quote {
+//     color: #65737e
+//   }
+//
+//   .hljs-keyword,.hljs-variable,.hljs-template-variable,.hljs-tag,.hljs-name,.hljs-selector-id,.hljs-regexp,.hljs-deletion {
+//     color: #ec5f67
+//   }
+//
+//   .hljs-number,.hljs-built_in,.hljs-builtin-name,.hljs-literal,.hljs-type,.hljs-params,.hljs-meta,.hljs-link {
+//     color: #c594c5
+//   }
+//
+//   .hljs-string,.hljs-selector-class {
+//     color: #fac863
+//   }
+//
+//   .hljs-symbol,.hljs-bullet,.hljs-addition,.hljs-attr,.hljs-attribute {
+//     color: #99c794
+//   }
+//
+//   .hljs-title,.hljs-section {
+//     color: #72beff
+//   }
+//
+//   .hljs-selector-tag {
+//     color: #f99157
+//   }
+// }
+
+// New Theme Start
+// .hljs-comment,
+// .hljs-quote {
+//   color: #abb8c6; }
+//
+// .hljs-variable,
+// .hljs-template-variable,
+// .hljs-regexp,
+// .hljs-deletion,
+// .hljs-keyword,
+// .hljs-selector-id,
+// .hljs-selector-class,
+// .hljs-selector-tag,
+// .hljs-attr {
+//   color: #e38800; }
+//
+// .hljs-built_in,
+// .hljs-builtin-name,
+// .hljs-literal,
+// .hljs-type,
+// .hljs-params,
+// .hljs-meta,
+// .hljs-link {
+//   color: #8d44eb; }
+//
+// .hljs-selector-id,
+// .hljs-selector-class,
+// .hljs-selector-tag,
+// .hljs-attr {
+//   color: #e77600; }
+//
+// .hljs-attribute {
+//   color: #108de8; }
+//
+// .hljs-string,
+// .hljs-symbol,
+// .hljs-bullet,
+// .hljs-addition {
+//   color: #2AAB51; }
+//
+// .hljs-subst,
+// .hljs-number {
+//   color: #ED6E55; }
+//
+// .hljs-title,
+// .hljs-section,
+// .hljs-name {
+//   color: #fa3d58; }
+//
+// .hljs-emphasis {
+//   font-style: italic; }
+//
+// .hljs-strong {
+//   font-weight: bold; }
+// New Theme End
+
+//
+// .hljs-keyword,.hljs-variable,.hljs-template-variable,.hljs-tag,.hljs-name,.hljs-selector-id,.hljs-regexp,.hljs-deletion {
+//   color: #ec5f67
+// }
+//
+// .hljs-number,.hljs-built_in,.hljs-builtin-name,.hljs-literal,.hljs-type,.hljs-params,.hljs-meta,.hljs-link {
+//   color: #c594c5
+// }
+//
+// .hljs-string,.hljs-selector-class {
+//   color: #e4a21b
+// }
+//
+// .hljs-symbol,.hljs-bullet,.hljs-addition,.hljs-attr,.hljs-attribute {
+//   color: #59b34f
+// }
+//
+// .hljs-title,.hljs-section {
+//   color: #a7adba
+// }
+//
+// .hljs-selector-tag {
+//   color: #f99157
+// }

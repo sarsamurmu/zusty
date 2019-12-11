@@ -1,0 +1,219 @@
+.sidenav {
+  position: fixed;
+  transform: translateX(0);
+  background-color: var(--sidenav-bg-color);
+  transition: all 0.2s, transform 0.5s;
+  z-index: 10;
+  overflow-x: hidden;
+
+  &.zust--visible {
+    transform: translateX(100%);
+  }
+
+  @include until-large {
+    bottom: -500px;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &.zust--visible {
+      transform: translateY(-550px);
+    }
+  }
+
+  @include large {
+    transform: translateX(100%);
+    top: 0;
+    left: -230px;
+    width: 230px;
+    height: 100%;
+  }
+
+  > .nav-image {
+    margin-left: 115px - 60px;
+    $size: 120px;
+    width: $size;
+    height: $size;
+    transform: translateX(-50%) !important;
+
+    img {
+      margin-top: 20px;
+      $size: 120px;
+      width: $size;
+      height: $size;
+    }
+  }
+
+  > .toolbar {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  $sidenav-changing: 0.3s;
+
+  %header {
+    color: var(--text-color-primary);
+    font-size: 20px;
+    font-family: 'Lexend', sans-serif;
+    transition: all 0.5s ease 0s, color 0.5s ease 0s;
+
+    &:hover {
+      background-color: $transparent;
+    }
+  }
+
+  > .home-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    transition: all $sidenav-changing ease-in-out 0s, color 0s linear 0s;
+
+    &.zust--hidden {
+      margin-left: 0;
+      transform: translate(-100%, 0);
+
+      a {
+        pointer-events: none;
+      }
+    }
+
+    .subSection {
+      padding: 0;
+
+      a {
+        color: var(--text-color-secondary);
+
+        &:hover > span {
+          background-color: rgba(144, 144, 144, 0.1);
+        }
+
+        &:focus > span {
+          background-color: var(--primary-color);
+          color: var(--primary-text-color);
+        }
+
+        &.zust-active > span {
+          color: var(--primary-text-color);
+          background-color: var(--primary-color);
+          padding: 12px 10px;
+        }
+      }
+
+      span {
+       display: block;
+       text-align: center;
+       cursor: pointer;
+       width: 230px;
+       background-color: $transparent;
+       margin: 10px 0;
+       padding: 10px 10px;
+       user-select: none;
+       transition: all 0.8s ease 0s, color 0s ease 0s;
+
+       @include until-large {
+         width: 100vw;
+       }
+
+       &.header {
+         @extend %header;
+       }
+
+       &:hover {
+         background-color: rgba(144, 144, 144, 0.1);
+       }
+     }
+    }
+  }
+
+  > .sub-item-container {
+    position: absolute;
+    margin-left: 150%;
+    transform: translate(100%, 0);
+    transition: all $sidenav-changing ease-in-out 0s, color 0s ease 0s;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+
+    &.zust--visible {
+      margin-left: 50%;
+      transform: translate(50%, 0);
+      opacity: 1;
+    }
+  }
+
+  .sub-item {
+    position: absolute;
+    margin-left: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    visibility: hidden;
+    transition: all $sidenav-changing ease 0s, color 0s ease 0s;
+    height: 400px;
+    overflow: hidden;
+
+    &.zust--visible {
+      visibility: visible;
+      height: auto;
+      overflow: visible;
+    }
+
+    .subSection {
+      padding: 0;
+
+      a {
+        color: var(--text-color-secondary);
+
+        &:hover > span {
+          background-color: rgba(144, 144, 144, 0.1);
+        }
+
+        &:focus > span {
+          transition: all 0.5s ease 0s, color 0.2s ease 0s;
+          background-color: var(--primary-color);
+          color: var(--primary-text-color);
+        }
+
+        &.zust-active > span {
+          color: var(--primary-text-color);
+          background-color: var(--primary-color);
+          padding: 12px 10px;
+        }
+      }
+
+      span {
+       display: block;
+       text-align: center;
+       cursor: pointer;
+       width: 230px;
+       background-color: $transparent;
+       margin: 10px 0;
+       padding: 10px 10px;
+       user-select: none;
+       transition: all 0.5s ease 0s, color 0s ease 0s;
+
+       @include until-large {
+         width: 100vw;
+       }
+
+       &.header {
+         @extend %header;
+       }
+
+       &:hover {
+         background-color: rgba(144, 144, 144, 0.1);
+       }
+     }
+    }
+  }
+}

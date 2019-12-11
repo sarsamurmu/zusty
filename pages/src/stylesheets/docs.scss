@@ -1,0 +1,440 @@
+// From Zusty SCSS
+@import './../../../scss/core/var-only.scss';
+
+@import "imports/values.scss";
+@import "imports/sidenav.scss";
+@import "imports/searchbar.scss";
+@import "imports/theme.scss";
+@import "imports/dimmer.scss";
+@import "imports/bottombar.scss";
+@import "imports/highlight.scss";
+@import "imports/search.scss";
+@import "imports/footer.scss";
+@import "imports/worker-toast";
+
+@import "/resources/fonts.css";
+
+body {
+  padding: 18px;
+  overflow-x: hidden;
+
+  @include large {
+    padding-top: 38px;
+    padding-left: 253px;
+    padding-right: 228px;
+  }
+
+  > h2, > h3, > h4, > h5 {
+    margin-top: -30px;
+    padding-top: 30px;
+  }
+}
+
+* {
+  font-family: 'Varela Round', sans-serif;
+}
+
+h2[id], h3[id], h4[id], h5[id] {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: 'link';
+    font-family: 'Material Icons';
+    margin-left: 5px;
+    height: 1em;
+    width: 1em;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    margin-left: 10px;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-family: 'Lexend', sans-serif;
+}
+
+.zust-dialog h2 {
+  padding: 0;
+}
+
+@include large {
+  ::-webkit-scrollbar {
+    $size: 5px;
+    height: $size;
+    width: $size;
+    transition: 0.5s;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 100px;
+    transition: 0.5s;
+  }
+}
+
+::selection {
+  background-color: var(--primary-color-light);
+
+  [zust-theme=dark] & {
+    background-color: rgba(144, 144, 144, 0.17);
+  }
+}
+
+code[inline] {
+  padding: 0 8px;
+  border-radius: 100px;
+  margin: 1px 3px;
+  transition: $primary-transition;
+  background-color: rgba(144, 144, 144, 0.1);
+  font-size: 15px;
+  font-family: 'Consolas', monospace;
+
+  * {
+    font-family: 'Consolas', monospace;
+  }
+}
+
+.code-container {
+  position: relative;
+  background-color: #f3f5f6;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+
+  [zust-theme=dark] & {
+    background-color: var(--light-color);
+  }
+
+  div.code {
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+    overflow-x: auto;
+
+    pre {
+      display: inline-block;
+      margin-right: 50px;
+      margin-left: 20px;
+    }
+
+    code {
+      font-family: 'Consolas', monospace;
+
+      * {
+        font-family: 'Consolas', monospace;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    padding: 4px;
+    padding-bottom: 0;
+    margin-top: 4px;
+    border-radius: 100px;
+    transition: 0.3s;
+    color: var(--text-color-primary);
+
+    &.launchBtn {
+      right: 25px;
+    }
+
+    &:hover {
+      background-color: rgba(144, 144, 144, 0.3);
+    }
+
+    .zust-icon {
+      --icon-size: 16px;
+      margin: 0 !important;
+      color: var(--text-color-secondary);
+    }
+  }
+}
+
+.h[divider] {
+  opacity: 0.3;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+hr {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--divider-color);
+  opacity: 0.2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: $primary-transition;
+}
+
+.snippet-container {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: var(--dropdown-border-color);
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: hsla(168, 76%, 42%, 0.6);
+  }
+
+  .snippet {
+    padding: 20px;
+  }
+
+  .code-container {
+    border-radius: 8px 8px 4px 4px;
+  }
+}
+
+div.code, code, pre {
+  font-family: 'Consolas', monospace !important;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+div.code pre span {
+  font-family: 'Consolas', monospace !important;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.docs-sponsor-main {
+  hr {
+
+    &:first-child {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-top: 30px;
+    }
+  }
+
+  .docs-sponsor-container {
+    transition: background-color 0.2s;
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    > div:first-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fill-available;
+      font-size: 19px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    > img {
+      width: 240px;
+    }
+
+    > * {
+      margin: 8px;
+      border-radius: 10px;
+    }
+  }
+
+  @include large {
+    transition: 0.2s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-style: solid;
+    border-width: 0;
+    border-left-width: 2px;
+    border-color: var(--light-color);
+
+    hr {
+      display: none;
+    }
+
+    .docs-sponsor-container {
+      margin: 0;
+      width: 190px;
+      height: 100%;
+      display: block;
+
+      > img {
+        width: 190px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.container-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  border-radius: 10px;
+  padding-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+// Copy Toast
+.copy-toast {
+  position: fixed;
+  top: -52px;
+  right: 200px;
+  height: 50px;
+  background-color: #323232;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+  z-index: 10;
+
+  span {
+    color: white;
+  }
+
+  .zust-icon {
+    margin-right: 10px;
+    color: $turquoise;
+  }
+
+  &.zust--visible {
+    transform: translateY(140%);
+  }
+
+  @include small {
+    width: 100%;
+    border-radius: 0;
+    right: 0;
+
+    &.zust--visible {
+      transform: translateY(100%);
+    }
+  }
+}
+
+.zust-column:not(.zust-container) {
+  text-align: center;
+  border-radius: 8px;
+}
+
+.nav-container {
+  position: relative;
+  height: max-content;
+  height: 100px;
+
+  nav {
+    position: absolute;
+  }
+}
+
+.color-block {
+  padding: 10px;
+}
+
+.copyright-txt {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  display: block;
+  margin-top: -10px;
+
+  * {
+    font-family: 'Lexend', sans-serif;
+  }
+}
+
+footer {
+  @include large {
+    left: 230px;
+    right: 192px;
+    background-color: rgba(144, 144, 144, 0.04);
+  }
+}
+
+#nextPrevContainer {
+  margin-top: 50px;
+
+  &:empty {
+    display: none;
+  }
+
+  @include large {
+    display: none;
+  }
+
+  a {
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    color: var(--text-color-primary);
+
+    span {
+      display: block;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    &.next {
+      text-align: right;
+      border-color: var(--primary-color);
+    }
+
+    &.prev {
+      text-align: left;
+      border-color: var(--link-color);
+    }
+
+    &:hover {
+      color: white;
+
+      &.next {
+        background-color: var(--primary-color);
+      }
+
+      &.prev {
+        background-color: var(--link-color);
+      }
+    }
+
+    &:last-child:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}

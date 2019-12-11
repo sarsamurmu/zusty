@@ -1,0 +1,52 @@
+.search-container {
+  background-color: var(--dimmer-bg-color);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 21;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+
+  display: flex;
+  justify-content: center;
+
+  .input-box {
+    background-color: var(--body-bg-color);
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: min-content;
+
+    @include small {
+      width: 90%;
+    }
+
+    .zust-form-el {
+      flex-direction: column;
+
+      > .zust-input:not(.zust-hidden) {
+        display: block !important;
+      }
+    }
+  }
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@import 'docsearch/main';
+
+.algolia-autocomplete {
+  display: block !important;
+  width: 100%;
+}

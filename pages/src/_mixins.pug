@@ -1,0 +1,56 @@
+//- For Defining Titles
+mixin title(name)
+  title= name
+  meta(property='og:title' content= name)
+
+mixin redirect(url)
+  doctype html
+  html: head: meta(http-equiv='refresh' content=`0;url=${url}`)
+
+//- - var htmlExt = '.html'
+//- if (!debug && forServer)
+- var htmlExt = ''
+//- Copy Button
+mixin copyButton(value)
+  button(onclick!=value copybutton aria-label='Copy Snippet to Clipboard' zust-tooltip='Copy Snippet to Clipboard' zust-tooltip-position='left' zust-tooltip-type="primary")
+
+
+mixin nav(activeItem, classes)
+  nav(role='navigation' class=`zust-navbar zust-flat zust-right-aligned ${classes}` style='z-index: 10')
+    .zust-header
+      img(src='/resources/zusty.svg' alt='brand_logo')
+      span Zusty CSS #[span v#{version}]
+      button.zust-btn.zust-transparent.zust-menu-btn(name='menu_opener')
+        span.zust-icon: i.zust-menu
+    .zust-content
+      .zust-options
+        if (activeItem !== 'home')
+          a(href='/') Home
+        if (activeItem !== 'docs')
+          a(href='/docs') Docs
+        if (activeItem !== 'download')
+          a(href='/download') Download
+        a(href='https://github.com/sarsamurmu/zusty' rel='noopener' target='_blank') GitHub
+  
+  
+  script.
+    window.addEventListener('DOMContentLoaded', () => {
+      let nav = document.querySelector('nav');
+    
+      document.querySelector('nav .zust-menu-btn').addEventListener('click', () => {
+        if (!nav.classList.contains('zust-expanded')) {
+          nav.classList.add('zust-expanded');
+          nav.querySelector('.zust-menu').classList.replace('zust-menu', 'zust-close')
+        } else {
+          nav.classList.remove('zust-expanded');
+          nav.querySelector('.zust-close').classList.replace('zust-close', 'zust-menu')
+        }
+      })
+    })
+
+mixin footer
+  footer
+    p Designed and Developed by #[a(href='https://github.com/sarsamurmu' rel='noopener' zust-tooltip='Follow him on GitHub 😀' zust-tooltip-position='top' zust-tooltip-type='primary' target='_blank') Sarsa Murmu].
+    p.
+      Code available under the #[a(href='https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md' rel='noopener' target='_blank') MIT License], 
+      website under #[a(href='https://creativecommons.org/licenses/by-nc-sa/4.0/' rel='noopener' target='_blank') CC BY-NC-SA 4.0].

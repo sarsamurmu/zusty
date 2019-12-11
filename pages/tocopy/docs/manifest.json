@@ -1,0 +1,26 @@
+{
+  "short_name": "Zusty Docs",
+  "name": "Docs - Zusty CSS",
+  "description": "Full Documentation of Zusty CSS Framework.",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/resources/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/resources/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/docs/",
+  "scope": "/docs/",
+  "serviceworker": {
+    "src": "../offliner.js"
+  },
+  "categories": ["education"],
+  "lang": "en-US"
+}

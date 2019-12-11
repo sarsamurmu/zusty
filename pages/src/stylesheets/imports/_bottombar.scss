@@ -1,0 +1,81 @@
+.bottombar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: var(--body-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s, box-shadow 0.5s, transform 0.2s ease-in-out;
+  border-style: solid;
+  border-width: 0;
+  border-top-width: 2px;
+  border-color: $transparent;
+  z-index: 11;
+  box-shadow: 0px -3px 20px 0px hsla(0, 0%, 0%, 0.2);
+
+  [zust-theme="light"] & {
+    box-shadow: 0px -3px 20px 0px hsla(0, 0%, 60%, 0.2);
+  }
+
+  &.zust-flat {
+    box-shadow: 0 0 0 0 $transparent;
+  }
+
+  @include large {
+    display: none;
+  }
+
+  &.hidden {
+    transform: translateY(150%);
+  }
+
+  > a {
+    $size: 40px;
+    height: $size;
+    width: $size;
+    position: absolute;
+    margin-left: 10px;
+    left: 0;
+
+    > img {
+      height: $size;
+      width: $size;
+    }
+  }
+
+  .button-container {
+    position: absolute;
+    right: 0;
+
+    button  {
+      float: right;
+      margin: 0 8px;
+      padding: 12px !important;
+
+      > .zust-icon {
+        --icon-size: 22px;
+        margin: 0;
+      }
+    }
+
+    .nav-opener {
+      transform: none;
+
+      &.zust--hidden {
+        transform: rotate(45deg);
+      }
+    }
+
+    .nav-backer {
+      opacity: 0;
+      cursor: default;
+
+      &.zust--visible {
+        opacity: 1;
+      }
+    }
+  }
+}

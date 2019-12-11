@@ -1,0 +1,17 @@
+doctype html
+html(lang='en' dir='ltr')
+  include ../_mixins.pug
+  head
+    title #{title} - Zusty CSS
+    meta(property="og:title" content=`${title} - Zusty CSS`)
+    include _includes/head.pug
+    block extraHead
+      | !{extraHead}
+  body
+    include _includes/bottombar.pug
+    include _includes/sidenav.pug
+    
+    block content
+      | !{inner}
+    
+    include _includes/tail.pug

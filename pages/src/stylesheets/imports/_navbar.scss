@@ -1,0 +1,34 @@
+@import '../../../../scss/core/var-only';
+
+.zust-navbar {
+  * {
+    font-family: 'Lexend' !important;
+  }
+
+  @include large {
+    padding: 40px;
+  }
+
+  img {
+    transition: 0.4s;
+
+    + span {
+      transition: 0.4s;
+    }
+  }
+
+  &.hideLogo {
+    img {
+      transform: translateY(-100px);
+
+      + span {
+        transform: translateX(-40px);
+      }
+    }
+  }
+
+  span > span {
+    opacity: 0.6;
+    font-size: 16px;
+  }
+}

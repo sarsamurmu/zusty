@@ -1,0 +1,138 @@
+[
+  {
+    "name": "General",
+    "childs": [
+      {
+        "name": "Getting Started"
+      },
+      {
+        "name": "Theme"
+      },
+      {
+        "name": "Breakpoints"
+      },
+      {
+        "name": "Customization SCSS"
+      },
+      {
+        "name": "Variables"
+      },
+      {
+        "name": "Build a Theme"
+      },
+      {
+        "name": "Build Variants"
+      }
+    ]
+  },
+  {
+    "name": "Helpers"
+  },
+  {
+    "name": "Elements",
+    "childs": [
+      {
+        "name": "Button"
+      },
+      {
+        "name": "Chip"
+      },
+      {
+        "name": "Icon"
+      },
+      {
+        "name": "Note Block"
+      },
+      {
+        "name": "Progress"
+      },
+      {
+        "name": "Spinner"
+      },
+      {
+        "name": "Table"
+      },
+      {
+        "name": "Tooltip"
+      }
+    ]
+  },
+  {
+    "name": "Container",
+    "childs": [
+      {
+        "name": "Basic"
+      },
+      {
+        "name": "Column"
+      },
+      {
+        "name": "Element Group"
+      }
+    ]
+  },
+  {
+    "name": "Form",
+    "childs": [
+      {
+        "name": "Basics"
+      },
+      {
+        "name": "Checkbox"
+      },
+      {
+        "name": "Input"
+      },
+      {
+        "name": "Radio"
+      },
+      {
+        "name": "Range"
+      },
+      {
+        "name": "Select"
+      },
+      {
+        "name": "Switch"
+      },
+      {
+        "name": "Textarea"
+      }
+    ]
+  },
+  {
+    "name": "Components",
+    "childs": [
+      {
+        "name": "Badge"
+      },
+      {
+        "name": "Breadcrumb"
+      },
+      {
+        "name": "Card"
+      },
+      {
+        "name": "Dropdown"
+      },
+      {
+        "name": "Modal"
+      },
+      {
+        "name": "Navbar"
+      },
+      {
+        "name": "Pagination"
+      },
+      {
+        "name": "Placeholder"
+      },
+      {
+        "name": "Raw Progress"
+      },
+      {
+        "name": "Tabs"
+      }
+    ]
+  }
+]

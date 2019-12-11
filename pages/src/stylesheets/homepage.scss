@@ -1,0 +1,89 @@
+@import "/resources/fonts.css";
+@import "./../../../scss/core/var-only.scss";
+@import "imports/navbar.scss";
+@import "imports/footer.scss";
+@import "imports/worker-toast";
+
+body {
+  font-family: 'Varela Round';
+  padding-top: 70px;
+}
+
+.primary {
+  font-family: 'Lexend', sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.hero {
+  text-align: center;
+
+  p {
+    font-size: 18px;
+    display: inline-block;
+    max-width: 800px;
+  }
+
+  @include small {
+    > img {
+      width: 200px;
+    }
+  }
+
+  .links {
+    margin-top: 10px;
+
+    * {
+      vertical-align: bottom;
+    }
+  }
+}
+
+a.discord {
+  background-color: #7289DA !important;
+}
+
+.feature {
+  margin-top: 70px;
+
+  @include large {
+    margin-top: 100px;
+
+    &:nth-child(even) {
+      margin-left: 200px;
+
+      p {
+        max-width: 900px;
+      }
+    }
+
+    &:nth-child(odd) {
+      margin-right: 200px;
+    }
+  }
+
+  h2 {
+    font-family: 'Lexend', sans-serif;
+  }
+
+  &:nth-child(odd) {
+    text-align: right;
+  }
+}
+
+.endText {
+  font-family: 'Lexend', sans-serif;
+  text-align: center;
+  font-size: 1.8em;
+  margin: 120px 0;
+
+  @include large {
+    margin: 200px 0;
+  }
+
+  a {
+    border-bottom-width: 4px;
+  }
+}

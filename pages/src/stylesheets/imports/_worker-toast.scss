@@ -1,0 +1,73 @@
+@import "./../../../../scss/core/var-only.scss";
+
+.worker-toast {
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(.76,.01,.13,.9);
+  font-size: 14px;
+  min-height: 14px;
+  background-color: #323232;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 18px 24px;
+  z-index: 20;
+  bottom: 0;
+  left: 0;
+  transform: translateY(150%);
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .zust-icon {
+      margin-right: 12px;
+    }
+
+    > .zust-btn {
+      margin: 0 0 0 10px;
+      color: $turquoise;
+    }
+  }
+
+  &.visible {
+    transform: none !important;
+  }
+
+  @include medium {
+    min-width: 288px;
+    max-width: 568px;
+    display: inline-flex;
+    border-radius: 12px;
+    margin: 24px;
+  }
+
+  @include small {
+    left: 0 !important;
+    right: 0 !important;
+    transform: translateY(200%);
+  }
+
+  .zust-icon {
+    --icon-size: 30px;
+    color: $turquoise;
+  }
+
+  &[update] .zust-icon {
+    animation: spin 1s infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  99% {
+    transform: rotate(359deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

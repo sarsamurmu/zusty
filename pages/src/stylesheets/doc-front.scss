@@ -1,0 +1,25 @@
+@import "./../../../scss/core/var-only.scss";
+@import "imports/navbar.scss";
+@import "/resources/fonts.css";
+@import "imports/footer.scss";
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  padding: 18px;
+  padding-top: 100px;
+
+  @include large {
+    padding-top: 100px;
+    padding-left: 253px;
+    padding-right: 228px;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: normal;
+}
+
+footer {
+  margin-top: 80px;
+}

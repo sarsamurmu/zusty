@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/>
+  <g>
+    <path stroke="none" fill="#f96854" d="M100 100 L0 100 0 0 100 0 100 100"/>
+    <path stroke="none" fill="#ffffff" d="M45.15 31.15 Q50.55 25.75 58.15 25.75 65.75 25.75 71.15 31.15 76.55 36.55 76.55 44.15 76.55 51.75 71.15 57.15 65.75 62.55 58.15 62.55 50.55 62.55 45.15 57.15 39.75 51.75 39.75 44.15 39.75 36.55 45.15 31.15"/>
+    <path stroke="none" fill="#052d49" d="M34.5 26.05 L34.5 74.3 25.5 74.3 25.5 26.05 34.5 26.05"/>
+  </g>
+</svg>
