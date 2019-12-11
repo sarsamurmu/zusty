@@ -44,7 +44,7 @@ You can use container for containing bunch of items. Items will break whenever n
 
 
 ## Aligning Items
-You can Simply Align Items Inside of Container. Add Class  #[+class('zust-v-centered')] for aligning items Vertically Center and #[+class('zust-h-centered')] for aligning items Horizontally Center and  #[+class('zust-f-centered')] for aligning items both Horizontally and Vertically Center.
+You can Simply Align Items Inside of Container. Add Class  `zust-v-centered`{.class} for aligning items Vertically Center and `zust-h-centered`{.class} for aligning items Horizontally Center and  `zust-f-centered`{.class} for aligning items both Horizontally and Vertically Center.
 
 ### Horizontally Centered
 ```html {snippet}
