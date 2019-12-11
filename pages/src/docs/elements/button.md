@@ -144,7 +144,7 @@ Max padding buttons have increased padding and less rounded corner. To use it ad
 
 
 ## Shape
-You can Make button fullwidth, rounded, sharp, semi rounded. Thanks to #[a(href='../helpers/#shape') Shape Helper].
+You can Make button fullwidth, rounded, sharp, semi rounded. Thanks to [Shape Helper](../helpers/#shape).
 
 ```html {snippet}
 <button class="zust-btn zust-primary zust-fullwidth">Fullwidth</button>
