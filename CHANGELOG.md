@@ -4,8 +4,8 @@
 
 #### Fixes/Improvements
 - Card - Now card hovers up on `focus-within`
-- Tabs - Improved transiton
-- Radio - Improved transiton
+- Tabs - Improved transition
+- Radio - Improved transition
 - Dropdown - Minor Improvements
 - Whole refactorization of CSS variable usage
 
