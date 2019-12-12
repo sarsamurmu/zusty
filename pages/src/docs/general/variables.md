@@ -668,7 +668,7 @@ $custom-breakpoints: (
   ()
 );
 
-// Don't Forget to Add a Blank () at last of custom-colors list if you've single item
+// Don't Forget to Add a Blank () at last of custom-breakpoints list if you've single item
 ```
 
 You can add more if you want to
@@ -684,7 +684,7 @@ $custom-breakpoints: (
   ('uniqueDevice', 100px, 600px)
 );
 
-// Don't Forget to Add a Blank () at last of custom-colors list if you've single item
+// Don't Forget to Add a Blank () at last of custom-breakpoints list if you've single item
 ```
 
 After Compiling the SCSS you can Use it wherever [Breakpoints](../general/breakpoints) are supported.
