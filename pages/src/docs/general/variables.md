@@ -474,7 +474,7 @@ $small-text: 0.8rem;
 // z-indexes
 $dropdown-z-index: 5;
 $modal-z-index: 20;
-$tooltip-z-index: 9999;
+$tooltip-z-index: 1;
 $navbar-z-index: 4;
 
 // Transition
@@ -536,7 +536,7 @@ $tooltip-shadow: 0 0 5px 0px hsla(0, 0%, 0%, 0.08);
 //   Container
 // --------------
 
-$container-margin: 10px;
+$container-margin: 5px;
 $container-padding: 0px;
 $container-column-margin: 10px;
 $container-column-padding: 5px;
@@ -618,16 +618,16 @@ $card-hover-translate: -8px;
 $card-hovered-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
 
 // Dropdown
-$dropdown-margin: 14px;
-$dropdown-child-margin: 20px;
+$dropdown-margin: 12px;
+$dropdown-child-margin: 12px;
 $dropdown-translate: 10px;
 $dropdown-shadow: 0 3px 12px rgba(27, 31, 35, 0.04);
-$dropdown-border-radius: 10px;
-$dropdown-item-border-radius: 10px;
-$dropdown-padding: 10px;
-$dropdown-child-padding: 10px;
+$dropdown-border-radius: 8px;
+$dropdown-item-border-radius: 6px;
+$dropdown-padding: 4px;
+$dropdown-child-padding: 4px;
 $dropdown-item-padding: 10px;
-$dropdown-item-margin: 4px;
+$dropdown-item-margin: 0px;
 
 // Modal
 $modal-border-radius: 14px;
