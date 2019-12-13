@@ -79,8 +79,8 @@ html(lang='en' dir='ltr')
     .zust-justify-between.zust-align-center(class='zust-flex@large')
       h3 Write down your SCSS below
       .div
-        span(style='margin-right: 10px;') Choose Example: 
-        p.zust-form-el
+        span(style='margin-right: 10px; margin-bottom: 8px;' class='zust-inline-block@small') Choose Example: 
+        p.zust-form-el(class='zust-fullwidth@small')
           select#example.zust-select.zust-with-icon-right
             option(value='default' selected) Default
             option(value='prefixless') Prefixless
@@ -94,14 +94,16 @@ html(lang='en' dir='ltr')
     #errorView.zust-note.zust-hidden.zust-error: p: code
     
     h3 Choose output style and Download
-    p.zust-form-el
+    p.zust-form-el(class='zust-fullwidth@small')
       select#outputStyle.zust-select.zust-with-icon-right
         option(value='nested') Nested
         option(value='expanded') Expanded
         option(value='compact') Compact
         option(value='compressed' selected) Compressed
       span.zust-icon.zust-right: span.zust-angle-down
-    button.zust-btn.zust-link(onclick='download()' style='margin-left: 20px') Download
+    button.downloadBtn.zust-btn.zust-link(onclick='download()' class='zust-fullwidth@small')
+      span.zust-icon: span.zust-spinner-5
+      span Download
     
     script(src='/scripts/sass.js')
     script(src='/scripts/download.js')

@@ -47,3 +47,34 @@ code {
 footer {
   margin-top: 60px;
 }
+
+.downloadBtn {
+  margin-left: 20px;
+
+  @include small {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  > span:first-child {
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s;
+  }
+
+  > span:last-child {
+    transform: translateX(-10px);
+    transition: 0.3s;
+  }
+
+  &.loading {
+    > span:first-child {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    > span:last-child {
+      padding-left: 20px;
+    }
+  }
+}

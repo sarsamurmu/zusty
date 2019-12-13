@@ -8,6 +8,9 @@ import './scsslint';
 import 'codemirror/addon/selection/active-line';
 import config from '../../b/config';
 
+import autoprefixer from './autoprefixer';
+
+
 window.addEventListener('DOMContentLoaded', () => {
   let qs = document.querySelector.bind(document);
   let sass = new Sass();
@@ -120,6 +123,12 @@ window.addEventListener('DOMContentLoaded', () => {
   window.download = () => {
     let errorView = qs('#errorView');
 
+    let downloadBtn = qs('.downloadBtn');
+    let btnText = qs('.downloadBtn > span:not(.zust-icon)');
+
+    btnText.innerHTML = 'Processing';
+    downloadBtn.classList.add('loading');
+
     sass.options({ style: Sass.style[qs('#outputStyle').value] });
     sass.compile(editor.getValue(), (result) => {
       if (result.status === 1) {
@@ -128,13 +137,28 @@ window.addEventListener('DOMContentLoaded', () => {
       } else {
         errorView.classList.add('zust-hidden');
 
+        let copyrightHeaderless = result.text.replace(/(\/\*\!((.|\n)*)\*\/)/g, '');
+
+        let prefixedCSS = autoprefixer.process(copyrightHeaderless, {}, {
+          overrideBrowserslist: [
+            'last 5 Chrome versions',
+            'last 5 Firefox versions',
+            'last 5 Explorer versions',
+            'last 5 iOS versions',
+            'last 5 Opera versions',
+            'last 5 Safari versions',
+            'last 5 Android versions',
+            'last 5 Edge versions'
+          ]
+        }).css;
+
         let css = [
           `/*!`,
           ` * Zusty v${config.version}`,
           ` * Copyright (c) ${new Date().getFullYear()} Sarsa Murmu`,
           ` * https://github.com/sarsamurmu/zusty`,
           ` *\/\n`,
-          result.text.replace(/(\/\*\!((.|\n)*)\*\/)/g, '')
+          prefixedCSS
         ].join('\n');
 
         let cssBlob = new Blob([css], { type: 'text/plain' });
@@ -145,6 +169,9 @@ window.addEventListener('DOMContentLoaded', () => {
         hLink.click();
         hLink.remove();
       }
+
+      btnText.innerHTML = 'Download';
+      downloadBtn.classList.remove('loading');
     })
   }
 })
