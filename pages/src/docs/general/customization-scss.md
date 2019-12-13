@@ -54,6 +54,9 @@ Project Directory
 ```
 Now Open `styles.scss`{.attr} File. We are going to overwrite few values. We have to just write those values before importing Zusty. Now let's add some custom values to variables. You can Grab some Variables from [Here](variables).
 ```scss
+// First import file which includes core variables
+@import "../node_modules/zusty/scss/core/var-only";
+
 $primary-color: $turquoise;
 $button-border-radius: 2px;
 $input-border-spread: 6px;
@@ -73,8 +76,9 @@ $icon-size-default: 1.5rem;
 // End of METHOD: 1
 
 // METHOD: 2. Just Import What you need
-// First of all import core items
-@import "../node_modules/zusty/scss/core/";
+// First of all import base styles and theme color's css version
+@import "../node_modules/zusty/scss/core/base-styles";
+@import "../node_modules/zusty/scss/core/theme-colors-css";
 
 // Then Import Just What you need
 // If You just want Buttons then
@@ -111,7 +115,7 @@ Now we have made the our scss file with custom values. We have to do one more th
 ---
 
 
-### Compile SCSS 🎉 
+### Compile SCSS 🎉
 Now open your terminal and run command
 ```bash
 npm run build
