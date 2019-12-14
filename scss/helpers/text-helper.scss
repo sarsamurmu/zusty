@@ -106,6 +106,14 @@
   font-variant: small-caps;
 }
 
+.#{$prefix}text-dropcap:first-letter, .#{$prefix}text-dropcap > p:first-of-type::first-letter {
+  display: block;
+  font-size: 3.8em;
+  float: left;
+  line-height: 1em;
+  padding-right: 0.15em;
+}
+
 @for $i from 1 through 10 {
   .#{$prefix}text-#{$i} {
     font-size: ($i/25) * 10rem;
