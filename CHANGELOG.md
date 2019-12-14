@@ -1,4 +1,8 @@
-## v1.2.0
+## v1.1.4
+#### New
+- Dropcap Text Helper.
+
+## v1.1.3
 #### New
 - Right aligned Navbar
 
