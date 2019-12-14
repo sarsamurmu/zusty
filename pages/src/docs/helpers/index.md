@@ -38,12 +38,12 @@ If you want to show something only on certain breakpoint then add class `zust-vi
 
 ### Display Types
 You can also change the display type by adding any of these classes
-- `zust-inline`{.class} : Makes the element's display to be inline.
-- `zust-block`{.class} : Makes the element's display to be block.
-- `zust-flex`{.class} : Makes the element's display to be flex.
-- `zust-inline-block`{.class} : Makes the element's display to be inline-block.
-- `zust-inline-flex`{.class} : Makes the element's display to be inline-flex.
-- `zust-list-item`{.class} : Makes the element's display to be list-item.
+- `zust-inline`{.class} : Sets the element's display to be inline.
+- `zust-block`{.class} : Sets the element's display to be block.
+- `zust-flex`{.class} : Sets the element's display to be flex.
+- `zust-inline-block`{.class} : Sets the element's display to be inline-block.
+- `zust-inline-flex`{.class} : Sets the element's display to be inline-flex.
+- `zust-list-item`{.class} : Sets the element's display to be list-item.
 
 ### Display types in different breakpoint
 Display Type has support for [Breakpoints](../general/breakpoints).
@@ -180,38 +180,38 @@ Example 2 - If you want to rotate something to -90 Deg, just add class `zust-rot
 
 ## Shape
 There are several class which can help you Change Shape
-- `zust-fullwidth`{.class} : Makes the element's width fill the rest of it's parent's width. It has support for [Breakpoints](../general/breakpoints).
-- `zust-fullheight`{.class} : Makes the element's height fill the rest of it's parent's width. It has support for [Breakpoints](../general/breakpoints).
-- `zust-rounded`{.class} : Makes the element's corner radius to full.
-- `zust-semi-rounded`{.class} : Makes the element's corner radius to 10px, not completely rounded or sharp.
-- `zust-radiusless`{.class} or `zust-sharp`{.class} : Makes the element's corner radius to 0, means completely radiusless.
+- `zust-fullwidth`{.class} : Sets the element's width fill the rest of it's parent's width. It has support for [Breakpoints](../general/breakpoints).
+- `zust-fullheight`{.class} : Sets the element's height fill the rest of it's parent's width. It has support for [Breakpoints](../general/breakpoints).
+- `zust-rounded`{.class} : Sets the element's corner radius to full.
+- `zust-semi-rounded`{.class} : Sets the element's corner radius to 10px, not completely rounded or sharp.
+- `zust-radiusless`{.class} or `zust-sharp`{.class} : Sets the element's corner radius to 0, means completely radiusless.
 
 ---
 
 
 ## Text
 Change Text Style just by using class
-- `zust-text-bold`{.class} : Makes the element's text's font-weight to Bold
-- `zust-text-normal`{.class} : Makes the element's text's font-weight to Normal
-- `zust-text-light`{.class} : Makes the element's text's font-weight to Light
-- `zust-text-italic`{.class} : Makes the element's text's style to Italic.
-- `zust-text-underline`{.class} : Makes the element's text's style to underlined.
-- `zust-text-small`{.class} : Makes the element's text size to Small
-- `zust-text-medium`{.class} : Makes the element's text size to Medium
-- `zust-text-large`{.class} : Makes the element's text size to Large
-- `zust-text-xlarge`{.class} : Makes the element's text size to Extra Large
-- `zust-unselectable`{.class} : Makes the text Unselectable.
-- `zust-text-uppercase`{.class} : Makes the element's all text to be Uppercased.
-- `zust-text-lowercase`{.class} : Makes the element's all text to be Lowercased.
-- `zust-text-capitalize`{.class} : Makes the element's all text to be Capitalized, all word's first letter will be in Uppercase.
-- `zust-text-smallcaps`{.class} : Makes the element's lowercase letter to small caps.
-- `zust-text-justify`{.class} : Makes the element's text align to justify.
-- `zust-text-no-wrap`{.class} or `zust-text-nowrap`{.class} : Makes the element's text's wrap to none or no-wrap.
-- `zust-text-truncate`{.class} : Makes the element's text overflow to Ellipsis.
-- `zust-text-family-inherit`{.class} : Makes the element's text font-family to inherit.
-- `zust-text-size-inherit`{.class} : Makes the element's text font-size to inherit.
-- `zust-text-no-decoration`{.class} : Makes the element's text decoration to none.
-- `zust-text-breakable`{.class} : Makes the element's word wrap to be breakable.
+- `zust-text-bold`{.class} : Sets the element's text's font-weight to Bold
+- `zust-text-normal`{.class} : Sets the element's text's font-weight to Normal
+- `zust-text-light`{.class} : Sets the element's text's font-weight to Light
+- `zust-text-italic`{.class} : Sets the element's text's style to Italic.
+- `zust-text-underline`{.class} : Sets the element's text's style to underlined.
+- `zust-text-small`{.class} : Sets the element's text size to Small
+- `zust-text-medium`{.class} : Sets the element's text size to Medium
+- `zust-text-large`{.class} : Sets the element's text size to Large
+- `zust-text-xlarge`{.class} : Sets the element's text size to Extra Large
+- `zust-unselectable`{.class} : Sets the text Unselectable.
+- `zust-text-uppercase`{.class} : Sets the element's all text to be Uppercased.
+- `zust-text-lowercase`{.class} : Sets the element's all text to be Lowercased.
+- `zust-text-capitalize`{.class} : Sets the element's all text to be Capitalized, all word's first letter will be in Uppercase.
+- `zust-text-smallcaps`{.class} : Sets the element's lowercase letter to small caps.
+- `zust-text-justify`{.class} : Sets the element's text align to justify.
+- `zust-text-no-wrap`{.class} or `zust-text-nowrap`{.class} : Sets the element's text's wrap to none or no-wrap.
+- `zust-text-truncate`{.class} : Sets the element's text overflow to Ellipsis.
+- `zust-text-family-inherit`{.class} : Sets the element's text font-family to inherit.
+- `zust-text-size-inherit`{.class} : Sets the element's text font-size to inherit.
+- `zust-text-no-decoration`{.class} : Sets the element's text decoration to none.
+- `zust-text-breakable`{.class} : Sets the element's word wrap to be breakable.
 
 ```html {snippet}
 <p class="zust-text-bold">Bold Text</p><b class="zust-text-normal">Normal Text</b>
@@ -243,9 +243,9 @@ To use it add class `{string}(zust-text@){comment}(size-number)`.
 You can also use [Breakpoints](../general/breakpoints) with this.
 
 ### Superpowered
-- `zust-text-centered`{.class} or `zust-text-center`{.class} : Makes the element's text alignment to Center. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Horizontaly centered.
-- `zust-rtl`{.class} or `zust-text-rtl`{.class} or `zust-right-to-left`{.class} or `zust-text-right-to-left`{.class} : Makes the element's text alignment to Right. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Right Aligned.
-- `zust-ltr`{.class} or `zust-text-ltr`{.class} or `zust-left-to-right`{.class} or `zust-text-left-to-right`{.class} : Makes the element's text alignment to Left. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Right Aligned.
+- `zust-text-centered`{.class} or `zust-text-center`{.class} : Sets the element's text alignment to Center. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Horizontaly centered.
+- `zust-rtl`{.class} or `zust-text-rtl`{.class} or `zust-right-to-left`{.class} or `zust-text-right-to-left`{.class} : Sets the element's text alignment to Right. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Right Aligned.
+- `zust-ltr`{.class} or `zust-text-ltr`{.class} or `zust-left-to-right`{.class} or `zust-text-left-to-right`{.class} : Sets the element's text alignment to Left. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Right Aligned.
 
 ---
 
