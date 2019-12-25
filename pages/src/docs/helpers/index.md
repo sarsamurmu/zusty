@@ -324,7 +324,7 @@ return htmlStr
 It also includes `inverted` color, which alternates Background or Text color to dark and light. If you use this color to any element, in light theme the element's color will be dark-grey and in dark theme it will be whitesmoke.
 
 <div class="color-block zust-bg-inverted">inverted</div>
-
+<br>
 
 ### Background Color
 You can set any element's Background Color just by adding a class. To set any element's background color, add class `zust-bg-`{.class} then the color name.
@@ -366,7 +366,8 @@ Example. If you want to  set any element's text color to teal in Dark Theme, add
 <p class="zust-text-pow-primary">Primary Text Color. You can See this Text's Color looks Completely Strong, More Powerful than Any Other Texts. This Text Color Apllies to Header Elements.</p>
 <p class="zust-text-pow-secondary">Secondary Text Color. This Text's Color is not as Much Powerful as Primary Text Color, But it is Powerful than Tertiary Text Color. Weaker than Primary Text Color But Stronger than Teriary Text Color. This Text Color Apllies to Every Child Elements of Body.</p>
 <p class="zust-text-pow-tertiary">Tertiary Text Color. As You can Notice This Text's Color is Weaker Than Any Other Text Color. I want more text or the demo will not be that much good, so I tried to Write more text. as You can see this is My Text. Yay!</p>
-hidCode{{<p>NOTE: Text Sizes are just for demonstration</p>}}
+
+hidCode{{<p>Text Sizes are just for demonstration</p>}}
 ```
 ---
 

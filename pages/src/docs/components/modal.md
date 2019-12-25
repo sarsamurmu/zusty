@@ -13,9 +13,9 @@ hidCode{{<button class="zust-btn" onclick="showModal('mainSample')">Show Modal</
 <div class="zust-modal" hidCode{{id="mainSample" onclick="hideModal('mainSample')"}}>
   <div class="zust-content">
     <header>
-      <img src="../../resources/zusty.svg">
+      <img src="/resources/zusty.svg">
       <h2>Zusty's Modal</h2>
-      <button class="zust-btn zust-close-btn zust-transparent">
+      <button class="zust-btn zust-close-btn zust-transparent" hidCode{{onclick="hideModal('mainSample')"}}>
        <span class="zust-icon">
          <i class="zust-close"></i>
        </span>
