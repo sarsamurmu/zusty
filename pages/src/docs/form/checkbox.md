@@ -102,11 +102,11 @@ It includes all Theme Colors.
 
 
 ## Disabled
-You can make a checkbox disable by simply adding attribute `disabled`{.attr}. And don't forget to add this attribute with value - `{attr}(tabindex)="{string}(-1)"` to `input`{.tag}.
+You can make a checkbox disabled by adding attribute `disabled`{.attr} to `label`{.tag} and `input`{.tag}.
 
 ```html {snippet}
 <label class="zust-checkbox" disabled>
-  <input type="checkbox" tabindex="-1">
+  <input type="checkbox" disabled>
   <span></span>
   <span>Disabled</span>
 </label>

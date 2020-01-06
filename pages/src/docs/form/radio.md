@@ -113,11 +113,11 @@ You can make a radio Selected/Checked by adding attribute `checked`{.attr} to `i
 
 
 ## Disabled
-Radio can be disabled by adding attribute `disabled`{.attr}. Don't forget to add this attribute with value - `{attr}(tabindex)="{string}(-1)"` to `input`{.tag}.
+Radio can be disabled by adding attribute `disabled`{.attr} to `label`{.tag} and `input`{.tag}.
 
 ```html {snippet}
 <label class="zust-radio" disabled>
-  <input type="radio" name="give-a-name" tabindex="-1">
+  <input type="radio" name="give-a-name" disabled>
   <span></span>
   <span>Disabled</span>
 </label>
