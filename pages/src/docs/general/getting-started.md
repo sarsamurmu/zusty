@@ -67,12 +67,17 @@ This is the starter template that you can use to get started right away.
   </body>
 </html>
 ```
+---
+
+## Using prefixless
+You would like to use the prefixless version, in prefixless version you can use classes without `zust-`{.class}, like `zust-hidden`{.class} can be used using `hidden`{.class}. [Use it](build-variants#prefixless).
 
 <script>
 window.addEventListener('DOMContentLoaded', () => {
   window.download = (link, fileName) => {
-    fetch(link).then((response) => {
-      response.text().then((text) => {
+    fetch(link)
+      .then((response) => response.text())
+      .then((text) => {
         let textBlob = new Blob([text], { type: 'text/plain' });
         let hLink = document.createElement('a');
         hLink.href = URL.createObjectURL(textBlob);
@@ -81,7 +86,6 @@ window.addEventListener('DOMContentLoaded', () => {
         hLink.click();
         hLink.remove();
       })
-    })
   }
 })
 </script>

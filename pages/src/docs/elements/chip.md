@@ -80,7 +80,7 @@ If you are working with bunch of chip you can use Zusty's built-in container. Th
   </div>
 
   <div class="zust-chip">
-    <span>You</span>
+    <span>Two</span>
     <span class="zust-icon">
       <i class="material-icons">close</i>
     </span>
@@ -88,42 +88,24 @@ If you are working with bunch of chip you can use Zusty's built-in container. Th
 
   <div class="zust-chip">
     <img src="/resources/profile.png">
-    <span>What</span>
-    <span class="zust-icon">
-      <i class="material-icons">close</i>
-    </span>
-  </div>
-
-  <div class="zust-chip">Zust</div>
-
-  <div class="zust-chip">
-    <img src="/resources/profile.png">
-    <span>Kidding</span>
-  </div>
-
-  <div class="zust-chip">
-    <img src="/resources/profile.png">
-    <span>Woo</span>
+    <span>Three</span>
     <span class="zust-icon">
       <i class="material-icons">close</i>
     </span>
   </div>
 
   <div class="zust-chip">
-    <img src="/resources/profile.png">
-    <span>Wea</span>
+    <span>Four</span>
   </div>
 
   <div class="zust-chip">
     <img src="/resources/profile.png">
-    <span>Welp</span>
-    <span class="zust-icon">
-      <i class="material-icons">close</i>
-    </span>
+    <span>Five</span>
   </div>
 
   <div class="zust-chip">
-    <span>Lens</span>
+    <img src="/resources/profile.png">
+    <span>Six</span>
     <span class="zust-icon">
       <i class="material-icons">close</i>
     </span>
@@ -131,18 +113,38 @@ If you are working with bunch of chip you can use Zusty's built-in container. Th
 
   <div class="zust-chip">
     <img src="/resources/profile.png">
-    <span>let</span>
+    <span>Seven</span>
+  </div>
+
+  <div class="zust-chip">
+    <img src="/resources/profile.png">
+    <span>Eight</span>
     <span class="zust-icon">
       <i class="material-icons">close</i>
     </span>
   </div>
 
   <div class="zust-chip">
-    <span>var</span>
+    <span>Nine</span>
+    <span class="zust-icon">
+      <i class="material-icons">close</i>
+    </span>
   </div>
 
   <div class="zust-chip">
-    <span>End</span>
+    <img src="/resources/profile.png">
+    <span>Ten</span>
+    <span class="zust-icon">
+      <i class="material-icons">close</i>
+    </span>
+  </div>
+
+  <div class="zust-chip">
+    <span>Eleven</span>
+  </div>
+
+  <div class="zust-chip">
+    <span>Twelve</span>
   </div>
 </div>
 ```

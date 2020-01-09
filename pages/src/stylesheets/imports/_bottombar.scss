@@ -28,7 +28,7 @@
     display: none;
   }
 
-  &.hidden {
+  &.hidden:not(.visible) {
     transform: translateY(150%);
   }
 

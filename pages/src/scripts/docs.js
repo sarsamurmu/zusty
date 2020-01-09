@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Theme Control
   const metaColor = document.querySelector('meta[name=theme-color]');
 
-  function toggleTheme() {
+  const toggleTheme = () => {
     if (localStorage.getItem('theme') === 'light') {
       metaColor.setAttribute('content', '#212121');
       document.documentElement.setAttribute('zust-theme', 'dark');
@@ -39,43 +39,28 @@ window.addEventListener('DOMContentLoaded', () => {
   window.toggleTheme = toggleTheme;
 
   // Searchbar
-  window.isOnline = false;
+  let isOnline = false;
   const searchContainer = document.querySelector('.search-container');
   const searchIgnore = searchContainer.querySelector('.input-box');
   const searchProvider = document.querySelector('#searchProvider');
 
   if (window.navigator.onLine) {
-    window.isOnline = true;
+    isOnline = true;
   }
 
-  doOnNetworkChange();
-
-  window.addEventListener('online', () => {
-    window.isOnline = true;
-    doOnNetworkChange();
-  });
-  window.addEventListener('offline', () => {
-    window.isOnline = false;
-    doOnNetworkChange();
-  });
-
-  function doOnCheckChange() {
-    let cls = 'zust-hidden';
+  const doOnCheckChange = () => {
     document.querySelector('#searchResult').innerHTML = '';
     if (searchProvider.checked) {
-      document.querySelector('#docSearch').closest('div').classList.remove(cls);
-      document.querySelector('#searchInput').classList.add(cls);
+      document.querySelector('#docSearch').closest('div').classList.remove('zust-hidden');
+      document.querySelector('#searchInput').classList.add('zust-hidden');
     } else {
-      document.querySelector('#docSearch').closest('div').classList.add(cls);
-      document.querySelector('#searchInput').classList.remove(cls);
+      document.querySelector('#docSearch').closest('div').classList.add('zust-hidden');
+      document.querySelector('#searchInput').classList.remove('zust-hidden');
     }
   }
 
-  searchProvider.addEventListener('change', doOnCheckChange);
-
-  function doOnNetworkChange() {
-    let cls = 'zust-hidden';
-    if (window.isOnline) {
+  const doOnNetworkChange = () => {
+    if (isOnline) {
       searchProvider.closest('label').classList.remove('zust-hidden');
     } else {
       searchProvider.checked = false;
@@ -84,9 +69,22 @@ window.addEventListener('DOMContentLoaded', () => {
     doOnCheckChange();
   }
 
-  function showSearch() {
+  doOnNetworkChange();
+
+  window.addEventListener('online', () => {
+    isOnline = true;
+    doOnNetworkChange();
+  });
+  window.addEventListener('offline', () => {
+    isOnline = false;
+    doOnNetworkChange();
+  });
+
+  searchProvider.addEventListener('change', doOnCheckChange);
+
+  const showSearch = () => {
     searchContainer.classList.add('visible');
-    if (window.isOnline) {
+    if (isOnline) {
       setTimeout(function () {
          document.querySelector('#docSearch').focus();
       }, 100);
@@ -99,15 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.showSearch = showSearch;
 
-  searchContainer.addEventListener('click', function () {
-    hideSearch()
-  });
-
-  searchIgnore.addEventListener('click', function (e) {
-    e.stopPropagation()
-  });
-
-  function hideSearch() {
+  const hideSearch = () => {
     searchContainer.classList.remove('visible');
     body.classList.remove('lock');
     document.querySelector('#searchResult').innerHTML = '';
@@ -115,17 +105,21 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.hideSearch = hideSearch;
 
-  // Navigation Things.....
-  let sidenav = document.querySelector('.sidenav');
-  let btmBar = document.querySelector('.bottombar');
-  let dimmer = document.querySelector('.dimmer');
-  let navopener = document.querySelector('.nav-opener');
-  let navbacker = document.querySelector('.nav-backer');
-  let body = document.querySelector('body');
+  searchContainer.addEventListener('click', () => hideSearch());
 
-  function showSidenav() {
+  searchIgnore.addEventListener('click', (e) => e.stopPropagation());
+
+  // Navigation Things.....
+  const sidenav = document.querySelector('.sidenav');
+  const btmBar = document.querySelector('.bottombar');
+  const dimmer = document.querySelector('.dimmer');
+  const navopener = document.querySelector('.nav-opener');
+  const navbacker = document.querySelector('.nav-backer');
+  const body = document.querySelector('body');
+
+  const showSidenav = () => {
     navopener.setAttribute('onclick', 'hideSidenav()');
-    btmBar.classList.add('zust-flat');
+    btmBar.classList.add('zust-flat', 'visible');
     sidenav.classList.add('zust--visible');
     dimmer.classList.add('zust--visible');
     navopener.classList.add('zust--hidden');
@@ -134,9 +128,9 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.showSidenav = showSidenav;
 
-  function hideSidenav() {
+  const hideSidenav = () => {
     navopener.setAttribute('onclick', 'showSidenav()');
-    btmBar.classList.remove('zust-flat');
+    btmBar.classList.remove('zust-flat', 'visible');
     sidenav.classList.remove('zust--visible');
     dimmer.classList.remove('zust--visible');
     navopener.classList.remove('zust--hidden');
@@ -146,41 +140,26 @@ window.addEventListener('DOMContentLoaded', () => {
   window.hideSidenav = hideSidenav;
 
   // Sidenav Items
-  let navItemHome = sidenav.querySelector('.home-item-container');
-  let navSubs = document.querySelector('.sub-item-container');
+  const navItemHome = sidenav.querySelector('.home-item-container');
+  const navSubs = document.querySelector('.sub-item-container');
 
   // Activating the Current Page in Sidenav
-  let pageURL =  window.location.pathname;
-
-  // Back Button's Functionality
-  function navBack() {
-    clearSubs();
-    navItemHome.classList.remove('zust--hidden');
-    navSubs.classList.remove('zust--visible');
-    navItemHome.querySelectorAll('a').forEach((a) => {
-      a.removeAttribute('tabindex');
-    });
-  }
-  window.navBack = navBack;
+  const pageURL =  window.location.pathname;
 
   // Sidenav Navigation
 
   // Destroy Other's Visibility
-  function clearSubs() {
-    navSubs.querySelectorAll('.sub-item[nav-item]').forEach((el) => {
-      el.classList.remove('zust--visible')
-    })
+  const clearSubs = () => {
+    navSubs.querySelectorAll('.sub-item[nav-item]').forEach((el) => el.classList.remove('zust--visible'))
   }
 
-  function firstBase() {
+  const firstBase = () => {
     navItemHome.classList.add('zust--hidden');
     navSubs.classList.add('zust--visible');
   }
 
-  function disableHome() {
-    navItemHome.querySelectorAll('a').forEach((a) => {
-      a.setAttribute('tabindex', '-1');
-    });
+  const disableHome = () => {
+    navItemHome.querySelectorAll('a').forEach((a) => a.setAttribute('tabindex', '-1'))
   }
 
   function showNavItem(item) {
@@ -190,12 +169,21 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   window.showNavItem = showNavItem;
 
-  let nextDocContainer = document.querySelector('#nextPrevContainer .next');
-  let prevDocContainer = document.querySelector('#nextPrevContainer .prev');
+  // Back Button's Functionality
+  const navBack = () => {
+    clearSubs();
+    navItemHome.classList.remove('zust--hidden');
+    navSubs.classList.remove('zust--visible');
+    navItemHome.querySelectorAll('a').forEach((a) => a.removeAttribute('tabindex'));
+  }
+  window.navBack = navBack;
 
-  let urlPaths = pageURL.replace('/docs/', '').split('/');
+  const nextDocContainer = document.querySelector('#nextPrevContainer .next');
+  const prevDocContainer = document.querySelector('#nextPrevContainer .prev');
+
+  const urlPaths = pageURL.replace('/docs/', '').split('/');
   if (navItemHome.querySelector(`[nav-item="${urlPaths[0]}"]`)) {
-    let el = navItemHome.querySelector(`[nav-item="${urlPaths[0]}"]`);
+    const el = navItemHome.querySelector(`[nav-item="${urlPaths[0]}"]`);
     el.classList.add('zust-active');
     el.removeAttribute('href');
     nextDocContainer.remove();
@@ -204,7 +192,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showNavItem(urlPaths[0]);
   }
   if (urlPaths[1]) {
-    let el = navSubs.querySelector(`[nav-item="${urlPaths[0]}"] [nav-item="${urlPaths[1]}"]`);
+    const el = navSubs.querySelector(`[nav-item="${urlPaths[0]}"] [nav-item="${urlPaths[1]}"]`);
     el.classList.add('zust-active');
     el.removeAttribute('href');
     if (el.nextSibling) {
@@ -223,11 +211,11 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // Accordion
-  let accordions = document.querySelectorAll('.accordion');
+  const accordions = document.querySelectorAll('.accordion');
 
   accordions.forEach((accordion) => {
     accordion.addEventListener('click', () => {
-      let panel = accordion.nextElementSibling;
+      const panel = accordion.nextElementSibling;
       if (panel.style.maxHeight){
         panel.style.maxHeight = null;
       } else {
@@ -240,31 +228,12 @@ window.addEventListener('DOMContentLoaded', () => {
     el.setAttribute('id', el.innerHTML.toLowerCase().replace(/[ ]/g, '-'))
   });
 
-  // Copy Anchor Link
-  let anchorHeaders = document.querySelectorAll(['h1[id]', 'h2[id]', 'h3[id]', 'h4[id]']);
-
-  anchorHeaders.forEach(function (element) {
-    element.addEventListener('click', copyAnchor);
-  });
-
-  function copyAnchor() {
-    let anchor = this.getAttribute('id');
-    let ancLinkPrefix = window.location.href + '#';
-    let text = document.createElement('textarea');
-    document.body.appendChild(text);
-    text.value = ancLinkPrefix + anchor;
-    text.select();
-    document.execCommand('copy', false);
-    text.remove();
-    showCopyToast();
-  }
-
-  let copyToast = document.querySelector('#copyToast');
+  const copyToast = document.querySelector('#copyToast');
   let prevToast = false;
   let toastTimeout;
   let showToastTimeout;
 
-  function showCopyToast() {
+  const showCopyToast = () => {
     if (prevToast) {
       prevToast = true;
       clearTimeout(toastTimeout);
@@ -291,10 +260,27 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Launch and Copy Button
-  let codeblocks = document.querySelectorAll('code[class*="html"]');
+  const copyAnchor = (el) => {
+    const anchor = el.getAttribute('id');
+    const ancLinkPrefix = window.location.href + '#';
+    const text = document.createElement('textarea');
+    document.body.appendChild(text);
+    text.value = ancLinkPrefix + anchor;
+    text.select();
+    document.execCommand('copy', false);
+    text.remove();
+    showCopyToast();
+  }
 
-  let copyAbleCodeblocks = document.querySelectorAll('div.code > pre > code');
+  // Copy Anchor Link
+  const anchorHeaders = document.querySelectorAll(['h1[id]', 'h2[id]', 'h3[id]', 'h4[id]']);
+
+  anchorHeaders.forEach((el) => el.addEventListener('click', () => copyAnchor(el)));
+
+  // Launch and Copy Button
+  const codeblocks = document.querySelectorAll('code[class*="html"]');
+
+  const copyAbleCodeblocks = document.querySelectorAll('div.code > pre > code');
 
   copyAbleCodeblocks.forEach((codeblock) => {
     let makeCopyButton = true;
@@ -304,7 +290,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (makeCopyButton) {
-      let copyButton = document.createElement('button');
+      const copyButton = document.createElement('button');
       copyButton.setAttribute('aria-label', 'Copy Snippet to Clipboard');
       copyButton.setAttribute('zust-tooltip', 'Copy Snippet to Clipboard');
       copyButton.setAttribute('zust-tooltip-position', 'left');
@@ -319,8 +305,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       codeblock.closest('div[class*="code"]').appendChild(copyButton);
       copyButton.addEventListener('click', () => {
-        let texts = codeblock.closest('pre').innerText;
-        let textarea = document.createElement('textarea');
+        const texts = codeblock.closest('pre').innerText;
+        const textarea = document.createElement('textarea');
         document.body.appendChild(textarea);
         textarea.value = texts;
         console.log('Copied: \n \n' + texts);
@@ -333,10 +319,10 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   window.launchSnippet = (html, host) => {
-    let createEl = (name, props) => {
-      let el = document.createElement(name);
+    const createEl = (name, props) => {
+      const el = document.createElement(name);
 
-      for (let p in props) {
+      for (const p in props) {
         if (props.hasOwnProperty(p)) el[p] = props[p];
       }
 
@@ -346,13 +332,13 @@ window.addEventListener('DOMContentLoaded', () => {
     let form;
 
     if (host === 'codepen') {
-      let json = {
+      const json = {
         html: html,
         head: `<meta charset='utf-8'>\n<meta name='viewport' content='width=device-width, initial-scale=1'>\n<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/zusty@${config.version}'>`,
         editors: '100',
         css: '@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");\n* { font-family: "Varela Round", sans-serif }'
       };
-      let jsonData = JSON.stringify(json);
+      const jsonData = JSON.stringify(json);
 
       form = createEl('form', {
         action: 'https://codepen.io/pen/define',
@@ -410,7 +396,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }));
     }
 
-    let submitButton = createEl('button', {
+    const submitButton = createEl('button', {
       type: 'submit'
     });
 
@@ -421,7 +407,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   codeblocks.forEach((codeblock) => {
-    let code = codeblock.innerText;
+  const code = codeblock.innerText;
 
     let makeLaunchButton = true;
     if (codeblock.hasAttribute('nolaunch')) {
@@ -429,7 +415,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (makeLaunchButton) {
-      let launchButton = document.createElement('button');
+      const launchButton = document.createElement('button');
 
       launchButton.classList = 'launchBtn';
       launchButton.setAttribute('aria-label', 'Launch Snippet');
@@ -454,7 +440,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // Add modal to document
-  let launcherModal = new DOMParser().parseFromString(`
+  const launcherModal = new DOMParser().parseFromString(`
   <div id='launcherModal' class='zust-modal'>
     <div class='zust-content'>
       <header>
@@ -480,9 +466,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('lock');
   });
 
-  document.querySelector('#launcherModal .zust-content').addEventListener('click', (e) => {
-    e.stopPropagation()
-  });
+  document.querySelector('#launcherModal .zust-content').addEventListener('click', (e) => e.stopPropagation());
 
   document.querySelectorAll('#launcherModal img').forEach((img) => {
     img.addEventListener('click', () => {
@@ -501,7 +485,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let scrollPos = 0;
 
-  function checkPosition() {
+  const checkPosition = () => {
     let windowY = window.scrollY;
     if (windowY < scrollPos) {
       btmBar.classList.remove('hidden');

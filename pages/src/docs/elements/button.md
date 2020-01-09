@@ -10,16 +10,27 @@ Button of Anytype you want.
 
 ## Structure
 ```html {snippet}
-<button class="zust-btn">Button</button>
-<a class="zust-btn">a</a>
+<button class="zust-btn">Normal</button>
 <!--
 <input type="submit"> and <input type="reset"> are Deprecated.
 Use <button type="submit"></button> and <button type="reset"></button> instead.
 -->
 <button class="zust-btn" type="submit">Submit</button>
 <button class="zust-btn" type="reset">Reset</button>
-<span class="zust-btn">Span</span>
+
+<!--
+If you want to use other element as button,
+add attribute `role="button"` to the element
+-->
+<a class="zust-btn" role="button" tabindex="0">Anchor</a>
+<span class="zust-btn" role="button" tabindex="0">Span</span>
 ```
+::: link Accessibility Tip
+To make accessible button, do any of the following
+- Set the inner text of the button.
+- If there is no text in the button (like button with just icon), set proper `aria-label`{.attr} attribute.
+- If the you're using other element as button like `a`{.tag}, `span`{.tag}, `div`{.tag}, then add attribute `{attr}(role)="{string}(button)"` to the element and add attribute `{attr}(tabindex)="{string}(0)"` to make it focusable to user.
+:::
 ---
 
 
@@ -61,7 +72,7 @@ You can use icons with buttons
   <span>Grin</span>
 </button>
 
-<button class="zust-btn">
+<button class="zust-btn" aria-label="filter">
   <span class="zust-icon">
     <i class="material-icons">filter</i>
   </span>
@@ -75,7 +86,7 @@ You can use icons with buttons
   <span>Spinner</span>
 </button>
 
-<button class="zust-btn">
+<button class="zust-btn" aria-label="wink-icon">
   <span class="zust-icon">
     <i class="fa fa-grin-wink"></i>
   </span>
@@ -137,8 +148,8 @@ You can simply make any button disabled by adding attribute `disabled`{.class}.
 Max padding buttons have increased padding and less rounded corner. To use it add class `zust-max-pad`{.class} to `zust-btn`{.tag}.
 
 ```html {snippet}
-<button class="zust-btn zust-primary">Button</button>
-<button class="zust-btn zust-primary zust-max-pad">Button</button>
+<button class="zust-btn zust-primary">Normal</button>
+<button class="zust-btn zust-primary zust-max-pad">Max padding</button>
 ```
 ---
 
@@ -223,10 +234,10 @@ A button can be toggle-able. See the snippet below.
 ```html {snippet}
 <label class="zust-toggle-btn">
   <input type="checkbox">
-  <a class="zust-btn zust-primary">Toggle</a>
+  <span tabindex="0" role="button" class="zust-btn zust-primary">Toggle</span>
 </label>
 ```
-::: warning Important Stuff
+::: warning Important thing
 Don't use `button`{.tag} in this scenario. You can Use Anything Except `button`{.tag} here, Like `span`{.tag}, `a`{.tag} etc. Also You have to use any of colored button. It will not work on default buttons.
 :::
 
@@ -237,19 +248,19 @@ This makes Better Sense in Button Groups.
 <div class="zust-el-group">
   <label class="zust-toggle-btn">
     <input type="radio" name="checkForBtn">
-    <span class="zust-btn zust-link">Play</span>
+    <span tabindex="0" role="button" class="zust-btn zust-link">Play</span>
   </label>
   <label class="zust-toggle-btn">
     <input type="radio" name="checkForBtn">
-    <span class="zust-btn zust-link">Work</span>
+    <span tabindex="0" role="button" class="zust-btn zust-link">Work</span>
   </label>
   <label class="zust-toggle-btn">
     <input type="radio" name="checkForBtn">
-    <span class="zust-btn zust-link">Sleep</span>
+    <span tabindex="0" role="button" class="zust-btn zust-link">Sleep</span>
   </label>
   <label class="zust-toggle-btn">
     <input type="radio" name="checkForBtn">
-    <span class="zust-btn zust-link">Dance</span>
+    <span tabindex="0" role="button" class="zust-btn zust-link">Dance</span>
   </label>
 </div>
 ```
