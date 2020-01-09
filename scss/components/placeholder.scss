@@ -6,6 +6,72 @@
     background-color: var(--placeholder-holder-color);
   }
 
+  .#{$prefix}paragraph {
+    margin: 30px 0;
+  }
+
+  .#{$prefix}line {
+    background-color: var(--placeholder-holder-color);
+    height: 8px;
+    margin-top: 8px;
+  }
+
+  .#{$prefix}header {
+    background-color: var(--placeholder-holder-color);
+    height: 8px;
+    margin-top: 8px;
+    height: 2rem;
+  }
+
+  .#{$prefix}lines > div {
+    background-color: var(--placeholder-holder-color);
+    height: 8px;
+    margin-top: 8px;
+
+    &:first-child {
+      margin-left: 2rem;
+    }
+
+    &:last-child {
+      margin-right: 4rem;
+    }
+  }
+
+  .#{$prefix}image {
+    background-color: var(--placeholder-holder-color);
+    height: 160px;
+    margin: 10px 50px;
+  }
+
+  .#{$prefix}details {
+    margin: 20px 0;
+
+    > div {
+      display: inline-block;
+    }
+
+    .#{$prefix}image {
+      height: 0;
+      padding: 25px;
+      margin: 0;
+      margin-right: 10px;
+    }
+
+    .#{$prefix}line {
+      height: 20px;
+
+      &:first-child {
+        width: 170px;
+        height: 25px;
+      }
+
+      &:last-child {
+        width: 100px;
+        height: 16px;
+      }
+    }
+  }
+
   &:after {
     content: '';
     top: 0;
