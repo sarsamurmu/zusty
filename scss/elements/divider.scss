@@ -1,0 +1,23 @@
+[divider]:not(hr), .#{$prefix}divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  &:after, &:before {
+    content: '';
+    background-color: var(--divider-color);
+    height: 4px;
+    width: 100%;
+    opacity: 0.5;
+    border-radius: 100px;
+  }
+
+  &:after {
+    margin-left: 10px;
+  }
+
+  &:before {
+    margin-right: 10px;
+  }
+}
