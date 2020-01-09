@@ -81,6 +81,13 @@ $cssvar: $css-variable-enabled;
     }
   }
 
+  hr[divider] {
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    opacity: 1;
+  }
+
   .#{$prefix}items {
     top: 100%;
     left: 0;

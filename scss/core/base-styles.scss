@@ -58,15 +58,12 @@ a:not(.#{$prefix}btn) {
 hr[divider] {
   width: 100%;
   border-style: solid;
-  border-bottom-style: none;
-  border-left-style: none;
-  border-right-style: none;
   border-color: var(--divider-color);
   border-width: 2px;
-  border-radius: 50px;
+  border-radius: 100px;
   margin-top: 10px;
   margin-bottom: 10px;
-  unicode-bidi: unset;
+  opacity: 0.5;
   transition: $primary-transition;
 }
 
