@@ -14,6 +14,7 @@
   font-size: 1em;
   overflow: hidden;
   margin: 2px;
+  vertical-align: middle;
   transition: $primary-transition;
   --avt-size: #{$avatar-size};
   width: var(--avt-size);
