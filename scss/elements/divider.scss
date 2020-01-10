@@ -1,8 +1,13 @@
+@if $css-variable-enabled {
+  $primary-transition: var(--primary-transition);
+}
+
 [divider]:not(hr), .#{$prefix}divider {
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  transition: $primary-transition;
 
   &:after, &:before {
     content: '';
@@ -11,6 +16,7 @@
     width: 100%;
     opacity: 0.5;
     border-radius: 100px;
+    transition: $primary-transition;
   }
 
   &:after {
