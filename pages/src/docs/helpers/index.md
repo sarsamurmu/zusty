@@ -366,8 +366,6 @@ Example. If you want to  set any element's text color to teal in Dark Theme, add
 <p class="zust-text-pow-primary">Primary Text Color. You can See this Text's Color looks Completely Strong, More Powerful than Any Other Texts. This Text Color Apllies to Header Elements.</p>
 <p class="zust-text-pow-secondary">Secondary Text Color. This Text's Color is not as Much Powerful as Primary Text Color, But it is Powerful than Tertiary Text Color. Weaker than Primary Text Color But Stronger than Teriary Text Color. This Text Color Apllies to Every Child Elements of Body.</p>
 <p class="zust-text-pow-tertiary">Tertiary Text Color. As You can Notice This Text's Color is Weaker Than Any Other Text Color. I want more text or the demo will not be that much good, so I tried to Write more text. as You can see this is My Text. Yay!</p>
-
-hidCode{{<p>Text Sizes are just for demonstration</p>}}
 ```
 ---
 
