@@ -1,0 +1,50 @@
+@if $css-variable-enabled {
+  $avatar-size: var(--avatar-size);
+  $avatar-size-small: var(--avatar-size-small);
+  $avatar-size-large: var(--avatar-size-large);
+  $primary-transition: var(--primary-transition);
+}
+
+.#{$prefix}avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--avatar-bg-color);
+  border-radius: 100px;
+  font-size: 1em;
+  overflow: hidden;
+  margin: 2px;
+  transition: $primary-transition;
+  --avt-size: #{$avatar-size};
+  width: var(--avt-size);
+  height: var(--avt-size);
+  font-size: $medium-text;
+
+  > img {
+    height: calc(var(--avt-size) + 2px);
+    width: calc(var(--avt-size) + 2px);
+  }
+
+  > .#{$prefix}icon {
+    --icon-size: calc(var(--avt-size) - 14px);
+  }
+
+  &.#{$prefix}small {
+    --avt-size: #{$avatar-size-small};
+    font-size: $small-text;
+  }
+
+  &.#{$prefix}large {
+    --avt-size: #{$avatar-size-large};
+    font-size: calc(#{$large-text} - 4px);
+  }
+
+  @each $name, $color, $txt-color in $item-colors {
+    @if $name {
+      &.#{$prefix}#{$name} {
+        background-color: $color;
+        color: $txt-color;
+      }
+    }
+  }
+}

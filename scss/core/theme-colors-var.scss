@@ -80,6 +80,12 @@ $item-disabled-fg-color-dark: hsl(0, 0%, 30%) !default;
 //    Elements
 // --------------
 
+// Avatar
+$avatar-bg-color: hsl(0, 0%, 92%) !default;
+$avatar-bg-color-dark: hsl(0, 0%, 22%) !default;
+$avatar-text-color: #FFF !default;
+$avatar-text-color-dark: #FFF !default;
+
 // Button
 $button-bg-color: hsl(0, 0%, 100%) !default;
 $button-bg-color-dark: hsl(0, 0%, 15%) !default;

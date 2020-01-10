@@ -51,6 +51,10 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   //    Elements
   // --------------
 
+  // Avatar
+  --avatar-bg-color: #{$avatar-bg-color};
+  --avatar-text-color: #{$avatar-text-color};
+
   // Button
   --button-bg-color: #{$button-bg-color};
   --button-border-color: #{$button-border-color};
@@ -240,6 +244,10 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     // --------------
     //    Elements
     // --------------
+
+    // Avatar
+    --avatar-bg-color: #{$avatar-bg-color-dark};
+    --avatar-text-color: #{$avatar-text-color-dark};
 
     // Button
     --button-bg-color: #{$button-bg-color-dark};
