@@ -76,8 +76,9 @@ $icon-size-default: 1.5rem;
 // End of METHOD: 1
 
 // METHOD: 2. Just Import What you need
-// First of all import base styles and theme color's css version
+// First of all import base styles, theme color's css version and reset
 @import "../node_modules/zusty/scss/core/base-styles";
+@import "../node_modules/zusty/scss/core/reset";
 @import "../node_modules/zusty/scss/core/theme-colors-css";
 
 // Then Import Just What you need

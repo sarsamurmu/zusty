@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
       `// Finally import zusty`,
       `@import "zusty";`
     ],
-    'partly-import': [
+    'partial-import': [
       `// Method to import just what you need`,
       `// First import core variables`,
       `@import "scss/core/var-only";`,
@@ -100,6 +100,8 @@ window.addEventListener('DOMContentLoaded', () => {
       `@import "scss/core/base-styles";`,
       `// Theme's CSS Variables`,
       `@import "scss/core/theme-colors-css";`,
+      `// Reset`,
+      `@import "scss/core/reset";`,
       `// Then import just what you need`,
       `// If you want button`,
       `@import "scss/elements/button";`,
