@@ -243,8 +243,8 @@ To use it add class `{string}(zust-text-){comment}(size-number)`.
 You can also use [Breakpoints](../general/breakpoints) with this.
 
 ```html {snippet}
-<p class="zust-text-2">Text with double size</p>
-<p class="zust-text-3@large">Text with triple size at large breakpoint</p>
+<p class="zust-text-6">Text with size 6</p>
+<p class="zust-text-6@large">Text with size 6 at large breakpoint</p>
 ```
 
 ### Superpowered
