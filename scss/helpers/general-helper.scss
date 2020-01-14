@@ -1,3 +1,5 @@
+$sep: $condition-separator;
+
 // Show/Hide
 .#{$prefix}invisible {
   visibility: hidden !important;
@@ -14,33 +16,33 @@
 }
 
 // Based on Size
-@include each-breakpoint('.#{$prefix}invisible#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}invisible#{$sep}name', 'name') {
   visibility: hidden !important;
 }
 
-@include each-breakpoint('.#{$prefix}visible#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}visible#{$sep}name', 'name') {
   display: initial !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-@include each-breakpoint('.#{$prefix}hidden#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}hidden#{$sep}name', 'name') {
   display: none !important;
 }
 
 // On Dark
 [#{$prefix}theme="dark"] {
-  .#{$prefix}visible#{$cd-sep}dark {
+  .#{$prefix}visible#{$sep}dark {
     display: initial !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  .#{$prefix}hidden#{$cd-sep}dark {
+  .#{$prefix}hidden#{$sep}dark {
     display: none !important;
   }
 
-  .#{$prefix}invisible#{$cd-sep}dark {
+  .#{$prefix}invisible#{$sep}dark {
     visibility: hidden !important;
   }
 }
@@ -51,7 +53,7 @@
     display: #{$name} !important;
   }
 
-  @include each-breakpoint('.#{$prefix}#{$name}#{$cd-sep}brname', 'brname') {
+  @include each-breakpoint('.#{$prefix}#{$name}#{$sep}brname', 'brname') {
     display: #{$name} !important;
   }
 }
@@ -138,11 +140,11 @@
   @include paddingless
 }
 
-@include each-breakpoint('.#{$prefix}marginless#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}marginless#{$sep}name', 'name') {
   @include marginless;
 }
 
-@include each-breakpoint('.#{$prefix}paddingless#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}paddingless#{$sep}name', 'name') {
   @include paddingless;
 }
 
@@ -186,7 +188,7 @@
   @extend %full-width;
 }
 
-@include each-breakpoint('.#{$prefix}fullwidth#{$cd-sep}name, .#{$prefix}fillup#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}fullwidth#{$sep}name, .#{$prefix}fillup#{$sep}name', 'name') {
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
@@ -196,7 +198,7 @@
   @extend %full-height;
 }
 
-@include each-breakpoint('.#{$prefix}fullheight#{$cd-sep}name', 'name') {
+@include each-breakpoint('.#{$prefix}fullheight#{$sep}name', 'name') {
   height: -webkit-fill-available;
   height: -moz-available;
   height: fill-available;

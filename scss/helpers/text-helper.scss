@@ -116,12 +116,12 @@
 
 @for $i from 1 through 10 {
   .#{$prefix}text-#{$i} {
-    font-size: ($i/25) * 10rem;
+    font-size: ($i / 25) * 10rem;
   }
 
-  $name: '.#{$prefix}text-#{$i}#{$cd-sep}name';
+  $name: '.#{$prefix}text-#{$i}#{$condition-separator}name';
 
   @include each-breakpoint($name, 'name') {
-    font-size: ($i/25) * 10rem;
+    font-size: ($i / 25) * 10rem;
   }
 }

@@ -1,3 +1,5 @@
+$sep: $condition-separator;
+
 // Background Colors
 $extra-bg-colors: (
   ('inverted', var(--bg-color-inverted), var(--text-color-inverted)),
@@ -76,7 +78,7 @@ $bg-color-helpers: join($colors, $extra-bg-colors);
 
 // Backgrounds on Dark Theme
 [#{$prefix}theme="dark"] {
-  @include bg-colors('#{$cd-sep}dark');
+  @include bg-colors('#{$sep}dark');
 }
 
 // Text Colors
@@ -144,5 +146,5 @@ $text-color-helpers: join($colors, $extra-text-colors);
 
 // Text on Dark Theme
 [#{$prefix}theme="dark"] {
-  @include text-colors('#{$cd-sep}dark');
+  @include text-colors('#{$sep}dark');
 }
