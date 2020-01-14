@@ -238,9 +238,14 @@ Change Text Style just by using class
 ### Text Sizes
 There are 10 Sizes that you can use to handle text size. Size numbers are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
 
-To use it add class `{string}(zust-text@){comment}(size-number)`.
+To use it add class `{string}(zust-text-){comment}(size-number)`.
 
 You can also use [Breakpoints](../general/breakpoints) with this.
+
+```html {snippet}
+<p class="zust-text-2">Text with double size</p>
+<p class="zust-text-3@large">Text with triple size at large breakpoint</p>
+```
 
 ### Superpowered
 - `zust-text-centered`{.class} or `zust-text-center`{.class} : Sets the element's text alignment to Center. It can also be applied to any Parent Element, if applied to any Parent Element, the Parent Element's all Child will be Horizontaly centered.
