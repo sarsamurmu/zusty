@@ -85,9 +85,6 @@ window.addEventListener('DOMContentLoaded', () => {
     ],
     'partial-import': [
       `// Method to import just what you need`,
-      `// First import core variables`,
-      `@import "scss/core/var-only";`,
-      ``,
       `// Declare your variables here`,
       `// Example`,
       `// $primary-color: #7289da;`,
@@ -96,6 +93,8 @@ window.addEventListener('DOMContentLoaded', () => {
       `// $primary-color-light: hsla(227, 58%, 65%, 0.3);`,
       ``,
       `// Import necessary files`,
+      `// Variables`,
+      `@import "scss/core/var-only";`,
       `// Base styles`,
       `@import "scss/core/base-styles";`,
       `// Theme's CSS Variables`,
