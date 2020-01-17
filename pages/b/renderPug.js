@@ -33,9 +33,9 @@ let renderFile = (filePath) => {
 if (args.includes('-w')) {
   chokidar.watch(pugFilePath, {
     ignored: ignoredPaths
-  }).on('change', renderFile).on('ready', () => console.log(chalk.magenta(`Watching Pug files for change\n`)));
+  }).on('change', (filePath) => setTimeout(() => renderFile(filePath), 100)).on('ready', () => console.log(chalk.magenta(`Watching Pug files for change\n`)));
 
-  chokidar.watch(pugImportsPath).on('change', (filePath) => {
+  chokidar.watch(pugImportsPath).on('change', (filePath) => setTimeout(() => {
     console.log(chalk.blue(`Import changed ${filePath}\n`));
 
     if (browserSync.has('default')) browserSync.get('default').pause();
@@ -43,7 +43,7 @@ if (args.includes('-w')) {
     glob.sync(pugFilePath, { ignore: ignoredPaths }).forEach(renderFile);
 
     if (browserSync.has('default')) browserSync.get('default').resume();
-  })
+  }, 100))
 } else {
   console.log(chalk.magenta(`Rendering Pug files\n`));
 

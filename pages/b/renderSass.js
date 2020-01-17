@@ -32,13 +32,13 @@ let renderFile = (filePath) => {
 }
 
 if (args.includes('-w')) {
-  chokidar.watch(sassPath).on('change', renderFile).on('ready', () => console.log(chalk.magenta(`Watching Sass files for change\n`)));
+  chokidar.watch(sassPath).on('change', (filePath) => setTimeout(() => renderFile(filePath), 100)).on('ready', () => console.log(chalk.magenta(`Watching Sass files for change\n`)));
 
-  chokidar.watch(sassImportPath).on('change', (filePath) => {
+  chokidar.watch(sassImportPath).on('change', (filePath) => setTimeout(() => {
     console.log(chalk.blue(`Import changed ${filePath}\n`));
 
     glob.sync(sassPath).forEach(renderFile);
-  })
+  }, 100))
 } else {
   console.log(chalk.magenta(`Rendering Sass files\n`))
 
