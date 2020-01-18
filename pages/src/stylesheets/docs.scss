@@ -89,13 +89,17 @@ h1, h2, h3, h4, h5 {
 }
 
 code[inline] {
-  padding: 4px 8px 1px 8px;
+  padding: 1px 8px;
   border-radius: 4px;
   line-height: 24px;
   transition: $primary-transition;
   background-color: rgba(144, 144, 144, 0.1);
   font-size: 15px;
   font-family: 'Consolas', monospace;
+
+  @include small {
+    padding: 4px 8px 1px 8px;
+  }
 
   * {
     font-family: 'Consolas', monospace;
