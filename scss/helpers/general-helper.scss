@@ -249,6 +249,13 @@ $sep: $condition-separator;
   }
 }
 
+// Direction
+@each $value in column, column-reverse, row, row-reverse {
+  .#{$prefix}direction-#{$value} {
+    flex-direction: $value;
+  }
+}
+
 // Align
 @each $value in nowrap, wrap, wrap-reverse {
   .#{$prefix}#{$value} {
