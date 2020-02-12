@@ -23,11 +23,11 @@
 }
 
 @font-face {
-  font-family: 'Consolas';
+  font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('consolas.ttf') format('truetype');
+  src: url('jetbrains-mono.ttf') format('truetype');
 }
 
 .material-icons {
