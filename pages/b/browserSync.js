@@ -6,6 +6,7 @@ const browserSync = require('browser-sync').create('default');
 const zustycss = path.resolve(__dirname, '../../dist/zusty.css');
 
 browserSync.init({
+  port: 2703,
   server: {
     baseDir: './public',
     serveStaticOptions: {
