@@ -269,3 +269,43 @@ $sep: $condition-separator;
     display: flex;
   }
 }
+
+// Snap Container
+.#{$prefix}snap-container {
+  display: flex;
+  overflow: auto;
+  
+  &:not(.#{$prefix}vertical) {
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+  }
+
+  &.#{$prefix}vertical {
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+  }
+
+  &.#{$prefix}snap-start > .#{$prefix}snap-item {
+    scroll-snap-align: start;
+  }
+
+  &.#{$prefix}snap-end > .#{$prefix}snap-item {
+    scroll-snap-align: end;
+  }
+
+  > .#{$prefix}snap-item {
+    scroll-snap-align: center;
+
+    &.#{$prefix}snap-start {
+      scroll-snap-align: start;
+    }
+
+    &.#{$prefix}snap-center {
+      scroll-snap-align: center;
+    }
+
+    &.#{$prefix}snap-end {
+      scroll-snap-align: end;
+    }
+  }
+}
