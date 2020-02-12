@@ -268,6 +268,8 @@ $navbar-bg-color: #FFF !default;
 $navbar-bg-color-dark: hsl(0, 0%, 16%) !default;
 $navbar-shadow-color: hsla(0, 0%, 0%, 0.05) !default;
 $navbar-shadow-color-dark: hsla(0, 0%, 0%, 0.12) !default;
+$navbar-item-hovered-color: $primary-color !default;
+$navbar-item-hovered-color-dark: $primary-color-dark !default;
 $navbar-selected-item-color: $primary-color !default;
 $navbar-selected-item-color-dark: $primary-color-dark !default;
 $navbar-selected-item-bg-color: $primary-color !default;

@@ -93,7 +93,7 @@
       }
 
       > * {
-        margin-left: 20px;
+        padding: 0 10px;
         height: 100%;
         align-items: center;
 
@@ -111,7 +111,7 @@
         user-select: none;
 
         &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
-          color: var(--text-color-primary);
+          color: var(--navbar-item-hovered-color);
         }
 
         &.#{$prefix}selected, &[selected] {
@@ -236,7 +236,9 @@
 
     &:not(.#{$prefix}flat) {
       > .#{$prefix}content {
-        box-shadow: $navbar-shadow;
+        @include until-large {
+          box-shadow: $navbar-shadow;
+        }
       }
     }
   }
