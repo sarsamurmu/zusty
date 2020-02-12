@@ -60,11 +60,11 @@
   }
 
   &:focus, &.#{$prefix}focused {
-    border-color: var(--button-focus-border-color);
+    border-color: var(--button-border-spread-color);
     @if $css-variable-enabled {
-      box-shadow: 0 0 0 var(--button-border-spread) var(--button-focus-border-color);
+      box-shadow: 0 0 0 var(--button-border-spread) var(--button-border-spread-color);
     } @else {
-      box-shadow: 0 0 0 $button-border-spread var(--button-focus-border-color);
+      box-shadow: 0 0 0 $button-border-spread var(--button-border-spread-color);
     }
   }
 

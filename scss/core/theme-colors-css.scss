@@ -60,7 +60,7 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
   --button-border-color: #{$button-border-color};
   --button-hovered-border-color: #{$button-hovered-border-color};
   --button-text-color: #{$button-text-color};
-  --button-focus-border-color: #{$button-focus-border-color};
+  --button-border-spread-color: #{$button-border-spread-color};
   --button-shadow-color: #{$button-shadow-color};
 
   // Chip
@@ -255,7 +255,7 @@ $main-selector: ':root, [#{$prefix}theme="light"]';
     --button-border-color: #{$button-border-color-dark};
     --button-hovered-border-color: #{$button-hovered-border-color-dark};
     --button-text-color: #{$button-text-color-dark};
-    --button-focus-border-color: #{$button-focus-border-color-dark};
+    --button-border-spread-color: #{$button-border-spread-color-dark};
     --button-shadow-color: #{$button-shadow-color-dark};
 
     // Chip
