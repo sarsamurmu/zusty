@@ -16,7 +16,6 @@
 .#{$prefix}card {
   background-color: var(--card-bg-color);
   border-color: var(--card-border-color);
-  height: max-content;
   box-sizing: content-box;
   padding: $card-padding;
   margin: $card-margin;
@@ -24,6 +23,8 @@
   min-width: $card-min-width;
   box-shadow: $card-box-shadow;
   border-radius: $card-border-radius;
+  display: flex;
+  flex-direction: column;
   transition: $primary-transition;
 
   &.#{$prefix}flat {
@@ -43,16 +44,12 @@
 
   footer {
     margin: 0 -10px 0 -10px;
-
-    &.#{$prefix}center {
-      text-align: center;
-    }
-
-    &:not(.#{$prefix}center):not(.#{$prefix}text-center) {
-      * {
-        float: right;
-      }
-    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-grow: 1;
 
     @include clearfix;
   }
