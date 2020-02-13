@@ -14,7 +14,7 @@ extraHead: >
 ---
 
 # Icon
-Powerful Wrapper for almost all kind of icons. Now use icons with flexibility.
+Powerful wrapper for almost all kind of icons. Now use icons with flexibility.
 
 ---
 
@@ -29,7 +29,7 @@ Powerful Wrapper for almost all kind of icons. Now use icons with flexibility.
 
 
 ## Support
-It has support for almost all kinds of icons. Here are some.
+It has support for almost all kinds of icons.
 
 ```html {snippet}
 <p>Font Awesome 5</p>
@@ -79,7 +79,7 @@ You can use any of text color helper to color icons.
 
 
 ## Sizes
-There are extra three predefined sizes. use them....
+There are extra three predefined sizes. Use them by adding any of these classes - `zust-small`{.class}, `zust-large`{.class} and `zust-xlarge`{.class}.
 
 ```html {snippet}
 <span class="zust-icon zust-small">
@@ -101,10 +101,10 @@ There are extra three predefined sizes. use them....
 ---
 
 
-## Custom Size
+## Custom size
 Icons are most important and most used element. There are no guarantee when you need custom size. So here comes the feature.
 
-You can change icons size by using CSS Variable, It's Super Easy. Use `--icon-size`{.class} to change the icon size. See the Snippet Below for Better Understanding.
+You can change icons size by using CSS variable, It's super easy. Use `--icon-size`{.class} to change the icon size. See the snippet below for better understanding.
 
 ```html {snippet}
 noRender{{
@@ -114,7 +114,7 @@ noRender{{
   }
 </style>
 }}
-<p>Using Inline Style</p>
+<p>Using inline style</p>
 <span class="zust-icon" style="--icon-size: 70px;">
   <i class="fa fa-bicycle"></i>
 </span>
@@ -138,7 +138,7 @@ You can wrap spinner inside icon. There are few more [Spinners](spinner).
 ---
 
 
-## Basic Icons
+## Basic icons
 It includes few necessary icons, made with pure CSS. They can be used everywhere.
 
 ```html {snippet}

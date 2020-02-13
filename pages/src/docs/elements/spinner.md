@@ -3,7 +3,7 @@ title: Spinner
 ---
 
 # Spinner
-Spinner as Icon.
+Spinner as icon.
 
 ---
 

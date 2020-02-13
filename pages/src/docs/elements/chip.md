@@ -3,7 +3,7 @@ title: Chip
 ---
 
 # Chip
-Minimal Chip for Your Needs.
+Minimal chip for your needs.
 
 ---
 
@@ -15,24 +15,24 @@ Minimal Chip for Your Needs.
   <span>Chip</span>
 </div>
 
-<!-- With Icon-->
+<!-- With icon-->
 <div class="zust-chip">
-  <span>With Icon</span>
+  <span>With icon</span>
   <span class="zust-icon">
     <i class="material-icons">close</i>
   </span>
 </div>
 
-<!-- With Image-->
+<!-- With image-->
 <div class="zust-chip">
   <img src="/resources/profile.png">
-  <span>With Image</span>
+  <span>With image</span>
 </div>
 
-<!-- With Both-->
+<!-- With both-->
 <div class="zust-chip">
   <img src="/resources/profile.png">
-  <span>With Both</span>
+  <span>With both</span>
   <span class="zust-icon">
     <i class="material-icons">close</i>
   </span>
@@ -48,7 +48,7 @@ You can make the chip large or small by adding class `zust-large`{.class} or `zu
 <!-- Large -->
 <div class="zust-chip zust-large">
   <img src="/resources/profile.png">
-  <span>Large Chip</span>
+  <span>Large chip</span>
   <span class="zust-icon">
     <i class="material-icons">close</i>
   </span>
@@ -57,7 +57,7 @@ You can make the chip large or small by adding class `zust-large`{.class} or `zu
 <!-- Small -->
 <div class="zust-chip zust-small">
   <img src="/resources/profile.png">
-  <span>Small Chip</span>
+  <span>Small chip</span>
   <span class="zust-icon">
     <i class="material-icons">close</i>
   </span>
@@ -66,7 +66,7 @@ You can make the chip large or small by adding class `zust-large`{.class} or `zu
 
 
 
-## Bunch of Chip
+## Bunch of chip
 If you are working with bunch of chip you can use Zusty's built-in container. They will break automatically when needed.
 
 ```html {snippet}

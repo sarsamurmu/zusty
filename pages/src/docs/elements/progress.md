@@ -3,7 +3,7 @@ title: Progress Bar
 ---
 
 # Progress Bar
-Compact Progress Bar.
+Compact progress bar.
 
 ---
 
@@ -16,7 +16,7 @@ Compact Progress Bar.
 
 
 ## Colors
-It supports all Theme Colors.
+It supports all theme colors.
 
 ```html {snippet}
 <progress max="100" value="55" class="zust-progress zust-success"></progress>

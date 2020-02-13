@@ -3,14 +3,14 @@ title: Tooltip
 ---
 
 # Tooltip
-Better Tooltip for Better UX
+Better tooltip for better UX.
 
 ---
 
 
 ## Structure
 ```html {snippet}
-<button class="zust-btn" zust-tooltip="A Compact Tooltip">Tooltip</button>
+<button class="zust-btn" zust-tooltip="A compact tooltip">Tooltip</button>
 ```
 ---
 
@@ -33,7 +33,7 @@ The positions are `top`{.class}, `bottom`{.class}, `left`{.class}, `right`{.clas
 
 
 ## Colors
-You can set tooltip color to any of Theme Color. Add attribute `{attr}(zust-tooltip-type)="{comment}(theme-color-name)"`.
+You can set tooltip color to any of theme color. Add attribute `{attr}(zust-tooltip-type)="{comment}(theme-color-name)"`.
 
 ```html {snippet}
 <button class="zust-btn" zust-tooltip="You're successful in making tooltip" zust-tooltip-type="success" zust-tooltip-position="bottom-left">Success Tooltip</button>
@@ -41,15 +41,15 @@ You can set tooltip color to any of Theme Color. Add attribute `{attr}(zust-tool
 ---
 
 
-## Custom Activation
+## Custom activation
 You can activate the tooltip by adding class `zust-tooltip-active`{.class}.
 
 ---
 
 
-## Visibility Based on Breakpoint
+## Visibility based on breakpoint
 You can set visibility tooltip based on breakpoint, Your tooltip will be only visible on that breakpoint. For this add attribute `{attr}(zust-tooltip-visibility)="{comment}(breakpoint-name)"`. Get breakpoint names from [Here](../general/breakpoints).
 
 ```html {snippet}
-<button class="zust-btn" zust-tooltip-visibility="small" zust-tooltip="So, You're using small device right now? Are you using Web Inspector? Thinking......" zust-tooltip-position="top-left">Small Breakpoint Tooltip  🤔</button>
+<button class="zust-btn" zust-tooltip-visibility="small" zust-tooltip="So, You're using small device right now? Are you using Web Inspector? Thinking......" zust-tooltip-position="top-left">Small Breakpoint Tooltip 🤔</button>
 ```

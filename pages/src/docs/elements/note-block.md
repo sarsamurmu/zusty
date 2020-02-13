@@ -3,7 +3,7 @@ title: Note Block
 ---
 
 # Note Block
-A Note Block for Message.
+A note block for message.
 
 ---
 
@@ -12,7 +12,7 @@ A Note Block for Message.
 ```html {snippet}
 <div class="zust-note" role="note">
   <h3>What is it?</h3>
-  <p>It is just a Note Block</p>
+  <p>It is just a note block</p>
 </div>
 ```
 ---
@@ -24,7 +24,7 @@ This includes all theme colors use any of them.
 ```html {snippet}
 <div class="zust-note" role="note">
   <h3>Default - Primary</h3>
-  <p>Hey it's Primary</p>
+  <p>Hey it's primary</p>
 </div>
 
 <div class="zust-note zust-warning" role="note">

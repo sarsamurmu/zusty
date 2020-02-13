@@ -3,7 +3,7 @@ title: Button
 ---
 
 # Button
-Button of Anytype you want.
+Button of any type you want.
 
 ---
 
@@ -47,7 +47,7 @@ You can size them easily just by adding class `zust-small`{.class}, `zust-ignore
 
 
 ## Colors
-You can set buttons color to any of Theme Colors. You can also use Colors Helper to color them. To use custom color/color helper, you have to add class `zust-custom`{.class}.
+You can set buttons color to any of theme colors. You can also use [Colors Helper](../helpers/#colors) to color them. To use custom color/color helper, you have to add class `zust-custom`{.class}.
 
 ```html {snippet}
 <button class="zust-btn zust-primary">Primary</button>
@@ -61,8 +61,8 @@ You can set buttons color to any of Theme Colors. You can also use Colors Helper
 ---
 
 
-## With Icons
-You can use icons with buttons
+## With icons
+You can use icons with buttons.
 
 ```html {snippet}
 <button class="zust-btn">
@@ -72,7 +72,7 @@ You can use icons with buttons
   <span>Grin</span>
 </button>
 
-<button class="zust-btn" aria-label="filter">
+<button class="zust-btn" aria-label="Filter">
   <span class="zust-icon">
     <i class="material-icons">filter</i>
   </span>
@@ -86,7 +86,7 @@ You can use icons with buttons
   <span>Spinner</span>
 </button>
 
-<button class="zust-btn" aria-label="wink-icon">
+<button class="zust-btn" aria-label="Wink icon button">
   <span class="zust-icon">
     <i class="fa fa-grin-wink"></i>
   </span>
@@ -127,7 +127,7 @@ There are even ghost buttons, use it by adding class `zust-ghost`{.class}. Like 
 
 
 ## Disabled
-You can simply make any button disabled by adding attribute `disabled`{.class}.
+You can simply make any button disabled by adding attribute `disabled`{.attr}.
 
 ```html {snippet}
 <button class="zust-btn" disabled>
@@ -144,8 +144,8 @@ You can simply make any button disabled by adding attribute `disabled`{.class}.
 ---
 
 
-## Max Padding
-Max padding buttons have increased padding and less rounded corner. To use it add class `zust-max-pad`{.class} to `zust-btn`{.tag}.
+## Max padding
+Max padding buttons have increased padding and less rounded corners. To use it add class `zust-max-pad`{.class} to `zust-btn`{.tag}.
 
 ```html {snippet}
 <button class="zust-btn zust-primary">Normal</button>
@@ -155,7 +155,7 @@ Max padding buttons have increased padding and less rounded corner. To use it ad
 
 
 ## Shape
-You can Make button fullwidth, rounded, sharp, semi rounded. Thanks to [Shape Helper](../helpers/#shape).
+You can make button fullwidth, rounded, sharp, semi rounded. Thanks to [Shape Helper](../helpers/#shape).
 
 ```html {snippet}
 <button class="zust-btn zust-primary zust-fullwidth">Fullwidth</button>
@@ -166,7 +166,7 @@ You can Make button fullwidth, rounded, sharp, semi rounded. Thanks to [Shape He
 ---
 
 
-## Group Editing
+## Group editing
 You can change size or appearance of all buttons easily by adding class to their parent. Add any of these classes to parent - `zust-btns-small`{.class}, `zust-btns-large`{.class}, `zust-btns-xlarge`{.class}, `zust-btns-fullwidth`{.class}, `zust-btns-custom`{.class}, `zust-btns-outlined`{.class}, `zust-btns-ghost`{.class}.
 
 You can make a button ignore it's parent's style by adding class `zust-ignored`{.class} to the button itself.
@@ -206,8 +206,8 @@ You can also group buttons together. Just place them inside of `zust-el-group`{.
 ---
 
 
-## Bunch of Buttons
-You can use Zusty's Built-in Container to contain bunch of Buttons. They will break whenever necessary.
+## Bunch of buttons
+You can use Zusty's built-in container to contain bunch of buttons. They will break whenever necessary.
 
 ```html {snippet}
 <div class="zust-container">
@@ -238,13 +238,13 @@ A button can be toggle-able. See the snippet below.
 </label>
 ```
 ::: warning Important thing
-Don't use `button`{.tag} in this scenario. You can Use Anything Except `button`{.tag} here, Like `span`{.tag}, `a`{.tag} etc. Also You have to use any of colored button. It will not work on default buttons.
+Don't use `button`{.tag} in this scenario. You can use anything except `button`{.tag} here, like `span`{.tag}, `a`{.tag} etc. Also you have to use any of colored button. It will not work on default buttons.
 :::
 
-This makes Better Sense in Button Groups.
+This makes better sense in button groups.
 
 ```html {snippet}
-<p>Choose Any one Option Below.</p>
+<p>Choose any one option below</p>
 <div class="zust-el-group">
   <label class="zust-toggle-btn">
     <input type="radio" name="checkForBtn">
