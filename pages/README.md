@@ -1,4 +1,6 @@
 # Zusty Pages
+[![Netlify Status](https://api.netlify.com/api/v1/badges/48d339a8-2697-4f64-8433-a6d8d83f2e0c/deploy-status)](https://app.netlify.com/sites/zustycss/deploys)
+
 Includes all page for https://zustycss.com.
 
 ## Usage
