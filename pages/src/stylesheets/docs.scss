@@ -1,15 +1,15 @@
 // From Zusty SCSS
-@import './../../../scss/core/var-only.scss';
+@import './../../../scss/core/var-only';
 
-@import "imports/values.scss";
-@import "imports/sidenav.scss";
-@import "imports/searchbar.scss";
-@import "imports/theme.scss";
-@import "imports/dimmer.scss";
-@import "imports/bottombar.scss";
-@import "imports/highlight.scss";
-@import "imports/search.scss";
-@import "imports/footer.scss";
+@import "imports/values";
+@import "imports/sidenav";
+@import "imports/searchbar";
+@import "imports/theme";
+@import "imports/dimmer";
+@import "imports/bottombar";
+@import "imports/highlight";
+@import "imports/search";
+@import "imports/footer";
 @import "imports/worker-toast";
 
 @import "/resources/fonts.css";

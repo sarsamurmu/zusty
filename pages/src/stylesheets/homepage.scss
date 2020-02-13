@@ -1,7 +1,7 @@
 @import "/resources/fonts.css";
-@import "./../../../scss/core/var-only.scss";
-@import "imports/navbar.scss";
-@import "imports/footer.scss";
+@import "./../../../scss/core/var-only";
+@import "imports/navbar";
+@import "imports/footer";
 @import "imports/worker-toast";
 
 body {

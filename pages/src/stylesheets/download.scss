@@ -1,11 +1,11 @@
-@import "./../../../scss/core/var-only.scss";
-@import "imports/navbar.scss";
-@import "imports/footer.scss";
+@import "./../../../scss/core/var-only";
+@import "imports/navbar";
+@import "imports/footer";
 @import "imports/worker-toast";
 
-@import "imports/editor/base.scss";
-@import "imports/editor/theme.scss";
-@import "imports/editor/themed.scss";
+@import "imports/editor/base";
+@import "imports/editor/theme";
+@import "imports/editor/themed";
 
 @import "/resources/fonts.css";
 
