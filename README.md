@@ -15,6 +15,9 @@ Power Packed CSS Framework for Building Beautiful Interfaces.
 [![Build Status](https://github.com/sarsamurmu/zusty/workflows/Node%20CI/badge.svg)](https://github.com/sarsamurmu/zusty/actions?workflow=Node+CI)
 [![npm version](https://img.shields.io/npm/v/zusty.svg?color)](https://www.npmjs.com/package/zusty)
 
+## Support Zusty CSS
+You can support this framework just by leaving a star on its [GitHub Repository](https://github.com/sarsamurmu/zusty). Starring it would help make Zusty CSS getting known and it would motivate me to work on it.
+
 ## Usage
 You can use it in many ways. Here's some.
 
@@ -34,14 +37,14 @@ Add this to top of all stylesheets which are inside of `<head></head>`. Replace 
 <!-- For specific version -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@<versionCode>">
 
-<!-- Always Get the Latest Version -->
-<!-- Not Recommended for Production. It can Break Anytime -->
+<!-- Always get the latest version -->
+<!-- Not recommended for production. It can break anytime -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty">
-<!-- Other CSS Down Here -->
+<!-- Other CSS down here -->
 ```
 
 ### Starter Template
-This is the Starter Template that You can use to get started right away.
+This is the starter template that you can use to get started right away.
 
 ```html
 <!DOCTYPE html>
@@ -52,9 +55,9 @@ This is the Starter Template that You can use to get started right away.
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Zusty CSS -->
-    <!-- Use versioned CSS, so that your page will not break anytime -->
+    <!-- Use specific version, so that your page will not break whenever Zusty CSS gets updated -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zusty@<versionCode>">
-    <!-- Other CSS Down Here -->
+    <!-- Other CSS down here -->
 
     <title>Base Page</title>
   </head>
