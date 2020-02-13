@@ -3,7 +3,7 @@ title: Build a Theme
 ---
 
 # Build a Theme
-There two built-in themes (light & dark), you can customize them by using SCSS Variables. Even you can make a separate theme and use it on any site built on Zusty. Let's see how we can make a theme.
+There two built-in themes (light & dark), you can customize them by using SCSS variables. Even you can make a separate theme and use it on any site built on Zusty. Let's see how we can make a theme.
 
 ### Additional Requirements
 None
@@ -22,12 +22,12 @@ Download [theme.css](https://cdn.jsdelivr.net/npm/zusty@0.0.2/dist/theme.css) to
   --primary-hovered-color: #00a876;
   --primary-color-light: rgba(0, 184, 129, 0.3);
 
-  /* More Variables */
+  /* More variables */
 }
 ```
 You've to change the selector `{attr}(zust-theme)="{string}(light)"` to whatever selector you want. We will use this selector to apply our theme.
 
-Each CSS Variables stores a color for theme, you've to change them to match your theme.
+Each CSS variables stores a color for theme, you've to change them to match your theme.
 
 If we change few variables, our file looks like this.
 ```css

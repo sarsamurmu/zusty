@@ -4,15 +4,15 @@ extraHead: <link rel='stylesheet' href='/stylesheets/custom-theme.css'>
 ---
 
 # Variables
-There are lots of Customizable Variables in Zusty to use with SCSS Pack. To use them just include them in your SCSS File before importing Zusty.
+There are lots of customizable variables in Zusty to use with SCSS pack. To use them just include them in your SCSS file before importing Zusty.
 
 ---
 
 
-## Color Variables
-Zusty uses both SCSS Variables and CSS Variables for best customization.
+## Color variables
+Zusty uses both SCSS variables and CSS variables for best customization.
 
-For Example. The SCSS Variable is like this
+For example. The SCSS variables are like this
 ```scss {nocopy}
 $primary-color: hsl(162, 100%, 36%);
 $primary-color-dark: lighten($primary-color, 4%);
@@ -20,15 +20,15 @@ $primary-color-dark: lighten($primary-color, 4%);
 $success-color: #70c51c;
 $success-color-dark: lighten($success-color, 0%);
 ```
-and This gets converted to CSS like this
+and this gets converted to CSS like this
 ```css {nocopy}
-/* This is For Light Theme */
+/* This is for light theme */
 :root, [zust-theme="light"] {
   --primary-color: #00b881;
   --success-color: #70c51c;
 }
 
-/* This is For Dark Theme */
+/* This is for dark theme */
 [zust-theme="dark"] {
   --primary-color: #00cc8f;
   --success-color: #70c51c;
@@ -42,7 +42,7 @@ and in Zusty CSS, if any item needs primary color, it will be used like this
 ```
 By using colors in this way, it's easy to change colors based on theme.
 
-So, here are all overridable color variables. The given value is their default value.
+So, here are all override-able color variables. The given value is their default value.
 
 ```scss
 // --------------
@@ -364,7 +364,7 @@ As you can see, simply use suffix `-dark`{.tag} for color in dark theme.
 
 
 ### What `textForBg()`{.attr} is?
-If you're wondering what `textForBg()`{.attr} is then `textForBg()`{.attr} is one of Zusty's SCSS Functions, it takes the color given and checks its luminance and returns Dark Text or White Text color based on given color. It automates the process of choosing color for a background.
+If you're wondering what `textForBg()`{.attr} is then `textForBg()`{.attr} is one of Zusty's SCSS functions, it takes the color given and checks its luminance and returns dark text or white text color based on given color. It automates the process of choosing color for a background.
 
 ---
 
@@ -383,7 +383,7 @@ You can also add extra theme color using SCSS List Function.
 
 What If you want to add a theme color named `aquatic`{.attr} ? Here's the example -
 ```scss
-// Arrange Item in this Pattern -
+// Arrange items in this pattern -
 // name, color, text-color, hovered-color, light-color
 
 $custom-colors: (
@@ -391,22 +391,22 @@ $custom-colors: (
   ()
 );
 
-// Don't Forget to Add a Blank () at last of custom-colors list if you've single item
+// Don't forget to add a blank () at last of custom-colors list if you've single item
 ```
 
-Generated theme color's name will be aquatic.
+Generated theme color's name will be `aquatic`.
 
-It's Background Color will be `#02e5b8`{.attr}
+It's background color will be `#02e5b8`{.attr}
 
-It's Text Color will be `#353535`{.attr}
+It's text color will be `#353535`{.attr}
 
-When The Item is hovered it's color will be `#00cea5`{.attr}
+When the item is hovered it's color will be `#00cea5`{.attr}
 
-Light Color is a semi-transparent color which used by buttons and few other.
+Light color is a semi-transparent color which used by buttons and few other.
 
-Here the Light Color is `hsla(168, 98%, 45%, 0.3)`{.attr}
+Here the light color is `hsla(168, 98%, 45%, 0.3)`{.attr}
 
-Then If you compile the SCSS file You can use that theme-color wherever color variations are supported.
+Then if you compile the SCSS file, you can use that theme-color wherever color variations are supported.
 ```html {snippet nocopy nolaunch}
 <button class="zust-btn zust-aquatic">Button</button><br>
 <button class="zust-btn" zust-tooltip="Tooltip with Custom Theme" zust-tooltip-type="aquatic">Tooltip</button><br><br>
@@ -418,9 +418,9 @@ Then If you compile the SCSS file You can use that theme-color wherever color va
 </div>
 ```
 
-If you want to add more theme colors. You can do so. Here We are adding an extra theme name `blurple`{.attr}
+If you want to add more theme colors. You can do so. Here we are adding an extra theme name `blurple`{.attr}
 ```scss
-// Arrange Item in this Pattern -
+// Arrange items in this pattern -
 // name, color, text-color, hovered-color, light-color
 
 $custom-colors: (
@@ -428,7 +428,7 @@ $custom-colors: (
   ('blurple', #7289da, #FFF, #6480e4, hsla(227, 58%, 65%, 0.3))
 );
 
-// Don't Forget to Add a Blank () at last of custom-colors list if you've single item
+// Don't forget to add a blank () at last of custom-colors list if you've single item
 ```
 
 ```html {snippet nocopy nolaunch}
@@ -445,27 +445,27 @@ $custom-colors: (
 ---
 
 
-## Property Variables
-So, You've learned about Color Variables, Theme Colors. Now You will Learn About Property Variables.
+## Property variables
+So, you've learned about color variables, theme colors. Now you will learn about property variables.
 
-Property Variables are variables which contains CSS property's values. Editing them can change appearance of an element or of an component. Let's see which Property Variables are Overridable. Note that, the given value is just it's default value.
+Property variables are variables which contains CSS property's values. Editing them can change appearance of an element or of an component. Let's see which property variables are override-able. Note that, the given value is their default value.
 
 ```scss
 // --------------
 //    General
 // --------------
 
-// Prefix Used for all zusty's selectors;
+// Prefix used for all Zusty's selectors
 $prefix: 'zust-';
 
 // Separator used for Conditions
 $condition-separator: '\\@';
 
-// Screen Breakpoint Sizes as of Chrome Dev Tools
+// Screen breakpoint sizes as of Chrome Dev Tools
 $medium-breakpoint: 768px;
 $large-breakpoint: 1024px;
 
-// Font Sizes
+// Font sizes
 $xlarge-text: 2.2rem;
 $large-text: 1.6rem;
 $medium-text: 1rem;
@@ -652,13 +652,13 @@ $tab-border-bottom-width: 2px;
 ---
 
 
-## Extending Breakpoints
-As Theme Colors, You can also make your own Breakpoints. We will be using SCSS List Function.
+## Extending breakpoints
+Like theme colors, you can also make your own breakpoints. We will be using SCSS list function.
 
-What if You want to make an Breakpoint named `4k`{.attr}, with min-width of `2560px`{.attr}
+What if you want to make an breakpoint named `4k`{.attr}, with min-width of `2560px`{.attr}
 
 ```scss
-// Arrange in This Order
+// Arrange in this order -
 // name, min-width, max-width
 
 // If min-width or max-width don't exist then you can replace them with null
@@ -668,13 +668,13 @@ $custom-breakpoints: (
   ()
 );
 
-// Don't Forget to Add a Blank () at last of custom-breakpoints list if you've single item
+// Don't forget to add a blank () at last of custom-breakpoints list if you've single item
 ```
 
 You can add more if you want to
 
 ```scss
-// Arrange in This Order
+// Arrange in this order -
 // name, min-width, max-width
 
 // If min-width or max-width don't exist then you can replace them with null
@@ -684,7 +684,7 @@ $custom-breakpoints: (
   ('uniqueDevice', 100px, 600px)
 );
 
-// Don't Forget to Add a Blank () at last of custom-breakpoints list if you've single item
+// Don't forget to add a blank () at last of custom-breakpoints list if you've single item
 ```
 
-After Compiling the SCSS you can Use it wherever [Breakpoints](../general/breakpoints) are supported.
+After compiling the SCSS you can use it wherever [Breakpoints](../general/breakpoints) are supported.

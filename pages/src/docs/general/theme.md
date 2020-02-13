@@ -10,27 +10,26 @@ Replace `theme-name`{.comment} &nbsp; with any theme name, `light`{.class} and `
 You can change theme of any element by adding above attribute.
 You can also add this attribute to a parent element to change the theme of it's child elements.
 
-
 ```html {snippet}
 hidCode{{
-<p>Try Changing The Theme</p>
+<p>Try changing the theme</p>
 }}
 
 <div class="zust-bg-default" zust-theme="{{placetheme:light}}" style="padding: 10px; border-radius: 10px;" hidCode{{id='mySnippet'}}>
-  <p>I've my Own Theme, Yay!</p>
+  <p>I've my own theme, yay!</p>
   <button class="zust-btn">Button</button>
   <p class="zust-form-el">
     <input class="zust-input" type="text" placeholder="Input">
   </p>
 
-  <!-- If you use Theme on any Element, It will override it's Parent's Theme -->
-  <button class="zust-btn" zust-theme="dark">I've my own Power</button>
+  <!-- If you use theme on any element, it will override it's parent's theme -->
+  <button class="zust-btn" zust-theme="dark">I've my own power</button>
 </div>
 ```
 
-<button class="zust-btn" onclick="changeSnippetTheme()">Change Theme</button>
+<button class="zust-btn" onclick="changeSnippetTheme()">Change theme</button>
 
-If you want to change theme of your whole HTML then add this attribute to your Page's `html`{.tag} tag
+If you want to change theme of your whole HTML then add this attribute to your page's `html`{.tag} tag.
 
 <script>
 window.addEventListener('DOMContentLoaded', () => {

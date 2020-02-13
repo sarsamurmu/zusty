@@ -3,7 +3,7 @@ title: Customization SCSS
 ---
 
 # Customization SCSS
-Customizing Zusty is quite easy. There are two ways to customize, either using SCSS or CSS Variable Pack. Here we are covering the part using SCSS.
+Customizing Zusty is quite easy. There are two ways to customize, either using SCSS or CSS variable Pack. Here we are covering the part using SCSS.
 
 ---
 
@@ -11,22 +11,22 @@ Customizing Zusty is quite easy. There are two ways to customize, either using S
 ## Prerequisite
 1\. NodeJS. If you don't have Node.js installed then [Install it First](https://nodejs.org/en/download/).
 2\. Basic knowledge about terminal.
-3\. A cup of coffee. &#x2615; <br>
+3\. A cup of coffee. ☕ <br>
 
 ---
 
 
 ## Using Node Sass
-### Basic Setup
+### Basic setup
 First make a directory/folder, open terminal, navigate to it.
 
-Using Windows? Don't know how to navigate using terminal? Open your newly created folder. Hold Shift then do right click, Click 'Open Command Window Here'. Yo, You've done the Job. Keep Following....
+Using Windows? Don't know how to navigate using terminal? Open your newly created folder. Hold shift then do right click, Click 'Open Command Window Here'. Yo, you've done the job. Keep following....
 
 Initialize a new npm package by typing this command and pressing enter.
 ```bash
 npm init -y
 ```
-p Then install necessary npm packages.
+Then install necessary npm packages.
 ```bash
 npm install zusty -D
 npm install node-sass -D
@@ -34,10 +34,10 @@ npm install node-sass -D
 ---
 
 
-### Make SCSS File
+### Make SCSS file
 In that directory make an folder named `stylesheet`{.tag}, then in that folder make a file named `styles.scss`{.attr}.
 
-You can Find your Directory like this
+You can find your directory like this
 ```
 Project Directory
  |   package-lock.json
@@ -52,7 +52,7 @@ Project Directory
          +--dist
          +--scss
 ```
-Now Open `styles.scss`{.attr} File. We are going to overwrite few values. We have to just write those values before importing Zusty. Now let's add some custom values to variables. You can Grab some Variables from [Here](variables).
+Now open `styles.scss`{.attr} file. We are going to overwrite few values. We have to just write those values before importing Zusty. Now let's add some custom values to variables. You can grab some variables from [Here](variables).
 ```scss
 $primary-color: #1ABC9C;
 $button-border-radius: 2px;
@@ -72,34 +72,34 @@ $icon-size-default: 1.5rem;
 @import "../node_modules/zusty/zusty.scss";
 // End of METHOD: 1
 
-// METHOD: 2. Just Import What you need
+// METHOD: 2. Just import what you need
 // First of all import variables, base styles, theme color's css version and reset
 @import "../node_modules/zusty/scss/core/var-only";
 @import "../node_modules/zusty/scss/core/base-styles";
 @import "../node_modules/zusty/scss/core/reset";
 @import "../node_modules/zusty/scss/core/theme-colors-css";
 
-// Then Import Just What you need
-// If You just want Buttons then
+// Then import just what you need
+// If you just want buttons then
 @import "../node_modules/zusty/scss/elements/button";
 
-// What if you want all Elements, omit the item name
+// What if you want all elements, omit the item name
 @import "../node_modules/zusty/scss/elements/";
 
-// You can find the file Structure Here - https://github.com/sarsamurmu/zusty
+// You can find the file structure here - https://github.com/sarsamurmu/zusty
 ```
 ---
 
 
 ### Configure `package.json`{.attr}
-Now we have made the our scss file with custom values. We have to do one more thing, Configuring `package.json`{.attr}. Let's do This -
+Now we have made the our SCSS file with custom values. We have to do one more thing, we've to configure `package.json`{.attr}. Let's do this -
 1\. Open `package.json`{.attr} file.
-2\. Then make the File like this -
+2\. Then change the file according to this -
 ```json
 {
   "name": "mysampleproject",
   "version": "1.0.0",
-  "description": "A Sample project for working with Zusty CSS",
+  "description": "A sample project for working with Zusty CSS",
   "main": "stylesheet/styles.scss",
   "scripts": {
     "build": "node-sass --source-map true stylesheet/styles.scss stylesheet/styles.css",
