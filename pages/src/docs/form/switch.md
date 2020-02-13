@@ -3,7 +3,7 @@ title: Switch
 ---
 
 # Switch
-Switch for On/Off States.
+Switch for on/off states.
 
 ---
 
@@ -18,7 +18,7 @@ Switch for On/Off States.
 ---
 
 
-## Checkbox or Radio Input
+## Checkbox or radio input
 You can use both.
 
 If you want only one selected out of multiple switches then use radio. And don't forget to give them same `name`{.attr}.
@@ -92,7 +92,7 @@ If you want all switches to be able to selected then use checkbox instead.
 
 
 ## Colors
-It supports all Theme Colors. Use any of them.
+It supports all theme colors. Use any of them.
 
 ```html {snippet}
 <label class="zust-switch">
@@ -153,7 +153,7 @@ Adding label to switch is as easy as radio. See snippet below.
 
 
 ## Selected
-A Switch can be selected by default. Add attribute `checked`{.attr} to `input`{.tag} to make the switch selected by default.
+A switch can be selected by default. Add attribute `checked`{.attr} to `input`{.tag} to make the switch selected by default.
 
 ```html {snippet}
 <label class="zust-switch">
@@ -178,7 +178,7 @@ You can make a switch disabled by adding attribute `disabled`{.attr} to `label`{
 ---
 
 
-## Gummy Effect
+## Gummy effect
 Here it comes the special 'Gummy Effect'. Yes, this is made for better UI.
 
 ```html {snippet}

@@ -3,7 +3,7 @@ title: Radio
 ---
 
 # Radio
-Nothing much, Just Simple Radio.
+Nothing much, just simple radio.
 
 ---
 
@@ -13,7 +13,7 @@ Nothing much, Just Simple Radio.
 <label class="zust-radio">
   <input type="radio" name="someName">
   <span></span>
-  <span>Choco</span>
+  <span>Chocolate</span>
 </label>
 <br>
 
@@ -26,7 +26,7 @@ Nothing much, Just Simple Radio.
 ---
 
 
-## Making Radio
+## Making radio
 The minimum code required to make a radio is:
 
 ```html {snippet}
@@ -52,7 +52,7 @@ Adding label to a radio is super easy.
 
 
 ## Colors
-Radio supports all Theme Colors. Use any of them.
+Radio supports all theme colors. Use any of them.
 
 ```html {snippet}
 <label class="zust-radio">
@@ -92,8 +92,8 @@ Radio supports all Theme Colors. Use any of them.
 ---
 
 
-## Selected or Checked
-You can make a radio Selected/Checked by adding attribute `checked`{.attr} to `input`{.tag}.
+## Selected or checked
+You can make a radio selected/checked by adding attribute `checked`{.attr} to `input`{.tag}.
 
 ```html {snippet}
 <label class="zust-radio">
@@ -125,7 +125,7 @@ Radio can be disabled by adding attribute `disabled`{.attr} to `label`{.tag} and
 ---
 
 
-## Rectangular Radio
+## Rectangular radio
 You can make a radio rectangular by adding class `zust-rect`{.class} or `zust-rectangle`{.class}.
 
 ```html {snippet}

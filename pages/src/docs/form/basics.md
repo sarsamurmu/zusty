@@ -3,13 +3,13 @@ title: Form Basics
 ---
 
 # Form Basics
-Basic Form Elements to know about.
+Basic form elements to know about.
 
 ---
 
 
-## Form Item
-Each form item should be seperated with a `div`{.tag} with class `zust-form-it`{.class}.
+## Form item
+Each form item should be separated with a `div`{.tag} with class `zust-form-it`{.class}.
 
 ```html {snippet}
 <form>
@@ -37,7 +37,7 @@ Each form item should be seperated with a `div`{.tag} with class `zust-form-it`{
 ---
 
 
-## Label and Help Text
+## Label and help text
 For label text use class `zust-label`{.class}. For help text use class `zust-help`{.class}.
 
 ```html {snippet}
@@ -97,8 +97,8 @@ You can make a form element fill up the rest of space by adding class `zust-full
 ---
 
 
-## Inline Form
-For Inline Form, just add class `zust-form-inline`{.class} to `zust-form-it`{.class} and put `zust-form-el`{.class} and `zust-help`{.class} to `zust-form-body`{.class}.
+## Inline form
+For inline form, just add class `zust-form-inline`{.class} to `zust-form-it`{.class} and put `zust-form-el`{.class} and `zust-help`{.class} to `zust-form-body`{.class}.
 
 ```html {snippet}
 <form>

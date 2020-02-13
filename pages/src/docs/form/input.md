@@ -3,7 +3,7 @@ title: Input
 ---
 
 # Input
-Input with Extra Features.
+Input with extra features.
 
 ---
 
@@ -46,7 +46,7 @@ There are extra four size that you can use.
 
 
 ## Colors
-Input has all Theme Colors.
+Input has all theme colors.
 
 ```html {snippet}
 <p class="zust-form-el">
@@ -91,7 +91,7 @@ Input can be readonly by adding attribute `readonly`{.attr}.
 
 
 ## Transparent
-A Input can be completely transparent, for this use `zust-transparent`{.class}.
+Input can be completely transparent, for this use `zust-transparent`{.class}.
 
 ```html {snippet}
 <p class="zust-form-el">
@@ -101,8 +101,8 @@ A Input can be completely transparent, for this use `zust-transparent`{.class}.
 
 
 
-## With Icon
-You can also add icon to a input.
+## With icon
+You can also add icon to an input.
 
 ```html {snippet}
 <p class="zust-form-el">
@@ -153,8 +153,8 @@ You can show if an input is valid or not by adding class `zust-check-validity`{.
 ---
 
 
-## Show Icon When Valid
-You can also show an Icon when Input is valid. You have to Just aditionally add class `zust-if-valid`{.class} to `zust-icon`{.class}. Icon will show up when Minimum 3 Chraracter is Entered.
+## Show icon when valid
+You can also show an icon when Input is valid. You have to just add class `zust-if-valid`{.class} to `zust-icon`{.class}. Icon will show up when minimum 3 character is entered.
 
 ```html {snippet}
 <p class="zust-form-el">
@@ -192,7 +192,7 @@ You can also group input with some other element like buttons. See snippet below
 ---
 
 
-## Prepends and Appends
+## Prepends and appends
 You can add prepends and appends to input too.
 
 ```html {snippet}
@@ -232,7 +232,7 @@ Here's what more you can do.
 
 
 ## Fullwidth Group
-A Input Group can also be fullwidth, add class `zust-fullwidth`{.class} to `zust-el-container`{.class} and add class `zust-fillup`{.class} to the `zust-form-el`{.class}.
+An input Group can also be fullwidth, add class `zust-fullwidth`{.class} to `zust-el-container`{.class} and add class `zust-fillup`{.class} to the `zust-form-el`{.class}.
 
 ```html {snippet}
 <div class="zust-el-group zust-fullwidth">

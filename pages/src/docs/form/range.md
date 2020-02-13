@@ -3,7 +3,7 @@ title: Range
 ---
 
 # Range
-A Simple Range.
+A simple range.
 
 ---
 
@@ -25,7 +25,7 @@ Make it fullwidth by adding class `zust-fullwidth`{.class}.
 
 
 ## Colors
-This includes all Theme Colors. Use any of them.
+This includes all theme colors. Use any of them.
 
 ```html {snippet}
 <input class="zust-range zust-fullwidth" type="range" max="200" value="105">

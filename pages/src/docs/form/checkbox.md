@@ -60,7 +60,7 @@ You may have noticed, adding label is kinda easy.
 
 
 ## Colors
-It includes all Theme Colors.
+It includes all theme colors.
 
 ```html {snippet}
 <label class="zust-checkbox">
@@ -115,7 +115,7 @@ You can make a checkbox disabled by adding attribute `disabled`{.attr} to `label
 
 
 ## Checked
-A Checkbox can be checked by default. Add attribute `checked`{.attr} to the `input`{.tag} to achieve that.
+A checkbox can be checked by default. Add attribute `checked`{.attr} to the `input`{.tag} to achieve that.
 
 ```html {snippet}
 <label class="zust-checkbox">
@@ -128,7 +128,7 @@ A Checkbox can be checked by default. Add attribute `checked`{.attr} to the `inp
 
 
 ## Outlined
-There are also outlined checkboxes. You may need them, just add class `zust-outlined`{.class}.
+There is also outlined checkboxes. You may need them, just add class `zust-outlined`{.class}.
 
 ```html {snippet}
 <label class="zust-checkbox zust-outlined">
@@ -141,7 +141,7 @@ There are also outlined checkboxes. You may need them, just add class `zust-outl
 
 
 ## Circular
-There are another style, circular style. To get this style add class `zust-circle`{.class}. You can even use it with outlined.
+There is another style, circular style. To get this style add class `zust-circle`{.class}. You can even use it with outlined.
 
 ```html {snippet}
 <label class="zust-checkbox zust-circle">

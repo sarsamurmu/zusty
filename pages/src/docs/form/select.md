@@ -3,7 +3,7 @@ title: Select
 ---
 
 ## Select
-Slightly Modified Select Element.
+Slightly modified select element.
 
 ---
 
@@ -13,7 +13,7 @@ Slightly Modified Select Element.
 <p class="zust-form-el">
   <select class="zust-select">
     <option>Select</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -22,14 +22,14 @@ Slightly Modified Select Element.
 ---
 
 
-## With Icon
+## With icon
 Adding icon is as easy as `input`{.tag}.
 
 ```html {snippet}
 <p class="zust-form-el">
   <select class="zust-select zust-with-icon-left">
-    <option>With Icon Left</option>
-    <option>What's an Option</option>
+    <option>With icon left</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -38,8 +38,8 @@ Adding icon is as easy as `input`{.tag}.
 
 <p class="zust-form-el">
   <select class="zust-select zust-with-icon-right">
-    <option>With Icon Right</option>
-    <option>What's an Option</option>
+    <option>With icon right</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -48,8 +48,8 @@ Adding icon is as easy as `input`{.tag}.
 
 <p class="zust-form-el">
   <select class="zust-select zust-with-icon-both">
-    <option>With Icon Both</option>
-    <option>What's an Option</option>
+    <option>With icon both</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -60,14 +60,14 @@ Adding icon is as easy as `input`{.tag}.
 ---
 
 
-## Default Icon
-It was hard to implement default icon for select. So, you've to add icon by yourself. There is built-in icon named `zust-angle-down`{.class}. You can use it without importing any web fonts or icons like FontAwesome.
+## Default icon
+It was hard to implement default icon for select. So, you've to add icon by yourself. There is built-in icon named `zust-angle-down`{.class}. You can use it without importing any web fonts or icons like Font Awesome.
 
 ```html {snippet}
 <p class="zust-form-el">
   <select class="zust-select zust-with-icon-right">
     <option>With Default Icon</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -80,13 +80,13 @@ It was hard to implement default icon for select. So, you've to add icon by your
 
 
 ## Colors
-You can use any of Theme Color with it.
+You can use any of theme color with it.
 
 ```html {snippet}
 <p class="zust-form-el">
   <select class="zust-select zust-primary zust-with-icon-right">
     <option>Primary</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -96,7 +96,7 @@ You can use any of Theme Color with it.
 <p class="zust-form-el">
   <select class="zust-select zust-success zust-with-icon-right">
     <option>Success</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -106,7 +106,7 @@ You can use any of Theme Color with it.
 <p class="zust-form-el">
   <select class="zust-select zust-warning zust-with-icon-right">
     <option>Warning</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -116,7 +116,7 @@ You can use any of Theme Color with it.
 <p class="zust-form-el">
   <select class="zust-select zust-error zust-with-icon-right">
     <option>Error</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -126,7 +126,7 @@ You can use any of Theme Color with it.
 <p class="zust-form-el">
   <select class="zust-select zust-link zust-with-icon-right">
     <option>Link</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -143,7 +143,7 @@ There are extra three sizes as well.
 <p class="zust-form-el">
   <select class="zust-select zust-small zust-with-icon-right">
     <option>Small</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -153,7 +153,7 @@ There are extra three sizes as well.
 <p class="zust-form-el">
   <select class="zust-select zust-with-icon-right">
     <option>Normal</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -163,7 +163,7 @@ There are extra three sizes as well.
 <p class="zust-form-el">
   <select class="zust-select zust-large zust-with-icon-right">
     <option>Large</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -173,7 +173,7 @@ There are extra three sizes as well.
 <p class="zust-form-el">
   <select class="zust-select zust-xlarge zust-with-icon-right">
     <option>xLarge</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -190,7 +190,7 @@ Make a `select`{.tag} disabled by adding attribute `disabled`{.attr}.
 <p class="zust-form-el">
   <select class="zust-select zust-with-icon-right" disabled>
     <option>Disabled</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -207,7 +207,7 @@ If you want fullwidth select, you can do so. Just add class `zust-fullwidth`{.cl
 <p class="zust-form-el zust-fullwidth">
   <select class="zust-select zust-with-icon-right">
     <option>Fullwidth</option>
-    <option>What's an Option</option>
+    <option>What an option</option>
     <option>Geek</option>
     <option>Handmade</option>
   </select>
@@ -240,20 +240,20 @@ To trigger multiple option choosing system in `select`{.tag} then simply add att
 ---
 
 
-## Fixed Width
-p Add class `zust-fixed`{.class} to prevent select from resizing itself. It's useful in group mode.
+## Fixed width
+Add class `zust-fixed`{.class} to prevent select from resizing itself. It's useful in group mode.
 
 ```html {snippet}
 <p>Default</p>
 <div class="zust-form-el">
   <select class="zust-select zust-large">
-    <option>Large Text is Here Just For You. Resize Window.</option>
+    <option>Large text is here just for you. Resize window.</option>
   </select>
 </div>
 <p>Fixed</p>
 <div class="zust-form-el">
   <select class="zust-select zust-large zust-fixed">
-    <option>Large Text is Here Just For You. Resize Window.</option>
+    <option>Large text is here just for you. Resize window.</option>
   </select>
 </div>
 ```
