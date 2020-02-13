@@ -25,7 +25,7 @@ Columns are activated from medium breakpoint to next. In small breakpoint it wil
 ---
 
 
-## Activating Column for All Breakpoints
+## Activating column for all breakpoints
 You can activate column for all breakpoints by adding class `zust-active@all`{.class}.
 
 ```html {snippet}
@@ -42,37 +42,37 @@ You can activate column for all breakpoints by adding class `zust-active@all`{.c
 ---
 
 
-## Column Sizes
-You can Size Column by any of these classes:
+## Column sizes
+You can size column by any of these classes:
 
-- `zust-size-1-2`{.class} : Same as Half
+- `zust-size-1-2`{.class} : Same as half
 - `zust-full`{.class} : Column will take the full space of it's container.
 
 3 Parts
-- `zust-size-1-3`{.class} : Same as One Third
-- `zust-size-2-3`{.class} : Same as Two Third
+- `zust-size-1-3`{.class} : Same as one third
+- `zust-size-2-3`{.class} : Same as two third
 
 4 Parts
-- `zust-size-1-4`{.class} : Same as One Fourth
-- `zust-size-3-4`{.class} : Same as Three Fourth
+- `zust-size-1-4`{.class} : Same as one fourth
+- `zust-size-3-4`{.class} : Same as three fourth
 
 5 Parts
-- `zust-size-1-5`{.class} : Same as One Fifth
-- `zust-size-2-5`{.class} : Same as Two Fifth
-- `zust-size-3-5`{.class} : Same as Three Fifth
-- `zust-size-4-5`{.class} : Same as Four Fifth
+- `zust-size-1-5`{.class} : Same as one fifth
+- `zust-size-2-5`{.class} : Same as two fifth
+- `zust-size-3-5`{.class} : Same as three fifth
+- `zust-size-4-5`{.class} : Same as four fifth
 
 12 Parts
-- `zust-size-1-12`{.class} : Same as One Twelfth
-- `zust-size-2-12`{.class} : Same as Two Twelfth
-- `zust-size-3-12`{.class} : Same as Three Twelfth
-- `zust-size-4-12`{.class} : Same as Four Twelfth
-- `zust-size-5-12`{.class} : Same as Five Twelfth
-- `zust-size-7-12`{.class} : Same as Seven Twelfth
-- `zust-size-8-12`{.class} : Same as Eight Twelfth
-- `zust-size-9-12`{.class} : Same as Nine Twelfth
-- `zust-size-10-12`{.class} : Same as Ten Twelfth
-- `zust-size-11-12`{.class} : Same as Eleven Twelfth
+- `zust-size-1-12`{.class} : Same as one twelfth
+- `zust-size-2-12`{.class} : Same as two twelfth
+- `zust-size-3-12`{.class} : Same as three twelfth
+- `zust-size-4-12`{.class} : Same as four twelfth
+- `zust-size-5-12`{.class} : Same as five twelfth
+- `zust-size-7-12`{.class} : Same as seven twelfth
+- `zust-size-8-12`{.class} : Same as eight twelfth
+- `zust-size-9-12`{.class} : Same as nine twelfth
+- `zust-size-10-12`{.class} : Same as ten twelfth
+- `zust-size-11-12`{.class} : Same as eleven twelfth
 
 ```html {snippet}
 <div class="zust-container zust-column">
@@ -182,12 +182,12 @@ You can Size Column by any of these classes:
 ---
 
 
-## Container in Different Breakpoint
-By default Column Container only get activated from medium breakpoint and next. You can only activate the column container in different breakpoint if you want to, because it has support for [Breakpoints](../general/breakpoints). The base class name structure is `{string}(zust-active@){comment}(breakpoint-name)`.
+## Activate container in specific breakpoint
+By default column container only get activated from medium breakpoint to next. You can only activate the column container in specific breakpoint if you want to, because it has support for [Breakpoints](../general/breakpoints). The base class name structure is `{string}(zust-active@){comment}(breakpoint-name)`.
 
-Looks Like You're on Desktop. Try Resizing your browser's Window. :D {.zust-hidden .zust-visible@large}
+Looks like you're on desktop. try resizing your browser's window. :D {.zust-hidden .zust-visible@large}
 
-Small Breakpoint
+Small breakpoint
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@small">
@@ -201,7 +201,7 @@ Small Breakpoint
 </div>
 ```
 
-Medium Breakpoint
+Medium breakpoint
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@medium">
@@ -215,7 +215,7 @@ Medium Breakpoint
 </div>
 ```
 
-Until Large Breakpoint
+Until large breakpoint
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@until-large">
@@ -229,7 +229,7 @@ Until Large Breakpoint
 </div>
 ```
 
-Large Breakpoint
+Large breakpoint
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@large">
@@ -245,8 +245,8 @@ Large Breakpoint
 ---
 
 
-## Column Sizes on Different Breakpoint
-You can set different column size in different breakpoint as well. Just use any of [Breakpoints](../general/breakpoints). The main structure will be like this `zust-{comment}(column-size)@{comment}(breakpoint-name)`{.string}.
+## Different column size for different breakpoints
+You can set different column size for different breakpoint as well. Just use any of [Breakpoints](../general/breakpoints). The main structure will be like this `zust-{comment}(column-size)@{comment}(breakpoint-name)`{.string}.
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@all">
@@ -261,8 +261,8 @@ You can set different column size in different breakpoint as well. Just use any 
 ---
 
 
-## Column OffSet
-Want a Gap Inside of Your Columns? Simply Add A Column and Just don't add Color to it.
+## Column offset
+Want a gap inside of your columns? Simply add a column and just don't add color to it.
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@all">
@@ -275,8 +275,8 @@ Want a Gap Inside of Your Columns? Simply Add A Column and Just don't add Color 
 ---
 
 
-## Default Column Size
-p You can make any column take it's default space by adding class `zust-default`{.class}.
+## Default column size
+You can make any column take it's default space by adding class `zust-default`{.class}.
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@all">
@@ -287,20 +287,20 @@ p You can make any column take it's default space by adding class `zust-default`
 ---
 
 
-## Default Column Size on Different Breakpoint
-You can set default column sizing in different breakpoint. Use any of [Breakpoints](../general/breakpoints). Base Class name structure will be like `{string}(zust-default@){comment}(breakpoint-name)`.
+## Default column size for specific Breakpoint
+You can set default column sizing for specific breakpoint. Use any of [Breakpoints](../general/breakpoints). Base class name structure will be like `{string}(zust-default@){comment}(breakpoint-name)`.
 
 ```html {snippet}
 <div class="zust-container zust-column zust-active@all">
-  <div class="zust-column zust-bg-primary zust-default@medium">This Column will be Default only at Medium Breakpoint</div>
+  <div class="zust-column zust-bg-primary zust-default@medium">This column will be default only at medium breakpoint</div>
   <div class="zust-column zust-bg-light">Auto</div>
 </div>
 ```
 ---
 
 
-## Column Inside of Column
-Yes, you can nest a column inside of another column. You have to just add `zust-container`{.class} class to a column element.
+## Column inside of another column
+You can nest a column inside of another column. You have to just add `zust-container`{.class} class to a column element.
 
 Resize for Fun! {.zust-hidden .zust-visible@large}
 
@@ -325,7 +325,7 @@ Resize for Fun! {.zust-hidden .zust-visible@large}
 ---
 
 
-## Column Custom Activation
+## Column custom activation
 You can also activate an column whenever you want. Add class `zust-custom`{.class}, it will reset column's activation breakpoint and whenever you want to activate it, just add class `zust-active`{.class}.
 
 <button class="zust-btn" onclick="activateColumn()">Activate Column</button>
