@@ -1,9 +1,30 @@
 @if $css-variable-enabled {
   $navbar-border-bottom-width: var(--navbar-border-bottom-width);
-  $navbar-height: var(--navbar-height);
   $navbar-shadow: var(--navbar-shadow);
   $navbar-z-index: var(--navbar-z-index);
+  $navbar-selected-indicator-height: var(--navbar-selected-indicator-height);
   $primary-transition: var(--primary-transition);
+}
+
+@mixin option-pseudo {
+  &:after, &:before {
+    content: "";
+    width: 100%;
+    left: 50%;
+    position: absolute;
+    bottom: 0;
+    transition: $primary-transition;
+    transform: translateX(-50%) translateZ(-1px);
+  }
+
+  &:after {
+    height: 100%;
+    opacity: 0.1;
+  }
+
+  &:before {
+    height: $navbar-selected-indicator-height;
+  }
 }
 
 .#{$prefix}navbar {
@@ -13,14 +34,12 @@
   left: 0;
   right: 0;
   display: block;
-  padding: 10px 10px;
   border-bottom-style: solid;
   border-color: $transparent;
+  border-width: 0px;
   transition: $primary-transition;
   z-index: $navbar-z-index;
-  height: $navbar-height;
   box-shadow: $navbar-shadow;
-  border-width: $navbar-border-bottom-width;
 
   @include large {
     display: flex;
@@ -29,6 +48,7 @@
 
   &.#{$prefix}flat {
     box-shadow: 0 0 $transparent;
+    border-width: $navbar-border-bottom-width;
     border-color: var(--light-color);
   }
 
@@ -44,6 +64,7 @@
     height: 100%;
     flex: none;
     width: auto;
+    padding: 10px;
 
     > img {
       height: 40px;
@@ -93,7 +114,7 @@
       }
 
       > * {
-        padding: 0 10px;
+        padding: 0 14px;
         height: 100%;
         align-items: center;
 
@@ -106,22 +127,37 @@
 
       > a:not(.#{$prefix}btn) {
         display: inline-flex;
+        justify-content: stretch;
+        transform-style: preserve-3d;
+        position: relative;
         color: var(--text-color-tertiary);
         border-style: none;
         user-select: none;
 
+        @include large {
+          @include option-pseudo;
+        }
+
         &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
           color: var(--navbar-item-hovered-color);
+
+          &:after {
+            opacity: 0.05;
+            background-color: var(--navbar-selected-item-color);
+          }
         }
 
         &.#{$prefix}selected, &[selected] {
           color: var(--navbar-selected-item-color);
           cursor: default;
+
+          &:after, &:before {
+            background-color: var(--navbar-selected-item-color);
+          }
         }
       }
 
       > .#{$prefix}dropdown {
-
         > .#{$prefix}btn {
           height: 100%;
           margin: 0 !important;
@@ -130,14 +166,27 @@
           background-color: $transparent !important;
           padding: 0 !important;
 
+          @include large {
+            @include option-pseudo;
+          }
+
           &:hover, &.#{$prefix}hovered, &:focus, &.#{$prefix}focused {
-            color: var(--text-color-primary);
+            color: var(--navbar-item-hovered-color);
             box-shadow: 0 0 black;
+
+            &:after {
+              opacity: 0.05;
+              background-color: var(--navbar-selected-item-color);
+            }
           }
         }
 
         &.#{$prefix}selected > .#{$prefix}btn, &[selected] > .#{$prefix}btn {
           color: var(--navbar-selected-item-color);
+
+          &:after, &:before {
+            background-color: var(--navbar-selected-item-color);
+          }
         }
       }
     }

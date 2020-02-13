@@ -2,13 +2,13 @@
 //    General
 // --------------
 
-// Prefix Used for all zusty's selectors;
+// Prefix used for all Zusty's selectors
 $prefix: 'zust-' !default;
 
-// Separator used for Conditions
+// Separator used for conditions
 $condition-separator: '\\@' !default;
 
-// Screen Breakpoint Sizes as of Chrome Dev Tools
+// Screen breakpoint sizes as of Chrome Dev Tools
 $medium-breakpoint: 768px !default;
 $large-breakpoint: 1024px !default;
 
@@ -186,9 +186,9 @@ $modal-border-radius: 14px !default;
 $modal-transition: 0.3s !default;
 
 // Navbar
-$navbar-height: 60px !default;
 $navbar-shadow: 0px 3px 3px var(--navbar-shadow-color) !default;
 $navbar-border-bottom-width: 2px !default;
+$navbar-selected-indicator-height: 3px !default;
 
 // Pagination
 $pagination-item-margin: 5px 10px !default;
@@ -215,7 +215,7 @@ $status-colors: (
   ('link', var(--link-color), var(--link-text-color), var(--link-hovered-color), var(--link-color-light))
 );
 
-// Custom Color's List. User will made it by themself.
+// Custom Color's List. User will made it by themselves.
 $custom-colors: () !default;
 
 $item-colors: join($status-colors, $custom-colors);
