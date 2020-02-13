@@ -3,7 +3,7 @@ title: Container Basic
 ---
 
 # Container
-Container Built on Flexbox for Flexible Layouts.
+Container built on flexbox for flexible layouts.
 
 ---
 
@@ -43,8 +43,8 @@ You can use container for containing bunch of items. Items will break whenever n
 ---
 
 
-## Aligning Items
-You can Simply Align Items Inside of Container. Add Class  `zust-v-centered`{.class} for aligning items Vertically Center and `zust-h-centered`{.class} for aligning items Horizontally Center and  `zust-f-centered`{.class} for aligning items both Horizontally and Vertically Center.
+## Aligning items
+You can simply align items inside of container. Add class  `zust-v-centered`{.class} for aligning items Vertically Center and `zust-h-centered`{.class} for aligning items horizontally center and  `zust-f-centered`{.class} for aligning items both horizontally and vertically center.
 
 ### Horizontally Centered
 ```html {snippet}

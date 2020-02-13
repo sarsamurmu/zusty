@@ -3,7 +3,7 @@ title: Element Group
 ---
 
 # Element Group
-Container For Grouping up Elements.
+Container for grouping up elements.
 
 ---
 
