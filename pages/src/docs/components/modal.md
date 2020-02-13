@@ -3,7 +3,7 @@ title: Modal
 ---
 
 # Modal
-Quite useful modal
+Quite useful modal.
 
 ---
 
@@ -22,7 +22,7 @@ hidCode{{<button class="zust-btn" onclick="showModal('mainSample')">Show Modal</
       </button>
     </header>
     <div>
-      <p>A Powerful Modal That you can Use in your Projects. You can do many things.</p>
+      <p>A powerful modal that you can use in your projects. You can do many things.</p>
       <p>What do you think?</p>
     </div>
     <footer>
@@ -89,10 +89,10 @@ hidCode{{
     <div class="zust-content">
       <header>
         <span class="zust-icon zust-text-success"><i class="fas fa-smile-wink"></i></span>
-        <h2>Good Morning</h2>
+        <h2>Good morning</h2>
       </header>
       <div>
-        <p>Have a Great Day.</p>
+        <p>Have a great day.</p>
       </div>
     </div>
   </div>
@@ -116,10 +116,10 @@ hidCode{{
   <div class="zust-content">
     <header>
       <span class="zust-icon zust-text-success"><i class="fas fa-smile-wink"></i></span>
-      <h2>Good Morning</h2>
+      <h2>Good morning</h2>
     </header>
     <div>
-      <p>Have a Great Day.</p>
+      <p>Have a great day.</p>
     </div>
   </div>
 </div>

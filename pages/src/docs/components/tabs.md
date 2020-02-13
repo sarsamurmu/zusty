@@ -3,7 +3,7 @@ title: Tabs
 ---
 
 # Tabs
-Responsive, Beautiful Tabs.
+Responsive, beautiful tabs.
 
 ---
 
@@ -27,7 +27,7 @@ Responsive, Beautiful Tabs.
 ## Selection
 To set an item selected, just add attribute `selected`{.attr} or class `zust-selected`{.class} to `li`{.tag}.
 
-You need JavaScript to toggle between items. Here's a sample.
+You need JavaScript to toggle between items. Here's an example.
 
 ```html {snippet}
 <div class="zust-tabs">
@@ -101,7 +101,7 @@ There are three alignments that you can use with tabs. Add any of these classes 
 ---
 
 
-## With Icon
+## With icon
 Tabs can include icons, just put them inside of `li`{.tag}.
 
 ```html {snippet}
@@ -131,7 +131,7 @@ Tabs can include icons, just put them inside of `li`{.tag}.
 ---
 
 
-## Line Style
+## Line style
 There is alternative line style for tabs, to use it, add class `zust-lined`{.class} to `zust-tabs`{.class}.
 
 ```html {snippet}

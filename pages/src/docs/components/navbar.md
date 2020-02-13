@@ -3,7 +3,7 @@ title: Navbar
 ---
 
 # Navbar
-Flexible, Responsive Basic Navbar.
+Flexible, responsive basic navbar.
 
 ---
 
@@ -87,12 +87,12 @@ All header items are contained inside of `zust-header`{.class}. `zust-menu-btn`{
 
 
 ## Content
-`zust-content`{.class} contains rest of navbar parts. `zust-options`{.class} contains all options as `a`{.tag} element. `zust-actons`{.class} contains all action buttons. `zust-content`{.class} changes layout on `until-large`{.tag} breakpoint.
+`zust-content`{.class} contains rest of navbar parts. `zust-options`{.class} contains all options as `a`{.tag} element. `zust-actions`{.class} contains all action buttons. `zust-content`{.class} changes layout on `until-large`{.tag} breakpoint.
 
 ---
 
 
-## Trigger and Selection
+## Trigger and selection
 You've to add the JavaScript by yourself. Add class `zust-expanded`{.class} to `zust-navbar`{.class} expand the Navbar (only for `until-large`{.tag} breakpoint). Add class `zust-selected`{.class} or attribute `selected`{.attr} to any of `zust-option`{.class} child to set the item selected.
 
 Here's a snippet to expand navbar with JavaScript.
@@ -148,8 +148,8 @@ Here's a snippet to expand navbar with JavaScript.
 ---
 
 
-## With Dropdown
-You can even include [Dropdown](dropdown) in Navbar. Just add it to `zust-options`{.class}.
+## With dropdown
+You can even include [Dropdown](dropdown) in navbar. Just add it to `zust-options`{.class}.
 
 ```html {raw}
 <div class="nav-container">
@@ -239,7 +239,7 @@ You can even include [Dropdown](dropdown) in Navbar. Just add it to `zust-option
 
 
 ## Flat
-A Navbar can be flat. Add class `zust-flat`{.class} for flat navbar.
+A navbar can be flat. Add class `zust-flat`{.class} for flat navbar.
 
 ```html {raw}
 <div class="nav-container">
@@ -299,8 +299,8 @@ A Navbar can be flat. Add class `zust-flat`{.class} for flat navbar.
 ---
 
 
-## Right Aligned
-A Navbar can be right aligned, just add class `zust-right-aligned`{.class} to `zust-navbar`{.class}
+## Right aligned
+A navbar can be right aligned, just add class `zust-right-aligned`{.class} to `zust-navbar`{.class}
 
 ```html {raw}
 <div class="nav-container">

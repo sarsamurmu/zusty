@@ -3,7 +3,7 @@ title: Raw Progress
 ---
 
 # Raw Progress
-Progress Bar with lot of Possibilities.
+Progress bar with lot of possibilities.
 
 ---
 
@@ -35,7 +35,7 @@ You can even use `width`{.attr} css property to set a bar's value, like so
 
 
 ## Sizes
-There are extra five predifined sizes, predefined sizes are `zust-line`{.class}, `zust-thin`{.class} or `zust-narrow`{.class}, `zust-small`{.class}, `zust-large`{.class}, `zust-xlarge`{.class}. You can also set the size by Yourself.
+There are extra five predefined sizes, predefined sizes are `zust-line`{.class}, `zust-thin`{.class} or `zust-narrow`{.class}, `zust-small`{.class}, `zust-large`{.class}, `zust-xlarge`{.class}. You can also set the size by yourself.
 
 ```html {snippet}
 <p>Line</p>
@@ -77,7 +77,7 @@ There are extra five predifined sizes, predefined sizes are `zust-line`{.class},
 
 
 ## Colors
-It has support for Theme Colors. Also You can use [Color Helper](../helpers/#colors) or your own color.
+It has support for theme colors. Also You can use [Color Helper](../helpers/#colors) or your own color.
 
 ```html {snippet}
 <div class="zust-progress zust" value="10">
@@ -116,7 +116,7 @@ Style `zust-progress`{.class} to style the progress bar track. Style `zust-bar`{
 ---
 
 
-## Text in Value Bar
+## Text in value bar
 You can also add text to value bar
 
 ```html {snippet}
@@ -125,7 +125,7 @@ You can also add text to value bar
 </div>
 ```
 
-### Value Bar Text Alignment
+### Value bar text alignment
 By default value bar's text are aligned middle. But, You can change the text alignment of value bar by adding any of these classes `zust-text-right`{.class}, `zust-text-left`{.class}.
 
 ```html {snippet}
@@ -140,8 +140,8 @@ By default value bar's text are aligned middle. But, You can change the text ali
 ---
 
 
-## Multiple Value Bars
-You can add multiple value bars to a progress bar
+## Multiple value bars
+You can add multiple value bars to a progress bar.
 
 ```html {snippet}
 <div class="zust-progress">
@@ -165,7 +165,7 @@ You can change progress bar's alignment to right to left just by adding class `z
 ---
 
 
-## Striped Progress Bar
+## Striped progress bar
 Make any progress bar striped by adding class `zust-striped`{.class}. You can also add this class to value bar.
 
 ```html {snippet}
@@ -173,7 +173,7 @@ Make any progress bar striped by adding class `zust-striped`{.class}. You can al
   <div class="zust-bar" value="55"></div>
 </div>
 
-<p>To Value Bar</p>
+<p>To value bar</p>
 <div class="zust-progress">
   <div class="zust-bar zust-striped" value="45"></div>
 </div>
@@ -181,7 +181,7 @@ Make any progress bar striped by adding class `zust-striped`{.class}. You can al
 ---
 
 
-## In-Progress
+## In-progress
 You can make progress bar show that it is in-progress just by adding class `zust-in-progress`{.class}. You can also add this class to value bar.
 
 ```html {snippet}
@@ -204,7 +204,7 @@ You can make progress bar show that it is in-progress just by adding class `zust
 
 
 ## Indeterminate
-You can make progress bar indeterminate just by adding Class `zust-indeterminate`{.class}.
+You can make progress bar indeterminate just by adding class `zust-indeterminate`{.class}.
 
 ```html {snippet}
 <div class="zust-progress zust-indeterminate">

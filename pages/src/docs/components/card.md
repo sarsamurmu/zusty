@@ -3,7 +3,7 @@ title: Card
 ---
 
 # Card
-Simple Card
+Simple card.
 
 ---
 
@@ -20,8 +20,8 @@ Simple Card
 ---
 
 
-## Flat Card
-There are Flat Card as well.
+## Flat card
+There are flat card as well.
 
 ```html {snippet}
 <div class="zust-card zust-flat">
@@ -32,13 +32,13 @@ There are Flat Card as well.
 ---
 
 
-## With Button
+## With button
 You can also add button to any card.
 
 ```html {snippet}
 <div class="zust-card">
   <h3>Snake Game</h3>
-  <p>Snake Game is the first and oldest mobile game I've ever played. It can be found on Very Old Nokia Phones.</p>
+  <p>Snake Game is the first and oldest mobile game I've ever played. It can be found on very old nokia phones.</p>
   <footer>
     <button class="zust-btn zust-transparent">Play</button>
     <button class="zust-btn zust-transparent">Download</button>
@@ -69,44 +69,44 @@ You can make buttons center by adding class `zust-center`{.class} to `footer`{.t
 ---
 
 
-## Landscape Card
-By default all cards are Portrait. You can make them Landscape.
+## Landscape card
+By default all cards are portrait. You can make them landscape.
 
 ```html {snippet}
 <div class="zust-card zust-landscape">
-  <p>Landscape Cards are mainly for almost large text. As this Text, This is quite Large. Don't you think So???</p>
+  <p>Landscape cards are mainly for almost large text. As this text, this is quite Large. Don't you think so?</p>
 </div>
 ```
 ---
 
 
-## React on Hover
+## React on hover
 If you want your cards to be reactive when hovered then you can use this. Just add class `zust-hoverable`{.class}.
 
 ```html {snippet}
 <div class="zust-card zust-hoverable">
-  <p>Hover Over Me Then See the Effect. Hope You Like it. I Personally loving this.</p>
+  <p>Hover over me then see the effect. Hope you like it. I am personally loving this.</p>
 </div>
 <div class="zust-card zust-flat zust-hoverable">
-  <p>Hover Effect also Works well in Flat Cards. It works anyway.</p>
+  <p>Hover effect also works well in flat cards. It works anyway.</p>
 </div>
 ```
 ---
 
 
 ## Colors
-You can use [Color Helper](../helpers/#colors) to color any Cards.
+You can use [Color Helper](../helpers/#colors) to color any card.
 
 ```html {snippet}
 <div class="zust-card zust-bg-green">
-  <p>Green card Using Color Helper. It's awesome :P</p>
+  <p>Green card using color helper. It's awesome :P</p>
 </div>
 ```
 ---
 
 
-## RTL Card
-Cards can Be RTL.
+## RTL card
+Cards can be RTL.
 
 ```html {snippet}
 <div class="zust-card zust-rtl zust-landscape">
@@ -121,20 +121,20 @@ Cards can Be RTL.
 ---
 
 
-## With Container
-You can Place multiple cards inside Zusty's Built-in container. You can use Container Helpers as well. They will break when necessary.
+## With container
+You can place multiple cards inside Zusty's built-in container. You can use container helpers as well. They will break when necessary.
 
 ```html {snippet}
 <div class="zust-container zust-f-centered">
   <div class="zust-card">
     <p class="zust-uppercase">info</p>
     <h3>A Simple Card</h3>
-    <p>Card of Zusty CSS is quite good. It's made for better UX and UI. You can Use it too.</p>
+    <p>Card of Zusty CSS is quite good. It's made for better UX and UI. You can use it too.</p>
   </div>
 
   <div class="zust-card">
     <h3>Snake Game</h3>
-    <p>Snake Game is the first and oldest mobile game I've ever played. It can be found on Very Old Nokia Phones.</p>
+    <p>Snake Game is the first and oldest mobile game I've ever played. It can be found on very old nokia phones.</p>
     <footer>
       <button class="zust-btn zust-transparent">Play</button>
       <button class="zust-btn zust-transparent">Download</button>
@@ -142,22 +142,22 @@ You can Place multiple cards inside Zusty's Built-in container. You can use Cont
   </div>
 
   <div class="zust-card zust-landscape">
-    <p>Landscape Cards are mainly for almost large text. As this Text, This is quite Large. Don't you think So???</p>
+    <p>Landscape cards are mainly for almost large text. As this text, this is quite large. Don't you think so?</p>
   </div>
 
   <div class="zust-container">
     <div class="zust-card zust-hoverable">
-      <p>Hover Over Me Then See the Effect. Hope You Like it. I Personally loving this.</p>
+      <p>Hover over me then see the effect. Hope you like it. I am personally loving this.</p>
     </div>
   </div>
 
   <div class="zust-card zust-bg-green">
-    <p>Green card Using Color Helper. It's awesome :P</p>
+    <p>Green card using color helper. It's awesome :P</p>
   </div>
 
   <div class="zust-card zust-rtl zust-landscape">
     <h2>RTL Card</h2>
-    <p>This is a Right to Left card. Not that all peolpe will use LTR card, that's why I made This :D</p>
+    <p>This is a right to left card. Not that all people will use LTR card, that's why I made this :D</p>
     <footer>
       <button class="zust-btn zust-primary">Donate</button>
       <button class="zust-btn zust-transparent">Share</button>

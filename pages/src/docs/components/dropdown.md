@@ -3,7 +3,7 @@ title: Dropdown
 ---
 
 # Dropdown
-Simple Dropdown in easiest way possible with support for nested contents.
+Simple dropdown in easiest way possible with support for nested contents.
 
 ---
 
@@ -37,7 +37,7 @@ Simple Dropdown in easiest way possible with support for nested contents.
 
 
 ## Trigger
-You can alter the dropdown toogle by adding class `zust-hover`{.class} or `zust-active`{.class}. Use `zust-hover`{.class} to show the dropdown whenever mouse hovers over dropdown or dropdown button.
+You can alter the dropdown toggle by adding class `zust-hover`{.class} or `zust-active`{.class}. Use `zust-hover`{.class} to show the dropdown whenever mouse hovers over dropdown or dropdown button.
 
 You can also add `zust-active`{.class} class to trigger the dropdown. It's for those who wants to trigger the dropdown using JavaScript.
 
@@ -54,7 +54,7 @@ You can also add `zust-active`{.class} class to trigger the dropdown. It's for t
 ```
 
 ::: link For Mobile
-If you want your dropdown to be Mobile Compatible, then `zust-hover`{.class} can make better sense and User Experience.
+If you want your dropdown to be mobile compatible, then `zust-hover`{.class} can make better sense and user experience.
 :::
 ---
 
@@ -76,7 +76,7 @@ You can add any type of contents inside of dropdown. Make any item an active ite
     <p>Just put contents inside of <code hidCode{{ inline class="tag"}}>ul</code>, zusty will do the rest.</p><br>
     <li>More..
       <ul>
-        <p>How is it? Do You Like it? Go On....</p>
+        <p>How is it? Do you like it? Go on....</p>
       </ul>
     </li>
     <li active>Links
@@ -94,13 +94,13 @@ You can add any type of contents inside of dropdown. Make any item an active ite
 ---
 
 
-## Opening Direction
+## Opening direction
 There are total four opening direction for dropdown, not actually only dropdown, it will be dropup, dropleft and dropright.
 
-These are the classe that you have to add -
-- `zust-upside`{.class} : For making the dropdown open Upside.
-- `zust-leftside`{.class} : For making the dropdown open Leftside.
-- `zust-rightside`{.class} : For making the dropdown open Rightside.
+These are the classes that you have to add -
+- `zust-upside`{.class} : To make the dropdown open up side.
+- `zust-leftside`{.class} : To make the dropdown open left side.
+- `zust-rightside`{.class} : To make the dropdown open right side.
 
 ```html {snippet}
 <div class="zust-flex zust-justify-between">
@@ -142,14 +142,14 @@ These are the classe that you have to add -
 </div>
 ```
 
-### Opening Direction of Nested Dropdowns
-You can set the opening direction of nested dropdowns. Just add any of these class to the parent `li`{.tag} element of `ul`{.tag} child/childs.
+### Opening direction of nested dropdowns
+You can set the opening direction of nested dropdowns. Just add any of these class to the parent `li`{.tag} element of `ul`{.tag} child/children.
 
 Just add any of these classes, which you need
-- `zust-upside`{.class} : For making the nested dropdown open upside.
-- `zust-downside`{.class} : For making the nested dropdown open downside.
-- `zust-leftside`{.class} : For making the nested dropdown open leftside.
-- `zust-rightside`{.class} : For making the nested dropdown open rightside.
+- `zust-upside`{.class} : To make the nested dropdown open up side.
+- `zust-downside`{.class} : To make the nested dropdown open down side.
+- `zust-leftside`{.class} : To make the nested dropdown open left side.
+- `zust-rightside`{.class} : To make the nested dropdown open right side.
 
 ```html {snippet}
 <div class="zust-flex zust-justify-center">
@@ -176,20 +176,20 @@ Just add any of these classes, which you need
 It will only make the first nested dropdown open any of these sides.
 
 If you want to change opening direction for all nested dropdown then use
-- `zust-nested-upside`{.class} : For making all nested dropdown open upside.
-- `zust-nested-downside`{.class} : For making all nested dropdown open downside.
-- `zust-nested-leftside`{.class} : For making all nested dropdown open leftside.
-- `zust-nested-rightside`{.class} : For making all nested dropdown open rightside.
+- `zust-nested-upside`{.class} : To make all nested dropdown open up side.
+- `zust-nested-downside`{.class} : To make all nested dropdown open down side.
+- `zust-nested-leftside`{.class} : To make all nested dropdown open left side.
+- `zust-nested-rightside`{.class} : To make all nested dropdown open right side.
 
 ---
 
 
-## Dropdown Alignment
+## Dropdown alignment
 You can change the alignment of dropdowns just by adding class. It's only available for default downside and upside.
 
-- `zust-left-aligned`{.class} : For Left Alignment. This is Default.
-- `zust-right-aligned`{.class} : For Right Alignment.
-- `zust-center-aligned`{.class} : For Center Alignment.
+- `zust-left-aligned`{.class} : For left alignment. This is default.
+- `zust-right-aligned`{.class} : For right alignment.
+- `zust-center-aligned`{.class} : For center alignment.
 
 ```html {snippet}
 <div class="zust-flex zust-justify-between">
@@ -232,7 +232,7 @@ You can change the alignment of dropdowns just by adding class. It's only availa
 It might look ugly on small breakpoint. You shouldn't use large dropdowns on small breakpoint.
 :::
 
-There are extra Four sizes as well. Add any of these classes - `zust-narrow`{.class}, `zust-small`{.class}, `zust-large`{.class}, `zust-xlarge`{.class}.
+There are extra four sizes as well. Add any of these classes - `zust-narrow`{.class}, `zust-small`{.class}, `zust-large`{.class}, `zust-xlarge`{.class}.
 
 ```html {snippet}
 <div class="zust-flex zust-justify-between">
@@ -293,7 +293,7 @@ There are extra Four sizes as well. Add any of these classes - `zust-narrow`{.cl
 ```
 ---
 
-### Sizes of Nested Dropdowns
+### Sizes of nested dropdowns
 If you want to change the size of nested dropdowns just add any of mentioned classes.
 
 ```html {snippet}

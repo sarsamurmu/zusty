@@ -3,7 +3,7 @@ title: Pagination
 ---
 
 # Pagination
-Basic, Responsive Styled Pagination.
+Basic, responsive styled pagination.
 
 ---
 
@@ -44,4 +44,4 @@ Basic, Responsive Styled Pagination.
   </ul>
 </nav>
 ```
-And that's all about pagination. Nothing more left for now.
+And that's all about pagination. Nothing more left for now to discuss.

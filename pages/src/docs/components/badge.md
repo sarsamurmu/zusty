@@ -3,7 +3,7 @@ title: Badge
 ---
 
 # Badge
-Badge/Tags for Info.
+Badge/Tags for info.
 
 ---
 
@@ -16,7 +16,7 @@ Badge/Tags for Info.
 
 
 ## Colors
-You can use Color Helper to color them.
+You can use color helper to color them.
 
 ```html {snippet}
 <span class="zust-badge zust-bg-teal">JS</span>
@@ -26,7 +26,7 @@ You can use Color Helper to color them.
 
 
 ## Duo
-You can make also make an Duo Badge Easily. See snippet.
+You can make also make an duo badge easily. See snippet.
 
 ```html {snippet}
 <div class="zust-badge">
@@ -38,7 +38,7 @@ You can make also make an Duo Badge Easily. See snippet.
 
 
 ## Outlined
-There's also outlined badge. Note it will not work on Duo Badge.
+There's also outlined badge. Note it will not work on duo badge.
 
 ```html {snippet}
 <span class="zust-badge zust-outlined">Outlined</span>
@@ -60,8 +60,8 @@ You can also make badges rounded.
 ---
 
 
-## Bunch of Badge
-If you're working with bunch of badges then use Zusty's Built-in Container. They will break whenever necessary.
+## Bunch of badges
+If you're working with bunch of badges then use Zusty's built-in container. They will break whenever necessary.
 
 ```html {snippet}
 <div class="zust-container">
@@ -100,7 +100,7 @@ If you're working with bunch of badges then use Zusty's Built-in Container. They
 ---
 
 
-## Group Editing
+## Group editing
 You can change make all badge inside of a parent element rounded or outlined or both by adding class `zust-badges-rounded`{.class} or `zust-badges-outlined`{.class} to the parent.
 
 ```html {snippet}
