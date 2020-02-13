@@ -285,6 +285,20 @@ $sep: $condition-separator;
     scroll-snap-type: y mandatory;
   }
 
+  #{getClassList($breakpoint-names, '&.#{$prefix}active#{$sep}name', 'name', '', '', ', ')} {
+    scroll-snap-type: none;
+  }
+
+  @include each-breakpoint('&.#{$prefix}active#{$condition-separator}name', 'name') {
+    &:not(.#{$prefix}vertical) {
+      scroll-snap-type: x mandatory;
+    }
+
+    &.#{$prefix}vertical {
+      scroll-snap-type: y mandatory;
+    }
+  }
+
   &.#{$prefix}snap-start > .#{$prefix}snap-item {
     scroll-snap-align: start;
   }
