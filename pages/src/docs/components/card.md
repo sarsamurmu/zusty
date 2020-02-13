@@ -21,7 +21,7 @@ Simple card.
 
 
 ## Flat card
-There are flat card as well.
+There is flat card as well.
 
 ```html {snippet}
 <div class="zust-card zust-flat">
@@ -111,7 +111,7 @@ Cards can be RTL.
 ```html {snippet}
 <div class="zust-card zust-rtl zust-landscape">
   <h2>RTL Card</h2>
-  <p>This is a Right to Left card. Not that all peolpe will use LTR card, that's why I made This :D</p>
+  <p>This is a right to left card. Not that all people will use LTR card, that's why I made this :D</p>
   <footer>
     <button class="zust-btn zust-primary">Donate</button>
     <button class="zust-btn zust-transparent">Share</button>
