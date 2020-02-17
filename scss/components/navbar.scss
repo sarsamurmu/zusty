@@ -8,7 +8,7 @@
 
 @mixin option-pseudo {
   &:after, &:before {
-    content: "";
+    content: '';
     width: 100%;
     left: 50%;
     position: absolute;
