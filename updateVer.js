@@ -1,8 +1,8 @@
 const fs = require('fs');
+const pkg = require('./package.json');
 
-var scssFile = fs.readFileSync('./zusty.scss').toString();
-var packageJson = JSON.parse(fs.readFileSync('./package.json').toString());
+let scssFile = fs.readFileSync('./zusty.scss').toString();
 
-scssFile = scssFile.replace(/v([\d\.]+)/g, `v${packageJson.version}`);
+scssFile = scssFile.replace(/v([\d\.]+)/g, `v${pkg.version}`);
 
 fs.writeFileSync('./zusty.scss', scssFile);

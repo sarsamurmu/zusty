@@ -38,7 +38,7 @@ if (args.includes('-w')) {
     console.log(chalk.blue(`Import changed ${filePath}\n`));
 
     glob.sync(sassPath).forEach(renderFile);
-  }, 100))
+  }, 100));
 } else {
   console.log(chalk.magenta(`Rendering Sass files\n`))
 
