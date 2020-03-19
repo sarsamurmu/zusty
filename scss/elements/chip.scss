@@ -42,6 +42,7 @@
 
   > img {
     height: 100%;
+    border-radius: $chip-border-radius;
   }
 
   &.#{$prefix}large {
