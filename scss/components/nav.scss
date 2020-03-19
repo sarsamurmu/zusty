@@ -1,0 +1,61 @@
+@if $css-variable-enabled {
+  $primary-transition: var(--primary-transition);
+}
+
+.#{$prefix}nav {
+  padding: 0;
+
+  li {
+    list-style: none;
+    padding: 6px 10px;
+    position: relative;
+    cursor: pointer;
+    transition: padding $primary-transition;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary-color);
+      transition-duration: $primary-transition;
+      transition-property: transform background-color;
+    }
+
+    &:before {
+      width: 4px;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    &:after {
+      right: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover, &.#{$prefix}hovered {
+      &:before {
+        transform: scaleX(0.3);
+      }
+    }
+
+    &[selected], &.#{$prefix}selected {
+      padding: 6px 14px;
+
+      &:before {
+        transform: scaleX(1);
+      }
+
+      &:after {
+        opacity: 0.1;
+      }
+    }
+
+    ul {
+      padding-left: 10px;
+      margin-top: 8px;
+    }
+  }
+}
