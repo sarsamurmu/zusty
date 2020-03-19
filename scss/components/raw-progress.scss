@@ -192,19 +192,19 @@
 
 // Animation Keyframes
 @keyframes progress-anim {
-  0% {opacity: 0; width: 0;}
-  50% {opacity: 1;}
-  100% {opacity: 0; width: 95%;}
+  0% { opacity: 0; width: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; width: 95%; }
 }
 
 @keyframes progress-anim-striped {
-  0% {background-position: 0 0;}
-  100% {background-position: 60px 0;}
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 0; }
 }
 
 @keyframes progress-anim-striped-rtl {
-  0% {background-position: 0 0;}
-  100% {background-position: -60px 0;}
+  0% { background-position: 0 0; }
+  100% { background-position: -60px 0; }
 }
 
 @keyframes progress-indeterminate {
