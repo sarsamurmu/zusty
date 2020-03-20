@@ -7,14 +7,14 @@ const chalk = require('chalk');
 const sass = require('node-sass');
 const args = process.argv.splice(2, process.argv.length - 2);
 
-let sassPath = `./src/stylesheets/*.scss`;
-let sassImportPath = './src/stylesheets/imports/';
+const sassPath = `./src/stylesheets/*.scss`;
+const sassImportPath = './src/stylesheets/imports/';
 
-let renderFile = (filePath) => {
-  let outputPath = filePath.replace('src', 'public').replace('.scss', '.css');
+const renderFile = (filePath) => {
+  const outputPath = filePath.replace('src', 'public').replace('.scss', '.css');
 
   try {
-    let result = sass.renderSync({
+    const result = sass.renderSync({
       file: filePath,
       outputStyle: 'compressed'
     });

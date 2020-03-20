@@ -2,7 +2,7 @@ import Fuse from 'fuse.js';
 
 const search = {};
 search.initSearch = () => {
-  var options = {
+  const options = {
     shouldSort: true,
     includeMatches: true,
     threshold: 0.7,
@@ -20,9 +20,9 @@ search.initSearch = () => {
     ]
   };
 
-  var fuse;
-  var searchIndex;
-  var ready = false;
+  let fuse;
+  let searchIndex;
+  let ready = false;
 
   fetch('/docs/data/searchIndex.json').then((response) => {
     response.json().then((json) => {
@@ -39,9 +39,9 @@ search.initSearch = () => {
     showResults();
   });
 
-  const highlight = (matches, text, dontTruncate) => {
+  const highlight = (matches, text, shouldNotTruncate) => {
     let newText = '';
-    let truncateOffset = 50;
+    const truncateOffset = 50;
     matches.forEach((match) => {
       if (match.value === text) {
         match.indices.forEach((index) => {
@@ -49,7 +49,7 @@ search.initSearch = () => {
           const preEllipses = '';
           const textBefore = text.substring(Math.max(0, index[0] - truncateOffset), index[0]);
           let textAfter;
-          if (dontTruncate) {
+          if (shouldNotTruncate) {
             textAfter = text.substring(index[1]);
           } else {
             textAfter = text.substring(index[1], Math.min(text.length - 1, index[1] + truncateOffset)) + ` ... `;
@@ -62,37 +62,37 @@ search.initSearch = () => {
     return newText.trim();
   }
 
-  function showResults() {
+  const showResults = () => {
     if (ready) {
       searchResult.innerHTML = '';
 
-      var searchQuery = searchInput.value;
-      var resultJSON = fuse.search(searchQuery);
+      const searchQuery = searchInput.value;
+      const resultJSON = fuse.search(searchQuery);
 
       if (resultJSON.length === 0) {
         searchResult.innerHTML = `No result found for '${searchQuery}'`;
       }
 
       resultJSON.forEach((itemObject) => {
-        var link = itemObject.item.link;
-        var lvl1 = itemObject.item.level1;
-        var
+        const link = itemObject.item.link;
+        const lvl1 = itemObject.item.level1;
+        let
           headerAvail = false,
           subHeaderAvail = false,
           header2Avail = false,
-          subHeader2Avail = false;
-        var headerAttached = false;
+          subHeader2Avail = false,
+          headerAttached = false;
 
 
         lvl1.forEach((lvl1item) => {
-          var lvl1block = document.createElement('div');
+          const lvl1block = document.createElement('div');
           lvl1block.classList.add('item-level-1');
 
-          var hHeader = highlight(itemObject.matches, lvl1item.name, true);
+          const hHeader = highlight(itemObject.matches, lvl1item.name, true);
           if (hHeader.length !== 0) {
             headerAvail = true;
           }
-          var header = document.createElement('a');
+          const header = document.createElement('a');
           header.innerHTML = hHeader;
           header.setAttribute('href', link);
           if (headerAvail) {
@@ -100,35 +100,35 @@ search.initSearch = () => {
             headerAttached = true;
           }
 
-          var hSubheader = highlight(itemObject.matches, lvl1item.body);
+          const hSubheader = highlight(itemObject.matches, lvl1item.body);
           if (hSubheader.length !== 0) {
-            var subheader = document.createElement('span');
+            const subheader = document.createElement('span');
             subheader.innerHTML = hSubheader;
             header.appendChild(subheader);
             subHeaderAvail = true;
           }
 
           if (lvl1item.level2) {
-            var lvl2 = lvl1item.level2;
+            const lvl2 = lvl1item.level2;
 
             lvl2.forEach((lvl2item) => {
-              var lvl2block = document.createElement('a');
+              const lvl2block = document.createElement('a');
               lvl2block.classList.add('item-level-2');
               if (lvl2item.anchor) {
                 lvl2block.setAttribute('href', link + '#' + lvl2item.anchor);
               }
 
-              var hHeader = highlight(itemObject.matches, lvl2item.name, true);
+              const hHeader = highlight(itemObject.matches, lvl2item.name, true);
               if (hHeader.length !== 0) {
-                var lvl2Header = document.createElement('h4');
+                const lvl2Header = document.createElement('h4');
                 lvl2Header.innerHTML = hHeader;
                 lvl2block.appendChild(lvl2Header);
                 header2Avail = true;
               }
 
-              var hSubheader = highlight(itemObject.matches, lvl2item.body);
+              const hSubheader = highlight(itemObject.matches, lvl2item.body);
               if (hSubheader.length !== 0) {
-                var lvl2Subheader = document.createElement('p');
+                const lvl2Subheader = document.createElement('p');
                 lvl2Subheader.innerHTML = hSubheader;
                 lvl2block.appendChild(lvl2Subheader);
                 subHeader2Avail = true;

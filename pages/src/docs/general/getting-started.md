@@ -78,8 +78,8 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch(link)
       .then((response) => response.text())
       .then((text) => {
-        let textBlob = new Blob([text], { type: 'text/plain' });
-        let hLink = document.createElement('a');
+        const textBlob = new Blob([text], { type: 'text/plain' });
+        const hLink = document.createElement('a');
         hLink.href = URL.createObjectURL(textBlob);
         hLink.setAttribute('download', fileName);
         document.body.appendChild(hLink);

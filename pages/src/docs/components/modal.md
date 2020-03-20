@@ -230,8 +230,8 @@ hidCode{{
 
 <script>
 window.addEventListener('DOMContentLoaded', () => {
-  let inner = document.querySelectorAll('.zust-content');
-  let body = document.querySelector('body');
+  const inner = document.querySelectorAll('.zust-content');
+  const body = document.querySelector('body');
 
   inner.forEach((elem) => {
     elem.addEventListener('click', (e) => {

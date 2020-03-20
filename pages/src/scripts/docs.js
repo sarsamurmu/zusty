@@ -482,7 +482,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let scrollPos = 0;
 
   const checkPosition = () => {
-    let windowY = window.scrollY;
+    const windowY = window.scrollY;
     if (windowY < scrollPos) {
       btmBar.classList.remove('hidden');
     } else {

@@ -35,7 +35,7 @@ mixin nav(activeItem, classes)
   
   script.
     window.addEventListener('DOMContentLoaded', () => {
-      let nav = document.querySelector('nav');
+      const nav = document.querySelector('nav');
     
       document.querySelector('nav .zust-menu-btn').addEventListener('click', () => {
         if (!nav.classList.contains('zust-expanded')) {
@@ -54,3 +54,11 @@ mixin footer
     p.
       Code available under the #[a(href='https://github.com/sarsamurmu/zusty/blob/master/LICENSE.md' rel='noopener' target='_blank') MIT License], 
       website under #[a(href='https://creativecommons.org/licenses/by-nc-sa/4.0/' rel='noopener' target='_blank') CC BY-NC-SA 4.0].
+
+mixin updateBanner
+  .updateBanner.zust-hidden: span Version 1.2.0 is out now. Check out #[a(href='https://github.com/sarsamurmu/zusty/releases/tag/1.2.0' rel='noopener' target='_blank') Release Notes].
+
+  script.
+    window.addEventListener('DOMContentLoaded', () => {
+      if (Date.now() < Date.parse('2020-5-5')) document.querySelector('.updateBanner').classList.remove('zust-hidden');
+    })

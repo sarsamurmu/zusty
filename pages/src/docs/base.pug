@@ -10,6 +10,8 @@ html(lang='en' dir='ltr')
   body
     include _includes/bottombar.pug
     include _includes/sidenav.pug
+
+    +updateBanner
     
     block content
       | !{inner}

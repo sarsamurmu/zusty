@@ -12,18 +12,18 @@ import autoprefixer from './autoprefixer';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  let qs = document.querySelector.bind(document);
-  let sass = new Sass();
+  const qs = document.querySelector.bind(document);
+  const sass = new Sass();
 
   CodeMirror.registerHelper('lint', 'scss', function(text, options) {
-    var found = [];
+    const found = [];
     if (!window.SCSSLint) return found;
-    var results = SCSSLint.verify(text, options),
+    let results = SCSSLint.verify(text, options),
       messages = results.messages,
       message = null;
-    for (var i = 0; i < messages.length; i++) {
+    for (let i = 0; i < messages.length; i++) {
       message = messages[i];
-      var startLine = message.line - 1,
+      const startLine = message.line - 1,
         endLine = message.line - 1,
         startCol = message.col - 1,
         endCol = message.col;
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     return found;
   });
 
-  let editor = CodeMirror.fromTextArea(qs('#editor'), {
+  const editor = CodeMirror.fromTextArea(qs('#editor'), {
     mode: 'text/x-scss',
     theme: 'default',
     tabSize: 2,
@@ -62,8 +62,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  let exSelect = qs('#example');
-  let examples = {
+  const exSelect = qs('#example');
+  const examples = {
     'default': [
       `@import "zusty";`
     ],
@@ -115,17 +115,17 @@ window.addEventListener('DOMContentLoaded', () => {
     ]
   }
 
-  let doOnChange = () => editor.setValue(examples[exSelect.value].join('\n'));
+  const doOnChange = () => editor.setValue(examples[exSelect.value].join('\n'));
 
   doOnChange();
 
   exSelect.addEventListener('change', doOnChange);
 
   window.download = () => {
-    let errorView = qs('#errorView');
+    const errorView = qs('#errorView');
 
-    let downloadBtn = qs('.downloadBtn');
-    let btnText = qs('.downloadBtn > span:not(.zust-icon)');
+    const downloadBtn = qs('.downloadBtn');
+    const btnText = qs('.downloadBtn > span:not(.zust-icon)');
 
     btnText.innerHTML = 'Processing';
     downloadBtn.classList.add('loading');
@@ -138,9 +138,9 @@ window.addEventListener('DOMContentLoaded', () => {
       } else {
         errorView.classList.add('zust-hidden');
 
-        let copyrightHeaderless = result.text.replace(/(\/\*\!((.|\n)*)\*\/)/g, '');
+        const copyrightHeaderless = result.text.replace(/(\/\*\!((.|\n)*)\*\/)/g, '');
 
-        let prefixedCSS = autoprefixer.process(copyrightHeaderless, {}, {
+        const prefixedCSS = autoprefixer.process(copyrightHeaderless, {}, {
           overrideBrowserslist: [
             'last 5 Chrome versions',
             'last 5 Firefox versions',
@@ -153,17 +153,18 @@ window.addEventListener('DOMContentLoaded', () => {
           ]
         }).css;
 
-        let css = [
+        const css = [
           `/*!`,
           ` * Zusty v${config.version}`,
-          ` * Copyright (c) ${new Date().getFullYear()} Sarsa Murmu`,
-          ` * https://github.com/sarsamurmu/zusty`,
+          ` * Copyright (c) Sarsa Murmu 2019-present`,
+          ` * Repository https://github.com/sarsamurmu/zusty`,
+          ` * Licensed under The MIT License`,
           ` *\/\n`,
           prefixedCSS
         ].join('\n');
 
-        let cssBlob = new Blob([css], { type: 'text/plain' });
-        let hLink = document.createElement('a');
+        const cssBlob = new Blob([css], { type: 'text/plain' });
+        const hLink = document.createElement('a');
         hLink.href = URL.createObjectURL(cssBlob);
         hLink.setAttribute('download', 'zusty.css');
         document.body.appendChild(hLink);

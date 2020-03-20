@@ -92,7 +92,7 @@ module.exports = (md) => {
     `.replace(/(<(pre|script|style|textarea)[^]+?<\/\2)|(^|>)\s+|\s+(?=<|$)/g, '$1$3')
   }
 
-  let containers = ['primary', 'success', 'warning', 'error', 'link']
+  const containers = ['primary', 'success', 'warning', 'error', 'link'];
 
   containers.forEach((key) => {
     md.use(require('markdown-it-container'), key, {

@@ -5,9 +5,9 @@ const chokidar = require('chokidar');
 
 const args = process.argv.splice(2, process.argv.length - 2);
 
-let dirToCopy = './tocopy/';
+const dirToCopy = './tocopy/';
 
-let copyFiles = () => {
+const copyFiles = () => {
   glob.sync(dirToCopy + '**/*.*').forEach((file) => {
     fs.mkdirSync(path.dirname(file.replace('tocopy', 'public')), {
       recursive: true

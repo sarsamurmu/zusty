@@ -1,7 +1,7 @@
 import { Workbox } from 'workbox-window';
 
-const registerWorker = (path) => {
-  var toasts = new DOMParser().parseFromString(`
+window.registerWorker = (path) => {
+  const toasts = new DOMParser().parseFromString(`
     <div class="worker-toast" ready>
       <div>
         <span class="zust-icon">
@@ -32,7 +32,7 @@ const registerWorker = (path) => {
     const worker = new Workbox(path);
 
     worker.addEventListener('installed', (event) => {
-      var toast = document.querySelector('.worker-toast[ready]');
+      let toast = document.querySelector('.worker-toast[ready]');
       if (event.isUpdate) toast = document.querySelector('.worker-toast[update]');
 
       toast.classList.add('visible');
@@ -46,4 +46,3 @@ const registerWorker = (path) => {
     worker.register();
   }
 }
-window.registerWorker = registerWorker;

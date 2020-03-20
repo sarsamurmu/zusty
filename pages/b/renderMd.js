@@ -25,11 +25,11 @@ const pugImportsPath = ['./src/docs/_includes/*.pug', baseFile, './src/_mixins.p
 
 let pugFunc = pug.compileFile(baseFile);
 
-let renderFile = (filePath) => {
-  let outputPath = filePath.replace('src', 'public').replace('.md', '.html');
-  let canonical = outputPath.replace(/(\.\/)?public/g, 'https://zustycss.com').replace(/\\/g, '/').replace(/(\.html|\/index)/g, '');
-  let markdown = metadataParser(fs.readFileSync(filePath).toString());
-  let renderedHTML = md.render(markdown.content.replace(/#{(.*?)}/g, (m, offset, s) => config[offset.trim()]));
+const renderFile = (filePath) => {
+  const outputPath = filePath.replace('src', 'public').replace('.md', '.html');
+  const canonical = outputPath.replace(/(\.\/)?public/g, 'https://zustycss.com').replace(/\\/g, '/').replace(/(\.html|\/index)/g, '');
+  const markdown = metadataParser(fs.readFileSync(filePath).toString());
+  const renderedHTML = md.render(markdown.content.replace(/#{(.*?)}/g, (m, offset, s) => config[offset.trim()]));
 
   fs.mkdirSync(path.dirname(outputPath), {
     recursive: true

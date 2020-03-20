@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   window.qs = document.querySelector.bind(document);
 
-  let nav = qs('nav');
+  const nav = qs('nav');
 
   window.isElementInViewport = (el) => {
     var rect = el.getBoundingClientRect();

@@ -14,8 +14,8 @@ const pugFilePath = './src/**/*.pug';
 const pugImportsPath = ['./src/docs/_includes/*.pug', './src/docs/base.pug', './src/**/_*.pug'];
 const ignoredPaths = ['./src/docs/_includes/*', './src/docs/base.pug', './src/_includes/*', './src/**/_*'];
 
-let renderFile = (filePath) => {
-  let outputPath = filePath.replace('src', 'public').replace('.pug', '.html');
+const renderFile = (filePath) => {
+  const outputPath = filePath.replace('src', 'public').replace('.pug', '.html');
 
   config.navItems = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../src/docs/navigationData.json')).toString());
   config.canonical = outputPath.replace(/(\.\/)?public/g, 'https://zustycss.com').replace(/\\/g, '/').replace(/(\.html|\/index)/g, '');

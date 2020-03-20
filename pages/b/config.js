@@ -1,4 +1,4 @@
 module.exports = {
-  debug: false,
+  debug: true,
   version: '1.2.0'
 }
