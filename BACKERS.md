@@ -1,1 +1,0 @@
-Tedpo Srego

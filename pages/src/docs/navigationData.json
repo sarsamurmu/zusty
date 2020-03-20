@@ -1,7 +1,7 @@
 [
   {
     "name": "General",
-    "childs": [
+    "children": [
       {
         "name": "Getting Started"
       },
@@ -26,16 +26,33 @@
     ]
   },
   {
-    "name": "Helpers"
+    "name": "Helpers",
+    "children": [
+      {
+        "name": "General"
+      },
+      {
+        "name": "Color"
+      },
+      {
+        "name": "Text"
+      }
+    ]
   },
   {
     "name": "Elements",
-    "childs": [
+    "children": [
+      {
+        "name": "Avatar"
+      },
       {
         "name": "Button"
       },
       {
         "name": "Chip"
+      },
+      {
+        "name": "Divider"
       },
       {
         "name": "Icon"
@@ -59,7 +76,7 @@
   },
   {
     "name": "Container",
-    "childs": [
+    "children": [
       {
         "name": "Basic"
       },
@@ -68,12 +85,15 @@
       },
       {
         "name": "Element Group"
+      },
+      {
+        "name": "Snap Container"
       }
     ]
   },
   {
     "name": "Form",
-    "childs": [
+    "children": [
       {
         "name": "Basics"
       },
@@ -102,7 +122,7 @@
   },
   {
     "name": "Components",
-    "childs": [
+    "children": [
       {
         "name": "Badge"
       },
@@ -117,6 +137,9 @@
       },
       {
         "name": "Modal"
+      },
+      {
+        "name": "Nav"
       },
       {
         "name": "Navbar"

@@ -127,6 +127,12 @@ $item-disabled-fg-color-dark: hsl(0, 0%, 30%);
 //    Elements
 // --------------
 
+// Avatar
+$avatar-bg-color: hsl(0, 0%, 92%);
+$avatar-bg-color-dark: hsl(0, 0%, 22%);
+$avatar-text-color: #FFF;
+$avatar-text-color-dark: #FFF;
+
 // Button
 $button-bg-color: hsl(0, 0%, 100%);
 $button-bg-color-dark: hsl(0, 0%, 15%);
@@ -136,8 +142,8 @@ $button-hovered-border-color: hsl(0, 0%, 84%);
 $button-hovered-border-color-dark: hsl(0, 0%, 35%);
 $button-text-color: hsl(0, 0%, 40%);
 $button-text-color-dark: hsl(0, 0%, 85%);
-$button-focus-border-color: hsla(291, 64%, 42%, 0.14);
-$button-focus-border-color-dark: hsla(291, 47%, 51%, 0.45);
+$button-border-spread-color: hsla(291, 64%, 42%, 0.14);
+$button-border-spread-color-dark: hsla(291, 47%, 51%, 0.45);
 $button-shadow-color: hsla(0, 0%, 84%, 0.87);
 $button-shadow-color-dark: hsla(0, 0%, 30%, 0.87);
 
@@ -309,6 +315,8 @@ $navbar-bg-color: #FFF;
 $navbar-bg-color-dark: hsl(0, 0%, 16%);
 $navbar-shadow-color: hsla(0, 0%, 0%, 0.05);
 $navbar-shadow-color-dark: hsla(0, 0%, 0%, 0.12);
+$navbar-item-hovered-color: $primary-color;
+$navbar-item-hovered-color-dark: $primary-color-dark;
 $navbar-selected-item-color: $primary-color;
 $navbar-selected-item-color-dark: $primary-color-dark;
 $navbar-selected-item-bg-color: $primary-color;
@@ -458,14 +466,14 @@ Property variables are variables which contains CSS property's values. Editing t
 // Prefix used for all Zusty's selectors
 $prefix: 'zust-';
 
-// Separator used for Conditions
+// Separator used for conditions
 $condition-separator: '\\@';
 
 // Screen breakpoint sizes as of Chrome Dev Tools
 $medium-breakpoint: 768px;
 $large-breakpoint: 1024px;
 
-// Font sizes
+// Font Sizes
 $xlarge-text: 2.2rem;
 $large-text: 1.6rem;
 $medium-text: 1rem;
@@ -484,6 +492,11 @@ $primary-transition: 0.2s;
 // --------------
 //    Elements
 // --------------
+
+// Avatar
+$avatar-size: 45px;
+$avatar-size-small: 30px;
+$avatar-size-large: 56px;
 
 // Body
 $body-font-size: $medium-text;
@@ -634,9 +647,9 @@ $modal-border-radius: 14px;
 $modal-transition: 0.3s;
 
 // Navbar
-$navbar-height: 60px;
 $navbar-shadow: 0px 3px 3px var(--navbar-shadow-color);
 $navbar-border-bottom-width: 2px;
+$navbar-selected-indicator-height: 3px;
 
 // Pagination
 $pagination-item-margin: 5px 10px;

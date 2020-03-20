@@ -28,19 +28,19 @@ include ../../_mixins.pug
         -
           var attributes = {}, lowerName = parentItem.name.toLowerCase();
           
-          attributes.href = !parentItem.childs ? `/docs/${lowerName}` : '#!';
-          if (parentItem.childs) attributes.onclick = `showNavItem('${lowerName}')`
-          if (!parentItem.childs) attributes['nav-item'] = lowerName;
+          attributes.href = !parentItem.children ? `/docs/${lowerName}` : '#!';
+          if (parentItem.children) attributes.onclick = `showNavItem('${lowerName}')`
+          if (!parentItem.children) attributes['nav-item'] = lowerName;
         
         a&attributes(attributes)
           span #{parentItem.name}
   .sub-item-container
     each parentItem in navItems
-      if (parentItem.childs)
+      if (parentItem.children)
         .sub-item(nav-item=`${parentItem.name.toLowerCase()}`)
           .subSection
             span.header #{parentItem.name}
             - var kebabCase = (words) => words.toLowerCase().replace(/[ ]/g, '-')
-            each childItem in parentItem.childs
+            each childItem in parentItem.children
               a(nav-item=`${kebabCase(childItem.name)}` href=`/docs/${parentItem.name.toLowerCase()}/${kebabCase(childItem.name)}`)
                 span #{childItem.name}

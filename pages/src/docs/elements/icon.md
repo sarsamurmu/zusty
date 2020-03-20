@@ -102,7 +102,7 @@ There are extra three predefined sizes. Use them by adding any of these classes 
 
 
 ## Custom size
-Icons are most important and most used element. There are no guarantee when you need custom size. So here comes the feature.
+Icons are most important and most used element. There's no guarantee when you need custom size. So here comes the feature.
 
 You can change icons size by using CSS variable, It's super easy. Use `--icon-size`{.class} to change the icon size. See the snippet below for better understanding.
 

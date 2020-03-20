@@ -1,6 +1,34 @@
-## v1.1.4
-#### New
-- Dropcap Text Helper.
+## v1.2.0
+### New
+- Dropcap text helper
+- Divider
+- Placeholder items (lines, paragraph, image etc.)
+- Avatar
+- Flexbox direction and grow helper
+- Snap container
+- Nav
+### Improvements
+- Navbar items' hover color is now different for a11y.
+- No need to use `zust-center` in card footer.
+- Same height cards.
+### Changes
+**Variables changed**
+|              From                 |                  To                |
+|-----------------------------------|------------------------------------|
+| `$button-focus-border-color`      | `$button-border-spread-color`      |
+| `$button-focus-border-color-dark` | `$button-border-spread-color-dark` |
+
+**Variables removed**
+- `$navbar-height`
+
+**Files renamed**
+|                From                |               To             |
+|------------------------------------|------------------------------|
+| `scss/helpers/color-helper.scss`   | `scss/helpers/color.scss`    |
+| `scss/helpers/general-helper.scss` | `scss/helpers/general.scss`  |
+| `scss/helpers/text-helper.scss`    | `scss/helpers/text.scss`     |
+
+
 
 ## v1.1.3
 #### New

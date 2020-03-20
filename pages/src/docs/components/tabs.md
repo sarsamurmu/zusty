@@ -41,10 +41,9 @@ You need JavaScript to toggle between items. Here's an example.
   </ul>
 </div>
 
-<script>
-
-  // Add Event Listener to all li
-  document.querySelectorAll('li').forEach((li) => {
+noRender{{<script>
+  // Add Event Listener to all `li`
+  document.querySelectorAll('.zust-tab li').forEach((li) => {
     li.addEventListener('click', () => {
       // Remove `selected` attribute from other `li`s
       li.closest('ul').querySelectorAll('li').forEach((otherLi) => {
@@ -54,7 +53,7 @@ You need JavaScript to toggle between items. Here's an example.
       li.setAttribute('selected', '');
     });
   });
-</script>
+</script>}}
 ```
 ---
 

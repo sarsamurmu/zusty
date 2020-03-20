@@ -32,11 +32,13 @@
   --bg-color-inverted: #212121;
   --item-disabled-bg-color: #ededed;
   --item-disabled-fg-color: #d1d1d1;
+  --avatar-bg-color: #ebebeb;
+  --avatar-text-color: #FFF;
   --button-bg-color: white;
   --button-border-color: #e6e6e6;
   --button-hovered-border-color: #d6d6d6;
   --button-text-color: #666666;
-  --button-focus-border-color: rgba(155, 39, 176, 0.14);
+  --button-border-spread-color: rgba(155, 39, 176, 0.14);
   --button-shadow-color: rgba(214, 214, 214, 0.87);
   --chip-bg-color: #f7f7f7;
   --note-block-bg-color: rgba(144, 144, 144, 0.1);
@@ -106,6 +108,7 @@
   --dropdown-active-item-text-color: #FFFFFF;
   --navbar-bg-color: #FFF;
   --navbar-shadow-color: rgba(0, 0, 0, 0.05);
+  --navbar-item-hovered-color: #00b881;
   --navbar-selected-item-color: #00b881;
   --navbar-selected-item-bg-color: #00b881;
   --navbar-selected-item-text-color: #FFFFFF;
@@ -157,11 +160,13 @@
   --bg-color-inverted: whitesmoke;
   --item-disabled-bg-color: #333333;
   --item-disabled-fg-color: #4d4d4d;
+  --avatar-bg-color: #383838;
+  --avatar-text-color: #FFF;
   --button-bg-color: #262626;
   --button-border-color: #474747;
   --button-hovered-border-color: #595959;
   --button-text-color: #d9d9d9;
-  --button-focus-border-color: rgba(171, 71, 189, 0.45);
+  --button-border-spread-color: rgba(171, 71, 189, 0.45);
   --button-shadow-color: rgba(77, 77, 77, 0.87);
   --chip-bg-color: #2b2b2b;
   --note-block-bg-color: rgba(144, 144, 144, 0.1);
@@ -231,6 +236,7 @@
   --dropdown-active-item-text-color: #404040;
   --navbar-bg-color: #292929;
   --navbar-shadow-color: rgba(0, 0, 0, 0.12);
+  --navbar-item-hovered-color: #00cc8f;
   --navbar-selected-item-color: #00cc8f;
   --navbar-selected-item-bg-color: #00cc8f;
   --navbar-selected-item-text-color: #404040;

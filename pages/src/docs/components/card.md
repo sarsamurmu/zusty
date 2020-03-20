@@ -48,8 +48,8 @@ You can also add button to any card.
 ---
 
 
-## With Centered Button
-You can make buttons center by adding class `zust-center`{.class} to `footer`{.tag}.
+## With fullwidth button
+You can also use fullwidth buttons with card.
 
 ```html {snippet}
 <div class="zust-card">
@@ -61,7 +61,7 @@ You can make buttons center by adding class `zust-center`{.class} to `footer`{.t
     <li>Unique Stickers</li>
     <li>Limitless Power</li>
   </ul>
-  <footer class="zust-center">
+  <footer>
     <button class="zust-success zust-btn zust-fullwidth">Pay $25</button>
   </footer>
  </div>
@@ -161,6 +161,34 @@ You can place multiple cards inside Zusty's built-in container. You can use cont
     <footer>
       <button class="zust-btn zust-primary">Donate</button>
       <button class="zust-btn zust-transparent">Share</button>
+    </footer>
+  </div>
+</div>
+```
+---
+
+
+## Same height
+Cards are of same height by default if you put them on container.
+
+```html {snippet}
+<div class="zust-container">
+  <div class="zust-card">
+    <h3>With less content</h3>
+    <p>Just a line.</p>
+    <footer>
+        <button class="zust-btn zust-primary">Less</button>
+    </footer>
+  </div>
+
+  <div class="zust-card">
+    <h3>With more content</h3>
+    <p>
+      If a card contains more content than other cards then 
+      other cards will increase their height to fill up and make same height.
+    </p>
+    <footer>
+        <button class="zust-btn zust-link">More</button>
     </footer>
   </div>
 </div>

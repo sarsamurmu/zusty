@@ -6,7 +6,9 @@
   }
 
   @include large {
-    padding: 40px;
+    .zust-header {
+      padding: 20px;
+    }
   }
 
   img {

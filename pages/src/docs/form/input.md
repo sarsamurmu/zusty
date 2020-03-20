@@ -11,7 +11,7 @@ Input with extra features.
 ## Structure
 ```html {snippet}
 <p class="zust-form-el">
-  <input class="zust-input" type="text" placeholder="This is An Input">
+  <input class="zust-input" type="text" placeholder="This is an input">
 </p>
 ```
 If you keep the input without it's container there can be sizing issues so please use form element container for better responsiveness.
@@ -98,7 +98,7 @@ Input can be completely transparent, for this use `zust-transparent`{.class}.
   <input class="zust-input zust-transparent" type="text" value="It's a Transparent Input">
 </p>
 ```
-
+---
 
 
 ## With icon
@@ -106,7 +106,7 @@ You can also add icon to an input.
 
 ```html {snippet}
 <p class="zust-form-el">
-  <input class="zust-input zust-with-icon-left" type="text" placeholder="With Icon Left">
+  <input class="zust-input zust-with-icon-left" type="text" placeholder="With icon left">
   <span class="zust-icon zust-left">
     <i class="fas fa-search"></i>
   </span>
@@ -114,7 +114,7 @@ You can also add icon to an input.
 <br>
 
 <p class="zust-form-el">
-  <input class="zust-input zust-with-icon-right" type="text" placeholder="With Icon Right">
+  <input class="zust-input zust-with-icon-right" type="text" placeholder="With icon right">
   <span class="zust-icon zust-right">
     <i class="fas fa-grin"></i>
   </span>
@@ -122,7 +122,7 @@ You can also add icon to an input.
 <br>
 
 <p class="zust-form-el">
-  <input class="zust-input zust-with-icon-right" type="text" placeholder="I'm Loading, Right?">
+  <input class="zust-input zust-with-icon-right" type="text" placeholder="I'm loading, right?">
   <span class="zust-icon zust-right">
     <i class="zust-spinner"></i>
   </span>
@@ -130,9 +130,9 @@ You can also add icon to an input.
 <br>
 
 <p class="zust-form-el">
-  <input class="zust-input zust-with-icon-both" type="text" placeholder="With Icon BothSide">
+  <input class="zust-input zust-with-icon-both" type="text" placeholder="With icon both side">
   <span class="zust-icon zust-left">
-    <i class="fas fa-github"></i>
+    <i class="fab fa-github"></i>
   </span>
   <span class="zust-icon zust-right">
     <i class="fa fa-search"></i>

@@ -4,7 +4,7 @@ import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-bash';
 import 'prismjs/plugins/keep-markup/prism-keep-markup';
 
-import docsearch from 'docsearch.js';
+import docSearch from 'docsearch.js';
 import offlineSearch from './offline-search';
 import './worker';
 
@@ -12,7 +12,7 @@ import config from '../../b/config';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Enable DocSearch
-  docsearch({
+  docSearch({
     apiKey: '2f2a38ea4a221f944f665b01d9887c98',
     indexName: 'zustycss',
     inputSelector: '#docSearch',
@@ -113,28 +113,28 @@ window.addEventListener('DOMContentLoaded', () => {
   const sidenav = document.querySelector('.sidenav');
   const btmBar = document.querySelector('.bottombar');
   const dimmer = document.querySelector('.dimmer');
-  const navopener = document.querySelector('.nav-opener');
-  const navbacker = document.querySelector('.nav-backer');
+  const navOpener = document.querySelector('.nav-opener');
+  const navBacker = document.querySelector('.nav-backer');
   const body = document.querySelector('body');
 
   const showSidenav = () => {
-    navopener.setAttribute('onclick', 'hideSidenav()');
+    navOpener.setAttribute('onclick', 'hideSidenav()');
     btmBar.classList.add('zust-flat', 'visible');
     sidenav.classList.add('zust--visible');
     dimmer.classList.add('zust--visible');
-    navopener.classList.add('zust--hidden');
-    navbacker.classList.add('zust--visible');
+    navOpener.classList.add('zust--hidden');
+    navBacker.classList.add('zust--visible');
     body.classList.add('lock');
   }
   window.showSidenav = showSidenav;
 
   const hideSidenav = () => {
-    navopener.setAttribute('onclick', 'showSidenav()');
+    navOpener.setAttribute('onclick', 'showSidenav()');
     btmBar.classList.remove('zust-flat', 'visible');
     sidenav.classList.remove('zust--visible');
     dimmer.classList.remove('zust--visible');
-    navopener.classList.remove('zust--hidden');
-    navbacker.classList.remove('zust--visible');
+    navOpener.classList.remove('zust--hidden');
+    navBacker.classList.remove('zust--visible');
     body.classList.remove('lock');
   }
   window.hideSidenav = hideSidenav;
@@ -278,14 +278,14 @@ window.addEventListener('DOMContentLoaded', () => {
   anchorHeaders.forEach((el) => el.addEventListener('click', () => copyAnchor(el)));
 
   // Launch and Copy Button
-  const codeblocks = document.querySelectorAll('code[class*="html"]');
+  const codeBlocks = document.querySelectorAll('code[class*="html"]');
 
-  const copyAbleCodeblocks = document.querySelectorAll('div.code > pre > code');
+  const copyAbleCodeBlocks = document.querySelectorAll('div.code > pre > code');
 
-  copyAbleCodeblocks.forEach((codeblock) => {
+  copyAbleCodeBlocks.forEach((codeBlock) => {
     let makeCopyButton = true;
 
-    if (codeblock.hasAttribute('nocopy')) {
+    if (codeBlock.hasAttribute('nocopy')) {
       makeCopyButton = false;
     }
 
@@ -303,9 +303,9 @@ window.addEventListener('DOMContentLoaded', () => {
         </svg>
       </span>`;
 
-      codeblock.closest('div[class*="code"]').appendChild(copyButton);
+      codeBlock.closest('div[class*="code"]').appendChild(copyButton);
       copyButton.addEventListener('click', () => {
-        const texts = codeblock.closest('pre').innerText;
+        const texts = codeBlock.closest('pre').innerText;
         const textarea = document.createElement('textarea');
         document.body.appendChild(textarea);
         textarea.value = texts;
@@ -321,11 +321,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.launchSnippet = (html, host) => {
     const createEl = (name, props) => {
       const el = document.createElement(name);
-
-      for (const p in props) {
-        if (props.hasOwnProperty(p)) el[p] = props[p];
-      }
-
+      for (const p in props) if (props.hasOwnProperty(p)) el[p] = props[p];
       return el
     }
 
@@ -406,11 +402,11 @@ window.addEventListener('DOMContentLoaded', () => {
     form.remove();
   }
 
-  codeblocks.forEach((codeblock) => {
-  const code = codeblock.innerText;
+  codeBlocks.forEach((codeBlock) => {
+  const code = codeBlock.innerText;
 
     let makeLaunchButton = true;
-    if (codeblock.hasAttribute('nolaunch')) {
+    if (codeBlock.hasAttribute('nolaunch')) {
       makeLaunchButton = false;
     }
 
@@ -429,7 +425,7 @@ window.addEventListener('DOMContentLoaded', () => {
         </svg>
       </span>`;
 
-      codeblock.closest('div[class*="code"]').appendChild(launchButton);
+      codeBlock.closest('div[class*="code"]').appendChild(launchButton);
       launchButton.addEventListener('click', () => {
         window.htmlSnippet = code;
         document.querySelector('#launcherModal').classList.add('zust-active');
