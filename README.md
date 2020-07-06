@@ -1,13 +1,13 @@
 
 <p align="center">
-<img width="240" src="https://zustycss.com/resources/zusty.svg" alt="Zusty">
+<img width="240" src="https://zustycss.netlify.app/resources/zusty.svg" alt="Zusty">
 <h1 align="center">Zusty CSS</h1>
 </p>
 
 <p align="center">
 Power Packed CSS Framework for Building Beautiful Interfaces.
 <br>
-<a align="center" href="https://zustycss.com/docs">Read the Docs</a>
+<a align="center" href="https://zustycss.netlify.app/docs">Read the Docs</a>
 </p>
 
 
