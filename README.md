@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-Power Packed CSS Framework for Building Beautiful Interfaces.
+A CSS Framework for testing out my web development skills in 2019.
 <br>
 <a align="center" href="https://zustycss.netlify.app/docs">Read the Docs</a>
 </p>
@@ -14,9 +14,6 @@ Power Packed CSS Framework for Building Beautiful Interfaces.
 ## Status
 [![Build Status](https://github.com/sarsamurmu/zusty/workflows/Node%20CI/badge.svg)](https://github.com/sarsamurmu/zusty/actions?workflow=Node+CI)
 [![npm version](https://img.shields.io/npm/v/zusty.svg?color)](https://www.npmjs.com/package/zusty)
-
-## Support Zusty CSS
-You can support this framework just by leaving a star on its [GitHub Repository](https://github.com/sarsamurmu/zusty). Starring it would help make Zusty CSS getting known and it would motivate me to work on it.
 
 ## Usage
 You can use it in many ways. Here's some.
